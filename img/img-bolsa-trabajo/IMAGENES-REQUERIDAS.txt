@@ -1,0 +1,55 @@
+IMÁGENES NECESARIAS PARA LA PÁGINA DE BOLSA DE TRABAJO
+========================================================
+
+Directorio: img/img-bolsa-trabajo/
+Formato recomendado: .webp (para mejor rendimiento y SEO)
+Dimensiones recomendadas: 640px de ancho x 960px de alto (ratio 2:3)
+
+LISTADO DE IMÁGENES REQUERIDAS:
+-------------------------------
+
+1. estabilidad-laboral.webp
+   - Descripción: Imagen relacionada con contratos, documentos laborales, seguridad laboral
+   - Sugerencia: Guardia firmando contrato, documentos IMSS, o apretón de manos profesional
+
+2. capacitacion-profesional.webp
+   - Descripción: Capacitación, cursos, certificación SSC, educación
+   - Sugerencia: Guardias en sesión de capacitación, instructor enseñando, certificados
+
+3. crecimiento-profesional.webp
+   - Descripción: Ascenso, crecimiento, desarrollo de carrera
+   - Sugerencia: Supervisor coordinando equipo, escalera hacia el éxito, o guardia con uniforme de supervisor
+
+4. equipo-profesional.webp
+   - Descripción: Uniformes tácticos, radios, equipamiento moderno
+   - Sugerencia: Guardia con uniforme completo, radio Motorola, equipamiento profesional
+
+5. prestaciones-superiores.webp
+   - Descripción: Beneficios, prestaciones de ley, IMSS, aguinaldo
+   - Sugerencia: Credencial IMSS, cheque de aguinaldo, o imagen representando beneficios
+
+6. horarios-flexibles.webp
+   - Descripción: Flexibilidad de horarios, turnos, balance vida-trabajo
+   - Sugerencia: Reloj, calendario con turnos, o guardia en diferentes horarios
+
+7. ambiente-profesional.webp
+   - Descripción: Trabajo en equipo, compañerismo, ambiente laboral positivo
+   - Sugerencia: Equipo de guardias trabajando juntos, coordinación, comunicación
+
+8. asignaciones-calidad.webp
+   - Descripción: Clientes de primer nivel, zonas premium, edificios corporativos
+   - Sugerencia: Edificio corporativo moderno, condominio de lujo, o zona empresarial de CDMX
+
+NOTAS IMPORTANTES:
+-----------------
+- Todas las imágenes deben ser profesionales y de alta calidad
+- Se recomienda usar imágenes reales de guardias de seguridad en acción
+- Evitar imágenes genéricas de stock que no representen el sector de seguridad
+- Las imágenes deben transmitir profesionalismo, confianza y calidad
+- Optimizar las imágenes en formato .webp para mejor rendimiento web
+
+ALTERNATIVA TEMPORAL:
+--------------------
+Si no tienes imágenes disponibles de inmediato, puedes usar temporalmente
+la misma imagen placeholder para todas (ej: img/img-index/luces-guirnaldas.webp)
+hasta conseguir las imágenes específicas.

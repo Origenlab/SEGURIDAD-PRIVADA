@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://seguridad-privada.com.mx/seguridad-especializada.html">
+    <title>Seguridad Privada Especializada para Condominios y Empresas CDMX | Guardias Intramuros</title>
+    <meta
+      name="description"
+      content="Seguridad privada especializada para condominios, residenciales, construcción, eventos y hospitales en CDMX. Guardias intramuros certificados SSC 24/7. ☎ 55 3025 5580"
+    />
+
+    <meta
+      property="og:title"
+      content="Seguridad Privada Especializada para Condominios y Empresas CDMX"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://seguridad-privada.com.mx/seguridad-especializada.html" />
+    <meta property="og:image" content="https://seguridad-privada.com.mx/img/og-image.jpg" />
+    <meta
+      property="og:description"
+      content="Seguridad privada especializada para condominios, residenciales y empresas en CDMX. Guardias intramuros certificados SSC."
+    />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#1d1d1f" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* Formulario de Cotización - Diseño Profesional */
+      #cotizacion {
+        padding: 80px 0;
+        background: #f8f9fa;
+      }
+
+      #cotizacion .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+      }
+
+      .cotizacion-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .cotizacion-header h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #0a0a0a;
+        margin: 0 0 20px 0;
+        letter-spacing: -0.02em;
+      }
+
+      .cotizacion-header p {
+        font-size: 1.125rem;
+        color: #666;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .cotizacion-form-wrapper {
+        background: white;
+        border-radius: 24px;
+        padding: 60px;
+        box-shadow: 0 10px 60px rgba(0, 0, 0, 0.1);
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .cotizacion-form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        margin-bottom: 40px;
+      }
+
+      .cotizacion-form-col {
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+
+      .cotizacion-field {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .cotizacion-field label {
+        display: block;
+        font-weight: 600;
+        font-size: 15px;
+        color: #0a0a0a;
+        margin-bottom: 10px;
+        letter-spacing: -0.01em;
+      }
+
+      .cotizacion-field input,
+      .cotizacion-field select,
+      .cotizacion-field textarea {
+        width: 100%;
+        padding: 16px 20px;
+        border: 2px solid #e0e0e0;
+        border-radius: 12px;
+        font-size: 15px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        background: #fafafa;
+        color: #0a0a0a;
+        box-sizing: border-box;
+      }
+
+      .cotizacion-field input:focus,
+      .cotizacion-field select:focus,
+      .cotizacion-field textarea:focus {
+        outline: none;
+        border-color: #0a0a0a;
+        background: white;
+        box-shadow: 0 0 0 4px rgba(10, 10, 10, 0.05);
+      }
+
+      .cotizacion-field input::placeholder,
+      .cotizacion-field textarea::placeholder {
+        color: #999;
+      }
+
+      .cotizacion-field textarea {
+        min-height: 160px;
+        resize: vertical;
+        line-height: 1.6;
+      }
+
+      .cotizacion-checkboxes-wrapper {
+        background: #f8f9fa;
+        padding: 24px;
+        border-radius: 12px;
+        margin-top: 8px;
+      }
+
+      .cotizacion-checkboxes-wrapper > label:first-child {
+        display: block;
+        font-weight: 600;
+        font-size: 15px;
+        color: #0a0a0a;
+        margin-bottom: 12px;
+        letter-spacing: -0.01em;
+      }
+
+      .cotizacion-checkboxes-wrapper label {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 10px;
+        margin-bottom: 8px;
+        cursor: pointer;
+        border-radius: 8px;
+      }
+
+      .cotizacion-checkboxes-wrapper label:hover {
+        background: #e9ecef;
+      }
+
+      .cotizacion-checkboxes-wrapper input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin-top: 2px;
+        cursor: pointer;
+        accent-color: #0a0a0a;
+        flex-shrink: 0;
+      }
+
+      .cotizacion-checkboxes-wrapper span {
+        font-size: 15px;
+        color: #333;
+        line-height: 1.5;
+      }
+
+      .cotizacion-footer {
+        border-top: 2px solid #f0f0f0;
+        padding-top: 40px;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .cotizacion-terms {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        max-width: 700px;
+        text-align: center;
+      }
+
+      .cotizacion-terms input[type="checkbox"] {
+        width: 20px;
+        height: 20px;
+        margin-top: 2px;
+        cursor: pointer;
+        accent-color: #0a0a0a;
+        flex-shrink: 0;
+      }
+
+      .cotizacion-terms span {
+        font-size: 14px;
+        color: #666;
+        line-height: 1.6;
+      }
+
+      .cotizacion-terms a {
+        color: #0a0a0a;
+        text-decoration: underline;
+        font-weight: 600;
+      }
+
+      .cotizacion-submit {
+        padding: 18px 60px;
+        background: #0a0a0a;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-size: 17px;
+        font-weight: 600;
+        cursor: pointer;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        letter-spacing: -0.01em;
+        transition: background 0.2s ease;
+      }
+
+      .cotizacion-submit:hover {
+        background: #1a1a1a;
+      }
+
+      .cotizacion-note {
+        font-size: 14px;
+        color: #888;
+        text-align: center;
+        margin: 0;
+      }
+
+      @media (max-width: 768px) {
+        #cotizacion {
+          padding: 60px 0;
+        }
+
+        #cotizacion .container {
+          padding: 0 20px;
+        }
+
+        .cotizacion-header h2 {
+          font-size: 2rem;
+        }
+
+        .cotizacion-form-wrapper {
+          padding: 40px 24px;
+          border-radius: 16px;
+        }
+
+        .cotizacion-form-row {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+
+        .cotizacion-submit {
+          width: 100%;
+          padding: 16px 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="menu-container"></div>
+
+  <nav class="breadcrumbs" aria-label="Migas de pan">
+  <div class="breadcrumbs__container">
+    <ol class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="/" class="breadcrumbs__link breadcrumbs__link--home" itemprop="item">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg>
+          <span itemprop="name">Inicio</span>
+        </a>
+        <meta itemprop="position" content="1">
+      </li>
+      <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="servicios.html" class="breadcrumbs__link" itemprop="item">
+          <span itemprop="name">Servicios</span>
+        </a>
+        <meta itemprop="position" content="2">
+      </li>
+      <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span class="breadcrumbs__current" itemprop="name">Seguridad Especializada</span>
+        <meta itemprop="position" content="3">
+      </li>
+    </ol>
+  </div>
+</nav>
+
+    <main class="main-content">
+      <section class="hero">
+        <div class="hero-container">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              Seguridad Privada Especializada para Condominios, Residenciales y Empresas en CDMX
+            </h1>
+            <p class="hero-subtitle">
+              De Condominios Familiares a Obras Millonarias: Protección que
+              Entiende los Riesgos Únicos de Tu Sector
+            </p>
+          </div>
+          <div class="hero-text">
+            <p class="hero-description">
+              ¿Alguna vez contrataste seguridad y el guardia no entendía los
+              protocolos de tu industria? Un guardia de retail no sabe cómo
+              manejar situaciones en hospitales. Uno de condominios no entiende
+              la dinámica de obras de construcción.
+              <strong
+                >Cada sector tiene riesgos, flujos operativos y regulaciones
+                únicas</strong
+              >
+              que la seguridad genérica simplemente no cubre. Por eso
+              desarrollamos protocolos especializados durante más de 15 años
+              protegiendo condominios premium en Interlomas, obras de
+              desarrolladores líderes, eventos corporativos de 5,000+ asistentes
+              y hospitales privados de prestigio. Guardias que conocen TU
+              industria, hablan tu idioma operativo y cumplen las normativas
+              específicas de tu sector.
+            </p>
+            <p class="hero-description">
+              Desde
+              <strong
+                >seguridad para condominios donde tus hijos juegan sin
+                miedo</strong
+              >
+              mientras guardias discretos controlan cada acceso, hasta
+              <strong
+                >protección de obras que previene robos de 200K-500K en
+                materiales</strong
+              >,
+              <strong
+                >seguridad hospitalaria que maneja pacientes psiquiátricos con
+                protocolos NOM-004-SSA3</strong
+              >, y
+              <strong>eventos corporativos con coordinación perfecta</strong>
+              donde tus invitados disfrutan sin notar la seguridad omnipresente.
+              Cada servicio incluye supervisión 24/7 por central de operaciones,
+              personal capacitado en protocolos sectoriales y tecnología
+              adaptada a tu industria.
+              <strong
+                >No es solo vigilancia: es protección que entiende tu
+                negocio.</strong
+              >
+            </p>
+            <div class="hero-cta">
+              <a href="contacto.html" class="btn btn-primary"
+                >Solicitar Cotización Gratis</a
+              >
+              <a
+                href="https://wa.me/525530255580"
+                class="btn btn-secondary"
+                target="_blank"
+                rel="noopener"
+                >WhatsApp</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Servicios de Seguridad Especializada -->
+      <section class="services-section" id="servicios-especializados">
+        <div class="container">
+          <div class="service-category">
+            <div class="service-category__inner">
+              <h2 class="category-title">
+                Servicios de Seguridad por Sector Industrial
+              </h2>
+              <p class="category-description">
+                Condominios, construcción, eventos y hospitales: cada uno
+                enfrenta amenazas diferentes. ¿Por qué arriesgarte con guardias
+                genéricos? Protocolos especializados probados en más de una
+                década protegiendo cada sector.
+              </p>
+
+              <div class="service-items-grid">
+                <a href="seguridad-especializada.html" class="service-item">
+                  <div class="service-item__image">
+                    <img
+                      src="img/img-index/seguridad-especializada.webp"
+                      alt="Seguridad Especializada por Sector - Soluciones personalizadas CDMX"
+                      loading="lazy"
+                      width="640"
+                      height="960"
+                    />
+                  </div>
+                  <span class="service-item__title"
+                    >Seguridad Especializada</span
+                  >
+                </a>
+
+                <a href="seguridad-condominios.html" class="service-item">
+                  <div class="service-item__image">
+                    <img
+                      src="img/img-index/seguridad-para-condominios.webp"
+                      alt="Seguridad para condominios residenciales en CDMX"
+                      loading="lazy"
+                      width="640"
+                      height="960"
+                    />
+                  </div>
+                  <span class="service-item__title"
+                    >Seguridad para Condominios</span
+                  >
+                </a>
+
+                <a href="seguridad-construccion.html" class="service-item">
+                  <div class="service-item__image">
+                    <img
+                      src="img/img-index/seguridad-para-construccion.webp"
+                      alt="Seguridad para construcción - Vigilancia de obras Estado de México"
+                      loading="lazy"
+                      width="640"
+                      height="960"
+                    />
+                  </div>
+                  <span class="service-item__title"
+                    >Seguridad para Construcción</span
+                  >
+                </a>
+
+                <a href="seguridad-eventos.html" class="service-item">
+                  <div class="service-item__image">
+                    <img
+                      src="img/img-index/seguridad-para-eventos.webp"
+                      alt="Seguridad para eventos corporativos y sociales CDMX"
+                      loading="lazy"
+                      width="640"
+                      height="960"
+                    />
+                  </div>
+                  <span class="service-item__title"
+                    >Seguridad para Eventos</span
+                  >
+                </a>
+
+                <a href="seguridad-hospitalaria.html" class="service-item">
+                  <div class="service-item__image">
+                    <img
+                      src="img/img-index/seguridad-hospitalaria.webp"
+                      alt="Seguridad hospitalaria - Protección centros médicos"
+                      loading="lazy"
+                      width="640"
+                      height="960"
+                    />
+                  </div>
+                  <span class="service-item__title"
+                    >Seguridad Hospitalaria</span
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Detalle de Servicios -->
+          <div class="services-detail">
+            <!-- Seguridad para Condominios -->
+            <div class="service-detail" id="seguridad-condominios">
+              <div class="service-detail__content">
+                <div class="service-detail__image">
+                  <img
+                    src="img/seguridad-especializada/seguridad-privada-para-condominios-y-fraccionamientos-residenciales.webp"
+                    alt="Seguridad privada para condominios residenciales en CDMX"
+                  />
+                </div>
+                <div class="service-detail__text">
+                  <h3 class="service-detail__title">
+                    Seguridad Privada para Condominios y Fraccionamientos
+                    Residenciales
+                  </h3>
+                  <p class="service-detail__paragraph">
+                    ¿Quieres que tus hijos jueguen libremente en áreas comunes
+                    sin ese miedo constante? ¿Te preocupa salir de vacaciones
+                    dejando tu departamento? La
+                    <strong
+                      >seguridad para condominios en CDMX y Estado de
+                      México</strong
+                    >
+                    va más allá de "poner un guardia en la caseta": creamos
+                    ambientes donde familias viven tranquilas. Guardias que
+                    conocen a cada residente por nombre, que saludan a tus
+                    hijos, que detectan inmediatamente cuando alguien no
+                    pertenece. Hemos protegido desarrollos premium en
+                    Interlomas, Bosques, Santa Fe durante más de 10 años.
+                    Vigilancia 24/7, control de accesos riguroso con registro
+                    digital de cada visitante (¿quién entró a las 3 AM?),
+                    patrullaje en estacionamientos y zonas vulnerables,
+                    monitoreo CCTV de áreas donde juegan niños. Una inversión de
+                    mantenimientos elevados mensuales en mantenimiento que
+                    aumenta plusvalía del inmueble y tranquilidad familiar.
+                    ¿Cuánto vale dormir sin preocupación?
+                  </p>
+                  <p class="service-detail__paragraph">
+                    Nuestros
+                    <strong
+                      >guardias especializados en seguridad residencial</strong
+                    >
+                    están capacitados en atención al cliente, protocolos de
+                    emergencia habitacional, primeros auxilios, evacuaciones, y
+                    coordinación con administración de condominios para
+                    garantizar convivencia armónica sin comprometer la
+                    seguridad. El servicio incluye control de acceso vehicular
+                    con plumas automáticas, verificación de identificación de
+                    residentes y visitas, apertura remota de puertas, rondines
+                    nocturnos en sótanos y áreas de servicio, atención de
+                    reportes de residentes por ruidos o situaciones sospechosas,
+                    y coordinación con autoridades locales ante emergencias.
+                    Solución ideal para consejos de administración que buscan
+                    reducir incidentes de robo, vandalismo o accesos no
+                    autorizados mientras mejoran la plusvalía del inmueble con
+                    servicios de seguridad certificados.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Seguridad para Construcción -->
+            <div
+              class="service-detail service-detail--reverse"
+              id="seguridad-construccion"
+            >
+              <div class="service-detail__content">
+                <div class="service-detail__text">
+                  <h3 class="service-detail__title">
+                    Seguridad para Obras en Construcción y Desarrollos
+                    Inmobiliarios
+                  </h3>
+                  <p class="service-detail__paragraph">
+                    ¿Alguna vez llegaste a tu obra y faltaban pérdidas
+                    sustanciales en cable de cobre, herramientas o cemento? ¿O
+                    peor: descubriste que el robo hormiga de semanas suma más
+                    que un robo único? Cada semana de retraso por robo de
+                    materiales son penalizaciones, inversionistas preguntando,
+                    flujo de efectivo comprometido. El servicio de
+                    <strong
+                      >seguridad para obras de construcción en CDMX</strong
+                    >
+                    no solo "vigila": protege tu cronograma, tu inversión y tu
+                    reputación. Guardias que entienden dinámicas de
+                    construcción, verifican remisiones (¿ese camión sí debería
+                    salir con material?), inspeccionan vehículos al salir (adiós
+                    robo hormiga), controlan accesos de
+                    trabajadores/contratistas y patrullan de noche cuando la
+                    obra está vulnerable. Protegemos cemento, varilla,
+                    herramientas eléctricas, transformadores, plantas de luz -
+                    todo lo que delincuencia organizada roba para revender.
+                  </p>
+                  <p class="service-detail__paragraph">
+                    La
+                    <strong
+                      >vigilancia profesional en sitios de construcción</strong
+                    >
+                    incluye supervisión de perímetros temporales con malla
+                    ciclónica o bardas provisionales, monitoreo de puntos de
+                    acceso múltiples que cambian según avance de obra,
+                    protección de bodegas donde se almacenan materiales de alto
+                    valor, custodia de plantas de luz, transformadores, y equipo
+                    pesado como retroexcavadoras, grúas y montacargas que son
+                    objetivos frecuentes de robo organizado. Coordinamos con
+                    ingenieros residentes y gerentes de proyecto para adaptar
+                    protocolos de seguridad a cada etapa constructiva, desde
+                    excavación hasta acabados finales, brindando reportes de
+                    bitácora digital que documentan novedades, visitantes, y
+                    cualquier incidente que pueda afectar el cumplimiento de
+                    plazos de entrega comprometidos con inversionistas o
+                    compradores de desarrollos inmobiliarios.
+                  </p>
+                </div>
+                <div class="service-detail__image">
+                  <img
+                    src="img/seguridad-especializada/seguridad-para-obras-en-construcción-y-desarrollos-inmobiliarios.webp"
+                    alt="Vigilancia de seguridad en obras de construcción y desarrollos inmobiliarios"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Seguridad para Eventos -->
+            <div class="service-detail" id="seguridad-eventos">
+              <div class="service-detail__content">
+                <div class="service-detail__image">
+                  <img
+                    src="img/seguridad-especializada/seguridad-para-eventos-corporativos-sociales-y-masivos.webp"
+                    alt="Seguridad privada profesional para eventos corporativos y sociales CDMX"
+                  />
+                </div>
+                <div class="service-detail__text">
+                  <h3 class="service-detail__title">
+                    Seguridad para Eventos Corporativos, Sociales y Masivos
+                  </h3>
+                  <p class="service-detail__paragraph">
+                    Nuestro servicio de
+                    <strong>seguridad para eventos en CDMX</strong> cubre
+                    congresos empresariales, convenciones, lanzamientos de
+                    productos, eventos sociales privados, bodas de alto perfil,
+                    conciertos, festivales, y cualquier reunión que requiera
+                    control de accesos, protección de asistentes, y manejo
+                    profesional de multitudes. El equipo especializado en
+                    seguridad de eventos diseña planes operativos personalizados
+                    que incluyen análisis previo del venue, identificación de
+                    salidas de emergencia, ubicación estratégica de personal en
+                    puntos críticos, protocolos de evacuación, coordinación con
+                    staff del lugar, y comunicación permanente mediante radios
+                    de frecuencia privada para respuesta coordinada ante
+                    cualquier incidencia.
+                  </p>
+                  <p class="service-detail__paragraph">
+                    La
+                    <strong>protección profesional de eventos</strong> incluye
+                    control de accesos con verificación de invitaciones,
+                    brazaletes o acreditaciones, revisión discreta de bolsos y
+                    paquetes cuando el protocolo lo requiere, detección de
+                    comportamientos sospechosos, prevención de accesos no
+                    autorizados a áreas VIP o backstage, protección cercana de
+                    personalidades o speakers principales, custodia de
+                    obsequios, premios o materiales de valor durante el
+                    desarrollo del evento, y vigilancia de estacionamientos para
+                    prevenir robo de vehículos. Personal capacitado en primeros
+                    auxilios y protocolos de emergencia médica, evacuaciones
+                    ante amenazas de bomba o desastres naturales, y manejo de
+                    situaciones conflictivas sin uso excesivo de fuerza que
+                    garantice experiencia positiva para asistentes mientras se
+                    mantiene ambiente seguro y controlado durante toda la
+                    duración del evento corporativo o social.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Seguridad Hospitalaria -->
+            <div
+              class="service-detail service-detail--reverse"
+              id="seguridad-hospitalaria"
+            >
+              <div class="service-detail__content">
+                <div class="service-detail__text">
+                  <h3 class="service-detail__title">
+                    Seguridad Hospitalaria y Protección de Centros Médicos
+                  </h3>
+                  <p class="service-detail__paragraph">
+                    ¿Cómo manejas a un familiar alterado gritando en urgencias
+                    sin usar fuerza excesiva? ¿O a un paciente psiquiátrico en
+                    crisis sin violar NOM-004-SSA3? La
+                    <strong>seguridad hospitalaria en CDMX</strong> requiere
+                    especialización extrema: entornos 24/7 donde conviven
+                    pacientes vulnerables, familiares bajo estrés emocional
+                    intenso, personal médico exhausto y visitantes constantes.
+                    Un error puede ser demanda millonaria o tragedia. Guardias
+                    capacitados en manejo de situaciones médicas sensibles,
+                    protocolos de confidencialidad médica (información
+                    protegida), prevención de secuestro de recién nacidos en
+                    maternidad, control de accesos a quirófanos/UTI/farmacias
+                    (medicamentos controlados son objetivos frecuentes), y
+                    coordinación con personal médico en códigos de emergencia.
+                    Incluso capacitados en RCP y uso de desfibriladores - pueden
+                    salvar vidas mientras llega personal médico.
+                  </p>
+                  <p class="service-detail__paragraph">
+                    El servicio de
+                    <strong>protección en instalaciones médicas</strong> incluye
+                    manejo profesional de situaciones conflictivas con pacientes
+                    psiquiátricos, familiares alterados por noticias difíciles,
+                    prevención de secuestros de recién nacidos en áreas de
+                    maternidad, custodia de equipos médicos de alto valor como
+                    resonadores magnéticos o tomógrafos, control de acceso
+                    vehicular a urgencias para mantener vías despejadas para
+                    ambulancias, y coordinación con personal de enfermería y
+                    administrativo para responder rápidamente ante códigos de
+                    emergencia hospitalaria. Personal capacitado en
+                    confidencialidad de información médica protegida por
+                    normativas de privacidad (NOM-004-SSA3), protocolos de
+                    evacuación de pacientes con movilidad reducida, uso de
+                    desfibriladores y técnicas de RCP que pueden salvar vidas
+                    mientras llega personal médico, y manejo de sustancias
+                    peligrosas o residuos biológico-infecciosos con estándares
+                    rigurosos que protegen salud de pacientes, visitantes y
+                    personal hospitalario en todo momento.
+                  </p>
+                </div>
+                <div class="service-detail__image">
+                  <img
+                    src="img/seguridad-especializada/seguridad-hospitalaria-y-proteccion-de-centros-medicos.webp"
+                    alt="Seguridad hospitalaria y protección profesional de centros médicos"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Por Qué Elegir Nuestra Seguridad Especializada -->
+      <section class="why-choose-us">
+        <div class="container container-padded">
+          <div class="why-choose-us__header">
+            <h2 class="why-choose-us__title">
+              Por Qué Elegir Nuestra Seguridad Especializada por Sector
+            </h2>
+            <p class="why-choose-us__subtitle">
+              Más de 15 años desarrollando soluciones de protección específicas
+              para cada industria en CDMX y Estado de México
+            </p>
+          </div>
+
+          <div class="why-choose-us__content">
+            <div class="why-section">
+              <h3 class="why-section__title">
+                Experiencia Comprobada en Múltiples Sectores Industriales
+              </h3>
+              <p class="why-section__text">
+                A diferencia de empresas de seguridad genéricas, hemos invertido
+                años en desarrollar
+                <strong
+                  >protocolos especializados para cada sector industrial</strong
+                >. Nuestra
+                <strong>seguridad para condominios residenciales</strong> ha
+                protegido desarrollos premium en Interlomas, Bosques de las
+                Lomas y Santa Fe, donde la discreción y atención personalizada
+                son fundamentales. Hemos custodiado obras de construcción para
+                desarrolladores inmobiliarios líderes, protegiendo millones de
+                pesos en materiales y maquinaria pesada durante todas las etapas
+                constructivas desde cimentación hasta entrega final.
+              </p>
+              <p class="why-section__text">
+                Nuestro equipo de <strong>seguridad para eventos</strong> ha
+                brindado protección en congresos internacionales con más de
+                5,000 asistentes, bodas de alto perfil en venues exclusivos, y
+                lanzamientos de producto para marcas multinacionales que
+                requieren coordinación impecable con autoridades locales. En el
+                <strong>sector hospitalario</strong>, protegemos centros médicos
+                privados de prestigio donde la confidencialidad médica, manejo
+                de situaciones sensibles y protocolos de bioseguridad son
+                prioritarios. Cada guardia recibe capacitación específica del
+                sector donde operará, cumpliendo con certificaciones SSC,
+                normativas industriales y mejores prácticas internacionales de
+                seguridad física.
+              </p>
+            </div>
+
+            <div class="why-section">
+              <h3 class="why-section__title">
+                Soluciones Personalizadas con Tecnología y Supervisión Continua
+              </h3>
+              <p class="why-section__text">
+                Entendemos que
+                <strong>cada industria tiene flujos operativos únicos</strong>
+                que la seguridad debe respetar sin interrumpir. En condominios,
+                nuestros guardias gestionan accesos familiares con cortesía
+                mientras mantienen protocolos rigurosos contra intrusos. En
+                construcción, adaptamos turnos y protocolos según avance de
+                obra, coordinando con contratistas sin retrasar entregas. En
+                eventos, desplegamos equipos escalables desde 5 hasta 50
+                elementos según tamaño y complejidad, con coordinación en tiempo
+                real mediante radios de frecuencia privada.
+              </p>
+              <p class="why-section__text">
+                Todos nuestros servicios incluyen
+                <strong
+                  >supervisión continua mediante central de operaciones
+                  24/7</strong
+                >, bitácoras digitales en tiempo real accesibles desde
+                smartphone, sistemas de control de rondines con tecnología NFC
+                que elimina rondines fantasma, y reportes ejecutivos
+                personalizados con estadísticas de incidencias, accesos
+                registrados y actividades realizadas. Brindamos
+                <strong>cobertura en toda la Zona Metropolitana</strong>
+                incluyendo CDMX, Naucalpan, Tlalnepantla, Atizapán,
+                Huixquilucan, Cuautitlán Izcalli y todos los municipios del
+                Estado de México. ¿Listo para proteger su organización con
+                seguridad especializada certificada?
+                <strong>Contáctanos por WhatsApp al 55 3025 5580</strong> y
+                recibe una cotización personalizada sin compromiso para tu
+                sector industrial.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Formulario de Cotización -->
+      <section id="cotizacion">
+        <div class="container">
+          <div class="cotizacion-header">
+            <h2>Solicita tu Cotización de Seguridad Especializada</h2>
+            <p>
+              Completa el formulario y recibe una propuesta personalizada para
+              tu sector industrial
+            </p>
+          </div>
+
+          <div class="cotizacion-form-wrapper">
+            <form id="especializadaForm">
+              <div class="cotizacion-form-row">
+                <!-- Columna Izquierda -->
+                <div class="cotizacion-form-col">
+                  <div class="cotizacion-field">
+                    <label for="nombre">Nombre Completo *</label>
+                    <input
+                      type="text"
+                      id="nombre"
+                      name="nombre"
+                      required
+                      placeholder="Ingresa tu nombre completo"
+                    />
+                  </div>
+
+                  <div class="cotizacion-field">
+                    <label for="email">Correo Electrónico *</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      placeholder="correo@empresa.com"
+                    />
+                  </div>
+
+                  <div class="cotizacion-field">
+                    <label for="telefono">Teléfono de Contacto *</label>
+                    <input
+                      type="tel"
+                      id="telefono"
+                      name="telefono"
+                      required
+                      placeholder="55 1234 5678"
+                    />
+                  </div>
+
+                  <div class="cotizacion-field">
+                    <label for="empresa"
+                      >Nombre de Empresa / Organización</label
+                    >
+                    <input
+                      type="text"
+                      id="empresa"
+                      name="empresa"
+                      placeholder="Nombre de tu empresa, condominio u organización"
+                    />
+                  </div>
+
+                  <div class="cotizacion-field">
+                    <label for="ubicacion">Ubicación del Servicio *</label>
+                    <select id="ubicacion" name="ubicacion" required>
+                      <option value="">Selecciona una opción</option>
+                      <option value="cdmx-cuauhtemoc">CDMX - Cuauhtémoc</option>
+                      <option value="cdmx-miguel-hidalgo">
+                        CDMX - Miguel Hidalgo (Polanco)
+                      </option>
+                      <option value="cdmx-benito-juarez">
+                        CDMX - Benito Juárez
+                      </option>
+                      <option value="cdmx-coyoacan">CDMX - Coyoacán</option>
+                      <option value="cdmx-alvaro-obregon">
+                        CDMX - Álvaro Obregón (Santa Fe)
+                      </option>
+                      <option value="cdmx-cuajimalpa">
+                        CDMX - Cuajimalpa (Interlomas)
+                      </option>
+                      <option value="cdmx-otras">CDMX - Otras Alcaldías</option>
+                      <option value="edomex-naucalpan">
+                        Estado de México - Naucalpan
+                      </option>
+                      <option value="edomex-tlalnepantla">
+                        Estado de México - Tlalnepantla
+                      </option>
+                      <option value="edomex-atizapan">
+                        Estado de México - Atizapán
+                      </option>
+                      <option value="edomex-huixquilucan">
+                        Estado de México - Huixquilucan
+                      </option>
+                      <option value="edomex-otros">
+                        Estado de México - Otros Municipios
+                      </option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- Columna Derecha -->
+                <div class="cotizacion-form-col">
+                  <div class="cotizacion-field">
+                    <label for="sectorIndustrial">Sector Industrial *</label>
+                    <select
+                      id="sectorIndustrial"
+                      name="sectorIndustrial"
+                      required
+                    >
+                      <option value="">Selecciona tu sector</option>
+                      <option value="condominios">
+                        Condominio Residencial
+                      </option>
+                      <option value="construccion">
+                        Obra en Construcción / Desarrollo Inmobiliario
+                      </option>
+                      <option value="eventos">
+                        Eventos Corporativos o Sociales
+                      </option>
+                      <option value="hospitalario">
+                        Hospital / Clínica / Centro Médico
+                      </option>
+                      <option value="corporativo">Oficinas Corporativas</option>
+                      <option value="comercial">
+                        Centro Comercial / Retail
+                      </option>
+                      <option value="industrial">
+                        Planta Industrial / Almacén
+                      </option>
+                      <option value="educativo">Institución Educativa</option>
+                      <option value="otro">Otro Sector</option>
+                    </select>
+                  </div>
+
+                  <div class="cotizacion-field">
+                    <label for="tipoServicio">Servicio Requerido *</label>
+                    <select id="tipoServicio" name="tipoServicio" required>
+                      <option value="">Selecciona un servicio</option>
+                      <option value="seguridad-condominios">
+                        Seguridad para Condominios
+                      </option>
+                      <option value="seguridad-construccion">
+                        Seguridad para Construcción
+                      </option>
+                      <option value="seguridad-eventos">
+                        Seguridad para Eventos
+                      </option>
+                      <option value="seguridad-hospitalaria">
+                        Seguridad Hospitalaria
+                      </option>
+                      <option value="guardias-intramuros">
+                        Guardias Intramuros
+                      </option>
+                      <option value="control-accesos">
+                        Control de Accesos
+                      </option>
+                      <option value="otro">Otro Servicio Especializado</option>
+                    </select>
+                  </div>
+
+                  <div class="cotizacion-field">
+                    <label for="duracion">Duración del Servicio *</label>
+                    <select id="duracion" name="duracion" required>
+                      <option value="">Selecciona duración</option>
+                      <option value="evento-puntual">
+                        Evento Puntual (1-3 días)
+                      </option>
+                      <option value="semanal">1 Semana</option>
+                      <option value="mensual">1 Mes</option>
+                      <option value="trimestral">3 Meses</option>
+                      <option value="semestral">6 Meses</option>
+                      <option value="anual">Contrato Anual</option>
+                      <option value="indefinido">Indefinido</option>
+                    </select>
+                  </div>
+
+                  <div class="cotizacion-checkboxes-wrapper">
+                    <label>Servicios Adicionales</label>
+                    <label>
+                      <input type="checkbox" name="servicios[]" value="cctv" />
+                      <span>Cámaras CCTV</span>
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="servicios[]"
+                        value="control-accesos-tecnologico"
+                      />
+                      <span>Control de Accesos Tecnológico</span>
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="servicios[]"
+                        value="patrullaje"
+                      />
+                      <span>Patrullaje Móvil</span>
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="servicios[]"
+                        value="monitoreo-24-7"
+                      />
+                      <span>Monitoreo Remoto 24/7</span>
+                    </label>
+                    <label>
+                      <input
+                        type="checkbox"
+                        name="servicios[]"
+                        value="supervision"
+                      />
+                      <span>Supervisión Permanente</span>
+                    </label>
+                  </div>
+
+                  <div class="cotizacion-field">
+                    <label for="mensaje">Descripción de Necesidades</label>
+                    <textarea
+                      id="mensaje"
+                      name="mensaje"
+                      rows="4"
+                      placeholder="Describe las características de tu instalación y necesidades específicas de seguridad..."
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cotizacion-footer">
+                <div class="cotizacion-terms">
+                  <input type="checkbox" name="terminos" required />
+                  <span
+                    >Acepto recibir información comercial y entiendo que mis
+                    datos serán tratados conforme a nuestra
+                    <a href="aviso-de-privacidad.html"
+                      >política de privacidad</a
+                    ></span
+                  >
+                </div>
+
+                <button type="submit" class="cotizacion-submit">
+                  Solicitar Cotización Especializada Sin Compromiso
+                </button>
+
+                <p class="cotizacion-note">
+                  Respuesta en menos de 24 horas • Personal Certificado SSC •
+                  Cobertura CDMX y Estado de México
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bloque de Llamada de Acción -->
+      <section class="cta-business">
+        <div class="cta-business__content">
+          <h2 class="cta-business__title">
+            Proteja su Organización con Seguridad Especializada
+          </h2>
+          <p class="cta-business__description">
+            Más de 15 años de experiencia desarrollando soluciones de seguridad
+            personalizadas para cada sector industrial en CDMX y Estado de
+            México.
+          </p>
+
+          <div class="cta-business__features">
+            <div class="cta-business__feature">
+              <h3 class="cta-business__feature-title">
+                Protocolos Especializados
+              </h3>
+              <p class="cta-business__feature-text">
+                Personal capacitado en procedimientos específicos de cada
+                industria
+              </p>
+            </div>
+            <div class="cta-business__feature">
+              <h3 class="cta-business__feature-title">Supervisión 24/7</h3>
+              <p class="cta-business__feature-text">
+                Central de operaciones con monitoreo continuo y reportes en
+                tiempo real
+              </p>
+            </div>
+            <div class="cta-business__feature">
+              <h3 class="cta-business__feature-title">Certificación SSC</h3>
+              <p class="cta-business__feature-text">
+                Todo nuestro personal cuenta con certificaciones vigentes y
+                pólizas de responsabilidad
+              </p>
+            </div>
+          </div>
+
+          <div class="cta-business__actions">
+            <a
+              href="https://wa.me/525530255580?text=Hola,%20necesito%20cotización%20para%20seguridad%20especializada%20por%20sector"
+              class="cta-business__btn cta-business__btn--primary"
+              target="_blank"
+              rel="noopener"
+            >
+              <span>WhatsApp</span>
+            </a>
+            <a
+              href="contacto.html"
+              class="cta-business__btn cta-business__btn--secondary"
+            >
+              Cotizar en Línea
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Servicios Relacionados -->
+      <section class="services-section">
+        <div class="container">
+          <div class="service-category">
+            <div class="service-category__inner">
+              <h3 class="category-title">
+                Servicios Relacionados de Seguridad Especializada
+              </h3>
+              <p class="category-description">
+                Cada industria tiene riesgos únicos que te quitan el sueño.
+                Entendemos tus preocupaciones específicas y diseñamos soluciones
+                que te permiten concentrarte en hacer crecer tu negocio sin la
+                ansiedad constante por la seguridad.
+              </p>
+
+              <div class="service-items-grid">
+                <a href="seguridad-especializada.html" class="service-item">
+                  <div class="service-item__image">
+                    <img
+                      src="img/img-index/seguridad-especializada.webp"
+                      alt="Seguridad Especializada por Sector - Soluciones personalizadas CDMX"
+                      loading="lazy"
+                      width="640"
+                      height="960"
+                    />
+                  </div>
+                  <span class="service-item__title"
+                    >Seguridad Especializada</span
+                  >
+                </a>
+
+                <a href="seguridad-condominios.html" class="service-item">
+                  <div class="service-item__image">
+                    <img
+                      src="img/img-index/seguridad-para-condominios.webp"
+                      alt="Seguridad para Condominios - Protección residencial CDMX"
+                      loading="lazy"
+                      width="640"
+                      height="960"
+                    />
+                  </div>
+                  <span class="service-item__title"
+                    >Seguridad para Condominios</span
+                  >
+                </a>
+
+                <a href="seguridad-construccion.html" class="service-item">
+                  <div class="service-item__image">
+                    <img
+                      src="img/img-index/seguridad-para-construccion.webp"
+                      alt="Seguridad para Construcción - Vigilancia obras Estado de México"
+                      loading="lazy"
+                      width="640"
+                      height="960"
+                    />
+                  </div>
+                  <span class="service-item__title"
+                    >Seguridad para Construcción</span
+                  >
+                </a>
+
+                <a href="seguridad-eventos.html" class="service-item">
+                  <div class="service-item__image">
+                    <img
+                      src="img/img-index/seguridad-para-eventos.webp"
+                      alt="Seguridad para Eventos - Protección eventos CDMX"
+                      loading="lazy"
+                      width="640"
+                      height="960"
+                    />
+                  </div>
+                  <span class="service-item__title"
+                    >Seguridad para Eventos</span
+                  >
+                </a>
+
+                <a href="seguridad-hospitalaria.html" class="service-item">
+                  <div class="service-item__image">
+                    <img
+                      src="img/img-index/seguridad-hospitalaria.webp"
+                      alt="Seguridad Hospitalaria - Protección centros médicos"
+                      loading="lazy"
+                      width="640"
+                      height="960"
+                    />
+                  </div>
+                  <span class="service-item__title"
+                    >Seguridad Hospitalaria</span
+                  >
+                </a>
+              </div>
+
+              <div class="category-footer">
+                <h4 class="category-footer__title">
+                  Cuando la Seguridad Genérica No Entiende los Riesgos
+                  Específicos de Tu Sector
+                </h4>
+                <div class="category-footer__grid">
+                  <p class="category-footer__text">
+                    Un guardia de retail no sabe manejar pacientes
+                    psiquiátricos. Uno de oficinas no entiende los robos típicos
+                    de obras.
+                    <strong
+                      >Cada industria tiene amenazas únicas, regulaciones
+                      específicas y protocolos especializados</strong
+                    >. Por eso desarrollamos soluciones verticales durante 15+
+                    años: seguridad para condominios donde tus hijos juegan sin
+                    miedo con guardias que conocen cada residente, protección de
+                    construcción que previene robos de materiales valorados en
+                    cientos de miles, seguridad hospitalaria con manejo
+                    NOM-004-SSA3 de situaciones médicas sensibles, y eventos con
+                    coordinación impecable para 5,000+ asistentes.
+                  </p>
+                  <p class="category-footer__text">
+                    No es solo vigilancia: es
+                    <strong
+                      >protección que habla el idioma operativo de tu
+                      industria</strong
+                    >. Guardias capacitados en tus protocolos sectoriales,
+                    supervisión 24/7 que entiende tus flujos operativos, y
+                    tecnología adaptada a tu modelo de negocio. Desde
+                    verificación de remisiones en construcción hasta manejo
+                    empático de familiares alterados en hospitales, cada
+                    servicio resuelve problemas reales documentados en más de
+                    una década protegiendo cada sector. La seguridad
+                    especializada no es lujo: es prevenir pérdidas millonarias
+                    que la seguridad genérica simplemente no detecta.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script>
+      function initMenu() {
+        const menuToggle = document.getElementById("menuToggle");
+        const nav = document.getElementById("headerNav");
+        const contact = document.querySelector(".header__contact");
+        const dropdownItems = document.querySelectorAll(".nav__item--dropdown");
+
+        if (menuToggle && nav) {
+          menuToggle.addEventListener("click", function (e) {
+            e.preventDefault();
+            const isActive = nav.classList.toggle("active");
+            menuToggle.classList.toggle("active");
+
+            if (contact) {
+              contact.classList.toggle("active");
+            }
+
+            document.body.style.overflow = isActive ? "hidden" : "";
+          });
+
+          dropdownItems.forEach(function (item) {
+            const link = item.querySelector(".nav__link");
+            if (link) {
+              link.addEventListener("click", function (e) {
+                if (window.innerWidth <= 734) {
+                  e.preventDefault();
+                  item.classList.toggle("active");
+                }
+              });
+            }
+          });
+
+          window.addEventListener("resize", function () {
+            if (window.innerWidth > 734) {
+              nav.classList.remove("active");
+              menuToggle.classList.remove("active");
+              if (contact) {
+                contact.classList.remove("active");
+              }
+              dropdownItems.forEach(function (item) {
+                item.classList.remove("active");
+              });
+              document.body.style.overflow = "";
+            }
+          });
+
+          document.addEventListener("click", function (e) {
+            if (nav.classList.contains("active")) {
+              if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+                nav.classList.remove("active");
+                menuToggle.classList.remove("active");
+                if (contact) {
+                  contact.classList.remove("active");
+                }
+                dropdownItems.forEach(function (item) {
+                  item.classList.remove("active");
+                });
+                document.body.style.overflow = "";
+              }
+            }
+          });
+        }
+      }
+
+      fetch("menu.html")
+        .then(function (response) {
+          return response.text();
+        })
+        .then(function (html) {
+          document.getElementById("menu-container").innerHTML = html;
+          initMenu();
+        })
+        .catch(function (error) {
+          console.error("Error loading menu:", error);
+        });
+
+      fetch("footer.html")
+        .then(function (response) {
+          return response.text();
+        })
+        .then(function (html) {
+          document.getElementById("footer-container").innerHTML = html;
+        })
+        .catch(function (error) {
+          console.error("Error loading footer:", error);
+        });
+    </script>
+    <!-- WhatsApp Floating Widget -->
+  <script src="js/whatsapp-widget.js" defer></script>
+</body>
+</html>

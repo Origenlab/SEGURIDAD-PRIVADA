@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="canonical" href="https://seguridad-privada.com.mx/blog/">
+  <title>Blog de Seguridad Privada | Consejos, Tendencias y Guías</title>
+  <meta name="description" content="Blog especializado en seguridad privada con artículos, guías y consejos profesionales sobre vigilancia, protección ejecutiva, análisis de riesgos y más.">
+  <meta name="keywords" content="blog seguridad privada, consejos seguridad empresarial, tendencias vigilancia, guías protección">
+
+  <meta property="og:title" content="Blog de Seguridad Privada - CDMX">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:description" content="Artículos profesionales sobre seguridad privada, vigilancia y protección empresarial.">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="theme-color" content="#1d1d1f">
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div id="menu-container"></div>
+
+  <nav class="breadcrumbs" aria-label="Migas de pan">
+  <div class="breadcrumbs__container">
+    <ol class="breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="../" class="breadcrumbs__link breadcrumbs__link--home" itemprop="item">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg>
+          <span itemprop="name">Inicio</span>
+        </a>
+        <meta itemprop="position" content="1">
+      </li>
+      <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span class="breadcrumbs__current" itemprop="name">Blog</span>
+        <meta itemprop="position" content="2">
+      </li>
+    </ol>
+  </div>
+</nav>
+
+  <main class="main-content">
+    <!-- Hero del Blog -->
+    <section class="blog-hero">
+      <div class="container">
+        <div class="blog-hero__content">
+          <h1 class="blog-hero__title">Blog de Seguridad Privada</h1>
+          <p class="blog-hero__subtitle">
+            Consejos profesionales, tendencias de la industria y guías especializadas sobre vigilancia, protección ejecutiva y seguridad corporativa
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filtros de Categorías -->
+    <section class="blog-filters">
+      <div class="container">
+        <div class="blog-filters__buttons">
+          <button class="blog-filter-btn active" data-category="todas">Todas</button>
+          <button class="blog-filter-btn" data-category="guias">Guías</button>
+          <button class="blog-filter-btn" data-category="tendencias">Tendencias</button>
+          <button class="blog-filter-btn" data-category="consejos">Consejos</button>
+          <button class="blog-filter-btn" data-category="normativa">Normativa</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid de Artículos con Sidebar -->
+    <section class="blog-articles">
+      <div class="blog-with-sidebar">
+
+        <!-- Contenido Principal -->
+        <div class="blog-main-content">
+          <div id="blog-grid" class="blog-grid">
+            <!-- Los artículos se cargarán dinámicamente aquí -->
+          </div>
+
+          <!-- Paginación -->
+          <div class="blog-pagination">
+            <button class="blog-pagination__btn blog-pagination__btn--prev" id="prevPage" disabled>
+              <span>← Anterior</span>
+            </button>
+            <div class="blog-pagination__info">
+              <span id="pageInfo">Página 1</span>
+            </div>
+            <button class="blog-pagination__btn blog-pagination__btn--next" id="nextPage">
+              <span>Siguiente →</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="blog-sidebar-sticky" id="blog-sidebar-container">
+          <!-- El sidebar se cargará dinámicamente aquí -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA del Blog -->
+    <section class="blog-cta">
+      <div class="container">
+        <div class="blog-cta__content">
+          <h2 class="blog-cta__title">¿Necesita Asesoría Profesional en Seguridad?</h2>
+          <p class="blog-cta__text">
+            Nuestro equipo de expertos está listo para ayudarle con soluciones personalizadas de seguridad privada, vigilancia y protección corporativa
+          </p>
+          <div class="blog-cta__actions">
+            <a href="../#cotizacion" class="btn btn-primary btn-large">Solicitar Cotización</a>
+            <a href="https://wa.me/525530255580" class="btn btn-secondary btn-large" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script>
+    // Datos de artículos del blog
+    const blogArticles = [
+      {
+        id: 1,
+        title: "Sistemas de Seguridad Integral para Condominios de Lujo en Polanco y Santa Fe",
+        excerpt: "Guía profesional de sistemas de seguridad integral para condominios premium en Polanco y Santa Fe: guardias certificados, CCTV con IA, control de accesos biométrico y protocolos de emergencia especializados.",
+        category: "guias",
+        image: "../img/img-condominios/guardia-certificado-ssc-condominio-premium.webp",
+        slug: "sistemas-seguridad-condominios-polanco-santa-fe"
+      },
+      {
+        id: 2,
+        title: "Mejores Prácticas de Control de Accesos para Condominios de Lujo",
+        excerpt: "Descubra las mejores prácticas profesionales de control de accesos para condominios premium: tecnología biométrica, gestión de visitantes, protocolos de seguridad y sistemas inteligentes para zonas de alta plusvalía.",
+        category: "guias",
+        image: "../img/img-condominios/control-accesos-biometrico-residencial-lujo.webp",
+        slug: "mejores-practicas-control-accesos-condominios-lujo"
+      },
+      {
+        id: 3,
+        title: "Protección Ejecutiva y Vigilancia para Complejos Residenciales Premium",
+        excerpt: "Estrategias profesionales de protección ejecutiva y vigilancia especializada para complejos residenciales premium: seguridad discreta, personal de élite y tecnología avanzada para residentes de alto perfil.",
+        category: "guias",
+        image: "../img/img-condominios/proteccion-ejecutiva-residentes-vip.webp",
+        slug: "proteccion-vigilancia-complejos-residenciales-premium"
+      },
+      {
+        id: 4,
+        title: "Integración de Tecnología CCTV Avanzada para Condominios de Lujo en CDMX",
+        excerpt: "Guía completa de integración de sistemas CCTV con IA, analítica de video, reconocimiento facial y monitoreo inteligente para condominios premium en zonas de alta plusvalía de Ciudad de México.",
+        category: "tendencias",
+        image: "../img/img-condominios/vigilancia-cctv-inteligente-condominios.webp",
+        slug: "integracion-tecnologia-cctv-condominios-lujo-cdmx"
+      },
+      {
+        id: 5,
+        title: "Cómo Elegir una Empresa de Seguridad Privada Confiable en México",
+        excerpt: "Guía completa con los 10 criterios esenciales que debes verificar antes de contratar servicios de seguridad privada: certificaciones, experiencia, personal y más.",
+        category: "consejos",
+        image: "../img/img-index/consultoria-de-seguridad.webp",
+        slug: "como-elegir-empresa-seguridad-privada"
+      },
+      {
+        id: 6,
+        title: "Certificaciones Esenciales para Guardias de Seguridad en CDMX",
+        excerpt: "Conoce los requisitos legales, certificaciones SSC y capacitación necesaria para operar como guardia de seguridad privada en la Ciudad de México y Estado de México.",
+        category: "guias",
+        image: "../img/img-index/guardias-de-seguridad.webp",
+        slug: "certificaciones-guardias-seguridad-cdmx"
+      },
+      {
+        id: 7,
+        title: "Tendencias en Tecnología de Seguridad Empresarial",
+        excerpt: "Las últimas innovaciones en sistemas CCTV con IA, videoanálisis inteligente, reconocimiento facial biométrico y analítica predictiva que revolucionan la seguridad corporativa.",
+        category: "tendencias",
+        image: "../img/img-index/tecnologia-monitoreo.webp",
+        slug: "tendencias-tecnologia-seguridad"
+      },
+      {
+        id: 8,
+        title: "Seguridad para Condominios de Lujo en CDMX: Guía Completa",
+        excerpt: "Los 7 componentes esenciales de seguridad integral para condominios premium: guardias certificados, control de accesos, CCTV, protocolos de emergencia y más.",
+        category: "guias",
+        image: "../img/img-condominios/guardias-intramuros-elite-condominios.webp",
+        slug: "seguridad-condominios-lujo-cdmx"
+      },
+      {
+        id: 9,
+        title: "Control de Accesos Inteligente para Condominios en CDMX",
+        excerpt: "Tecnología ANPR, biometría facial y registro digital de visitantes: sistemas que revolucionan el control de accesos en condominios residenciales de alto valor.",
+        category: "tendencias",
+        image: "../img/img-condominios/reconocimiento-facial-control-accesos.webp",
+        slug: "control-accesos-inteligente-condominios-cdmx"
+      },
+      {
+        id: 10,
+        title: "7 Amenazas de Seguridad que Enfrentan los Condominios de Alto Valor",
+        excerpt: "Robo con violencia, secuestro express, extorsión, fraude y más: amenazas reales que enfrentan condominios premium en CDMX y cómo prevenirlas profesionalmente.",
+        category: "consejos",
+        image: "../img/img-condominios/seguridad-perimetral-condominios-premium.webp",
+        slug: "amenazas-seguridad-condominios-alto-valor-mexico"
+      },
+      {
+        id: 11,
+        title: "Tecnología CCTV y Vigilancia Remota para Condominios Residenciales",
+        excerpt: "Cámaras IP 4K, video analytics con IA, monitoreo remoto 24/7 y almacenamiento en nube: guía completa de videovigilancia profesional para condominios en CDMX.",
+        category: "tendencias",
+        image: "../img/img-condominios/videovigilancia-profesional-residencial.webp",
+        slug: "tecnologia-cctv-vigilancia-remota-condominios"
+      },
+      {
+        id: 12,
+        title: "Costo de Seguridad Privada para Condominios en CDMX",
+        excerpt: "Análisis detallado de costos, inversión inicial, gastos operativos y retorno de inversión en seguridad privada profesional para condominios de lujo en Ciudad de México.",
+        category: "consejos",
+        image: "../img/img-condominios/tecnologia-seguridad-integral-condominios.webp",
+        slug: "costo-seguridad-privada-condominios-cdmx"
+      },
+      {
+        id: 13,
+        title: "Tendencias en Tecnología de Seguridad Empresarial 2025",
+        excerpt: "Descubra las innovaciones más recientes en tecnología de seguridad: inteligencia artificial, IoT, análisis predictivo y sistemas integrados que transforman la protección empresarial.",
+        category: "tendencias",
+        image: "../img/img-index/seguridad-satelital-gps.webp",
+        slug: "tendencias-tecnologia-seguridad-2025"
+      },
+      {
+        id: 14,
+        title: "Cómo Reducir Costos en Seguridad Privada Sin Sacrificar Calidad",
+        excerpt: "Descubre 7 estrategias efectivas para optimizar tu presupuesto de seguridad privada sin comprometer la protección de tu empresa o condominio en CDMX. Incluye análisis de ROI, modelos híbridos y casos de éxito reales.",
+        category: "consejos",
+        image: "../img/img-index/guardia-corporativo.webp",
+        slug: "como-reducir-costos-seguridad-privada-sin-sacrificar-calidad"
+      },
+      {
+        id: 15,
+        title: "10 Errores Comunes al Contratar Seguridad Privada y Cómo Evitarlos",
+        excerpt: "Evita costosos errores al contratar seguridad privada. Guía completa con 10 errores frecuentes que cometen empresas y condominios en CDMX al elegir proveedor, con checklist de verificación pre-contratación.",
+        category: "guias",
+        image: "../img/img-index/guardia-lobby.webp",
+        slug: "errores-comunes-contratar-seguridad-privada-como-evitarlos"
+      },
+      {
+        id: 16,
+        title: "Seguridad Física vs. Tecnológica: ¿Cuál Necesita Tu Empresa en 2025?",
+        excerpt: "Análisis completo de seguridad física (guardias) vs. tecnológica (CCTV, alarmas, IA). Descubre qué modelo es mejor para tu empresa: comparativa de costos, ventajas, limitaciones y modelo híbrido recomendado.",
+        category: "tendencias",
+        image: "../img/img-index/monitoreo-camaras.webp",
+        slug: "seguridad-fisica-vs-tecnologica-cual-necesita-tu-empresa"
+      }
+    ];
+
+    let currentCategory = 'todas';
+    let currentPage = 1;
+    const articlesPerPage = 6;
+
+    function filterArticles(category) {
+      if (category === 'todas') {
+        return blogArticles;
+      }
+      return blogArticles.filter(article => article.category === category);
+    }
+
+    function paginateArticles(articles, page) {
+      const start = (page - 1) * articlesPerPage;
+      const end = start + articlesPerPage;
+      return articles.slice(start, end);
+    }
+
+    function renderArticles() {
+      const filteredArticles = filterArticles(currentCategory);
+      const paginatedArticles = paginateArticles(filteredArticles, currentPage);
+      const blogGrid = document.getElementById('blog-grid');
+
+      if (paginatedArticles.length === 0) {
+        blogGrid.innerHTML = '<p class="blog-empty">No se encontraron artículos en esta categoría.</p>';
+        return;
+      }
+
+      blogGrid.innerHTML = paginatedArticles.map(article => `
+        <article class="blog-card">
+          <a href="articulos/${article.slug}.html" class="blog-card__link">
+            <div class="blog-card__image">
+              <img src="${article.image}" alt="${article.title}" loading="lazy">
+              <span class="blog-card__category">${getCategoryName(article.category)}</span>
+            </div>
+            <div class="blog-card__content">
+              <h2 class="blog-card__title">${article.title}</h2>
+              <p class="blog-card__excerpt">${article.excerpt}</p>
+              <span class="blog-card__read-more">Leer más →</span>
+            </div>
+          </a>
+        </article>
+      `).join('');
+
+      updatePagination(filteredArticles.length);
+    }
+
+    function updatePagination(totalArticles) {
+      const totalPages = Math.ceil(totalArticles / articlesPerPage);
+      const prevBtn = document.getElementById('prevPage');
+      const nextBtn = document.getElementById('nextPage');
+      const pageInfo = document.getElementById('pageInfo');
+
+      prevBtn.disabled = currentPage === 1;
+      nextBtn.disabled = currentPage >= totalPages;
+      pageInfo.textContent = `Página ${currentPage} de ${totalPages}`;
+    }
+
+    function getCategoryName(category) {
+      const categories = {
+        'guias': 'Guías',
+        'tendencias': 'Tendencias',
+        'consejos': 'Consejos',
+        'normativa': 'Normativa'
+      };
+      return categories[category] || category;
+    }
+
+    function formatDate(dateString) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      return new Date(dateString).toLocaleDateString('es-MX', options);
+    }
+
+    // Event Listeners
+    document.querySelectorAll('.blog-filter-btn').forEach(button => {
+      button.addEventListener('click', function() {
+        document.querySelectorAll('.blog-filter-btn').forEach(btn => btn.classList.remove('active'));
+        this.classList.add('active');
+        currentCategory = this.dataset.category;
+        currentPage = 1;
+        renderArticles();
+      });
+    });
+
+    document.getElementById('prevPage').addEventListener('click', function() {
+      if (currentPage > 1) {
+        currentPage--;
+        renderArticles();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+
+    document.getElementById('nextPage').addEventListener('click', function() {
+      const filteredArticles = filterArticles(currentCategory);
+      const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderArticles();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+
+    // Inicializar
+    renderArticles();
+
+    // Cargar Menu y Footer
+    function initMenu() {
+      const menuToggle = document.getElementById('menuToggle');
+      const nav = document.getElementById('headerNav');
+      const contact = document.querySelector('.header__contact');
+      const dropdownItems = document.querySelectorAll('.nav__item--dropdown');
+
+      if (menuToggle && nav) {
+        menuToggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          const isActive = nav.classList.toggle('active');
+          menuToggle.classList.toggle('active');
+
+          if (contact) {
+            contact.classList.toggle('active');
+          }
+
+          document.body.style.overflow = isActive ? 'hidden' : '';
+        });
+
+        dropdownItems.forEach(function(item) {
+          const link = item.querySelector('.nav__link');
+          if (link) {
+            link.addEventListener('click', function(e) {
+              if (window.innerWidth <= 734) {
+                e.preventDefault();
+                item.classList.toggle('active');
+              }
+            });
+          }
+        });
+
+        window.addEventListener('resize', function() {
+          if (window.innerWidth > 734) {
+            nav.classList.remove('active');
+            menuToggle.classList.remove('active');
+            if (contact) {
+              contact.classList.remove('active');
+            }
+            dropdownItems.forEach(function(item) {
+              item.classList.remove('active');
+            });
+            document.body.style.overflow = '';
+          }
+        });
+
+        document.addEventListener('click', function(e) {
+          if (nav.classList.contains('active')) {
+            if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+              nav.classList.remove('active');
+              menuToggle.classList.remove('active');
+              if (contact) {
+                contact.classList.remove('active');
+              }
+              dropdownItems.forEach(function(item) {
+                item.classList.remove('active');
+              });
+              document.body.style.overflow = '';
+            }
+          }
+        });
+      }
+    }
+
+    fetch('../menu.html')
+      .then(function(response) {
+        return response.text();
+      })
+      .then(function(html) {
+        document.getElementById('menu-container').innerHTML = html;
+
+        // Fix paths for blog subdirectory
+        const header = document.querySelector('.header');
+        if (header) {
+          // Fix logo image path
+          const logoImg = header.querySelector('.logo__image');
+          if (logoImg) {
+            const imgSrc = logoImg.getAttribute('src');
+            if (imgSrc && !imgSrc.startsWith('http') && !imgSrc.startsWith('../')) {
+              logoImg.setAttribute('src', '../' + imgSrc);
+            }
+          }
+
+          // Fix logo link
+          const logoLink = header.querySelector('.logo');
+          if (logoLink) {
+            const logoHref = logoLink.getAttribute('href');
+            if (logoHref && !logoHref.startsWith('http') && !logoHref.startsWith('../')) {
+              logoLink.setAttribute('href', '../' + logoHref);
+            }
+          }
+
+          // Fix all navigation links
+          const links = header.querySelectorAll('a[href]');
+          links.forEach(function(link) {
+            const href = link.getAttribute('href');
+            if (href && !href.startsWith('#') && !href.startsWith('http') && !href.startsWith('../')) {
+              // Special case for blog link - should point to current directory
+              if (href === '/blog/' || href === 'blog/') {
+                link.setAttribute('href', '/blog/');
+              } else {
+                link.setAttribute('href', '../' + href);
+              }
+            }
+          });
+        }
+
+        initMenu();
+      })
+      .catch(function(error) {
+        console.error('Error loading menu:', error);
+      });
+
+    fetch('../footer.html')
+      .then(function(response) {
+        return response.text();
+      })
+      .then(function(html) {
+        document.getElementById('footer-container').innerHTML = html;
+
+        // Fix paths for footer links in blog subdirectory
+        const footer = document.querySelector('.footer');
+        if (footer) {
+          const links = footer.querySelectorAll('a[href]');
+          links.forEach(function(link) {
+            const href = link.getAttribute('href');
+            if (href && !href.startsWith('#') && !href.startsWith('http') && !href.startsWith('../')) {
+              link.setAttribute('href', '../' + href);
+            }
+          });
+        }
+      })
+      .catch(function(error) {
+        console.error('Error loading footer:', error);
+      });
+
+    // Load Blog Sidebar
+    fetch('sidebar.html')
+      .then(function(response) {
+        return response.text();
+      })
+      .then(function(html) {
+        document.getElementById('blog-sidebar-container').innerHTML = html;
+      })
+      .catch(function(error) {
+        console.error('Error loading sidebar:', error);
+      });
+  </script>
+  <script src="../js/whatsapp-widget.js" defer></script>
+  <script src="../js/blog-sidebar.js" defer></script>
+
+</body>
+</html>

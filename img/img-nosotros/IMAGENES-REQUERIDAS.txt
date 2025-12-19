@@ -1,0 +1,50 @@
+IMÁGENES NECESARIAS PARA LA PÁGINA NOSOTROS (ABOUT)
+========================================================
+
+Directorio: img/img-nosotros/
+Formato recomendado: .webp (para mejor rendimiento y SEO)
+Dimensiones recomendadas: 800px de ancho x 600px de alto (ratio 4:3) para iconos
+                         1200px de ancho x 600px de alto (ratio 2:1) para banners
+
+LISTADO DE IMÁGENES REQUERIDAS:
+-------------------------------
+
+SECCIÓN: ¿POR QUÉ SOMOS DIFERENTES? (6 imágenes)
+
+1. certificacion.webp
+   - Descripción: Certificación SSC, credenciales, documentos oficiales
+   - Sugerencia: Guardia mostrando certificación SSC, documentos oficiales
+
+2. tecnologia.webp
+   - Descripción: Central de monitoreo, pantallas CCTV, tecnología de vigilancia
+   - Sugerencia: Central de monitoreo con múltiples pantallas, sala de control
+
+3. capacitacion.webp
+   - Descripción: Guardias en capacitación, entrenamiento, cursos
+   - Sugerencia: Sesión de capacitación, instructor enseñando, guardias aprendiendo
+
+4. cobertura.webp
+   - Descripción: Mapa CDMX, vehículos de supervisión, presencia en zona metropolitana
+   - Sugerencia: Unidad de supervisión, mapa de cobertura, patrullas
+
+5. transparencia.webp
+   - Descripción: Reportes digitales, tablet con datos, bitácoras electrónicas
+   - Sugerencia: Guardia usando tablet, reportes digitales, dashboard de monitoreo
+
+6. respaldo.webp
+   - Descripción: Documentos legales, pólizas, contratos formales
+   - Sugerencia: Documentación legal, contratos, certificados de seguros
+
+NOTAS IMPORTANTES:
+-----------------
+- Todas las imágenes deben ser profesionales y de alta calidad
+- Se recomienda usar imágenes reales de equipos de seguridad profesional
+- Las imágenes deben transmitir confianza, profesionalismo y seriedad
+- Optimizar las imágenes en formato .webp para mejor rendimiento web
+- Mantener consistencia visual con el resto del sitio
+
+ALTERNATIVA TEMPORAL:
+--------------------
+Si no tienes imágenes disponibles de inmediato, puedes usar temporalmente
+la misma imagen placeholder (ej: img/img-bolsa-trabajo/referencia.webp)
+hasta conseguir las imágenes específicas.

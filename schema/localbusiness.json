@@ -1,0 +1,145 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ORIGINS Private Security S.A. DE C.V.",
+  "alternateName": "ORIGINS Seguridad Privada",
+  "url": "https://seguridad-privada.com.mx/",
+  "logo": "https://seguridad-privada.com.mx/img/seguridad-privada.webp",
+  "image": "https://seguridad-privada.com.mx/img/img-index/guardia-corporativo.webp",
+  "description": "Empresa líder en seguridad privada en CDMX y Estado de México con más de 15 años de experiencia. Guardias certificados SSC, monitoreo 24/7, patrullaje, control de accesos y protección ejecutiva.",
+  "telephone": "+525530255580",
+  "email": "josecruz@originsecurity.mx",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Basiliso Romo Anguiano No 22 int 3",
+    "addressLocality": "Ciudad de México",
+    "addressRegion": "CDMX",
+    "postalCode": "07800",
+    "addressCountry": "MX"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "19.4326",
+    "longitude": "-99.1332"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Ciudad de México"
+    },
+    {
+      "@type": "State",
+      "name": "Estado de México"
+    },
+    {
+      "@type": "City",
+      "name": "Naucalpan"
+    },
+    {
+      "@type": "City",
+      "name": "Tlalnepantla"
+    },
+    {
+      "@type": "City",
+      "name": "Atizapán"
+    },
+    {
+      "@type": "City",
+      "name": "Huixquilucan"
+    }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "19:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "14:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/originssecurity",
+    "https://www.linkedin.com/company/origins-private-security",
+    "https://www.instagram.com/originssecurity"
+  ],
+  "priceRange": "$$-$$$",
+  "paymentAccepted": "Efectivo, Transferencia, Cheque",
+  "currenciesAccepted": "MXN",
+  "foundingDate": "2010",
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "value": "200"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "127",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios de Seguridad Privada",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Guardias de Seguridad Certificados SSC",
+          "description": "Personal de seguridad certificado para vigilancia 24/7, control de accesos y patrullaje",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "ORIGINS Private Security"
+          }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Monitoreo de Alarmas 24/7",
+          "description": "Central de monitoreo profesional con respuesta inmediata ante emergencias",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "ORIGINS Private Security"
+          }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Seguridad para Condominios",
+          "description": "Soluciones integrales de seguridad para condominios residenciales y fraccionamientos",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "ORIGINS Private Security"
+          }
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Protección Ejecutiva",
+          "description": "Escoltas profesionales y guardaespaldas para ejecutivos y alto perfil",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "ORIGINS Private Security"
+          }
+        }
+      }
+    ]
+  }
+}
