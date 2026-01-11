@@ -80,16 +80,8 @@
           </div>
 
           <!-- Paginación -->
-          <div class="blog-pagination">
-            <button class="blog-pagination__btn blog-pagination__btn--prev" id="prevPage" disabled>
-              <span>← Anterior</span>
-            </button>
-            <div class="blog-pagination__info">
-              <span id="pageInfo">Página 1</span>
-            </div>
-            <button class="blog-pagination__btn blog-pagination__btn--next" id="nextPage">
-              <span>Siguiente →</span>
-            </button>
+          <div class="blog-pagination" id="pagination">
+            <!-- La paginación se genera dinámicamente -->
           </div>
         </div>
 
@@ -329,13 +321,76 @@
 
     function updatePagination(totalArticles) {
       const totalPages = Math.ceil(totalArticles / articlesPerPage);
-      const prevBtn = document.getElementById('prevPage');
-      const nextBtn = document.getElementById('nextPage');
-      const pageInfo = document.getElementById('pageInfo');
+      const pagination = document.getElementById('pagination');
 
-      prevBtn.disabled = currentPage === 1;
-      nextBtn.disabled = currentPage >= totalPages;
-      pageInfo.textContent = `Página ${currentPage} de ${totalPages}`;
+      if (totalPages <= 1) {
+        pagination.innerHTML = '';
+        return;
+      }
+
+      let html = '';
+
+      // Botón Anterior
+      html += `<button class="blog-pagination__btn blog-pagination__btn--prev" ${currentPage === 1 ? 'disabled' : ''} onclick="goToPage(${currentPage - 1})">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        <span>Anterior</span>
+      </button>`;
+
+      // Números de página
+      html += '<div class="blog-pagination__numbers">';
+
+      // Lógica para mostrar páginas con elipsis
+      const showPages = [];
+      if (totalPages <= 7) {
+        // Mostrar todas las páginas
+        for (let i = 1; i <= totalPages; i++) showPages.push(i);
+      } else {
+        // Siempre mostrar primera página
+        showPages.push(1);
+
+        if (currentPage > 3) showPages.push('...');
+
+        // Páginas alrededor de la actual
+        for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) {
+          if (!showPages.includes(i)) showPages.push(i);
+        }
+
+        if (currentPage < totalPages - 2) showPages.push('...');
+
+        // Siempre mostrar última página
+        if (!showPages.includes(totalPages)) showPages.push(totalPages);
+      }
+
+      showPages.forEach(page => {
+        if (page === '...') {
+          html += '<span class="blog-pagination__ellipsis">...</span>';
+        } else {
+          html += `<button class="blog-pagination__number ${page === currentPage ? 'active' : ''}" onclick="goToPage(${page})">${page}</button>`;
+        }
+      });
+
+      html += '</div>';
+
+      // Botón Siguiente
+      html += `<button class="blog-pagination__btn blog-pagination__btn--next" ${currentPage >= totalPages ? 'disabled' : ''} onclick="goToPage(${currentPage + 1})">
+        <span>Siguiente</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+      </button>`;
+
+      // Info de página
+      html += `<div class="blog-pagination__info">Página ${currentPage} de ${totalPages}</div>`;
+
+      pagination.innerHTML = html;
+    }
+
+    function goToPage(page) {
+      const filteredArticles = filterArticles(currentCategory);
+      const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
+      if (page >= 1 && page <= totalPages) {
+        currentPage = page;
+        renderArticles();
+        document.getElementById('blog-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
 
     function getCategoryName(category) {
@@ -353,7 +408,7 @@
       return new Date(dateString).toLocaleDateString('es-MX', options);
     }
 
-    // Event Listeners
+    // Event Listeners para filtros de categoría
     document.querySelectorAll('.blog-filter-btn').forEach(button => {
       button.addEventListener('click', function() {
         document.querySelectorAll('.blog-filter-btn').forEach(btn => btn.classList.remove('active'));
@@ -362,24 +417,6 @@
         currentPage = 1;
         renderArticles();
       });
-    });
-
-    document.getElementById('prevPage').addEventListener('click', function() {
-      if (currentPage > 1) {
-        currentPage--;
-        renderArticles();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
-    });
-
-    document.getElementById('nextPage').addEventListener('click', function() {
-      const filteredArticles = filterArticles(currentCategory);
-      const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
-      if (currentPage < totalPages) {
-        currentPage++;
-        renderArticles();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
     });
 
     // Inicializar
