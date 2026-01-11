@@ -64,6 +64,7 @@ RewriteRule ^ %1 [R=301,L]
     ExpiresByType image/png "access plus 1 month"
     ExpiresByType image/gif "access plus 1 month"
     ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/avif "access plus 1 month"
     ExpiresByType image/svg+xml "access plus 1 month"
     ExpiresByType image/x-icon "access plus 1 year"
     ExpiresByType image/ico "access plus 1 year"
@@ -97,7 +98,7 @@ RewriteRule ^ %1 [R=301,L]
 # Cache-Control Headers
 <IfModule mod_headers.c>
     # Imagenes - 1 mes
-    <FilesMatch "\.(ico|jpe?g|png|gif|webp|svg)$">
+    <FilesMatch "\.(ico|jpe?g|png|gif|webp|avif|svg)$">
         Header set Cache-Control "public, max-age=2592000"
     </FilesMatch>
 
@@ -119,24 +120,38 @@ RewriteRule ^ %1 [R=301,L]
 </IfModule>
 
 # =====================================================
-# SEGURIDAD - HEADERS
+# SEGURIDAD - HEADERS (OWASP Best Practices)
 # =====================================================
 
 <IfModule mod_headers.c>
+    # HSTS - Forzar HTTPS por 1 año (incluir subdominios y preload)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
     # Proteccion XSS
-    Header set X-XSS-Protection "1; mode=block"
+    Header always set X-XSS-Protection "1; mode=block"
 
     # Prevenir MIME-type sniffing
-    Header set X-Content-Type-Options "nosniff"
+    Header always set X-Content-Type-Options "nosniff"
 
-    # Clickjacking protection
-    Header set X-Frame-Options "SAMEORIGIN"
+    # Clickjacking protection - DENY es mas seguro que SAMEORIGIN
+    Header always set X-Frame-Options "DENY"
 
-    # Referrer Policy
-    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    # Referrer Policy - No enviar referrer a sitios externos
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
 
-    # Permissions Policy
-    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    # Content Security Policy (CSP) - Whitelist de recursos permitidos
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://app.rybbit.io https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://app.rybbit.io https://www.google-analytics.com https://wa.me; frame-ancestors 'none'; form-action 'self' https://wa.me; base-uri 'self'; upgrade-insecure-requests"
+
+    # Permissions Policy - Restringir APIs del navegador
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), accelerometer=(), gyroscope=(), magnetometer=(), usb=(), payment=(), interest-cohort=()"
+
+    # Cross-Origin Policies
+    Header always set Cross-Origin-Opener-Policy "same-origin"
+    Header always set Cross-Origin-Embedder-Policy "unsafe-none"
+    Header always set Cross-Origin-Resource-Policy "same-origin"
+
+    # Prevenir que el sitio sea indexado por robots de IA (opcional)
+    # Header always set X-Robots-Tag "noai, noimageai"
 </IfModule>
 
 # =====================================================
@@ -150,6 +165,7 @@ RewriteRule ^ %1 [R=301,L]
     AddType application/json .json
     AddType application/ld+json .jsonld
     AddType image/webp .webp
+    AddType image/avif .avif
     AddType image/svg+xml .svg .svgz
     AddType font/woff .woff
     AddType font/woff2 .woff2
@@ -201,8 +217,41 @@ FileETag None
 AddDefaultCharset UTF-8
 
 # =====================================================
-# REDIRECCIONES ESPECIFICAS (si son necesarias)
+# REDIRECCIONES 301 - URLs ANTIGUAS Y ROTAS
 # =====================================================
 
-# Ejemplo: Redirigir pagina antigua a nueva
-# RewriteRule ^pagina-antigua\.html$ /pagina-nueva.html [R=301,L]
+# Redirigir /noticias/ antiguo a /blog/ o paginas relevantes
+# Proteccion VIP/Ejecutiva -> proteccion-ejecutiva
+RewriteRule ^noticias/proteccion-dignataria-y-vip-profesionales(.*)$ /proteccion-ejecutiva.html [R=301,L]
+RewriteRule ^noticias/proteccion-vip(.*)$ /proteccion-ejecutiva.html [R=301,L]
+RewriteRule ^noticias/escoltas(.*)$ /proteccion-ejecutiva.html [R=301,L]
+
+# Guardias de seguridad
+RewriteRule ^noticias/(.*)guardias(.*)$ /guardias-de-seguridad-y-vigilancia.html [R=301,L]
+RewriteRule ^noticias/(.*)seguridad-privada(.*)$ /guardias-de-seguridad-y-vigilancia.html [R=301,L]
+RewriteRule ^noticias/4-razones-inteligentes-para-contratar-gu(.*)$ /guardias-de-seguridad-y-vigilancia.html [R=301,L]
+RewriteRule ^noticias/cuanto-cuesta-alquilar-seguridad-privada(.*)$ /blog/costo-seguridad-privada-condominios-cdmx.html [R=301,L]
+
+# Trabajos/empleo
+RewriteRule ^noticias/informacion-sobre-trabajos-de-seguridad(.*)$ /bolsa-de-trabajo.html [R=301,L]
+RewriteRule ^noticias/(.*)trabajo(.*)$ /bolsa-de-trabajo.html [R=301,L]
+RewriteRule ^noticias/(.*)empleo(.*)$ /bolsa-de-trabajo.html [R=301,L]
+
+# Armas/defensa personal -> pagina principal (no tenemos ese contenido)
+RewriteRule ^noticias/como-funciona-una-pistola-paralizante(.*)$ / [R=301,L]
+RewriteRule ^noticias/los-tres-mejores-aerosoles-de-pimienta(.*)$ / [R=301,L]
+RewriteRule ^noticias/(.*)armas(.*)$ / [R=301,L]
+
+# Cualquier otra URL de /noticias/ -> blog
+RewriteRule ^noticias/(.*)$ /blog/ [R=301,L]
+RewriteRule ^noticias$ /blog/ [R=301,L]
+
+# Redirigir /blog/articulos/ a /blog/ (estructura nueva)
+RewriteRule ^blog/articulos/(.*)$ /blog/$1 [R=301,L]
+
+# Redirigir /category/ y /tag/ si existen
+RewriteRule ^category/(.*)$ /blog/ [R=301,L]
+RewriteRule ^tag/(.*)$ /blog/ [R=301,L]
+
+# Redirigir URLs con .php a .html si alguien las busca
+RewriteRule ^([a-z0-9-]+)\.php$ /$1.html [R=301,L]
