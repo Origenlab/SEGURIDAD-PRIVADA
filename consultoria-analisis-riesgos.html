@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Análisis de Riesgos de Seguridad Privada CDMX | Consultoría ISO 31000</title>
   <meta name="description" content="Análisis de riesgos de seguridad privada para empresas y condominios en CDMX. Metodología ISO 31000, matrices ejecutivas. ☎ 55 3025 5580">
-  <link rel="canonical" href="https://seguridad-privada.com.mx/consultoria-analisis-riesgos.html">
+  <link rel="canonical" href="https://seguridad-privada.com.mx/consultoria-analisis-riesgos">
 
   <meta property="og:title" content="Análisis de Riesgos de Seguridad Privada CDMX">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://seguridad-privada.com.mx/consultoria-analisis-riesgos.html">
+  <meta property="og:url" content="https://seguridad-privada.com.mx/consultoria-analisis-riesgos">
   <meta property="og:image" content="https://seguridad-privada.com.mx/img/og-image.avif">
   <meta property="og:description" content="Análisis de riesgos de seguridad privada para empresas y condominios en CDMX.">
 
@@ -992,7 +992,88 @@
     </div>
   </div>
 
-  <div id="menu-container"></div>
+  <header class="header">
+  <div class="container">
+    <div class="header__content">
+
+      <div class="header__logo">
+        <a href="/">
+          <img src="img/seguridad-privada.avif" alt="ORIGINS Private Security" class="logo__image" width="372" height="100">
+        </a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="header__nav" id="headerNav">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="/">Inicio</a></li>
+
+          <li class="nav__item--dropdown">
+            <a class="nav__link" href="servicios">Servicios</a>
+            <div class="dropdown">
+              <div class="dropdown__inner">
+                <div class="dropdown__column">
+                  <h4><a href="guardias-de-seguridad-y-vigilancia">Vigilancia Corporativa</a></h4>
+                  <ul>
+                    <li><a href="guardias-de-seguridad-y-vigilancia">Guardias de Seguridad</a></li>
+                    <li><a href="guardias-intramuros">Guardias Intramuros</a></li>
+                    <li><a href="control-de-accesos">Control de Accesos</a></li>
+                    <li><a href="patrullaje">Patrullaje</a></li>
+                    <li><a href="prevencion-de-perdidas">Prevención de Pérdidas</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__column">
+                  <h4><a href="seguridad-especializada">Seguridad Especializada</a></h4>
+                  <ul>
+                    <li><a href="seguridad-especializada">Seguridad Especializada</a></li>
+                    <li><a href="seguridad-condominios">Condominios</a></li>
+                    <li><a href="seguridad-construccion">Construcción</a></li>
+                    <li><a href="seguridad-eventos">Eventos</a></li>
+                    <li><a href="seguridad-hospitalaria">Hospitalaria</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__column">
+                  <h4><a href="tecnologia-monitoreo-seguridad">Tecnología y Monitoreo</a></h4>
+                  <ul>
+                    <li><a href="tecnologia-monitoreo-seguridad">Tecnología y Monitoreo</a></li>
+                    <li><a href="vigilancia-remota-cctv">Vigilancia Remota CCTV</a></li>
+                    <li><a href="monitoreo-alarmas">Monitoreo de Alarmas 24/7</a></li>
+                    <li><a href="seguridad-gps-satelital">Seguridad GPS Satelital</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__column">
+                  <h4><a href="servicios-de-proteccion-ejecutiva-y-consultoria">Protección y Consultoría</a></h4>
+                  <ul>
+                    <li><a href="servicios-de-proteccion-ejecutiva-y-consultoria">Protección Ejecutiva y Consultoría</a></li>
+                    <li><a href="custodia-de-mercancias">Custodia de Mercancías</a></li>
+                    <li><a href="proteccion-ejecutiva">Protección Ejecutiva</a></li>
+                    <li><a href="consultoria-seguridad">Consultoría de Seguridad</a></li>
+                    <li><a href="consultoria-analisis-riesgos">Análisis de Riesgos</a></li>
+                    <li><a href="investigaciones-confiabilidad">Investigaciones de Confiabilidad</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li><a class="nav__link" href="nosotros">Nosotros</a></li>
+          <li><a class="nav__link" href="/blog/">Blog</a></li>
+          <li><a class="nav__link" href="bolsa-de-trabajo">Bolsa de Trabajo</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__contact">
+        <a href="contacto" class="contact__btn">Contacto</a>
+      </div>
+
+    </div>
+  </div>
+  <div class="menu-overlay" id="menuOverlay"></div>
+</header>
 
   <nav class="breadcrumbs" aria-label="Migas de pan">
   <div class="breadcrumbs__container">
@@ -1005,7 +1086,7 @@
         <meta itemprop="position" content="1">
       </li>
       <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a href="servicios.html" class="breadcrumbs__link" itemprop="item">
+        <a href="servicios" class="breadcrumbs__link" itemprop="item">
           <span itemprop="name">Servicios</span>
         </a>
         <meta itemprop="position" content="2">
@@ -1035,7 +1116,7 @@
           </p>
           <div class="hero-two-col__cta">
             <a href="#cotizacion" class="btn btn-primary">Solicitar Análisis Gratis</a>
-            <a href="https://wa.me/525530255580?text=Hola,%20necesito%20información%20sobre%20análisis%20de%20riesgos" class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <a href="https://wa.me/525530255580?text=Hola,%20necesito%20información%20sobre%20análisis%20de%20riesgos" class="btn btn-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               WhatsApp
             </a>
@@ -1163,7 +1244,7 @@
           <p>El análisis comienza identificando todos los activos empresariales críticos: infraestructura física (instalaciones, flotilla, equipamiento), activos intangibles (propiedad intelectual, bases de datos, reputación), capital humano (ejecutivos clave, personal especializado) y dependencias operacionales (proveedores críticos, cadenas de suministro). Evaluamos cuáles activos son verdaderamente críticos vs. importantes pero reemplazables. Analizamos interdependencias: qué sistemas dependen de cuáles activos.</p>
 
           <h3>Evaluación de Amenazas Externas e Internas con Probabilidades</h3>
-          <p>Identificamos amenazas específicas para su industria y contexto: robo con violencia, secuestro de ejecutivos, robo hormiga interno, fuga de información, sabotaje, fraude corporativo, ciberataques, desastres naturales, incendios, fallas de infraestructura crítica. Para cada amenaza calculamos probabilidad de ocurrencia basada en estadísticas sectoriales, historial de incidentes similares en empresas comparables y factores de riesgo específicos de su operación. Complementa con <a href="consultoria-seguridad.html">consultoría de seguridad</a>.</p>
+          <p>Identificamos amenazas específicas para su industria y contexto: robo con violencia, secuestro de ejecutivos, robo hormiga interno, fuga de información, sabotaje, fraude corporativo, ciberataques, desastres naturales, incendios, fallas de infraestructura crítica. Para cada amenaza calculamos probabilidad de ocurrencia basada en estadísticas sectoriales, historial de incidentes similares en empresas comparables y factores de riesgo específicos de su operación. Complementa con <a href="consultoria-seguridad">consultoría de seguridad</a>.</p>
 
           <h3>Cuantificación Financiera: Del Impacto "Alto/Medio/Bajo" a Pesos Reales</h3>
           <p>No usamos etiquetas subjetivas como "riesgo alto" sin cuantificar. Calculamos pérdida potencial esperada en pesos para cada amenaza: pérdida directa (valor robado, equipos destruidos, rescates), costos operacionales (interrupción de negocio, tiempo de recuperación, horas-hombre perdidas), costos reputacionales (pérdida de clientes, daño de marca, impacto en ventas) y costos regulatorios (multas, litigios, indemnizaciones). Esta cuantificación permite priorizar racionalmente.</p>
@@ -1172,7 +1253,7 @@
           <p>Entregamos matriz de riesgos tipo Heat Map que visualiza todos los riesgos en gráfica de probabilidad (eje Y) vs. impacto financiero (eje X). Riesgos en zona roja (alta probabilidad, alto impacto) requieren acción inmediata. Riesgos en zona amarilla (probabilidad o impacto moderado) requieren monitoreo. Riesgos en zona verde (baja probabilidad, bajo impacto) no justifican inversión. Esta matriz ONE-PAGE permite a CFOs y comités ejecutivos entender prioridades sin leer 100 páginas.</p>
 
           <h3>Análisis de Brechas: Controles Existentes vs. Controles Necesarios</h3>
-          <p>Evaluamos efectividad de controles de seguridad actuales: ¿tienen guardias pero sin capacitación anti-secuestro? ¿Tienen CCTV pero nadie monitorea? ¿Tienen políticas de seguridad que nadie cumple? Identificamos brechas (GAPs) entre su postura de seguridad actual y la necesaria para mitigar riesgos críticos. Este análisis evita duplicar inversiones en controles que ya funcionan mientras ignora brechas peligrosas. Conoce más en <a href="seguridad-condominios.html">seguridad para condominios</a>.</p>
+          <p>Evaluamos efectividad de controles de seguridad actuales: ¿tienen guardias pero sin capacitación anti-secuestro? ¿Tienen CCTV pero nadie monitorea? ¿Tienen políticas de seguridad que nadie cumple? Identificamos brechas (GAPs) entre su postura de seguridad actual y la necesaria para mitigar riesgos críticos. Este análisis evita duplicar inversiones en controles que ya funcionan mientras ignora brechas peligrosas. Conoce más en <a href="seguridad-condominios">seguridad para condominios</a>.</p>
 
           <h3>Roadmap de Mitigación Priorizado por ROI de Protección</h3>
           <p>No solo identificamos riesgos: entregamos plan de acción priorizado. Para cada riesgo crítico especificamos controles recomendados, costo estimado de implementación, reducción esperada de probabilidad o impacto y ROI de protección (pérdida evitada / costo de control). Controles con ROI más alto se priorizan. El roadmap incluye timeline de implementación: qué hacer este trimestre (riesgos críticos urgentes), qué hacer próximo semestre (riesgos importantes) y qué monitorear (riesgos aceptables).</p>
@@ -1181,13 +1262,13 @@
           <p>Modelamos escenarios específicos: "¿Qué pasa si secuestran a nuestro CFO?" "¿Qué pasa si incendian nuestra planta principal?" "¿Qué pasa si filtran nuestra base de datos de clientes?" Para cada escenario calculamos impacto operacional, financiero, legal y reputacional. Estos escenarios ayudan a comités ejecutivos entender consecuencias reales de riesgos que parecen abstractos. También validan inversiones en controles: "invertir $500K en protección ejecutiva evita pérdida potencial de $50M por secuestro".</p>
 
           <h3>Análisis de Riesgos para Cadena de Suministro y Proveedores</h3>
-          <p>No solo riesgos internos: evaluamos riesgos de cadena de suministro. ¿Qué pasa si su proveedor crítico de insumos sufre robo o incendio? ¿Tiene proveedores alternativos? ¿Qué tan robustos son contratos con cláusulas de continuidad? Identificamos dependencias peligrosas (single points of failure) donde un incidente en proveedor paraliza su operación. Recomendamos estrategias de diversificación o controles colaborativos con proveedores estratégicos. Complementa con <a href="custodia-de-mercancias.html">custodia de mercancías</a>.</p>
+          <p>No solo riesgos internos: evaluamos riesgos de cadena de suministro. ¿Qué pasa si su proveedor crítico de insumos sufre robo o incendio? ¿Tiene proveedores alternativos? ¿Qué tan robustos son contratos con cláusulas de continuidad? Identificamos dependencias peligrosas (single points of failure) donde un incidente en proveedor paraliza su operación. Recomendamos estrategias de diversificación o controles colaborativos con proveedores estratégicos. Complementa con <a href="custodia-de-mercancias">custodia de mercancías</a>.</p>
 
           <h3>Análisis de Riesgos Reputacionales y de Comunicación de Crisis</h3>
           <p>Cuantificamos riesgos reputacionales: ¿cuánto perdería en ventas si video de robo violento en sucursal se viraliza? ¿Qué impacto tendría en valor de acciones filtración de datos de clientes? Evaluamos preparación para comunicación de crisis: ¿tienen vocero capacitado? ¿Tienen protocolos de respuesta a medios? ¿Pueden contener narrativa negativa en 24 horas? Empresas sin plan de comunicación de crisis sufren daño reputacional 3x mayor que empresas preparadas.</p>
 
           <h3>Cumplimiento ISO 31000: Documentación Certificable para Auditorías</h3>
-          <p>Utilizamos metodología ISO 31000 para gestión de riesgos, estándar internacional reconocido por comités de auditoría y certificadores. El análisis sigue estructura sistemática: establecimiento de contexto → identificación de riesgos → análisis de riesgos → evaluación de riesgos → tratamiento de riesgos → monitoreo y revisión. La documentación es certificable: puede ser presentada en auditorías externas (ISO 27001, ISO 22301, auditorías financieras) como evidencia de due diligence en gestión de riesgos. Conoce también <a href="investigaciones-confiabilidad.html">investigaciones de confiabilidad</a>.</p>
+          <p>Utilizamos metodología ISO 31000 para gestión de riesgos, estándar internacional reconocido por comités de auditoría y certificadores. El análisis sigue estructura sistemática: establecimiento de contexto → identificación de riesgos → análisis de riesgos → evaluación de riesgos → tratamiento de riesgos → monitoreo y revisión. La documentación es certificable: puede ser presentada en auditorías externas (ISO 27001, ISO 22301, auditorías financieras) como evidencia de due diligence en gestión de riesgos. Conoce también <a href="investigaciones-confiabilidad">investigaciones de confiabilidad</a>.</p>
         </div>
       </div>
     </section>
@@ -1447,7 +1528,7 @@
             <div class="cotizacion-footer">
               <div class="cotizacion-terms">
                 <input type="checkbox" name="terminos" required>
-                <span>Acepto recibir información comercial y entiendo que mis datos serán tratados conforme a nuestra <a href="aviso-de-privacidad.html">política de privacidad</a></span>
+                <span>Acepto recibir información comercial y entiendo que mis datos serán tratados conforme a nuestra <a href="aviso-de-privacidad">política de privacidad</a></span>
               </div>
 
               <button type="submit" class="cotizacion-submit">Enviar Solicitud por WhatsApp</button>
@@ -1615,42 +1696,42 @@
             <p class="category-description">Soluciones estratégicas para quienes no pueden darse el lujo de correr riesgos. Protección discreta, análisis preventivo e inteligencia empresarial que te permite tomar decisiones con confianza.</p>
 
             <div class="service-items-grid">
-            <a href="servicios-de-proteccion-ejecutiva-y-consultoria.html" class="service-item">
+            <a href="servicios-de-proteccion-ejecutiva-y-consultoria" class="service-item">
               <div class="service-item__image">
                 <img src="img/img-index/proteccion-ejecutiva-consultoria.avif" alt="Protección Ejecutiva y Consultoría - Servicios estratégicos CDMX" loading="lazy" width="640" height="960">
               </div>
               <span class="service-item__title">Protección Ejecutiva y Consultoría</span>
             </a>
 
-            <a href="custodia-de-mercancias.html" class="service-item">
+            <a href="custodia-de-mercancias" class="service-item">
               <div class="service-item__image">
                 <img src="img/img-index/custodia-de-mercancias.avif" alt="Custodia de Mercancías - Transporte seguro CDMX" loading="lazy" width="640" height="960">
               </div>
               <span class="service-item__title">Custodia de Mercancías</span>
             </a>
 
-            <a href="proteccion-ejecutiva.html" class="service-item">
+            <a href="proteccion-ejecutiva" class="service-item">
               <div class="service-item__image">
                 <img src="img/img-index/proteccion-ejecutiva.avif" alt="Protección Ejecutiva - Escoltas profesionales CDMX" loading="lazy" width="640" height="960">
               </div>
               <span class="service-item__title">Protección Ejecutiva</span>
             </a>
 
-            <a href="consultoria-seguridad.html" class="service-item">
+            <a href="consultoria-seguridad" class="service-item">
               <div class="service-item__image">
                 <img src="img/img-index/consultoria-de-seguridad.avif" alt="Consultoría Seguridad - Análisis riesgos empresariales" loading="lazy" width="640" height="960">
               </div>
               <span class="service-item__title">Consultoría de Seguridad</span>
             </a>
 
-            <a href="consultoria-analisis-riesgos.html" class="service-item">
+            <a href="consultoria-analisis-riesgos" class="service-item">
               <div class="service-item__image">
                 <img src="img/img-index/analisis-de-riesgos.avif" alt="Análisis de Riesgos - Evaluación amenazas corporativas" loading="lazy" width="640" height="960">
               </div>
               <span class="service-item__title">Análisis de Riesgos</span>
             </a>
 
-            <a href="investigaciones-confiabilidad.html" class="service-item">
+            <a href="investigaciones-confiabilidad" class="service-item">
               <div class="service-item__image">
                 <img src="img/img-index/investigaciones-de-confiabilidad.avif" alt="Investigaciones Confiabilidad - Estudios personal CDMX" loading="lazy" width="640" height="960">
               </div>
@@ -1698,10 +1779,10 @@
         </div>
 
         <div class="cta-business__actions">
-          <a href="https://wa.me/525530255580?text=Hola,%20necesito%20cotización%20para%20análisis%20de%20riesgos%20corporativos" class="cta-business__btn cta-business__btn--primary" target="_blank" rel="noopener">
+          <a href="https://wa.me/525530255580?text=Hola,%20necesito%20cotización%20para%20análisis%20de%20riesgos%20corporativos" class="cta-business__btn cta-business__btn--primary" target="_blank" rel="noopener" aria-label="WhatsApp">
             <span>WhatsApp</span>
           </a>
-          <a href="contacto.html" class="cta-business__btn cta-business__btn--secondary">
+          <a href="contacto" class="cta-business__btn cta-business__btn--secondary">
             Llenar Formulario en Línea
           </a>
         </div>
@@ -1710,10 +1791,103 @@
 
   </main>
 
-  <div id="footer-container"></div>
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3 class="footer-title">Navegación</h3>
+        <ul class="footer-links">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="servicios">Servicios</a></li>
+          <li><a href="nosotros">Nosotros</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="bolsa-de-trabajo">Bolsa de Trabajo</a></li>
+          <li><a href="contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-title"><a href="guardias-de-seguridad-y-vigilancia">Vigilancia Corporativa</a></h3>
+        <ul class="footer-links">
+          <li><a href="guardias-de-seguridad-y-vigilancia">Guardias de Seguridad y Vigilancia</a></li>
+          <li><a href="guardias-intramuros">Guardias Intramuros</a></li>
+          <li><a href="control-de-accesos">Control de Accesos</a></li>
+          <li><a href="patrullaje">Patrullaje</a></li>
+          <li><a href="prevencion-de-perdidas">Prevención de Pérdidas</a></li>
+        </ul>
+
+        <h3 class="footer-title"><a href="seguridad-especializada">Seguridad Especializada</a></h3>
+        <ul class="footer-links">
+          <li><a href="seguridad-especializada">Seguridad Especializada por Sector</a></li>
+          <li><a href="seguridad-condominios">Seguridad para Condominios</a></li>
+          <li><a href="seguridad-construccion">Seguridad para Construcción</a></li>
+          <li><a href="seguridad-eventos">Seguridad para Eventos</a></li>
+          <li><a href="seguridad-hospitalaria">Seguridad Hospitalaria</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-title"><a href="tecnologia-monitoreo-seguridad">Tecnología y Monitoreo</a></h3>
+        <ul class="footer-links">
+          <li><a href="tecnologia-monitoreo-seguridad">Tecnología y Monitoreo 24/7</a></li>
+          <li><a href="vigilancia-remota-cctv">Vigilancia Remota y CCTV</a></li>
+          <li><a href="monitoreo-alarmas">Monitoreo de Alarmas 24/7</a></li>
+          <li><a href="seguridad-gps-satelital">Seguridad GPS Satelital</a></li>
+        </ul>
+
+        <h3 class="footer-title"><a href="servicios-de-proteccion-ejecutiva-y-consultoria">Protección y Consultoría</a></h3>
+        <ul class="footer-links">
+          <li><a href="servicios-de-proteccion-ejecutiva-y-consultoria">Protección Ejecutiva y Consultoría</a></li>
+          <li><a href="custodia-de-mercancias">Custodia de Mercancías</a></li>
+          <li><a href="proteccion-ejecutiva">Protección Ejecutiva</a></li>
+          <li><a href="consultoria-seguridad">Consultoría de Seguridad</a></li>
+          <li><a href="consultoria-analisis-riesgos">Análisis de Riesgos</a></li>
+          <li><a href="investigaciones-confiabilidad">Investigaciones de Confiabilidad</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-title">Contacto</h3>
+        <div class="footer-contact">
+          <p class="contact-item">
+            <strong>ORIGINS PRIVATE SECURITY</strong><br>
+            Basiliso Romo Anguiano No 22 int 3<br>
+            Col Industrial, CDMX<br>
+            C.P. 07800
+          </p>
+          <p class="contact-item">
+            <strong>Teléfonos:</strong><br>
+            <a href="tel:+525530255580">55 3025 5580</a> |
+            <a href="tel:+525572044370">55 7204 4370</a><br>
+            <a href="tel:+525552074704">55 5207 4704</a> |
+            <a href="tel:+525552076828">5207 6828</a>
+          </p>
+          <p class="contact-item">
+            <strong>Email:</strong><br>
+            <a href="mailto:josecruz@originsecurity.mx">josecruz@originsecurity.mx</a>
+          </p>
+          <p class="contact-item">
+            <strong>WhatsApp:</strong><br>
+            <a href="https://wa.me/525530255580" target="_blank" rel="noopener" aria-label="WhatsApp">55 3025 5580</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <p>&copy; 2025 ORIGINS PRIVATE SECURITY S.A. DE C.V. Todos los derechos reservados. | RFC: OPS1308309M5</p>
+        <ul class="footer-legal-links">
+          <li><a href="aviso-de-privacidad">Aviso de Privacidad</a></li>
+          <li><a href="mapa-del-sitio">Mapa del Sitio</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
 
   <script>
-    function initMenu() {
+    (function() {
       const menuToggle = document.getElementById('menuToggle');
       const nav = document.getElementById('headerNav');
       const contact = document.querySelector('.header__contact');
@@ -1724,11 +1898,7 @@
           e.preventDefault();
           const isActive = nav.classList.toggle('active');
           menuToggle.classList.toggle('active');
-
-          if (contact) {
-            contact.classList.toggle('active');
-          }
-
+          if (contact) contact.classList.toggle('active');
           document.body.style.overflow = isActive ? 'hidden' : '';
         });
 
@@ -1748,130 +1918,23 @@
           if (window.innerWidth > 734) {
             nav.classList.remove('active');
             menuToggle.classList.remove('active');
-            if (contact) {
-              contact.classList.remove('active');
-            }
-            dropdownItems.forEach(function(item) {
-              item.classList.remove('active');
-            });
+            if (contact) contact.classList.remove('active');
+            dropdownItems.forEach(function(item) { item.classList.remove('active'); });
             document.body.style.overflow = '';
           }
         });
 
         document.addEventListener('click', function(e) {
-          if (nav.classList.contains('active')) {
-            if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
-              nav.classList.remove('active');
-              menuToggle.classList.remove('active');
-              if (contact) {
-                contact.classList.remove('active');
-              }
-              dropdownItems.forEach(function(item) {
-                item.classList.remove('active');
-              });
-              document.body.style.overflow = '';
-            }
+          if (nav.classList.contains('active') && !nav.contains(e.target) && !menuToggle.contains(e.target)) {
+            nav.classList.remove('active');
+            menuToggle.classList.remove('active');
+            if (contact) contact.classList.remove('active');
+            dropdownItems.forEach(function(item) { item.classList.remove('active'); });
+            document.body.style.overflow = '';
           }
         });
       }
-    }
-
-    fetch('menu.html')
-      .then(function(response) {
-        return response.text();
-      })
-      .then(function(html) {
-        document.getElementById('menu-container').innerHTML = html;
-        initMenu();
-      })
-      .catch(function(error) {
-        console.error('Error loading menu:', error);
-      });
-
-    fetch('footer.html')
-      .then(function(response) {
-        return response.text();
-      })
-      .then(function(html) {
-        document.getElementById('footer-container').innerHTML = html;
-      })
-      .catch(function(error) {
-        console.error('Error loading footer:', error);
-      });
-
-    // Formulario WhatsApp Integration
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.getElementById('analisisRiesgosForm');
-
-      if (form) {
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-
-          const formData = new FormData(form);
-          const nombre = formData.get('nombre');
-          const email = formData.get('email');
-          const telefono = formData.get('telefono');
-          const empresa = formData.get('empresa') || 'No especificado';
-          const industria = form.querySelector('#industria').selectedOptions[0].text;
-          const ubicaciones = form.querySelector('#ubicaciones').selectedOptions[0].text;
-          const nivel = form.querySelector('#nivel').selectedOptions[0].text;
-          const empleados = form.querySelector('#empleados').selectedOptions[0].text;
-          const timeline = form.querySelector('#timeline').selectedOptions[0].text;
-          const mensaje = formData.get('mensaje') || 'Sin detalles adicionales';
-
-          const serviciosAdicionales = [];
-          formData.getAll('servicios[]').forEach(function(servicio) {
-            serviciosAdicionales.push(servicio);
-          });
-
-          let mensajeWhatsApp = `*SOLICITUD DE ANÁLISIS DE RIESGOS*%0A%0A`;
-          mensajeWhatsApp += `*Datos de Contacto:*%0A`;
-          mensajeWhatsApp += `Nombre: ${nombre}%0A`;
-          mensajeWhatsApp += `Email: ${email}%0A`;
-          mensajeWhatsApp += `Teléfono: ${telefono}%0A`;
-          mensajeWhatsApp += `Empresa: ${empresa}%0A`;
-          mensajeWhatsApp += `Industria: ${industria}%0A%0A`;
-          mensajeWhatsApp += `*Información del Servicio:*%0A`;
-          mensajeWhatsApp += `Ubicaciones: ${ubicaciones}%0A`;
-          mensajeWhatsApp += `Nivel de Análisis: ${nivel}%0A`;
-          mensajeWhatsApp += `Empleados: ${empleados}%0A`;
-          mensajeWhatsApp += `Timeline: ${timeline}%0A`;
-
-          if (serviciosAdicionales.length > 0) {
-            mensajeWhatsApp += `%0A*Áreas de Enfoque:*%0A`;
-            serviciosAdicionales.forEach(function(servicio) {
-              mensajeWhatsApp += `• ${servicio}%0A`;
-            });
-          }
-
-          mensajeWhatsApp += `%0A*Preocupaciones:*%0A${mensaje}`;
-
-          const whatsappURL = `https://wa.me/525530255580?text=${mensajeWhatsApp}`;
-          window.open(whatsappURL, '_blank');
-        });
-      }
-
-      // FAQ Accordion
-      const faqItems = document.querySelectorAll('.faq-item');
-      faqItems.forEach(function(item) {
-        const question = item.querySelector('.faq-question');
-        if (question) {
-          question.addEventListener('click', function() {
-            const isActive = item.classList.contains('active');
-            faqItems.forEach(function(otherItem) {
-              if (otherItem !== item) {
-                otherItem.classList.remove('active');
-              }
-            });
-            if (isActive) {
-              item.classList.remove('active');
-            } else {
-              item.classList.add('active');
-            }
-          });
-        }
-      });
-    });
+    })();
   </script>
   <script src="js/faq-accordion.js" defer></script>  <script src="js/whatsapp-widget.js" defer></script>
 </body>

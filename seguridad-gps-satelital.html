@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rastreo GPS Satelital para Empresas y Flotillas CDMX | Seguridad Privada</title>
   <meta name="description" content="Rastreo GPS satelital y seguridad privada para empresas y flotillas en CDMX. Telemetría vehicular, analítica predictiva 24/7. ☎ 55 3025 5580">
-  <link rel="canonical" href="https://seguridad-privada.com.mx/seguridad-gps-satelital.html">
+  <link rel="canonical" href="https://seguridad-privada.com.mx/seguridad-gps-satelital">
 
   <meta property="og:title" content="Rastreo GPS Satelital para Empresas y Flotillas CDMX">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://seguridad-privada.com.mx/seguridad-gps-satelital.html">
+  <meta property="og:url" content="https://seguridad-privada.com.mx/seguridad-gps-satelital">
   <meta property="og:image" content="https://seguridad-privada.com.mx/img/og-image.avif">
   <meta property="og:description" content="Rastreo GPS satelital y seguridad privada para empresas y flotillas en CDMX.">
 
@@ -992,7 +992,88 @@
     </div>
   </div>
 
-  <div id="menu-container"></div>
+  <header class="header">
+  <div class="container">
+    <div class="header__content">
+
+      <div class="header__logo">
+        <a href="/">
+          <img src="img/seguridad-privada.avif" alt="ORIGINS Private Security" class="logo__image" width="372" height="100">
+        </a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="header__nav" id="headerNav">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="/">Inicio</a></li>
+
+          <li class="nav__item--dropdown">
+            <a class="nav__link" href="servicios">Servicios</a>
+            <div class="dropdown">
+              <div class="dropdown__inner">
+                <div class="dropdown__column">
+                  <h4><a href="guardias-de-seguridad-y-vigilancia">Vigilancia Corporativa</a></h4>
+                  <ul>
+                    <li><a href="guardias-de-seguridad-y-vigilancia">Guardias de Seguridad</a></li>
+                    <li><a href="guardias-intramuros">Guardias Intramuros</a></li>
+                    <li><a href="control-de-accesos">Control de Accesos</a></li>
+                    <li><a href="patrullaje">Patrullaje</a></li>
+                    <li><a href="prevencion-de-perdidas">Prevención de Pérdidas</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__column">
+                  <h4><a href="seguridad-especializada">Seguridad Especializada</a></h4>
+                  <ul>
+                    <li><a href="seguridad-especializada">Seguridad Especializada</a></li>
+                    <li><a href="seguridad-condominios">Condominios</a></li>
+                    <li><a href="seguridad-construccion">Construcción</a></li>
+                    <li><a href="seguridad-eventos">Eventos</a></li>
+                    <li><a href="seguridad-hospitalaria">Hospitalaria</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__column">
+                  <h4><a href="tecnologia-monitoreo-seguridad">Tecnología y Monitoreo</a></h4>
+                  <ul>
+                    <li><a href="tecnologia-monitoreo-seguridad">Tecnología y Monitoreo</a></li>
+                    <li><a href="vigilancia-remota-cctv">Vigilancia Remota CCTV</a></li>
+                    <li><a href="monitoreo-alarmas">Monitoreo de Alarmas 24/7</a></li>
+                    <li><a href="seguridad-gps-satelital">Seguridad GPS Satelital</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__column">
+                  <h4><a href="servicios-de-proteccion-ejecutiva-y-consultoria">Protección y Consultoría</a></h4>
+                  <ul>
+                    <li><a href="servicios-de-proteccion-ejecutiva-y-consultoria">Protección Ejecutiva y Consultoría</a></li>
+                    <li><a href="custodia-de-mercancias">Custodia de Mercancías</a></li>
+                    <li><a href="proteccion-ejecutiva">Protección Ejecutiva</a></li>
+                    <li><a href="consultoria-seguridad">Consultoría de Seguridad</a></li>
+                    <li><a href="consultoria-analisis-riesgos">Análisis de Riesgos</a></li>
+                    <li><a href="investigaciones-confiabilidad">Investigaciones de Confiabilidad</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li><a class="nav__link" href="nosotros">Nosotros</a></li>
+          <li><a class="nav__link" href="/blog/">Blog</a></li>
+          <li><a class="nav__link" href="bolsa-de-trabajo">Bolsa de Trabajo</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__contact">
+        <a href="contacto" class="contact__btn">Contacto</a>
+      </div>
+
+    </div>
+  </div>
+  <div class="menu-overlay" id="menuOverlay"></div>
+</header>
 
   <nav class="breadcrumbs" aria-label="Migas de pan">
   <div class="breadcrumbs__container">
@@ -1005,7 +1086,7 @@
         <meta itemprop="position" content="1">
       </li>
       <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a href="servicios.html" class="breadcrumbs__link" itemprop="item">
+        <a href="servicios" class="breadcrumbs__link" itemprop="item">
           <span itemprop="name">Servicios</span>
         </a>
         <meta itemprop="position" content="2">
@@ -1035,7 +1116,7 @@
           </p>
           <div class="hero-two-col__cta">
             <a href="#cotizacion" class="btn btn-primary">Solicitar Demo Ejecutiva</a>
-            <a href="https://wa.me/525530255580?text=Hola,%20necesito%20información%20sobre%20rastreo%20GPS%20empresarial" class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <a href="https://wa.me/525530255580?text=Hola,%20necesito%20información%20sobre%20rastreo%20GPS%20empresarial" class="btn btn-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
               <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               WhatsApp
             </a>
@@ -1161,7 +1242,7 @@
 
         <div class="content-wrapper">
           <h3>Telemetría OBD-II Avanzada: Captura de 47 Parámetros Vehiculares en Tiempo Real</h3>
-          <p>Más allá de la geolocalización básica, nuestra solución extrae datos técnicos directamente desde puerto OBD-II (On-Board Diagnostics) del vehículo mediante protocolo CAN Bus. Esto captura parámetros críticos imposibles de obtener con GPS estándar: nivel de combustible instantáneo (no estimado), temperatura de motor y transmisión, presión de turbo, voltaje de batería, códigos DTC (Diagnostic Trouble Codes) de fallas mecánicas. Integración con sistemas de mantenimiento preventivo alerta cuando unidad requiere servicio basándose en kilometraje real, horas de motor, y patrones de uso detectados. Ahorro documentado: reducción 22% en costos de mantenimiento correctivo al prevenir fallas mayores mediante mantenimiento predictivo. Complementa con <a href="custodia-de-mercancias.html">custodia de mercancías</a> para logística integral.</p>
+          <p>Más allá de la geolocalización básica, nuestra solución extrae datos técnicos directamente desde puerto OBD-II (On-Board Diagnostics) del vehículo mediante protocolo CAN Bus. Esto captura parámetros críticos imposibles de obtener con GPS estándar: nivel de combustible instantáneo (no estimado), temperatura de motor y transmisión, presión de turbo, voltaje de batería, códigos DTC (Diagnostic Trouble Codes) de fallas mecánicas. Integración con sistemas de mantenimiento preventivo alerta cuando unidad requiere servicio basándose en kilometraje real, horas de motor, y patrones de uso detectados. Ahorro documentado: reducción 22% en costos de mantenimiento correctivo al prevenir fallas mayores mediante mantenimiento predictivo. Complementa con <a href="custodia-de-mercancias">custodia de mercancías</a> para logística integral.</p>
 
           <h3>Geofencing Inteligente Multicapa con Lógica de Negocio Personalizada</h3>
           <p>Sistema avanzado de geocercas permite definir polígonos ilimitados sobre mapa con reglas de negocio específicas: zonas autorizadas de operación, clientes que deben visitarse en ruta, áreas de riesgo a evitar, puntos de carga/descarga obligatorios. Alertas configurables disparan notificaciones cuando vehículo entra, sale, o permanece tiempo excesivo en geocerca específica. Ejemplo aplicado: empresa de reparto configura geocerca en cada cliente con tiempo máximo de estadía de 15 minutos - si unidad permanece 20+ minutos, sistema alerta a supervisor de posible demora que afecta entregas subsecuentes. Geocercas horarias permiten definir zonas prohibidas según hora del día: vehículos corporativos no deben circular fines de semana, unidades de reparto solo operan 8 AM - 8 PM. Violación de geocerca genera evidencia fotográfica timestamp para auditoría.</p>
@@ -1185,7 +1266,7 @@
           <p>Empresas con vehículos asignados a ejecutivos (directores, vendedores, gerentes de zona) enfrentan desafío de uso mixto: parte del kilometraje es empresarial deducible, parte es personal no deducible. Sistema GPS genera bitácora automática de viajes con categorización fiscal: operador marca viaje como "empresarial" o "personal" mediante app móvil al inicio de trayecto. Reporte mensual proporciona kilometraje deducible vs. no deducible para cumplimiento con SAT. Detección de uso no autorizado: alertas si vehículo circula fines de semana, horario nocturno, o zonas no relacionadas con operación empresarial. Política típica: empresa permite 10% de uso personal sin penalización, excesos generan descuento de nómina. Ahorro documentado: reducción 28% en kilometraje personal al implementar monitoreo transparente.</p>
 
           <h3>Sectores Regulados: Cumplimiento NOM-087-SEMARNAT con Rastreo de Residuos Peligrosos</h3>
-          <p>Empresas que transportan residuos peligrosos (hospitales, laboratorios, industria química) deben cumplir NOM-087-SEMARNAT que establece cadena de custodia documentada desde generación hasta disposición final. Sistema GPS proporciona evidencia de trayecto completo con timestamps inmutables: hora de recolección en instalación generadora, ruta seguida, paradas intermedias (no autorizadas), hora de entrega en confinamiento autorizado por SEMARNAT. Integración con plataforma permite generar reportes de cumplimiento para auditorías ambientales. Integración con manifiestos electrónicos de SEMARNAT agiliza trámites. Multas por incumplimiento: $300,000 - $3,000,000 MXN según gravedad - sistema GPS proporciona evidencia documental que protege contra sanciones. Conoce más en <a href="seguridad-hospitalaria.html">seguridad hospitalaria</a> para cumplimiento integral.</p>
+          <p>Empresas que transportan residuos peligrosos (hospitales, laboratorios, industria química) deben cumplir NOM-087-SEMARNAT que establece cadena de custodia documentada desde generación hasta disposición final. Sistema GPS proporciona evidencia de trayecto completo con timestamps inmutables: hora de recolección en instalación generadora, ruta seguida, paradas intermedias (no autorizadas), hora de entrega en confinamiento autorizado por SEMARNAT. Integración con plataforma permite generar reportes de cumplimiento para auditorías ambientales. Integración con manifiestos electrónicos de SEMARNAT agiliza trámites. Multas por incumplimiento: $300,000 - $3,000,000 MXN según gravedad - sistema GPS proporciona evidencia documental que protege contra sanciones. Conoce más en <a href="seguridad-hospitalaria">seguridad hospitalaria</a> para cumplimiento integral.</p>
 
           <h3>Coordinación de Recuperación con C5 y Fiscalía de Robo de Vehículos</h3>
           <p>Ante reporte de robo de vehículo, central de monitoreo proporciona ubicación en tiempo real a autoridades competentes: C5 CDMX (Centro de Comando, Control, Cómputo, Comunicaciones y Contacto Ciudadano), Fiscalía de Investigación de Robo de Vehículos, Policía Cibernética SSC. Protocolo establecido: cliente reporta robo, central activa modo de rastreo silencioso (incrementa frecuencia de transmisión a cada 10 segundos sin alertar a delincuente con LEDs o sonidos), coordinador contacta a autoridades proporcionando ubicación exacta con latitud/longitud, mantenemos comunicación constante durante persecución o cerco. Función de inmovilizador remoto detiene motor de manera segura cuando vehículo está a < 20 km/h. Tasa de recuperación documentada: 87% de unidades recuperadas en < 48 horas vs. 12% sin GPS. Tiempo promedio de recuperación: 6-14 horas desde reporte.</p>
@@ -1467,7 +1548,7 @@
             <div class="cotizacion-footer">
               <div class="cotizacion-terms">
                 <input type="checkbox" name="terminos" required>
-                <span>Acepto que mi información corporativa sea tratada confidencialmente según <a href="aviso-de-privacidad.html">Aviso de Privacidad</a></span>
+                <span>Acepto que mi información corporativa sea tratada confidencialmente según <a href="aviso-de-privacidad">Aviso de Privacidad</a></span>
               </div>
 
               <button type="submit" class="cotizacion-submit">Solicitar Evaluación de ROI por WhatsApp</button>
@@ -1629,7 +1710,7 @@
 
             <div class="service-items-grid">
                 <a
-                  href="tecnologia-monitoreo-seguridad.html"
+                  href="tecnologia-monitoreo-seguridad"
                   class="service-item"
                 >
                   <div class="service-item__image">
@@ -1646,7 +1727,7 @@
                   >
                 </a>
 
-                <a href="vigilancia-remota-cctv.html" class="service-item">
+                <a href="vigilancia-remota-cctv" class="service-item">
                   <div class="service-item__image">
                     <img
                       src="img/img-index/vigilancia-remota-y-cctv.avif"
@@ -1661,7 +1742,7 @@
                   >
                 </a>
 
-                <a href="monitoreo-alarmas.html" class="service-item">
+                <a href="monitoreo-alarmas" class="service-item">
                   <div class="service-item__image">
                     <img
                       src="img/img-index/monitoreo-de-alarmas-24-7.avif"
@@ -1676,7 +1757,7 @@
                   >
                 </a>
 
-                <a href="seguridad-gps-satelital.html" class="service-item">
+                <a href="seguridad-gps-satelital" class="service-item">
                   <div class="service-item__image">
                     <img
                       src="img/img-index/seguridad-satelital-gps.avif"
@@ -1732,10 +1813,10 @@
         </div>
 
         <div class="cta-business__actions">
-          <a href="https://wa.me/525530255580?text=Hola,%20necesito%20cotización%20para%20rastreo%20GPS%20empresarial" class="cta-business__btn cta-business__btn--primary" target="_blank" rel="noopener">
+          <a href="https://wa.me/525530255580?text=Hola,%20necesito%20cotización%20para%20rastreo%20GPS%20empresarial" class="cta-business__btn cta-business__btn--primary" target="_blank" rel="noopener" aria-label="WhatsApp">
             <span>WhatsApp</span>
           </a>
-          <a href="contacto.html" class="cta-business__btn cta-business__btn--secondary">
+          <a href="contacto" class="cta-business__btn cta-business__btn--secondary">
             Solicitar Demo Ejecutiva
           </a>
         </div>
@@ -1744,10 +1825,103 @@
 
   </main>
 
-  <div id="footer-container"></div>
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3 class="footer-title">Navegación</h3>
+        <ul class="footer-links">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="servicios">Servicios</a></li>
+          <li><a href="nosotros">Nosotros</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="bolsa-de-trabajo">Bolsa de Trabajo</a></li>
+          <li><a href="contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-title"><a href="guardias-de-seguridad-y-vigilancia">Vigilancia Corporativa</a></h3>
+        <ul class="footer-links">
+          <li><a href="guardias-de-seguridad-y-vigilancia">Guardias de Seguridad y Vigilancia</a></li>
+          <li><a href="guardias-intramuros">Guardias Intramuros</a></li>
+          <li><a href="control-de-accesos">Control de Accesos</a></li>
+          <li><a href="patrullaje">Patrullaje</a></li>
+          <li><a href="prevencion-de-perdidas">Prevención de Pérdidas</a></li>
+        </ul>
+
+        <h3 class="footer-title"><a href="seguridad-especializada">Seguridad Especializada</a></h3>
+        <ul class="footer-links">
+          <li><a href="seguridad-especializada">Seguridad Especializada por Sector</a></li>
+          <li><a href="seguridad-condominios">Seguridad para Condominios</a></li>
+          <li><a href="seguridad-construccion">Seguridad para Construcción</a></li>
+          <li><a href="seguridad-eventos">Seguridad para Eventos</a></li>
+          <li><a href="seguridad-hospitalaria">Seguridad Hospitalaria</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-title"><a href="tecnologia-monitoreo-seguridad">Tecnología y Monitoreo</a></h3>
+        <ul class="footer-links">
+          <li><a href="tecnologia-monitoreo-seguridad">Tecnología y Monitoreo 24/7</a></li>
+          <li><a href="vigilancia-remota-cctv">Vigilancia Remota y CCTV</a></li>
+          <li><a href="monitoreo-alarmas">Monitoreo de Alarmas 24/7</a></li>
+          <li><a href="seguridad-gps-satelital">Seguridad GPS Satelital</a></li>
+        </ul>
+
+        <h3 class="footer-title"><a href="servicios-de-proteccion-ejecutiva-y-consultoria">Protección y Consultoría</a></h3>
+        <ul class="footer-links">
+          <li><a href="servicios-de-proteccion-ejecutiva-y-consultoria">Protección Ejecutiva y Consultoría</a></li>
+          <li><a href="custodia-de-mercancias">Custodia de Mercancías</a></li>
+          <li><a href="proteccion-ejecutiva">Protección Ejecutiva</a></li>
+          <li><a href="consultoria-seguridad">Consultoría de Seguridad</a></li>
+          <li><a href="consultoria-analisis-riesgos">Análisis de Riesgos</a></li>
+          <li><a href="investigaciones-confiabilidad">Investigaciones de Confiabilidad</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-title">Contacto</h3>
+        <div class="footer-contact">
+          <p class="contact-item">
+            <strong>ORIGINS PRIVATE SECURITY</strong><br>
+            Basiliso Romo Anguiano No 22 int 3<br>
+            Col Industrial, CDMX<br>
+            C.P. 07800
+          </p>
+          <p class="contact-item">
+            <strong>Teléfonos:</strong><br>
+            <a href="tel:+525530255580">55 3025 5580</a> |
+            <a href="tel:+525572044370">55 7204 4370</a><br>
+            <a href="tel:+525552074704">55 5207 4704</a> |
+            <a href="tel:+525552076828">5207 6828</a>
+          </p>
+          <p class="contact-item">
+            <strong>Email:</strong><br>
+            <a href="mailto:josecruz@originsecurity.mx">josecruz@originsecurity.mx</a>
+          </p>
+          <p class="contact-item">
+            <strong>WhatsApp:</strong><br>
+            <a href="https://wa.me/525530255580" target="_blank" rel="noopener" aria-label="WhatsApp">55 3025 5580</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <p>&copy; 2025 ORIGINS PRIVATE SECURITY S.A. DE C.V. Todos los derechos reservados. | RFC: OPS1308309M5</p>
+        <ul class="footer-legal-links">
+          <li><a href="aviso-de-privacidad">Aviso de Privacidad</a></li>
+          <li><a href="mapa-del-sitio">Mapa del Sitio</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
 
   <script>
-    function initMenu() {
+    (function() {
       const menuToggle = document.getElementById('menuToggle');
       const nav = document.getElementById('headerNav');
       const contact = document.querySelector('.header__contact');
@@ -1758,11 +1932,7 @@
           e.preventDefault();
           const isActive = nav.classList.toggle('active');
           menuToggle.classList.toggle('active');
-
-          if (contact) {
-            contact.classList.toggle('active');
-          }
-
+          if (contact) contact.classList.toggle('active');
           document.body.style.overflow = isActive ? 'hidden' : '';
         });
 
@@ -1782,130 +1952,23 @@
           if (window.innerWidth > 734) {
             nav.classList.remove('active');
             menuToggle.classList.remove('active');
-            if (contact) {
-              contact.classList.remove('active');
-            }
-            dropdownItems.forEach(function(item) {
-              item.classList.remove('active');
-            });
+            if (contact) contact.classList.remove('active');
+            dropdownItems.forEach(function(item) { item.classList.remove('active'); });
             document.body.style.overflow = '';
           }
         });
 
         document.addEventListener('click', function(e) {
-          if (nav.classList.contains('active')) {
-            if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
-              nav.classList.remove('active');
-              menuToggle.classList.remove('active');
-              if (contact) {
-                contact.classList.remove('active');
-              }
-              dropdownItems.forEach(function(item) {
-                item.classList.remove('active');
-              });
-              document.body.style.overflow = '';
-            }
+          if (nav.classList.contains('active') && !nav.contains(e.target) && !menuToggle.contains(e.target)) {
+            nav.classList.remove('active');
+            menuToggle.classList.remove('active');
+            if (contact) contact.classList.remove('active');
+            dropdownItems.forEach(function(item) { item.classList.remove('active'); });
+            document.body.style.overflow = '';
           }
         });
       }
-    }
-
-    fetch('menu.html')
-      .then(function(response) {
-        return response.text();
-      })
-      .then(function(html) {
-        document.getElementById('menu-container').innerHTML = html;
-        initMenu();
-      })
-      .catch(function(error) {
-        console.error('Error loading menu:', error);
-      });
-
-    fetch('footer.html')
-      .then(function(response) {
-        return response.text();
-      })
-      .then(function(html) {
-        document.getElementById('footer-container').innerHTML = html;
-      })
-      .catch(function(error) {
-        console.error('Error loading footer:', error);
-      });
-
-    // Formulario WhatsApp Integration
-    document.addEventListener('DOMContentLoaded', function() {
-      const form = document.getElementById('gpsSatelitalForm');
-
-      if (form) {
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-
-          const formData = new FormData(form);
-          const nombre = formData.get('nombre');
-          const email = formData.get('email');
-          const telefono = formData.get('telefono');
-          const empresa = formData.get('empresa') || 'No especificado';
-          const giroComercial = form.querySelector('#giroComercial').selectedOptions[0].text;
-          const tamanoFlotilla = form.querySelector('#tamanoFlotilla').selectedOptions[0].text;
-          const tipoVehiculos = form.querySelector('#tipoVehiculos').selectedOptions[0].text;
-          const sistemaActual = form.querySelector('#sistemaActual').selectedOptions[0].text;
-          const zonaOperacion = form.querySelector('#zonaOperacion').selectedOptions[0].text;
-          const requerimientos = formData.get('requerimientos') || 'Sin requerimientos adicionales';
-
-          const serviciosAdicionales = [];
-          formData.getAll('servicios[]').forEach(function(servicio) {
-            serviciosAdicionales.push(servicio);
-          });
-
-          let mensajeWhatsApp = `*SOLICITUD DE RASTREO GPS EMPRESARIAL*%0A%0A`;
-          mensajeWhatsApp += `*Datos de Contacto:*%0A`;
-          mensajeWhatsApp += `Nombre: ${nombre}%0A`;
-          mensajeWhatsApp += `Email: ${email}%0A`;
-          mensajeWhatsApp += `Teléfono: ${telefono}%0A`;
-          mensajeWhatsApp += `Empresa: ${empresa}%0A%0A`;
-          mensajeWhatsApp += `*Información de Flotilla:*%0A`;
-          mensajeWhatsApp += `Sector: ${giroComercial}%0A`;
-          mensajeWhatsApp += `Tamaño Flotilla: ${tamanoFlotilla}%0A`;
-          mensajeWhatsApp += `Tipo de Vehículos: ${tipoVehiculos}%0A`;
-          mensajeWhatsApp += `Sistema Actual: ${sistemaActual}%0A`;
-          mensajeWhatsApp += `Zona de Operación: ${zonaOperacion}%0A`;
-
-          if (serviciosAdicionales.length > 0) {
-            mensajeWhatsApp += `%0A*Funcionalidades Requeridas:*%0A`;
-            serviciosAdicionales.forEach(function(servicio) {
-              mensajeWhatsApp += `• ${servicio}%0A`;
-            });
-          }
-
-          mensajeWhatsApp += `%0A*Requerimientos Específicos:*%0A${requerimientos}`;
-
-          const whatsappURL = `https://wa.me/525530255580?text=${mensajeWhatsApp}`;
-          window.open(whatsappURL, '_blank');
-        });
-      }
-
-      // FAQ Accordion
-      const faqItems = document.querySelectorAll('.faq-item');
-      faqItems.forEach(function(item) {
-        const question = item.querySelector('.faq-question');
-        if (question) {
-          question.addEventListener('click', function() {
-            const isActive = item.classList.contains('active');
-            faqItems.forEach(function(otherItem) {
-              if (otherItem !== item) {
-                otherItem.classList.remove('active');
-              }
-            });
-            if (isActive) {
-              item.classList.remove('active');
-            } else {
-              item.classList.add('active');
-            }
-          });
-        }
-      });
-    });
+    })();
   </script>
   <script src="js/faq-accordion.js" defer></script>  <script src="js/whatsapp-widget.js" defer></script>
 </body>
