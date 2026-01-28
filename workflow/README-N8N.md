@@ -7,15 +7,15 @@ seguridad-privada/
 ├── blog/
 │   ├── index.html              # Indice del blog
 │   ├── sidebar.html            # Sidebar compartido
-│   └── articulos/              # Articulos generados
-│       ├── slug-articulo.html
-│       └── ...
+│   ├── slug-articulo.html      # Articulos generados directamente en /blog/
+│   └── ...
 ├── workflow/
 │   ├── TEMPLATE-ARTICULO-SEGURIDAD-PRIVADA.html
 │   ├── workflow-SEGURIDAD-PRIVADA-N8N.json
 │   └── README-N8N.md
 └── img/
-    └── blog/                   # Imagenes para articulos
+    ├── blog/                   # Imagenes para articulos
+    └── img-*/                  # Imagenes por categoria
 ```
 
 ## Configuracion del Workflow
@@ -86,13 +86,13 @@ Telegram Notificacion (notifica exito)
 El sitio usa URLs limpias (sin .html). Cloudflare Pages maneja los redirects.
 
 **Estructura de URLs:**
-- Articulos: `seguridad-privada.com.mx/blog/articulos/slug`
+- Articulos: `seguridad-privada.com.mx/blog/slug`
 - Servicios: `seguridad-privada.com.mx/nombre-servicio`
 - Blog index: `seguridad-privada.com.mx/blog/`
 
 **Archivo de redirects:** `_redirects`
 ```
-/blog/articulos/:slug  /blog/articulos/:slug.html  200
+/blog/:slug  /blog/:slug.html  200
 /:page  /:page.html  200
 ```
 
