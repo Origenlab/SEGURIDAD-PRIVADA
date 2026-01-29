@@ -165,15 +165,14 @@ El contenido generado debe seguir esta estructura:
     <a href="https://wa.me/525530255580" class="btn">Contactar</a>
 </div>
 
-<!-- FAQs -->
+<!-- FAQs - USA <details> para accordion nativo HTML5 -->
 <section class="faq-section" id="faq">
     <h2>Preguntas Frecuentes</h2>
-    <div class="faq-item">
-        <button class="faq-question">
-            <span>[Pregunta]</span>
-            <span class="faq-chevron">▼</span>
-        </button>
-        <div class="faq-answer"><p>[Respuesta]</p></div>
+    <div class="faq-accordion">
+        <details class="faq-item">
+            <summary class="faq-question">[Pregunta]</summary>
+            <div class="faq-answer"><p>[Respuesta]</p></div>
+        </details>
     </div>
 </section>
 ```
