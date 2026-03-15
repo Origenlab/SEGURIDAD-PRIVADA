@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import GallerySection from '../../components/GallerySection.astro';
+
+const title = 'Seguridad Especializada CDMX | Condominios y Empresas';
+const description = 'Seguridad privada especializada para condominios, residenciales, construcción, eventos y hospitales en CDMX. Guardias intramuros certificados SSC 24/7. ☎ 55 3025 5580';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Seguridad Especializada",
+  "description": "Seguridad privada especializada para condominios, residenciales, construcción, eventos y hospitales en CDMX. Guardias intramuros certificados SSC 24/7. ☎ 55 3025 5580",
+  "provider": {
+    "@type": "Organization",
+    "name": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
+    "url": "https://seguridad-privada.com.mx/"
+  },
+  "areaServed": { "@type": "City", "name": "Ciudad de México" },
+  "telephone": "+52-55-3025-5580"
+});
+
+const gallery = [];
+---
+<BaseLayout title={title} description={description} schema={schema}>
+  <Hero
+    title="Seguridad Especializada en CDMX"
+    subtitle="De Condominios Familiares a Obras Millonarias — Protección que Entiende los Riesgos Únicos de Tu Sector"
+    description='Guardias certificados SSC con protocolos específicos por industria. Condominios, construcción, eventos y hospitales en CDMX.'
+    card1Title="Cada sector tiene riesgos únicos"
+    card1Text='¿Alguna vez contrataste seguridad y el guardia no entendía los protocolos de tu industria? Un guardia de retail no sabe manejar situaciones en hospitales. Uno de condominios no entiende la dinámica de obras. Cada sector tiene riesgos, flujos operativos y regulaciones únicas que la seguridad genérica no cubre. Desarrollamos protocolos especializados durante más de 15 años.'
+    card2Title="Protección que entiende tu negocio"
+    card2Text='Desde seguridad para condominios donde tus hijos juegan sin miedo, hasta protección de obras que previene robos de materiales, seguridad hospitalaria con protocolos NOM-004-SSA3, y eventos corporativos con coordinación perfecta. Supervisión 24/7, personal capacitado en protocolos sectoriales y tecnología adaptada a tu industria.'
+  />
+
+  {gallery.length > 0 && <GallerySection items={gallery} />}
+
+  <section class="attention-box" style="max-width:1200px;margin:40px auto;padding:48px">
+    <h2 class="attention-box__title">Protección Especializada por Sector</h2>
+    <p class="attention-box__text">Cada industria enfrenta riesgos únicos que requieren protocolos específicos. Un guardia genérico no puede cubrir las necesidades de un hospital, una obra de construcción o un evento corporativo con la misma efectividad.</p>
+    <p class="attention-box__text">En ORIGINS, hemos desarrollado durante más de 15 años protocolos especializados por sector: condominios, construcción, eventos y hospitales. Cada guardia recibe capacitación específica para su asignación, garantizando que entiende los riesgos, regulaciones y dinámicas operativas de tu industria.</p>
+  </section>
+
+  <section class="cta-business">
+    <div class="cta-business__content">
+      <h2 class="cta-business__title">¿Necesita Proteger su Empresa o Condominio?</h2>
+      <p class="cta-business__description">Únase a las empresas líderes y condominios de prestigio que confían en nuestra experiencia</p>
+      <div class="cta-business__actions">
+        <a href="https://wa.me/525530255580?text=Hola,%20necesito%20información%20sobre%20servicios%20de%20seguridad%20privada" class="cta-business__btn cta-business__btn--primary" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="/cotizar" class="cta-business__btn cta-business__btn--secondary">Cotizar en Línea</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

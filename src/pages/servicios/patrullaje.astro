@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import GallerySection from '../../components/GallerySection.astro';
+
+const title = 'Patrullaje para Condominios y Fraccionamientos CDMX | Seguridad Privada';
+const description = 'Patrullaje preventivo para condominios y fraccionamientos en CDMX. Rondines con GPS, guardias certificados SSC 24/7. ☎ 55 3025 5580';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Patrullaje de Seguridad",
+  "description": "Patrullaje preventivo para condominios y fraccionamientos en CDMX. Rondines con GPS, guardias certificados SSC 24/7. ☎ 55 3025 5580",
+  "provider": {
+    "@type": "Organization",
+    "name": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
+    "url": "https://seguridad-privada.com.mx/"
+  },
+  "areaServed": { "@type": "City", "name": "Ciudad de México" },
+  "telephone": "+52-55-3025-5580"
+});
+
+const gallery = [
+  { src: '/img/patrullaje/patrullaje-comercial-privado.avif', alt: 'Unidad móvil de patrullaje preventivo rotulada recorriendo fraccionamiento en CDMX', captionTitle: 'Unidades Rotuladas', captionText: 'Presencia disuasiva visible las 24 horas' },
+  { src: '/img/patrullaje/patrullaje-de-seguridad-privada.avif', alt: 'Sistema GPS de rastreo en tiempo real para patrullaje vehicular', captionTitle: 'Rastreo GPS en Tiempo Real', captionText: 'Monitoreo exacto de recorridos y tiempos' },
+  { src: '/img/patrullaje/patrullaje-diurno-y-nocturno.avif', alt: 'Guardias certificados SSC en patrulla nocturna de seguridad', captionTitle: 'Patrullaje Nocturno', captionText: 'Vigilancia intensificada en horarios críticos' },
+  { src: '/img/patrullaje/patrullaje-industrial-seguridad.avif', alt: 'Cobertura perimetral en parque industrial con unidades móviles', captionTitle: 'Parques Industriales', captionText: 'Cobertura perimetral de naves y almacenes' },
+  { src: '/img/patrullaje/patrullaje-nocturno-de-seguridad.avif', alt: 'Respuesta inmediata de unidad de patrullaje ante incidente', captionTitle: 'Respuesta Inmediata', captionText: 'Atención de alarmas en menos de 5 minutos' },
+  { src: '/img/patrullaje/patrullaje-para-fraccionamientos.avif', alt: 'Patrullaje en fraccionamiento residencial premium con reporte digital', captionTitle: 'Fraccionamientos Residenciales', captionText: 'Rondines programados con reporte fotográfico' },
+  { src: '/img/patrullaje/patrullaje-perimetral-empresas.avif', alt: 'Unidad de patrullaje en plaza comercial con bitácora digital', captionTitle: 'Plazas Comerciales', captionText: 'Vigilancia perimetral continua documentada' },
+  { src: '/img/patrullaje/patrullaje-preventivo-empresarial.avif', alt: 'Guardias de patrullaje inspeccionando perímetro con linterna', captionTitle: 'Inspección de Perímetros', captionText: 'Verificación de accesos y puntos vulnerables' },
+  { src: '/img/patrullaje/patrullaje-residencial-privado.avif', alt: 'Documentación fotográfica de rondines de patrullaje preventivo', captionTitle: 'Reportes Documentados', captionText: 'Evidencia fotográfica de cada recorrido' },
+];
+---
+<BaseLayout title={title} description={description} schema={schema}>
+  <Hero
+    title="Patrullaje de Seguridad en CDMX"
+    subtitle="Unidades Móviles de Respuesta Inmediata — Presencia Disuasiva que Previene Incidentes Antes de que Ocurran"
+    description='Patrullaje preventivo vehicular para condominios, fraccionamientos y parques industriales. Unidades con GPS y guardias certificados SSC.'
+    card1Title="Prevención activa que protege tu patrimonio"
+    card1Text='La diferencia entre sufrir un robo que destruye tu patrimonio y mantener tu propiedad segura está en la prevención: unidades móviles visibles que recorren tu perímetro constantemente. El patrullaje vehicular no es solo dar vueltas: es presencia estratégica con guardias certificados SSC, unidades equipadas con GPS y respuesta inmediata ante cualquier anomalía.'
+    card2Title="Presencia visible que ahuyenta al delincuente"
+    card2Text='En ORIGINS, entendemos que los delincuentes atacan propiedades sin vigilancia visible. Nuestro servicio de patrullaje preventivo está diseñado para eliminar el oportunismo criminal: cuando los delincuentes ven unidades rotuladas patrullando constantemente, simplemente se van a otro lado. Protegemos fraccionamientos, parques industriales y zonas residenciales en CDMX.'
+  />
+
+  {gallery.length > 0 && <GallerySection items={gallery} />}
+
+  <section class="attention-box" style="max-width:1200px;margin:40px auto;padding:48px">
+    <h2 class="attention-box__title">Por Qué el Patrullaje Preventivo de ORIGINS Protege Mejor que Guardias Fijos</h2>
+    <p class="attention-box__text">La diferencia entre sufrir un robo costoso y mantener tu propiedad segura está en la visibilidad constante. Los delincuentes estudian propiedades buscando ventanas de oportunidad: horarios sin vigilancia, guardias estáticos predecibles, perímetros sin supervisión móvil. El patrullaje vehicular elimina estos puntos ciegos.</p>
+    <p class="attention-box__text">En ORIGINS, entendemos que la prevención real requiere presencia impredecible y cobertura amplia. Nuestro servicio de patrullaje preventivo con GPS está diseñado para crear incertidumbre en delincuentes: nunca saben cuándo pasará la unidad, cuántas veces recorreremos el perímetro o qué ruta tomaremos. Esa incertidumbre es tu mejor protección.</p>
+  </section>
+
+  <section class="cta-business">
+    <div class="cta-business__content">
+      <h2 class="cta-business__title">¿Necesita Proteger su Empresa o Condominio?</h2>
+      <p class="cta-business__description">Únase a las empresas líderes y condominios de prestigio que confían en nuestra experiencia</p>
+      <div class="cta-business__actions">
+        <a href="https://wa.me/525530255580?text=Hola,%20necesito%20información%20sobre%20servicios%20de%20seguridad%20privada" class="cta-business__btn cta-business__btn--primary" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="/cotizar" class="cta-business__btn cta-business__btn--secondary">Cotizar en Línea</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

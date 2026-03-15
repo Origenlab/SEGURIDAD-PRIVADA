@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import GallerySection from '../../components/GallerySection.astro';
+
+const title = 'Rastreo GPS Satelital para Empresas y Flotillas CDMX | Seguridad Privada';
+const description = 'Rastreo GPS satelital y seguridad privada para empresas y flotillas en CDMX. Telemetría vehicular, analítica predictiva 24/7. ☎ 55 3025 5580';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Rastreo GPS Satelital Empresarial",
+  "description": "Rastreo GPS satelital y seguridad privada para empresas y flotillas en CDMX. Telemetría vehicular, analítica predictiva 24/7. ☎ 55 3025 5580",
+  "provider": {
+    "@type": "Organization",
+    "name": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
+    "url": "https://seguridad-privada.com.mx/"
+  },
+  "areaServed": { "@type": "City", "name": "Ciudad de México" },
+  "telephone": "+52-55-3025-5580"
+});
+
+const gallery = [
+  { src: '/img/img-rastreo-gps/rastreo-gps-tiempo-real-vehiculos.avif', alt: 'Sistema de rastreo GPS vehicular en tiempo real para flotillas empresariales CDMX', captionTitle: 'Rastreo GPS en Tiempo Real', captionText: 'Monitoreo continuo de ubicación y estatus de toda la flotilla vehicular' },
+  { src: '/img/img-rastreo-gps/geocercas-virtuales-alertas-gps.avif', alt: 'Geocercas virtuales GPS con alertas automáticas para control de flotillas', captionTitle: 'Geocercas Virtuales Inteligentes', captionText: 'Alertas automáticas de entrada y salida de zonas autorizadas' },
+  { src: '/img/img-rastreo-gps/monitoreo-satelital-flotillas-cdmx.avif', alt: 'Monitoreo satelital de flotillas empresariales con tecnología GPS en CDMX', captionTitle: 'Monitoreo Satelital de Flotillas', captionText: 'Gestión integral de flotas vehiculares mediante tecnología satelital GPS' },
+  { src: '/img/img-rastreo-gps/sistema-localizacion-gps-empresarial.avif', alt: 'Sistema de localización GPS empresarial para gestión de activos vehiculares', captionTitle: 'Sistema de Localización GPS Empresarial', captionText: 'Control y gestión avanzada de activos vehiculares corporativos' },
+  { src: '/img/img-rastreo-gps/dispositivos-gps-rastreo-vehicular.avif', alt: 'Dispositivos GPS para rastreo vehicular con tecnología anti-sabotaje', captionTitle: 'Dispositivos GPS de Rastreo Vehicular', captionText: 'Tecnología anti-sabotaje con batería de respaldo e instalación oculta' },
+  { src: '/img/img-rastreo-gps/reportes-gps-analisis-recorridos.avif', alt: 'Reportes GPS y análisis de recorridos vehiculares para optimización de rutas', captionTitle: 'Reportes GPS y Análisis de Recorridos', captionText: 'Análisis detallado de rutas y optimización de recorridos vehiculares' },
+  { src: '/img/img-rastreo-gps/plataforma-rastreo-vehicular-avanzada.avif', alt: 'Plataforma avanzada de rastreo vehicular con dashboard ejecutivo y analítica', captionTitle: 'Plataforma de Rastreo Vehicular Avanzada', captionText: 'Dashboard ejecutivo con analítica avanzada y KPIs en tiempo real' },
+  { src: '/img/img-rastreo-gps/central-monitoreo-gps-24-7.avif', alt: 'Central de monitoreo GPS 24/7 con operadores certificados en CDMX', captionTitle: 'Central de Monitoreo GPS 24/7', captionText: 'Operación continua con operadores certificados y protocolos estandarizados' },
+  { src: '/img/img-rastreo-gps/control-flotilla-gps-satelital.avif', alt: 'Control de flotilla mediante sistema GPS satelital para empresas CDMX', captionTitle: 'Control de Flotilla GPS Satelital', captionText: 'Gestión completa de flotillas mediante tecnología GPS satelital avanzada' },
+];
+---
+<BaseLayout title={title} description={description} schema={schema}>
+  <Hero
+    title="Rastreo GPS Satelital Empresarial"
+    subtitle="Telemetría Vehicular y Gestión de Flotillas en CDMX"
+    description='ORIGINS Private Security: Plataforma SaaS de geolocalización con tecnología dual GPS + GLONASS. ROI documentado del 23% en reducción de costos operativos, geocercas inteligentes y 87% de tasa de recuperación de vehículos robados.'
+    card1Title="Inteligencia operacional en tiempo real"
+    card1Text='Nuestra plataforma SaaS captura 47 parámetros técnicos desde el puerto OBD-II: velocidad, RPM, temperatura, combustible y comportamiento de conducción. Más que localización, es control total de su flotilla con telemetría avanzada y analítica predictiva para optimizar cada kilómetro recorrido.'
+    card2Title="ROI comprobado en el primer año"
+    card2Text='Empresas con 50+ vehículos documentan 23% de ahorro anual: reducción de combustible, optimización de rutas hasta 18% menos kilometraje, primas de seguro reducidas por telemetría compartida, y recuperación de activos con tasa de éxito del 87%. Su inversión se traduce en resultados medibles.'
+  />
+
+  {gallery.length > 0 && <GallerySection items={gallery} />}
+
+  <section class="attention-box" style="max-width:1200px;margin:40px auto;padding:48px">
+    <h2 class="attention-box__title">Por Qué el Rastreo GPS Empresarial Es una Inversión Estratégica, No un Gasto Operativo</h2>
+    <p class="attention-box__text">En el entorno corporativo moderno, las flotillas vehiculares representan el segundo o tercer rubro de mayor gasto operativo después de nómina e instalaciones. La diferencia entre empresas que gestionan flotillas de manera reactiva (respondiendo a incidentes) versus proactiva (previniendo desperdicios mediante datos) se refleja directamente en márgenes de rentabilidad.</p>
+    <p class="attention-box__text">Nuestro sistema de rastreo GPS no es un dispositivo de localización pasivo: es una plataforma de inteligencia operacional que transforma datos de geolocalización y telemetría en decisiones ejecutivas. Empresas que implementan gestión de flotillas basada en datos documentan retornos de inversión promedio del 23% en primer año mediante optimización de rutas, reducción de consumo de combustible, disminución de uso no autorizado, y recuperación rápida de activos robados.</p>
+  </section>
+
+  <section class="cta-business">
+    <div class="cta-business__content">
+      <h2 class="cta-business__title">¿Necesita Proteger su Empresa o Condominio?</h2>
+      <p class="cta-business__description">Únase a las empresas líderes y condominios de prestigio que confían en nuestra experiencia</p>
+      <div class="cta-business__actions">
+        <a href="https://wa.me/525530255580?text=Hola,%20necesito%20información%20sobre%20servicios%20de%20seguridad%20privada" class="cta-business__btn cta-business__btn--primary" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="/cotizar" class="cta-business__btn cta-business__btn--secondary">Cotizar en Línea</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

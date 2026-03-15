@@ -1,0 +1,15 @@
+---
+interface Props {
+  href: string;
+  imgSrc: string;
+  imgAlt: string;
+  title: string;
+}
+const { href, imgSrc, imgAlt, title } = Astro.props;
+---
+<a href={href} class="service-item">
+  <div class="service-item__image">
+    <img src={imgSrc} alt={imgAlt} loading="lazy" width="640" height="960">
+  </div>
+  <span class="service-item__title">{title}</span>
+</a>

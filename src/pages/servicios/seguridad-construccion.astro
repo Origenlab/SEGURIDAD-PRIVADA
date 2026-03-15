@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import GallerySection from '../../components/GallerySection.astro';
+
+const title = 'Seguridad para Construcción CDMX | Guardias 24/7';
+const description = 'Seguridad privada para obras de construcción en CDMX. Guardias intramuros certificados SSC 24/7, custodia de materiales y maquinaria. +15 años. ☎ 55 3025 5580';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Seguridad para Construcción",
+  "description": "Seguridad privada para obras de construcción en CDMX. Guardias intramuros certificados SSC 24/7, custodia de materiales y maquinaria. +15 años. ☎ 55 3025 5580",
+  "provider": {
+    "@type": "Organization",
+    "name": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
+    "url": "https://seguridad-privada.com.mx/"
+  },
+  "areaServed": { "@type": "City", "name": "Ciudad de México" },
+  "telephone": "+52-55-3025-5580"
+});
+
+const gallery = [
+  { src: '/img/img-construccion/control-accesos-personal-obra-construccion.avif', alt: 'Control de accesos para personal y proveedores en obra', captionTitle: 'Control de Accesos en Obra', captionText: 'Registro digital de proveedores y trabajadores con verificación fotográfica' },
+  { src: '/img/img-construccion/custodia-materiales-construccion.avif', alt: 'Custodia profesional de materiales de alto valor en construcción', captionTitle: 'Custodia de Materiales', captionText: 'Protección intensiva de materiales de alto valor las 24 horas' },
+  { src: '/img/img-construccion/patrullaje-seguridad-sitios-construccion.avif', alt: 'Patrullaje nocturno especializado en sitios de construcción', captionTitle: 'Patrullaje Nocturno', captionText: 'Vigilancia constante cada 30 minutos cuando la obra está vacía' },
+  { src: '/img/img-construccion/control-acceso-vehicular-construccion.avif', alt: 'Inspección vehicular para prevenir robo en construcción', captionTitle: 'Inspección de Vehículos', captionText: 'Control de salida para prevenir robo hormiga y mermas' },
+  { src: '/img/img-construccion/proteccion-maquinaria-equipo-construccion.avif', alt: 'Protección de maquinaria pesada y equipo de construcción', captionTitle: 'Protección de Maquinaria', captionText: 'Custodia de equipos pesados, herramientas y maquinaria especializada' },
+  { src: '/img/img-construccion/guardias-seguridad-certificados-construccion.avif', alt: 'Guardias certificados SSC especializados en construcción', captionTitle: 'Personal Certificado SSC', captionText: 'Guardias especializados en seguridad de obra con capacitación continua' },
+  { src: '/img/img-construccion/bitacora-digital-seguridad-construccion.avif', alt: 'Bitácoras digitales con GPS para seguridad en construcción', captionTitle: 'Bitácoras Digitales', captionText: 'Registro en tiempo real de incidentes con geolocalización y fotos' },
+  { src: '/img/img-construccion/gestion-riesgos-seguridad-construccion.avif', alt: 'Gestión de riesgos y coordinación con residentes de obra', captionTitle: 'Coordinación con Residentes', captionText: 'Trabajo conjunto con tu equipo de obra y contratistas' },
+  { src: '/img/img-construccion/vigilancia-perimetral-obras-construccion.avif', alt: 'Vigilancia perimetral profesional en obras de construcción CDMX', captionTitle: 'Vigilancia Perimetral', captionText: 'Protección completa del perímetro de obra con patrullaje sistemático' },
+];
+---
+<BaseLayout title={title} description={description} schema={schema}>
+  <Hero
+    title="Seguridad para Construcción en CDMX"
+    subtitle="Tu Presupuesto Desaparece de Noche — Protección Especializada para Obras 24/7"
+    description='Protege tu inversión contra robo de materiales. Guardias certificados SSC que conocen dinámicas de obra y no estorban a tus trabajadores.'
+    card1Title="Cada noche sin vigilancia es dinero perdido"
+    card1Text='En el sector de construcción, la diferencia entre un proyecto rentable y uno que devora presupuesto está en el control de robo de materiales. Cada noche sin vigilancia profesional es una invitación abierta para que tu inversión desaparezca. Varilla, cemento, herramientas eléctricas, cableado de cobre: materiales que cuestan miles de pesos y se evaporan en minutos.'
+    card2Title="Guardias que entienden la dinámica de obra"
+    card2Text='En ORIGINS, entendemos que cada obra de construcción es única. Nuestro servicio de seguridad especializada está diseñado para eliminar pérdidas por robo mientras mantienes el flujo operativo sin fricciones. Guardias certificados SSC que conocen dinámicas de obra, no vigilantes genéricos que estorban a tus trabajadores.'
+  />
+
+  {gallery.length > 0 && <GallerySection items={gallery} />}
+
+  <section class="attention-box" style="max-width:1200px;margin:40px auto;padding:48px">
+    <h2 class="attention-box__title">Por Qué la Seguridad Especializada en Construcción Es la Decisión Correcta para Tu Obra</h2>
+    <p class="attention-box__text">En el sector de construcción, la diferencia entre un proyecto que termina en tiempo y forma versus uno que explota en sobrecostos por robo está en la vigilancia profesional. No es solo prevenir que se lleven tu varilla de noche: es controlar proveedores, inspeccionar vehículos en salida, custodiar herramientas eléctricas, documentar entregas y mantener flujo operativo sin fricciones.</p>
+    <p class="attention-box__text">En ORIGINS, entendemos que cada obra tiene dinámicas únicas. Nuestro servicio de seguridad para construcción certificado SSC está diseñado para eliminar pérdidas mientras tus trabajadores operan sin interferencias. Protección que entiende de obra, no vigilancia genérica que estorba a tu residente.</p>
+  </section>
+
+  <section class="cta-business">
+    <div class="cta-business__content">
+      <h2 class="cta-business__title">¿Necesita Proteger su Empresa o Condominio?</h2>
+      <p class="cta-business__description">Únase a las empresas líderes y condominios de prestigio que confían en nuestra experiencia</p>
+      <div class="cta-business__actions">
+        <a href="https://wa.me/525530255580?text=Hola,%20necesito%20información%20sobre%20servicios%20de%20seguridad%20privada" class="cta-business__btn cta-business__btn--primary" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="/cotizar" class="cta-business__btn cta-business__btn--secondary">Cotizar en Línea</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

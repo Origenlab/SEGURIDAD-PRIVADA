@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'Cotizar Seguridad Privada CDMX | ORIGINS Private Security';
+const description = 'Solicita cotización de seguridad privada en CDMX. Guardias certificados SSC, monitoreo 24/7, protección ejecutiva. Respuesta en 2 horas. ☎ 55 3025 5580';
+---
+<BaseLayout title={title} description={description}>
+  <section class="cotizacion-section" style="padding-top:40px">
+    <div class="container">
+      <div class="cotizacion-header">
+        <h1 style="font-size:clamp(1.8rem,4vw,2.5rem)">Solicita tu Cotización Personalizada</h1>
+        <p>Completa el formulario y recibe una propuesta adaptada a tus necesidades de seguridad en menos de 24 horas</p>
+      </div>
+      <div class="cotizacion-form-wrapper">
+        <form action="https://formsubmit.co/josecruz@originsecurity.mx" method="POST">
+          <input type="hidden" name="_subject" value="Cotización - seguridad-privada.com.mx">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://seguridad-privada.com.mx/cotizar">
+          <div class="cotizacion-form-row">
+            <div class="cotizacion-form-col">
+              <div class="cotizacion-field">
+                <label for="nombre">Nombre Completo *</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre completo">
+              </div>
+              <div class="cotizacion-field">
+                <label for="email">Correo Electrónico *</label>
+                <input type="email" id="email" name="email" required placeholder="correo@empresa.com">
+              </div>
+              <div class="cotizacion-field">
+                <label for="telefono">Teléfono de Contacto *</label>
+                <input type="tel" id="telefono" name="telefono" required placeholder="55 1234 5678">
+              </div>
+              <div class="cotizacion-field">
+                <label for="empresa">Nombre de Empresa / Condominio</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa o condominio">
+              </div>
+              <div class="cotizacion-field">
+                <label for="ubicacion">Ubicación del Servicio *</label>
+                <select id="ubicacion" name="ubicacion" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="cdmx-cuauhtemoc">CDMX - Cuauhtémoc</option>
+                  <option value="cdmx-miguel-hidalgo">CDMX - Miguel Hidalgo</option>
+                  <option value="cdmx-benito-juarez">CDMX - Benito Juárez</option>
+                  <option value="cdmx-coyoacan">CDMX - Coyoacán</option>
+                  <option value="cdmx-alvaro-obregon">CDMX - Álvaro Obregón</option>
+                  <option value="cdmx-tlalpan">CDMX - Tlalpan</option>
+                  <option value="cdmx-otras">CDMX - Otras Alcaldías</option>
+                  <option value="edomex-naucalpan">Estado de México - Naucalpan</option>
+                  <option value="edomex-tlalnepantla">Estado de México - Tlalnepantla</option>
+                  <option value="edomex-atizapan">Estado de México - Atizapán</option>
+                  <option value="edomex-interlomas">Estado de México - Interlomas</option>
+                  <option value="edomex-otros">Estado de México - Otros Municipios</option>
+                </select>
+              </div>
+            </div>
+            <div class="cotizacion-form-col">
+              <div class="cotizacion-field">
+                <label for="tipoServicio">Tipo de Servicio Requerido *</label>
+                <select id="tipoServicio" name="tipoServicio" required>
+                  <option value="">Selecciona un servicio</option>
+                  <option value="guardias-seguridad">Guardias de Seguridad y Vigilancia</option>
+                  <option value="guardias-intramuros">Guardias Intramuros</option>
+                  <option value="seguridad-condominios">Seguridad para Condominios</option>
+                  <option value="seguridad-eventos">Seguridad para Eventos</option>
+                  <option value="vigilancia-remota">Vigilancia Remota y CCTV</option>
+                  <option value="monitoreo-alarmas">Monitoreo de Alarmas 24/7</option>
+                  <option value="proteccion-ejecutiva">Protección Ejecutiva y Escoltas</option>
+                  <option value="custodia-mercancias">Custodia de Mercancías</option>
+                  <option value="consultoria">Consultoría y Análisis de Riesgos</option>
+                  <option value="otro">Otro Servicio</option>
+                </select>
+              </div>
+              <div class="cotizacion-field">
+                <label for="duracion">Duración del Servicio *</label>
+                <select id="duracion" name="duracion" required>
+                  <option value="">Selecciona duración</option>
+                  <option value="evento-puntual">Evento Puntual (1-3 días)</option>
+                  <option value="semanal">1 Semana</option>
+                  <option value="quincenal">2 Semanas</option>
+                  <option value="mensual">1 Mes</option>
+                  <option value="trimestral">3 Meses</option>
+                  <option value="semestral">6 Meses</option>
+                  <option value="anual">Contrato Anual</option>
+                </select>
+              </div>
+              <div class="cotizacion-checkboxes-wrapper">
+                <label>Servicios Adicionales</label>
+                <label><input type="checkbox" name="servicios[]" value="patrullaje"><span>Patrullaje Vehicular</span></label>
+                <label><input type="checkbox" name="servicios[]" value="cctv"><span>Cámaras CCTV</span></label>
+                <label><input type="checkbox" name="servicios[]" value="alarmas"><span>Sistema de Alarmas</span></label>
+                <label><input type="checkbox" name="servicios[]" value="control-accesos"><span>Control de Accesos</span></label>
+                <label><input type="checkbox" name="servicios[]" value="gps"><span>Rastreo GPS</span></label>
+              </div>
+              <div class="cotizacion-field">
+                <label for="mensaje">Descripción de Necesidades</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe tus necesidades específicas de seguridad..."></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="cotizacion-footer">
+            <div class="cotizacion-terms">
+              <input type="checkbox" name="terminos" required>
+              <span>Acepto recibir información comercial y entiendo que mis datos serán tratados conforme a nuestra <a href="/aviso-de-privacidad">política de privacidad</a></span>
+            </div>
+            <button type="submit" class="cotizacion-submit">Solicitar Cotización Sin Compromiso</button>
+            <p class="cotizacion-note">Respuesta en menos de 24 horas &middot; Asesoría Profesional &middot; Certificación SSC &middot; Cobertura CDMX y Estado de México</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

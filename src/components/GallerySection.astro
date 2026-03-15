@@ -1,0 +1,27 @@
+---
+interface GalleryItem {
+  src: string;
+  alt: string;
+  captionTitle: string;
+  captionText: string;
+}
+interface Props {
+  items: GalleryItem[];
+}
+const { items } = Astro.props;
+---
+<section class="gallery-section">
+  <div class="container">
+    <div class="gallery-grid">
+      {items.map(item => (
+        <div class="gallery-item">
+          <img src={item.src} alt={item.alt} loading="lazy" width="640" height="853">
+          <div class="gallery-caption">
+            <h3>{item.captionTitle}</h3>
+            <p>{item.captionText}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

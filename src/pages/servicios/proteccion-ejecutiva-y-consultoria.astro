@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import GallerySection from '../../components/GallerySection.astro';
+
+const title = 'Protección Ejecutiva y Consultoría CDMX | Escoltas';
+const description = 'Protección ejecutiva y consultoría de seguridad privada en CDMX. Escoltas certificados SSC, custodia de valores y análisis de riesgos. +15 años. ☎ 55 3025 5580';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Protección Ejecutiva y Consultoría",
+  "description": "Protección ejecutiva y consultoría de seguridad privada en CDMX. Escoltas certificados SSC, custodia de valores y análisis de riesgos. +15 años. ☎ 55 3025 5580",
+  "provider": {
+    "@type": "Organization",
+    "name": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
+    "url": "https://seguridad-privada.com.mx/"
+  },
+  "areaServed": { "@type": "City", "name": "Ciudad de México" },
+  "telephone": "+52-55-3025-5580"
+});
+
+const gallery: any[] = [];
+---
+<BaseLayout title={title} description={description} schema={schema}>
+  <Hero
+    title="Protección Ejecutiva y Consultoría"
+    subtitle="Seguridad Discreta para Quienes No Pueden Permitirse Fallos"
+    description='ORIGINS Private Security: Protección ejecutiva con escoltas certificados CPP, PSP y EPI, ex-fuerzas especiales y consultores de élite. Custodia de valores, análisis de riesgos e investigaciones de confiabilidad bajo estricta confidencialidad (NDA).'
+    card1Title="Protección de nivel Fortune 500"
+    card1Text='Ex-elementos de fuerzas especiales, militares de élite y consultores certificados internacionalmente que han protegido directores generales, familias empresariales y operaciones de alto riesgo. Seguridad discreta que funciona sin llamar la atención ni parecer "película de Hollywood".'
+    card2Title="Confidencialidad absoluta garantizada"
+    card2Text='Atendemos directores generales, consejeros y empresas financieras, farmacéuticas y tecnológicas que requieren discreción total. Análisis de riesgos que previenen pérdidas millonarias e investigaciones de confiabilidad bajo acuerdos NDA firmados antes de intercambiar información.'
+  />
+
+  {gallery.length > 0 && <GallerySection items={gallery} />}
+
+  <section class="attention-box" style="max-width:1200px;margin:40px auto;padding:48px">
+    <h2 class="attention-box__title">Protección Ejecutiva y Consultoría Estratégica de Seguridad</h2>
+    <p class="attention-box__text">Los ejecutivos de alto perfil, empresarios y familias con patrimonio significativo enfrentan riesgos que requieren soluciones especializadas: protección ejecutiva discreta, custodia de valores blindada, análisis de riesgos con metodología ISO 31000 e investigaciones de confiabilidad certificadas.</p>
+    <p class="attention-box__text">En ORIGINS, nuestros consultores certificados CPP y PSP, junto con escoltas ex-fuerzas especiales, proporcionan el nivel de protección y confidencialidad que directores generales, consejeros y empresas Fortune 500 exigen. Cada operación bajo acuerdos NDA estrictos.</p>
+  </section>
+
+  <section class="cta-business">
+    <div class="cta-business__content">
+      <h2 class="cta-business__title">¿Necesita Proteger su Empresa o Condominio?</h2>
+      <p class="cta-business__description">Únase a las empresas líderes y condominios de prestigio que confían en nuestra experiencia</p>
+      <div class="cta-business__actions">
+        <a href="https://wa.me/525530255580?text=Hola,%20necesito%20información%20sobre%20servicios%20de%20seguridad%20privada" class="cta-business__btn cta-business__btn--primary" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="/cotizar" class="cta-business__btn cta-business__btn--secondary">Cotizar en Línea</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

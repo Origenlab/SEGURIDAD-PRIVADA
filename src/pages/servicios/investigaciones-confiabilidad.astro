@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import GallerySection from '../../components/GallerySection.astro';
+
+const title = 'Investigaciones de Confiabilidad y Antecedentes CDMX | Seguridad Privada';
+const description = 'Investigaciones de confiabilidad y seguridad privada en CDMX. Verificación de antecedentes, estudios socioeconómicos. +15 años. ☎ 55 3025 5580';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Investigaciones de Confiabilidad",
+  "description": "Investigaciones de confiabilidad y seguridad privada en CDMX. Verificación de antecedentes, estudios socioeconómicos. +15 años. ☎ 55 3025 5580",
+  "provider": {
+    "@type": "Organization",
+    "name": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
+    "url": "https://seguridad-privada.com.mx/"
+  },
+  "areaServed": { "@type": "City", "name": "Ciudad de México" },
+  "telephone": "+52-55-3025-5580"
+});
+
+const gallery = [
+  { src: '/img/investigaciones-de-confiabilidad/antecedentes-penales-investigacion-judicial.avif', alt: 'Verificación de antecedentes', captionTitle: 'Verificación de Antecedentes Penales', captionText: 'Consulta de registros oficiales y base de datos nacional' },
+  { src: '/img/investigaciones-de-confiabilidad/visita-domiciliaria-verificacion-residencia.avif', alt: 'Estudios socioeconómicos', captionTitle: 'Entrevista Domiciliaria Presencial', captionText: 'Visita del investigador con validación de datos' },
+  { src: '/img/investigaciones-de-confiabilidad/verificacion-referencias-laborales-candidatos.avif', alt: 'Verificación laboral', captionTitle: 'Verificación de Referencias Laborales', captionText: 'Confirmación de empleo con empresas anteriores' },
+  { src: '/img/investigaciones-de-confiabilidad/investigacion-financiera-historial-crediticio.avif', alt: 'Análisis financiero', captionTitle: 'Análisis de Situación Patrimonial', captionText: 'Evaluación de estabilidad económica y riesgos' },
+  { src: '/img/investigaciones-de-confiabilidad/entrevistas-profundidad-psicologicas-candidatos.avif', alt: 'Referencias personales', captionTitle: 'Entrevistas a Referencias Personales', captionText: 'Validación de carácter y reputación personal' },
+  { src: '/img/investigaciones-de-confiabilidad/informe-confidencial-investigacion-confiabilidad.avif', alt: 'Reportes ejecutivos', captionTitle: 'Reportes Ejecutivos Certificados', captionText: 'Documentos profesionales con evidencia fotográfica' },
+  { src: '/img/investigaciones-de-confiabilidad/validacion-documentos-identidad-academicos.avif', alt: 'Verificación académica', captionTitle: 'Validación de Títulos Académicos', captionText: 'Confirmación de certificados y credenciales' },
+  { src: '/img/investigaciones-de-confiabilidad/estudios-socioeconomicos-personal-empresarial.avif', alt: 'Análisis de riesgo', captionTitle: 'Matriz de Evaluación de Riesgos', captionText: 'Indicadores rojos y factores de alerta temprana' },
+  { src: '/img/investigaciones-de-confiabilidad/pruebas-confianza-examenes-poligraficos.avif', alt: 'Confidencialidad', captionTitle: 'Confidencialidad Absoluta Garantizada', captionText: 'Cumplimiento LFPDPPP y protocolos corporativos' },
+];
+---
+<BaseLayout title={title} description={description} schema={schema}>
+  <Hero
+    title="Investigaciones de Confiabilidad"
+    subtitle="Verificación de Antecedentes para Empresas en CDMX"
+    description='ORIGINS Private Security: Estudios socioeconómicos profesionales con reportes ejecutivos en 5-7 días hábiles. Certeza documentada sobre integridad, trayectoria laboral y situación socioeconómica. +15 años verificando personal para Fortune 500.'
+    card1Title="Evite el costo de una mala contratación"
+    card1Text='Contratar sin verificación exhaustiva es asumir riesgos legales, operativos y reputacionales evitables. Una mala contratación cuesta entre 30% y 150% del salario anual del puesto, sin contar robo interno, fuga de información o litigios laborales.'
+    card2Title="Certeza documentada antes de firmar"
+    card2Text='Verificación profesional de integridad, trayectoria laboral real y situación socioeconómica de candidatos. Metodología certificada que detecta inconsistencias, referencias falsas y antecedentes problemáticos antes de comprometer a su organización.'
+  />
+
+  {gallery.length > 0 && <GallerySection items={gallery} />}
+
+  <section class="attention-box" style="max-width:1200px;margin:40px auto;padding:48px">
+    <h2 class="attention-box__title">Por Qué las Empresas Líderes Verifican Antecedentes Antes de Contratar</h2>
+    <p class="attention-box__text">Cada año, empresas mexicanas pierden millones de pesos por malas contrataciones que pudieron evitarse con estudios de confiabilidad profesionales. Robo interno, fuga de información, demandas laborales fraudulentas, acoso, violencia y negligencia que generan pérdidas económicas y reputacionales masivas.</p>
+    <p class="attention-box__text">Las organizaciones que invierten en investigaciones de confiabilidad pre-empleo reducen rotación en 40%, minimizan riesgos legales en 60% y protegen activos críticos que tomaría años recuperar. En ORIGINS, nuestros estudios socioeconómicos certificados le proporcionan tranquilidad documentada con evidencia verificable que resiste auditorías corporativas y cumple normativas de protección de datos.</p>
+  </section>
+
+  <section class="cta-business">
+    <div class="cta-business__content">
+      <h2 class="cta-business__title">¿Necesita Proteger su Empresa o Condominio?</h2>
+      <p class="cta-business__description">Únase a las empresas líderes y condominios de prestigio que confían en nuestra experiencia</p>
+      <div class="cta-business__actions">
+        <a href="https://wa.me/525530255580?text=Hola,%20necesito%20información%20sobre%20servicios%20de%20seguridad%20privada" class="cta-business__btn cta-business__btn--primary" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="/cotizar" class="cta-business__btn cta-business__btn--secondary">Cotizar en Línea</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

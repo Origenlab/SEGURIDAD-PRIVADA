@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import GallerySection from '../../components/GallerySection.astro';
+
+const title = 'Custodia de Efectivo y Valores CDMX | Seguridad Privada Traslado Blindado';
+const description = 'Custodia de efectivo, valores y mercancías con seguridad privada en CDMX. Traslado blindado certificado, póliza de seguro integral. ☎ 55 3025 5580';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Custodia de Efectivo y Valores",
+  "description": "Custodia de efectivo, valores y mercancías con seguridad privada en CDMX. Traslado blindado certificado, póliza de seguro integral. ☎ 55 3025 5580",
+  "provider": {
+    "@type": "Organization",
+    "name": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
+    "url": "https://seguridad-privada.com.mx/"
+  },
+  "areaServed": { "@type": "City", "name": "Ciudad de México" },
+  "telephone": "+52-55-3025-5580"
+});
+
+const gallery = [
+  { src: '/img/custodia-de-mercancias/vehiculos-blindados-certificados-custodia-efectivo.avif', alt: 'Vehículo blindado certificado nivel III-A para custodia de efectivo', captionTitle: 'Vehículos Blindados Certificados', captionText: 'Unidades nivel III-A con blindaje balístico certificado' },
+  { src: '/img/custodia-de-mercancias/escoltas-profesionales-traslado-valores-cdmx.avif', alt: 'Escoltas profesionales certificados SSC para traslado de valores', captionTitle: 'Escoltas Certificados SSC', captionText: 'Personal capacitado en protocolos de custodia de valores' },
+  { src: '/img/custodia-de-mercancias/cadena-custodia-certificada-evidencia-fotografica.avif', alt: 'Cadena de custodia con evidencia fotográfica y GPS', captionTitle: 'Cadena de Custodia Certificada', captionText: 'Trazabilidad completa con evidencia fotográfica' },
+  { src: '/img/custodia-de-mercancias/traslado-seguro-efectivo-sector-financiero.avif', alt: 'Traslado seguro de efectivo para instituciones financieras', captionTitle: 'Custodia para Sector Financiero', captionText: 'Protocolos especializados para bancos y casas de cambio' },
+  { src: '/img/custodia-de-mercancias/rastreo-gps-satelital-vehiculos-blindados.avif', alt: 'Monitoreo GPS en tiempo real de unidades blindadas', captionTitle: 'Rastreo GPS Satelital 24/7', captionText: 'Monitoreo continuo desde centro de comando' },
+  { src: '/img/custodia-de-mercancias/poliza-seguro-integral-custodia-valores.avif', alt: 'Póliza de seguro integral para custodia de valores', captionTitle: 'Póliza de Seguro Integral', captionText: 'Cobertura 100% del valor declarado en tránsito' },
+  { src: '/img/custodia-de-mercancias/protocolos-anti-asalto-mercancias-alto-valor.avif', alt: 'Protocolos anti-asalto para traslado de mercancías de alto valor', captionTitle: 'Protocolos Anti-Asalto', captionText: 'Rutas variables y procedimientos evasivos certificados' },
+  { src: '/img/custodia-de-mercancias/custodia-especializada-mercancias-farmaceuticas.avif', alt: 'Custodia de mercancía farmacéutica con temperatura controlada', captionTitle: 'Custodia Especializada Farmacéutica', captionText: 'Temperatura controlada para productos sensibles' },
+  { src: '/img/custodia-de-mercancias/traslado-documentos-confidenciales-empresariales.avif', alt: 'Traslado de documentos confidenciales con NDA', captionTitle: 'Documentación Confidencial', captionText: 'Personal con acuerdos de confidencialidad vigentes' },
+];
+---
+<BaseLayout title={title} description={description} schema={schema}>
+  <Hero
+    title="Custodia de Efectivo y Valores"
+    subtitle="Traslado Blindado Certificado Nivel III-A en CDMX"
+    description='ORIGINS Private Security: Servicio empresarial de custodia con vehículos blindados certificados, protocolos UNE 167005 y póliza de seguro integral. 94% de reducción en incidentes de pérdida vs. traslado convencional.'
+    card1Title="Blindaje certificado contra calibres delictivos"
+    card1Text='Vehículos blindados nivel III-A que resisten .38 Special, 9mm y .357 Magnum. Escoltas profesionales con certificación SSC vigente y experiencia en protección de valores. Cadena de custodia trazable con evidencia fotográfica y GPS en cada etapa del traslado.'
+    card2Title="Cobertura total de sus activos"
+    card2Text='Póliza de seguro integral que cubre 100% del valor declarado en tránsito. Ideal para instituciones financieras, retailers multi-sucursal, casinos y centros cambiarios. Elimine el riesgo de traslados convencionales sin blindaje ni cobertura real.'
+  />
+
+  {gallery.length > 0 && <GallerySection items={gallery} />}
+
+  <section class="attention-box" style="max-width:1200px;margin:40px auto;padding:48px">
+    <h2 class="attention-box__title">Por Qué el Traslado de Valores Sin Blindaje Es Responsabilidad Civil Evitable</h2>
+    <p class="attention-box__text">En contexto empresarial donde la debida diligencia determina responsabilidad ante stakeholders, el traslado de efectivo o valores sin medidas de seguridad documentadas representa negligencia corporativa con implicaciones legales y financieras. Circular Única CNBV establece para instituciones financieras obligación de implementar "medidas razonables" para protección de activos en tránsito - interpretado por jurisprudencia como blindaje certificado, personal capacitado, y cobertura de seguro adecuada.</p>
+    <p class="attention-box__text">Empresas que sufren pérdida de efectivo durante traslado sin protocolos certificados enfrentan: (1) Pérdida directa 100% del efectivo sustraído sin recuperación; (2) Responsabilidad ante aseguradoras que rechazan reclamaciones por "custodia inadecuada"; (3) Exposición a demandas de socios/accionistas por negligencia en protección de activos corporativos; (4) Daño reputacional ante clientes que confían valores. El costo de implementar custodia blindada profesional representa fracción mínima del riesgo financiero y legal que elimina.</p>
+  </section>
+
+  <section class="cta-business">
+    <div class="cta-business__content">
+      <h2 class="cta-business__title">¿Necesita Proteger su Empresa o Condominio?</h2>
+      <p class="cta-business__description">Únase a las empresas líderes y condominios de prestigio que confían en nuestra experiencia</p>
+      <div class="cta-business__actions">
+        <a href="https://wa.me/525530255580?text=Hola,%20necesito%20información%20sobre%20servicios%20de%20seguridad%20privada" class="cta-business__btn cta-business__btn--primary" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="/cotizar" class="cta-business__btn cta-business__btn--secondary">Cotizar en Línea</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

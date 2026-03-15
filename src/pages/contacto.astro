@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+
+const title = 'Contacto | Seguridad Privada CDMX - ORIGINS Private Security';
+const description = 'Contacta a ORIGINS Private Security para cotización de seguridad privada en CDMX. Atención 24/7, respuesta en menos de 2 horas. ☎ 55 3025 5580';
+---
+<BaseLayout title={title} description={description}>
+  <Hero
+    title="Contáctanos"
+    subtitle="Tu Seguridad es Nuestra Prioridad"
+    description='ORIGINS Private Security: Atención <strong>24/7, los 365 días del año</strong>. Más de 15 años protegiendo familias y empresas en CDMX. <strong>Respuesta en menos de 2 horas hábiles</strong>.'
+    card1Title="Solución a la medida de tu presupuesto"
+    card1Text="Ya sea que necesites guardias certificados SSC, monitoreo CCTV, protección ejecutiva o custodia de mercancías, nuestro equipo de expertos te diseñará la solución ideal. Cotización sin costo y sin compromiso."
+    card2Title="Respaldo legal garantizado"
+    card2Text="Contamos con Permiso SSC 0102-15 vigente y todos nuestros guardias están certificados por la Secretaría de Seguridad Ciudadana de CDMX. Empresa 100% legal con más de 15 años de trayectoria comprobable."
+  />
+
+  <section class="cotizacion-section">
+    <div class="container">
+      <div class="cotizacion-header">
+        <h2>Solicita tu Cotización Sin Costo</h2>
+        <p>Completa el formulario y nos pondremos en contacto contigo en menos de 2 horas hábiles</p>
+      </div>
+      <div class="cotizacion-form-wrapper">
+        <form action="https://formsubmit.co/josecruz@originsecurity.mx" method="POST">
+          <input type="hidden" name="_subject" value="Nueva solicitud de cotización - seguridad-privada.com.mx">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://seguridad-privada.com.mx/contacto">
+          <div class="cotizacion-form-row">
+            <div class="cotizacion-form-col">
+              <div class="cotizacion-field">
+                <label for="nombre">Nombre Completo *</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre completo">
+              </div>
+              <div class="cotizacion-field">
+                <label for="empresa">Empresa / Organización</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa o condominio">
+              </div>
+              <div class="cotizacion-field">
+                <label for="telefono">Teléfono / WhatsApp *</label>
+                <input type="tel" id="telefono" name="telefono" required placeholder="55 1234 5678">
+              </div>
+              <div class="cotizacion-field">
+                <label for="email">Correo Electrónico *</label>
+                <input type="email" id="email" name="email" required placeholder="correo@empresa.com">
+              </div>
+            </div>
+            <div class="cotizacion-form-col">
+              <div class="cotizacion-field">
+                <label for="servicio">Servicio de Interés *</label>
+                <select id="servicio" name="servicio" required>
+                  <option value="">Selecciona un servicio</option>
+                  <option value="guardias-seguridad">Guardias de Seguridad y Vigilancia</option>
+                  <option value="guardias-intramuros">Guardias Intramuros / Recepción</option>
+                  <option value="control-accesos">Control de Accesos</option>
+                  <option value="patrullaje">Patrullaje Vehicular</option>
+                  <option value="prevencion-perdidas">Prevención de Pérdidas</option>
+                  <option value="condominios">Seguridad para Condominios</option>
+                  <option value="construccion">Seguridad en Construcción</option>
+                  <option value="eventos">Seguridad para Eventos</option>
+                  <option value="hospitalaria">Seguridad Hospitalaria</option>
+                  <option value="cctv">Vigilancia Remota CCTV</option>
+                  <option value="alarmas">Monitoreo de Alarmas 24/7</option>
+                  <option value="gps">Seguridad GPS Satelital</option>
+                  <option value="proteccion-ejecutiva">Protección Ejecutiva</option>
+                  <option value="custodia">Custodia de Mercancías</option>
+                  <option value="consultoria">Consultoría en Seguridad</option>
+                  <option value="analisis-riesgos">Análisis de Riesgos</option>
+                  <option value="investigaciones">Investigaciones de Confiabilidad</option>
+                  <option value="otro">Otro Servicio</option>
+                </select>
+              </div>
+              <div class="cotizacion-field">
+                <label for="ubicacion">Ubicación del Servicio *</label>
+                <input type="text" id="ubicacion" name="ubicacion" required placeholder="Ej: Polanco, CDMX">
+              </div>
+              <div class="cotizacion-field">
+                <label for="mensaje">Describe tus Necesidades de Seguridad *</label>
+                <textarea id="mensaje" name="mensaje" required placeholder="Describe tus necesidades específicas de seguridad..."></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="cotizacion-footer">
+            <div class="cotizacion-terms">
+              <input type="checkbox" name="privacidad" required>
+              <span>He leído y acepto el <a href="/aviso-de-privacidad">Aviso de Privacidad</a></span>
+            </div>
+            <button type="submit" class="cotizacion-submit">Enviar Solicitud de Cotización</button>
+            <p class="cotizacion-note">* Campos obligatorios. Respuesta en menos de 2 horas hábiles.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Info -->
+  <section class="page-section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px">
+        <div>
+          <h2 style="margin-bottom:20px">Información de Contacto</h2>
+          <p style="margin-bottom:8px"><strong>ORIGINS PRIVATE SECURITY S.A. DE C.V.</strong></p>
+          <p style="margin-bottom:8px">Basiliso Romo Anguiano No 22 int 3, Col Industrial, Ciudad de México, C.P. 07800</p>
+          <p style="margin-bottom:4px"><strong>Teléfonos:</strong></p>
+          <p style="margin-bottom:4px"><a href="tel:+525530255580" style="color:var(--blue-700)">55 3025 5580</a> &middot; <a href="tel:+525572044370" style="color:var(--blue-700)">55 7204 4370</a></p>
+          <p style="margin-bottom:8px"><a href="tel:+525552074704" style="color:var(--blue-700)">55 5207 4704</a> &middot; <a href="tel:+525520768028" style="color:var(--blue-700)">52 0768 28</a></p>
+          <p style="margin-bottom:4px"><strong>WhatsApp 24/7:</strong> <a href="https://wa.me/525530255580" style="color:var(--blue-700)" target="_blank" rel="noopener">55 3025 5580</a></p>
+          <p style="margin-bottom:8px"><strong>Email:</strong> <a href="mailto:josecruz@originsecurity.mx" style="color:var(--blue-700)">josecruz@originsecurity.mx</a></p>
+          <p style="margin-bottom:4px"><strong>Horario Oficinas:</strong> Lunes a Viernes: 9:00 AM - 7:00 PM, Sábados: 9:00 AM - 2:00 PM</p>
+          <p><strong>WhatsApp y Emergencias:</strong> Disponible 24/7, los 365 días del año</p>
+        </div>
+        <div>
+          <h2 style="margin-bottom:20px">Visítanos en Nuestras Oficinas</h2>
+          <p style="margin-bottom:12px">Ubicados en la Col Industrial, CDMX. Agende su cita previa por teléfono o WhatsApp.</p>
+          <p style="margin-bottom:8px"><strong>Cómo llegar:</strong></p>
+          <p style="margin-bottom:4px">Metro Línea 3 (La Raza) o Línea B</p>
+          <p style="margin-bottom:4px">Metrobús Línea 1 - Estación La Raza</p>
+          <p style="margin-bottom:4px">En auto: Sobre Av. de los 100 Metros</p>
+          <p>Estacionamiento disponible</p>
+          <p style="margin-top:12px"><strong>RFC:</strong> OPS1308309M5 &middot; <strong>Permiso SSC:</strong> 0102-15</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-business">
+    <div class="cta-business__content">
+      <h2 class="cta-business__title">¿Necesitas Atención Inmediata para Tu Seguridad?</h2>
+      <div class="cta-business__features">
+        <div class="cta-business__feature"><h3 class="cta-business__feature-title">Atención 24/7</h3><p class="cta-business__feature-text">Siempre disponibles</p></div>
+        <div class="cta-business__feature"><h3 class="cta-business__feature-title">Respuesta en 24 Horas</h3><p class="cta-business__feature-text">Cotización personalizada</p></div>
+        <div class="cta-business__feature"><h3 class="cta-business__feature-title">Cobertura Total</h3><p class="cta-business__feature-text">CDMX y Estado de México</p></div>
+      </div>
+      <div class="cta-business__actions">
+        <a href="https://wa.me/525530255580" class="cta-business__btn cta-business__btn--primary" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="tel:+525530255580" class="cta-business__btn cta-business__btn--secondary">Llamar Ahora</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

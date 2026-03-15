@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import GallerySection from '../../components/GallerySection.astro';
+
+const title = 'Consultoría de Seguridad Privada Corporativa CDMX | Auditorías y Protocolos';
+const description = 'Consultoría de seguridad privada para empresas y condominios en CDMX. Auditorías de vulnerabilidades, diseño de protocolos certificados. ☎ 55 3025 5580';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Consultoría de Seguridad Corporativa",
+  "description": "Consultoría de seguridad privada para empresas y condominios en CDMX. Auditorías de vulnerabilidades, diseño de protocolos certificados. ☎ 55 3025 5580",
+  "provider": {
+    "@type": "Organization",
+    "name": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
+    "url": "https://seguridad-privada.com.mx/"
+  },
+  "areaServed": { "@type": "City", "name": "Ciudad de México" },
+  "telephone": "+52-55-3025-5580"
+});
+
+const gallery = [
+  { src: '/img/consultoria-de-seguridad/auditoria-seguridad-fisica-instalaciones.avif', alt: 'Auditoría de seguridad física en edificio corporativo CDMX', captionTitle: 'Auditorías de Seguridad Física', captionText: 'Evaluación exhaustiva de vulnerabilidades en instalaciones corporativas' },
+  { src: '/img/consultoria-de-seguridad/consultoria-protocolos-seguridad-cdmx.avif', alt: 'Diseño de protocolos de respuesta ante emergencias', captionTitle: 'Diseño de Protocolos Operativos', captionText: 'Procedimientos documentados para respuesta ante incidentes críticos' },
+  { src: '/img/consultoria-de-seguridad/planes-contingencia-emergencias-corporativas.avif', alt: 'Plan de continuidad de negocio certificado ISO 22301', captionTitle: 'Planes de Continuidad de Negocio', captionText: 'BCP certificables conforme ISO 22301 para operaciones críticas' },
+  { src: '/img/consultoria-de-seguridad/analisis-vulnerabilidades-seguridad-empresarial.avif', alt: 'Análisis de vulnerabilidades y riesgos con metodología ISO 31000', captionTitle: 'Análisis de Riesgos ISO 31000', captionText: 'Identificación y cuantificación de amenazas empresariales' },
+  { src: '/img/consultoria-de-seguridad/capacitacion-personal-seguridad-empresarial.avif', alt: 'Capacitación de personal en protocolos de seguridad empresarial', captionTitle: 'Capacitación de Personal', captionText: 'Entrenamiento en procedimientos y respuesta ante emergencias' },
+  { src: '/img/consultoria-de-seguridad/evaluacion-sistemas-seguridad-existentes.avif', alt: 'Evaluación de sistemas de control de accesos corporativos', captionTitle: 'Evaluación de Sistemas Tecnológicos', captionText: 'Auditoría de CCTV, control de accesos y alarmas' },
+  { src: '/img/consultoria-de-seguridad/diseño-estrategias-seguridad-corporativa.avif', alt: 'Diseño de centros de operaciones de seguridad SOC', captionTitle: 'Diseño de Centros de Operaciones', captionText: 'Arquitectura de SOC para monitoreo centralizado 24/7' },
+  { src: '/img/consultoria-de-seguridad/asesoria-normativas-seguridad-privada.avif', alt: 'Cumplimiento normativo de seguridad corporativa', captionTitle: 'Auditorías de Cumplimiento Normativo', captionText: 'Verificación de estándares ASIS, ISO, y regulaciones locales' },
+  { src: '/img/consultoria-de-seguridad/diagnostico-riesgos-seguridad-corporativa.avif', alt: 'Simulacros de evacuación y respuesta ante emergencias', captionTitle: 'Simulacros y Validación de Protocolos', captionText: 'Pruebas prácticas para verificar efectividad de procedimientos' },
+];
+---
+<BaseLayout title={title} description={description} schema={schema}>
+  <Hero
+    title="Consultoría de Seguridad Corporativa"
+    subtitle="Metodología ISO 31000 con Certificación CPP/PSP en CDMX"
+    description='ORIGINS Private Security: Auditorías de vulnerabilidades, diseño de protocolos y planes de continuidad de negocio (BCP). Consultores certificados CPP y PSP. Prevenir cuesta 10X menos que recuperarse de crisis evitables.'
+    card1Title="Inversión en prevención, no gasto"
+    card1Text='Para directores de seguridad, CFOs y comités de auditoría que enfrentan vulnerabilidades no documentadas, protocolos inexistentes y brechas de cumplimiento. La debida diligencia exige evaluación externa objetiva por consultores certificados sin conflictos de interés operativos.'
+    card2Title="Resultados accionables, no reportes archivados"
+    card2Text='Entregamos matrices de riesgo ejecutivas con plan de implementación priorizado por criticidad financiera y presupuesto. Auditorías físicas, protocolos documentados, capacitación en emergencias y BCP certificables. ROI directo: consultoría = 1-5% del costo de recuperación post-crisis.'
+  />
+
+  {gallery.length > 0 && <GallerySection items={gallery} />}
+
+  <section class="attention-box" style="max-width:1200px;margin:40px auto;padding:48px">
+    <h2 class="attention-box__title">Por Qué Protocolos Inexistentes Son Responsabilidad Corporativa Evitable</h2>
+    <p class="attention-box__text">Cuando ocurre incendio, intrusión, secuestro de ejecutivo, o fraude interno y el personal improvisa respuesta porque NO existen protocolos documentados previamente validados, la responsabilidad legal recae sobre directivos que no implementaron debida diligencia en gestión de riesgos. Jurisprudencia corporativa establece que consejos de administración tienen deber fiduciario de proteger activos críticos mediante protocolos razonables de prevención. Auditorías de gobernanza evalúan existencia de procedimientos documentados como indicador de gestión profesional vs negligencia cuantificable.</p>
+    <p class="attention-box__text">El costo económico de crisis mal manejadas incluye: pérdidas operacionales directas, interrupción de cadena de suministro, daño reputacional con stakeholders, litigios de responsabilidad civil, multas regulatorias por incumplimiento normativo, y prima incrementada en seguros D&amp;O tras incidentes. En contraste, consultoría preventiva que diseña protocolos certificables cuesta inversión única equivalente a 1-5% del costo promedio de recuperación ante crisis mayor. Para comités de auditoría evaluando gestión de riesgos empresariales (ERM), NO tener protocolos documentados validados por consultores externos certificados es brecha de cumplimiento documentable ante shareholders.</p>
+  </section>
+
+  <section class="cta-business">
+    <div class="cta-business__content">
+      <h2 class="cta-business__title">¿Necesita Proteger su Empresa o Condominio?</h2>
+      <p class="cta-business__description">Únase a las empresas líderes y condominios de prestigio que confían en nuestra experiencia</p>
+      <div class="cta-business__actions">
+        <a href="https://wa.me/525530255580?text=Hola,%20necesito%20información%20sobre%20servicios%20de%20seguridad%20privada" class="cta-business__btn cta-business__btn--primary" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="/cotizar" class="cta-business__btn cta-business__btn--secondary">Cotizar en Línea</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

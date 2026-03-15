@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import GallerySection from '../../components/GallerySection.astro';
+
+const title = 'Guardias Intramuros CDMX | Condominios y Empresas';
+const description = 'Seguridad privada intramuros para condominios, residenciales y empresas en CDMX. Guardias certificados SSC 24/7, control de accesos. +15 años. ☎ 55 3025 5580';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Guardias Intramuros",
+  "description": "Seguridad privada intramuros para condominios, residenciales y empresas en CDMX. Guardias certificados SSC 24/7, control de accesos. +15 años. ☎ 55 3025 5580",
+  "provider": {
+    "@type": "Organization",
+    "name": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
+    "url": "https://seguridad-privada.com.mx/"
+  },
+  "areaServed": { "@type": "City", "name": "Ciudad de México" },
+  "telephone": "+52-55-3025-5580"
+});
+
+const gallery = [
+  { src: '/img/guardias-intramuros/administración-de-riesgos.avif', alt: 'Guardias intramuros', captionTitle: 'Recepciones Corporativas', captionText: 'Personal profesional en edificios clase A' },
+  { src: '/img/guardias-intramuros/soluciones-de-seguridad.avif', alt: 'Seguridad privada', captionTitle: 'Control de Accesos', captionText: 'Registro digital de visitantes y proveedores' },
+  { src: '/img/guardias-intramuros/detección-de-intrusos.avif', alt: 'Vigilante de seguridad', captionTitle: 'Hospitales Privados', captionText: 'Atención empática con firmeza profesional' },
+  { src: '/img/guardias-intramuros/seguridad-24-horas.avif', alt: 'Servicio de vigilancia 24 horas en torres residenciales CDMX', captionTitle: 'Torres Residenciales', captionText: 'Servicio hotelero con seguridad discreta' },
+  { src: '/img/guardias-intramuros/protección-a-personal.avif', alt: 'Personal de seguridad', captionTitle: 'Tecnología Integrada', captionText: 'Operación de sistemas de control avanzados' },
+  { src: '/img/guardias-intramuros/vigilantes-capacitados.avif', alt: 'Servicios de seguridad privada', captionTitle: 'Uniformes Corporativos', captionText: 'Presentación impecable con su logotipo' },
+  { src: '/img/guardias-intramuros/proteccion-ejecutiva.avif', alt: 'Control de accesos', captionTitle: 'Centros de Negocios', captionText: 'Cobertura completa 24/7' },
+  { src: '/img/guardias-intramuros/seguridad-en-méxico.avif', alt: 'Rondas de vigilancia', captionTitle: 'Gestión de Entregas', captionText: 'Coordinación eficiente de proveedores' },
+  { src: '/img/guardias-intramuros/recursos-humanos-seguridad.avif', alt: 'Rondines de vigilancia con protocolos de seguridad estrictos', captionTitle: 'Rondines de vigilancia', captionText: 'Protocolos de seguridad estrictos' },
+];
+---
+<BaseLayout title={title} description={description} schema={schema}>
+  <Hero
+    title="Guardias Intramuros en CDMX"
+    subtitle="Personal de Seguridad Profesional con Atención Ejecutiva — La Primera Impresión que También Protege"
+    description='Seguridad privada intramuros para condominios, residenciales y empresas. Guardias certificados SSC que proyectan profesionalismo mientras protegen tu patrimonio.'
+    card1Title="Tu primera línea de defensa y carta de presentación"
+    card1Text='En el sector corporativo y empresarial, la diferencia entre proyectar excelencia profesional o descuido operativo está en los detalles de su recepción. Los guardias intramuros no son solo personal de seguridad: son la primera impresión de su empresa ante clientes, inversionistas y socios estratégicos. Cada visitante que cruza su umbral es una oportunidad única para demostrar profesionalismo.'
+    card2Title="Imagen corporativa respaldada por profesionales"
+    card2Text='En ORIGINS, entendemos que la seguridad y la imagen van de la mano. Nuestro servicio de guardias intramuros certificados SSC está diseñado para eliminar riesgos de seguridad mientras proyecta la imagen corporativa que su empresa merece. Personal con presentación impecable, protocolo ejecutivo y capacitación continua para representar dignamente a su organización.'
+  />
+
+  {gallery.length > 0 && <GallerySection items={gallery} />}
+
+  <section class="attention-box" style="max-width:1200px;margin:40px auto;padding:48px">
+    <h2 class="attention-box__title">Por Qué los Guardias Intramuros de ORIGINS Son la Decisión Correcta para Su Empresa</h2>
+    <p class="attention-box__text">En el sector corporativo y empresarial, la diferencia entre una recepción que proyecta excelencia y una que genera desconfianza está en el profesionalismo del personal de seguridad. Los guardias intramuros no son solo vigilancia: son una inversión estratégica en la reputación de su empresa.</p>
+    <p class="attention-box__text">En ORIGINS, entendemos que cada visitante que cruza su recepción es una oportunidad para demostrar que su organización opera con los más altos estándares. Nuestro servicio de guardias intramuros certificados SSC está diseñado para eliminar riesgos mientras maximiza la imagen profesional.</p>
+  </section>
+
+  <section class="cta-business">
+    <div class="cta-business__content">
+      <h2 class="cta-business__title">¿Necesita Proteger su Empresa o Condominio?</h2>
+      <p class="cta-business__description">Únase a las empresas líderes y condominios de prestigio que confían en nuestra experiencia</p>
+      <div class="cta-business__actions">
+        <a href="https://wa.me/525530255580?text=Hola,%20necesito%20información%20sobre%20servicios%20de%20seguridad%20privada" class="cta-business__btn cta-business__btn--primary" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="/cotizar" class="cta-business__btn cta-business__btn--secondary">Cotizar en Línea</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

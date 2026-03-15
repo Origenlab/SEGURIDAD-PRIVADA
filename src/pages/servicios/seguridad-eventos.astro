@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import GallerySection from '../../components/GallerySection.astro';
+
+const title = 'Seguridad Privada para Eventos Corporativos CDMX | Guardias Certificados SSC';
+const description = 'Seguridad privada para eventos corporativos, bodas y congresos en CDMX. Guardias certificados SSC, control de accesos y protección discreta. ☎ 55 3025 5580';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Seguridad para Eventos",
+  "description": "Seguridad privada para eventos corporativos, bodas y congresos en CDMX. Guardias certificados SSC, control de accesos y protección discreta. ☎ 55 3025 5580",
+  "provider": {
+    "@type": "Organization",
+    "name": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
+    "url": "https://seguridad-privada.com.mx/"
+  },
+  "areaServed": { "@type": "City", "name": "Ciudad de México" },
+  "telephone": "+52-55-3025-5580"
+});
+
+const gallery = [
+  { src: '/img/img-eventos/control-accesos-eventos-corporativos.avif', alt: 'Control de accesos y credenciales en eventos corporativos CDMX', captionTitle: 'Control de Accesos', captionText: 'Gestión eficiente de acreditaciones, invitados y flujos de entrada' },
+  { src: '/img/img-eventos/guardias-seguridad-eventos-privados.avif', alt: 'Guardias certificados para eventos privados y sociales', captionTitle: 'Protección Discreta', captionText: 'Seguridad invisible en bodas, celebraciones y eventos sociales premium' },
+  { src: '/img/img-eventos/gestion-multitudes-eventos-masivos.avif', alt: 'Gestión profesional de multitudes en eventos masivos', captionTitle: 'Manejo de Multitudes', captionText: 'Control profesional de flujos masivos en congresos y festivales' },
+  { src: '/img/img-eventos/proteccion-vip-eventos-exclusivos.avif', alt: 'Protección VIP y áreas exclusivas en eventos premium', captionTitle: 'Áreas VIP', captionText: 'Acceso restringido con cortesía ejecutiva y discreción absoluta' },
+  { src: '/img/img-eventos/proteccion-perimetral-eventos-exteriores.avif', alt: 'Vigilancia perimetral en eventos exteriores y estacionamientos', captionTitle: 'Vigilancia Perimetral', captionText: 'Protección de estacionamientos, áreas exteriores y perímetros' },
+  { src: '/img/img-eventos/radioayuda-coordinacion-eventos.avif', alt: 'Coordinación con radioayuda en tiempo real para eventos', captionTitle: 'Coordinación Profesional', captionText: 'Comunicación constante vía radioayuda y protocolos claros' },
+  { src: '/img/img-eventos/monitoreo-seguridad-bodas-celebraciones.avif', alt: 'Seguridad especializada en bodas y celebraciones de alto perfil', captionTitle: 'Bodas y Celebraciones', captionText: 'Integración perfecta en eventos sociales con vestimenta formal' },
+  { src: '/img/img-eventos/personal-certificado-eventos-empresariales.avif', alt: 'Personal certificado SSC para eventos empresariales', captionTitle: 'Personal Certificado SSC', captionText: 'Guardias capacitados en hospitalidad y atención premium' },
+  { src: '/img/img-eventos/vigilancia-profesional-convenciones-ferias.avif', alt: 'Seguridad profesional en convenciones, congresos y ferias', captionTitle: 'Convenciones y Ferias', captionText: 'Protección en congresos, exposiciones y lanzamientos de producto' },
+];
+---
+<BaseLayout title={title} description={description} schema={schema}>
+  <Hero
+    title="Seguridad para Eventos en CDMX"
+    subtitle="Tus Invitados Disfrutan Sin Preocupaciones — Nosotros Gestionamos Seguridad que No Se Nota"
+    description='Seguridad invisible que protege sin intimidar. +15 años protegiendo eventos corporativos, bodas y congresos en CDMX.'
+    card1Title="Un incidente puede arruinar años de reputación"
+    card1Text='Organizas un evento corporativo con clientes clave, una boda de alto perfil o un congreso de 3,000 asistentes. Has invertido meses de planificación y tu reputación está en juego. ¿Qué pasa si un invitado sufre un accidente? ¿Si hay una pelea en el estacionamiento? ¿Si alguien no autorizado accede a áreas VIP?'
+    card2Title="Seguridad discreta que protege sin intimidar"
+    card2Text='En ORIGINS, con más de 15 años protegiendo eventos en CDMX, ofrecemos seguridad invisible que protege sin intimidar. Tus invitados disfrutan cada momento mientras nuestro equipo certificado SSC gestiona accesos, previene riesgos y coordina respuestas ante cualquier emergencia con discreción absoluta.'
+  />
+
+  {gallery.length > 0 && <GallerySection items={gallery} />}
+
+  <section class="attention-box" style="max-width:1200px;margin:40px auto;padding:48px">
+    <h2 class="attention-box__title">Por Qué la Seguridad Profesional para Eventos de ORIGINS Es la Decisión Correcta</h2>
+    <p class="attention-box__text">Seguridad invisible que protege sin intimidar. Tus invitados no deben sentirse vigilados o incómodos. Deben experimentar fluidez en accesos, cortesía en cada interacción y libertad para disfrutar el evento sabiendo que profesionales capacitados gestionan su seguridad sin que lo noten.</p>
+    <p class="attention-box__text">El resultado: eventos memorables por las razones correctas, no por incidentes de seguridad. En ORIGINS, con más de 15 años protegiendo eventos de todos tamaños, entendemos que cada detalle cuenta cuando tu reputación está en juego.</p>
+  </section>
+
+  <section class="cta-business">
+    <div class="cta-business__content">
+      <h2 class="cta-business__title">¿Necesita Proteger su Empresa o Condominio?</h2>
+      <p class="cta-business__description">Únase a las empresas líderes y condominios de prestigio que confían en nuestra experiencia</p>
+      <div class="cta-business__actions">
+        <a href="https://wa.me/525530255580?text=Hola,%20necesito%20información%20sobre%20servicios%20de%20seguridad%20privada" class="cta-business__btn cta-business__btn--primary" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="/cotizar" class="cta-business__btn cta-business__btn--secondary">Cotizar en Línea</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

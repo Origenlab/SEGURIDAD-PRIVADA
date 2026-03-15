@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+import GallerySection from '../../components/GallerySection.astro';
+
+const title = 'Control de Accesos para Condominios y Empresas CDMX | Seguridad Privada';
+const description = 'Control de accesos para condominios y empresas en CDMX. Guardias certificados SSC, registro digital 24/7. ☎ 55 3025 5580';
+
+const schema = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Control de Accesos",
+  "description": "Control de accesos para condominios y empresas en CDMX. Guardias certificados SSC, registro digital 24/7. ☎ 55 3025 5580",
+  "provider": {
+    "@type": "Organization",
+    "name": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
+    "url": "https://seguridad-privada.com.mx/"
+  },
+  "areaServed": { "@type": "City", "name": "Ciudad de México" },
+  "telephone": "+52-55-3025-5580"
+});
+
+const gallery = [
+  { src: '/img/control-de-accesos/control-de-acceso-con-cámaras.avif', alt: 'Guardia intramuros certificado SSC en recepción corporativa Polanco', captionTitle: 'Recepciones Corporativas', captionText: 'Personal profesional en edificios clase A' },
+  { src: '/img/control-de-accesos/sistema-de-identificación-de-visitas.avif', alt: 'Control de accesos con sistema de control de accesos en edificio Santa Fe', captionTitle: 'Control de Accesos', captionText: 'Registro digital de visitantes y proveedores' },
+  { src: '/img/control-de-accesos/prevención-de-ingreso-no-autorizado.avif', alt: 'Guardias intramuros uniformados en recepción hospitalaria', captionTitle: 'Hospitales Privados', captionText: 'Atención empática con firmeza profesional' },
+  { src: '/img/control-de-accesos/guardia-para-edificios-corporativos-cdmx.avif', alt: 'Personal de seguridad intramuros en torre residencial premium', captionTitle: 'Torres Residenciales', captionText: 'Servicio hotelero con seguridad discreta' },
+  { src: '/img/control-de-accesos/control-acceso-biométrico.avif', alt: 'Guardia de recepción con sistema biométrico en Interlomas', captionTitle: 'Tecnología Integrada', captionText: 'Operación de sistemas de control avanzados' },
+  { src: '/img/control-de-accesos/servicio-de-control-de-acceso-24h.avif', alt: 'Guardias intramuros con uniforme corporativo personalizado', captionTitle: 'Uniformes Corporativos', captionText: 'Presentación impecable con su logotipo' },
+  { src: '/img/control-de-accesos/seguridad-empresarial-méxico.avif', alt: 'Centro de negocios con seguridad intramuros profesional', captionTitle: 'Centros de Negocios', captionText: 'Cobertura completa 24/7' },
+  { src: '/img/control-de-accesos/vigilantes-para-garita.avif', alt: 'Guardia intramuros gestionando entrega de paquetería', captionTitle: 'Gestión de Entregas', captionText: 'Coordinación eficiente de proveedores' },
+  { src: '/img/control-de-accesos/control-de-personal-autorizado.avif', alt: 'Personal de seguridad en recepción de edificio gubernamental', captionTitle: 'Edificios Institucionales', captionText: 'Protocolos de seguridad estrictos' },
+];
+---
+<BaseLayout title={title} description={description} schema={schema}>
+  <Hero
+    title="Control de Accesos en CDMX"
+    subtitle="Saber Exactamente Quién Entra y Sale en Todo Momento — Guardias Certificados SSC + Tecnología de Registro Digital"
+    description='Control de accesos para condominios, residenciales y empresas. Registro digital en tiempo real con verificación de identidad y rastreabilidad total.'
+    card1Title="Rastreabilidad total: nunca más preguntes quién entró"
+    card1Text='¿Alguna vez te preguntaste "¿quién dejó entrar a esa persona?" después de un incidente? ¿Te frustra no tener registro confiable de quién estuvo en tus instalaciones? El verdadero problema no es tener una caseta con un guardia: es tener rastreabilidad total, registros digitales imposibles de manipular y personal capacitado que no "deja pasar a cualquiera" por descuido.'
+    card2Title="Tecnología + guardias certificados = control real"
+    card2Text='En ORIGINS, combinamos guardias certificados SSC + registro digital en tiempo real + verificación de identidad. Cada entrada y salida queda documentada con foto, hora exacta y propósito de visita. Puedes ver desde tu celular quién entró hoy, a qué hora y con qué propósito. Seguridad eficiente que no genera cuellos de botella: empleados entran rápido, visitantes son atendidos profesionalmente.'
+  />
+
+  {gallery.length > 0 && <GallerySection items={gallery} />}
+
+  <section class="attention-box" style="max-width:1200px;margin:40px auto;padding:48px">
+    <h2 class="attention-box__title">Por Qué los Control de Accesos de ORIGINS Son la Decisión Correcta para Su Empresa</h2>
+    <p class="attention-box__text">En el sector corporativo y empresarial, la diferencia entre una recepción que proyecta excelencia y una que genera desconfianza está en el profesionalismo del personal de seguridad. Los control de accesos no son solo vigilancia: son una inversión estratégica en la reputación de su empresa.</p>
+    <p class="attention-box__text">En ORIGINS, entendemos que cada visitante que cruza su recepción es una oportunidad para demostrar que su organización opera con los más altos estándares. Nuestro servicio de control de accesos certificados SSC está diseñado para eliminar riesgos mientras maximiza la imagen profesional.</p>
+  </section>
+
+  <section class="cta-business">
+    <div class="cta-business__content">
+      <h2 class="cta-business__title">¿Necesita Proteger su Empresa o Condominio?</h2>
+      <p class="cta-business__description">Únase a las empresas líderes y condominios de prestigio que confían en nuestra experiencia</p>
+      <div class="cta-business__actions">
+        <a href="https://wa.me/525530255580?text=Hola,%20necesito%20información%20sobre%20servicios%20de%20seguridad%20privada" class="cta-business__btn cta-business__btn--primary" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="/cotizar" class="cta-business__btn cta-business__btn--secondary">Cotizar en Línea</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
