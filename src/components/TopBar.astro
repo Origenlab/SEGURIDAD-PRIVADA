@@ -1,0 +1,297 @@
+---
+/**
+ * TopBar.astro — ORIGINS Private Security
+ * Barra superior profesional: teléfono, horario, email, redes sociales, CTA
+ * Desktop: 2 columnas (info izq | social + CTA der)
+ * Mobile: solo teléfono + WhatsApp CTA (compacto, no ocupa espacio)
+ */
+---
+
+<div class="topbar" role="complementary" aria-label="Información de contacto rápido">
+  <div class="topbar__inner">
+
+    <!-- Izquierda: info de contacto -->
+    <div class="topbar__left">
+      <!-- Permiso SSC — credencial de confianza -->
+      <span class="topbar__item topbar__item--credential">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        Permiso SSC 0102-15
+      </span>
+
+      <!-- Separador -->
+      <span class="topbar__sep" aria-hidden="true">|</span>
+
+      <!-- Teléfono -->
+      <a href="tel:+525530255580" class="topbar__item topbar__item--phone" aria-label="Llamar a ORIGINS: 55 3025 5580">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        <span class="topbar__hide-sm">55 3025 5580</span>
+        <span class="topbar__show-sm">Llamar</span>
+      </a>
+
+      <!-- Horario (solo desktop) -->
+      <span class="topbar__item topbar__item--schedule topbar__hide-md" aria-label="Horario de atención">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Lun–Dom · 24 hrs
+      </span>
+
+      <!-- Email (solo desktop grande) -->
+      <a href="mailto:contacto@seguridad-privada.com.mx" class="topbar__item topbar__item--email topbar__hide-lg" aria-label="Enviar correo a ORIGINS">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        contacto@seguridad-privada.com.mx
+      </a>
+    </div>
+
+    <!-- Derecha: redes sociales + CTA envíos -->
+    <div class="topbar__right">
+      <!-- Envíos / cobertura (solo desktop) -->
+      <span class="topbar__item topbar__item--coverage topbar__hide-md">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+        CDMX y Zona Metropolitana
+      </span>
+
+      <!-- Redes sociales (solo desktop) -->
+      <div class="topbar__social topbar__hide-md" role="list" aria-label="Redes sociales">
+        <a href="https://www.facebook.com/originsprivatesecurity" target="_blank" rel="noopener noreferrer" class="topbar__social-link" aria-label="Facebook de ORIGINS Private Security" role="listitem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/originsprivatesecurity" target="_blank" rel="noopener noreferrer" class="topbar__social-link" aria-label="Instagram de ORIGINS Private Security" role="listitem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://wa.me/525530255580" target="_blank" rel="noopener noreferrer" class="topbar__social-link topbar__social-link--wa" aria-label="WhatsApp de ORIGINS Private Security" role="listitem">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+
+      <!-- CTA Cotizar (visible en todos los tamaños, más prominente en móvil) -->
+      <a
+        href="https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20privada%20para%20mi%20condominio"
+        class="topbar__cta"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Cotizar por WhatsApp"
+      >
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span class="topbar__hide-sm">Cotizar por WhatsApp</span>
+        <span class="topbar__show-sm">Cotizar</span>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  /* ============================================================
+     TOPBAR — Variables internas
+  ============================================================ */
+  .topbar {
+    --tb-bg: #0a0f1e;
+    --tb-text: rgba(255, 255, 255, 0.78);
+    --tb-text-hover: #ffffff;
+    --tb-sep: rgba(255, 255, 255, 0.18);
+    --tb-cta-bg: #25D366;
+    --tb-cta-hover: #1ebe5d;
+    --tb-height: 36px;
+    --tb-font: 0.78rem;
+    --tb-icon: 13px;
+
+    background-color: var(--tb-bg);
+    color: var(--tb-text);
+    font-size: var(--tb-font);
+    line-height: 1;
+    height: var(--tb-height);
+    overflow: hidden;
+  }
+
+  /* ============================================================
+     INNER LAYOUT — Flex, 2 columnas, centrado vertical
+  ============================================================ */
+  .topbar__inner {
+    max-width: var(--container-max, 1280px);
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
+
+  .topbar__left,
+  .topbar__right {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    flex-shrink: 0;
+  }
+
+  .topbar__left { flex: 1; min-width: 0; }
+  .topbar__right { flex-shrink: 0; }
+
+  /* ============================================================
+     ITEMS — Texto e iconos
+  ============================================================ */
+  .topbar__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--tb-text);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+    line-height: 1;
+  }
+
+  .topbar__item svg {
+    width: var(--tb-icon);
+    height: var(--tb-icon);
+    flex-shrink: 0;
+    opacity: 0.85;
+  }
+
+  a.topbar__item:hover,
+  a.topbar__item:focus-visible {
+    color: var(--tb-text-hover);
+    outline: none;
+  }
+
+  /* Credencial SSC */
+  .topbar__item--credential {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.72rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .topbar__item--credential svg {
+    color: #25D366;
+    opacity: 1;
+  }
+
+  /* Separador */
+  .topbar__sep {
+    color: var(--tb-sep);
+    user-select: none;
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+
+  /* Cobertura */
+  .topbar__item--coverage {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.6);
+  }
+  .topbar__item--coverage svg { opacity: 0.6; }
+
+  /* ============================================================
+     REDES SOCIALES
+  ============================================================ */
+  .topbar__social {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .topbar__social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: rgba(255,255,255,0.65);
+    background: rgba(255,255,255,0.07);
+    transition: background 0.2s ease, color 0.2s ease;
+    text-decoration: none;
+  }
+
+  .topbar__social-link:hover,
+  .topbar__social-link:focus-visible {
+    background: rgba(255,255,255,0.15);
+    color: #ffffff;
+    outline: none;
+  }
+
+  .topbar__social-link--wa:hover {
+    background: rgba(37, 211, 102, 0.25);
+    color: #25D366;
+  }
+
+  /* ============================================================
+     CTA BUTTON
+  ============================================================ */
+  .topbar__cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: var(--tb-cta-bg);
+    color: #ffffff;
+    font-size: 0.775rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.35rem 0.875rem;
+    border-radius: 980px;
+    white-space: nowrap;
+    transition: background 0.2s ease, transform 0.15s ease;
+    line-height: 1;
+  }
+
+  .topbar__cta svg { opacity: 1; }
+
+  .topbar__cta:hover,
+  .topbar__cta:focus-visible {
+    background: var(--tb-cta-hover);
+    transform: translateY(-1px);
+    outline: none;
+  }
+
+  .topbar__cta:active { transform: translateY(0); }
+
+  /* ============================================================
+     RESPONSIVE HELPERS
+     hide-sm  → oculto en mobile (<640px), visible en ≥640px
+     show-sm  → visible en mobile (<640px), oculto en ≥640px
+     hide-md  → oculto en mobile (<768px), visible en ≥768px
+     hide-lg  → oculto en mobile (<1024px), visible en ≥1024px
+  ============================================================ */
+
+  /* Por defecto (mobile-first) */
+  .topbar__hide-sm { display: none; }
+  .topbar__show-sm { display: inline; }
+  .topbar__hide-md { display: none !important; }
+  .topbar__hide-lg { display: none !important; }
+
+  /* ≥ 640px: tablets pequeñas / landscape móvil */
+  @media (min-width: 640px) {
+    .topbar { --tb-height: 36px; }
+
+    .topbar__hide-sm { display: inline; }
+    .topbar__show-sm { display: none; }
+  }
+
+  /* ≥ 768px: tablets */
+  @media (min-width: 768px) {
+    .topbar { --tb-height: 38px; }
+
+    .topbar__hide-md { display: inline-flex !important; }
+
+    .topbar__inner { padding: 0 1.5rem; gap: 1rem; }
+
+    .topbar__left,
+    .topbar__right { gap: 0.75rem; }
+  }
+
+  /* ≥ 1024px: desktop */
+  @media (min-width: 1024px) {
+    .topbar { --tb-height: 40px; --tb-font: 0.8rem; }
+
+    .topbar__hide-lg { display: inline-flex !important; }
+
+    .topbar__inner { padding: 0 2rem; }
+  }
+
+  /* ≥ 1280px: wide desktop */
+  @media (min-width: 1280px) {
+    .topbar__inner { padding: 0 2.5rem; }
+  }
+</style>
