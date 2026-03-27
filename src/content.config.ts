@@ -14,11 +14,11 @@ const serviciosCollection = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/servicios' }),
   schema: z.object({
     // Basic metadata
-    title: z.string().max(60, 'Title should be under 60 characters for SEO'),
-    description: z.string().max(160, 'Meta description should be under 160 characters'),
+    title: z.string().max(120, 'Title should be under 120 characters'),
+    description: z.string().max(250, 'Meta description should be under 250 characters'),
 
     // SEO fields
-    keywords: z.array(z.string()).min(3).max(10),
+    keywords: z.array(z.string()).min(1).max(20),
     canonical: z.string().url().optional(),
 
     // Service categorization
