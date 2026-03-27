@@ -35,7 +35,7 @@ const schema = {
       "description": "Empresa especializada en seguridad privada para condominios y residenciales en CDMX. Guardias intramuros certificados SSC para condominios verticales y horizontales, control de accesos 24/7, monitoreo CCTV. +15 años protegiendo comunidades residenciales. Permiso SSC 0102-15.",
       "url": siteUrl,
       "telephone": "+52-55-3025-5580",
-      "email": "josecruz@originsecurity.mx",
+      "email": "contacto@seguridad-privada.com.mx",
       "knowsAbout": [
         "Seguridad privada para condominios",
         "Guardias intramuros para condominios",
@@ -152,13 +152,13 @@ const schema = {
         </div>
         <div class="hero__seo">
           <p class="hero__seo-text">
-            ¿Buscas <strong>seguridad privada para tu condominio</strong>? En <strong>ORIGINS Private Security</strong> nos especializamos exclusivamente en proteger <strong>condominios verticales y horizontales</strong> en CDMX. Nuestros <strong>guardias intramuros para condominios</strong> conocen a cada residente, gestionan accesos con registro digital y realizan rondines programados con bitácora electrónica. Más de 15 años de experiencia respaldan cada operación.
+            ¿Buscas <strong>seguridad privada para tu condominio</strong>? En <strong>ORIGINS Private Security</strong> nos especializamos exclusivamente en proteger <a href="/servicios/seguridad-condominios"><strong>condominios verticales y horizontales</strong></a> en CDMX. Nuestros <a href="/servicios/guardias-intramuros"><strong>guardias intramuros para condominios</strong></a> conocen a cada residente, gestionan accesos con registro digital y realizan rondines programados con bitácora electrónica. Más de 15 años de experiencia respaldan cada operación.
           </p>
           <p class="hero__seo-text">
-            A diferencia de empresas generalistas, entendemos la operación diaria de un condominio: el trato discreto con residentes, la gestión de visitantes y proveedores, el monitoreo de estacionamientos y la coordinación con la administración. Cada elemento pasa por exámenes psicométricos, verificación de antecedentes y capacitación específica para <strong>seguridad residencial</strong>.
+            A diferencia de empresas generalistas, entendemos la operación diaria de un condominio: el trato discreto con residentes, la gestión de visitantes y proveedores, el <a href="/servicios/control-de-accesos">monitoreo de estacionamientos</a> y la coordinación con la administración. Cada elemento pasa por exámenes psicométricos, verificación de antecedentes y capacitación específica para <strong>seguridad residencial</strong>.
           </p>
           <p class="hero__seo-text">
-            También protegemos <strong>fraccionamientos privados</strong> y <strong>residenciales de lujo</strong> con casetas de vigilancia, patrullaje interno y seguridad perimetral. Operamos con <strong>póliza de responsabilidad civil</strong>, cumplimiento IMSS-INFONAVIT y <strong>permiso SSC 0102-15</strong>. Solicita tu cotización y descubre por qué más de 50 comunidades residenciales confían en ORIGINS.
+            También protegemos <a href="/servicios/seguridad-residenciales"><strong>fraccionamientos privados</strong> y <strong>residenciales de lujo</strong></a> con casetas de vigilancia, patrullaje interno y seguridad perimetral. Operamos con <strong>póliza de responsabilidad civil</strong>, cumplimiento IMSS-INFONAVIT y <strong>permiso SSC 0102-15</strong>. Solicita tu cotización y descubre por qué más de 50 comunidades residenciales confían en ORIGINS.
           </p>
         </div>
       </div>
@@ -203,7 +203,7 @@ const schema = {
       <div class="about-origins__grid">
         <div class="about-origins__content">
           <span class="about-origins__badge">Empresa de Seguridad Privada en CDMX</span>
-          <h2 id="about-title" class="about-origins__title">ORIGINS Private Security</h2>
+          <h2 id="about-title" class="about-origins__title">Empresa de Seguridad Privada para Condominios en CDMX — Desde 2008</h2>
           <p class="about-origins__tagline">Especialistas en <strong>seguridad privada para condominios</strong> y comunidades residenciales en Ciudad de México y Zona Metropolitana</p>
 
           <div class="about-origins__text">
@@ -531,6 +531,16 @@ ${mensaje}
 ---
 Enviado desde seguridad-privada.com.mx`;
 
+        // 1) Enviar email de respaldo vía formsubmit.co (sin redirigir la página)
+        fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        }).catch(() => {
+          // Silencioso — el canal principal es WhatsApp
+        });
+
+        // 2) Abrir WhatsApp con todos los datos del formulario
         window.open(`https://wa.me/525530255580?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
       });
     }

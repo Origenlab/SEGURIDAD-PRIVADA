@@ -1,0 +1,156 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+const zonas = await getCollection('zonas', ({ data }) => !data.draft);
+const cdmx = zonas.filter(z => z.data.state === 'Ciudad de México');
+const edomex = zonas.filter(z => z.data.state === 'Estado de México');
+
+const siteUrl = 'https://seguridad-privada.com.mx';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Zonas de Servicio de Seguridad Privada CDMX y Estado de México",
+  "description": "Cobertura de ORIGINS Private Security en alcaldías de CDMX y municipios del Estado de México",
+  "itemListElement": zonas.map((zona, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "item": {
+      "@type": "Service",
+      "name": `Seguridad Privada en ${zona.data.zoneName}`,
+      "url": `${siteUrl}/zonas/${zona.data.zoneSlug}`
+    }
+  }))
+};
+---
+
+<Base
+  title="Zonas de Cobertura | Seguridad Privada CDMX y Estado de México | ORIGINS"
+  description="Seguridad privada para condominios y residenciales en CDMX y Estado de México. Cobertura en todas las alcaldías y municipios principales. Permiso SSC 0102-15."
+  canonical={`${siteUrl}/zonas`}
+  schema={schema}
+>
+  <!-- Hero -->
+  <section class="zonas-hero">
+    <div class="container">
+      <div class="zonas-hero__badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Cobertura CDMX y Zona Metropolitana
+      </div>
+      <h1>Seguridad Privada en CDMX y Estado de México</h1>
+      <p>ORIGINS Private Security ofrece servicios de guardias intramuros, seguridad para condominios y control de accesos en todas las alcaldías de la Ciudad de México y los principales municipios del Estado de México.</p>
+      <div class="zonas-hero__cta">
+        <a href="/contacto" class="btn btn-primary">Solicitar Cotización Gratis</a>
+        <a href="https://wa.me/525530255580" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Directo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CDMX -->
+  <section class="zonas-grid-section">
+    <div class="container">
+      <h2>Seguridad Privada por Alcaldía — Ciudad de México</h2>
+      <p class="zonas-grid-section__intro">Atendemos condominios verticales, horizontales y fraccionamientos en las 16 alcaldías de la CDMX</p>
+      <div class="zonas-grid">
+        {cdmx.map((zona) => (
+          <a href={`/zonas/${zona.data.zoneSlug}`} class="zona-card">
+            <div class="zona-card__header">
+              <span class="zona-card__state">CDMX</span>
+              <h3>{zona.data.zoneName}</h3>
+            </div>
+            <p>{zona.data.description}</p>
+            <span class="zona-card__link">Ver cobertura →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Estado de México -->
+  {edomex.length > 0 && (
+    <section class="zonas-grid-section zonas-grid-section--edomex">
+      <div class="container">
+        <h2>Seguridad Privada en Estado de México</h2>
+        <p class="zonas-grid-section__intro">Cobertura en municipios de la Zona Metropolitana del Valle de México</p>
+        <div class="zonas-grid">
+          {edomex.map((zona) => (
+            <a href={`/zonas/${zona.data.zoneSlug}`} class="zona-card zona-card--edomex">
+              <div class="zona-card__header">
+                <span class="zona-card__state">EdoMex</span>
+                <h3>{zona.data.zoneName}</h3>
+              </div>
+              <p>{zona.data.description}</p>
+              <span class="zona-card__link">Ver cobertura →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- CTA -->
+  <section class="zonas-cta">
+    <div class="container">
+      <h2>¿Tu Zona No Aparece en la Lista?</h2>
+      <p>Contáctanos directamente. Evaluamos la cobertura para tu ubicación específica y te respondemos en menos de 24 horas.</p>
+      <div class="zonas-cta__buttons">
+        <a href="https://wa.me/525530255580?text=Hola%2C%20quiero%20saber%20si%20tienen%20cobertura%20en%20mi%20zona" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+        <a href="tel:+525530255580" class="btn btn-outline btn-lg">55 3025 5580</a>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .zonas-hero {
+    padding: 3rem 0 4rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, #1a1a2e 100%);
+    color: #fff;
+    text-align: center;
+  }
+  .zonas-hero__badge {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: rgba(255,255,255,0.15); color: #fff;
+    font-size: 0.8125rem; padding: 0.3rem 0.875rem;
+    border-radius: 980px; margin-bottom: 1rem;
+  }
+  .zonas-hero h1 { color: #fff; font-size: 2rem; margin-bottom: 1rem; }
+  .zonas-hero p { opacity: 0.9; max-width: 700px; margin: 0 auto 2rem; font-size: 1.0625rem; line-height: 1.7; }
+  .zonas-hero__cta { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+  @media (min-width: 768px) { .zonas-hero h1 { font-size: 2.5rem; } }
+
+  .zonas-grid-section { padding: 3.5rem 0; }
+  .zonas-grid-section--edomex { background: var(--color-accent); }
+  .zonas-grid-section h2 { font-size: 1.75rem; margin-bottom: 0.75rem; }
+  .zonas-grid-section__intro { color: var(--color-text-light); margin-bottom: 2rem; }
+  .zonas-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  @media (min-width: 640px) { .zonas-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .zonas-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .zona-card {
+    display: flex; flex-direction: column;
+    background: #fff; border: 1px solid var(--color-border);
+    border-radius: var(--border-radius); padding: 1.5rem;
+    text-decoration: none; color: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+  }
+  .zona-card--edomex { background: #fff; }
+  .zona-card:hover { border-color: var(--color-primary); box-shadow: 0 4px 16px rgba(0,0,0,0.08); transform: translateY(-2px); opacity: 1; }
+  .zona-card__header { margin-bottom: 0.75rem; }
+  .zona-card__state { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-primary); opacity: 0.7; display: block; margin-bottom: 0.25rem; }
+  .zona-card h3 { font-size: 1.125rem; color: var(--color-primary); margin: 0; }
+  .zona-card p { font-size: 0.875rem; color: var(--color-text-light); line-height: 1.5; flex: 1; margin-bottom: 1rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .zona-card__link { font-size: 0.875rem; color: var(--color-primary); font-weight: 500; }
+
+  .zonas-cta { padding: 4rem 0; background: var(--color-primary); color: #fff; text-align: center; }
+  .zonas-cta h2 { color: #fff; font-size: 1.75rem; margin-bottom: 1rem; }
+  .zonas-cta p { opacity: 0.9; max-width: 580px; margin: 0 auto 2rem; }
+  .zonas-cta__buttons { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+  .zonas-cta .btn-outline { border: 2px solid rgba(255,255,255,0.6); color: #fff; background: transparent; }
+  .zonas-cta .btn-outline:hover { background: rgba(255,255,255,0.1); opacity: 1; }
+</style>

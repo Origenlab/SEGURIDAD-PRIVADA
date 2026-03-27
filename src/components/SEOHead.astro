@@ -14,7 +14,7 @@ const {
   description,
   canonical = Astro.url.href,
   ogType = 'website',
-  ogImage = 'https://seguridad-privada.com.mx/img/og-image.avif',
+  ogImage = 'https://seguridad-privada.com.mx/img/og-image.jpg',
   noindex = false,
   schema
 } = Astro.props;
@@ -77,6 +77,8 @@ const siteUrl = 'https://seguridad-privada.com.mx';
 <!-- Resource Hints -->
 <link rel="preconnect" href="https://wa.me">
 <link rel="dns-prefetch" href="https://wa.me">
+<link rel="preconnect" href="https://app.rybbit.io">
+<link rel="dns-prefetch" href="https://app.rybbit.io">
 
 <!-- Schema.org -->
 {schema && (

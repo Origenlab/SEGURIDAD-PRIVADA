@@ -2,6 +2,30 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 
+// Mapa de emojis por tipo de servicio
+const serviceIcons: Record<string, string> = {
+  'guardias-intramuros': '🛡️',
+  'seguridad-condominios': '🏢',
+  'seguridad-residenciales': '🏘️',
+  'control-de-accesos': '🚪',
+  'guardias-de-seguridad-y-vigilancia': '👮',
+  'monitoreo-alarmas': '📡',
+  'patrullaje': '🚔',
+  'tecnologia-monitoreo-seguridad': '📹',
+  'proteccion-ejecutiva': '🤵',
+  'seguridad-eventos': '🎪',
+  'seguridad-construccion': '🏗️',
+  'seguridad-hospitalaria': '🏥',
+  'custodia-de-mercancias': '📦',
+  'consultoria-seguridad': '💼',
+  'consultoria-analisis-riesgos': '📊',
+  'investigaciones-confiabilidad': '🔍',
+  'prevencion-de-perdidas': '🔒',
+  'seguridad-gps-satelital': '🛰️',
+  'seguridad-especializada': '⭐',
+  'servicios-de-proteccion-ejecutiva-y-consultoria': '🤵',
+};
+
 export async function getStaticPaths() {
   const servicios = await getCollection('servicios');
   return servicios.map((servicio) => ({
@@ -12,6 +36,19 @@ export async function getStaticPaths() {
 
 const { servicio } = Astro.props;
 const { Content } = await render(servicio);
+
+// Obtener datos de servicios relacionados para el cross-linking
+const todosLosServicios = await getCollection('servicios', ({ data }) => !data.draft);
+const serviciosRelacionados = servicio.data.relatedServices
+  ? todosLosServicios
+      .filter(s => servicio.data.relatedServices.includes(s.id))
+      .map(s => ({
+        id: s.id,
+        titulo: s.data.title.split('|')[0].trim(),
+        descripcion: s.data.description,
+        icon: serviceIcons[s.id] || '🛡️',
+      }))
+  : [];
 
 const siteUrl = 'https://seguridad-privada.com.mx';
 
@@ -205,6 +242,30 @@ if (servicio.data.faqs && servicio.data.faqs.length > 0) {
                 <p>{faq.answer}</p>
               </div>
             </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Servicios Complementarios -->
+  {serviciosRelacionados.length > 0 && (
+    <section class="servicios-complementarios">
+      <div class="container">
+        <div class="servicios-complementarios__header">
+          <h2>Servicios Complementarios</h2>
+          <p>Soluciones de seguridad que potencian la protección de tu condominio o empresa</p>
+        </div>
+        <div class="servicios-complementarios__grid">
+          {serviciosRelacionados.map((rel) => (
+            <a href={`/servicios/${rel.id}`} class="servicios-comp__card">
+              <span class="servicios-comp__icon">{rel.icon}</span>
+              <div class="servicios-comp__content">
+                <h3>{rel.titulo}</h3>
+                <p>{rel.descripcion}</p>
+              </div>
+              <span class="servicios-comp__arrow">→</span>
+            </a>
           ))}
         </div>
       </div>
@@ -618,6 +679,108 @@ if (servicio.data.faqs && servicio.data.faqs.length > 0) {
     color: var(--color-text-light);
     line-height: 1.7;
     margin: 0;
+  }
+
+  /* Servicios Complementarios */
+  .servicios-complementarios {
+    padding: 3rem 0;
+    background: var(--color-accent);
+  }
+
+  .servicios-complementarios__header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .servicios-complementarios__header h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .servicios-complementarios__header p {
+    color: var(--color-text-light);
+    font-size: 1rem;
+  }
+
+  .servicios-complementarios__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .servicios-comp__card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    padding: 1.25rem 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .servicios-comp__card:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+    opacity: 1;
+  }
+
+  .servicios-comp__icon {
+    font-size: 1.75rem;
+    flex-shrink: 0;
+    line-height: 1;
+    margin-top: 0.1rem;
+  }
+
+  .servicios-comp__content {
+    flex: 1;
+  }
+
+  .servicios-comp__content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 0.3rem;
+  }
+
+  .servicios-comp__content p {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    margin: 0;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .servicios-comp__arrow {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    flex-shrink: 0;
+    opacity: 0.5;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    align-self: center;
+  }
+
+  .servicios-comp__card:hover .servicios-comp__arrow {
+    opacity: 1;
+    transform: translateX(4px);
+  }
+
+  @media (min-width: 640px) {
+    .servicios-complementarios__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .servicios-complementarios__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   /* Service CTA */

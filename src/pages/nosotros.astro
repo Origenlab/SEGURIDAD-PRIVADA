@@ -3,7 +3,93 @@ import Base from '../layouts/Base.astro';
 
 const title = "Nosotros | Empresa de Seguridad Privada Intramuros CDMX | +15 Años";
 const description = "Empresa de seguridad privada en CDMX con +15 años. Guardias intramuros certificados SSC para condominios, residenciales y empresas. ☎ 55 3025 5580";
-const schema = {"@context":"https://schema.org","@type":"AboutPage","name":"Nosotros - Seguridad Privada CDMX","description":"Empresa líder en seguridad privada en México con más de 15 años de experiencia protegiendo empresas, condominios y familias en CDMX y Estado de México.","url":"https://seguridad-privada.com.mx/nosotros.html","mainEntity":{"@type":"Organization","name":"Seguridad Privada CDMX","url":"https://seguridad-privada.com.mx/","logo":"https://seguridad-privada.com.mx/img/logo.avif","foundingDate":"2008","description":"Empresa líder en servicios de seguridad privada en México, especializada en guardias certificados SSC, monitoreo 24/7, protección ejecutiva y tecnología de vanguardia.","address":{"@type":"PostalAddress","streetAddress":"Tu Dirección","addressLocality":"Ciudad de México","addressRegion":"CDMX","postalCode":"01000","addressCountry":"MX"},"telephone":"+52-55-3025-5580","areaServed":[{"@type":"City","name":"Ciudad de México"},{"@type":"State","name":"Estado de México"}]}};
+const siteUrl = 'https://seguridad-privada.com.mx';
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "@id": `${siteUrl}/nosotros`,
+  "name": "Nosotros — ORIGINS Private Security | Empresa de Seguridad Privada en CDMX",
+  "description": "Más de 15 años protegiendo condominios, residenciales y empresas en CDMX. Guardias intramuros certificados SSC, monitoreo 24/7 y tecnología de vanguardia.",
+  "url": `${siteUrl}/nosotros`,
+  "mainEntity": {
+    "@type": ["Organization", "LocalBusiness"],
+    "@id": `${siteUrl}/#organization`,
+    "name": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
+    "legalName": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
+    "alternateName": ["ORIGINS Private Security", "Origins Security CDMX"],
+    "url": siteUrl,
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${siteUrl}/img/logo.avif`,
+      "width": 372,
+      "height": 100
+    },
+    "image": `${siteUrl}/img/logo.avif`,
+    "foundingDate": "2008",
+    "description": "Empresa especializada en seguridad privada para condominios y residenciales en CDMX. Guardias intramuros certificados SSC, control de accesos 24/7, monitoreo CCTV y protocolos específicos para comunidades residenciales. Permiso SSC 0102-15.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Basiliso Romo Anguiano No 22 int 3",
+      "addressLocality": "Ciudad de México",
+      "addressRegion": "CDMX",
+      "postalCode": "07800",
+      "addressCountry": "MX"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "19.4326",
+      "longitude": "-99.1332"
+    },
+    "telephone": "+52-55-3025-5580",
+    "email": "contacto@seguridad-privada.com.mx",
+    "priceRange": "$$",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 200
+    },
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Permiso SSC 0102-15",
+      "credentialCategory": "Permiso de Seguridad Privada",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Secretaría de Seguridad Ciudadana de la Ciudad de México"
+      }
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+52-55-3025-5580",
+      "contactType": "customer service",
+      "areaServed": "MX",
+      "availableLanguage": "Spanish",
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    },
+    "sameAs": [
+      "https://www.facebook.com/originsprivatesecurity",
+      "https://www.instagram.com/originsprivatesecurity"
+    ],
+    "areaServed": [
+      { "@type": "City", "name": "Ciudad de México" },
+      { "@type": "City", "name": "Naucalpan" },
+      { "@type": "City", "name": "Tlalnepantla" },
+      { "@type": "City", "name": "Atizapán" },
+      { "@type": "City", "name": "Huixquilucan" },
+      { "@type": "City", "name": "Cuautitlán Izcalli" }
+    ],
+    "knowsAbout": [
+      "Seguridad privada para condominios",
+      "Guardias intramuros para condominios",
+      "Seguridad para residenciales y fraccionamientos",
+      "Control de accesos en condominios",
+      "Vigilancia para condominios verticales y horizontales"
+    ]
+  }
+};
 ---
 
 <Base title={title} description={description} schema={schema} useLegacyCSS={true}>

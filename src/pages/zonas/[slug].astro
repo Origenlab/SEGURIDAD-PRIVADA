@@ -1,0 +1,251 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const zonas = await getCollection('zonas', ({ data }) => !data.draft);
+  return zonas.map((zona) => ({
+    params: { slug: zona.data.zoneSlug },
+    props: { zona },
+  }));
+}
+
+const { zona } = Astro.props;
+const { Content } = await render(zona);
+
+const siteUrl = 'https://seguridad-privada.com.mx';
+const zonaNombre = zona.data.zoneName;
+const waZona = 'https://wa.me/525530255580?text=' + encodeURIComponent('Hola, me interesa cotizar seguridad privada para mi condominio en ' + zonaNombre);
+const waZonaSidebar = 'https://wa.me/525530255580?text=' + encodeURIComponent('Hola, quiero información de seguridad para mi condominio en ' + zonaNombre);
+const waCTA = 'https://wa.me/525530255580?text=' + encodeURIComponent('Hola, me interesa cotizar seguridad para mi condominio en ' + zonaNombre);
+
+
+// Schema LocalBusiness con variante de zona geográfica
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "SecurityService"],
+      "@id": `${siteUrl}/#business`,
+      "name": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
+      "url": siteUrl,
+      "telephone": "+52-55-3025-5580",
+      "areaServed": [
+        {
+          "@type": "AdministrativeArea",
+          "name": zona.data.zoneName,
+          "containedInPlace": {
+            "@type": "AdministrativeArea",
+            "name": zona.data.state
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": siteUrl },
+        { "@type": "ListItem", "position": 2, "name": "Zonas de Servicio", "item": `${siteUrl}/zonas` },
+        { "@type": "ListItem", "position": 3, "name": zona.data.zoneName, "item": `${siteUrl}/zonas/${zona.data.zoneSlug}` }
+      ]
+    }
+  ]
+};
+---
+
+<Base
+  title={zona.data.title}
+  description={zona.data.description}
+  canonical={`${siteUrl}/zonas/${zona.data.zoneSlug}`}
+  schema={schema}
+>
+  <!-- Breadcrumbs -->
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumbs__list">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/zonas">Zonas de Servicio</a></li>
+        <li aria-current="page">{zona.data.zoneName}</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="zona-hero">
+    <div class="container">
+      <div class="zona-hero__content">
+        <div class="zona-hero__badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          {zona.data.state}
+        </div>
+        <h1>Seguridad Privada en {zona.data.zoneName}</h1>
+        <p class="zona-hero__desc">{zona.data.description}</p>
+        <div class="zona-hero__cta">
+          <a href="#cotizacion" class="btn btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.11 17 19.79 19.79 0 0 1 .97 8.31 2 2 0 0 1 2.95 6.3h3.05a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.07 13.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 20.92z"/></svg>
+            Solicitar Cotización Gratis
+          </a>
+          <a href={waZona} class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Directo
+          </a>
+        </div>
+        <div class="zona-hero__badges">
+          <span class="zona-badge">✓ Permiso SSC 0102-15</span>
+          <span class="zona-badge">✓ Guardias Certificados</span>
+          <span class="zona-badge">✓ Cotización en 24h</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios disponibles en la zona -->
+  <section class="zona-servicios">
+    <div class="container">
+      <h2>Servicios de Seguridad en {zona.data.zoneName}</h2>
+      <p class="zona-servicios__intro">Soluciones de seguridad privada disponibles para condominios, residenciales y fraccionamientos en {zona.data.zoneName}, {zona.data.state}</p>
+      <div class="zona-servicios__grid">
+        {zona.data.availableServices.map((slug) => {
+          const nombres = {
+            'guardias-intramuros': { nombre: 'Guardias Intramuros', icon: '🛡️', url: '/servicios/guardias-intramuros' },
+            'seguridad-condominios': { nombre: 'Seguridad para Condominios', icon: '🏢', url: '/servicios/seguridad-condominios' },
+            'seguridad-residenciales': { nombre: 'Seguridad para Residenciales', icon: '🏘️', url: '/servicios/seguridad-residenciales' },
+            'control-de-accesos': { nombre: 'Control de Accesos', icon: '🚪', url: '/servicios/control-de-accesos' },
+            'patrullaje': { nombre: 'Patrullaje Vehicular', icon: '🚔', url: '/servicios/patrullaje' },
+            'monitoreo-alarmas': { nombre: 'Monitoreo de Alarmas', icon: '📡', url: '/servicios/monitoreo-alarmas' },
+            'proteccion-ejecutiva': { nombre: 'Protección Ejecutiva', icon: '🤵', url: '/servicios/proteccion-ejecutiva' },
+            'guardias-de-seguridad-y-vigilancia': { nombre: 'Guardias de Seguridad', icon: '👮', url: '/servicios/guardias-de-seguridad-y-vigilancia' },
+          };
+          const s = nombres[slug] || { nombre: slug, icon: '🛡️', url: `/servicios/${slug}` };
+          return (
+            <a href={s.url} class="zona-servicio-card">
+              <span class="zona-servicio-card__icon">{s.icon}</span>
+              <span class="zona-servicio-card__nombre">{s.nombre}</span>
+              <span class="zona-servicio-card__arrow">→</span>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contenido de la zona (markdown) -->
+  <section class="zona-content">
+    <div class="container">
+      <div class="zona-content__grid">
+        <div class="zona-content__main prose">
+          <Content />
+        </div>
+        <aside class="zona-content__sidebar">
+          <div class="zona-sidebar-card zona-sidebar-card--cta">
+            <h3>¿Tu condominio está en {zona.data.zoneName}?</h3>
+            <p>Diagnóstico de seguridad gratuito + propuesta personalizada en 24 horas.</p>
+            <a href={waZonaSidebar} class="btn btn-whatsapp btn-block" target="_blank" rel="noopener">WhatsApp Directo</a>
+            <p class="zona-sidebar-card__phone"><a href="tel:+525530255580">55 3025 5580</a></p>
+          </div>
+          <div class="zona-sidebar-card">
+            <h4>Zonas Cercanas</h4>
+            {zona.data.nearbyZones && zona.data.nearbyZones.length > 0 && (
+              <ul class="zona-nearby-list">
+                {zona.data.nearbyZones.map((z) => (
+                  <li><a href={`/zonas/${z}`}>Seguridad en {z.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</a></li>
+                ))}
+              </ul>
+            )}
+            <a href="/zonas" class="zona-ver-mas">Ver todas las zonas →</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="zona-cta" id="cotizacion">
+    <div class="container">
+      <div class="zona-cta__content">
+        <h2>Protege tu Condominio en {zona.data.zoneName}</h2>
+        <p>Más de 15 años de experiencia. Guardias certificados SSC. Permiso 0102-15. Respuesta en menos de 24 horas.</p>
+        <div class="zona-cta__buttons">
+          <a href="/contacto" class="btn btn-primary btn-lg">Solicitar Cotización Gratis</a>
+          <a href={waCTA} class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">WhatsApp Directo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* Breadcrumbs */
+  .breadcrumbs { padding: 0.75rem 0; background: var(--color-accent); font-size: 0.875rem; }
+  .breadcrumbs__list { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; margin: 0; padding: 0; }
+  .breadcrumbs__list li { display: flex; align-items: center; gap: 0.5rem; }
+  .breadcrumbs__list li:not(:last-child)::after { content: '/'; color: var(--color-text-muted); }
+  .breadcrumbs__list a { color: var(--color-text-light); text-decoration: none; }
+  .breadcrumbs__list li[aria-current="page"] { color: var(--color-primary); font-weight: 600; }
+
+  /* Hero */
+  .zona-hero { padding: 3rem 0 4rem; background: linear-gradient(135deg, var(--color-primary) 0%, #1a1a2e 100%); color: #fff; }
+  .zona-hero__content { max-width: 700px; }
+  .zona-hero__badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,255,255,0.15); color: #fff; font-size: 0.8125rem; padding: 0.3rem 0.875rem; border-radius: 980px; margin-bottom: 1rem; }
+  .zona-hero h1 { font-size: 2rem; color: #fff; margin-bottom: 1rem; line-height: 1.2; }
+  .zona-hero__desc { font-size: 1.0625rem; opacity: 0.9; margin-bottom: 1.75rem; line-height: 1.7; }
+  .zona-hero__cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem; }
+  .zona-hero__badges { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .zona-badge { font-size: 0.8125rem; background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); padding: 0.3rem 0.75rem; border-radius: 980px; }
+
+  @media (min-width: 768px) {
+    .zona-hero h1 { font-size: 2.5rem; }
+  }
+
+  /* Servicios */
+  .zona-servicios { padding: 3rem 0; }
+  .zona-servicios h2 { font-size: 1.75rem; margin-bottom: 0.75rem; }
+  .zona-servicios__intro { color: var(--color-text-light); margin-bottom: 2rem; }
+  .zona-servicios__grid { display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
+  .zona-servicio-card { display: flex; align-items: center; gap: 0.875rem; background: var(--color-accent); border: 1px solid var(--color-border); border-radius: var(--border-radius); padding: 1rem 1.25rem; text-decoration: none; color: var(--color-primary); font-weight: 500; transition: border-color 0.2s, box-shadow 0.2s; }
+  .zona-servicio-card:hover { border-color: var(--color-primary); box-shadow: 0 2px 12px rgba(0,0,0,0.08); opacity: 1; }
+  .zona-servicio-card__icon { font-size: 1.375rem; flex-shrink: 0; }
+  .zona-servicio-card__nombre { flex: 1; font-size: 0.9375rem; }
+  .zona-servicio-card__arrow { opacity: 0.4; transition: transform 0.2s, opacity 0.2s; }
+  .zona-servicio-card:hover .zona-servicio-card__arrow { opacity: 1; transform: translateX(3px); }
+  @media (min-width: 640px) { .zona-servicios__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .zona-servicios__grid { grid-template-columns: repeat(3, 1fr); } }
+
+  /* Content */
+  .zona-content { padding: 3rem 0; }
+  .zona-content__grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+  .zona-content__main.prose { font-size: 1rem; line-height: 1.8; color: var(--color-text); }
+  .zona-content__main.prose h2 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--color-primary); }
+  .zona-content__main.prose h3 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+  .zona-content__main.prose p { margin-bottom: 1.25rem; }
+  .zona-content__main.prose ul { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+  .zona-content__main.prose li { margin-bottom: 0.4rem; }
+  .zona-content__main.prose strong { color: var(--color-primary); }
+  @media (min-width: 1024px) { .zona-content__grid { grid-template-columns: 1fr 300px; gap: 3rem; } }
+
+  /* Sidebar */
+  .zona-content__sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+  .zona-sidebar-card { background: var(--color-accent); border-radius: var(--border-radius); padding: 1.5rem; }
+  .zona-sidebar-card--cta { background: var(--color-primary); color: #fff; }
+  .zona-sidebar-card--cta h3 { color: #fff; font-size: 1.1rem; margin-bottom: 0.75rem; }
+  .zona-sidebar-card--cta p { opacity: 0.9; margin-bottom: 1rem; font-size: 0.9375rem; }
+  .zona-sidebar-card--cta .zona-sidebar-card__phone { margin-top: 0.75rem; margin-bottom: 0; font-size: 0.9375rem; }
+  .zona-sidebar-card--cta .zona-sidebar-card__phone a { color: #fff; text-decoration: none; font-weight: 600; }
+  .zona-sidebar-card h4 { font-size: 0.9375rem; font-weight: 600; margin-bottom: 0.875rem; }
+  .btn-block { display: block; width: 100%; text-align: center; }
+  .zona-nearby-list { list-style: none; padding: 0; margin: 0 0 0.875rem; }
+  .zona-nearby-list li { border-bottom: 1px solid var(--color-border); }
+  .zona-nearby-list li:last-child { border-bottom: none; }
+  .zona-nearby-list a { display: block; color: var(--color-primary); text-decoration: none; font-size: 0.9rem; padding: 0.5rem 0; text-transform: capitalize; }
+  .zona-nearby-list a:hover { opacity: 0.7; }
+  .zona-ver-mas { color: var(--color-primary); font-size: 0.875rem; font-weight: 500; text-decoration: none; }
+  .zona-ver-mas:hover { opacity: 0.7; }
+  @media (min-width: 1024px) { .zona-content__sidebar { position: sticky; top: 2rem; align-self: start; } }
+
+  /* CTA */
+  .zona-cta { padding: 4rem 0; background: var(--color-primary); color: #fff; text-align: center; }
+  .zona-cta h2 { color: #fff; font-size: 1.75rem; margin-bottom: 1rem; }
+  .zona-cta p { opacity: 0.9; max-width: 600px; margin: 0 auto 2rem; }
+  .zona-cta__buttons { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+  .zona-cta .btn-primary { background: #fff; color: var(--color-primary); }
+</style>
