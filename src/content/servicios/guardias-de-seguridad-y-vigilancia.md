@@ -8,7 +8,7 @@ keywords:
   - guardias de seguridad y vigilancia
   - intramuros cdmx
 heroImage:
-  src: "/img/servicios/seguridad-especializada-hero.avif"
+  src: "/img/guardias-de-seguridad/guardias-intramuros-la-primera-impresion-que-tambien-protege.avif"
   alt: "Guardias de Seguridad Intramuros CDMX"
 ctaText: "Cotizar Guardias de Seguridad"
 ctaLink: "/contacto?servicio=guardias-de-seguridad-y-vigilancia"
