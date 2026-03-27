@@ -41,7 +41,7 @@ export const featuredServices: FeaturedService[] = [
   },
   {
     href: '/servicios/seguridad-residenciales',
-    image: '/img/img-index/seguridad-residenciales.avif',
+    image: '/img/img-index/patrullaje.avif',
     imageAlt: 'Seguridad para fraccionamientos y residenciales privados',
     badge: 'Fraccionamientos',
     title: 'Seguridad Residenciales',
