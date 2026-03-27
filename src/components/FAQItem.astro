@@ -1,0 +1,162 @@
+---
+/**
+ * FAQItem Component
+ * Accordion-style FAQ using native <details> element
+ * Includes Schema.org structured data support
+ * Follows ORIGINS design system
+ */
+interface Props {
+  question: string;
+  answer: string;
+  open?: boolean;
+}
+
+const { question, answer, open = false } = Astro.props;
+---
+
+<details class="faq-item" open={open}>
+  <summary class="faq-question">
+    <span class="faq-question-text">{question}</span>
+    <span class="faq-icon" aria-hidden="true"></span>
+  </summary>
+  <div class="faq-answer">
+    <p set:html={answer} />
+  </div>
+</details>
+
+<style>
+  /* ==========================================================================
+     FAQ ITEM - Mobile First
+     ========================================================================== */
+  .faq-item {
+    margin-bottom: 0.75rem;
+    background: #f8fafc;
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+  }
+
+  .faq-item[open] {
+    background: var(--color-white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-color: var(--color-primary);
+  }
+
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.25rem 1.25rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    list-style: none;
+    transition: all 0.2s ease;
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item[open] .faq-question {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .faq-question-text {
+    flex: 1;
+    padding-right: 1rem;
+  }
+
+  .faq-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    background: var(--color-primary);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item[open] .faq-icon {
+    background: #D4AF37;
+    transform: rotate(45deg);
+  }
+
+  .faq-icon::before,
+  .faq-icon::after {
+    content: '';
+    position: absolute;
+    background-color: var(--color-white);
+    transition: transform 0.3s ease;
+  }
+
+  .faq-icon::before {
+    width: 10px;
+    height: 2px;
+  }
+
+  .faq-icon::after {
+    width: 2px;
+    height: 10px;
+  }
+
+  .faq-answer {
+    padding: 1.25rem;
+    background: var(--color-white);
+  }
+
+  .faq-answer p {
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    color: var(--color-text-light);
+    margin: 0;
+  }
+
+  .faq-answer :global(strong) {
+    color: var(--color-primary);
+  }
+
+  /* ==========================================================================
+     Desktop - 768px+
+     ========================================================================== */
+  @media (min-width: 768px) {
+    .faq-item {
+      margin-bottom: 1rem;
+    }
+
+    .faq-question {
+      padding: 1.5rem 1.75rem;
+      font-size: 1.0625rem;
+    }
+
+    .faq-icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    .faq-icon::before {
+      width: 12px;
+    }
+
+    .faq-icon::after {
+      height: 12px;
+    }
+
+    .faq-answer {
+      padding: 1.5rem 1.75rem;
+    }
+
+    .faq-answer p {
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+  }
+</style>

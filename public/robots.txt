@@ -1,26 +1,4 @@
-# robots.txt para seguridad-privada.com.mx
 User-agent: *
 Allow: /
 
-# Permitir rastreo de recursos importantes
-Allow: /css/
-Allow: /js/
-Allow: /img/
-
-# Bloquear acceso a archivos sensibles
-Disallow: /schema/
-Disallow: /*?*
-Disallow: /*.pdf$
-
-# Sitemaps
-Sitemap: https://seguridad-privada.com.mx/sitemap.xml
-
-# Rastreadores específicos
-User-agent: Googlebot
-Allow: /
-
-User-agent: Googlebot-Image
-Allow: /img/
-
-User-agent: Bingbot
-Allow: /
+Sitemap: https://seguridad-privada.com.mx/sitemap-index.xml

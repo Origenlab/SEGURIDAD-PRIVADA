@@ -1,4 +1,26 @@
-# Cloudflare Pages - URLs sin extension .html
-# Redirect de .html a URL limpia
-
-/*.html  /:splat  308
+/index.html / 301
+/contacto.html /contacto 301
+/aviso-de-privacidad.html /aviso-de-privacidad 301
+/mapa-del-sitio.html /mapa-del-sitio 301
+/nosotros /servicios 301
+/nosotros.html /servicios 301
+/bolsa-de-trabajo /contacto 301
+/bolsa-de-trabajo.html /contacto 301
+/guardias-de-seguridad-y-vigilancia.html /servicios/guardias-intramuros 301
+/guardias-intramuros.html /servicios/guardias-intramuros 301
+/control-de-accesos.html /servicios 301
+/patrullaje.html /servicios 301
+/prevencion-de-perdidas.html /servicios 301
+/seguridad-condominios.html /servicios/seguridad-condominios 301
+/seguridad-especializada.html /servicios 301
+/seguridad-construccion.html /servicios 301
+/seguridad-eventos.html /servicios 301
+/seguridad-hospitalaria.html /servicios 301
+/vigilancia-remota-cctv.html /servicios 301
+/monitoreo-alarmas.html /servicios 301
+/seguridad-gps-satelital.html /servicios 301
+/proteccion-ejecutiva.html /servicios 301
+/custodia-de-mercancias.html /servicios 301
+/consultoria-seguridad.html /servicios 301
+/consultoria-analisis-riesgos.html /servicios 301
+/investigaciones-confiabilidad.html /servicios 301

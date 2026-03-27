@@ -1,0 +1,115 @@
+/* ==========================================================================
+   CTA BANNER - Mobile First
+   ========================================================================== */
+.cta-banner {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #1a2634 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.cta-banner .container {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-banner__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+}
+
+.cta-banner__text h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+
+.cta-banner__text p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+.cta-banner__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  width: 100%;
+  max-width: 320px;
+}
+
+.cta-banner__actions .btn-lg {
+  padding: 1rem 1.5rem;
+  font-size: 0.9375rem;
+  justify-content: center;
+}
+
+.cta-banner__actions .btn-primary {
+  background: var(--color-white);
+  color: var(--color-primary);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+.cta-banner__actions .btn-primary:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.cta-banner__actions .btn-whatsapp {
+  background: #25D366;
+  color: var(--color-white);
+  border: none;
+}
+
+.cta-banner__actions .btn-whatsapp:hover {
+  background: #20bd5a;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Desktop - 768px+
+   ========================================================================== */
+@media (min-width: 768px) {
+  .cta-banner {
+    padding: 4rem 0;
+  }
+
+  .cta-banner__content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    gap: 2rem;
+  }
+
+  .cta-banner__text h2 {
+    font-size: 1.75rem;
+  }
+
+  .cta-banner__text p {
+    font-size: 1.125rem;
+  }
+
+  .cta-banner__actions {
+    flex-direction: row;
+    width: auto;
+    max-width: none;
+    flex-shrink: 0;
+  }
+
+  .cta-banner__actions .btn-lg {
+    padding: 1.125rem 1.75rem;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,72 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const servicios = await getCollection('servicios', ({ data }) => !data.draft);
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+const siteUrl = 'https://seguridad-privada.com.mx';
+---
+
+<Base
+  title="Mapa del Sitio | ORIGINS Private Security"
+  description="Listado de rutas disponibles en el sitio de ORIGINS Private Security."
+  canonical={`${siteUrl}/mapa-del-sitio`}
+>
+  <section class="sitemap-page">
+    <div class="container sitemap-page__container">
+      <h1>Mapa del Sitio</h1>
+
+      <section>
+        <h2>Páginas principales</h2>
+        <ul>
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/servicios">Servicios</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+          <li><a href="/aviso-de-privacidad">Aviso de Privacidad</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Servicios</h2>
+        <ul>
+          {servicios.map((servicio) => (
+            <li><a href={`/servicios/${servicio.id}`}>{servicio.data.title.split('|')[0].trim()}</a></li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2>Blog</h2>
+        <ul>
+          {posts.map((post) => (
+            <li><a href={`/blog/${post.id}`}>{post.data.title}</a></li>
+          ))}
+        </ul>
+      </section>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .sitemap-page {
+    padding: 4rem 0;
+  }
+
+  .sitemap-page__container {
+    max-width: 760px;
+  }
+
+  .sitemap-page section + section {
+    margin-top: 2rem;
+  }
+
+  .sitemap-page ul {
+    margin: 1rem 0 0;
+    padding-left: 1.25rem;
+  }
+
+  .sitemap-page li + li {
+    margin-top: 0.5rem;
+  }
+</style>

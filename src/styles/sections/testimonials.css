@@ -1,0 +1,140 @@
+/* ==========================================================================
+   TESTIMONIALS SECTION - Mobile First
+   Section layout styles (card styles are in TestimonialCard component)
+   ========================================================================== */
+.testimonials-section {
+  padding: 4rem 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.testimonials-badge {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+  color: #1a1a1a;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+}
+
+.testimonials-header h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 0 0 0.75rem 0;
+}
+
+.testimonials-header p {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Trust Banner */
+.testimonials-trust {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #0f2a44 100%);
+  border-radius: 20px;
+}
+
+.testimonials-trust__item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.testimonials-trust__number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #D4AF37;
+  line-height: 1;
+}
+
+.testimonials-trust__stars {
+  display: flex;
+  gap: 0.125rem;
+}
+
+.testimonials-trust__label {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.testimonials-trust__divider {
+  width: 60px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ==========================================================================
+   Tablet - 640px+
+   ========================================================================== */
+@media (min-width: 640px) {
+  .testimonials-trust {
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .testimonials-trust__divider {
+    width: 1px;
+    height: 50px;
+  }
+}
+
+/* ==========================================================================
+   Desktop - 768px+
+   ========================================================================== */
+@media (min-width: 768px) {
+  .testimonials-section {
+    padding: 5rem 0;
+  }
+
+  .testimonials-header h2 {
+    font-size: 2.25rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .testimonials-trust {
+    padding: 2.5rem 4rem;
+  }
+
+  .testimonials-trust__number {
+    font-size: 2.5rem;
+  }
+}
+
+/* ==========================================================================
+   Large Desktop - 1024px+
+   ========================================================================== */
+@media (min-width: 1024px) {
+  .testimonials-header h2 {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,53 @@
+/* ==========================================================================
+   FAQ SECTION - Mobile First
+   Section layout styles (item styles are in FAQItem component)
+   ========================================================================== */
+.faq-section {
+  padding: 3.5rem 0;
+  background: #ffffff;
+}
+
+.faq-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.faq-header h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  margin: 0 0 0.75rem 0;
+}
+
+.faq-header p {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   Desktop - 768px+
+   ========================================================================== */
+@media (min-width: 768px) {
+  .faq-section {
+    padding: 5rem 0;
+  }
+
+  .faq-header {
+    margin-bottom: 3rem;
+  }
+
+  .faq-header h2 {
+    font-size: 2.25rem;
+  }
+
+  .faq-header p {
+    font-size: 1.125rem;
+  }
+}

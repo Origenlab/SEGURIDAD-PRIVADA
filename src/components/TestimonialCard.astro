@@ -1,0 +1,145 @@
+---
+/**
+ * TestimonialCard Component
+ * Card for displaying customer testimonials with rating, quote, and author info
+ * Follows ORIGINS design system - NO animations on cards
+ */
+import StarRating from './icons/StarRating.astro';
+
+interface Props {
+  rating: number;
+  quote: string;
+  name: string;
+  initials: string;
+  role: string;
+  company: string;
+}
+
+const { rating, quote, name, initials, role, company } = Astro.props;
+---
+
+<article class="testimonial-card">
+  <div class="testimonial-card__rating">
+    <StarRating rating={rating} size={18} />
+  </div>
+  <blockquote class="testimonial-card__quote">
+    {quote}
+  </blockquote>
+  <div class="testimonial-card__author">
+    <div class="testimonial-card__avatar">
+      <span>{initials}</span>
+    </div>
+    <div class="testimonial-card__info">
+      <cite class="testimonial-card__name">{name}</cite>
+      <span class="testimonial-card__role">{role}</span>
+      <span class="testimonial-card__company">{company}</span>
+    </div>
+  </div>
+</article>
+
+<style>
+  /* ==========================================================================
+     TESTIMONIAL CARD - Mobile First
+     ========================================================================== */
+  .testimonial-card {
+    background: var(--color-white);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+  }
+
+  .testimonial-card__rating {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .testimonial-card__quote {
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    color: var(--color-text);
+    margin: 0 0 1.5rem 0;
+    font-style: italic;
+    position: relative;
+  }
+
+  .testimonial-card__quote::before {
+    content: '"';
+    position: absolute;
+    top: -0.5rem;
+    left: -0.5rem;
+    font-size: 3rem;
+    color: rgba(212, 175, 55, 0.2);
+    font-family: Georgia, serif;
+    line-height: 1;
+  }
+
+  .testimonial-card__author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .testimonial-card__avatar {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0f2a44 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .testimonial-card__avatar span {
+    color: var(--color-white);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .testimonial-card__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+  }
+
+  .testimonial-card__name {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    font-style: normal;
+  }
+
+  .testimonial-card__role {
+    font-size: 0.8125rem;
+    color: var(--color-text-light);
+  }
+
+  .testimonial-card__company {
+    font-size: 0.75rem;
+    color: #D4AF37;
+    font-weight: 600;
+  }
+
+  /* ==========================================================================
+     Desktop - 768px+
+     ========================================================================== */
+  @media (min-width: 768px) {
+    .testimonial-card {
+      padding: 2.5rem;
+    }
+  }
+
+  /* ==========================================================================
+     Large Desktop - 1024px+
+     ========================================================================== */
+  @media (min-width: 1024px) {
+    .testimonial-card__quote {
+      font-size: 1rem;
+    }
+  }
+</style>

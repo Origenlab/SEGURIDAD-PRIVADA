@@ -1,0 +1,84 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogType?: 'website' | 'article';
+  ogImage?: string;
+  noindex?: boolean;
+  schema?: object;
+}
+
+const {
+  title,
+  description,
+  canonical = Astro.url.href,
+  ogType = 'website',
+  ogImage = 'https://seguridad-privada.com.mx/img/og-image.avif',
+  noindex = false,
+  schema
+} = Astro.props;
+
+const siteName = 'ORIGINS Private Security';
+const siteUrl = 'https://seguridad-privada.com.mx';
+---
+
+<!-- Primary Meta Tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<meta name="description" content={description}>
+<meta name="author" content="ORIGINS PRIVATE SECURITY S.A. DE C.V.">
+<link rel="canonical" href={canonical.replace(/\/$/, '')}>
+
+<!-- Robots -->
+{noindex ? (
+  <meta name="robots" content="noindex, nofollow">
+) : (
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+)}
+<meta name="googlebot" content="index, follow">
+
+<!-- Geo Tags -->
+<meta name="geo.region" content="MX-CMX">
+<meta name="geo.placename" content="Ciudad de México">
+<meta name="geo.position" content="19.4326;-99.1332">
+<meta name="ICBM" content="19.4326, -99.1332">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={ogType}>
+<meta property="og:url" content={canonical}>
+<meta property="og:title" content={title}>
+<meta property="og:description" content={description}>
+<meta property="og:image" content={ogImage}>
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content={siteName}>
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content={canonical}>
+<meta name="twitter:title" content={title}>
+<meta name="twitter:description" content={description}>
+<meta name="twitter:image" content={ogImage}>
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0a0a0a">
+
+<!-- Sitemap -->
+<link rel="sitemap" type="application/xml" title="Sitemap" href={`${siteUrl}/sitemap-index.xml`}>
+
+<!-- Google Site Verification -->
+<meta name="google-site-verification" content="googleb985b706e3017c36">
+
+<!-- Resource Hints -->
+<link rel="preconnect" href="https://wa.me">
+<link rel="dns-prefetch" href="https://wa.me">
+
+<!-- Schema.org -->
+{schema && (
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+)}

@@ -1,4 +1,0 @@
-# Cloudflare Pages - URLs sin extension .html
-# Redirect de .html a URL limpia
-
-/*.html  /:splat  308

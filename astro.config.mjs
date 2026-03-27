@@ -3,6 +3,16 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://seguridad-privada.com.mx',
-  integrations: [sitemap()],
+  output: 'static',
   trailingSlash: 'never',
+  build: {
+    format: 'file'
+  },
+  integrations: [
+    sitemap({
+      changefreq: 'weekly',
+      priority: 0.7,
+      lastmod: new Date()
+    })
+  ]
 });

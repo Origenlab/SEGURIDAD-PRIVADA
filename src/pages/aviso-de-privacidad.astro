@@ -1,60 +1,66 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import Base from '../layouts/Base.astro';
 
-const title = 'Aviso de Privacidad | ORIGINS Private Security';
-const description = 'Aviso de privacidad de ORIGINS PRIVATE SECURITY S.A. DE C.V. Protección de datos personales conforme a la LFPDPPP.';
+const siteUrl = 'https://seguridad-privada.com.mx';
 ---
-<BaseLayout title={title} description={description}>
-  <section class="page-section">
-    <div class="container">
-      <div class="privacy-content">
-        <h1>Aviso de Privacidad</h1>
-        <p><strong>ORIGINS PRIVATE SECURITY S.A. DE C.V.</strong><br>RFC: OPS1308309M5</p>
 
-        <h2>1. Identidad y Domicilio del Responsable</h2>
-        <p>ORIGINS PRIVATE SECURITY S.A. DE C.V. (en adelante "ORIGINS" o "el Responsable"), con domicilio en Basiliso Romo Anguiano No. 22 int 3, Col. Industrial, Gustavo A. Madero, C.P. 07800, Ciudad de México, CDMX, y con RFC OPS1308309M5, es responsable del tratamiento de los datos personales que nos proporcione, los cuales serán protegidos conforme a lo dispuesto por la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y demás normatividad aplicable.</p>
-
-        <h2>2. Datos Personales que Recabamos</h2>
-        <p><strong>2.1 Datos de Identificación y Contacto:</strong> Nombre completo, correo electrónico, teléfono, domicilio, edad y fecha de nacimiento, RFC, razón social.</p>
-        <p><strong>2.2 Datos Laborales (para personal):</strong> Currículum vitae, experiencia laboral, referencias, certificaciones, número de credencial SSC.</p>
-        <p><strong>2.3 Datos Sensibles:</strong> Datos de salud (certificados médicos), antecedentes penales, datos biométricos (huellas, fotografías). Requiere consentimiento expreso y por escrito.</p>
-
-        <h2>3. Finalidades del Tratamiento</h2>
-        <p><strong>3.1 Primarias:</strong> Prestación de servicios de seguridad, identificación y contacto, facturación y cobranza, cumplimiento de obligaciones legales, reclutamiento de personal, control de accesos, seguridad y prevención.</p>
-        <p><strong>3.2 Secundarias:</strong> Envío de información sobre nuevos servicios/promociones, estudios internos, encuestas de satisfacción, comunicaciones de marketing. Puede oponerse enviando correo a <a href="mailto:josecruz@originsecurity.mx">josecruz@originsecurity.mx</a> con asunto "LIMITACIÓN DE USO DE DATOS PERSONALES".</p>
-
-        <h2>4. Transferencias de Datos Personales</h2>
-        <p><strong>4.1 Sin consentimiento:</strong> Autoridades competentes (SSC, MP, tribunales), proveedores de servicios (tecnología, pagos, telecomunicaciones), profesionales independientes (contadores, auditores, abogados).</p>
-        <p><strong>4.2 Con consentimiento:</strong> Empresas del mismo grupo corporativo, socios comerciales para mercadotecnia conjunta.</p>
-
-        <h2>5. Medios para Ejercer Derechos ARCO</h2>
-        <p>Correo: <a href="mailto:josecruz@originsecurity.mx">josecruz@originsecurity.mx</a></p>
-        <p>Domicilio: Basiliso Romo Anguiano No. 22 int 3, Col. Industrial, C.P. 07800, CDMX</p>
-        <p>Horario: Lunes a Viernes 9:00 AM - 7:00 PM, Sábados 9:00 AM - 2:00 PM</p>
-        <p>Requisitos: Nombre completo, documentos de identidad, descripción clara de datos, documentos que faciliten localización.</p>
-        <p>Plazo de respuesta: 20 días hábiles; si procedente, efectiva en 15 días hábiles siguientes.</p>
-
-        <h2>6. Revocación del Consentimiento</h2>
-        <p>Mismo procedimiento que derechos ARCO. Puede haber obligaciones legales que requieran seguir tratando datos.</p>
-
-        <h2>7. Limitación de Uso y Divulgación</h2>
-        <p>Para dejar de recibir mensajes promocionales: correo a <a href="mailto:josecruz@originsecurity.mx">josecruz@originsecurity.mx</a> con asunto "BAJA DE PUBLICIDAD" o llamar al <a href="tel:+525530255580">55 3025 5580</a>.</p>
-
-        <h2>8. Uso de Cookies y Tecnologías de Rastreo</h2>
-        <p>Utilizamos cookies esenciales, analíticas y de funcionalidad. Puede configurar su navegador para rechazar cookies.</p>
-
-        <h2>9. Medidas de Seguridad</h2>
-        <p>Cifrado SSL/TLS, control de acceso restringido, capacitación en protección de datos, auditorías de seguridad, cláusulas de confidencialidad.</p>
-
-        <h2>10. Cambios al Aviso de Privacidad</h2>
-        <p>Cualquier modificación será publicada en nuestro sitio web y estará disponible en nuestras oficinas físicas.</p>
-
-        <h2>11. Autoridad de Protección de Datos</h2>
-        <p>INAI (Instituto Nacional de Transparencia, Acceso a la Información y Protección de Datos Personales). Tel: 800 835 4324.</p>
-
-        <h2>12. Consentimiento</h2>
-        <p>Al proporcionarnos sus datos personales por cualquier medio, usted consiente tácitamente que ORIGINS trate sus datos conforme a este aviso de privacidad.</p>
-      </div>
+<Base
+  title="Aviso de Privacidad | ORIGINS Private Security"
+  description="Aviso de privacidad de ORIGINS Private Security para el tratamiento de datos personales y solicitudes de contacto."
+  canonical={`${siteUrl}/aviso-de-privacidad`}
+>
+  <section class="legal-page">
+    <div class="container legal-page__container">
+      <h1>Aviso de Privacidad</h1>
+      <p>
+        ORIGINS PRIVATE SECURITY S.A. DE C.V. es responsable del tratamiento de los datos
+        personales recabados mediante formularios, llamadas, WhatsApp y correo electrónico.
+      </p>
+      <h2>Datos que recabamos</h2>
+      <p>
+        Nombre, correo electrónico, teléfono, empresa o condominio, ubicación del servicio y la
+        información que compartas para solicitar una cotización.
+      </p>
+      <h2>Finalidad</h2>
+      <p>
+        Utilizamos estos datos para dar seguimiento a solicitudes comerciales, preparar propuestas,
+        responder dudas y mantener comunicación relacionada con nuestros servicios de seguridad.
+      </p>
+      <h2>Transferencias</h2>
+      <p>
+        No compartimos tus datos con terceros ajenos a la operación comercial, salvo requerimiento
+        legal o necesidad operativa directamente vinculada con tu solicitud.
+      </p>
+      <h2>Derechos ARCO</h2>
+      <p>
+        Puedes solicitar acceso, rectificación, cancelación u oposición escribiendo a
+        <a href="mailto:contacto@seguridad-privada.com.mx"> contacto@seguridad-privada.com.mx</a>.
+      </p>
+      <h2>Contacto</h2>
+      <p>
+        Domicilio: Basiliso Romo Anguiano No 22 int 3, Col. Industrial, CDMX, C.P. 07800.<br />
+        Teléfono: <a href="tel:+525530255580">55 3025 5580</a>.
+      </p>
     </div>
   </section>
-</BaseLayout>
+</Base>
+
+<style>
+  .legal-page {
+    padding: 4rem 0;
+  }
+
+  .legal-page__container {
+    max-width: 760px;
+  }
+
+  .legal-page h1,
+  .legal-page h2 {
+    margin-bottom: 1rem;
+  }
+
+  .legal-page p {
+    margin-bottom: 1.25rem;
+    color: var(--color-text-light);
+  }
+</style>

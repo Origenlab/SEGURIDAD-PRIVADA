@@ -1,58 +1,244 @@
 ---
-const year = new Date().getFullYear();
+const currentYear = new Date().getFullYear();
 ---
+
 <footer class="footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div class="footer__col">
-        <h4>Vigilancia Corporativa</h4>
-        <ul>
-          <li><a href="/servicios/guardias-de-seguridad-y-vigilancia">Guardias de Seguridad</a></li>
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3 class="footer-title">Navegación</h3>
+        <ul class="footer-links">
+          <li><a href="/">Inicio</a></li>
+          <li><a href="/servicios">Servicios</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+          <li><a href="/aviso-de-privacidad">Aviso de Privacidad</a></li>
+          <li><a href="/mapa-del-sitio">Mapa del Sitio</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3 class="footer-title"><a href="/servicios">Servicios Principales</a></h3>
+        <ul class="footer-links">
           <li><a href="/servicios/guardias-intramuros">Guardias Intramuros</a></li>
-          <li><a href="/servicios/control-de-accesos">Control de Accesos</a></li>
-          <li><a href="/servicios/patrullaje">Patrullaje</a></li>
-          <li><a href="/servicios/prevencion-de-perdidas">Prevención de Pérdidas</a></li>
+          <li><a href="/servicios/seguridad-condominios">Seguridad para Condominios</a></li>
+          <li><a href="/servicios/seguridad-residenciales">Seguridad Residenciales</a></li>
         </ul>
       </div>
-      <div class="footer__col">
-        <h4>Seguridad Especializada</h4>
-        <ul>
-          <li><a href="/servicios/seguridad-condominios">Condominios</a></li>
-          <li><a href="/servicios/seguridad-construccion">Construcción</a></li>
-          <li><a href="/servicios/seguridad-eventos">Eventos</a></li>
-          <li><a href="/servicios/seguridad-hospitalaria">Hospitalaria</a></li>
+
+      <div class="footer-section">
+        <h3 class="footer-title"><a href="/blog">Recursos</a></h3>
+        <ul class="footer-links">
+          <li><a href="/blog">Artículos del Blog</a></li>
+          <li><a href="/contacto">Solicitar Cotización</a></li>
+          <li><a href="/aviso-de-privacidad">Tratamiento de Datos</a></li>
+          <li><a href="/mapa-del-sitio">Rutas Disponibles</a></li>
         </ul>
       </div>
-      <div class="footer__col">
-        <h4>Tecnología y Monitoreo</h4>
-        <ul>
-          <li><a href="/servicios/vigilancia-remota-cctv">Vigilancia Remota CCTV</a></li>
-          <li><a href="/servicios/monitoreo-alarmas">Monitoreo de Alarmas 24/7</a></li>
-          <li><a href="/servicios/seguridad-gps-satelital">Seguridad GPS Satelital</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>Protección y Consultoría</h4>
-        <ul>
-          <li><a href="/servicios/custodia-de-mercancias">Custodia de Mercancías</a></li>
-          <li><a href="/servicios/proteccion-ejecutiva">Protección Ejecutiva</a></li>
-          <li><a href="/servicios/consultoria-seguridad">Consultoría de Seguridad</a></li>
-          <li><a href="/servicios/consultoria-analisis-riesgos">Análisis de Riesgos</a></li>
-          <li><a href="/servicios/investigaciones-confiabilidad">Investigaciones</a></li>
-        </ul>
-      </div>
-      <div class="footer__col footer__contact-info">
-        <h4>Contacto</h4>
-        <p><strong>ORIGINS PRIVATE SECURITY S.A. DE C.V.</strong></p>
-        <p>Basiliso Romo Anguiano No 22 int 3, Col Industrial, CDMX, C.P. 07800</p>
-        <p><a href="tel:+525530255580">55 3025 5580</a></p>
-        <p><a href="tel:+525572044370">55 7204 4370</a></p>
-        <p><a href="mailto:contacto@seguridad-privada.com.mx">contacto@seguridad-privada.com.mx</a></p>
-        <p style="margin-top:8px"><a href="/nosotros">Nosotros</a> &middot; <a href="/bolsa-de-trabajo">Bolsa de Trabajo</a> &middot; <a href="/aviso-de-privacidad">Aviso de Privacidad</a></p>
+
+      <div class="footer-section">
+        <h3 class="footer-title">Contacto</h3>
+        <div class="footer-contact">
+          <p class="contact-item">
+            <strong>ORIGINS PRIVATE SECURITY</strong><br>
+            Basiliso Romo Anguiano No 22 int 3<br>
+            Col Industrial, CDMX<br>
+            C.P. 07800
+          </p>
+          <p class="contact-item">
+            <strong>Teléfonos:</strong><br>
+            <a href="tel:+525530255580">55 3025 5580</a> |
+            <a href="tel:+525572044370">55 7204 4370</a><br>
+            <a href="tel:+525552074704">55 5207 4704</a> |
+            <a href="tel:+525552076828">5207 6828</a>
+          </p>
+          <p class="contact-item">
+            <strong>Email:</strong><br>
+            <a href="mailto:josecruz@originsecurity.mx">josecruz@originsecurity.mx</a>
+          </p>
+          <p class="contact-item">
+            <strong>WhatsApp:</strong><br>
+            <a href="https://wa.me/525530255580" target="_blank" rel="noopener">55 3025 5580</a>
+          </p>
+        </div>
       </div>
     </div>
-    <div class="footer__bottom">
-      <p>&copy; {year} ORIGINS PRIVATE SECURITY S.A. DE C.V. Todos los derechos reservados. Permiso SSC 0102-15.</p>
+
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <p>&copy; {currentYear} ORIGINS PRIVATE SECURITY S.A. DE C.V. Todos los derechos reservados. | RFC: OPS1308309M5</p>
+        <ul class="footer-legal-links">
+          <li><a href="/aviso-de-privacidad">Aviso de Privacidad</a></li>
+          <li><a href="/mapa-del-sitio">Mapa del Sitio</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </footer>
+
+<style>
+  /* ==========================================================================
+     FOOTER - Mobile First
+     ========================================================================== */
+  .footer {
+    background-color: var(--color-primary);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 3rem 0 0;
+  }
+
+  .footer-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .footer-section {
+    min-width: 0;
+  }
+
+  .footer-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+  }
+
+  .footer-title a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .footer-title a:hover {
+    opacity: 0.8;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem;
+  }
+
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+    color: #ffffff;
+    opacity: 1;
+  }
+
+  .footer-contact {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .contact-item {
+    margin-bottom: 1rem;
+  }
+
+  .contact-item strong {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .contact-item a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+  }
+
+  .contact-item a:hover {
+    color: #ffffff;
+    opacity: 1;
+  }
+
+  .footer-bottom {
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .footer-legal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .footer-legal p {
+    margin: 0;
+  }
+
+  .footer-legal-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-legal-links a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .footer-legal-links a:hover {
+    color: #ffffff;
+    opacity: 1;
+  }
+
+  /* Tablet */
+  @media (min-width: 640px) {
+    .footer {
+      padding: 4rem 0 0;
+    }
+
+    .footer-container {
+      padding: 0 1.5rem;
+    }
+
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+
+    .footer-legal {
+      font-size: 0.8125rem;
+    }
+  }
+
+  /* Desktop */
+  @media (min-width: 1024px) {
+    .footer-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-bottom {
+      margin-top: 3rem;
+    }
+
+    .footer-legal {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+</style>

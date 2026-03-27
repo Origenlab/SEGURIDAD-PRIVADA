@@ -1,0 +1,206 @@
+/* ==========================================================================
+   HERO SECTION - Mobile First (Two Columns)
+   ========================================================================== */
+.hero {
+  position: relative;
+  padding: 3rem 0 3.5rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #1a2634 100%);
+  overflow: hidden;
+}
+
+.hero__background {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.hero__main {
+  max-width: 100%;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(4px);
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.02em;
+}
+
+.hero__badge svg {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.hero__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  color: var(--color-white);
+}
+
+.hero__subtitle {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.75rem;
+  line-height: 1.6;
+}
+
+.hero__subtitle strong {
+  color: var(--color-white);
+}
+
+.hero__cta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.hero__cta .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.hero__cta .btn-lg {
+  padding: 1rem 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.hero__cta .btn-lg svg {
+  flex-shrink: 0;
+}
+
+.hero__cta .btn-primary {
+  background: var(--color-white);
+  color: var(--color-primary);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.hero__cta .btn-primary:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero__cta .btn-whatsapp {
+  background: #25D366;
+  color: var(--color-white);
+  border: none;
+}
+
+.hero__cta .btn-whatsapp:hover {
+  background: #20bd5a;
+  transform: translateY(-2px);
+}
+
+/* SEO Column */
+.hero__seo {
+  padding: 0;
+}
+
+.hero__seo-text {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+}
+
+.hero__seo-text:last-child {
+  margin-bottom: 0;
+}
+
+.hero__seo-text strong {
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Tablet - 768px+
+   ========================================================================== */
+@media (min-width: 768px) {
+  .hero {
+    padding: 5rem 0 6rem;
+  }
+
+  .hero__badge {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero__cta {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .hero__cta .btn {
+    width: auto;
+  }
+
+  .hero__cta .btn-lg {
+    padding: 1.125rem 2rem;
+    font-size: 1rem;
+  }
+
+  .hero__seo {
+    padding: 0;
+  }
+
+  .hero__seo-text {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+}
+
+/* ==========================================================================
+   Desktop - 1024px+ (Two Columns)
+   ========================================================================== */
+@media (min-width: 1024px) {
+  .hero__grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+
+  .hero__title {
+    font-size: 2.75rem;
+  }
+
+  .hero__seo-text {
+    font-size: 1.0625rem;
+    line-height: 1.8;
+  }
+}

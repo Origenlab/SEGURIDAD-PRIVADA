@@ -1,0 +1,39 @@
+---
+/**
+ * StarRating Component
+ * Displays a row of star icons based on rating value
+ * Uses gold color from design system: #D4AF37
+ */
+interface Props {
+  rating: number;
+  size?: number;
+  maxStars?: number;
+}
+
+const { rating, size = 18, maxStars = 5 } = Astro.props;
+---
+
+<div class="star-rating" role="img" aria-label={`Calificación: ${rating} de ${maxStars} estrellas`}>
+  {Array.from({ length: maxStars }).map((_, index) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill={index < rating ? '#D4AF37' : 'none'}
+      stroke="#D4AF37"
+      stroke-width={index < rating ? '0' : '1.5'}
+      aria-hidden="true"
+    >
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+    </svg>
+  ))}
+</div>
+
+<style>
+  .star-rating {
+    display: inline-flex;
+    gap: 0.125rem;
+    line-height: 1;
+  }
+</style>
