@@ -61,20 +61,52 @@ const currentPath = Astro.url.pathname;
             <div class="dropdown">
               <div class="dropdown__inner">
                 <div class="dropdown__column">
-                  <h4><a href="/servicios">Servicios Disponibles</a></h4>
+                  <h4><a href="/servicios/guardias-de-seguridad-y-vigilancia">Vigilancia Corporativa</a></h4>
                   <ul>
+                    <li><a href="/servicios/guardias-de-seguridad-y-vigilancia">Guardias de Seguridad</a></li>
                     <li><a href="/servicios/guardias-intramuros">Guardias Intramuros</a></li>
+                    <li><a href="/servicios/control-de-accesos">Control de Accesos</a></li>
+                    <li><a href="/servicios/patrullaje">Patrullaje</a></li>
+                    <li><a href="/servicios/prevencion-de-perdidas">Prevención de Pérdidas</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__column">
+                  <h4><a href="/servicios/seguridad-especializada">Seguridad Especializada</a></h4>
+                  <ul>
+                    <li><a href="/servicios/seguridad-especializada">Seguridad Especializada</a></li>
                     <li><a href="/servicios/seguridad-condominios">Condominios</a></li>
-                    <li><a href="/servicios/seguridad-residenciales">Residenciales</a></li>
+                    <li><a href="/servicios/seguridad-construccion">Construcción</a></li>
+                    <li><a href="/servicios/seguridad-eventos">Eventos</a></li>
+                    <li><a href="/servicios/seguridad-hospitalaria">Hospitalaria</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__column">
+                  <h4><a href="/servicios/tecnologia-monitoreo-seguridad">Tecnología y Monitoreo</a></h4>
+                  <ul>
+                    <li><a href="/servicios/tecnologia-monitoreo-seguridad">Tecnología y Monitoreo</a></li>
+                    <li><a href="/servicios/vigilancia-remota-cctv">Vigilancia Remota CCTV</a></li>
+                    <li><a href="/servicios/monitoreo-alarmas">Monitoreo de Alarmas 24/7</a></li>
+                    <li><a href="/servicios/seguridad-gps-satelital">Seguridad GPS Satelital</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown__column">
+                  <h4><a href="/servicios/servicios-de-proteccion-ejecutiva-y-consultoria">Protección y Consultoría</a></h4>
+                  <ul>
+                    <li><a href="/servicios/servicios-de-proteccion-ejecutiva-y-consultoria">Protección Ejecutiva y Consultoría</a></li>
+                    <li><a href="/servicios/custodia-de-mercancias">Custodia de Mercancías</a></li>
+                    <li><a href="/servicios/proteccion-ejecutiva">Protección Ejecutiva</a></li>
+                    <li><a href="/servicios/consultoria-seguridad">Consultoría de Seguridad</a></li>
+                    <li><a href="/servicios/consultoria-analisis-riesgos">Análisis de Riesgos</a></li>
+                    <li><a href="/servicios/investigaciones-confiabilidad">Investigaciones de Confiabilidad</a></li>
                   </ul>
                 </div>
               </div>
             </div>
           </li>
 
+          <li><a class="nav__link" href="/nosotros" aria-current={currentPath === '/nosotros' ? 'page' : undefined}>Nosotros</a></li>
           <li><a class="nav__link" href="/blog">Blog</a></li>
-          <li><a class="nav__link" href="/aviso-de-privacidad">Privacidad</a></li>
-          <li><a class="nav__link" href="/mapa-del-sitio">Mapa del Sitio</a></li>
+          <li><a class="nav__link" href="/bolsa-de-trabajo" aria-current={currentPath === '/bolsa-de-trabajo' ? 'page' : undefined}>Bolsa de Trabajo</a></li>
         </ul>
       </nav>
 
