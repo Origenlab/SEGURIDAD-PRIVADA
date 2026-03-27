@@ -13,9 +13,10 @@ interface Props {
   ogImage?: string;
   noindex?: boolean;
   schema?: object;
+  useLegacyCSS?: boolean;
 }
 
-const { title, description, canonical, ogType, ogImage, noindex, schema } = Astro.props;
+const { title, description, canonical, ogType, ogImage, noindex, schema, useLegacyCSS } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -36,6 +37,7 @@ const { title, description, canonical, ogType, ogImage, noindex, schema } = Astr
     data-site-id="1746096009d5"
     defer
   ></script>
+  {useLegacyCSS && <link rel="stylesheet" href="/css/legacy.css" />}
 </head>
 <body>
   <Header />
