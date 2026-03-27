@@ -1,9 +1,10 @@
 /* ==========================================================================
-   HERO SECTION - Mobile First (Two Columns)
+   HERO SECTION — Mobile First, Two Columns
    ========================================================================== */
+
 .hero {
   position: relative;
-  padding: 3rem 0 3.5rem;
+  padding: 3.5rem 0 4rem;
   background: linear-gradient(135deg, var(--color-primary) 0%, #1a2634 100%);
   overflow: hidden;
 }
@@ -20,58 +21,88 @@
   z-index: 1;
 }
 
+/* Grid: 1 columna en mobile, 2 en desktop */
 .hero__grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
-.hero__main {
-  max-width: 100%;
-}
+/* ============================================================
+   COLUMNA IZQUIERDA
+============================================================ */
 
 .hero__badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(4px);
-  color: var(--color-white);
+  -webkit-backdrop-filter: blur(4px);
+  color: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50px;
+  border-radius: 980px;
   font-size: 0.75rem;
   font-weight: 600;
   margin-bottom: 1.25rem;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .hero__badge svg {
   flex-shrink: 0;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
+  color: #25D366;
 }
 
 .hero__title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  font-size: 1.875rem;
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.025em;
   margin-bottom: 1rem;
-  color: var(--color-white);
+  color: #ffffff;
 }
 
 .hero__subtitle {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.0625rem;
+  color: rgba(255, 255, 255, 0.82);
   margin-bottom: 1.75rem;
-  line-height: 1.6;
+  line-height: 1.65;
+  max-width: 560px;
 }
 
 .hero__subtitle strong {
-  color: var(--color-white);
+  color: #ffffff;
+  font-weight: 600;
 }
 
+/* Trust signals */
+.hero__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+  margin-bottom: 2rem;
+}
+
+.hero__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+}
+
+.hero__trust-item svg {
+  flex-shrink: 0;
+  opacity: 0.7;
+  color: rgba(255,255,255,0.9);
+}
+
+/* CTAs */
 .hero__cta {
   display: flex;
   flex-direction: column;
@@ -79,81 +110,95 @@
 }
 
 .hero__cta .btn {
-  width: 100%;
   justify-content: center;
 }
 
 .hero__cta .btn-lg {
-  padding: 1rem 1.5rem;
-  font-size: 0.9375rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 12px;
+  text-decoration: none;
 }
 
-.hero__cta .btn-lg svg {
-  flex-shrink: 0;
-}
+.hero__cta .btn-lg svg { flex-shrink: 0; }
 
 .hero__cta .btn-primary {
-  background: var(--color-white);
+  background: #ffffff;
   color: var(--color-primary);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .hero__cta .btn-primary:hover {
-  background: #f0f0f0;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  background: #f4f4f4;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
 }
 
 .hero__cta .btn-whatsapp {
   background: #25D366;
-  color: var(--color-white);
-  border: none;
+  color: #ffffff;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
 }
 
 .hero__cta .btn-whatsapp:hover {
-  background: #20bd5a;
-  transform: translateY(-2px);
+  background: #1ebe5d;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
 }
 
-/* SEO Column */
+/* ============================================================
+   COLUMNA DERECHA — SEO
+============================================================ */
+
 .hero__seo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
   padding: 0;
 }
 
 .hero__seo-text {
   font-size: 0.9375rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 1rem;
-}
-
-.hero__seo-text:last-child {
-  margin-bottom: 0;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 0;
 }
 
 .hero__seo-text strong {
-  color: var(--color-white);
+  color: rgba(255, 255, 255, 0.95);
   font-weight: 600;
 }
 
-/* ==========================================================================
-   Tablet - 768px+
-   ========================================================================== */
+.hero__seo-text a {
+  color: rgba(255, 255, 255, 0.92);
+  text-decoration-color: rgba(255, 255, 255, 0.3);
+  text-underline-offset: 3px;
+}
+
+.hero__seo-text a:hover {
+  color: #ffffff;
+  text-decoration-color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================================================
+   Tablet — 768px+
+============================================================ */
 @media (min-width: 768px) {
   .hero {
     padding: 5rem 0 6rem;
   }
 
   .hero__badge {
-    padding: 0.625rem 1.25rem;
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     margin-bottom: 1.5rem;
   }
 
   .hero__title {
     font-size: 2.5rem;
     line-height: 1.15;
-    margin-bottom: 1.25rem;
   }
 
   .hero__subtitle {
@@ -170,37 +215,49 @@
     width: auto;
   }
 
-  .hero__cta .btn-lg {
-    padding: 1.125rem 2rem;
-    font-size: 1rem;
-  }
-
-  .hero__seo {
-    padding: 0;
-  }
-
   .hero__seo-text {
     font-size: 1rem;
-    margin-bottom: 1.25rem;
   }
 }
 
-/* ==========================================================================
-   Desktop - 1024px+ (Two Columns)
-   ========================================================================== */
+/* ============================================================
+   Desktop — 1024px+ (Two Columns)
+============================================================ */
 @media (min-width: 1024px) {
+  .hero {
+    padding: 6rem 0 7rem;
+  }
+
   .hero__grid {
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 3.5rem;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 4rem;
     align-items: center;
   }
 
   .hero__title {
-    font-size: 2.75rem;
+    font-size: 2.875rem;
+    line-height: 1.12;
   }
 
   .hero__seo-text {
     font-size: 1.0625rem;
-    line-height: 1.8;
+    line-height: 1.85;
+  }
+
+  .hero__trust-item {
+    font-size: 0.875rem;
+  }
+}
+
+/* ============================================================
+   Wide — 1280px+
+============================================================ */
+@media (min-width: 1280px) {
+  .hero__title {
+    font-size: 3.125rem;
+  }
+
+  .hero__grid {
+    gap: 5rem;
   }
 }

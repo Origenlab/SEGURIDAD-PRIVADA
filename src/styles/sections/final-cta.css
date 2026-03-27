@@ -120,7 +120,6 @@
   font-weight: 700;
   text-decoration: none;
   border-radius: 12px;
-  transition: all 0.3s ease;
 }
 
 .final-cta__btn--phone {
@@ -131,7 +130,6 @@
 
 .final-cta__btn--phone:hover {
   background: #f0f0f0;
-  transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(255, 255, 255, 0.3);
 }
 
@@ -143,7 +141,6 @@
 
 .final-cta__btn--whatsapp:hover {
   background: #20bd5a;
-  transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
 }
 
@@ -154,7 +151,6 @@
 }
 
 .final-cta__btn--form:hover {
-  transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
 }
 

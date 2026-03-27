@@ -64,7 +64,6 @@
 
 .cta-banner__actions .btn-primary:hover {
   background: #f0f0f0;
-  transform: translateY(-2px);
 }
 
 .cta-banner__actions .btn-whatsapp {
@@ -75,7 +74,6 @@
 
 .cta-banner__actions .btn-whatsapp:hover {
   background: #20bd5a;
-  transform: translateY(-2px);
 }
 
 /* ==========================================================================

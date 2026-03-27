@@ -52,7 +52,6 @@
   font-family: var(--font-family);
   background: #fafafa;
   color: var(--color-text);
-  transition: all 0.2s ease;
 }
 
 .cotizacion-field input:focus,
@@ -161,12 +160,10 @@
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 4px 14px rgba(26, 54, 93, 0.35);
-  transition: all 0.3s ease;
 }
 
 .cotizacion-submit:hover {
   background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
-  transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
 }
 

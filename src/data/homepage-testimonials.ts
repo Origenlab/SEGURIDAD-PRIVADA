@@ -11,16 +11,21 @@ export interface Testimonial {
   initials: string;
   role: string;
   company: string;
+  companyUrl?: string;
+  companyLogo?: string;
+  verified?: boolean;
 }
 
 export const homepageTestimonials: Testimonial[] = [
   {
     rating: 5,
-    quote: 'Llevamos 3 años con ORIGINS y la diferencia es notable. Los guardias conocen a todos los residentes, la bitácora digital nos permite dar seguimiento a cualquier incidencia y la supervisión semanal garantiza que el servicio se mantenga impecable.',
-    name: 'Lic. Laura Martínez',
-    initials: 'LM',
-    role: 'Administradora',
-    company: 'Residencial Bosques de las Lomas'
+    quote: 'En SeguridadEventos coordinamos operativos en toda la República y cuando necesitamos apoyo de guardias intramuros para eventos residenciales en CDMX, ORIGINS es nuestra primera llamada. Personal certificado SSC, protocolos impecables y cero contratiempos en cada colaboración.',
+    name: 'Equipo SeguridadEventos',
+    initials: 'SE',
+    role: 'Empresa de Seguridad para Eventos',
+    company: 'SeguridadEventos.com',
+    companyUrl: 'https://seguridadeventos.com/',
+    verified: true
   },
   {
     rating: 5,

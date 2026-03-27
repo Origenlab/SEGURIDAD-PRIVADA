@@ -4,6 +4,8 @@
  */
 
 @import './hero.css';
+@import './nav-cta.css';
+@import './servicios-cats.css';
 @import './services.css';
 @import './about.css';
 @import './testimonials.css';

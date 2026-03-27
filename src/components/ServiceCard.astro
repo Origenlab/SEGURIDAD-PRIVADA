@@ -68,7 +68,6 @@ const {
 
   .service-card:hover {
     opacity: 1;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.06);
   }
 
   .service-card__image {
@@ -179,21 +178,14 @@ const {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    transition: all 0.3s ease;
   }
 
   .service-card__cta svg {
     flex-shrink: 0;
-    transition: transform 0.3s ease;
   }
 
   .service-card:hover .service-card__cta {
     background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
-  }
-
-  .service-card:hover .service-card__cta svg {
-    transform: translateX(4px);
   }
 
   /* ==========================================================================
@@ -235,7 +227,7 @@ const {
     }
 
     .service-card__image {
-      aspect-ratio: 1/1;
+      aspect-ratio: 16/10;
     }
 
     .service-card__overlay {
@@ -258,13 +250,9 @@ const {
     }
 
     .service-card__desc {
-      font-size: 0.75rem;
-      line-height: 1.5;
-      margin-bottom: 0.75rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin-bottom: 0.875rem;
     }
 
     .service-card__list {

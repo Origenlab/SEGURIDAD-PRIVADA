@@ -1,0 +1,220 @@
+---
+/**
+ * SectionHeader.astro — ORIGINS Private Security
+ * Componente de título de sección unificado.
+ * Estructura fija: badge + H2 + subtítulo + (opcional) 2 párrafos SEO
+ * Usar en TODAS las secciones del sitio para consistencia visual.
+ */
+
+interface Props {
+  badge: string;
+  titulo: string;
+  subtitulo: string;
+  parrafo1?: string;
+  parrafo2?: string;
+  align?: 'center' | 'left';
+  tema?: 'light' | 'dark';
+}
+
+const {
+  badge,
+  titulo,
+  subtitulo,
+  parrafo1,
+  parrafo2,
+  align = 'center',
+  tema = 'light',
+} = Astro.props;
+---
+
+<div class:list={['section-header-block', `section-header-block--${align}`, `section-header-block--${tema}`, { 'section-header-block--has-seo': !!(parrafo1 || parrafo2) }]}>
+
+  <!-- Badge -->
+  <span class="shb__badge">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      <path d="m9 12 2 2 4-4"/>
+    </svg>
+    {badge}
+  </span>
+
+  <!-- H2 -->
+  <h2 class="shb__titulo">{titulo}</h2>
+
+  <!-- Subtítulo -->
+  <p class="shb__subtitulo">{subtitulo}</p>
+
+  <!-- Párrafos SEO opcionales (columna derecha en desktop si align=left) -->
+  {(parrafo1 || parrafo2) && (
+    <div class="shb__seo">
+      {parrafo1 && <p set:html={parrafo1} />}
+      {parrafo2 && <p set:html={parrafo2} />}
+    </div>
+  )}
+
+</div>
+
+<style>
+/* ============================================================
+   BASE
+============================================================ */
+.section-header-block {
+  margin-bottom: 2.5rem;
+}
+
+/* Badge */
+.shb__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.875rem;
+  background: rgba(10,15,30,0.06);
+  border: 1px solid rgba(10,15,30,0.1);
+  color: rgba(10,15,30,0.6);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border-radius: 980px;
+  margin-bottom: 1rem;
+}
+
+.shb__badge svg { opacity: 0.7; }
+
+/* Título */
+.shb__titulo {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.75rem;
+}
+
+/* Subtítulo */
+.shb__subtitulo {
+  font-size: 1.0625rem;
+  color: rgba(10,15,30,0.55);
+  line-height: 1.65;
+  margin: 0;
+  max-width: 640px;
+}
+
+/* Párrafos SEO */
+.shb__seo {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.shb__seo p {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: rgba(10,15,30,0.65);
+  margin: 0;
+}
+
+.shb__seo a {
+  color: var(--color-primary);
+  text-decoration-color: rgba(10,15,30,0.25);
+  text-underline-offset: 3px;
+}
+
+.shb__seo strong {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* ============================================================
+   CENTER (default)
+============================================================ */
+.section-header-block--center {
+  text-align: center;
+}
+
+.section-header-block--center .shb__subtitulo {
+  margin: 0 auto;
+}
+
+.section-header-block--center .shb__seo {
+  text-align: left;
+  max-width: 640px;
+  margin: 1.5rem auto 0;
+}
+
+/* ============================================================
+   LEFT — 2 columnas en desktop (título izq + SEO der)
+============================================================ */
+.section-header-block--left {
+  text-align: left;
+}
+
+.section-header-block--left .shb__subtitulo {
+  margin: 0;
+}
+
+/* ============================================================
+   DARK — para secciones sobre fondo oscuro
+============================================================ */
+.section-header-block--dark .shb__badge {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.75);
+}
+
+.section-header-block--dark .shb__titulo {
+  color: #ffffff !important;
+}
+
+.section-header-block--dark .shb__subtitulo {
+  color: rgba(255,255,255,0.65);
+}
+
+.section-header-block--dark .shb__seo p {
+  color: rgba(255,255,255,0.7);
+}
+
+.section-header-block--dark .shb__seo a {
+  color: rgba(255,255,255,0.9);
+}
+
+/* ============================================================
+   Tablet — 768px+
+============================================================ */
+@media (min-width: 768px) {
+  .section-header-block { margin-bottom: 3rem; }
+  .shb__titulo { font-size: 2.25rem; }
+  .shb__subtitulo { font-size: 1.125rem; }
+}
+
+/* ============================================================
+   Desktop — 1024px+: LEFT con 2 columnas cuando hay SEO
+============================================================ */
+@media (min-width: 1024px) {
+  .section-header-block--left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 0 3.5rem;
+    align-items: start;
+  }
+
+  .section-header-block--left .shb__badge    { grid-column: 1; grid-row: 1; }
+  .section-header-block--left .shb__titulo   { grid-column: 1; grid-row: 2; }
+  .section-header-block--left .shb__subtitulo { grid-column: 1; grid-row: 3; }
+
+  .section-header-block--left .shb__seo {
+    grid-column: 2;
+    grid-row: 1 / span 4;
+    margin-top: 0;
+    align-self: center;
+  }
+
+  .shb__titulo { font-size: 2.5rem; }
+}
+
+@media (min-width: 1280px) {
+  .shb__titulo { font-size: 2.75rem; }
+}
+</style>

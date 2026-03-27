@@ -5,6 +5,8 @@
  */
 import Base from '../layouts/Base.astro';
 import ServiceCard from '../components/ServiceCard.astro';
+import CategoriaCard from '../components/CategoriaCard.astro';
+import SectionHeader from '../components/SectionHeader.astro';
 import TestimonialCard from '../components/TestimonialCard.astro';
 import FAQItem from '../components/FAQItem.astro';
 import CredentialsCard from '../components/CredentialsCard.astro';
@@ -128,72 +130,283 @@ const schema = {
     <div class="hero__background"></div>
     <div class="container">
       <div class="hero__grid">
+
+        <!-- Columna izquierda: título + CTAs -->
         <div class="hero__main">
           <div class="hero__badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <path d="m9 12 2 2 4-4"></path>
             </svg>
             <span>Permiso SSC 0102-15</span>
           </div>
-          <h1 id="hero-title" class="hero__title">Seguridad Privada para Condominios en CDMX — Guardias Intramuros Certificados 24/7</h1>
-          <p class="hero__subtitle">Especialistas en <strong>seguridad privada para condominios</strong> y residenciales: guardias intramuros, control de accesos y monitoreo permanente en la Zona Metropolitana</p>
+
+          <h1 id="hero-title" class="hero__title">
+            Seguridad Privada para Condominios en CDMX — Guardias Intramuros Certificados 24/7
+          </h1>
+
+          <p class="hero__subtitle">
+            Especialistas en <strong>seguridad privada para condominios</strong> y residenciales: guardias intramuros, control de accesos y monitoreo permanente en la Zona Metropolitana
+          </p>
+
+          <!-- Trust signals -->
+          <div class="hero__trust">
+            <div class="hero__trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              <span>+15 años de experiencia</span>
+            </div>
+            <div class="hero__trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <span>+50 condominios protegidos</span>
+            </div>
+            <div class="hero__trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Atención 24/7</span>
+            </div>
+          </div>
+
           <div class="hero__cta">
             <a href="#cotizacion" class="btn btn-primary btn-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               Solicitar Cotización Gratis
             </a>
-            <a href="https://wa.me/525530255580" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-              </svg>
+            <a href="https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               WhatsApp Directo
             </a>
           </div>
         </div>
+
+        <!-- Columna derecha: contenido SEO -->
         <div class="hero__seo">
           <p class="hero__seo-text">
-            ¿Buscas <strong>seguridad privada para tu condominio</strong>? En <strong>ORIGINS Private Security</strong> nos especializamos exclusivamente en proteger <a href="/servicios/seguridad-condominios"><strong>condominios verticales y horizontales</strong></a> en CDMX. Nuestros <a href="/servicios/guardias-intramuros"><strong>guardias intramuros para condominios</strong></a> conocen a cada residente, gestionan accesos con registro digital y realizan rondines programados con bitácora electrónica. Más de 15 años de experiencia respaldan cada operación.
+            En <strong>ORIGINS Private Security</strong> llevamos más de 15 años protegiendo <a href="/servicios/seguridad-condominios">condominios verticales y horizontales</a> en la Ciudad de México. Nos diferenciamos de las empresas generalistas porque trabajamos exclusivamente con comunidades residenciales: nuestros <a href="/servicios/guardias-intramuros">guardias intramuros</a> conocen a cada residente, dominan los protocolos de acceso y entienden que en un condominio la discreción y el trato profesional son tan importantes como la vigilancia misma.
           </p>
           <p class="hero__seo-text">
-            A diferencia de empresas generalistas, entendemos la operación diaria de un condominio: el trato discreto con residentes, la gestión de visitantes y proveedores, el <a href="/servicios/control-de-accesos">monitoreo de estacionamientos</a> y la coordinación con la administración. Cada elemento pasa por exámenes psicométricos, verificación de antecedentes y capacitación específica para <strong>seguridad residencial</strong>.
-          </p>
-          <p class="hero__seo-text">
-            También protegemos <a href="/servicios/seguridad-residenciales"><strong>fraccionamientos privados</strong> y <strong>residenciales de lujo</strong></a> con casetas de vigilancia, patrullaje interno y seguridad perimetral. Operamos con <strong>póliza de responsabilidad civil</strong>, cumplimiento IMSS-INFONAVIT y <strong>permiso SSC 0102-15</strong>. Solicita tu cotización y descubre por qué más de 50 comunidades residenciales confían en ORIGINS.
+            Operamos con <strong>Permiso SSC 0102-15</strong>, póliza de responsabilidad civil vigente y cumplimiento total de obligaciones laborales. Cada elemento pasa por verificación de antecedentes, exámenes psicométricos y capacitación específica para entornos residenciales. Si buscas una empresa con <a href="/servicios/control-de-accesos">control de accesos</a> real, bitácoras digitales y supervisión documentada semana a semana, esto es para ti. Más de 50 comunidades en CDMX y <a href="/zonas">Zona Metropolitana</a> ya confían en ORIGINS.
           </p>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- SERVICIOS PRINCIPALES -->
-  <section class="services-section services-section--featured" id="servicios" aria-labelledby="services-title">
+  <!-- NAVEGACIÓN VISUAL / CTA SECTIONS -->
+  <section class="nav-cta" aria-label="Accesos rápidos">
     <div class="container">
-      <div class="section-header">
-        <div class="section-header__main">
-          <h2 id="services-title" class="section-title">Especialistas en Seguridad para Condominios y Residenciales</h2>
-          <p class="section-subtitle">Soluciones de <strong>seguridad intramuros</strong> diseñadas específicamente para comunidades residenciales en CDMX</p>
-        </div>
-        <div class="section-header__seo">
-          <p>Somos la <strong>empresa de seguridad privada</strong> especializada en proteger <strong>condominios</strong>, <strong>fraccionamientos</strong> y <strong>residenciales privados</strong> en la Zona Metropolitana. Nuestros <strong>guardias intramuros</strong> conocen las necesidades únicas de la vida en comunidad: control de accesos discreto, trato profesional con residentes y respuesta inmediata ante emergencias.</p>
-          <p>A diferencia de empresas generalistas, nos enfocamos exclusivamente en <strong>seguridad residencial</strong>. Esto significa guardias con capacitación específica para condominios, protocolos adaptados a cada comunidad y supervisión constante. Más de 50 desarrollos residenciales confían en ORIGINS para proteger a sus familias las 24 horas del día.</p>
-        </div>
+      <div class="nav-cta__grid">
+
+        <a href="#servicios" class="nav-cta__card nav-cta__card--1">
+          <div class="nav-cta__card-inner">
+            <span class="nav-cta__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </span>
+            <div class="nav-cta__text">
+              <strong>Servicios de Seguridad</strong>
+              <span>Guardias, accesos y monitoreo</span>
+            </div>
+            <svg class="nav-cta__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </a>
+
+        <a href="/zonas" class="nav-cta__card nav-cta__card--2">
+          <div class="nav-cta__card-inner">
+            <span class="nav-cta__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+            </span>
+            <div class="nav-cta__text">
+              <strong>Zonas de Cobertura</strong>
+              <span>CDMX y Zona Metropolitana</span>
+            </div>
+            <svg class="nav-cta__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </a>
+
+        <a href="/nosotros" class="nav-cta__card nav-cta__card--3">
+          <div class="nav-cta__card-inner">
+            <span class="nav-cta__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </span>
+            <div class="nav-cta__text">
+              <strong>+15 Años de Experiencia</strong>
+              <span>Quiénes somos y nuestras credenciales</span>
+            </div>
+            <svg class="nav-cta__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </a>
+
+        <a href="#cotizacion" class="nav-cta__card nav-cta__card--4 nav-cta__card--accent">
+          <div class="nav-cta__card-inner">
+            <span class="nav-cta__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <div class="nav-cta__text">
+              <strong>Cotización Gratuita</strong>
+              <span>Diagnóstico en menos de 24 horas</span>
+            </div>
+            <svg class="nav-cta__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS — 3 CATEGORÍAS PRINCIPALES -->
+  <section class="servicios-cats" id="servicios" aria-labelledby="servicios-title">
+    <div class="container">
+
+      <SectionHeader
+        badge="Nuestros Servicios"
+        titulo="Especialistas en Seguridad para Condominios y Residenciales"
+        subtitulo="Soluciones de seguridad intramuros diseñadas específicamente para comunidades residenciales en CDMX"
+        parrafo1='En <a href="/nosotros"><strong>ORIGINS Private Security</strong></a> nos especializamos exclusivamente en comunidades residenciales. Nuestros guardias conocen a cada residente, gestionan accesos con registro digital y coordinan directamente con la administración del condominio.'
+        parrafo2='Más de 50 desarrollos en CDMX y <a href="/zonas">Zona Metropolitana</a> confían en nosotros porque ofrecemos lo que las empresas generalistas no pueden: protocolos diseñados para la convivencia en comunidad, supervisión semanal documentada y <a href="/servicios/guardias-intramuros">guardias intramuros</a> con certificación SSC vigente.'
+        align="left"
+      />
+
+      <!-- Grid 3 categorías -->
+      <div class="servicios-cats__grid">
+
+        <!-- CATEGORÍA 1: Seguridad Residencial -->
+        <CategoriaCard
+          id="seguridad-residencial"
+          acento="residencial"
+          etiqueta="Seguridad Residencial"
+          titulo="Guardias y Control de Accesos"
+          descripcion="Protección permanente para condominios, fraccionamientos y residenciales. Guardias intramuros certificados SSC que conocen a cada residente y coordinan directamente con la administración."
+          imagenHero="/img/img-index/guardias-intramuros.avif"
+          imagenHeroAlt="Guardias intramuros para condominios en CDMX"
+          href="/servicios/seguridad-condominios"
+          ctaTexto="Ver Seguridad Residencial"
+          subServicios={[
+            {
+              slug: 'guardias-intramuros',
+              titulo: 'Guardias Intramuros',
+              descripcionCorta: 'Vigilancia 24/7 certificada SSC',
+              imagen: '/img/img-index/guardia-lobby.avif',
+              imagenAlt: 'Guardia intramuros en lobby de condominio'
+            },
+            {
+              slug: 'seguridad-condominios',
+              titulo: 'Seguridad Condominios',
+              descripcionCorta: 'Lobby, áreas comunes y CCTV',
+              imagen: '/img/img-index/seguridad-para-condominios.avif',
+              imagenAlt: 'Seguridad para condominios verticales CDMX'
+            },
+            {
+              slug: 'seguridad-residenciales',
+              titulo: 'Seguridad Residenciales',
+              descripcionCorta: 'Casetas, patrullaje y control vehicular',
+              imagen: '/img/img-index/patrullaje.avif',
+              imagenAlt: 'Seguridad para fraccionamientos privados'
+            },
+            {
+              slug: 'control-de-accesos',
+              titulo: 'Control de Accesos',
+              descripcionCorta: 'Registro digital peatonal y vehicular',
+              imagen: '/img/img-index/control-de-accesos.avif',
+              imagenAlt: 'Control de accesos para condominios CDMX'
+            }
+          ]}
+        />
+
+        <!-- CATEGORÍA 2: Tecnología y Monitoreo -->
+        <CategoriaCard
+          id="tecnologia-monitoreo"
+          acento="tecnologia"
+          etiqueta="Tecnología y Monitoreo"
+          titulo="Vigilancia y Monitoreo 24/7"
+          descripcion="Soluciones tecnológicas para reforzar la seguridad de tu propiedad: monitoreo CCTV en tiempo real, alarmas certificadas, rastreo GPS y vigilancia remota desde nuestra central de monitoreo."
+          imagenHero="/img/img-index/monitoreo-camaras.avif"
+          imagenHeroAlt="Central de monitoreo de seguridad CCTV CDMX"
+          href="/servicios/tecnologia-monitoreo-seguridad"
+          ctaTexto="Ver Tecnología y Monitoreo"
+          subServicios={[
+            {
+              slug: 'tecnologia-monitoreo-seguridad',
+              titulo: 'Tecnología de Seguridad',
+              descripcionCorta: 'CCTV, alarmas y sistemas integrados',
+              imagen: '/img/img-index/tecnologia-monitoreo.avif',
+              imagenAlt: 'Tecnología de monitoreo de seguridad'
+            },
+            {
+              slug: 'vigilancia-remota-cctv',
+              titulo: 'Vigilancia Remota CCTV',
+              descripcionCorta: 'Monitoreo en tiempo real 24/7',
+              imagen: '/img/img-index/vigilancia-remota-y-cctv.avif',
+              imagenAlt: 'Vigilancia remota CCTV para condominios'
+            },
+            {
+              slug: 'monitoreo-alarmas',
+              titulo: 'Monitoreo de Alarmas',
+              descripcionCorta: 'Central certificada UL operativa 24/7',
+              imagen: '/img/img-index/monitoreo-de-alarmas.avif',
+              imagenAlt: 'Monitoreo de alarmas 24/7 CDMX'
+            },
+            {
+              slug: 'seguridad-gps-satelital',
+              titulo: 'Rastreo GPS Satelital',
+              descripcionCorta: 'Telemetría vehicular en tiempo real',
+              imagen: '/img/img-index/seguridad-satelital-gps.avif',
+              imagenAlt: 'Rastreo GPS satelital para flotas CDMX'
+            }
+          ]}
+        />
+
+        <!-- CATEGORÍA 3: Protección y Consultoría -->
+        <CategoriaCard
+          id="proteccion-consultoria"
+          acento="proteccion"
+          etiqueta="Protección y Consultoría"
+          titulo="Seguridad Especializada"
+          descripcion="Servicios de alto valor para empresas y ejecutivos: protección personal, custodia de valores, consultoría estratégica y análisis de vulnerabilidades con metodología internacional."
+          imagenHero="/img/img-index/proteccion-ejecutiva.avif"
+          imagenHeroAlt="Protección ejecutiva y consultoría de seguridad CDMX"
+          href="/servicios/servicios-de-proteccion-ejecutiva-y-consultoria"
+          ctaTexto="Ver Protección y Consultoría"
+          subServicios={[
+            {
+              slug: 'proteccion-ejecutiva',
+              titulo: 'Protección Ejecutiva',
+              descripcionCorta: 'Escoltas certificados SSC',
+              imagen: '/img/img-index/proteccion-ejecutiva-consultoria.avif',
+              imagenAlt: 'Protección ejecutiva en CDMX'
+            },
+            {
+              slug: 'custodia-de-mercancias',
+              titulo: 'Custodia de Valores',
+              descripcionCorta: 'Traslado blindado con póliza',
+              imagen: '/img/img-index/custodia-de-mercancias.avif',
+              imagenAlt: 'Custodia de efectivo y mercancías CDMX'
+            },
+            {
+              slug: 'consultoria-seguridad',
+              titulo: 'Consultoría de Seguridad',
+              descripcionCorta: 'Auditorías y diseño de protocolos',
+              imagen: '/img/img-index/consultoria-de-seguridad.avif',
+              imagenAlt: 'Consultoría de seguridad privada CDMX'
+            },
+            {
+              slug: 'consultoria-analisis-riesgos',
+              titulo: 'Análisis de Riesgos',
+              descripcionCorta: 'Metodología ISO 31000',
+              imagen: '/img/img-index/analisis-de-riesgos.avif',
+              imagenAlt: 'Análisis de riesgos de seguridad CDMX'
+            }
+          ]}
+        />
+
       </div>
 
-      <div class="featured-services-grid">
-        {featuredServices.map((service) => (
-          <ServiceCard
-            href={service.href}
-            image={service.image}
-            imageAlt={service.imageAlt}
-            badge={service.badge}
-            title={service.title}
-            description={service.description}
-            features={service.features}
-            ctaText={service.ctaText}
-            loading={service.loading}
-          />
-        ))}
+      <!-- Link a todos los servicios -->
+      <div class="servicios-cats__footer">
+        <a href="/servicios" class="servicios-cats__ver-todos">
+          Ver todos los servicios de seguridad
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
+
     </div>
   </section>
 
@@ -201,16 +414,29 @@ const schema = {
   <section class="about-origins" aria-labelledby="about-title">
     <div class="container">
       <div class="about-origins__grid">
+
+        <!-- Columna izquierda: texto + stats -->
         <div class="about-origins__content">
-          <span class="about-origins__badge">Empresa de Seguridad Privada en CDMX</span>
-          <h2 id="about-title" class="about-origins__title">Empresa de Seguridad Privada para Condominios en CDMX — Desde 2008</h2>
-          <p class="about-origins__tagline">Especialistas en <strong>seguridad privada para condominios</strong> y comunidades residenciales en Ciudad de México y Zona Metropolitana</p>
+
+          <span class="about-origins__badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            Empresa de Seguridad Privada en CDMX
+          </span>
+
+          <h2 id="about-title" class="about-origins__title">
+            Empresa de Seguridad Privada para Condominios en CDMX — Desde 2008
+          </h2>
+
+          <p class="about-origins__tagline">
+            Nos dedicamos exclusivamente a comunidades residenciales. Eso nos hace distintos.
+          </p>
 
           <div class="about-origins__text">
-            <p><strong>ORIGINS PRIVATE SECURITY S.A. DE C.V.</strong> es una empresa mexicana dedicada exclusivamente a la <strong>seguridad privada para condominios, residenciales y fraccionamientos</strong>. Nuestra especialización nos permite ofrecer un servicio que entiende las necesidades reales de las comunidades residenciales: guardias que conocen a cada residente, protocolos diseñados para la convivencia y coordinación directa con administradores y comités de vigilancia.</p>
-            <p>Operamos bajo el <strong>Permiso SSC 0102-15</strong> de la Secretaría de Seguridad Ciudadana, con pleno cumplimiento de la <strong>Ley Federal de Seguridad Privada</strong>. Cada uno de nuestros elementos cuenta con verificación de antecedentes, exámenes psicométricos, capacitación continua y alta ante IMSS-INFONAVIT. Respaldamos nuestro servicio con <strong>póliza de responsabilidad civil</strong> y supervisión semanal documentada.</p>
+            <p><strong>ORIGINS PRIVATE SECURITY S.A. DE C.V.</strong> trabaja exclusivamente con condominios, fraccionamientos y residenciales privados en la Zona Metropolitana. No somos una empresa generalista: cada protocolo, cada guardia y cada proceso están diseñados para la convivencia en comunidad.</p>
+            <p>Operamos con <strong>Permiso SSC 0102-15</strong> vigente, póliza de responsabilidad civil y cumplimiento total de obligaciones laborales. Supervisión semanal documentada y reportes mensuales a la administración de cada desarrollo.</p>
           </div>
 
+          <!-- Stats -->
           <div class="about-origins__stats">
             {companyStats.map((stat) => (
               <div class="about-origins__stat">
@@ -219,8 +445,21 @@ const schema = {
               </div>
             ))}
           </div>
+
+          <!-- CTA -->
+          <div class="about-origins__actions">
+            <a href="/nosotros" class="about-origins__btn about-origins__btn--outline">
+              Conoce nuestra empresa
+            </a>
+            <a href="https://wa.me/525530255580?text=Hola%2C%20quiero%20información%20sobre%20ORIGINS%20Private%20Security" class="about-origins__btn about-origins__btn--wa" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              55 3025 5580
+            </a>
+          </div>
+
         </div>
 
+        <!-- Columna derecha: credenciales -->
         <div class="about-origins__credentials">
           {homepageCredentials.map((credential) => (
             <CredentialsCard
@@ -230,6 +469,7 @@ const schema = {
             />
           ))}
         </div>
+
       </div>
     </div>
   </section>
@@ -238,9 +478,12 @@ const schema = {
   <section class="testimonials-section" aria-labelledby="testimonials-title">
     <div class="container">
       <div class="testimonials-header">
-        <span class="testimonials-badge">Testimonios</span>
-        <h2 id="testimonials-title">Lo Que Dicen Nuestros Clientes</h2>
-        <p>Administradores y comités de vigilancia comparten su experiencia con ORIGINS</p>
+        <SectionHeader
+          badge="Testimonios"
+          titulo="Lo Que Dicen Nuestros Clientes"
+          subtitulo="Administradores y comités de vigilancia comparten su experiencia con ORIGINS"
+          align="center"
+        />
       </div>
 
       <div class="testimonials-grid">
@@ -252,6 +495,8 @@ const schema = {
             initials={testimonial.initials}
             role={testimonial.role}
             company={testimonial.company}
+            companyUrl={testimonial.companyUrl}
+            verified={testimonial.verified}
           />
         ))}
       </div>
@@ -303,16 +548,14 @@ const schema = {
   <!-- FORMULARIO DE COTIZACIÓN -->
   <section class="cotizacion-section" id="cotizacion" aria-labelledby="cotizacion-title">
     <div class="container">
-      <div class="section-header">
-        <div class="section-header__main">
-          <h2 id="cotizacion-title" class="section-title">Cotización de Seguridad Privada para tu Condominio</h2>
-          <p class="section-subtitle">Recibe una <strong>propuesta personalizada para tu condominio</strong> en menos de 24 horas</p>
-        </div>
-        <div class="section-header__seo">
-          <p>Cada condominio es diferente: número de accesos, cantidad de residentes, tipo de desarrollo y nivel de seguridad requerido. En <strong>ORIGINS</strong> analizamos las características específicas de tu comunidad para diseñar una propuesta que incluya el número óptimo de guardias, turnos, tecnología complementaria y protocolos adaptados.</p>
-          <p>Nuestro equipo comercial visitará tu condominio para realizar un <strong>diagnóstico de seguridad gratuito</strong>: evaluar accesos, identificar vulnerabilidades y presentar una solución integral con la mejor relación costo-beneficio para tu administración.</p>
-        </div>
-      </div>
+      <SectionHeader
+        badge="Cotización"
+        titulo="Cotización de Seguridad Privada para tu Condominio"
+        subtitulo="Recibe una propuesta personalizada para tu condominio en menos de 24 horas"
+        parrafo1="Cada condominio es diferente: número de accesos, cantidad de residentes y nivel de seguridad requerido. En <strong>ORIGINS</strong> analizamos las características de tu comunidad para diseñar una propuesta con el número óptimo de guardias, turnos y protocolos adaptados."
+        parrafo2="Nuestro equipo visitará tu condominio para un <strong>diagnóstico de seguridad gratuito</strong>: evaluar accesos, identificar vulnerabilidades y presentar una solución con la mejor relación costo-beneficio para tu administración."
+        align="left"
+      />
 
       <div class="cotizacion-form-wrapper">
         <form id="securityForm" action="https://formsubmit.co/josecruz@originsecurity.mx" method="POST">
@@ -419,16 +662,14 @@ const schema = {
   <!-- FAQ SECTION -->
   <section class="faq-section" id="preguntas-frecuentes" aria-labelledby="faq-title">
     <div class="container">
-      <div class="section-header">
-        <div class="section-header__main">
-          <h2 id="faq-title" class="section-title">Preguntas Frecuentes sobre Seguridad Privada para Condominios</h2>
-          <p class="section-subtitle">Lo que administradores y comités preguntan antes de <strong>contratar seguridad para su condominio</strong></p>
-        </div>
-        <div class="section-header__seo">
-          <p>Antes de <strong>contratar seguridad privada para tu condominio</strong>, es natural tener preguntas sobre costos, tipo de servicio, requisitos legales y cómo funciona la operación diaria. Aquí respondemos las consultas más frecuentes de administradores, comités de vigilancia y residentes en CDMX.</p>
-          <p>Si necesitas más información, contáctanos por <strong>WhatsApp al 55 3025 5580</strong>. Un asesor especializado en <strong>seguridad condominial</strong> te atenderá para resolver todas tus dudas y agendar un diagnóstico gratuito en tu desarrollo.</p>
-        </div>
-      </div>
+      <SectionHeader
+        badge="Preguntas Frecuentes"
+        titulo="Preguntas Frecuentes sobre Seguridad Privada para Condominios"
+        subtitulo="Lo que administradores y comités preguntan antes de contratar seguridad para su condominio"
+        parrafo1="Es natural tener preguntas sobre costos, tipo de servicio, requisitos legales y cómo funciona la operación diaria. Aquí respondemos las consultas más frecuentes de administradores y comités de vigilancia en CDMX."
+        parrafo2='¿No encuentras tu respuesta? Escríbenos al <strong>WhatsApp 55 3025 5580</strong>. Un asesor especializado te atenderá y agendará un diagnóstico gratuito en tu desarrollo.'
+        align="left"
+      />
 
       <div class="faq-container">
         {homepageFaqs.map((faq) => (
@@ -492,6 +733,68 @@ const schema = {
       </div>
     </div>
   </section>
+
+  <!-- NAV-CTA FOOTER — Accesos rápidos antes del footer -->
+  <section class="nav-cta nav-cta--footer" aria-label="Explora el sitio">
+    <div class="container">
+      <div class="nav-cta__grid">
+
+        <a href="/blog" class="nav-cta__card nav-cta__card--1">
+          <div class="nav-cta__card-inner">
+            <span class="nav-cta__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </span>
+            <div class="nav-cta__text">
+              <strong>Blog y Recursos</strong>
+              <span>Guías de seguridad para condominios</span>
+            </div>
+            <svg class="nav-cta__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </a>
+
+        <a href="/bolsa-de-trabajo" class="nav-cta__card nav-cta__card--2">
+          <div class="nav-cta__card-inner">
+            <span class="nav-cta__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </span>
+            <div class="nav-cta__text">
+              <strong>Bolsa de Trabajo</strong>
+              <span>Únete al equipo ORIGINS</span>
+            </div>
+            <svg class="nav-cta__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </a>
+
+        <a href="/zonas" class="nav-cta__card nav-cta__card--3">
+          <div class="nav-cta__card-inner">
+            <span class="nav-cta__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            </span>
+            <div class="nav-cta__text">
+              <strong>Zonas y Alcaldías</strong>
+              <span>Polanco, Condesa, Naucalpan y más</span>
+            </div>
+            <svg class="nav-cta__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </a>
+
+        <a href="https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio" class="nav-cta__card nav-cta__card--4 nav-cta__card--accent" target="_blank" rel="noopener">
+          <div class="nav-cta__card-inner">
+            <span class="nav-cta__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </span>
+            <div class="nav-cta__text">
+              <strong>WhatsApp Directo</strong>
+              <span>Respuesta en menos de 2 horas</span>
+            </div>
+            <svg class="nav-cta__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
 </Base>
 
 <script>
