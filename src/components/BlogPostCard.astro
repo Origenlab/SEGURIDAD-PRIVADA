@@ -1,0 +1,177 @@
+---
+/**
+ * BlogPostCard.astro — ORIGINS Private Security
+ * Card para listado de artículos del blog.
+ * Sin animaciones, sin transforms. Solo estilo limpio.
+ */
+
+interface Props {
+  href: string;
+  title: string;
+  description: string;
+  category: string;
+  publishDate: Date;
+  readingTime?: number;
+  heroImage?: { src: string; alt: string };
+}
+
+const { href, title, description, category, publishDate, readingTime, heroImage } = Astro.props;
+
+const fechaFormateada = publishDate.toLocaleDateString('es-MX', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const categoryLabel = category.replace(/-/g, ' ');
+---
+
+<article class="blog-card">
+  <a href={href} class="blog-card__link" aria-label={`Leer: ${title}`}>
+
+    <div class="blog-card__image">
+      {heroImage
+        ? <img src={heroImage.src} alt={heroImage.alt} loading="lazy" width="800" height="450" />
+        : (
+          <div class="blog-card__placeholder" aria-hidden="true">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+        )
+      }
+    </div>
+
+    <div class="blog-card__body">
+      <span class="blog-card__category">{categoryLabel}</span>
+      <h3 class="blog-card__title">{title}</h3>
+      <p class="blog-card__desc">{description}</p>
+      <div class="blog-card__meta">
+        <time datetime={publishDate.toISOString()}>
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          {fechaFormateada}
+        </time>
+        {readingTime && (
+          <span class="blog-card__reading">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            {readingTime} min de lectura
+          </span>
+        )}
+      </div>
+    </div>
+
+  </a>
+</article>
+
+<style>
+/* ============================================================
+   BLOG CARD
+============================================================ */
+.blog-card {
+  border-radius: 14px;
+  border: 1px solid rgba(10,15,30,0.08);
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.blog-card__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+/* Imagen */
+.blog-card__image {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #0a0f1e;
+}
+
+.blog-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-card__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.25);
+  background: linear-gradient(160deg, #0d1520 0%, #0a0f1e 100%);
+}
+
+/* Body */
+.blog-card__body {
+  padding: 1.25rem;
+}
+
+/* Categoría pill */
+.blog-card__category {
+  display: inline-block;
+  padding: 0.25rem 0.625rem;
+  background: rgba(10,15,30,0.06);
+  border: 1px solid rgba(10,15,30,0.08);
+  color: rgba(10,15,30,0.6);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 980px;
+  margin-bottom: 0.75rem;
+}
+
+/* Título */
+.blog-card__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0a0f1e;
+  line-height: 1.35;
+  margin: 0 0 0.625rem;
+}
+
+/* Descripción */
+.blog-card__desc {
+  font-size: 0.875rem;
+  color: rgba(10,15,30,0.6);
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Meta */
+.blog-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  color: rgba(10,15,30,0.45);
+}
+
+.blog-card__meta time,
+.blog-card__reading {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* ============================================================
+   Tablet 768px+
+============================================================ */
+@media (min-width: 768px) {
+  .blog-card__body {
+    padding: 1.5rem;
+  }
+
+  .blog-card__title {
+    font-size: 1.0625rem;
+  }
+}
+</style>

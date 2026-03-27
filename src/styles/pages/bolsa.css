@@ -1,0 +1,192 @@
+/* ============================================================
+   BOLSA DE TRABAJO — src/styles/pages/bolsa.css
+   ORIGINS Private Security
+============================================================ */
+
+/* ---- Beneficios ---- */
+.bolsa-beneficios {
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+.bolsa-beneficios__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.bolsa-beneficio-card {
+  padding: 1.75rem;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid rgba(10,15,30,0.08);
+}
+
+.bolsa-beneficio-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(10,15,30,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0a0f1e;
+  margin-bottom: 1rem;
+}
+
+.bolsa-beneficio-card__titulo {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #0a0f1e;
+  margin: 0 0 0.5rem;
+}
+
+.bolsa-beneficio-card__texto {
+  font-size: 0.875rem;
+  color: rgba(10,15,30,0.6);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ---- Requisitos ---- */
+.bolsa-requisitos {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.bolsa-requisitos__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.bolsa-requisito-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  padding: 1.25rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid rgba(10,15,30,0.06);
+}
+
+.bolsa-requisito-item__icon {
+  flex-shrink: 0;
+  color: #25D366;
+}
+
+.bolsa-requisito-item__texto {
+  font-size: 0.9375rem;
+  color: rgba(10,15,30,0.75);
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* ---- Formulario ---- */
+.bolsa-form-section {
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+.bolsa-form-card {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(10,15,30,0.08);
+}
+
+.bolsa-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.bolsa-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.bolsa-form__field label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0a0f1e;
+}
+
+.bolsa-form__field input,
+.bolsa-form__field select,
+.bolsa-form__field textarea {
+  padding: 0.8rem 1rem;
+  border: 1.5px solid rgba(10,15,30,0.12);
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  color: #0a0f1e;
+  background: #ffffff;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.bolsa-form__field input:focus,
+.bolsa-form__field select:focus,
+.bolsa-form__field textarea:focus {
+  outline: none;
+  border-color: #0a0f1e;
+}
+
+.bolsa-form__field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.bolsa-form__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.75rem;
+  background: #25D366;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  width: 100%;
+}
+
+.bolsa-form__submit:hover {
+  background: #1ebe5d;
+}
+
+/* ============================================================
+   Tablet 768px+
+============================================================ */
+@media (min-width: 768px) {
+  .bolsa-beneficios,
+  .bolsa-requisitos,
+  .bolsa-form-section {
+    padding: 5rem 0;
+  }
+
+  .bolsa-beneficios__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================================
+   Desktop 1024px+
+============================================================ */
+@media (min-width: 1024px) {
+  .bolsa-beneficios__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

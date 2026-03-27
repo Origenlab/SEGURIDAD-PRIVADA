@@ -1,0 +1,109 @@
+/* ============================================================
+   LEGAL / SITEMAP PAGES — src/styles/pages/legal.css
+   ORIGINS Private Security
+============================================================ */
+
+/* ---- Contenido legal ---- */
+.legal-page {
+  padding: 4rem 0 5rem;
+  background: #ffffff;
+}
+
+.legal-page__container {
+  max-width: 780px;
+}
+
+.legal-page h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #0a0f1e;
+  margin: 0 0 1.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(10,15,30,0.08);
+}
+
+.legal-page h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0a0f1e;
+  margin: 2.5rem 0 0.75rem;
+}
+
+.legal-page p {
+  font-size: 0.9375rem;
+  color: rgba(10,15,30,0.7);
+  line-height: 1.8;
+  margin: 0 0 1rem;
+}
+
+.legal-page a {
+  color: #0a0f1e;
+  text-decoration-color: rgba(10,15,30,0.3);
+  text-underline-offset: 3px;
+}
+
+/* ---- Mapa del sitio ---- */
+.sitemap-page {
+  padding: 4rem 0 5rem;
+  background: #ffffff;
+}
+
+.sitemap-page__container {
+  max-width: 900px;
+}
+
+.sitemap-page h1 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #0a0f1e;
+  margin: 0 0 1.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(10,15,30,0.08);
+}
+
+.sitemap-page section {
+  margin-bottom: 2.5rem;
+}
+
+.sitemap-page h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0a0f1e;
+  margin: 0 0 1rem;
+}
+
+.sitemap-page ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sitemap-page ul li a {
+  font-size: 0.9375rem;
+  color: rgba(10,15,30,0.65);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  display: block;
+}
+
+.sitemap-page ul li a:hover {
+  color: #0a0f1e;
+}
+
+/* ============================================================
+   Tablet 768px+
+============================================================ */
+@media (min-width: 768px) {
+  .legal-page,
+  .sitemap-page {
+    padding: 5rem 0 6rem;
+  }
+
+  .legal-page h1,
+  .sitemap-page h1 {
+    font-size: 2.25rem;
+  }
+}

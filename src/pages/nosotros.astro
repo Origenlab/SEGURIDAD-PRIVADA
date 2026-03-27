@@ -1,9 +1,14 @@
 ---
 import Base from '../layouts/Base.astro';
+import HeroPagina from '../components/HeroPagina.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import CredentialsCard from '../components/CredentialsCard.astro';
+import PageCTA from '../components/PageCTA.astro';
+import { homepageCredentials } from '../data/homepage-credentials';
+import '../styles/pages/nosotros.css';
 
-const title = "Nosotros | Empresa de Seguridad Privada Intramuros CDMX | +15 Años";
-const description = "Empresa de seguridad privada en CDMX con +15 años. Guardias intramuros certificados SSC para condominios, residenciales y empresas. ☎ 55 3025 5580";
 const siteUrl = 'https://seguridad-privada.com.mx';
+
 const schema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
@@ -35,18 +40,8 @@ const schema = {
       "postalCode": "07800",
       "addressCountry": "MX"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "19.4326",
-      "longitude": "-99.1332"
-    },
     "telephone": "+52-55-3025-5580",
     "email": "contacto@seguridad-privada.com.mx",
-    "priceRange": "$$",
-    "numberOfEmployees": {
-      "@type": "QuantitativeValue",
-      "value": 200
-    },
     "hasCredential": {
       "@type": "EducationalOccupationalCredential",
       "name": "Permiso SSC 0102-15",
@@ -56,431 +51,270 @@ const schema = {
         "name": "Secretaría de Seguridad Ciudadana de la Ciudad de México"
       }
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+52-55-3025-5580",
-      "contactType": "customer service",
-      "areaServed": "MX",
-      "availableLanguage": "Spanish",
-      "hoursAvailable": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-        "opens": "00:00",
-        "closes": "23:59"
-      }
-    },
-    "sameAs": [
-      "https://www.facebook.com/originsprivatesecurity",
-      "https://www.instagram.com/originsprivatesecurity"
-    ],
     "areaServed": [
       { "@type": "City", "name": "Ciudad de México" },
       { "@type": "City", "name": "Naucalpan" },
       { "@type": "City", "name": "Tlalnepantla" },
-      { "@type": "City", "name": "Atizapán" },
-      { "@type": "City", "name": "Huixquilucan" },
-      { "@type": "City", "name": "Cuautitlán Izcalli" }
-    ],
-    "knowsAbout": [
-      "Seguridad privada para condominios",
-      "Guardias intramuros para condominios",
-      "Seguridad para residenciales y fraccionamientos",
-      "Control de accesos en condominios",
-      "Vigilancia para condominios verticales y horizontales"
+      { "@type": "City", "name": "Atizapán" }
     ]
   }
 };
+
+const timelineEvents = [
+  { year: '2008', titulo: 'Fundación de ORIGINS', descripcion: 'Nacemos como empresa especializada en seguridad intramuros para condominios en la Zona Metropolitana de la Ciudad de México.' },
+  { year: '2012', titulo: 'Certificación SSC', descripcion: 'Obtenemos el Permiso SSC 0102-15 ante la Secretaría de Seguridad Ciudadana, consolidando nuestro cumplimiento legal y operativo.' },
+  { year: '2015', titulo: 'Expansión Zona Metropolitana', descripcion: 'Ampliamos operaciones a Naucalpan, Tlalnepantla, Atizapán e Interlomas. Superamos los 20 condominios protegidos.' },
+  { year: '2018', titulo: 'Tecnología de Monitoreo', descripcion: 'Incorporamos plataforma de monitoreo CCTV y bitácoras digitales. Iniciamos el servicio de reportes mensuales a administraciones.' },
+  { year: '2021', titulo: '+40 Condominios', descripcion: 'Superamos los 40 desarrollos residenciales activos. Implementamos supervisión semanal documentada en todas las unidades.' },
+  { year: '2024', titulo: '+50 Comunidades Protegidas', descripcion: 'Más de 50 condominios y fraccionamientos confían en ORIGINS. Reforzamos el programa de capacitación continua y exámenes de confiabilidad.' }
+];
+
+const diferenciadores = [
+  {
+    titulo: 'Especialización Exclusiva',
+    descripcion: 'Solo trabajamos con condominios y residenciales. Cada protocolo está diseñado para la convivencia en comunidad, no para entornos corporativos o industriales.',
+    svg: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>'
+  },
+  {
+    titulo: 'Guardias que Conocen a los Residentes',
+    descripcion: 'Nuestros elementos permanecen en el mismo desarrollo por meses o años, generando confianza real con cada familia y conociendo patrones de acceso normales.',
+    svg: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>'
+  },
+  {
+    titulo: 'Cumplimiento Legal Total',
+    descripcion: 'Permiso SSC 0102-15 vigente, alta IMSS-INFONAVIT desde el primer día, póliza de responsabilidad civil y facturación fiscal completa.',
+    svg: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>'
+  },
+  {
+    titulo: 'Supervisión Documentada',
+    descripcion: 'Visitas de supervisión cada semana, reportes mensuales a la administración y bitácora digital de incidencias accesible en tiempo real.',
+    svg: '<rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>'
+  },
+  {
+    titulo: 'Sin Rotación Constante',
+    descripcion: 'Ofrecemos estabilidad laboral real a nuestros guardias, lo que se traduce en menor rotación y mayor compromiso con el desarrollo al que están asignados.',
+    svg: '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>'
+  },
+  {
+    titulo: 'Respuesta en Horas',
+    descripcion: 'Cualquier incidencia o solicitud de cambio tiene respuesta en menos de 2 horas. Contamos con supervisores en campo disponibles las 24 horas.',
+    svg: '<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>'
+  }
+];
 ---
 
-<Base title={title} description={description} schema={schema} useLegacyCSS={true}>
-  <!-- Hero Section -->
-    <section class="hero-two-col">
-      <div class="hero-two-col__container">
-        <div class="hero-two-col__left">
-          <div class="hero-two-col__badge">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-            <span>Permiso SSC 0102-15</span>
+<Base
+  title="Nosotros | ORIGINS Private Security CDMX — Desde 2008"
+  description="Empresa de seguridad privada en CDMX con +15 años especializados en condominios y residenciales. Guardias certificados SSC, póliza de responsabilidad civil y supervisión semanal documentada."
+  canonical={`${siteUrl}/nosotros`}
+  schema={schema}
+>
+
+  <HeroPagina
+    badge="Empresa de Seguridad Privada"
+    titulo="Empresa de Seguridad Privada para Condominios en CDMX — Desde 2008"
+    descripcion="Más de 15 años especializados exclusivamente en comunidades residenciales. Guardias certificados SSC, póliza de responsabilidad civil y supervisión semanal documentada."
+    breadcrumb={[{ label: 'Nosotros', href: '/nosotros' }]}
+    ctaPrimario={{ texto: 'Ver Nuestros Servicios', href: '/servicios' }}
+    ctaWhatsapp={true}
+  />
+
+  <!-- Stats -->
+  <section class="nos-stats" aria-label="Métricas de la empresa">
+    <div class="container">
+      <div class="nos-stats__grid">
+        <div class="nos-stat-item">
+          <span class="nos-stat-item__number">+15</span>
+          <span class="nos-stat-item__label">Años de experiencia</span>
+        </div>
+        <div class="nos-stat-item">
+          <span class="nos-stat-item__number">+50</span>
+          <span class="nos-stat-item__label">Condominios protegidos</span>
+        </div>
+        <div class="nos-stat-item">
+          <span class="nos-stat-item__number">200+</span>
+          <span class="nos-stat-item__label">Guardias certificados</span>
+        </div>
+        <div class="nos-stat-item">
+          <span class="nos-stat-item__number">24/7</span>
+          <span class="nos-stat-item__label">Operación continua</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About oscuro con credenciales -->
+  <section class="nos-about" aria-labelledby="nos-about-title">
+    <div class="container">
+      <div class="nos-about__grid">
+
+        <!-- Columna izquierda -->
+        <div class="nos-about__content">
+          <span class="nos-about__badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            Permiso SSC 0102-15 Vigente
+          </span>
+
+          <h2 id="nos-about-title" class="nos-about__titulo">¿Por qué ORIGINS?</h2>
+
+          <div class="nos-about__texto">
+            <p><strong>ORIGINS PRIVATE SECURITY S.A. DE C.V.</strong> trabaja exclusivamente con condominios, fraccionamientos y residenciales privados en la Zona Metropolitana. No somos una empresa generalista: cada protocolo, cada guardia y cada proceso están diseñados para la convivencia en comunidad.</p>
+            <p>Operamos con <strong>Permiso SSC 0102-15</strong> vigente, póliza de responsabilidad civil y cumplimiento total de obligaciones laborales. Supervisión semanal documentada, bitácoras digitales y reportes mensuales a la administración de cada desarrollo garantizan transparencia total en nuestra operación.</p>
           </div>
-          <h1 class="hero-two-col__title">Más de 15 Años Protegiendo lo que Más Valoras</h1>
-          <p class="hero-two-col__subtitle">Empresa Líder en Seguridad Privada en CDMX</p>
-          <p class="hero-two-col__description">
-            ORIGINS Private Security S.A. de C.V.: <strong>+15 años de experiencia</strong> protegiendo empresas, condominios y familias en CDMX y Estado de México. Nuestra filosofía: <strong>Seguridad, Prevención, Confianza</strong>. Guardias certificados SSC y monitoreo 24/7.
-          </p>
-          <div class="hero-two-col__cta">
-            <a href="servicios" class="btn btn-primary">Conoce Nuestros Servicios</a>
-            <a href="https://wa.me/525530255580" class="btn btn-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg>
-              WhatsApp
+
+          <div class="nos-about__actions">
+            <a href="/contacto" class="nos-about__btn nos-about__btn--outline">
+              Solicitar Cotización
+            </a>
+            <a
+              href="https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio"
+              class="nos-about__btn nos-about__btn--wa"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              55 3025 5580
             </a>
           </div>
         </div>
-        <div class="hero-two-col__right">
-          <div class="hero-two-col__card">
-            <h2 class="hero-two-col__card-title">Trayectoria comprobable en zonas de prestigio</h2>
-            <p class="hero-two-col__card-text">Hemos protegido cientos de empresas corporativas, condominios de prestigio y propiedades de alto valor en Polanco, Santa Fe, Interlomas, Bosques de las Lomas, Naucalpan y Tlalnepantla. Nuestro compromiso: tranquilidad con el más alto profesionalismo.</p>
+
+        <!-- Columna derecha: credenciales -->
+        <div class="nos-about__credentials">
+          {homepageCredentials.map((credential) => (
+            <CredentialsCard
+              title={credential.title}
+              icon={credential.icon}
+              items={credential.items}
+            />
+          ))}
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Misión Visión Valores -->
+  <section class="nos-mvv" aria-labelledby="nos-mvv-title">
+    <div class="container">
+      <SectionHeader
+        badge="Filosofía"
+        titulo="Misión, Visión y Valores"
+        subtitulo="Los principios que guían cada decisión en ORIGINS Private Security."
+        align="center"
+      />
+      <div class="nos-mvv__grid">
+
+        <div class="nos-mvv-card">
+          <div class="nos-mvv-card__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
-          <div class="hero-two-col__card">
-            <h2 class="hero-two-col__card-title">Personal certificado y tecnología avanzada</h2>
-            <p class="hero-two-col__card-text">Todos nuestros guardias están certificados ante la Secretaría de Seguridad Ciudadana de CDMX. Equipamiento de última generación, tecnología de monitoreo avanzada y protocolos probados que garantizan la protección de su patrimonio.</p>
+          <h3 class="nos-mvv-card__titulo">Misión</h3>
+          <p class="nos-mvv-card__texto">Proporcionar servicios de seguridad privada especializada para comunidades residenciales con los más altos estándares de profesionalismo, cumplimiento legal y atención al residente, generando tranquilidad real y duradera en cada condominio que protegemos.</p>
+        </div>
+
+        <div class="nos-mvv-card">
+          <div class="nos-mvv-card__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
           </div>
+          <h3 class="nos-mvv-card__titulo">Visión</h3>
+          <p class="nos-mvv-card__texto">Ser la empresa de seguridad privada más confiable y especializada en condominios y residenciales de la Zona Metropolitana de la Ciudad de México, reconocida por su transparencia, profesionalismo y resultados medibles.</p>
+        </div>
+
+        <div class="nos-mvv-card">
+          <div class="nos-mvv-card__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3 class="nos-mvv-card__titulo">Valores</h3>
+          <p class="nos-mvv-card__texto">Integridad en cada acto, transparencia total con la administración, respeto a los residentes, profesionalismo del personal, cumplimiento legal irrenunciable y mejora continua en protocolos y capacitación.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Historia / Timeline -->
+  <section class="nos-historia" aria-labelledby="nos-historia-title">
+    <div class="container">
+      <SectionHeader
+        badge="Historia"
+        titulo="Nuestra Trayectoria desde 2008"
+        subtitulo="Más de 15 años creciendo junto a las comunidades residenciales de la Ciudad de México."
+        align="center"
+      />
+      <div class="nos-timeline" role="list">
+        {timelineEvents.map(ev => (
+          <div class="nos-timeline-item" role="listitem">
+            <span class="nos-timeline-item__year">{ev.year}</span>
+            <div class="nos-timeline-item__content">
+              <h4>{ev.titulo}</h4>
+              <p>{ev.descripcion}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Diferenciadores -->
+  <section class="nos-diferenciadores" aria-labelledby="nos-dif-title">
+    <div class="container">
+      <SectionHeader
+        badge="Diferenciadores"
+        titulo="¿Por Qué Somos Diferentes?"
+        subtitulo="Lo que hace a ORIGINS única en el mercado de seguridad privada para condominios en CDMX."
+        align="center"
+      />
+      <div class="nos-diferenciadores__grid">
+        {diferenciadores.map(d => (
+          <div class="nos-dif-card">
+            <div class="nos-dif-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" set:html={d.svg} />
+            </div>
+            <h3 class="nos-dif-card__titulo">{d.titulo}</h3>
+            <p class="nos-dif-card__texto">{d.descripcion}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipo -->
+  <section class="nos-equipo" aria-labelledby="nos-equipo-title">
+    <div class="container">
+      <SectionHeader
+        badge="Nuestro Equipo"
+        titulo="Personal Certificado SSC"
+        subtitulo="Cada guardia de ORIGINS pasa por un proceso de selección riguroso antes de ser asignado a cualquier desarrollo residencial."
+        parrafo1="Verificación de antecedentes penales y policiales, exámenes psicométricos, pruebas de confiabilidad y análisis toxicológico. Nuestros guardias conocen las normas de operación de la Ley Federal de Seguridad Privada y reciben capacitación específica para entornos residenciales."
+        parrafo2="La capacitación no termina al contratar: programas de actualización trimestral, simulacros de emergencia y evaluaciones periódicas garantizan que el personal mantiene los estándares operativos que exige cada comunidad."
+        align="left"
+      />
+      <div class="nos-equipo__grid">
+        <div class="nos-equipo-stat">
+          <div class="nos-equipo-stat__num">100%</div>
+          <div class="nos-equipo-stat__label">Verificación de antecedentes</div>
+        </div>
+        <div class="nos-equipo-stat">
+          <div class="nos-equipo-stat__num">SSC</div>
+          <div class="nos-equipo-stat__label">Certificación vigente</div>
+        </div>
+        <div class="nos-equipo-stat">
+          <div class="nos-equipo-stat__num">24h</div>
+          <div class="nos-equipo-stat__label">Capacitación inicial</div>
+        </div>
+        <div class="nos-equipo-stat">
+          <div class="nos-equipo-stat__num">Trim.</div>
+          <div class="nos-equipo-stat__label">Actualización periódica</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Estadísticas -->
-    <section class="stats-section">
-      <div class="container">
-        <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-number">15+</div>
-            <div class="stat-label">Años de Experiencia</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">500+</div>
-            <div class="stat-label">Clientes Satisfechos</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">200+</div>
-            <div class="stat-label">Guardias Certificados</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">24/7</div>
-            <div class="stat-label">Monitoreo Continuo</div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <PageCTA
+    titulo="¿Listo para Proteger tu Condominio?"
+    descripcion="Solicita tu diagnóstico de seguridad gratuito. Diagnóstico en 24 horas, sin compromiso."
+    ctaPrimario={{ texto: 'Solicitar Cotización', href: '/contacto' }}
+    ctaWhatsapp={true}
+  />
 
-    <!-- Misión, Visión, Valores -->
-    <section class="mission-vision-values">
-      <div class="container">
-        <div class="mvv-grid">
-          <div class="mvv-card">
-            <h3 class="mvv-title">Misión</h3>
-            <p class="mvv-description">
-              Ser la empresa líder a nivel nacional en seguridad privada, ofreciendo servicios de calidad que excedan las expectativas de nuestros clientes mediante personal comprometido, tecnología de vanguardia y relaciones transparentes. Nuestra filosofía: <strong>Seguridad, Prevención, Confianza</strong>.
-            </p>
-          </div>
-
-          <div class="mvv-card">
-            <h3 class="mvv-title">Visión</h3>
-            <p class="mvv-description">
-              Ser la organización más cercana a nuestros clientes, anticipándonos a sus necesidades con soluciones innovadoras. Consolidarnos como empresa confiable y de confianza en seguridad privada, siendo reconocidos por nuestra excelencia, profesionalismo y compromiso con las comunidades donde operamos.
-            </p>
-          </div>
-
-          <div class="mvv-card">
-            <h3 class="mvv-title">Valores</h3>
-            <p class="mvv-description">
-              Nuestros valores corporativos guían cada decisión y acción que tomamos como organización, definiendo quiénes somos y cómo servimos a nuestros clientes con integridad, profesionalismo y compromiso inquebrantable.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Valores Corporativos -->
-    <section class="corporate-values">
-      <div class="container">
-        <h2 class="section-title">Valores que nos Definen</h2>
-        <p class="section-subtitle">Los principios fundamentales que rigen nuestra operación diaria y nuestro compromiso con la excelencia</p>
-
-        <div class="values-grid">
-          <div class="value-card">
-            <div class="value-icon">
-              <div class="value-icon-circle">1</div>
-            </div>
-            <h3 class="value-title">Integridad</h3>
-            <p class="value-description">Actuamos con honestidad y transparencia en cada servicio que brindamos, manteniendo siempre los más altos estándares éticos en todas nuestras operaciones.</p>
-          </div>
-
-          <div class="value-card">
-            <div class="value-icon">
-              <div class="value-icon-circle">2</div>
-            </div>
-            <h3 class="value-title">Profesionalismo</h3>
-            <p class="value-description">Personal certificado y capacitado constantemente que representa nuestra marca con excelencia, respeto y dedicación en cada interacción.</p>
-          </div>
-
-          <div class="value-card">
-            <div class="value-icon">
-              <div class="value-icon-circle">3</div>
-            </div>
-            <h3 class="value-title">Compromiso</h3>
-            <p class="value-description">Dedicación total a la protección de nuestros clientes, superando expectativas y garantizando su tranquilidad en todo momento.</p>
-          </div>
-
-          <div class="value-card">
-            <div class="value-icon">
-              <div class="value-icon-circle">4</div>
-            </div>
-            <h3 class="value-title">Confiabilidad</h3>
-            <p class="value-description">Cumplimos lo que prometemos, siempre. Nuestra palabra es nuestra garantía y nuestro historial habla por sí mismo.</p>
-          </div>
-
-          <div class="value-card">
-            <div class="value-icon">
-              <div class="value-icon-circle">5</div>
-            </div>
-            <h3 class="value-title">Innovación</h3>
-            <p class="value-description">Tecnología de punta para mejor protección, constantemente actualizando nuestros sistemas y procesos para ofrecer las mejores soluciones.</p>
-          </div>
-
-          <div class="value-card">
-            <div class="value-icon">
-              <div class="value-icon-circle">6</div>
-            </div>
-            <h3 class="value-title">Respeto</h3>
-            <p class="value-description">Valoramos a nuestro equipo y clientes por igual, creando un ambiente de trabajo positivo y relaciones duraderas basadas en el respeto mutuo.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Nuestra Historia -->
-    <section class="our-history">
-      <div class="container">
-        <h2 class="section-title">Nuestra Historia</h2>
-        <p class="section-subtitle">Más de una década de crecimiento, aprendizaje y compromiso con la seguridad en México</p>
-
-        <div class="history-timeline">
-          <div class="timeline-item">
-            <div class="timeline-year">2008</div>
-            <div class="timeline-content">
-              <h3 class="timeline-title">Fundación</h3>
-              <p class="timeline-description">Iniciamos operaciones en la Ciudad de México con un equipo de 10 guardias de seguridad certificados, enfocándonos en servicios de vigilancia para empresas corporativas y condominios residenciales en zonas premium.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-year">2012</div>
-            <div class="timeline-content">
-              <h3 class="timeline-title">Expansión Tecnológica</h3>
-              <p class="timeline-description">Implementamos nuestra primera central de monitoreo 24/7 con tecnología CCTV de alta resolución y sistemas de alarmas inteligentes, convirtiéndonos en pioneros en la integración de tecnología y seguridad física.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-year">2015</div>
-            <div class="timeline-content">
-              <h3 class="timeline-title">Certificaciones y Reconocimientos</h3>
-              <p class="timeline-description">Obtuvimos certificaciones clave y reconocimientos de la industria. Expandimos operaciones al Estado de México, cubriendo Naucalpan, Tlalnepantla, Atizapán e Interlomas con personal altamente calificado.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-year">2018</div>
-            <div class="timeline-content">
-              <h3 class="timeline-title">Especialización en Sectores</h3>
-              <p class="timeline-description">Desarrollamos servicios especializados para diferentes industrias: seguridad hospitalaria, protección para construcción, seguridad para eventos corporativos y servicios de protección ejecutiva con escoltas certificadas.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-year">2021</div>
-            <div class="timeline-content">
-              <h3 class="timeline-title">Innovación y Crecimiento</h3>
-              <p class="timeline-description">Alcanzamos más de 200 guardias de seguridad certificados y lanzamos nuestra plataforma digital de monitoreo que permite a clientes acceder en tiempo real a reportes, cámaras y bitácoras desde cualquier dispositivo.</p>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-year">2024</div>
-            <div class="timeline-content">
-              <h3 class="timeline-title">Líderes en la Industria</h3>
-              <p class="timeline-description">Consolidados como empresa líder en seguridad privada en México, con más de 500 clientes activos, tecnología de inteligencia artificial para análisis de video y reconocimiento como empleador de excelencia en el sector de seguridad.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Por Qué Elegirnos (Diferenciadores) -->
-    <section class="why-choose-us-about">
-      <div class="container">
-        <h2 class="section-title">¿Por Qué Somos Diferentes?</h2>
-        <p class="section-subtitle">Los factores que nos posicionan como líderes en seguridad privada en México</p>
-
-        <div class="differentiators-grid">
-          <div class="differentiator-card">
-            <div class="differentiator-icon">
-              <img src="/img/img-nosotros/certificacion.avif" alt="Certificación SSC - Guardias certificados" loading="lazy" width="640" height="960">
-            </div>
-            <h3 class="differentiator-title">100% Certificados SSC</h3>
-            <p class="differentiator-description">Todos nuestros guardias cuentan con certificación vigente de la Secretaría de Seguridad Ciudadana. Cumplimos rigurosamente con la Ley Federal de Seguridad Privada y renovamos certificaciones periódicamente.</p>
-          </div>
-
-          <div class="differentiator-card">
-            <div class="differentiator-icon">
-              <img src="/img/img-nosotros/tecnologia.avif" alt="Tecnología de vanguardia - Monitoreo 24/7" loading="lazy" width="640" height="960">
-            </div>
-            <h3 class="differentiator-title">Tecnología de Vanguardia</h3>
-            <p class="differentiator-description">Central de monitoreo 24/7 con sistemas CCTV 4K, video-analítica con inteligencia artificial, rastreo GPS satelital en tiempo real y plataformas digitales de gestión para transparencia total.</p>
-          </div>
-
-          <div class="differentiator-card">
-            <div class="differentiator-icon">
-              <img src="/img/img-nosotros/capacitacion.avif" alt="Capacitación continua - Personal profesional" loading="lazy" width="640" height="960">
-            </div>
-            <h3 class="differentiator-title">Capacitación Continua</h3>
-            <p class="differentiator-description">Programas de entrenamiento constante en protocolos de seguridad, primeros auxilios, manejo de crisis, atención al cliente y uso de tecnología. Invertimos en el desarrollo profesional de nuestro equipo.</p>
-          </div>
-
-          <div class="differentiator-card">
-            <div class="differentiator-icon">
-              <img src="/img/img-nosotros/cobertura.avif" alt="Cobertura total CDMX y Estado de México" loading="lazy" width="640" height="960">
-            </div>
-            <h3 class="differentiator-title">Cobertura Total</h3>
-            <p class="differentiator-description">Presencia en toda la Zona Metropolitana: CDMX (16 alcaldías) y Estado de México (principales municipios). Respuesta rápida en menos de 30 minutos ante emergencias con unidades de supervisión móviles.</p>
-          </div>
-
-          <div class="differentiator-card">
-            <div class="differentiator-icon">
-              <img src="/img/img-nosotros/transparencia.avif" alt="Transparencia total - Reportes digitales" loading="lazy" width="640" height="960">
-            </div>
-            <h3 class="differentiator-title">Transparencia Total</h3>
-            <p class="differentiator-description">Bitácoras digitales en tiempo real, reportes fotográficos de rondines, grabaciones CCTV disponibles en la nube, acceso remoto para clientes y reportes ejecutivos mensuales de desempeño.</p>
-          </div>
-
-          <div class="differentiator-card">
-            <div class="differentiator-icon">
-              <img src="/img/img-nosotros/respaldo.avif" alt="Respaldo legal - Pólizas de responsabilidad civil" loading="lazy" width="640" height="960">
-            </div>
-            <h3 class="differentiator-title">Respaldo Legal Completo</h3>
-            <p class="differentiator-description">Pólizas de responsabilidad civil vigentes, cumplimiento total de obligaciones laborales (IMSS, INFONAVIT, SAR), contratos formales y asesoría legal especializada para nuestros clientes.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Nuestro Equipo -->
-    <section class="our-team">
-      <div class="container">
-        <h2 class="section-title">Nuestro Equipo</h2>
-        <p class="section-subtitle">Profesionales comprometidos con tu seguridad y tranquilidad</p>
-
-        <div class="team-description">
-          <p class="team-text">
-            Nuestro equipo está conformado por más de <strong>200 guardias de seguridad certificados</strong>, supervisores con experiencia militar y policial, coordinadores de operaciones, personal de monitoreo especializado y administradores con visión estratégica. Cada miembro de nuestro equipo comparte nuestra filosofía de servicio de excelencia.
-          </p>
-          <p class="team-text">
-            Todos nuestros guardias pasan por un <strong>proceso de selección riguroso</strong> que incluye: verificación exhaustiva de antecedentes penales, exámenes psicométricos de honestidad e integridad, estudios socioeconómicos con visita domiciliaria, evaluaciones médicas toxicológicas, entrevistas personales profundas y validación de referencias laborales. Solo el 15% de los candidatos son aceptados.
-          </p>
-        </div>
-
-        <div class="team-stats-grid">
-          <div class="team-stat-card">
-            <h3 class="team-stat-title">Selección Rigurosa</h3>
-            <p class="team-stat-description">Solo 15% de candidatos son aceptados tras evaluaciones exhaustivas de antecedentes, psicométricas, médicas y de confiabilidad.</p>
-          </div>
-
-          <div class="team-stat-card">
-            <h3 class="team-stat-title">Capacitación Inicial</h3>
-            <p class="team-stat-description">120 horas de entrenamiento en protocolos de seguridad, primeros auxilios, manejo de crisis, atención al cliente y uso de tecnología.</p>
-          </div>
-
-          <div class="team-stat-card">
-            <h3 class="team-stat-title">Desarrollo Continuo</h3>
-            <p class="team-stat-description">Cursos mensuales de actualización, certificaciones especializadas y oportunidades reales de crecimiento a supervisor y coordinador.</p>
-          </div>
-
-          <div class="team-stat-card">
-            <h3 class="team-stat-title">Supervisión Constante</h3>
-            <p class="team-stat-description">Supervisores capacitados realizan visitas semanales, evaluaciones de desempeño trimestrales y auditorías de calidad constantes.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certificaciones y Cumplimiento -->
-    <section class="certifications">
-      <div class="container">
-        <h2 class="section-title">Certificaciones y Cumplimiento Normativo</h2>
-        <p class="section-subtitle">Operamos con total apego a la ley y los más altos estándares de la industria</p>
-
-        <div class="certifications-grid">
-          <div class="certification-item">
-            <h3 class="certification-name">Registro ante la SSC</h3>
-            <p class="certification-description">Empresa registrada y autorizada ante la Secretaría de Seguridad Ciudadana con permiso vigente. ORIGINS PRIVATE SECURITY S.A. DE C.V. - RFC: OPS1308309M5. Todos los permisos vigentes para operar servicios de seguridad privada en CDMX.</p>
-          </div>
-
-          <div class="certification-item">
-            <h3 class="certification-name">Ley Federal de Seguridad Privada</h3>
-            <p class="certification-description">Cumplimiento total con la normativa federal mexicana que regula la prestación de servicios de seguridad privada, incluyendo requisitos de personal, equipamiento y operación.</p>
-          </div>
-
-          <div class="certification-item">
-            <h3 class="certification-name">Certificación de Guardias SSC</h3>
-            <p class="certification-description">El 100% de nuestros guardias cuentan con certificación individual vigente emitida por la SSC tras aprobar cursos, exámenes y verificación de antecedentes no penales.</p>
-          </div>
-
-          <div class="certification-item">
-            <h3 class="certification-name">Pólizas de Responsabilidad Civil</h3>
-            <p class="certification-description">Cobertura de responsabilidad civil vigente emitida por aseguradora reconocida que protege a nuestros clientes ante cualquier eventualidad durante la prestación del servicio.</p>
-          </div>
-
-          <div class="certification-item">
-            <h3 class="certification-name">Cumplimiento Laboral</h3>
-            <p class="certification-description">Alta al IMSS, INFONAVIT y SAR de todo nuestro personal. Cumplimiento total de obligaciones patronales y derechos laborales conforme a la Ley Federal del Trabajo.</p>
-          </div>
-
-          <div class="certification-item">
-            <h3 class="certification-name">Certificaciones Especializadas</h3>
-            <p class="certification-description">Personal certificado en primeros auxilios, manejo de extintores, protocolos de evacuación, uso de tecnología de monitoreo y protección ejecutiva avanzada.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Compromiso Social -->
-    <section class="social-commitment">
-      <div class="container">
-        <h2 class="section-title">Compromiso Social y Responsabilidad</h2>
-        <div class="commitment-content">
-          <p class="commitment-text">
-            Además de proteger empresas y familias, creemos en <strong>contribuir positivamente a las comunidades</strong> donde operamos. Ofrecemos oportunidades laborales formales con prestaciones superiores de ley, capacitación profesional gratuita y planes de carrera reales para personas que buscan estabilidad y desarrollo.
-          </p>
-          <p class="commitment-text">
-            Somos un <strong>empleador responsable</strong> que respeta los derechos laborales, promueve la igualdad de género en el sector de seguridad privada, ofrece condiciones de trabajo dignas y contribuye a la economía formal del país mediante el pago de impuestos y seguridad social.
-          </p>
-          <p class="commitment-text">
-            Nuestro compromiso va más allá de la seguridad: <strong>formamos profesionales</strong>, fortalecemos familias mediante empleos estables y contribuimos a comunidades más seguras en la Ciudad de México y Estado de México.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA Final -->
-    <section class="cta-business">
-      <div class="cta-business__content">
-        <h2 class="cta-business__title">¿Listo para Proteger lo que Más Valoras con una Empresa de Seguridad Confiable?</h2>
-        <p class="cta-business__description">
-          Más de 15 años protegiendo empresas y familias en CDMX y Estado de México. Únete a cientos de clientes que confían en nuestra experiencia, profesionalismo y compromiso con la seguridad.
-        </p>
-
-        <div class="cta-business__features">
-          <div class="cta-business__feature">
-            <h3 class="cta-business__feature-title">15+ Años de Experiencia</h3>
-            <p class="cta-business__feature-text">Trayectoria comprobada protegiendo empresas y familias</p>
-          </div>
-          <div class="cta-business__feature">
-            <h3 class="cta-business__feature-title">Personal Certificado SSC</h3>
-            <p class="cta-business__feature-text">100% de guardias con certificación vigente</p>
-          </div>
-          <div class="cta-business__feature">
-            <h3 class="cta-business__feature-title">Cumplimiento Total</h3>
-            <p class="cta-business__feature-text">Registro SSC vigente y pólizas de responsabilidad civil</p>
-          </div>
-        </div>
-
-        <div class="cta-business__actions">
-          <a href="https://wa.me/525530255580?text=Hola,%20necesito%20información%20sobre%20servicios%20de%20seguridad" class="cta-business__btn cta-business__btn--primary" target="_blank" rel="noopener" aria-label="WhatsApp">
-            <span>WhatsApp</span>
-          </a>
-          <a href="contacto" class="cta-business__btn cta-business__btn--secondary">
-            Solicitar Cotización
-          </a>
-        </div>
-      </div>
-    </section>
 </Base>

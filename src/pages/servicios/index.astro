@@ -1,246 +1,223 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import HeroPagina from '../../components/HeroPagina.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import CategoriaCard from '../../components/CategoriaCard.astro';
+import PageCTA from '../../components/PageCTA.astro';
+import '../../styles/sections/servicios-cats.css';
+import '../../styles/pages/servicios.css';
 
 const servicios = await getCollection('servicios', ({ data }) => !data.draft);
-const pillarServices = servicios.filter(s => s.data.category === 'pillar');
-const otherServices = servicios.filter(s => s.data.category !== 'pillar');
-
 const siteUrl = 'https://seguridad-privada.com.mx';
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Servicios de Seguridad Privada",
-  "description": "Servicios profesionales de seguridad privada para condominios, residenciales y empresas en CDMX",
-  "itemListElement": servicios.map((servicio, index) => ({
+  "name": "Servicios de Seguridad Privada — ORIGINS Private Security",
+  "description": "Guardias intramuros, seguridad para condominios, control de accesos, monitoreo CCTV y consultoría. Permiso SSC 0102-15.",
+  "url": `${siteUrl}/servicios`,
+  "numberOfItems": servicios.length,
+  "itemListElement": servicios.map((s, i) => ({
     "@type": "ListItem",
-    "position": index + 1,
-    "item": {
-      "@type": "Service",
-      "name": servicio.data.title.split('|')[0].trim(),
-      "description": servicio.data.description,
-      "url": `${siteUrl}/servicios/${servicio.id}`
-    }
+    "position": i + 1,
+    "name": s.data.title.split('|')[0].trim(),
+    "url": `${siteUrl}/servicios/${s.id}`
   }))
 };
 ---
 
 <Base
-  title="Servicios de Seguridad Privada | ORIGINS Security CDMX"
-  description="Servicios profesionales de seguridad privada: guardias intramuros, seguridad para condominios, residenciales y empresas. Cotización gratis en CDMX."
+  title="Servicios de Seguridad Privada en CDMX | ORIGINS"
+  description="Guardias intramuros, seguridad para condominios, residenciales y tecnología de monitoreo en CDMX. Permiso SSC 0102-15. Cotización gratis."
   canonical={`${siteUrl}/servicios`}
   schema={schema}
 >
-  <!-- Hero -->
-  <section class="services-hero">
+
+  <HeroPagina
+    badge="Servicios de Seguridad"
+    titulo="Servicios de Seguridad Privada para Condominios en CDMX"
+    descripcion="Guardias intramuros certificados SSC, control de accesos, monitoreo CCTV, patrullaje y consultoría de seguridad para condominios, residenciales y empresas en la Zona Metropolitana."
+    breadcrumb={[{ label: 'Servicios', href: '/servicios' }]}
+    ctaPrimario={{ texto: 'Solicitar Cotización', href: '/contacto' }}
+    ctaWhatsapp={true}
+  />
+
+  <!-- 3 categorías principales -->
+  <section class="servicios-cats" id="servicios" aria-labelledby="servicios-cats-title">
     <div class="container">
-      <h1>Servicios de Seguridad Privada</h1>
-      <p>Soluciones profesionales de vigilancia y protección para condominios, residenciales y empresas en CDMX</p>
+
+      <SectionHeader
+        badge="Nuestros Servicios"
+        titulo="Especialistas en Seguridad para Condominios"
+        subtitulo="Soluciones de seguridad intramuros diseñadas específicamente para comunidades residenciales en CDMX"
+        parrafo1='En <a href="/nosotros"><strong>ORIGINS Private Security</strong></a> nos especializamos exclusivamente en comunidades residenciales. Nuestros guardias conocen a cada residente, gestionan accesos con registro digital y coordinan directamente con la administración del condominio.'
+        parrafo2='Más de 50 desarrollos en CDMX y <a href="/zonas">Zona Metropolitana</a> confían en nosotros porque ofrecemos lo que las empresas generalistas no pueden: protocolos diseñados para la convivencia en comunidad, supervisión semanal documentada y guardias intramuros con certificación SSC vigente.'
+        align="left"
+      />
+
+      <div class="servicios-cats__grid">
+
+        <!-- CATEGORÍA 1: Seguridad Residencial -->
+        <CategoriaCard
+          id="seguridad-residencial"
+          acento="residencial"
+          etiqueta="Seguridad Residencial"
+          titulo="Guardias y Control de Accesos"
+          descripcion="Protección permanente para condominios, fraccionamientos y residenciales. Guardias intramuros certificados SSC que conocen a cada residente y coordinan directamente con la administración."
+          imagenHero="/img/img-index/guardias-intramuros.avif"
+          imagenHeroAlt="Guardias intramuros para condominios en CDMX"
+          href="/servicios/seguridad-condominios"
+          ctaTexto="Ver Seguridad Residencial"
+          subServicios={[
+            {
+              slug: 'guardias-intramuros',
+              titulo: 'Guardias Intramuros',
+              descripcionCorta: 'Vigilancia 24/7 certificada SSC',
+              imagen: '/img/img-index/guardia-lobby.avif',
+              imagenAlt: 'Guardia intramuros en lobby de condominio'
+            },
+            {
+              slug: 'seguridad-condominios',
+              titulo: 'Seguridad Condominios',
+              descripcionCorta: 'Lobby, áreas comunes y CCTV',
+              imagen: '/img/img-index/seguridad-para-condominios.avif',
+              imagenAlt: 'Seguridad para condominios verticales CDMX'
+            },
+            {
+              slug: 'seguridad-residenciales',
+              titulo: 'Seguridad Residenciales',
+              descripcionCorta: 'Casetas, patrullaje y control vehicular',
+              imagen: '/img/img-index/patrullaje.avif',
+              imagenAlt: 'Seguridad para fraccionamientos privados'
+            },
+            {
+              slug: 'control-de-accesos',
+              titulo: 'Control de Accesos',
+              descripcionCorta: 'Registro digital peatonal y vehicular',
+              imagen: '/img/img-index/control-de-accesos.avif',
+              imagenAlt: 'Control de accesos para condominios CDMX'
+            }
+          ]}
+        />
+
+        <!-- CATEGORÍA 2: Tecnología y Monitoreo -->
+        <CategoriaCard
+          id="tecnologia-monitoreo"
+          acento="tecnologia"
+          etiqueta="Tecnología y Monitoreo"
+          titulo="Vigilancia y Monitoreo 24/7"
+          descripcion="Soluciones tecnológicas para reforzar la seguridad de tu propiedad: monitoreo CCTV en tiempo real, alarmas certificadas, rastreo GPS y vigilancia remota desde nuestra central de monitoreo."
+          imagenHero="/img/img-index/monitoreo-camaras.avif"
+          imagenHeroAlt="Central de monitoreo de seguridad CCTV CDMX"
+          href="/servicios/tecnologia-monitoreo-seguridad"
+          ctaTexto="Ver Tecnología y Monitoreo"
+          subServicios={[
+            {
+              slug: 'tecnologia-monitoreo-seguridad',
+              titulo: 'Tecnología de Seguridad',
+              descripcionCorta: 'CCTV, alarmas y sistemas integrados',
+              imagen: '/img/img-index/tecnologia-monitoreo.avif',
+              imagenAlt: 'Tecnología de monitoreo de seguridad'
+            },
+            {
+              slug: 'vigilancia-remota-cctv',
+              titulo: 'Vigilancia Remota CCTV',
+              descripcionCorta: 'Monitoreo en tiempo real 24/7',
+              imagen: '/img/img-index/vigilancia-remota-y-cctv.avif',
+              imagenAlt: 'Vigilancia remota CCTV para condominios'
+            },
+            {
+              slug: 'monitoreo-alarmas',
+              titulo: 'Monitoreo de Alarmas',
+              descripcionCorta: 'Central certificada UL operativa 24/7',
+              imagen: '/img/img-index/monitoreo-de-alarmas.avif',
+              imagenAlt: 'Monitoreo de alarmas 24/7 CDMX'
+            },
+            {
+              slug: 'seguridad-gps-satelital',
+              titulo: 'Rastreo GPS Satelital',
+              descripcionCorta: 'Telemetría vehicular en tiempo real',
+              imagen: '/img/img-index/seguridad-satelital-gps.avif',
+              imagenAlt: 'Rastreo GPS satelital para flotas CDMX'
+            }
+          ]}
+        />
+
+        <!-- CATEGORÍA 3: Protección y Consultoría -->
+        <CategoriaCard
+          id="proteccion-consultoria"
+          acento="proteccion"
+          etiqueta="Protección y Consultoría"
+          titulo="Seguridad Especializada"
+          descripcion="Servicios de alto valor para empresas y ejecutivos: protección personal, custodia de valores, consultoría estratégica y análisis de vulnerabilidades con metodología internacional."
+          imagenHero="/img/img-index/proteccion-ejecutiva.avif"
+          imagenHeroAlt="Protección ejecutiva y consultoría de seguridad CDMX"
+          href="/servicios/servicios-de-proteccion-ejecutiva-y-consultoria"
+          ctaTexto="Ver Protección y Consultoría"
+          subServicios={[
+            {
+              slug: 'proteccion-ejecutiva',
+              titulo: 'Protección Ejecutiva',
+              descripcionCorta: 'Escoltas certificados SSC',
+              imagen: '/img/img-index/proteccion-ejecutiva-consultoria.avif',
+              imagenAlt: 'Protección ejecutiva en CDMX'
+            },
+            {
+              slug: 'custodia-de-mercancias',
+              titulo: 'Custodia de Valores',
+              descripcionCorta: 'Traslado blindado con póliza',
+              imagen: '/img/img-index/custodia-de-mercancias.avif',
+              imagenAlt: 'Custodia de efectivo y mercancías CDMX'
+            },
+            {
+              slug: 'consultoria-seguridad',
+              titulo: 'Consultoría de Seguridad',
+              descripcionCorta: 'Auditorías y diseño de protocolos',
+              imagen: '/img/img-index/consultoria-de-seguridad.avif',
+              imagenAlt: 'Consultoría de seguridad privada CDMX'
+            },
+            {
+              slug: 'consultoria-analisis-riesgos',
+              titulo: 'Análisis de Riesgos',
+              descripcionCorta: 'Metodología ISO 31000',
+              imagen: '/img/img-index/analisis-de-riesgos.avif',
+              imagenAlt: 'Análisis de riesgos de seguridad CDMX'
+            }
+          ]}
+        />
+
+      </div>
+
     </div>
   </section>
 
-  <!-- Pillar Services -->
-  <section class="pillar-services">
+  <!-- Todos los servicios -->
+  <section class="todos-servicios" aria-labelledby="todos-servicios-title">
     <div class="container">
-      <h2>Servicios Principales</h2>
-      <p class="section-subtitle">Nuestra especialización en seguridad residencial</p>
-
-      <div class="pillar-grid">
-        {pillarServices.map((servicio) => (
-          <a href={`/servicios/${servicio.id}`} class="pillar-card">
-            {servicio.data.heroImage && (
-              <div class="pillar-card__image">
-                <img src={servicio.data.heroImage.src} alt={servicio.data.heroImage.alt} loading="eager" />
-              </div>
-            )}
-            <div class="pillar-card__content">
-              <span class="pillar-card__badge">Servicio Principal</span>
-              <h3>{servicio.data.title.split('|')[0].trim()}</h3>
-              <p>{servicio.data.description}</p>
-                            <span class="pillar-card__cta">Ver servicio →</span>
-            </div>
+      <SectionHeader
+        badge="Catálogo Completo"
+        titulo="Todos Nuestros Servicios"
+        subtitulo="Selecciona el servicio que necesitas para tu condominio o empresa."
+        align="center"
+      />
+      <div class="todos-servicios__grid">
+        {servicios.map(s => (
+          <a href={`/servicios/${s.id}`} class="servicio-link-card">
+            <h3>{s.data.title.split('|')[0].trim()}</h3>
+            <p>{s.data.description.replace(/ ☎.*$/, '').substring(0, 100)}...</p>
+            <span>Ver servicio →</span>
           </a>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="services-cta">
-    <div class="container">
-      <h2>¿No Sabes Qué Servicio Necesitas?</h2>
-      <p>Nuestros expertos te asesorarán para encontrar la solución perfecta para tu propiedad</p>
-      <div class="cta-buttons">
-        <a href="/contacto" class="btn btn-primary">Solicitar Asesoría</a>
-        <a href="https://wa.me/525530255580" class="btn btn-whatsapp">WhatsApp Directo</a>
-      </div>
-    </div>
-  </section>
+  <PageCTA
+    titulo="¿No encuentras lo que buscas?"
+    descripcion="Contáctanos y diseñamos una solución personalizada para tu comunidad."
+    ctaPrimario={{ texto: 'Contactar', href: '/contacto' }}
+    ctaWhatsapp={true}
+  />
+
 </Base>
-
-<style>
-  .services-hero {
-    padding: 3rem 0;
-    background: linear-gradient(135deg, var(--color-primary) 0%, #1a1a1a 100%);
-    color: var(--color-white);
-    text-align: center;
-  }
-
-  .services-hero h1 {
-    color: var(--color-white);
-    margin-bottom: 0.75rem;
-  }
-
-  .services-hero p {
-    opacity: 0.9;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .pillar-services {
-    padding: 3rem 0;
-  }
-
-  .pillar-services h2 {
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
-
-  .section-subtitle {
-    text-align: center;
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-  }
-
-  .pillar-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .pillar-card {
-    display: flex;
-    flex-direction: column;
-    background: var(--color-white);
-    border-radius: var(--border-radius-lg);
-    overflow: hidden;
-    text-decoration: none;
-    box-shadow: var(--shadow-md);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .pillar-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lg);
-    opacity: 1;
-  }
-
-  .pillar-card__image {
-    aspect-ratio: 16/9;
-    overflow: hidden;
-  }
-
-  .pillar-card__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-
-  .pillar-card:hover .pillar-card__image img {
-    transform: scale(1.03);
-  }
-
-  .pillar-card__content {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .pillar-card__badge {
-    display: inline-block;
-    width: fit-content;
-    padding: 0.25rem 0.75rem;
-    background: var(--color-primary);
-    color: var(--color-white);
-    font-size: 0.6875rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-radius: 50px;
-  }
-
-  .pillar-card h3 {
-    font-size: 1.25rem;
-    color: var(--color-primary);
-    margin: 0;
-  }
-
-  .pillar-card p {
-    font-size: 0.9375rem;
-    color: var(--color-text-light);
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  .pillar-card__price {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--color-success);
-  }
-
-  .pillar-card__cta {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--color-primary);
-    margin-top: auto;
-  }
-
-  .services-cta {
-    padding: 4rem 0;
-    background: var(--color-accent);
-    text-align: center;
-  }
-
-  .services-cta h2 {
-    margin-bottom: 0.75rem;
-  }
-
-  .services-cta p {
-    color: var(--color-text-light);
-    margin-bottom: 2rem;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .cta-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-  }
-
-  @media (min-width: 640px) {
-    .cta-buttons {
-      flex-direction: row;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .services-hero {
-      padding: 4rem 0;
-    }
-
-    .pillar-services {
-      padding: 4rem 0;
-    }
-
-    .pillar-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-</style>

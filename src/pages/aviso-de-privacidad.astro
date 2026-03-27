@@ -1,5 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
+import HeroPagina from '../components/HeroPagina.astro';
+import '../styles/pages/legal.css';
 
 const siteUrl = 'https://seguridad-privada.com.mx';
 ---
@@ -9,9 +11,16 @@ const siteUrl = 'https://seguridad-privada.com.mx';
   description="Aviso de privacidad de ORIGINS Private Security para el tratamiento de datos personales y solicitudes de contacto."
   canonical={`${siteUrl}/aviso-de-privacidad`}
 >
+
+  <HeroPagina
+    badge="Legal"
+    titulo="Aviso de Privacidad"
+    descripcion="Información sobre el tratamiento de datos personales recabados por ORIGINS PRIVATE SECURITY S.A. DE C.V."
+    breadcrumb={[{ label: 'Aviso de Privacidad', href: '/aviso-de-privacidad' }]}
+  />
+
   <section class="legal-page">
     <div class="container legal-page__container">
-      <h1>Aviso de Privacidad</h1>
       <p>
         ORIGINS PRIVATE SECURITY S.A. DE C.V. es responsable del tratamiento de los datos
         personales recabados mediante formularios, llamadas, WhatsApp y correo electrónico.
@@ -34,7 +43,7 @@ const siteUrl = 'https://seguridad-privada.com.mx';
       <h2>Derechos ARCO</h2>
       <p>
         Puedes solicitar acceso, rectificación, cancelación u oposición escribiendo a
-        <a href="mailto:contacto@seguridad-privada.com.mx"> contacto@seguridad-privada.com.mx</a>.
+        <a href="mailto:contacto@seguridad-privada.com.mx">contacto@seguridad-privada.com.mx</a>.
       </p>
       <h2>Contacto</h2>
       <p>
@@ -43,24 +52,5 @@ const siteUrl = 'https://seguridad-privada.com.mx';
       </p>
     </div>
   </section>
+
 </Base>
-
-<style>
-  .legal-page {
-    padding: 4rem 0;
-  }
-
-  .legal-page__container {
-    max-width: 760px;
-  }
-
-  .legal-page h1,
-  .legal-page h2 {
-    margin-bottom: 1rem;
-  }
-
-  .legal-page p {
-    margin-bottom: 1.25rem;
-    color: var(--color-text-light);
-  }
-</style>

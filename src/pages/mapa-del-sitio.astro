@@ -1,6 +1,8 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import HeroPagina from '../components/HeroPagina.astro';
+import '../styles/pages/legal.css';
 
 const servicios = await getCollection('servicios', ({ data }) => !data.draft);
 const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -9,20 +11,30 @@ const siteUrl = 'https://seguridad-privada.com.mx';
 
 <Base
   title="Mapa del Sitio | ORIGINS Private Security"
-  description="Listado de rutas disponibles en el sitio de ORIGINS Private Security."
+  description="Listado de todas las páginas y secciones del sitio de ORIGINS Private Security — Seguridad Privada para Condominios en CDMX."
   canonical={`${siteUrl}/mapa-del-sitio`}
 >
+
+  <HeroPagina
+    badge="Navegación"
+    titulo="Mapa del Sitio"
+    descripcion="Todas las páginas y secciones de ORIGINS Private Security, empresa de seguridad privada para condominios en CDMX."
+    breadcrumb={[{ label: 'Mapa del Sitio', href: '/mapa-del-sitio' }]}
+  />
+
   <section class="sitemap-page">
     <div class="container sitemap-page__container">
-      <h1>Mapa del Sitio</h1>
 
       <section>
         <h2>Páginas principales</h2>
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/servicios">Servicios</a></li>
+          <li><a href="/nosotros">Nosotros</a></li>
+          <li><a href="/zonas">Zonas de Cobertura</a></li>
           <li><a href="/blog">Blog</a></li>
           <li><a href="/contacto">Contacto</a></li>
+          <li><a href="/bolsa-de-trabajo">Bolsa de Trabajo</a></li>
           <li><a href="/aviso-de-privacidad">Aviso de Privacidad</a></li>
         </ul>
       </section>
@@ -44,29 +56,8 @@ const siteUrl = 'https://seguridad-privada.com.mx';
           ))}
         </ul>
       </section>
+
     </div>
   </section>
+
 </Base>
-
-<style>
-  .sitemap-page {
-    padding: 4rem 0;
-  }
-
-  .sitemap-page__container {
-    max-width: 760px;
-  }
-
-  .sitemap-page section + section {
-    margin-top: 2rem;
-  }
-
-  .sitemap-page ul {
-    margin: 1rem 0 0;
-    padding-left: 1.25rem;
-  }
-
-  .sitemap-page li + li {
-    margin-top: 0.5rem;
-  }
-</style>

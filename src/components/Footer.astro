@@ -1,253 +1,523 @@
 ---
+/**
+ * Footer.astro — ORIGINS Private Security
+ * Footer profesional: brand + 4 columnas de links + barra inferior
+ * Mobile-first, sin animaciones, consistente con el sistema de diseño
+ */
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-grid">
-      <div class="footer-section">
-        <h3 class="footer-title">Navegación</h3>
-        <ul class="footer-links">
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/servicios">Servicios</a></li>
-          <li><a href="/zonas">Zonas de Cobertura</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/nosotros">Nosotros</a></li>
-          <li><a href="/contacto">Contacto</a></li>
-          <li><a href="/aviso-de-privacidad">Aviso de Privacidad</a></li>
-          <li><a href="/mapa-del-sitio">Mapa del Sitio</a></li>
-        </ul>
-      </div>
+<footer class="ft" role="contentinfo">
 
-      <div class="footer-section">
-        <h3 class="footer-title"><a href="/servicios">Servicios Principales</a></h3>
-        <ul class="footer-links">
-          <li><a href="/servicios/guardias-intramuros">Guardias Intramuros</a></li>
-          <li><a href="/servicios/seguridad-condominios">Seguridad para Condominios</a></li>
-          <li><a href="/servicios/seguridad-residenciales">Seguridad para Residenciales</a></li>
-          <li><a href="/servicios/control-de-accesos">Control de Accesos</a></li>
-          <li><a href="/servicios/guardias-de-seguridad-y-vigilancia">Guardias de Seguridad</a></li>
-          <li><a href="/servicios/monitoreo-alarmas">Monitoreo de Alarmas 24/7</a></li>
-          <li><a href="/servicios/patrullaje">Patrullaje Vehicular</a></li>
-          <li><a href="/servicios/tecnologia-monitoreo-seguridad">Tecnología y Monitoreo</a></li>
-          <li><a href="/servicios/proteccion-ejecutiva">Protección Ejecutiva</a></li>
-          <li><a href="/servicios/seguridad-eventos">Seguridad para Eventos</a></li>
-        </ul>
+  <!-- Franja superior CTA -->
+  <div class="ft__cta-bar">
+    <div class="ft__cta-bar-inner">
+      <div class="ft__cta-bar-text">
+        <p>¿Listo para proteger tu condominio con profesionales certificados SSC?</p>
+        <span>Diagnóstico gratuito · Respuesta en 24h · CDMX y Zona Metropolitana</span>
       </div>
-
-      <div class="footer-section">
-        <h3 class="footer-title"><a href="/blog">Recursos</a></h3>
-        <ul class="footer-links">
-          <li><a href="/blog">Artículos del Blog</a></li>
-          <li><a href="/contacto">Solicitar Cotización</a></li>
-          <li><a href="/aviso-de-privacidad">Tratamiento de Datos</a></li>
-          <li><a href="/mapa-del-sitio">Rutas Disponibles</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h3 class="footer-title">Contacto</h3>
-        <div class="footer-contact">
-          <p class="contact-item">
-            <strong>ORIGINS PRIVATE SECURITY</strong><br>
-            Basiliso Romo Anguiano No 22 int 3<br>
-            Col Industrial, CDMX<br>
-            C.P. 07800
-          </p>
-          <p class="contact-item">
-            <strong>Teléfonos:</strong><br>
-            <a href="tel:+525530255580">55 3025 5580</a> |
-            <a href="tel:+525572044370">55 7204 4370</a><br>
-            <a href="tel:+525552074704">55 5207 4704</a> |
-            <a href="tel:+525552076828">5207 6828</a>
-          </p>
-          <p class="contact-item">
-            <strong>Email:</strong><br>
-            <a href="mailto:josecruz@originsecurity.mx">josecruz@originsecurity.mx</a>
-          </p>
-          <p class="contact-item">
-            <strong>WhatsApp:</strong><br>
-            <a href="https://wa.me/525530255580" target="_blank" rel="noopener">55 3025 5580</a>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <div class="footer-legal">
-        <p>&copy; {currentYear} ORIGINS PRIVATE SECURITY S.A. DE C.V. Todos los derechos reservados. | RFC: OPS1308309M5</p>
-        <ul class="footer-legal-links">
-          <li><a href="/aviso-de-privacidad">Aviso de Privacidad</a></li>
-          <li><a href="/mapa-del-sitio">Mapa del Sitio</a></li>
-        </ul>
+      <div class="ft__cta-bar-actions">
+        <a href="https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio" class="ft__cta-wa" target="_blank" rel="noopener noreferrer">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Cotizar por WhatsApp
+        </a>
+        <a href="tel:+525530255580" class="ft__cta-tel">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          55 3025 5580
+        </a>
       </div>
     </div>
   </div>
+
+  <!-- Cuerpo principal -->
+  <div class="ft__body">
+    <div class="ft__inner">
+
+      <!-- Col 1: Brand -->
+      <div class="ft__brand">
+        <a href="/" class="ft__logo" aria-label="ORIGINS Private Security — Inicio">
+          <span class="ft__logo-text">
+            <span class="ft__logo-line1">ORIGINS</span>
+            <span class="ft__logo-line2">SEGURIDAD PRIVADA</span>
+          </span>
+        </a>
+        <p class="ft__brand-desc">
+          Empresa especializada en seguridad privada para condominios y residenciales en CDMX y Zona Metropolitana. Guardias certificados SSC, póliza de RC y supervisión semanal documentada.
+        </p>
+
+        <!-- Credenciales -->
+        <div class="ft__credentials">
+          <span class="ft__cred">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            Permiso SSC 0102-15
+          </span>
+          <span class="ft__cred">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Póliza de Resp. Civil
+          </span>
+          <span class="ft__cred">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            Alta IMSS-INFONAVIT
+          </span>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="ft__social">
+          <a href="https://www.facebook.com/originsprivatesecurity" target="_blank" rel="noopener noreferrer" class="ft__social-link" aria-label="Facebook de ORIGINS">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/originsprivatesecurity" target="_blank" rel="noopener noreferrer" class="ft__social-link" aria-label="Instagram de ORIGINS">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://wa.me/525530255580" target="_blank" rel="noopener noreferrer" class="ft__social-link ft__social-link--wa" aria-label="WhatsApp de ORIGINS">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: Servicios -->
+      <nav class="ft__nav-col" aria-label="Servicios de seguridad">
+        <h4 class="ft__col-title">Servicios</h4>
+        <ul class="ft__nav-list">
+          <li><a href="/servicios/guardias-intramuros">Guardias Intramuros</a></li>
+          <li><a href="/servicios/seguridad-condominios">Seguridad Condominios</a></li>
+          <li><a href="/servicios/seguridad-residenciales">Seguridad Residenciales</a></li>
+          <li><a href="/servicios/control-de-accesos">Control de Accesos</a></li>
+          <li><a href="/servicios/patrullaje">Patrullaje Vehicular</a></li>
+          <li><a href="/servicios/tecnologia-monitoreo-seguridad">Tecnología y Monitoreo</a></li>
+          <li><a href="/servicios/vigilancia-remota-cctv">Vigilancia CCTV</a></li>
+          <li><a href="/servicios/monitoreo-alarmas">Monitoreo de Alarmas</a></li>
+          <li><a href="/servicios/proteccion-ejecutiva">Protección Ejecutiva</a></li>
+          <li><a href="/servicios/consultoria-seguridad">Consultoría</a></li>
+          <li><a href="/servicios" class="ft__nav-ver-todos">Ver todos los servicios →</a></li>
+        </ul>
+      </nav>
+
+      <!-- Col 3: Zonas + Empresa -->
+      <div class="ft__nav-col">
+        <nav aria-label="Zonas de cobertura">
+          <h4 class="ft__col-title">Zonas de Cobertura</h4>
+          <ul class="ft__nav-list">
+            <li><a href="/zonas/miguel-hidalgo">Miguel Hidalgo · Polanco</a></li>
+            <li><a href="/zonas/cuauhtemoc">Cuauhtémoc · Roma · Condesa</a></li>
+            <li><a href="/zonas/benito-juarez">Benito Juárez · Del Valle</a></li>
+            <li><a href="/zonas/alvaro-obregon">Álvaro Obregón · Santa Fe</a></li>
+            <li><a href="/zonas/coyoacan">Coyoacán · Pedregal</a></li>
+            <li><a href="/zonas/naucalpan">Naucalpan · Interlomas</a></li>
+            <li><a href="/zonas/tlalnepantla">Tlalnepantla</a></li>
+            <li><a href="/zonas/atizapan">Atizapán · Bosques</a></li>
+            <li><a href="/zonas" class="ft__nav-ver-todos">Ver todas las zonas →</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Empresa" style="margin-top: 2rem;">
+          <h4 class="ft__col-title">Empresa</h4>
+          <ul class="ft__nav-list">
+            <li><a href="/nosotros">Nosotros</a></li>
+            <li><a href="/blog">Blog y Recursos</a></li>
+            <li><a href="/bolsa-de-trabajo">Bolsa de Trabajo</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Col 4: Contacto -->
+      <div class="ft__nav-col ft__contact-col">
+        <h4 class="ft__col-title">Contacto</h4>
+
+        <!-- Dirección -->
+        <div class="ft__contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>
+            Basiliso Romo Anguiano No 22 int 3<br>
+            Col. Industrial, CDMX C.P. 07800
+          </span>
+        </div>
+
+        <!-- Teléfonos -->
+        <div class="ft__contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span>
+            <a href="tel:+525530255580">55 3025 5580</a><br>
+            <a href="tel:+525572044370">55 7204 4370</a>
+          </span>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="ft__contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <a href="https://wa.me/525530255580" target="_blank" rel="noopener noreferrer">WhatsApp: 55 3025 5580</a>
+        </div>
+
+        <!-- Email -->
+        <div class="ft__contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:contacto@seguridad-privada.com.mx">contacto@seguridad-privada.com.mx</a>
+        </div>
+
+        <!-- Horario -->
+        <div class="ft__contact-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Lun – Dom · 24 horas</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Barra inferior -->
+  <div class="ft__bottom">
+    <div class="ft__bottom-inner">
+      <p class="ft__bottom-legal">
+        &copy; {currentYear} ORIGINS PRIVATE SECURITY S.A. DE C.V. · RFC: OPS1308309M5 · Todos los derechos reservados.
+      </p>
+      <nav class="ft__bottom-links" aria-label="Legal">
+        <a href="/aviso-de-privacidad">Aviso de Privacidad</a>
+        <a href="/mapa-del-sitio">Mapa del Sitio</a>
+      </nav>
+    </div>
+  </div>
+
 </footer>
 
 <style>
-  /* ==========================================================================
-     FOOTER - Mobile First
-     ========================================================================== */
-  .footer {
-    background-color: var(--color-primary);
-    color: rgba(255, 255, 255, 0.8);
-    padding: 3rem 0 0;
+/* ============================================================
+   VARIABLES INTERNAS
+============================================================ */
+.ft {
+  --ft-bg: #0a0f1e;
+  --ft-body-bg: #0d1422;
+  --ft-border: rgba(255,255,255,0.07);
+  --ft-text: rgba(255,255,255,0.62);
+  --ft-text-hover: #ffffff;
+  --ft-title: rgba(255,255,255,0.9);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--ft-text);
+}
+
+/* ============================================================
+   CTA BAR — franja superior
+============================================================ */
+.ft__cta-bar {
+  background: #25D366;
+  padding: 1rem 0;
+}
+
+.ft__cta-bar-inner {
+  max-width: var(--container-max, 1280px);
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+}
+
+.ft__cta-bar-text p {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.2rem;
+}
+
+.ft__cta-bar-text span {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.ft__cta-bar-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ft__cta-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.25rem;
+  background: rgba(0,0,0,0.18);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 980px;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.ft__cta-wa:hover { background: rgba(0,0,0,0.28); }
+
+.ft__cta-tel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.25rem;
+  background: #ffffff;
+  color: #1a7a40;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 980px;
+  text-decoration: none;
+}
+
+.ft__cta-tel:hover { background: #f0f0f0; }
+
+/* ============================================================
+   BODY
+============================================================ */
+.ft__body {
+  background: #0d1422;
+  padding: 3.5rem 0 2.5rem;
+}
+
+.ft__inner {
+  max-width: var(--container-max, 1280px);
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+/* ============================================================
+   BRAND COL
+============================================================ */
+.ft__logo {
+  display: inline-block;
+  margin-bottom: 1.125rem;
+}
+
+.ft__logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.ft__logo-line1 {
+  font-size: 1.375rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.ft__logo-line2 {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #25D366;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.ft__brand-desc {
+  font-size: 0.8125rem;
+  line-height: 1.75;
+  color: var(--ft-text);
+  margin: 0 0 1.375rem;
+  max-width: 320px;
+}
+
+/* Credenciales */
+.ft__credentials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ft__cred {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.775rem;
+  color: rgba(255,255,255,0.55);
+}
+
+.ft__cred svg { color: #25D366; opacity: 0.9; flex-shrink: 0; }
+
+/* Social */
+.ft__social {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ft__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.ft__social-link:hover { background: rgba(255,255,255,0.13); color: #ffffff; }
+.ft__social-link--wa:hover { background: rgba(37,211,102,0.2); color: #25D366; }
+
+/* ============================================================
+   NAV COLS
+============================================================ */
+.ft__col-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ft-title);
+  margin: 0 0 1rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 1px solid var(--ft-border);
+}
+
+.ft__nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ft__nav-list a {
+  color: var(--ft-text);
+  text-decoration: none;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+
+.ft__nav-list a:hover { color: var(--ft-text-hover); }
+
+.ft__nav-ver-todos {
+  font-weight: 600;
+  color: rgba(255,255,255,0.5) !important;
+  font-size: 0.775rem !important;
+  margin-top: 0.25rem;
+}
+
+.ft__nav-ver-todos:hover { color: #25D366 !important; }
+
+/* ============================================================
+   CONTACT COL
+============================================================ */
+.ft__contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  margin-bottom: 1rem;
+  font-size: 0.8125rem;
+  color: var(--ft-text);
+}
+
+.ft__contact-item:last-child { margin-bottom: 0; }
+
+.ft__contact-item svg {
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+  color: rgba(255,255,255,0.4);
+}
+
+.ft__contact-item a {
+  color: var(--ft-text);
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.ft__contact-item a:hover { color: var(--ft-text-hover); }
+
+/* ============================================================
+   BOTTOM BAR
+============================================================ */
+.ft__bottom {
+  background: #060b14;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 1.25rem 0;
+}
+
+.ft__bottom-inner {
+  max-width: var(--container-max, 1280px);
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.ft__bottom-legal {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.ft__bottom-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.ft__bottom-links a {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+}
+
+.ft__bottom-links a:hover { color: rgba(255,255,255,0.85); }
+
+/* ============================================================
+   Tablet — 640px+
+============================================================ */
+@media (min-width: 640px) {
+  .ft__cta-bar-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0 1.5rem;
   }
 
-  .footer-container {
-    max-width: var(--container-max);
-    margin: 0 auto;
-    padding: 0 1rem;
+  .ft__inner {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 1.5rem;
   }
 
-  .footer-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .ft__bottom-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 0 1.5rem;
+  }
+}
+
+/* ============================================================
+   Desktop — 1024px+
+============================================================ */
+@media (min-width: 1024px) {
+  .ft__body { padding: 4.5rem 0 3rem; }
+
+  .ft__inner {
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    padding: 0 2rem;
   }
 
-  .footer-section {
-    min-width: 0;
-  }
+  .ft__cta-bar-inner { padding: 0 2rem; }
+  .ft__bottom-inner  { padding: 0 2rem; }
 
-  .footer-title {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #ffffff;
-    margin-bottom: 1rem;
-    letter-spacing: 0.02em;
-  }
+  .ft__credentials { flex-direction: column; }
+}
 
-  .footer-title a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .footer-title a:hover {
-    opacity: 0.8;
-  }
-
-  .footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 2rem;
-  }
-
-  .footer-links li {
-    margin-bottom: 0.5rem;
-  }
-
-  .footer-links a {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.875rem;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  .footer-links a:hover {
-    color: #ffffff;
-    opacity: 1;
-  }
-
-  .footer-contact {
-    font-size: 0.875rem;
-    line-height: 1.6;
-  }
-
-  .contact-item {
-    margin-bottom: 1rem;
-  }
-
-  .contact-item strong {
-    color: #ffffff;
-    font-weight: 600;
-  }
-
-  .contact-item a {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-  }
-
-  .contact-item a:hover {
-    color: #ffffff;
-    opacity: 1;
-  }
-
-  .footer-bottom {
-    margin-top: 2rem;
-    padding: 1.5rem 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .footer-legal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.5);
-  }
-
-  .footer-legal p {
-    margin: 0;
-  }
-
-  .footer-legal-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .footer-legal-links a {
-    color: rgba(255, 255, 255, 0.5);
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-
-  .footer-legal-links a:hover {
-    color: #ffffff;
-    opacity: 1;
-  }
-
-  /* Tablet */
-  @media (min-width: 640px) {
-    .footer {
-      padding: 4rem 0 0;
-    }
-
-    .footer-container {
-      padding: 0 1.5rem;
-    }
-
-    .footer-grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2.5rem;
-    }
-
-    .footer-legal {
-      font-size: 0.8125rem;
-    }
-  }
-
-  /* Desktop */
-  @media (min-width: 1024px) {
-    .footer-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    .footer-bottom {
-      margin-top: 3rem;
-    }
-
-    .footer-legal {
-      flex-direction: row;
-      justify-content: space-between;
-      text-align: left;
-    }
-  }
+/* ============================================================
+   Wide — 1280px+
+============================================================ */
+@media (min-width: 1280px) {
+  .ft__inner        { padding: 0 2.5rem; gap: 4rem; }
+  .ft__cta-bar-inner { padding: 0 2.5rem; }
+  .ft__bottom-inner  { padding: 0 2.5rem; }
+}
 </style>
