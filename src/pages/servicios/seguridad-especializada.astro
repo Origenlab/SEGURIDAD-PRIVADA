@@ -409,7 +409,15 @@ const schema = {"@context":"https://schema.org","@graph":[{"@type":"Service","@i
           </div>
 
           <div class="cotizacion-form-wrapper">
-            <form id="especializadaForm">
+            <form id="especializadaForm" action="https://formsubmit.co/josecruz@originsecurity.mx" method="POST">
+              <!-- Honeypot -->
+              <input type="text" name="_honey" style="display:none">
+              <!-- Disable Captcha -->
+              <input type="hidden" name="_captcha" value="false">
+              <!-- Success Page -->
+              <input type="hidden" name="_next" value="https://seguridad-privada.com.mx/gracias.html">
+              <!-- Subject -->
+              <input type="hidden" name="_subject" value="Nueva Cotización de Seguridad Especializada">
               <div class="cotizacion-form-row">
                 <!-- Columna Izquierda -->
                 <div class="cotizacion-form-col">
