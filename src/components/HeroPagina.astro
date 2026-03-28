@@ -2,7 +2,10 @@
 /**
  * HeroPagina.astro — ORIGINS Private Security
  * Hero reutilizable para páginas internas.
- * Breadcrumb automático + schema BreadcrumbList + badge + H1 + desc + CTAs
+ * Layout 2 columnas idéntico al hero del index:
+ *   Col izq: badge + H1 + subtítulo + trust signals + CTAs
+ *   Col der: 2 párrafos SEO (seoParrafo1 / seoParrafo2)
+ * Breadcrumb standalone en barra blanca sobre el hero.
  */
 
 interface Breadcrumb {
@@ -17,6 +20,8 @@ interface Props {
   breadcrumb?: Breadcrumb[];
   ctaPrimario?: { texto: string; href: string };
   ctaWhatsapp?: boolean;
+  seoParrafo1?: string;
+  seoParrafo2?: string;
 }
 
 const {
@@ -26,14 +31,14 @@ const {
   breadcrumb = [],
   ctaPrimario,
   ctaWhatsapp = false,
+  seoParrafo1,
+  seoParrafo2,
 } = Astro.props;
 
 const siteUrl = 'https://seguridad-privada.com.mx';
 
-// Always prepend "Inicio" as first breadcrumb
 const fullBreadcrumb = [{ label: 'Inicio', href: '/' }, ...breadcrumb];
 
-// Build BreadcrumbList schema
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -44,214 +49,356 @@ const breadcrumbSchema = {
     "item": `${siteUrl}${item.href}`
   }))
 };
+
+const hasSeo = seoParrafo1 || seoParrafo2;
 ---
 
 {fullBreadcrumb.length > 1 && (
   <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 )}
 
-<section class="hero-page" aria-labelledby="hero-page-title">
-  <div class="container">
-
-    {fullBreadcrumb.length > 1 && (
-      <nav class="hero-page__breadcrumb" aria-label="Breadcrumb">
+{fullBreadcrumb.length > 1 && (
+  <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-bar__list">
         {fullBreadcrumb.map((item, index) => {
           const isLast = index === fullBreadcrumb.length - 1;
           return (
-            <>
-              {index > 0 && <span class="hero-page__bc-sep" aria-hidden="true">/</span>}
+            <li class="breadcrumb-bar__item">
+              {index > 0 && (
+                <svg class="breadcrumb-bar__sep" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+              )}
               {isLast
-                ? <span aria-current="page">{item.label}</span>
-                : <a href={item.href}>{item.label}</a>
+                ? <span aria-current="page" class="breadcrumb-bar__current">{item.label}</span>
+                : <a href={item.href} class="breadcrumb-bar__link">{item.label}</a>
               }
-            </>
+            </li>
           );
         })}
-      </nav>
-    )}
-
-    <div class="hero-page__badge">
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-        <path d="m9 12 2 2 4-4"/>
-      </svg>
-      <span>{badge}</span>
+      </ol>
     </div>
+  </nav>
+)}
 
-    <h1 id="hero-page-title" class="hero-page__titulo">{titulo}</h1>
-    <p class="hero-page__desc">{descripcion}</p>
+<section class="hero-page" aria-labelledby="hero-page-title">
+  <div class="hero-page__bg"></div>
+  <div class="container">
+    <div class:list={['hero-page__grid', { 'hero-page__grid--full': !hasSeo }]}>
 
-    {(ctaPrimario || ctaWhatsapp) && (
-      <div class="hero-page__cta">
-        {ctaPrimario && (
-          <a href={ctaPrimario.href} class="btn btn-hero-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            {ctaPrimario.texto}
-          </a>
+      <!-- Columna izquierda: badge + H1 + subtítulo + trust + CTAs -->
+      <div class="hero-page__main">
+
+        <div class="hero-page__badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+          <span>{badge}</span>
+        </div>
+
+        <h1 id="hero-page-title" class="hero-page__titulo">{titulo}</h1>
+
+        <p class="hero-page__desc">{descripcion}</p>
+
+        <!-- Trust signals -->
+        <div class="hero-page__trust">
+          <div class="hero-page__trust-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            <span>+15 años de experiencia</span>
+          </div>
+          <div class="hero-page__trust-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span>+50 condominios protegidos</span>
+          </div>
+          <div class="hero-page__trust-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Atención 24/7</span>
+          </div>
+        </div>
+
+        {(ctaPrimario || ctaWhatsapp) && (
+          <div class="hero-page__cta">
+            {ctaPrimario && (
+              <a href={ctaPrimario.href} class="hero-page__btn hero-page__btn--primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                {ctaPrimario.texto}
+              </a>
+            )}
+            {ctaWhatsapp && (
+              <a
+                href="https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio"
+                class="hero-page__btn hero-page__btn--wa"
+                target="_blank"
+                rel="noopener"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp Directo
+              </a>
+            )}
+          </div>
         )}
-        {ctaWhatsapp && (
-          <a
-            href="https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio"
-            class="btn btn-hero-whatsapp"
-            target="_blank"
-            rel="noopener"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp Directo
-          </a>
-        )}
+
       </div>
-    )}
 
+      <!-- Columna derecha: párrafos SEO (opcional) -->
+      {hasSeo && (
+        <div class="hero-page__seo">
+          {seoParrafo1 && <p class="hero-page__seo-text" set:html={seoParrafo1} />}
+          {seoParrafo2 && <p class="hero-page__seo-text" set:html={seoParrafo2} />}
+        </div>
+      )}
+
+    </div>
   </div>
 </section>
 
 <style>
 /* ============================================================
-   HERO PAGE — Reutilizable para páginas internas
+   BREADCRUMB BAR
 ============================================================ */
-.hero-page {
-  padding: 4rem 0 5rem;
-  background: linear-gradient(160deg, #0d1520 0%, #0a0f1e 100%);
-  position: relative;
-  overflow: hidden;
+.breadcrumb-bar {
+  background: #f8f9fa;
+  border-bottom: 1px solid rgba(10,15,30,0.07);
 }
 
-/* Breadcrumb */
-.hero-page__breadcrumb {
+.breadcrumb-bar__list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 0.375rem;
-  margin-bottom: 1.5rem;
-  font-size: 0.8125rem;
-  color: rgba(255,255,255,0.5);
+  gap: 0.125rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.625rem 0;
 }
 
-.hero-page__breadcrumb a {
-  color: rgba(255,255,255,0.5);
+.breadcrumb-bar__item {
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+
+.breadcrumb-bar__link {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(10,15,30,0.5);
   text-decoration: none;
+  padding: 0.1rem 0.25rem;
+  border-radius: 4px;
+  transition: color 0.15s ease;
+}
+.breadcrumb-bar__link:hover { color: rgba(10,15,30,0.85); }
+
+.breadcrumb-bar__current {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(10,15,30,0.8);
+  padding: 0.1rem 0.25rem;
 }
 
-.hero-page__breadcrumb a:hover {
-  color: rgba(255,255,255,0.8);
+.breadcrumb-bar__sep {
+  color: rgba(10,15,30,0.25);
+  flex-shrink: 0;
 }
 
-.hero-page__breadcrumb span[aria-current="page"] {
-  color: rgba(255,255,255,0.75);
+/* ============================================================
+   HERO PAGE — Fondo y estructura
+============================================================ */
+.hero-page {
+  position: relative;
+  padding: 3.5rem 0 4.5rem;
+  background: linear-gradient(135deg, var(--color-primary, #0a0f1e) 0%, #1a2634 100%);
+  overflow: hidden;
 }
 
-.hero-page__bc-sep {
-  color: rgba(255,255,255,0.25);
-  margin: 0 0.125rem;
+.hero-page__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
 }
 
-/* Badge */
+.hero-page .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Grid: 1 columna mobile → 2 columnas desktop */
+.hero-page__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+.hero-page__grid--full {
+  max-width: 760px;
+}
+
+/* ============================================================
+   COLUMNA IZQUIERDA
+============================================================ */
 .hero-page__badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.375rem 0.875rem;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
+  padding: 0.5rem 1rem;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.18);
   border-radius: 980px;
   margin-bottom: 1.25rem;
-  color: rgba(255,255,255,0.8);
-  font-size: 0.72rem;
+  color: rgba(255,255,255,0.92);
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.05em;
 }
 
-.hero-page__badge svg {
-  color: #25D366;
-  flex-shrink: 0;
-}
+.hero-page__badge svg { color: #25D366; flex-shrink: 0; }
 
-/* Título H1 */
 .hero-page__titulo {
-  font-size: 2rem;
+  font-size: 1.875rem;
   font-weight: 800;
   color: #ffffff;
   line-height: 1.18;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   margin: 0 0 1rem;
-  max-width: 760px;
 }
 
-/* Descripción */
 .hero-page__desc {
-  font-size: 1rem;
-  color: rgba(255,255,255,0.78);
-  line-height: 1.7;
-  margin: 0 0 2rem;
-  max-width: 680px;
+  font-size: 1.0625rem;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.65;
+  margin: 0 0 1.75rem;
+  max-width: 560px;
+}
+
+.hero-page__desc strong { color: #fff; font-weight: 600; }
+
+/* Trust signals */
+.hero-page__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+  margin-bottom: 2rem;
+}
+
+.hero-page__trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.75);
+  font-weight: 500;
+}
+
+.hero-page__trust-item svg {
+  flex-shrink: 0;
+  opacity: 0.8;
 }
 
 /* CTAs */
 .hero-page__cta {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 0.875rem;
 }
 
-.btn-hero-primary {
+.hero-page__btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
-  padding: 0.875rem 1.75rem;
-  background: #ffffff;
-  color: #0a0f1e;
-  font-size: 0.9375rem;
+  padding: 1rem 1.75rem;
+  font-size: 1rem;
   font-weight: 700;
-  border-radius: 8px;
+  border-radius: 12px;
   text-decoration: none;
 }
 
-.btn-hero-primary:hover {
-  background: #f0f0f0;
+.hero-page__btn--primary {
+  background: #ffffff;
+  color: var(--color-primary, #0a0f1e);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
+.hero-page__btn--primary:hover { background: #f4f4f4; }
 
-.btn-hero-whatsapp {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.875rem 1.75rem;
+.hero-page__btn--wa {
   background: #25D366;
   color: #ffffff;
-  font-size: 0.9375rem;
-  font-weight: 700;
-  border-radius: 8px;
-  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(37,211,102,0.3);
+}
+.hero-page__btn--wa:hover { background: #1ebe5d; }
+
+/* ============================================================
+   COLUMNA DERECHA — SEO
+============================================================ */
+.hero-page__seo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
 }
 
-.btn-hero-whatsapp:hover {
-  background: #1ebe5d;
+.hero-page__seo-text {
+  font-size: 0.9375rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.78);
+  margin: 0;
+}
+
+.hero-page__seo-text strong { color: rgba(255,255,255,0.95); font-weight: 600; }
+
+.hero-page__seo-text a {
+  color: rgba(255,255,255,0.92);
+  text-decoration-color: rgba(255,255,255,0.3);
+  text-underline-offset: 3px;
+}
+.hero-page__seo-text a:hover {
+  color: #ffffff;
+  text-decoration-color: rgba(255,255,255,0.7);
 }
 
 /* ============================================================
    Tablet 768px+
 ============================================================ */
 @media (min-width: 768px) {
-  .hero-page {
-    padding: 5rem 0 6rem;
+  .hero-page { padding: 5rem 0 6rem; }
+
+  .hero-page__titulo { font-size: 2.5rem; line-height: 1.15; }
+
+  .hero-page__cta {
+    flex-direction: row;
+    gap: 1rem;
   }
 
-  .hero-page__titulo {
-    font-size: 2.5rem;
-  }
+  .hero-page__btn { width: auto; }
 
-  .hero-page__desc {
-    font-size: 1.125rem;
-  }
+  .hero-page__seo-text { font-size: 1rem; }
 }
 
 /* ============================================================
-   Desktop 1024px+
+   Desktop 1024px+ — Two Columns
 ============================================================ */
 @media (min-width: 1024px) {
-  .hero-page__titulo {
-    font-size: 3rem;
+  .hero-page { padding: 6rem 0 7rem; }
+
+  .hero-page__grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 4rem;
+    align-items: center;
   }
+
+  .hero-page__titulo { font-size: 2.875rem; line-height: 1.12; }
+
+  .hero-page__trust-item { font-size: 0.875rem; }
+
+  .hero-page__seo-text { font-size: 1.0625rem; line-height: 1.85; }
+}
+
+/* ============================================================
+   Wide 1280px+
+============================================================ */
+@media (min-width: 1280px) {
+  .hero-page__titulo { font-size: 3.125rem; }
+  .hero-page__grid { gap: 5rem; }
 }
 </style>

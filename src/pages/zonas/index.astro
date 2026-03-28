@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
+import HeroPagina from '../../components/HeroPagina.astro';
 
 const zonas = await getCollection('zonas', ({ data }) => !data.draft);
 const cdmx = zonas.filter(z => z.data.state === 'Ciudad de México');
@@ -31,21 +32,16 @@ const schema = {
   canonical={`${siteUrl}/zonas`}
   schema={schema}
 >
-  <!-- Hero -->
-  <section class="zonas-hero">
-    <div class="container">
-      <div class="zonas-hero__badge">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        Cobertura CDMX y Zona Metropolitana
-      </div>
-      <h1>Seguridad Privada en CDMX y Estado de México</h1>
-      <p>ORIGINS Private Security ofrece servicios de guardias intramuros, seguridad para condominios y control de accesos en todas las alcaldías de la Ciudad de México y los principales municipios del Estado de México.</p>
-      <div class="zonas-hero__cta">
-        <a href="/contacto" class="btn btn-primary">Solicitar Cotización Gratis</a>
-        <a href="https://wa.me/525530255580" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp Directo</a>
-      </div>
-    </div>
-  </section>
+  <HeroPagina
+    badge="Cobertura CDMX y Zona Metropolitana"
+    titulo="Seguridad Privada en CDMX y Estado de México"
+    descripcion="Guardias intramuros, control de accesos y monitoreo CCTV en todas las alcaldías de la Ciudad de México y los principales municipios del Estado de México."
+    breadcrumb={[{ label: 'Zonas de Servicio', href: '/zonas' }]}
+    ctaPrimario={{ texto: 'Solicitar Cotización', href: '/contacto' }}
+    ctaWhatsapp={true}
+    seoParrafo1='<strong>ORIGINS Private Security</strong> opera en toda la Zona Metropolitana del Valle de México. Desde <a href="/zonas/miguel-hidalgo">Miguel Hidalgo</a> y <a href="/zonas/cuauhtemoc">Cuauhtémoc</a> hasta <a href="/zonas/naucalpan">Naucalpan</a> y <a href="/zonas/tlalnepantla">Tlalnepantla</a>, asignamos guardias que viven cerca de la zona de servicio para garantizar puntualidad y conocimiento del entorno local.'
+    seoParrafo2='Cada zona tiene sus propias características de riesgo, patrones de acceso y perfil de residente. Por eso diseñamos protocolos específicos por ubicación, no soluciones genéricas. <strong>Permiso SSC 0102-15</strong> vigente. Cotización gratuita en menos de 24 horas para cualquier alcaldía o municipio.'
+  />
 
   <!-- CDMX -->
   <section class="zonas-grid-section">

@@ -356,7 +356,7 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
 .header__inner {
   max-width: var(--container-max, 1280px);
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 0.875rem 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -417,11 +417,11 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
 ============================================================ */
 @media (min-width: 1024px) {
   .header__inner {
-    padding: 2rem 2rem;
+    padding: 0.875rem 2rem;
     gap: 0;
   }
 
-  .header__logo img { height: 64px; }
+  .header__logo img { height: 56px; }
 
   .header__hamburger { display: none; }
 
@@ -535,7 +535,7 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
 }
 
 @media (min-width: 1280px) {
-  .header__inner { padding: 2rem 2.5rem; }
+  .header__inner { padding: 0.875rem 2.5rem; }
   .nav__link { padding: 0.5rem 1rem; font-size: 0.9375rem; }
 }
 
@@ -545,7 +545,7 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
 .mega {
   display: none;
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   width: min(900px, 90vw);
@@ -555,11 +555,23 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
   box-shadow: 0 8px 40px rgba(0,0,0,0.12);
   z-index: 1000;
   overflow: hidden;
+  padding-top: 8px; /* compensa el gap visual sin romper hover */
+}
+
+/* Puente invisible que cubre el gap entre el link y el panel */
+.nav__item--mega::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  right: -20px;
+  height: 12px;
+  display: none;
 }
 
 @media (min-width: 1024px) {
-  .nav__item--mega:hover .mega,
-  .nav__item--mega:focus-within .mega { display: block; }
+  .nav__item--mega.is-open .mega { display: block; }
+  .nav__item--mega.is-open::after { display: block; }
 }
 
 .mega__inner {
@@ -725,7 +737,7 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
 .dropdown {
   display: none;
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   width: 380px;
@@ -734,13 +746,24 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
   border-radius: 14px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);
   z-index: 1000;
-  padding: 1rem;
+  padding: 1.5rem 1rem 1rem;
   overflow: hidden;
 }
 
+/* Puente invisible para el dropdown de Zonas */
+.nav__item--dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  right: -20px;
+  height: 12px;
+  display: none;
+}
+
 @media (min-width: 1024px) {
-  .nav__item--dropdown:hover .dropdown,
-  .nav__item--dropdown:focus-within .dropdown { display: block; }
+  .nav__item--dropdown.is-open .dropdown { display: block; }
+  .nav__item--dropdown.is-open::after { display: block; }
 }
 
 .dropdown__section { margin-bottom: 0.875rem; }
@@ -1039,6 +1062,57 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeDrawer();
   });
+
+  // ============================================================
+  // DESKTOP MEGA-MENÚ Y DROPDOWN — JS con delay de salida
+  // ============================================================
+  if (window.innerWidth >= 1024) {
+    const CLOSE_DELAY = 150; // ms de gracia antes de cerrar
+
+    const megaItems = document.querySelectorAll<HTMLElement>('.nav__item--mega, .nav__item--dropdown');
+
+    megaItems.forEach((item) => {
+      let closeTimer: ReturnType<typeof setTimeout> | null = null;
+
+      const open = () => {
+        // Cerrar todos los demás primero
+        megaItems.forEach(i => i.classList.remove('is-open'));
+        if (closeTimer) clearTimeout(closeTimer);
+        item.classList.add('is-open');
+      };
+
+      const scheduleClose = () => {
+        closeTimer = setTimeout(() => {
+          item.classList.remove('is-open');
+        }, CLOSE_DELAY);
+      };
+
+      const cancelClose = () => {
+        if (closeTimer) clearTimeout(closeTimer);
+      };
+
+      // El li completo (incluye el panel)
+      item.addEventListener('mouseenter', open);
+      item.addEventListener('mouseleave', scheduleClose);
+
+      // Si el mouse entra al panel, cancela el cierre
+      const panel = item.querySelector<HTMLElement>('.mega, .dropdown');
+      panel?.addEventListener('mouseenter', cancelClose);
+      panel?.addEventListener('mouseleave', scheduleClose);
+    });
+
+    // Cerrar al hacer click fuera
+    document.addEventListener('click', (e) => {
+      if (!(e.target as Element).closest('.nav__item--mega, .nav__item--dropdown')) {
+        megaItems.forEach(i => i.classList.remove('is-open'));
+      }
+    });
+
+    // Cerrar con Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') megaItems.forEach(i => i.classList.remove('is-open'));
+    });
+  }
 
   // ============================================================
   // ACCORDION (mobile drawer)
