@@ -82,61 +82,44 @@
 }
 
 /* ============================================================
-   NAV CTA BAR — Accesos rápidos post-hero
+   NAV CTA — Accesos rápidos post-hero (mismo diseño que CTA final)
 ============================================================ */
-.nav-cta-bar {
-  background: #ffffff;
-  border-bottom: 1px solid rgba(10,15,30,0.07);
-  box-shadow: 0 4px 16px rgba(10,15,30,0.05);
+.servicios-nav-cta {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #0a0f1e 0%, #1a2634 100%);
 }
 
-.nav-cta-bar__grid {
+.servicios-nav-cta__inner {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
 }
 
-.nav-cta-bar__item {
+.servicios-nav-cta__content { display: flex; flex-direction: column; }
+
+.servicios-nav-cta__links {
   display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
-  padding: 1.25rem 1.5rem;
-  text-decoration: none;
-  color: #0a0f1e;
-  border-right: 1px solid rgba(10,15,30,0.07);
-  border-bottom: 1px solid rgba(10,15,30,0.07);
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  margin-top: 1.5rem;
 }
 
-.nav-cta-bar__item:last-child {
-  border-right: none;
-}
-
-.nav-cta-bar__item--cta {
-  background: #0a0f1e;
-  color: #ffffff;
-}
-
-.nav-cta-bar__item--cta .nav-cta-bar__label { color: #ffffff; }
-.nav-cta-bar__item--cta .nav-cta-bar__sub { color: rgba(255,255,255,0.6); }
-.nav-cta-bar__item--cta .nav-cta-bar__icon { color: #25D366; }
-
-.nav-cta-bar__icon {
-  display: flex;
+.servicios-nav-cta__link {
+  display: inline-flex;
   align-items: center;
-  margin-bottom: 0.25rem;
-  color: rgba(10,15,30,0.45);
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 980px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
 }
-
-.nav-cta-bar__label {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #0a0f1e;
-  line-height: 1.2;
-}
-
-.nav-cta-bar__sub {
-  font-size: 0.775rem;
-  color: rgba(10,15,30,0.5);
-  line-height: 1.3;
+.servicios-nav-cta__link:hover {
+  background: rgba(255,255,255,0.14);
+  color: #ffffff;
 }
 
 /* ============================================================
@@ -248,23 +231,12 @@
    Tablet 768px+
 ============================================================ */
 @media (min-width: 768px) {
-  .nav-cta-bar__grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .nav-cta-bar__item {
-    border-bottom: none;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.875rem;
-  }
-
-  .nav-cta-bar__icon { margin-bottom: 0; }
-
+  .servicios-nav-cta,
   .servicios-cta-final {
     padding: 5rem 0;
   }
 
+  .servicios-nav-cta__inner,
   .servicios-cta-final__inner {
     grid-template-columns: 1fr auto;
     align-items: center;
