@@ -80,3 +80,202 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ============================================================
+   NAV CTA BAR — Accesos rápidos post-hero
+============================================================ */
+.nav-cta-bar {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(10,15,30,0.07);
+  box-shadow: 0 4px 16px rgba(10,15,30,0.05);
+}
+
+.nav-cta-bar__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.nav-cta-bar__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1.25rem 1.5rem;
+  text-decoration: none;
+  color: #0a0f1e;
+  border-right: 1px solid rgba(10,15,30,0.07);
+  border-bottom: 1px solid rgba(10,15,30,0.07);
+}
+
+.nav-cta-bar__item:last-child {
+  border-right: none;
+}
+
+.nav-cta-bar__item--cta {
+  background: #0a0f1e;
+  color: #ffffff;
+}
+
+.nav-cta-bar__item--cta .nav-cta-bar__label { color: #ffffff; }
+.nav-cta-bar__item--cta .nav-cta-bar__sub { color: rgba(255,255,255,0.6); }
+.nav-cta-bar__item--cta .nav-cta-bar__icon { color: #25D366; }
+
+.nav-cta-bar__icon {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+  color: rgba(10,15,30,0.45);
+}
+
+.nav-cta-bar__label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #0a0f1e;
+  line-height: 1.2;
+}
+
+.nav-cta-bar__sub {
+  font-size: 0.775rem;
+  color: rgba(10,15,30,0.5);
+  line-height: 1.3;
+}
+
+/* ============================================================
+   CTA FINAL — antes del footer
+============================================================ */
+.servicios-cta-final {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #0a0f1e 0%, #1a2634 100%);
+}
+
+.servicios-cta-final__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+.servicios-cta-final__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.375rem 0.875rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 980px;
+  margin-bottom: 1rem;
+  color: #25D366;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.servicios-cta-final__titulo {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.875rem;
+}
+
+.servicios-cta-final__desc {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.65;
+  margin: 0 0 1.5rem;
+  max-width: 520px;
+}
+
+.servicios-cta-final__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+}
+
+.servicios-cta-final__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  justify-content: center;
+}
+
+.servicios-cta-final__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.75rem;
+  border-radius: 10px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.servicios-cta-final__btn--wa {
+  background: #25D366;
+  color: #ffffff;
+}
+.servicios-cta-final__btn--wa:hover { background: #1ebe5d; }
+
+.servicios-cta-final__btn--outline {
+  background: transparent;
+  color: rgba(255,255,255,0.85);
+  border: 1.5px solid rgba(255,255,255,0.2);
+}
+.servicios-cta-final__btn--outline:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.35);
+}
+
+.servicios-cta-final__tel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  text-align: center;
+}
+.servicios-cta-final__tel:hover { color: #ffffff; }
+
+/* ============================================================
+   Tablet 768px+
+============================================================ */
+@media (min-width: 768px) {
+  .nav-cta-bar__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .nav-cta-bar__item {
+    border-bottom: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.875rem;
+  }
+
+  .nav-cta-bar__icon { margin-bottom: 0; }
+
+  .servicios-cta-final {
+    padding: 5rem 0;
+  }
+
+  .servicios-cta-final__inner {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .servicios-cta-final__actions {
+    flex-direction: column;
+    min-width: 260px;
+  }
+
+  .servicios-cta-final__titulo {
+    font-size: 2.25rem;
+  }
+}
