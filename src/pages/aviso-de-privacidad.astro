@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import HeroPagina from '../components/HeroPagina.astro';
+import NavCTA from '../components/NavCTA.astro';
 import '../styles/pages/legal.css';
 
 const siteUrl = 'https://seguridad-privada.com.mx';
@@ -53,4 +54,14 @@ const siteUrl = 'https://seguridad-privada.com.mx';
     </div>
   </section>
 
+  <NavCTA
+    footer={true}
+    ariaLabel="Continúa navegando en ORIGINS"
+    cards={[
+      { label: 'Nuestros Servicios', sublabel: 'Guardias, accesos y monitoreo',         href: '/servicios', icon: 'shield'  },
+      { label: 'Zonas de Cobertura', sublabel: 'CDMX y Zona Metropolitana',             href: '/zonas',     icon: 'map'     },
+      { label: 'Contacto',           sublabel: 'Atención 24/7 disponible',              href: '/contacto',  icon: 'phone'   },
+      { label: 'WhatsApp Directo',   sublabel: 'Respuesta en menos de 2 horas',         href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
+    ]}
+  />
 </Base>

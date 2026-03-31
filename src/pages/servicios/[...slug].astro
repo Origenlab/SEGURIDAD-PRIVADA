@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import HeroPagina from '../../components/HeroPagina.astro';
+import NavCTA from '../../components/NavCTA.astro';
 
 // Mapa de emojis por tipo de servicio
 const serviceIcons: Record<string, string> = {
@@ -111,6 +112,12 @@ if (servicio.data.faqs && servicio.data.faqs.length > 0) {
     }))
   });
 }
+
+// NavCTA dinámico: primer servicio relacionado como card principal, resto fijo
+const navCard1 = serviciosRelacionados.length > 0
+  ? { label: serviciosRelacionados[0].titulo, sublabel: serviciosRelacionados[0].descripcion.substring(0, 48) + '…', href: `/servicios/${todosLosServicios.find(s => s.data.title.split('|')[0].trim() === serviciosRelacionados[0].titulo)?.id ?? ''}`, icon: 'shield' as const }
+  : { label: 'Todos los Servicios', sublabel: 'Guardias, accesos y monitoreo', href: '/servicios', icon: 'shield' as const };
+const waServicio = 'https://wa.me/525530255580?text=' + encodeURIComponent('Hola, me interesa cotizar ' + servicio.data.title.split('|')[0].trim() + ' para mi condominio');
 ---
 
 <Base
@@ -133,66 +140,264 @@ if (servicio.data.faqs && servicio.data.faqs.length > 0) {
     seoParrafo2={`Más de 15 años de experiencia exclusiva en comunidades residenciales. <a href="/servicios">Ver todos los servicios</a> o contáctanos para un diagnóstico gratuito — respondemos en menos de 2 horas y entregamos propuesta formal en menos de 24 horas.`}
   />
 
-  <!-- Service Features -->
-  {servicio.data.serviceFeatures && servicio.data.serviceFeatures.length > 0 && (
-    <section class="service-features">
-      <div class="container">
-        <h2>¿Qué Incluye el Servicio?</h2>
-        <div class="features-grid">
-          {servicio.data.serviceFeatures.map((feature) => (
-            <div class="feature-card">
-              <h3>{feature.title}</h3>
-              <p>{feature.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
+  <NavCTA
+    ariaLabel={`Servicios relacionados con ${servicio.data.title.split('|')[0].trim()}`}
+    cards={[
+      navCard1,
+      { label: 'Zonas de Cobertura',   sublabel: 'CDMX y Zona Metropolitana',           href: '/zonas',     icon: 'map'    },
+      { label: 'Quiénes Somos',        sublabel: 'Permiso SSC 0102-15 · Desde 2008',     href: '/nosotros',  icon: 'people' },
+      { label: 'Cotizar este Servicio', sublabel: 'Diagnóstico gratuito en 24 horas',    href: waServicio, whatsapp: true, accent: true, external: true },
+    ]}
+  />
 
-  <!-- Main Content -->
+  <!-- Main Content + Features dentro del mismo grid con sidebar -->
   <section class="service-content">
     <div class="container">
       <div class="service-content__grid">
         <div class="service-content__main prose">
+
+          <!-- Features integradas al inicio del main content -->
+          {servicio.data.serviceFeatures && servicio.data.serviceFeatures.length > 0 && (
+            <div class="service-features-inline">
+              <h2 class="sfi__title">¿Qué Incluye el Servicio?</h2>
+              <div class="sfi__grid">
+                {servicio.data.serviceFeatures.map((feature) => (
+                  <div class="sfi__card">
+                    <span class="sfi__check">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                    </span>
+                    <div>
+                      <strong>{feature.title}</strong>
+                      <p>{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           <Content />
         </div>
 
         <!-- Sidebar -->
         <aside class="service-content__sidebar">
-          <!-- CTA Card -->
-          <div class="sidebar-card sidebar-card--cta">
-            <h3>¿Listo para Proteger tu Propiedad?</h3>
-            <p>Solicita una evaluación de seguridad sin costo.</p>
-            <a href={servicio.data.ctaLink} class="btn btn-primary btn-block">{servicio.data.ctaText}</a>
-            <p class="sidebar-card__phone">
-              <strong>Llámanos:</strong> <a href="tel:+525530255580">55 3025 5580</a>
-            </p>
+
+          <!-- WIDGET 1: CTA principal — conversión inmediata -->
+          <div class="sw sw--cta">
+            <span class="sw__badge">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              Permiso SSC 0102-15
+            </span>
+            <h3 class="sw__title">¿Necesitas cotización para tu condominio?</h3>
+            <p class="sw__desc">Diagnóstico gratuito · Respuesta en menos de 24 horas · Sin compromiso.</p>
+            <a
+              href={`https://wa.me/525530255580?text=${encodeURIComponent('Hola, me interesa cotizar ' + servicio.data.title.split('|')[0].trim() + ' para mi propiedad')}`}
+              class="sw__cta-wa"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Cotizar por WhatsApp
+            </a>
+            <a href="/contacto" class="sw__cta-outline">
+              Ver formulario de contacto
+            </a>
+            <div class="sw__tel">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <a href="tel:+525530255580">55 3025 5580</a>
+            </div>
           </div>
 
-          <!-- Related Services -->
-          {servicio.data.relatedServices && servicio.data.relatedServices.length > 0 && (
-            <div class="sidebar-card">
-              <h4>Servicios Relacionados</h4>
-              <ul class="related-list">
-                {servicio.data.relatedServices.map((related) => (
-                  <li><a href={`/servicios/${related}`}>{related.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</a></li>
-                ))}
-              </ul>
-            </div>
-          )}
+          <!-- WIDGET 2: Servicios relacionados (datos del frontmatter + fallback manual) -->
+          <div class="sw sw--list">
+            <h4 class="sw__heading">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Servicios Relacionados
+            </h4>
+            <ul class="sw__link-list">
+              {serviciosRelacionados.length > 0
+                ? serviciosRelacionados.map((rel) => (
+                  <li>
+                    <a href={`/servicios/${rel.id}`} class="sw__link-item">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                      <span>{rel.titulo}</span>
+                    </a>
+                  </li>
+                ))
+                : [
+                    { id: 'guardias-intramuros',     label: 'Guardias Intramuros'       },
+                    { id: 'control-de-accesos',       label: 'Control de Accesos'        },
+                    { id: 'vigilancia-remota-cctv',   label: 'Vigilancia Remota CCTV'    },
+                    { id: 'monitoreo-alarmas',         label: 'Monitoreo de Alarmas'      },
+                    { id: 'seguridad-condominios',     label: 'Seguridad Condominios'     },
+                  ].map((item) => (
+                    <li>
+                      <a href={`/servicios/${item.id}`} class="sw__link-item">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                        <span>{item.label}</span>
+                      </a>
+                    </li>
+                  ))
+              }
+              <li>
+                <a href="/servicios" class="sw__link-ver-todos">
+                  Ver todos los servicios
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
 
-          <!-- Target Locations -->
-          {servicio.data.targetLocations && servicio.data.targetLocations.length > 0 && (
-            <div class="sidebar-card">
-              <h4>Zonas de Servicio</h4>
-              <ul class="locations-list">
-                {servicio.data.targetLocations.map((location) => (
-                  <li>{location}</li>
-                ))}
-              </ul>
+          <!-- WIDGET 3: Zonas de cobertura -->
+          <div class="sw sw--list">
+            <h4 class="sw__heading">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+              Zonas de Cobertura
+            </h4>
+            <ul class="sw__link-list">
+              {[
+                { slug: 'miguel-hidalgo',  label: 'Miguel Hidalgo · Polanco'         },
+                { slug: 'cuauhtemoc',      label: 'Cuauhtémoc · Roma · Condesa'      },
+                { slug: 'benito-juarez',   label: 'Benito Juárez · Del Valle'        },
+                { slug: 'alvaro-obregon',  label: 'Álvaro Obregón · Santa Fe'        },
+                { slug: 'naucalpan',       label: 'Naucalpan · Interlomas'            },
+                { slug: 'atizapan',        label: 'Atizapán · Bosques'               },
+              ].map((z) => (
+                <li>
+                  <a href={`/zonas/${z.slug}`} class="sw__link-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                    <span>{z.label}</span>
+                  </a>
+                </li>
+              ))}
+              <li>
+                <a href="/zonas" class="sw__link-ver-todos">
+                  Ver todas las zonas
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- WIDGET 4: Credenciales de confianza -->
+          <div class="sw sw--trust">
+            <h4 class="sw__heading">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              Por qué confiar en ORIGINS
+            </h4>
+            <ul class="sw__trust-list">
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>Permiso SSC 0102-15</strong> vigente</span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Póliza de responsabilidad civil</span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Alta IMSS e INFONAVIT desde día 1</span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>+15 años</strong> en CDMX</span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span><strong>+50 condominios</strong> protegidos</span>
+              </li>
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Supervisión semanal documentada</span>
+              </li>
+            </ul>
+            <a href="/nosotros" class="sw__link-ver-todos" style="margin-top: 0.75rem;">
+              Conocer más sobre ORIGINS
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- WIDGET 5: Categorías del catálogo — navegación rápida -->
+          <div class="sw sw--list">
+            <h4 class="sw__heading">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+              Categorías de Servicios
+            </h4>
+            <ul class="sw__cat-list">
+              <li>
+                <a href="/servicios#seguridad-residencial" class="sw__cat-item">
+                  <span class="sw__cat-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  </span>
+                  <div>
+                    <strong>Seguridad Residencial</strong>
+                    <span>Guardias, accesos y patrullaje</span>
+                  </div>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="/servicios#tecnologia-monitoreo" class="sw__cat-item">
+                  <span class="sw__cat-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                  </span>
+                  <div>
+                    <strong>Tecnología y Monitoreo</strong>
+                    <span>CCTV, alarmas y GPS</span>
+                  </div>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="/servicios#proteccion-consultoria" class="sw__cat-item">
+                  <span class="sw__cat-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </span>
+                  <div>
+                    <strong>Protección y Consultoría</strong>
+                    <span>Ejecutivos, valores y análisis</span>
+                  </div>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- WIDGET 6: Contacto directo -->
+          <div class="sw sw--contact">
+            <h4 class="sw__heading">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Contacto Directo
+            </h4>
+            <div class="sw__contact-list">
+              <a href="tel:+525530255580" class="sw__contact-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                <div>
+                  <strong>Teléfono</strong>
+                  <span>55 3025 5580</span>
+                </div>
+              </a>
+              <a href="https://wa.me/525530255580" class="sw__contact-item sw__contact-item--wa" target="_blank" rel="noopener">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <span>Respuesta en 2h</span>
+                </div>
+              </a>
+              <a href="mailto:contacto@seguridad-privada.com.mx" class="sw__contact-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <div>
+                  <strong>Email</strong>
+                  <span>contacto@seguridad-privada.com.mx</span>
+                </div>
+              </a>
+              <div class="sw__horario">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Atención 24 horas · Lun a Dom
+              </div>
             </div>
-          )}
+          </div>
+
         </aside>
       </div>
     </div>
@@ -244,19 +449,16 @@ if (servicio.data.faqs && servicio.data.faqs.length > 0) {
     </section>
   )}
 
-  <!-- Final CTA -->
-  <section class="service-cta">
-    <div class="container">
-      <div class="service-cta__content">
-        <h2>Protege tu Propiedad con Profesionales</h2>
-        <p>Más de 15 años de experiencia en seguridad privada. Permiso SSC vigente. Guardias certificados.</p>
-        <div class="service-cta__buttons">
-          <a href="/contacto" class="btn btn-primary">Solicitar Cotización</a>
-          <a href="https://wa.me/525530255580" class="btn btn-whatsapp">WhatsApp Directo</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <NavCTA
+    footer={true}
+    ariaLabel={`Más sobre ${servicio.data.title.split('|')[0].trim()}`}
+    cards={[
+      navCard1,
+      { label: 'Zonas de Cobertura',    sublabel: 'CDMX y Zona Metropolitana',          href: '/zonas',     icon: 'map'    },
+      { label: 'Quiénes Somos',         sublabel: 'Permiso SSC 0102-15 · Desde 2008',   href: '/nosotros',  icon: 'people' },
+      { label: 'Cotizar este Servicio', sublabel: 'Diagnóstico gratuito en 24 horas',   href: waServicio, whatsapp: true, accent: true, external: true },
+    ]}
+  />
 </Base>
 
 <style>
@@ -384,51 +586,86 @@ if (servicio.data.faqs && servicio.data.faqs.length > 0) {
   }
 
   /* Service Features */
-  .service-features {
-    padding: 3rem 0;
-    background: var(--color-accent);
-  }
-
-  .service-features h2 {
-    text-align: center;
+  /* === Service Features — inline dentro del main content === */
+  .service-features-inline {
+    background: #f8f9fa;
+    border: 1px solid rgba(10,15,30,0.07);
+    border-radius: 16px;
+    padding: 1.5rem;
     margin-bottom: 2rem;
   }
 
-  .features-grid {
+  .sfi__title {
+    font-size: 1.125rem !important;
+    font-weight: 800 !important;
+    color: #0a0f1e !important;
+    margin: 0 0 1.125rem !important;
+    padding-bottom: 0.75rem !important;
+    border-bottom: 1px solid rgba(10,15,30,0.08) !important;
+    letter-spacing: -0.01em !important;
+  }
+
+  /* Anular el ::before del h2 del prose para este título */
+  .service-features-inline .sfi__title::before {
+    display: none !important;
+  }
+
+  .sfi__grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 0;
   }
 
-  .feature-card {
-    background: var(--color-white);
-    padding: 1.5rem;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-sm);
+  .sfi__card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.625rem 0;
+    border-bottom: 1px solid rgba(10,15,30,0.05);
   }
 
-  .feature-card h3 {
-    font-size: 1.0625rem;
-    margin-bottom: 0.5rem;
+  .sfi__card:last-child { border-bottom: none; }
+
+  .sfi__check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: rgba(37,211,102,0.12);
+    border-radius: 50%;
+    color: #25D366;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
   }
 
-  .feature-card p {
-    font-size: 0.9375rem;
-    color: var(--color-text-light);
+  .sfi__card > div {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .sfi__card strong {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #0a0f1e;
+    line-height: 1.3;
+    margin-bottom: 0.2rem;
+  }
+
+  .sfi__card p {
+    font-size: 0.8125rem;
+    color: rgba(10,15,30,0.55);
+    line-height: 1.5;
     margin: 0;
-    line-height: 1.6;
   }
 
   @media (min-width: 640px) {
-    .features-grid {
+    .sfi__grid {
       grid-template-columns: repeat(2, 1fr);
+      gap: 0 1.25rem;
     }
-  }
-
-  @media (min-width: 1024px) {
-    .features-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    .sfi__card:nth-last-child(-n+2) { border-bottom: none; }
   }
 
   /* Service Content */
@@ -450,114 +687,851 @@ if (servicio.data.faqs && servicio.data.faqs.length > 0) {
 
   .service-content__main.prose h2 {
     font-size: 1.5rem;
-    margin-top: 2rem;
+    font-weight: 800;
+    color: #0a0f1e;
+    letter-spacing: -0.02em;
+    margin-top: 2.5rem;
     margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(10,15,30,0.08);
   }
 
   .service-content__main.prose h3 {
-    font-size: 1.25rem;
-    margin-top: 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #0a0f1e;
+    margin-top: 1.75rem;
     margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .service-content__main.prose h3::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 1em;
+    background: #25D366;
+    border-radius: 2px;
+    flex-shrink: 0;
   }
 
   .service-content__main.prose p {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.125rem;
   }
 
   .service-content__main.prose ul,
   .service-content__main.prose ol {
-    padding-left: 1.5rem;
+    padding-left: 0;
     margin-bottom: 1.25rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
   }
 
   .service-content__main.prose li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.9375rem;
+    color: rgba(10,15,30,0.75);
+    line-height: 1.6;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid rgba(10,15,30,0.05);
+  }
+
+  .service-content__main.prose li:last-child { border-bottom: none; }
+
+  .service-content__main.prose li::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #25D366;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.45em;
+  }
+
+  .service-content__main.prose strong {
+    color: #0a0f1e;
+    font-weight: 700;
+  }
+
+  .service-content__main.prose a {
+    color: #0a0f1e;
+    font-weight: 600;
+    text-underline-offset: 3px;
+  }
+
+  .service-content__main.prose hr {
+    border: none;
+    border-top: 0;
+    margin: 2.5rem 0 0;
+    display: none; /* Los separadores visuales ya están en los section-header y blocks */
+  }
+
+  /* === Intro block === */
+  :global(.prose-intro) {
     margin-bottom: 0.5rem;
   }
 
-  /* Sidebar */
-  .service-content__sidebar {
+  /* === Section header (badge + H2 + subtítulo) === */
+  :global(.prose-section-header) {
+    margin: 3rem 0 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 2px solid rgba(10,15,30,0.07);
+  }
+
+  :global(.prose-section-badge) {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    background: rgba(10,15,30,0.06);
+    border: 1px solid rgba(10,15,30,0.1);
+    border-radius: 980px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: rgba(10,15,30,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.625rem;
+  }
+
+  :global(.prose-section-header) h2 {
+    font-size: 1.375rem !important;
+    font-weight: 800 !important;
+    color: #0a0f1e !important;
+    letter-spacing: -0.02em !important;
+    margin: 0 0 0.5rem !important;
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+  }
+
+  :global(.prose-section-header) h2::before { display: none !important; }
+
+  :global(.prose-section-sub) {
+    font-size: 0.9rem !important;
+    color: rgba(10,15,30,0.55) !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+  }
+
+  /* === Numbered section block === */
+  :global(.prose-section-block) {
+    margin: 0 0 2rem 0;
+    background: #ffffff;
+    border: 1px solid rgba(10,15,30,0.07);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  :global(.prose-section-block__header) {
     display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid rgba(10,15,30,0.07);
   }
 
-  .sidebar-card {
-    background: var(--color-accent);
+  :global(.prose-section-block__num) {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: rgba(10,15,30,0.12);
+    line-height: 1;
+    flex-shrink: 0;
+    letter-spacing: -0.04em;
+  }
+
+  :global(.prose-section-block__label) {
+    display: block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #25D366;
+    margin-bottom: 0.25rem;
+  }
+
+  :global(.prose-section-block__title) {
+    font-size: 1rem !important;
+    font-weight: 800 !important;
+    color: #0a0f1e !important;
+    line-height: 1.25 !important;
+    margin: 0 !important;
+  }
+
+  :global(.prose-section-block__title)::before { display: none !important; }
+
+  /* === Dos columnas: texto + imágenes === */
+  :global(.prose-two-col) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
     padding: 1.5rem;
-    border-radius: var(--border-radius);
   }
 
-  .sidebar-card--cta {
-    background: var(--color-primary);
-    color: var(--color-white);
-  }
-
-  .sidebar-card--cta h3 {
-    color: var(--color-white);
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-  }
-
-  .sidebar-card--cta p {
-    margin-bottom: 1rem;
-    opacity: 0.9;
-  }
-
-  .sidebar-card--cta .btn-primary {
-    background: var(--color-white);
-    color: var(--color-primary);
-  }
-
-  .sidebar-card__phone {
-    margin-top: 1rem;
-    margin-bottom: 0;
-    font-size: 0.9375rem;
-  }
-
-  .sidebar-card__phone a {
-    color: var(--color-white);
-  }
-
-  .sidebar-card h4 {
-    font-size: 1rem;
+  :global(.prose-two-col__text) p {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: rgba(10,15,30,0.7);
     margin-bottom: 1rem;
   }
 
-  .related-list,
-  .locations-list {
+  :global(.prose-two-col__text) ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
 
-  .related-list li,
-  .locations-list li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid var(--color-border);
-    font-size: 0.9375rem;
+  :global(.prose-two-col__text) li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(10,15,30,0.05);
+    font-size: 0.875rem;
+    color: rgba(10,15,30,0.7);
+    line-height: 1.5;
   }
 
-  .related-list li:last-child,
-  .locations-list li:last-child {
-    border-bottom: none;
+  :global(.prose-two-col__text) li:last-child { border-bottom: none; }
+
+  :global(.prose-two-col__text) li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: #25D366;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.45em;
   }
 
-  .btn-block {
-    display: block;
+  :global(.prose-two-col__img) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  :global(.prose-two-col__img) img {
     width: 100%;
-    text-align: center;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+  }
+
+  /* En el contexto del main (con sidebar a la derecha, ~824px disponibles)
+     el two-col tiene 2 columnas de ~373px c/u.
+     Las imágenes en la columna derecha deben apilarse para verse grandes. */
+  @media (min-width: 768px) {
+    :global(.prose-two-col) {
+      grid-template-columns: 1fr 0.9fr;
+      gap: 1.75rem;
+      align-items: start;
+    }
+
+    /* Imágenes en 1 columna para que sean más grandes */
+    :global(.prose-two-col__img) {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+  }
+
+  /* Tabla dentro de section block */
+  :global(.prose-section-block) :global(.prose-table-wrap) {
+    margin: 0 1.5rem 1.5rem;
+  }
+
+  /* === Steps === */
+  :global(.prose-steps) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    border: 1px solid rgba(10,15,30,0.07);
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 1.25rem 0;
+  }
+
+  :global(.prose-step) {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.125rem 1.25rem;
+    border-bottom: 1px solid rgba(10,15,30,0.07);
+    background: #ffffff;
+  }
+
+  :global(.prose-step):last-child { border-bottom: none; }
+
+  :global(.prose-step):nth-child(even) { background: #fafafa; }
+
+  :global(.prose-step__num) {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #0a0f1e;
+    background: rgba(10,15,30,0.06);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 0.775rem;
+    letter-spacing: 0.02em;
+  }
+
+  :global(.prose-step__content) {
+    flex: 1;
+  }
+
+  :global(.prose-step__content) strong {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0a0f1e;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+  }
+
+  :global(.prose-step__content) p {
+    font-size: 0.825rem;
+    color: rgba(10,15,30,0.55);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  @media (min-width: 640px) {
+    :global(.prose-steps) { grid-template-columns: 1fr 1fr; }
+    :global(.prose-step):nth-child(1),
+    :global(.prose-step):nth-child(2) { border-bottom: 1px solid rgba(10,15,30,0.07); }
+    :global(.prose-step):nth-child(3),
+    :global(.prose-step):nth-child(4) { border-bottom: none; }
+  }
+
+  /* === Highlight box === */
+  :global(.prose-highlight) {
+    background: rgba(37,211,102,0.07);
+    border-left: 3px solid #25D366;
+    border-radius: 0 10px 10px 0;
+    padding: 0.875rem 1.125rem;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: rgba(10,15,30,0.8);
+    margin: 1.25rem 0;
+  }
+
+  /* === Imagen doble lado a lado === */
+  :global(.prose-img-grid) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.875rem;
+    margin: 1.25rem 0;
+  }
+
+  :global(.prose-img-grid) img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+  }
+
+  @media (min-width: 640px) {
+    :global(.prose-img-grid) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* === Galería 3 columnas === */
+  :global(.prose-gallery) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  :global(.prose-gallery) figure {
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(10,15,30,0.07);
+    background: #f8f9fa;
+  }
+
+  :global(.prose-gallery) img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+  }
+
+  :global(.prose-gallery) figcaption {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.75rem;
+    color: rgba(10,15,30,0.5);
+    line-height: 1.4;
+    font-style: normal;
+  }
+
+  @media (min-width: 640px) {
+    :global(.prose-gallery) { grid-template-columns: repeat(2, 1fr); }
   }
 
   @media (min-width: 1024px) {
+    :global(.prose-gallery) { grid-template-columns: repeat(3, 1fr); }
+    :global(.prose-img-grid) img { height: 220px; }
+  }
+
+  /* === Tabla responsive === */
+  :global(.prose-table-wrap) {
+    overflow-x: auto;
+    margin: 1.25rem 0;
+    border-radius: 12px;
+    border: 1px solid rgba(10,15,30,0.08);
+  }
+
+  :global(.prose-table-wrap) table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    min-width: 480px;
+  }
+
+  :global(.prose-table-wrap) th {
+    background: #0a0f1e;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    white-space: nowrap;
+  }
+
+  :global(.prose-table-wrap) td {
+    padding: 0.625rem 1rem;
+    color: rgba(10,15,30,0.75);
+    border-bottom: 1px solid rgba(10,15,30,0.06);
+    vertical-align: middle;
+    line-height: 1.5;
+  }
+
+  :global(.prose-table-wrap) tr:last-child td { border-bottom: none; }
+
+  :global(.prose-table-wrap) tr:nth-child(even) td {
+    background: #fafafa;
+  }
+
+  /* Checkmark styling en tablas */
+  :global(.prose-table-wrap) td:not(:first-child) {
+    text-align: center;
+  }
+  :global(.prose-table-wrap) td:first-child {
+    font-weight: 600;
+    color: #0a0f1e;
+  }
+
+  /* === Numeración de pasos ol === */
+  .service-content__main.prose ol {
+    counter-reset: step-counter;
+    list-style: none;
+    padding: 0;
+  }
+
+  .service-content__main.prose ol li {
+    counter-increment: step-counter;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(10,15,30,0.06);
+  }
+
+  .service-content__main.prose ol li::before {
+    content: counter(step-counter);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    background: #0a0f1e;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+  }
+
+  /* ==========================================================
+     SIDEBAR WIDGETS — sistema sw
+  ========================================================== */
+  .service-content__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  /* Base widget */
+  .sw {
+    background: #ffffff;
+    border: 1px solid rgba(10,15,30,0.08);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  /* Widget heading compartido */
+  .sw__heading {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: rgba(10,15,30,0.55);
+    margin: 0 0 1rem;
+    padding-bottom: 0.625rem;
+    border-bottom: 1px solid rgba(10,15,30,0.07);
+  }
+
+  .sw__heading svg { flex-shrink: 0; opacity: 0.6; }
+
+  /* -------------------------------------------------------
+     WIDGET 1: CTA
+  ------------------------------------------------------- */
+  .sw--cta {
+    background: linear-gradient(160deg, #0a0f1e 0%, #1a2634 100%);
+    padding: 1.375rem 1.25rem;
+  }
+
+  .sw__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.3rem 0.75rem;
+    background: rgba(37,211,102,0.15);
+    border: 1px solid rgba(37,211,102,0.3);
+    border-radius: 980px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #25D366;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.875rem;
+  }
+
+  .sw__badge svg { color: #25D366; }
+
+  .sw__title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.5rem;
+  }
+
+  .sw__desc {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.55;
+    margin: 0 0 1.125rem;
+  }
+
+  .sw__cta-wa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: #25D366;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 700;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+  }
+  .sw__cta-wa:hover { background: #1ebe5d; }
+
+  .sw__cta-outline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0.65rem 1rem;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.18);
+    color: rgba(255,255,255,0.85);
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 0.875rem;
+  }
+  .sw__cta-outline:hover { background: rgba(255,255,255,0.1); }
+
+  .sw__tel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    font-size: 0.8125rem;
+    color: rgba(255,255,255,0.55);
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 0.75rem;
+  }
+
+  .sw__tel a {
+    color: rgba(255,255,255,0.9);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .sw__tel a:hover { color: #ffffff; }
+
+  /* -------------------------------------------------------
+     WIDGET 2 + 3: Listas de links
+  ------------------------------------------------------- */
+  .sw--list {
+    padding: 1.25rem;
+  }
+
+  .sw__link-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .sw__link-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(10,15,30,0.05);
+    font-size: 0.8375rem;
+    color: rgba(10,15,30,0.7);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .sw__link-list li:last-child .sw__link-item { border-bottom: none; }
+
+  .sw__link-item svg { flex-shrink: 0; color: rgba(10,15,30,0.3); }
+
+  .sw__link-item:hover {
+    color: #0a0f1e;
+  }
+  .sw__link-item:hover svg { color: #0a0f1e; }
+
+  .sw__link-ver-todos {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    margin-top: 0.625rem;
+    font-size: 0.775rem;
+    font-weight: 700;
+    color: #0a0f1e;
+    text-decoration: none;
+  }
+  .sw__link-ver-todos:hover { opacity: 0.7; }
+
+  /* -------------------------------------------------------
+     WIDGET 4: Trust
+  ------------------------------------------------------- */
+  .sw--trust {
+    padding: 1.25rem;
+    background: #f8f9fa;
+  }
+
+  .sw__trust-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sw__trust-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    color: rgba(10,15,30,0.7);
+    line-height: 1.4;
+  }
+
+  .sw__trust-list li svg { flex-shrink: 0; margin-top: 0.1rem; }
+  .sw__trust-list li strong { color: #0a0f1e; font-weight: 700; }
+
+  /* -------------------------------------------------------
+     WIDGET 5: Categorías
+  ------------------------------------------------------- */
+  .sw__cat-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .sw__cat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.625rem 0;
+    border-bottom: 1px solid rgba(10,15,30,0.05);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .sw__cat-list li:last-child .sw__cat-item { border-bottom: none; }
+
+  .sw__cat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(10,15,30,0.05);
+    color: #0a0f1e;
+    flex-shrink: 0;
+  }
+
+  .sw__cat-item:hover .sw__cat-icon { background: #0a0f1e; color: #ffffff; }
+
+  .sw__cat-item > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    min-width: 0;
+  }
+
+  .sw__cat-item strong {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #0a0f1e;
+    line-height: 1.3;
+  }
+
+  .sw__cat-item span {
+    font-size: 0.725rem;
+    color: rgba(10,15,30,0.45);
+  }
+
+  .sw__cat-item > svg:last-child {
+    color: rgba(10,15,30,0.25);
+    flex-shrink: 0;
+  }
+
+  /* -------------------------------------------------------
+     WIDGET 6: Contacto
+  ------------------------------------------------------- */
+  .sw--contact {
+    padding: 1.25rem;
+  }
+
+  .sw__contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .sw__contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    padding: 0.625rem 0;
+    border-bottom: 1px solid rgba(10,15,30,0.06);
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .sw__contact-item:last-of-type { border-bottom: none; }
+
+  .sw__contact-item svg {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    background: rgba(10,15,30,0.05);
+    border-radius: 8px;
+    padding: 7px;
+    color: #0a0f1e;
+    box-sizing: content-box;
+  }
+
+  .sw__contact-item--wa svg {
+    background: rgba(37,211,102,0.1);
+    color: #25D366;
+  }
+
+  .sw__contact-item > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.05rem;
+  }
+
+  .sw__contact-item strong {
+    font-size: 0.775rem;
+    font-weight: 700;
+    color: #0a0f1e;
+    line-height: 1.2;
+  }
+
+  .sw__contact-item span {
+    font-size: 0.725rem;
+    color: rgba(10,15,30,0.5);
+    line-height: 1.3;
+  }
+
+  .sw__contact-item:hover strong { color: #25D366; }
+  .sw__contact-item--wa:hover strong { color: #1ebe5d; }
+
+  .sw__horario {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.5rem 0 0;
+    font-size: 0.725rem;
+    color: rgba(10,15,30,0.45);
+    border-top: 1px solid rgba(10,15,30,0.05);
+    margin-top: 0.25rem;
+  }
+
+  .sw__horario svg { opacity: 0.5; }
+
+  @media (min-width: 1024px) {
     .service-content__grid {
-      grid-template-columns: 1fr 320px;
-      gap: 3rem;
+      grid-template-columns: 1fr 340px;
+      gap: 2.5rem;
     }
 
+    /* Sidebar no sticky — el contenido es más largo que el viewport */
     .service-content__sidebar {
-      position: sticky;
-      top: 2rem;
       align-self: start;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .service-content__grid {
+      grid-template-columns: 1fr 360px;
+      gap: 3rem;
     }
   }
 
@@ -756,19 +1730,16 @@ if (servicio.data.faqs && servicio.data.faqs.length > 0) {
   }
 
   /* Service CTA */
-  .service-cta {
     padding: 4rem 0;
     background: var(--color-primary);
     color: var(--color-white);
     text-align: center;
   }
 
-  .service-cta h2 {
     color: var(--color-white);
     margin-bottom: 1rem;
   }
 
-  .service-cta p {
     opacity: 0.9;
     margin-bottom: 2rem;
     max-width: 600px;
@@ -776,7 +1747,6 @@ if (servicio.data.faqs && servicio.data.faqs.length > 0) {
     margin-right: auto;
   }
 
-  .service-cta__buttons {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -784,13 +1754,11 @@ if (servicio.data.faqs && servicio.data.faqs.length > 0) {
     align-items: center;
   }
 
-  .service-cta .btn-primary {
     background: var(--color-white);
     color: var(--color-primary);
   }
 
   @media (min-width: 640px) {
-    .service-cta__buttons {
       flex-direction: row;
     }
   }

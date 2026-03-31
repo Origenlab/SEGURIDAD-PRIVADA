@@ -2,7 +2,7 @@
    CTA BANNER - Mobile First
    ========================================================================== */
 .cta-banner {
-  padding: 3rem 0;
+  padding: 2.25rem 0;
   background: linear-gradient(135deg, var(--color-primary) 0%, #1a2634 100%);
   position: relative;
   overflow: hidden;
@@ -30,29 +30,30 @@
 }
 
 .cta-banner__text h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.25rem;
+  font-weight: 800;
   color: var(--color-white);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.375rem;
 }
 
 .cta-banner__text p {
-  font-size: 1rem;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
 
 .cta-banner__actions {
   display: flex;
-  flex-direction: column;
-  gap: 0.875rem;
+  flex-direction: row;
+  gap: 0.75rem;
   width: 100%;
-  max-width: 320px;
+  max-width: 380px;
 }
 
 .cta-banner__actions .btn-lg {
-  padding: 1rem 1.5rem;
-  font-size: 0.9375rem;
+  flex: 1;
+  padding: 0.875rem 1rem;
+  font-size: 0.875rem;
   justify-content: center;
 }
 

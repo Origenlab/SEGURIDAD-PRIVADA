@@ -4,8 +4,13 @@ import Base from '../../layouts/Base.astro';
 import HeroPagina from '../../components/HeroPagina.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
 import CategoriaCard from '../../components/CategoriaCard.astro';
-import PageCTA from '../../components/PageCTA.astro';
+import NavCTA from '../../components/NavCTA.astro';
+import ServicioCatalogCard from '../../components/ServicioCatalogCard.astro';
+import FAQItem from '../../components/FAQItem.astro';
+import { serviciosFaqs } from '../../data/servicios-faqs';
 import '../../styles/sections/servicios-cats.css';
+import '../../styles/sections/nav-cta.css';
+import '../../styles/sections/faq-cotizacion.css';
 import '../../styles/pages/servicios.css';
 
 const servicios = await getCollection('servicios', ({ data }) => !data.draft);
@@ -13,17 +18,32 @@ const siteUrl = 'https://seguridad-privada.com.mx';
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Servicios de Seguridad Privada — ORIGINS Private Security",
-  "description": "Guardias intramuros, seguridad para condominios, control de accesos, monitoreo CCTV y consultoría. Permiso SSC 0102-15.",
-  "url": `${siteUrl}/servicios`,
-  "numberOfItems": servicios.length,
-  "itemListElement": servicios.map((s, i) => ({
-    "@type": "ListItem",
-    "position": i + 1,
-    "name": s.data.title.split('|')[0].trim(),
-    "url": `${siteUrl}/servicios/${s.id}`
-  }))
+  "@graph": [
+    {
+      "@type": "ItemList",
+      "name": "Servicios de Seguridad Privada — ORIGINS Private Security",
+      "description": "Guardias intramuros, seguridad para condominios, control de accesos, monitoreo CCTV y consultoría. Permiso SSC 0102-15.",
+      "url": `${siteUrl}/servicios`,
+      "numberOfItems": servicios.length,
+      "itemListElement": servicios.map((s, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "name": s.data.title.split('|')[0].trim(),
+        "url": `${siteUrl}/servicios/${s.id}`
+      }))
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": serviciosFaqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer.replace(/<[^>]*>/g, '')
+        }
+      }))
+    }
+  ]
 };
 ---
 
@@ -45,50 +65,63 @@ const schema = {
     seoParrafo2='Desde <a href="/servicios/vigilancia-remota-cctv">vigilancia remota CCTV</a> hasta <a href="/servicios/consultoria-seguridad">consultoría de seguridad</a>, cada servicio está diseñado para la convivencia en comunidad. Supervisión semanal documentada, guardias con certificación vigente y proceso transparente desde el primer día. Más de 50 desarrollos en CDMX y <a href="/zonas">Zona Metropolitana</a> confían en ORIGINS.'
   />
 
-  <!-- NAV CTA — Accesos rápidos después del hero -->
-  <section class="servicios-nav-cta" aria-label="Navegación rápida de servicios">
+  <!-- NAV CTA — Misma estructura y diseño que el index -->
+  <section class="nav-cta" aria-label="Accesos rápidos a servicios">
     <div class="container">
-      <div class="servicios-nav-cta__inner">
-        <div class="servicios-nav-cta__content">
-          <span class="servicios-cta-final__badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-            Permiso SSC 0102-15
-          </span>
-          <h2 class="servicios-cta-final__titulo">Encuentra el servicio que necesitas</h2>
-          <p class="servicios-cta-final__desc">Navega por nuestras 3 categorías o solicita una cotización directa. Respondemos en menos de 2 horas.</p>
-          <div class="servicios-nav-cta__links">
-            <a href="#seguridad-residencial" class="servicios-nav-cta__link">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-              Seguridad Residencial
-            </a>
-            <a href="#tecnologia-monitoreo" class="servicios-nav-cta__link">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 6l10.5 6L22 6M1 6v12l10.5 6L22 18V6"/></svg>
-              Tecnología y Monitoreo
-            </a>
-            <a href="#proteccion-consultoria" class="servicios-nav-cta__link">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              Protección y Consultoría
-            </a>
+      <div class="nav-cta__grid">
+
+        <a href="#seguridad-residencial" class="nav-cta__card nav-cta__card--1">
+          <div class="nav-cta__card-inner">
+            <span class="nav-cta__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </span>
+            <div class="nav-cta__text">
+              <strong>Seguridad Residencial</strong>
+              <span>Guardias, accesos y patrullaje</span>
+            </div>
+            <svg class="nav-cta__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
-        </div>
-        <div class="servicios-cta-final__actions">
-          <a
-            href="https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio"
-            class="servicios-cta-final__btn servicios-cta-final__btn--wa"
-            target="_blank"
-            rel="noopener"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Solicitar Cotización por WhatsApp
-          </a>
-          <a href="/contacto" class="servicios-cta-final__btn servicios-cta-final__btn--outline">
-            Ver formulario de contacto
-          </a>
-          <a href="tel:+525530255580" class="servicios-cta-final__tel">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-            55 3025 5580
-          </a>
-        </div>
+        </a>
+
+        <a href="#tecnologia-monitoreo" class="nav-cta__card nav-cta__card--2">
+          <div class="nav-cta__card-inner">
+            <span class="nav-cta__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </span>
+            <div class="nav-cta__text">
+              <strong>Tecnología y Monitoreo</strong>
+              <span>CCTV, alarmas y GPS satelital</span>
+            </div>
+            <svg class="nav-cta__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </a>
+
+        <a href="#proteccion-consultoria" class="nav-cta__card nav-cta__card--3">
+          <div class="nav-cta__card-inner">
+            <span class="nav-cta__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v4l2 2"/></svg>
+            </span>
+            <div class="nav-cta__text">
+              <strong>Protección y Consultoría</strong>
+              <span>Ejecutivos, valores y análisis</span>
+            </div>
+            <svg class="nav-cta__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </a>
+
+        <a href="https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio" class="nav-cta__card nav-cta__card--4 nav-cta__card--accent" target="_blank" rel="noopener">
+          <div class="nav-cta__card-inner">
+            <span class="nav-cta__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </span>
+            <div class="nav-cta__text">
+              <strong>Cotización Gratuita</strong>
+              <span>Respuesta en menos de 2 horas</span>
+            </div>
+            <svg class="nav-cta__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </a>
+
       </div>
     </div>
   </section>
@@ -242,64 +275,463 @@ const schema = {
     </div>
   </section>
 
-  <!-- Todos los servicios -->
+  <!-- Catálogo completo de servicios — módulos 2 columnas -->
   <section class="todos-servicios" aria-labelledby="todos-servicios-title">
     <div class="container">
+
       <SectionHeader
         badge="Catálogo Completo"
-        titulo="Todos Nuestros Servicios"
-        subtitulo="Selecciona el servicio que necesitas para tu condominio o empresa."
-        align="center"
+        titulo="Todos Nuestros Servicios de Seguridad Privada en CDMX"
+        subtitulo="Guardias intramuros, control de accesos, monitoreo CCTV, patrullaje, protección ejecutiva y consultoría. Permiso SSC 0102-15 vigente."
+        parrafo1='Desde <a href="/servicios/guardias-intramuros"><strong>guardias intramuros certificados SSC</strong></a> hasta <a href="/servicios/consultoria-analisis-riesgos">análisis de riesgos con metodología ISO 31000</a>, ORIGINS cuenta con el catálogo más completo de seguridad privada para condominios y empresas en la Zona Metropolitana. Cada servicio está diseñado para operar de forma autónoma o integrada — el mismo proveedor, la misma supervisión, una sola factura.'
+        parrafo2='Más de 15 años protegiendo más de 50 desarrollos residenciales y corporativos en CDMX nos dan la experiencia que las empresas generalistas no tienen. Sin subcontrataciones, sin rotación arbitraria de guardias, con supervisión semanal presencial documentada. Selecciona el servicio que necesitas o solicita un <a href="#cotizacion"><strong>diagnóstico de seguridad gratuito</strong></a> — respondemos en menos de 24 horas.'
+        align="left"
       />
-      <div class="todos-servicios__grid">
-        {servicios.map(s => (
-          <a href={`/servicios/${s.id}`} class="servicio-link-card">
-            <h3>{s.data.title.split('|')[0].trim()}</h3>
-            <p>{s.data.description.replace(/ ☎.*$/, '').substring(0, 100)}...</p>
-            <span>Ver servicio →</span>
-          </a>
-        ))}
+
+      <div class="todos-servicios__lista">
+
+        <ServicioCatalogCard
+          slug="guardias-intramuros"
+          etiqueta="Seguridad Residencial"
+          titulo="Guardias Intramuros CDMX — Vigilancia 24/7 Certificada SSC"
+          descripcion="Nuestros guardias intramuros son la primera línea de defensa de tu condominio: presentes en lobby, áreas comunes y accesos vehiculares las 24 horas del día, los 365 días del año. Cada elemento pasa por verificación de antecedentes penales, exámenes psicométricos y capacitación específica para entornos residenciales antes de ser asignado. No son guardias genéricos — conocen a cada residente, aprenden los protocolos del edificio y coordinan directamente con la administración."
+          parrafo2="Con más de 15 años especializados exclusivamente en comunidades residenciales, nuestros guardias intramuros reducen incidentes hasta en un 85% en los primeros tres meses. Entregamos bitácoras digitales diarias, reportes fotográficos semanales y supervisión presencial documentada. Operamos con Permiso SSC 0102-15 vigente, póliza de responsabilidad civil y cumplimiento total de obligaciones laborales. Cotización personalizada en menos de 24 horas."
+          imagen="/img/img-guardias-intramuros/elementos-de-seguridad-intramuros.avif"
+          imagenAlt="Guardias intramuros certificados SSC en condominio CDMX"
+          badges={["Certificación SSC vigente", "Disponibilidad 24/7", "Bitácoras digitales", "Supervisión semanal"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="seguridad-condominios"
+          etiqueta="Seguridad Residencial"
+          titulo="Seguridad para Condominios CDMX — Protección Integral Residencial"
+          descripcion="La seguridad de un condominio va más allá de colocar un guardia en la puerta. En ORIGINS diseñamos un esquema de protección integral que abarca control de accesos peatonal y vehicular, monitoreo de áreas comunes, protocolos de respuesta ante emergencias y coordinación con la administración del edificio. Nuestros elementos conocen el edificio, a los residentes y los horarios de operación — eso hace la diferencia real."
+          parrafo2="Más de 50 condominios verticales y horizontales en CDMX confían en ORIGINS porque ofrecemos lo que las empresas generalistas no pueden: protocolos diseñados para la convivencia en comunidad. El guardia de tu condominio debe ser discreto, profesional y confiable. Alta al IMSS desde el primer día, uniformes estándar y reportes mensuales entregados a la administración. Diagnóstico gratuito de seguridad sin compromiso."
+          imagen="/img/img-condominios/control-accesos-biometrico-residencial-lujo.avif"
+          imagenAlt="Seguridad integral para condominios verticales en CDMX"
+          badges={["Protocolos residenciales", "+50 condominios", "Coordinación con administración", "Póliza RC incluida"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="control-de-accesos"
+          etiqueta="Seguridad Residencial"
+          titulo="Control de Accesos para Condominios y Empresas CDMX"
+          descripcion="Un sistema de control de accesos bien implementado es el activo de seguridad más rentable de cualquier propiedad. Nuestros guardias certificados gestionan el registro digital de visitantes, proveedores, empleados y vehículos con bitácoras en tiempo real accesibles desde cualquier dispositivo. Identificamos a cada persona que entra y sale, verificamos identidades y alertamos ante accesos no autorizados de manera inmediata."
+          parrafo2="Implementamos sistemas de control de accesos adaptados a cada tipo de propiedad: desde intercomunicadores y lectores de tarjeta hasta reconocimiento facial y control vehicular con plumas automáticas. Todo integrado con nuestra central de monitoreo para respuesta coordinada 24/7. El control de accesos de ORIGINS no es solo hardware — es el guardia capacitado que sabe cómo operar cada tecnología y qué hacer cuando algo falla."
+          imagen="/img/control-de-accesos/control-vehicular-para-condominios.avif"
+          imagenAlt="Control de accesos vehicular y peatonal para condominios CDMX"
+          badges={["Registro digital en tiempo real", "Control vehicular", "Integración CCTV", "Acceso remoto al historial"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="seguridad-residenciales"
+          etiqueta="Seguridad Residencial"
+          titulo="Seguridad para Residenciales Privados y Fraccionamientos CDMX"
+          descripcion="Los fraccionamientos y residenciales privados requieren un esquema de seguridad perimetral mucho más complejo que un condominio vertical: accesos vehiculares múltiples, casetas de vigilancia, patrullaje interno, iluminación estratégica y coordinación con la vialidad interna. En ORIGINS diseñamos el plan de seguridad para tu fraccionamiento desde cero, considerando la topografía, los puntos ciegos y los patrones de tráfico de tu comunidad."
+          parrafo2="Nuestro servicio para residenciales privados incluye guardias intramuros en casetas, patrullaje vehicular interno programado, control de accesos con registro de placas, monitoreo CCTV en perímetro y protocolos de respuesta ante intrusiones. Supervisión semanal presencial documentada y reportes a la mesa directiva del fraccionamiento. Más de 15 años atendiendo desarrollos residenciales de todos los tamaños en CDMX y Zona Metropolitana."
+          imagen="/img/img-condominios/seguridad-perimetral-condominios-premium.avif"
+          imagenAlt="Seguridad perimetral para fraccionamientos y residenciales privados CDMX"
+          badges={["Casetas de vigilancia", "Patrullaje interno", "Control de placas", "Monitoreo perimetral"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="patrullaje"
+          etiqueta="Seguridad Residencial"
+          titulo="Patrullaje para Condominios y Fraccionamientos CDMX"
+          descripcion="El patrullaje preventivo es la herramienta más efectiva para disuadir incidentes antes de que ocurran. Nuestras unidades de patrullaje realizan rondines programados y aleatorios con GPS de rastreo en tiempo real, cubriendo perímetros, estacionamientos, áreas comunes y zonas de baja visibilidad. Cada rondín queda registrado digitalmente con geolocalización, hora exacta y reporte fotográfico de puntos críticos."
+          parrafo2="El patrullaje de ORIGINS no es una ronda con linterna — es un servicio profesional con unidades identificadas, guardias certificados SSC y protocolo de reporte inmediato ante cualquier anomalía. Disponible en modalidad motorizada, vehicular y a pie según las necesidades de tu desarrollo. Ideal para fraccionamientos grandes, residenciales con múltiples accesos o condominios con áreas exteriores extensas. Cotización sin compromiso."
+          imagen="/img/patrullaje/patrullaje-de-seguridad-privada.avif"
+          imagenAlt="Patrullaje preventivo para condominios y fraccionamientos CDMX"
+          badges={["GPS en tiempo real", "Rondines documentados", "Modalidad motorizada o a pie", "Reportes fotográficos"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="vigilancia-remota-cctv"
+          etiqueta="Tecnología y Monitoreo"
+          titulo="Vigilancia Remota CCTV — Monitoreo 24/7 en Tiempo Real"
+          descripcion="La vigilancia remota CCTV de ORIGINS va más allá de instalar cámaras: integramos los sistemas de video en nuestra central de monitoreo profesional, con analistas capacitados revisando las imágenes en tiempo real las 24 horas. Cuando detectamos una anomalía, actuamos de inmediato — no esperamos a que el administrador vea las grabaciones al día siguiente. La diferencia entre prevención y reacción se mide en segundos."
+          parrafo2="Nuestros sistemas de CCTV incluyen cámaras de alta resolución con visión nocturna, analítica de video inteligente (detección de intrusiones, reconocimiento de placas, conteo de personas), almacenamiento en la nube y acceso remoto desde cualquier dispositivo. Compatible con instalaciones existentes o nuevo despliegue. Mantenimiento preventivo incluido. Cada instalación incluye diagnóstico de puntos ciegos y diseño de cobertura óptica óptima."
+          imagen="/img/img-vigilancia-remota/acceso-remoto-celular-tablet.avif"
+          imagenAlt="Vigilancia remota CCTV con monitoreo en tiempo real 24/7 CDMX"
+          badges={["Monitoreo activo 24/7", "Analítica inteligente", "Acceso remoto", "Almacenamiento en nube"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="monitoreo-alarmas"
+          etiqueta="Tecnología y Monitoreo"
+          titulo="Monitoreo de Alarmas 24/7 CDMX — Central Certificada"
+          descripcion="Nuestra central de monitoreo de alarmas opera 24 horas al día con personal especializado y tecnología de respuesta inmediata. Cuando tu alarma se activa, nuestros analistas verifican el evento en segundos, contactan a los responsables designados y coordinan la respuesta apropiada — ya sea con unidades de reacción propias, policía local o servicios de emergencia. El tiempo de respuesta promedio es menor a 90 segundos desde la activación."
+          parrafo2="Compatible con cualquier marca y modelo de alarma instalada. Ofrecemos monitoreo de intrusión, fuego, inundación, pánico, y fallo de energía. Reportes mensuales de eventos con estadísticas de incidentes y recomendaciones de mejora. Ideal para condominios con portón automático, empresas con múltiples puntos de acceso o propiedades vacías por temporadas. Sin contratos de largo plazo — pago mensual con cancelación en cualquier momento."
+          imagen="/img/img-monitoreo-de-alarmas/app-control-alarma-smartphone.avif"
+          imagenAlt="Central de monitoreo de alarmas 24/7 CDMX — respuesta en menos de 90 segundos"
+          badges={["Respuesta < 90 segundos", "Central certificada UL", "Cualquier marca", "Sin contrato forzoso"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="tecnologia-monitoreo-seguridad"
+          etiqueta="Tecnología y Monitoreo"
+          titulo="Tecnología de Seguridad Privada y Monitoreo CDMX"
+          descripcion="Integramos las tecnologías más efectivas del mercado en un sistema de seguridad unificado para tu propiedad: CCTV inteligente, control de accesos biométrico, monitoreo de alarmas, rastreo GPS y análisis predictivo de riesgos. A diferencia de los integradores tecnológicos tradicionales, en ORIGINS no solo instalamos el equipo — lo operamos con guardias certificados que saben exactamente qué hacer cuando la tecnología detecta una amenaza."
+          parrafo2="Nuestras soluciones tecnológicas están diseñadas para condominios, fraccionamientos y empresas que buscan maximizar su cobertura de seguridad sin necesariamente incrementar el número de guardias. La tecnología no reemplaza al elemento humano — lo potencia. Diagnóstico gratuito de infraestructura de seguridad existente, propuesta de mejoras y plan de implementación escalonado según presupuesto. Garantía de funcionamiento y mantenimiento preventivo incluido."
+          imagen="/img/tecnologia-monitoreo-seguridad/alertas-inteligentes.avif"
+          imagenAlt="Tecnología integrada de seguridad privada CCTV y monitoreo CDMX"
+          badges={["CCTV + Alarmas + GPS", "Analítica predictiva", "Mantenimiento incluido", "Diagnóstico gratuito"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="seguridad-gps-satelital"
+          etiqueta="Tecnología y Monitoreo"
+          titulo="Rastreo GPS Satelital para Empresas y Flotillas CDMX"
+          descripcion="El rastreo GPS satelital de ORIGINS proporciona visibilidad total sobre tu flota vehicular en tiempo real: posición exacta, velocidad, historial de rutas, alertas de zona, tiempo en ralentí y diagnóstico del vehículo. Nuestra plataforma de telemetría genera reportes ejecutivos automáticos y alertas inteligentes cuando se detectan comportamientos fuera de parámetro — exceso de velocidad, desvíos de ruta o paradas no autorizadas."
+          parrafo2="Más allá del rastreo básico, integramos análisis predictivo de riesgo por ruta, correlación con incidentes de seguridad en zonas de alta conflictividad y protocolos de respuesta ante emergencias en carretera. Ideal para empresas de distribución, flotas corporativas, empresas de traslado de valores y cualquier organización con activos vehiculares valiosos. Compatible con cualquier vehículo. Instalación en menos de 2 horas. Primer mes gratis en contratos anuales."
+          imagen="/img/img-rastreo-gps/central-monitoreo-gps-24-7.avif"
+          imagenAlt="Rastreo GPS satelital para flotillas empresariales CDMX"
+          badges={["Monitoreo en tiempo real", "Alertas inteligentes", "Analítica predictiva", "Compatible todo vehículo"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="proteccion-ejecutiva"
+          etiqueta="Protección y Consultoría"
+          titulo="Protección Ejecutiva CDMX — Escoltas Certificados SSC"
+          descripcion="La protección ejecutiva de ORIGINS está diseñada para altos directivos, empresarios y personalidades que requieren seguridad discreta y efectiva en su vida cotidiana y en desplazamientos de negocio. Nuestros escoltas son elementos certificados SSC con formación especializada en análisis de amenazas, conducción evasiva, primeros auxilios avanzados y protocolos de extracción segura. No son guardaespaldas — son profesionales de la protección personal."
+          parrafo2="Cada esquema de protección ejecutiva comienza con un análisis de vulnerabilidades personal: rutas habituales, puntos de exposición, perfil de riesgo y historial de amenazas. Con esa información diseñamos un plan de seguridad a la medida que puede incluir escolta personal, vehículo blindado, advance team, análisis de eventos y protocolos de emergencia. Operación discreta, comunicación cifrada y reportes de inteligencia semanales al cliente."
+          imagen="/img/img-proteccion-ejecutiva/analisis-amenazas-seguridad-ejecutiva.avif"
+          imagenAlt="Protección ejecutiva con escoltas certificados SSC en CDMX"
+          badges={["Escoltas certificados SSC", "Análisis de amenazas", "Vehículo blindado disponible", "Operación discreta"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="custodia-de-mercancias"
+          etiqueta="Protección y Consultoría"
+          titulo="Custodia de Efectivo y Valores CDMX — Traslado Blindado"
+          descripcion="El traslado de efectivo, valores y mercancías de alto valor requiere más que un guardia armado: necesita un protocolo probado, rutas variables, comunicación constante y cobertura de seguro integral. Nuestro servicio de custodia de valores incluye elementos certificados SSC, vehículos con dispositivos GPS activos, rutas dinámicas anti-espionaje, cadena de custodia documentada y póliza de seguro que cubre el 100% del valor transportado."
+          parrafo2="Atendemos traslados de efectivo para retail, joyerías, farmacias y empresas con operaciones de caja intensivas. También custodia de mercancías de alto valor, dispositivos electrónicos, documentación confidencial y arte. Servicio disponible en CDMX y Zona Metropolitana con tiempos de respuesta desde 2 horas para emergencias. Cotización por traslado o contrato mensual. Cada operación genera un reporte completo con evidencia fotográfica y firma de recepción."
+          imagen="/img/custodia-de-mercancias/cadena-custodia-certificada-evidencia-fotografica.avif"
+          imagenAlt="Custodia y traslado de efectivo y valores con seguridad privada CDMX"
+          badges={["Póliza de seguro integral", "GPS activo en traslado", "Rutas variables", "Cadena de custodia documentada"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="consultoria-seguridad"
+          etiqueta="Protección y Consultoría"
+          titulo="Consultoría de Seguridad Privada CDMX — Auditorías y Protocolos"
+          descripcion="Antes de contratar más guardias o más cámaras, necesitas saber exactamente dónde están las vulnerabilidades de tu propiedad o empresa. Nuestra consultoría de seguridad privada incluye una auditoría técnica completa: recorrido físico de instalaciones, análisis de puntos ciegos de CCTV, evaluación de protocolos de acceso, revisión de documentación operativa y entrevistas con el personal de seguridad existente. El resultado es un diagnóstico honesto con prioridades de inversión claras."
+          parrafo2="A diferencia de los consultores independientes, en ORIGINS la consultoría está respaldada por 15 años de operación real en campo. No solo identificamos problemas — diseñamos los protocolos, los documentamos, capacitamos al personal y damos seguimiento a la implementación. Trabajamos con la metodología ASIS International y estándares ISO para empresas que requieren certificaciones de cumplimiento. Informe ejecutivo entregado en máximo 5 días hábiles tras la auditoría."
+          imagen="/img/consultoria-de-seguridad/analisis-vulnerabilidades-seguridad-empresarial.avif"
+          imagenAlt="Consultoría y auditoría de seguridad privada para empresas y condominios CDMX"
+          badges={["Metodología ASIS International", "Informe ejecutivo en 5 días", "Diseño de protocolos", "Seguimiento a implementación"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="consultoria-analisis-riesgos"
+          etiqueta="Protección y Consultoría"
+          titulo="Análisis de Riesgos de Seguridad CDMX — Metodología ISO 31000"
+          descripcion="El análisis de riesgos de seguridad es el fundamento de cualquier estrategia de protección efectiva. Utilizando la metodología ISO 31000 y matrices de riesgo ejecutivas, identificamos, evaluamos y priorizamos los riesgos de seguridad de tu organización o propiedad. Analizamos amenazas internas y externas, probabilidad de ocurrencia, impacto potencial y capacidad de respuesta actual — para darte una visión clara de dónde estás expuesto y qué hacer al respecto."
+          parrafo2="El resultado del análisis de riesgos es un documento ejecutivo que puedes presentar a tu consejo directivo, aseguradora o entidad regulatoria. Incluye mapa de calor de riesgos, planes de mitigación priorizados por costo-beneficio, indicadores de control y calendario de revisión. Ideal para empresas que necesitan cumplimiento normativo, condominios que quieren justificar inversiones en seguridad ante su asamblea, o directivos que requieren una línea base documentada. Entrega en 7 días hábiles."
+          imagen="/img/analisis-de-riesgos/analisis-riesgos-metodologia-iso-31000.avif"
+          imagenAlt="Análisis de riesgos de seguridad privada con metodología ISO 31000 CDMX"
+          badges={["Metodología ISO 31000", "Mapa de calor de riesgos", "Entrega en 7 días", "Documento ejecutivo"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="investigaciones-confiabilidad"
+          etiqueta="Protección y Consultoría"
+          titulo="Investigaciones de Confiabilidad y Antecedentes CDMX"
+          descripcion="Antes de contratar personal de seguridad, administrativo o de confianza, necesitas saber con certeza quién es realmente esa persona. Nuestro servicio de investigaciones de confiabilidad incluye verificación de antecedentes penales a nivel federal y estatal, validación de referencias laborales, estudio socioeconómico, análisis de redes sociales y entrevista de confiabilidad. Entregamos un reporte ejecutivo confidencial en máximo 5 días hábiles."
+          parrafo2="Las investigaciones de confiabilidad de ORIGINS son utilizadas por empresas para validar candidatos a puestos sensibles, por condominios para verificar a proveedores recurrentes y por particulares para confirmar la identidad de personas de confianza en el hogar. Todo el proceso es legal, confidencial y cumple con la Ley Federal de Protección de Datos Personales. Más de 1,000 investigaciones realizadas en CDMX y Zona Metropolitana. Cotización por volumen disponible."
+          imagen="/img/investigaciones-de-confiabilidad/antecedentes-penales-investigacion-judicial.avif"
+          imagenAlt="Investigaciones de confiabilidad y verificación de antecedentes CDMX"
+          badges={["Verificación federal y estatal", "Estudio socioeconómico", "Confidencial LFPDP", "Reporte en 5 días"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="prevencion-de-perdidas"
+          etiqueta="Seguridad Especializada"
+          titulo="Prevención de Pérdidas para Empresas y Retail CDMX"
+          descripcion="La prevención de pérdidas es una disciplina especializada que combina técnicas de seguridad con análisis operativo para reducir mermas en retail, almacenes y empresas con flujo intenso de inventario. Nuestros especialistas en prevención de pérdidas están certificados SSC y capacitados en técnicas de detección conductual, análisis de video forense, auditorías de caja y procedimientos de detención conformes a la ley. Reducimos mermas documentadas hasta en un 70% en los primeros 90 días."
+          parrafo2="El servicio incluye diagnóstico inicial de vulnerabilidades operativas, diseño de protocolos anti-merma, capacitación al personal existente, implementación de controles físicos y tecnológicos, y reportes semanales con métricas de impacto. No trabajamos con cuotas de detenciones — trabajamos con reducción de pérdidas medible. Disponible en modalidad de guardia asignado, consultoría periódica o auditoría puntual. Experiencia en supermercados, ferreterías, farmacias y bodegas industriales."
+          imagen="/img/prevencion-de-perdidas/auditoria-de-seguridad.avif"
+          imagenAlt="Prevención de pérdidas para retail y empresas en CDMX — reducción de mermas"
+          badges={["Reducción mermas hasta 70%", "Capacitación al personal", "Sin cuotas de detenciones", "Reportes semanales"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="seguridad-eventos"
+          etiqueta="Seguridad Especializada"
+          titulo="Seguridad Privada para Eventos Corporativos CDMX"
+          descripcion="Un evento corporativo, boda o congreso requiere seguridad que sea invisible para los asistentes pero absolutamente efectiva ante cualquier incidente. Nuestros guardias para eventos están capacitados en control de multitudes, protocolos de evacuación, detección de amenazas en accesos y coordinación con los equipos de producción del evento. Operamos con uniformes discretos o identificados según el perfil del evento — siempre con la certificación SSC que exige la ley."
+          parrafo2="El servicio de seguridad para eventos incluye reunión previa de briefing, visita de reconocimiento del venue, diseño del plan de seguridad, asignación de personal según el aforo y puntos de riesgo, presencia durante el montaje y desmontaje, y reporte post-evento. Atendemos eventos de 50 a 5,000 personas. Experiencia en hoteles boutique, salones de convenciones, espacios al aire libre y recintos históricos en CDMX. Solicita tu cotización con mínimo 5 días de anticipación."
+          imagen="/img/img-eventos/control-accesos-eventos-corporativos.avif"
+          imagenAlt="Seguridad privada para eventos corporativos y bodas en CDMX"
+          badges={["Control de accesos", "Plan de evacuación", "Briefing previo al evento", "Aforos de 50 a 5,000"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="seguridad-construccion"
+          etiqueta="Seguridad Especializada"
+          titulo="Seguridad para Obras de Construcción CDMX"
+          descripcion="Las obras de construcción son uno de los objetivos más frecuentes de robo de materiales, maquinaria y herramienta en CDMX. Un solo fin de semana sin vigilancia puede significar pérdidas de cientos de miles de pesos. Nuestros guardias para construcción operan en modalidad intramuros 24/7, controlan el acceso de personal y proveedores, custodian el almacén de materiales y generan registros fotográficos del estado de la obra al inicio y fin de cada turno."
+          parrafo2="Más allá de la vigilancia básica, nuestro servicio para construcción incluye control de inventario de materiales de alto valor, verificación de identidad de personal de subcontratistas, manejo del libro de obra de seguridad y coordinación con el residente de obra. Experiencia en desarrollos residenciales, proyectos comerciales, remodelaciones de gran escala y obras de infraestructura en CDMX y Zona Metropolitana. Contratos por obra terminada o mensuales renovables."
+          imagen="/img/img-construccion/control-acceso-vehicular-construccion.avif"
+          imagenAlt="Seguridad privada para obras y construcción CDMX — guardias 24/7"
+          badges={["Vigilancia 24/7 intramuros", "Control de inventario", "Registro fotográfico", "Verificación de subcontratistas"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="seguridad-hospitalaria"
+          etiqueta="Seguridad Especializada"
+          titulo="Seguridad Privada Hospitalaria CDMX — Guardias para Clínicas"
+          descripcion="Los entornos médicos requieren guardias con una formación muy específica: deben mantener el orden sin generar alarma entre pacientes, saber cómo actuar en situaciones de crisis emocional, conocer los protocolos de acceso a áreas restringidas (UCI, quirófanos, farmacia) y estar capacitados en primeros auxilios. Nuestros guardias hospitalarios pasan por un programa de capacitación especializado antes de ser asignados a cualquier centro médico."
+          parrafo2="El servicio de seguridad hospitalaria de ORIGINS cubre control de accesos a instalaciones, vigilancia de estacionamientos, protección de farmacia y almacén de insumos, manejo de situaciones conflictivas con familiares de pacientes y coordinación con el equipo médico en emergencias. Experiencia en hospitales privados, clínicas de especialidad, centros de rehabilitación y consultorios de alto tráfico en CDMX. Disponibilidad de guardias femeninos para áreas sensibles."
+          imagen="/img/img-hospitalaria/control-accesos-hospitales-cdmx.avif"
+          imagenAlt="Seguridad privada para hospitales y clínicas CDMX — guardias especializados"
+          badges={["Capacitación médica específica", "Control de áreas restringidas", "Guardias femeninos disponibles", "Primeros auxilios avanzados"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="seguridad-especializada"
+          etiqueta="Seguridad Especializada"
+          titulo="Seguridad Privada Especializada CDMX — Soluciones a Medida"
+          descripcion="Algunos proyectos de seguridad no encajan en una categoría estándar: una exposición de arte, una zona logística de alta rotación, un campus universitario, un complejo de oficinas con múltiples inquilinos. Para estos casos, ORIGINS diseña esquemas de seguridad especializados que combinan los servicios que mejor se adaptan a las necesidades específicas del cliente. Comenzamos con un diagnóstico de seguridad gratuito y terminamos con un plan documentado a la medida."
+          parrafo2="La seguridad especializada de ORIGINS se apoya en nuestra experiencia operativa en más de 15 sectores diferentes durante los últimos 15 años. Podemos asignar guardias con perfil técnico (soporte a salas de servidores, control de laboratorios), guardias con idioma adicional para instalaciones con personal extranjero, o coordinadores de seguridad que actúen como enlace entre la dirección del cliente y el equipo operativo. Sin soluciones genéricas — cada esquema es diseñado para tu operación específica."
+          imagen="/img/seguridad-especializada/seguridad-para-eventos-corporativos-sociales-y-masivos.avif"
+          imagenAlt="Seguridad privada especializada y soluciones a medida CDMX"
+          badges={["Diagnóstico gratuito", "Perfil técnico disponible", "+15 sectores de experiencia", "Plan documentado a la medida"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="servicios-de-proteccion-ejecutiva-y-consultoria"
+          etiqueta="Protección y Consultoría"
+          titulo="Protección Ejecutiva y Consultoría Integral CDMX"
+          descripcion="La categoría de Protección Ejecutiva y Consultoría de ORIGINS agrupa los servicios de mayor valor para organizaciones y personas de alto perfil: protección personal, custodia de valores, análisis de riesgos corporativos e investigaciones de inteligencia. A diferencia de los servicios estándar, estos esquemas se diseñan en íntima colaboración con el cliente para garantizar que la seguridad se integre a su estilo de vida o operación empresarial sin interferir con ella."
+          parrafo2="Contamos con un equipo de especialistas con formación en inteligencia, protección personal y gestión de crisis que trabajan de manera coordinada para proporcionar una cobertura integral 360°. Cada cliente de esta categoría recibe un Director de Cuenta dedicado que actúa como punto único de contacto, orquesta todos los servicios contratados y realiza revisiones trimestrales del esquema de seguridad. Discreción absoluta garantizada por contrato. Consulta inicial sin costo."
+          imagen="/img/proteccion-y-consultoria/consultoria-de-seguridad-corporativa-y-auditorias-especializadas.avif"
+          imagenAlt="Protección ejecutiva y consultoría integral de seguridad privada CDMX"
+          badges={["Director de cuenta dedicado", "Cobertura 360°", "Discreción garantizada", "Consulta inicial gratuita"]}
+          reverse={false}
+        />
+
+        <ServicioCatalogCard
+          slug="guardias-de-seguridad-y-vigilancia"
+          etiqueta="Seguridad Residencial"
+          titulo="Guardias de Seguridad Intramuros CDMX — Vigilancia Profesional"
+          descripcion="Los guardias de seguridad intramuros de ORIGINS son el resultado de un proceso de selección y capacitación riguroso: verificación de antecedentes a nivel nacional, exámenes psicométricos, evaluación física, certificación SSC y 80 horas de capacitación específica para el tipo de propiedad donde serán asignados. No rotamos guardias arbitrariamente — el mismo elemento permanece en tu propiedad para que construya conocimiento del lugar y sus residentes."
+          parrafo2="La estabilidad del personal de seguridad es uno de los factores más importantes en la efectividad del servicio. Un guardia que conoce a cada residente detecta anomalías que uno nuevo nunca notaría. Por eso en ORIGINS garantizamos continuidad del elemento asignado y reemplazos planificados con periodo de empalme. Alta al IMSS desde el primer día, uniformes sin costo para el cliente y supervisión semanal presencial documentada. Contratos mensuales sin penalización por cancelación anticipada con 30 días de aviso."
+          imagen="/img/guardias-de-seguridad/guardias-intramuros-la-primera-impresion-que-tambien-protege.avif"
+          imagenAlt="Guardias de seguridad intramuros certificados SSC para condominios CDMX"
+          badges={["Continuidad del elemento", "80h capacitación específica", "Alta IMSS desde día 1", "Sin rotación arbitraria"]}
+          reverse={false}
+        />
+
       </div>
     </div>
   </section>
 
-  <!-- CTA FINAL antes del footer -->
-  <section class="servicios-cta-final" aria-labelledby="servicios-cta-title">
+  <!-- FAQ + COTIZACIÓN — misma estructura que el index -->
+  <section class="faq-cotizacion" id="cotizacion" aria-labelledby="servicios-faq-title">
     <div class="container">
-      <div class="servicios-cta-final__inner">
-        <div class="servicios-cta-final__content">
-          <span class="servicios-cta-final__badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-            Permiso SSC 0102-15
-          </span>
-          <h2 id="servicios-cta-title" class="servicios-cta-final__titulo">¿Listo para proteger tu condominio?</h2>
-          <p class="servicios-cta-final__desc">Diagnóstico gratuito y propuesta personalizada en menos de 24 horas. Sin compromisos, sin letra pequeña.</p>
-          <div class="servicios-cta-final__trust">
-            <span>✓ +15 años de experiencia</span>
-            <span>✓ +50 condominios protegidos</span>
-            <span>✓ Respuesta en menos de 2h</span>
+
+      <SectionHeader
+        badge="Preguntas Frecuentes"
+        titulo="Preguntas Frecuentes sobre Seguridad Privada en CDMX"
+        subtitulo="Las respuestas más completas sobre contratación, costos, tiempos y requisitos legales de la seguridad privada para condominios y empresas."
+        parrafo1='¿Primera vez contratando seguridad privada? ¿Quieres cambiar de empresa? Estas preguntas reflejan lo que más nos consultan administradores de condominio, directores de empresa y comités de vigilancia antes de firmar. Cada respuesta está basada en nuestra experiencia real de más de 15 años operando en CDMX.'
+        parrafo2='Si tu duda no está aquí, escríbenos al <a href="https://wa.me/525530255580"><strong>WhatsApp 55 3025 5580</strong></a> — un asesor especializado en seguridad para condominios responde en menos de 2 horas. Sin guiones, sin scripts: una persona real que conoce el sector y entiende tu necesidad.'
+        align="left"
+      />
+
+      <div class="faq-cotizacion__grid">
+
+        <!-- COL 1: FAQ -->
+        <div class="faq-cotizacion__faq" id="preguntas-frecuentes-servicios">
+          <div class="faq-cotizacion__col-header">
+            <span class="faq-cotizacion__col-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              Preguntas Frecuentes
+            </span>
+            <h2 id="servicios-faq-title" class="faq-cotizacion__col-title">Lo que más nos preguntan antes de contratar</h2>
+            <p class="faq-cotizacion__col-sub">¿No encuentras tu respuesta? Escríbenos directo al <a href="https://wa.me/525530255580">WhatsApp 55 3025 5580</a> — respondemos en menos de 2 horas.</p>
+          </div>
+
+          <div class="faq-cotizacion__items">
+            {serviciosFaqs.map((faq, i) => (
+              <FAQItem question={faq.question} answer={faq.answer} open={i === 0} />
+            ))}
           </div>
         </div>
-        <div class="servicios-cta-final__actions">
-          <a
-            href="https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio"
-            class="servicios-cta-final__btn servicios-cta-final__btn--wa"
-            target="_blank"
-            rel="noopener"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            Solicitar Cotización por WhatsApp
-          </a>
-          <a href="/contacto" class="servicios-cta-final__btn servicios-cta-final__btn--outline">
-            Ver formulario de contacto
-          </a>
-          <a href="tel:+525530255580" class="servicios-cta-final__tel">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-            55 3025 5580
-          </a>
+
+        <!-- COL 2: Formulario -->
+        <div class="faq-cotizacion__form-col">
+          <div class="faq-cotizacion__form-card">
+
+            <div class="faq-cotizacion__form-header">
+              <span class="faq-cotizacion__col-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Cotización Gratuita
+              </span>
+              <h3 class="faq-cotizacion__col-title">Solicita tu diagnóstico de seguridad</h3>
+              <p class="faq-cotizacion__col-sub">Propuesta personalizada en menos de 24 horas. Sin compromiso ni letra pequeña.</p>
+            </div>
+
+            <form id="serviciosForm" class="faq-cotizacion__form" action="https://formsubmit.co/josecruz@originsecurity.mx" method="POST" novalidate>
+              <input type="text" name="_honey" style="display:none" aria-hidden="true">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="https://seguridad-privada.com.mx/gracias.html">
+
+              <div class="faq-form__field">
+                <label for="s-nombre">Nombre completo <span aria-hidden="true">*</span></label>
+                <input type="text" id="s-nombre" name="nombre" required placeholder="Tu nombre completo" autocomplete="name">
+              </div>
+
+              <div class="faq-form__row">
+                <div class="faq-form__field">
+                  <label for="s-telefono">Teléfono <span aria-hidden="true">*</span></label>
+                  <input type="tel" id="s-telefono" name="telefono" required placeholder="55 1234 5678" autocomplete="tel">
+                </div>
+                <div class="faq-form__field">
+                  <label for="s-email">Correo electrónico <span aria-hidden="true">*</span></label>
+                  <input type="email" id="s-email" name="email" required placeholder="correo@empresa.com" autocomplete="email">
+                </div>
+              </div>
+
+              <div class="faq-form__field">
+                <label for="s-empresa">Nombre del condominio / empresa <span aria-hidden="true">*</span></label>
+                <input type="text" id="s-empresa" name="empresa" required placeholder="Ej: Torres Polanco, Grupo Horizonte">
+              </div>
+
+              <div class="faq-form__row">
+                <div class="faq-form__field">
+                  <label for="s-ubicacion">Zona <span aria-hidden="true">*</span></label>
+                  <select id="s-ubicacion" name="ubicacion" required>
+                    <option value="">Selecciona</option>
+                    <optgroup label="CDMX">
+                      <option value="cdmx-miguel-hidalgo">Miguel Hidalgo / Polanco</option>
+                      <option value="cdmx-cuauhtemoc">Cuauhtémoc / Roma / Condesa</option>
+                      <option value="cdmx-benito-juarez">Benito Juárez / Del Valle</option>
+                      <option value="cdmx-alvaro-obregon">Álvaro Obregón / Santa Fe</option>
+                      <option value="cdmx-coyoacan">Coyoacán / Pedregal</option>
+                      <option value="cdmx-tlalpan">Tlalpan / Perisur</option>
+                      <option value="cdmx-otras">Otra alcaldía CDMX</option>
+                    </optgroup>
+                    <optgroup label="Estado de México">
+                      <option value="edomex-naucalpan">Naucalpan / Interlomas</option>
+                      <option value="edomex-tlalnepantla">Tlalnepantla</option>
+                      <option value="edomex-atizapan">Atizapán / Bosques</option>
+                      <option value="edomex-huixquilucan">Huixquilucan</option>
+                      <option value="edomex-otros">Otro municipio EdoMex</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="faq-form__field">
+                  <label for="s-servicio">Servicio de interés <span aria-hidden="true">*</span></label>
+                  <select id="s-servicio" name="tipoServicio" required>
+                    <option value="">Selecciona</option>
+                    <option value="guardias-intramuros">Guardias Intramuros</option>
+                    <option value="seguridad-condominios">Seguridad Condominios</option>
+                    <option value="seguridad-residenciales">Residenciales / Fraccionamientos</option>
+                    <option value="control-accesos">Control de Accesos</option>
+                    <option value="patrullaje">Patrullaje</option>
+                    <option value="vigilancia-cctv">Vigilancia CCTV</option>
+                    <option value="monitoreo-alarmas">Monitoreo de Alarmas</option>
+                    <option value="gps-satelital">Rastreo GPS Satelital</option>
+                    <option value="proteccion-ejecutiva">Protección Ejecutiva</option>
+                    <option value="custodia-valores">Custodia de Valores</option>
+                    <option value="consultoria">Consultoría de Seguridad</option>
+                    <option value="analisis-riesgos">Análisis de Riesgos</option>
+                    <option value="investigaciones">Investigaciones de Confiabilidad</option>
+                    <option value="paquete-integral">Paquete Integral</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="faq-form__field">
+                <label for="s-mensaje">Cuéntanos sobre tu propiedad o proyecto <span class="faq-form__optional">(opcional)</span></label>
+                <textarea id="s-mensaje" name="mensaje" rows="3" placeholder="Número de accesos, torres o casas, residentes aproximados, servicios actuales..."></textarea>
+              </div>
+
+              <div class="faq-form__terms">
+                <input type="checkbox" id="s-terminos" name="terminos" required>
+                <label for="s-terminos">Acepto la <a href="/aviso-de-privacidad">política de privacidad</a> y recibir información sobre los servicios de ORIGINS</label>
+              </div>
+
+              <button type="submit" class="faq-form__submit">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Solicitar Cotización por WhatsApp
+              </button>
+
+              <p class="faq-form__note">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                Diagnóstico gratuito · Propuesta en 24h · Permiso SSC 0102-15
+              </p>
+            </form>
+
+          </div>
         </div>
+
       </div>
     </div>
   </section>
+
+  <NavCTA
+    footer={true}
+    ariaLabel="Explora más sobre ORIGINS Private Security"
+    cards={[
+      { label: 'Zonas de Cobertura',   sublabel: 'CDMX y Zona Metropolitana',          href: '/zonas',             icon: 'map'    },
+      { label: 'Quiénes Somos',        sublabel: 'Permiso SSC 0102-15 · Desde 2008',   href: '/nosotros',          icon: 'people' },
+      { label: 'Blog y Recursos',      sublabel: 'Guías de seguridad para condominios', href: '/blog',              icon: 'blog'   },
+      { label: 'WhatsApp Directo',     sublabel: 'Respuesta en menos de 2 horas',       href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
+    ]}
+  />
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('serviciosForm') as HTMLFormElement | null;
+    if (!form) return;
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const d = new FormData(form);
+      const msg = `*Cotización — Servicios ORIGINS*
+
+*Datos de Contacto:*
+- Nombre: ${d.get('nombre')}
+- Teléfono: ${d.get('telefono')}
+- Email: ${d.get('email')}
+- Empresa/Condominio: ${d.get('empresa') || 'No especificado'}
+
+*Servicio Solicitado:*
+- Zona: ${d.get('ubicacion')}
+- Servicio: ${d.get('tipoServicio')}
+
+*Mensaje:*
+${d.get('mensaje') || 'Sin mensaje adicional'}
+
+---
+Enviado desde seguridad-privada.com.mx/servicios`;
+
+      fetch(form.action, { method: 'POST', body: d, headers: { 'Accept': 'application/json' } }).catch(() => {});
+      window.open(`https://wa.me/525530255580?text=${encodeURIComponent(msg)}`, '_blank');
+    });
+  });
+</script>
 
 </Base>

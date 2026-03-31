@@ -9,66 +9,35 @@
   background: #ffffff;
 }
 
-/* ---- Todos los servicios ---- */
+/* ---- Catálogo completo — lista de módulos 2 columnas ---- */
 .todos-servicios {
-  padding: 4rem 0;
+  padding: 3rem 0 4rem;
   background: #f8f9fa;
 }
 
-.todos-servicios__grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+.todos-servicios__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.servicio-link-card {
-  display: block;
-  padding: 1.5rem;
-  background: #ffffff;
-  border-radius: 12px;
-  border: 1px solid rgba(10,15,30,0.08);
-  text-decoration: none;
-  color: inherit;
-}
-
-.servicio-link-card:hover {
-  border-color: rgba(10,15,30,0.18);
-  background: #fdfdfd;
-}
-
-.servicio-link-card h3 {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #0a0f1e;
-  margin: 0 0 0.5rem;
-  line-height: 1.35;
-}
-
-.servicio-link-card p {
-  font-size: 0.875rem;
-  color: rgba(10,15,30,0.55);
-  margin: 0 0 0.75rem;
-  line-height: 1.55;
-}
-
-.servicio-link-card span {
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: #0a0f1e;
+/* Separador visual entre servicios de distinta categoría */
+.todos-servicios__lista > * + * {
+  position: relative;
 }
 
 /* ============================================================
    Tablet 768px+
 ============================================================ */
 @media (min-width: 768px) {
-  .servicios-cats,
-  .todos-servicios {
+  .servicios-cats {
     padding: 5rem 0;
   }
-
-  .todos-servicios__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
+  .todos-servicios {
+    padding: 4rem 0 5rem;
+  }
+  .todos-servicios__lista {
+    gap: 2rem;
   }
 }
 
@@ -76,8 +45,11 @@
    Desktop 1024px+
 ============================================================ */
 @media (min-width: 1024px) {
-  .todos-servicios__grid {
-    grid-template-columns: repeat(3, 1fr);
+  .todos-servicios {
+    padding: 5rem 0 6rem;
+  }
+  .todos-servicios__lista {
+    gap: 2.5rem;
   }
 }
 

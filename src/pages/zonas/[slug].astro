@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import HeroPagina from '../../components/HeroPagina.astro';
+import NavCTA from '../../components/NavCTA.astro';
 
 export async function getStaticPaths() {
   const zonas = await getCollection('zonas', ({ data }) => !data.draft);
@@ -74,6 +75,16 @@ const schema = {
     seoParrafo2={`Operamos con <strong>Permiso SSC 0102-15</strong> y cobertura de <a href="/zonas">toda la Zona Metropolitana</a>. Servicios disponibles: <a href="/servicios/guardias-intramuros">guardias intramuros</a>, <a href="/servicios/control-de-accesos">control de accesos</a>, <a href="/servicios/vigilancia-remota-cctv">CCTV</a> y <a href="/servicios/patrullaje">patrullaje vehicular</a>. Cotización gratuita en menos de 24 horas.`}
   />
 
+  <NavCTA
+    ariaLabel={`Servicios de seguridad en ${zonaNombre}`}
+    cards={[
+      { label: 'Guardias Intramuros',   sublabel: `Vigilancia 24/7 en ${zonaNombre}`,     href: '/servicios/guardias-intramuros',   icon: 'shield'  },
+      { label: 'Control de Accesos',    sublabel: 'Registro digital peatonal y vehicular', href: '/servicios/control-de-accesos',    icon: 'shield'  },
+      { label: 'Todas las Zonas',       sublabel: 'CDMX y Zona Metropolitana',             href: '/zonas',                           icon: 'map'     },
+      { label: 'Cotización en ' + zonaNombre, sublabel: 'Diagnóstico gratuito en 24h',     href: waZona, whatsapp: true, accent: true, external: true },
+    ]}
+  />
+
   <!-- Servicios disponibles en la zona -->
   <section class="zona-servicios">
     <div class="container">
@@ -134,19 +145,16 @@ const schema = {
     </div>
   </section>
 
-  <!-- CTA Final -->
-  <section class="zona-cta" id="cotizacion">
-    <div class="container">
-      <div class="zona-cta__content">
-        <h2>Protege tu Condominio en {zona.data.zoneName}</h2>
-        <p>Más de 15 años de experiencia. Guardias certificados SSC. Permiso 0102-15. Respuesta en menos de 24 horas.</p>
-        <div class="zona-cta__buttons">
-          <a href="/contacto" class="btn btn-primary btn-lg">Solicitar Cotización Gratis</a>
-          <a href={waCTA} class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">WhatsApp Directo</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <NavCTA
+    footer={true}
+    ariaLabel={`Explora más sobre seguridad en ${zonaNombre}`}
+    cards={[
+      { label: 'Guardias Intramuros',  sublabel: `Vigilancia 24/7 en ${zonaNombre}`,    href: '/servicios/guardias-intramuros',  icon: 'shield'  },
+      { label: 'Nuestros Servicios',   sublabel: 'Guardias, accesos y monitoreo',        href: '/servicios',                      icon: 'shield'  },
+      { label: 'Todas las Zonas',      sublabel: 'CDMX y Zona Metropolitana',            href: '/zonas',                          icon: 'map'     },
+      { label: `Cotizar en ${zonaNombre}`, sublabel: 'Diagnóstico gratuito en 24h',      href: waCTA, whatsapp: true, accent: true, external: true },
+    ]}
+  />
 </Base>
 
 <style>
@@ -218,9 +226,4 @@ const schema = {
   @media (min-width: 1024px) { .zona-content__sidebar { position: sticky; top: 2rem; align-self: start; } }
 
   /* CTA */
-  .zona-cta { padding: 4rem 0; background: var(--color-primary); color: #fff; text-align: center; }
-  .zona-cta h2 { color: #fff; font-size: 1.75rem; margin-bottom: 1rem; }
-  .zona-cta p { opacity: 0.9; max-width: 600px; margin: 0 auto 2rem; }
-  .zona-cta__buttons { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-  .zona-cta .btn-primary { background: #fff; color: var(--color-primary); }
 </style>

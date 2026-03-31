@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .faq-cotizacion {
-  padding: 4rem 0 5rem;
+  padding: 2.75rem 0 3.25rem;
   background: var(--color-accent, #f8f9fa);
 }
 
@@ -84,8 +84,8 @@
 .faq-cotizacion__form-card {
   background: #ffffff;
   border: 1px solid rgba(10,15,30,0.08);
-  border-radius: 20px;
-  padding: 2rem;
+  border-radius: 16px;
+  padding: 1.5rem;
 }
 
 .faq-cotizacion__form-header {
@@ -260,9 +260,9 @@
    Tablet — 768px+
 ============================================================ */
 @media (min-width: 768px) {
-  .faq-cotizacion { padding: 5rem 0 6rem; }
+  .faq-cotizacion { padding: 4rem 0 5rem; }
   .faq-cotizacion__col-title { font-size: 1.5rem; }
-  .faq-cotizacion__form-card { padding: 2.25rem; }
+  .faq-cotizacion__form-card { padding: 2rem; }
 }
 
 /* ============================================================

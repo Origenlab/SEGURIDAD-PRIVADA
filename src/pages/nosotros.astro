@@ -1,9 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 import HeroPagina from '../components/HeroPagina.astro';
+import NavCTA from '../components/NavCTA.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import CredentialsCard from '../components/CredentialsCard.astro';
-import PageCTA from '../components/PageCTA.astro';
 import { homepageCredentials } from '../data/homepage-credentials';
 import '../styles/pages/nosotros.css';
 
@@ -119,6 +119,16 @@ const diferenciadores = [
     ctaWhatsapp={true}
     seoParrafo1='<strong>ORIGINS PRIVATE SECURITY S.A. DE C.V.</strong> nació en 2008 con un objetivo claro: especializarse en la seguridad de comunidades residenciales, no en todo a la vez. Hoy somos la empresa de referencia en CDMX para condominios verticales, fraccionamientos privados y desarrollos corporativos. Cada <a href="/servicios/guardias-intramuros">guardia intramuros</a> que colocamos pasa por verificación de antecedentes, exámenes psicométricos y capacitación específica para entornos residenciales.'
     seoParrafo2='Operamos con <strong>Permiso SSC 0102-15</strong>, póliza de responsabilidad civil vigente y cumplimiento total de obligaciones laborales. Más de 50 comunidades en CDMX y <a href="/zonas">Zona Metropolitana</a> confían en ORIGINS porque entregamos supervisión semanal documentada, bitácoras digitales y un proceso transparente desde la primera visita hasta el cierre del contrato.'
+  />
+
+  <NavCTA
+    ariaLabel="Explora ORIGINS Private Security"
+    cards={[
+      { label: 'Nuestros Servicios', sublabel: 'Guardias, accesos y monitoreo', href: '/servicios', icon: 'shield' },
+      { label: 'Zonas de Cobertura', sublabel: 'CDMX y Zona Metropolitana', href: '/zonas', icon: 'map' },
+      { label: 'Blog y Recursos', sublabel: 'Guías de seguridad residencial', href: '/blog', icon: 'blog' },
+      { label: 'Cotización Gratuita', sublabel: 'Diagnóstico en menos de 24 horas', href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
+    ]}
   />
 
   <!-- Stats -->
@@ -312,11 +322,15 @@ const diferenciadores = [
     </div>
   </section>
 
-  <PageCTA
-    titulo="¿Listo para Proteger tu Condominio?"
-    descripcion="Solicita tu diagnóstico de seguridad gratuito. Diagnóstico en 24 horas, sin compromiso."
-    ctaPrimario={{ texto: 'Solicitar Cotización', href: '/contacto' }}
-    ctaWhatsapp={true}
+  <NavCTA
+    footer={true}
+    ariaLabel="Continúa explorando ORIGINS"
+    cards={[
+      { label: 'Nuestros Servicios',  sublabel: 'Guardias, accesos y monitoreo',         href: '/servicios',  icon: 'shield'  },
+      { label: 'Zonas de Cobertura',  sublabel: 'CDMX y Zona Metropolitana',             href: '/zonas',      icon: 'map'     },
+      { label: 'Blog y Recursos',     sublabel: 'Guías de seguridad para condominios',   href: '/blog',       icon: 'blog'    },
+      { label: 'Cotización Gratuita', sublabel: 'Diagnóstico en menos de 24 horas',      href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
+    ]}
   />
 
 </Base>

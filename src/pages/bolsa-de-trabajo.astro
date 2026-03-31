@@ -1,8 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import HeroPagina from '../components/HeroPagina.astro';
+import NavCTA from '../components/NavCTA.astro';
 import SectionHeader from '../components/SectionHeader.astro';
-import PageCTA from '../components/PageCTA.astro';
 import '../styles/pages/bolsa.css';
 
 const siteUrl = 'https://seguridad-privada.com.mx';
@@ -109,6 +109,16 @@ const requisitos = [
     ctaPrimario={{ texto: 'Postularme ahora', href: '#formulario-empleo' }}
     seoParrafo1='En <strong>ORIGINS Private Security</strong> buscamos personas comprometidas, disciplinadas y con vocación de servicio. No importa si tienes experiencia previa — nosotros pagamos tu <strong>certificación SSC</strong>, te capacitamos desde cero y te asignamos a un condominio cerca de tu domicilio. Alta inmediata al IMSS desde el primer día.'
     seoParrafo2='Ofrecemos sueldo puntual, <strong>prestaciones superiores a la ley</strong>, uniformes sin costo y crecimiento real dentro de la empresa. Más de 200 elementos activos forman parte de nuestro equipo en CDMX y Zona Metropolitana. Si buscas estabilidad y un patrón que cumple, ORIGINS es para ti.'
+  />
+
+  <NavCTA
+    ariaLabel="Más sobre ORIGINS Private Security"
+    cards={[
+      { label: 'Quiénes Somos', sublabel: '+15 años protegiendo condominios', href: '/nosotros', icon: 'people' },
+      { label: 'Nuestros Servicios', sublabel: 'Guardias, accesos y monitoreo', href: '/servicios', icon: 'shield' },
+      { label: 'Zonas de Cobertura', sublabel: 'CDMX y Zona Metropolitana', href: '/zonas', icon: 'map' },
+      { label: 'Postularme Ahora', sublabel: 'Formulario de empleo directo', href: '#formulario-empleo', accent: true, icon: 'briefcase' },
+    ]}
   />
 
   <!-- Beneficios -->
@@ -219,11 +229,15 @@ const requisitos = [
     </div>
   </section>
 
-  <PageCTA
-    titulo="¿Tienes dudas sobre las vacantes?"
-    descripcion="Escríbenos por WhatsApp y un reclutador te responde en menos de 2 horas."
-    ctaWhatsapp={true}
-    ctaPrimario={{ texto: 'Ver Servicios', href: '/servicios' }}
+  <NavCTA
+    footer={true}
+    ariaLabel="Más sobre ORIGINS Private Security"
+    cards={[
+      { label: 'Quiénes Somos',      sublabel: 'Permiso SSC 0102-15 · Desde 2008',      href: '/nosotros',   icon: 'people'  },
+      { label: 'Nuestros Servicios', sublabel: 'Guardias, accesos y monitoreo',          href: '/servicios',  icon: 'shield'  },
+      { label: 'Zonas de Cobertura', sublabel: 'CDMX y Zona Metropolitana',              href: '/zonas',      icon: 'map'     },
+      { label: 'WhatsApp Directo',   sublabel: 'Respuesta en menos de 2 horas',          href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20trabajar%20en%20ORIGINS', whatsapp: true, accent: true, external: true },
+    ]}
   />
 
 </Base>

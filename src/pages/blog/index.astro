@@ -2,9 +2,9 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import HeroPagina from '../../components/HeroPagina.astro';
+import NavCTA from '../../components/NavCTA.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
 import BlogPostCard from '../../components/BlogPostCard.astro';
-import PageCTA from '../../components/PageCTA.astro';
 import '../../styles/pages/blog.css';
 
 const posts = await getCollection('blog', ({ data }) => !data.draft);
@@ -40,6 +40,16 @@ const schema = {
     seoParrafo2='Todo el contenido es producido por el equipo de <strong>ORIGINS Private Security</strong> con base en nuestra experiencia real de más de 15 años en el sector. Si tienes una duda específica sobre seguridad para tu <a href="/servicios/seguridad-condominios">condominio</a>, escríbenos — podemos convertirla en el próximo artículo.'
   />
 
+  <NavCTA
+    ariaLabel="Explora nuestros servicios de seguridad"
+    cards={[
+      { label: 'Servicios de Seguridad', sublabel: 'Guardias, accesos y monitoreo', href: '/servicios', icon: 'shield' },
+      { label: 'Zonas de Cobertura', sublabel: 'CDMX y Zona Metropolitana', href: '/zonas', icon: 'map' },
+      { label: 'Quiénes Somos', sublabel: '+15 años protegiendo condominios', href: '/nosotros', icon: 'people' },
+      { label: 'Cotización Gratuita', sublabel: 'Diagnóstico en menos de 24 horas', href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
+    ]}
+  />
+
   <section class="blog-index" aria-labelledby="blog-index-title">
     <div class="container">
       <SectionHeader
@@ -71,11 +81,15 @@ const schema = {
     </div>
   </section>
 
-  <PageCTA
-    titulo="¿Listo para proteger tu condominio?"
-    descripcion="Aplica lo aprendido — solicita un diagnóstico de seguridad gratuito."
-    ctaPrimario={{ texto: 'Solicitar Cotización', href: '/contacto' }}
-    ctaWhatsapp={true}
+  <NavCTA
+    footer={true}
+    ariaLabel="Explora nuestros servicios de seguridad"
+    cards={[
+      { label: 'Servicios de Seguridad', sublabel: 'Guardias, accesos y monitoreo',      href: '/servicios',  icon: 'shield'  },
+      { label: 'Zonas de Cobertura',     sublabel: 'CDMX y Zona Metropolitana',          href: '/zonas',      icon: 'map'     },
+      { label: 'Quiénes Somos',          sublabel: 'Permiso SSC 0102-15 · Desde 2008',  href: '/nosotros',   icon: 'people'  },
+      { label: 'Cotización Gratuita',    sublabel: 'Diagnóstico en menos de 24 horas',   href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
+    ]}
   />
 
 </Base>

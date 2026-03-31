@@ -2,7 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import HeroPagina from '../../components/HeroPagina.astro';
-import PageCTA from '../../components/PageCTA.astro';
+import NavCTA from '../../components/NavCTA.astro';
 import '../../styles/pages/blog.css';
 
 export async function getStaticPaths() {
@@ -16,6 +16,18 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 const siteUrl = 'https://seguridad-privada.com.mx';
+
+// Nav-CTA dinámico según el cluster del artículo
+const clusterNavMap: Record<string, { label: string; sublabel: string; href: string; icon: 'shield' | 'monitor' | 'consult' | 'map' | 'blog' | 'people' }> = {
+  'guardias-intramuros':    { label: 'Guardias Intramuros',       sublabel: 'Vigilancia 24/7 certificada SSC',       href: '/servicios/guardias-intramuros',      icon: 'shield'  },
+  'seguridad-condominios':  { label: 'Seguridad Condominios',     sublabel: 'Protección integral residencial',       href: '/servicios/seguridad-condominios',    icon: 'shield'  },
+  'control-de-accesos':     { label: 'Control de Accesos',        sublabel: 'Registro digital peatonal y vehicular', href: '/servicios/control-de-accesos',       icon: 'shield'  },
+  'tecnologia-monitoreo':   { label: 'Tecnología y Monitoreo',    sublabel: 'CCTV, alarmas y GPS satelital',         href: '/servicios/tecnologia-monitoreo-seguridad', icon: 'monitor' },
+  'vigilancia-cctv':        { label: 'Vigilancia Remota CCTV',    sublabel: 'Monitoreo en tiempo real 24/7',         href: '/servicios/vigilancia-remota-cctv',   icon: 'monitor' },
+  'proteccion-ejecutiva':   { label: 'Protección Ejecutiva',      sublabel: 'Escoltas certificados SSC',             href: '/servicios/proteccion-ejecutiva',     icon: 'shield'  },
+  'consultoria-seguridad':  { label: 'Consultoría de Seguridad',  sublabel: 'Auditorías y diseño de protocolos',    href: '/servicios/consultoria-seguridad',    icon: 'consult' },
+};
+const clusterCard = clusterNavMap[post.data.cluster] ?? { label: 'Servicios de Seguridad', sublabel: 'Guardias, accesos y monitoreo', href: '/servicios', icon: 'shield' as const };
 
 // Schema BlogPosting
 const schema = {
@@ -57,6 +69,16 @@ const schema = {
     breadcrumb={[
       { label: 'Blog', href: '/blog' },
       { label: post.data.title.substring(0, 40) + (post.data.title.length > 40 ? '...' : ''), href: `/blog/${post.id}` }
+    ]}
+  />
+
+  <NavCTA
+    ariaLabel="Servicios relacionados con este artículo"
+    cards={[
+      { label: clusterCard.label, sublabel: clusterCard.sublabel, href: clusterCard.href, icon: clusterCard.icon },
+      { label: 'Zonas de Cobertura',   sublabel: 'CDMX y Zona Metropolitana',          href: '/zonas',    icon: 'map'    },
+      { label: 'Más Artículos',        sublabel: 'Guías de seguridad para condominios', href: '/blog',     icon: 'blog'   },
+      { label: 'Cotización Gratuita',  sublabel: 'Diagnóstico en menos de 24 horas',   href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
     ]}
   />
 
@@ -124,11 +146,15 @@ const schema = {
     </div>
   </div>
 
-  <PageCTA
-    titulo="¿Tienes preguntas sobre seguridad?"
-    descripcion="Nuestro equipo especializado en condominios responde en menos de 2 horas."
-    ctaPrimario={{ texto: 'Solicitar Cotización', href: '/contacto' }}
-    ctaWhatsapp={true}
+  <NavCTA
+    footer={true}
+    ariaLabel="Servicios relacionados con este artículo"
+    cards={[
+      { label: clusterCard.label,      sublabel: clusterCard.sublabel,                  href: clusterCard.href, icon: clusterCard.icon },
+      { label: 'Zonas de Cobertura',   sublabel: 'CDMX y Zona Metropolitana',           href: '/zonas',         icon: 'map'            },
+      { label: 'Más Artículos',        sublabel: 'Guías de seguridad para condominios', href: '/blog',          icon: 'blog'           },
+      { label: 'Cotización Gratuita',  sublabel: 'Diagnóstico en menos de 24 horas',    href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
+    ]}
   />
 
 </Base>

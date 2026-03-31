@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .servicios-cats {
-  padding: 4rem 0 5rem;
+  padding: 2.75rem 0 3.25rem;
   background: var(--color-accent, #f8f9fa);
 }
 
@@ -51,7 +51,7 @@
 ============================================================ */
 @media (min-width: 768px) {
   .servicios-cats {
-    padding: 5rem 0 6rem;
+    padding: 4rem 0 5rem;
   }
 
   .servicios-cats__header {
@@ -75,6 +75,10 @@
    Desktop — 1024px+
 ============================================================ */
 @media (min-width: 1024px) {
+  .servicios-cats {
+    padding: 5rem 0 6rem;
+  }
+
   .servicios-cats__grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;

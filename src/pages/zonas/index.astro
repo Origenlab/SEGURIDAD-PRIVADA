@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import HeroPagina from '../../components/HeroPagina.astro';
+import NavCTA from '../../components/NavCTA.astro';
 
 const zonas = await getCollection('zonas', ({ data }) => !data.draft);
 const cdmx = zonas.filter(z => z.data.state === 'Ciudad de México');
@@ -41,6 +42,16 @@ const schema = {
     ctaWhatsapp={true}
     seoParrafo1='<strong>ORIGINS Private Security</strong> opera en toda la Zona Metropolitana del Valle de México. Desde <a href="/zonas/miguel-hidalgo">Miguel Hidalgo</a> y <a href="/zonas/cuauhtemoc">Cuauhtémoc</a> hasta <a href="/zonas/naucalpan">Naucalpan</a> y <a href="/zonas/tlalnepantla">Tlalnepantla</a>, asignamos guardias que viven cerca de la zona de servicio para garantizar puntualidad y conocimiento del entorno local.'
     seoParrafo2='Cada zona tiene sus propias características de riesgo, patrones de acceso y perfil de residente. Por eso diseñamos protocolos específicos por ubicación, no soluciones genéricas. <strong>Permiso SSC 0102-15</strong> vigente. Cotización gratuita en menos de 24 horas para cualquier alcaldía o municipio.'
+  />
+
+  <NavCTA
+    ariaLabel="Explora nuestros servicios y empresa"
+    cards={[
+      { label: 'Nuestros Servicios', sublabel: 'Guardias, accesos y monitoreo CCTV', href: '/servicios', icon: 'shield' },
+      { label: 'Quiénes Somos',      sublabel: 'Permiso SSC 0102-15 · Desde 2008',   href: '/nosotros', icon: 'people' },
+      { label: 'Blog y Recursos',    sublabel: 'Guías de seguridad para condominios', href: '/blog',     icon: 'blog'   },
+      { label: 'Cotización Gratuita', sublabel: 'Diagnóstico en menos de 24 horas',  href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
+    ]}
   />
 
   <!-- CDMX -->
@@ -85,17 +96,16 @@ const schema = {
     </section>
   )}
 
-  <!-- CTA -->
-  <section class="zonas-cta">
-    <div class="container">
-      <h2>¿Tu Zona No Aparece en la Lista?</h2>
-      <p>Contáctanos directamente. Evaluamos la cobertura para tu ubicación específica y te respondemos en menos de 24 horas.</p>
-      <div class="zonas-cta__buttons">
-        <a href="https://wa.me/525530255580?text=Hola%2C%20quiero%20saber%20si%20tienen%20cobertura%20en%20mi%20zona" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">Consultar por WhatsApp</a>
-        <a href="tel:+525530255580" class="btn btn-outline btn-lg">55 3025 5580</a>
-      </div>
-    </div>
-  </section>
+  <NavCTA
+    footer={true}
+    ariaLabel="Explora el sitio"
+    cards={[
+      { label: 'Nuestros Servicios', sublabel: 'Guardias, accesos y monitoreo',         href: '/servicios', icon: 'shield' },
+      { label: 'Quiénes Somos',     sublabel: 'Permiso SSC 0102-15 · Desde 2008',      href: '/nosotros',  icon: 'people' },
+      { label: 'Blog y Recursos',   sublabel: 'Guías de seguridad para condominios',    href: '/blog',      icon: 'blog'   },
+      { label: 'Cotización Gratuita', sublabel: 'Diagnóstico en menos de 24 horas',     href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
+    ]}
+  />
 </Base>
 
 <style>
@@ -143,10 +153,4 @@ const schema = {
   .zona-card p { font-size: 0.875rem; color: var(--color-text-light); line-height: 1.5; flex: 1; margin-bottom: 1rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
   .zona-card__link { font-size: 0.875rem; color: var(--color-primary); font-weight: 500; }
 
-  .zonas-cta { padding: 4rem 0; background: var(--color-primary); color: #fff; text-align: center; }
-  .zonas-cta h2 { color: #fff; font-size: 1.75rem; margin-bottom: 1rem; }
-  .zonas-cta p { opacity: 0.9; max-width: 580px; margin: 0 auto 2rem; }
-  .zonas-cta__buttons { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-  .zonas-cta .btn-outline { border: 2px solid rgba(255,255,255,0.6); color: #fff; background: transparent; }
-  .zonas-cta .btn-outline:hover { background: rgba(255,255,255,0.1); opacity: 1; }
 </style>

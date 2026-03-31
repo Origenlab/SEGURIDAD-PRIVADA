@@ -4,191 +4,292 @@ description: "Tecnología de seguridad privada: monitoreo CCTV 24/7, alarmas y G
 category: service
 publishDate: 2024-01-01
 keywords:
-  - seguridad
-  - tecnologia monitoreo seguridad
+  - tecnologia monitoreo seguridad cdmx
+  - monitoreo cctv 24 7 cdmx
+  - central monitoreo alarmas cdmx
+  - rastreo gps satelital cdmx
+  - vigilancia remota condominios cdmx
+relatedServices:
+  - vigilancia-remota-cctv
+  - monitoreo-alarmas
+  - seguridad-gps-satelital
+  - guardias-intramuros
+  - control-de-accesos
+targetLocations:
+  - Miguel Hidalgo
+  - Cuauhtémoc
+  - Benito Juárez
+  - Álvaro Obregón
+  - Coyoacán
+  - Naucalpan
+  - Tlalnepantla
+  - Atizapán
+ctaText: Solicitar Cotización
+ctaLink: /contacto
+serviceFeatures:
+  - title: "Vigilancia CCTV 24/7"
+    description: "Cámaras de alta resolución con visión nocturna monitoreadas en tiempo real por operadores certificados."
+    icon: "monitor"
+  - title: "Monitoreo de Alarmas"
+    description: "Central certificada UL con respuesta en menos de 90 segundos. Verificación humana antes de notificarte."
+    icon: "bell"
+  - title: "Rastreo GPS Satelital"
+    description: "Ubicación en tiempo real, geocercas, alertas de velocidad e historial completo de rutas."
+    icon: "map-pin"
+  - title: "Acceso Remoto"
+    description: "Ve tus cámaras en vivo y gestiona tu sistema desde cualquier dispositivo, desde cualquier lugar del mundo."
+    icon: "smartphone"
+  - title: "Respaldos Redundantes"
+    description: "UPS + planta de emergencia + comunicación 4G/5G de respaldo. El sistema funciona aunque haya apagón."
+    icon: "shield"
+  - title: "Analítica Inteligente"
+    description: "Detección de intrusos, reconocimiento de placas, conteo de personas y alertas por comportamiento anómalo."
+    icon: "cpu"
+faqs:
+  - question: "¿Qué es el monitoreo de seguridad 24/7 y cómo funciona?"
+    answer: "El monitoreo de seguridad 24/7 consiste en operadores humanos certificados vigilando sus cámaras CCTV y alarmas en tiempo real las 24 horas. Cuando detectan un evento, verifican si es real antes de contactarlo, filtrando falsas alarmas y enviando evidencia fotográfica solo cuando importa."
+  - question: "¿Cuánto tiempo tarda en responder el monitoreo cuando se activa una alarma?"
+    answer: "Nuestra central tiene un tiempo de respuesta promedio menor a 90 segundos desde la activación de la alarma. Los operadores verifican el evento en cámaras conectadas, contactan a los responsables designados y coordinan la respuesta apropiada, incluyendo policía o servicios de emergencia si es necesario."
+  - question: "¿El sistema funciona si hay un apagón o se corta el internet?"
+    answer: "Sí. Nuestra infraestructura cuenta con UPS más planta de emergencia para la central de monitoreo. Los equipos en sus instalaciones tienen batería de respaldo. La comunicación usa internet principal más celular 4G/5G como respaldo, así que aunque corten cables físicos, el sistema sigue conectado."
+  - question: "¿Puedo ver mis cámaras desde el celular si estoy en otro estado o país?"
+    answer: "Sí. La plataforma permite acceso remoto desde cualquier dispositivo con conexión a internet, sin importar desde dónde esté. Ve cámaras en vivo, revisa grabaciones por fecha/hora y recibe alertas push en tiempo real."
+  - question: "¿Cuántos días de grabación almacenan?"
+    answer: "El sistema incluye 30 días de grabación continua por defecto, con opción de ampliar. Las grabaciones se almacenan en servidores con tecnología RAID y backup en la nube, garantizando que la evidencia de video quede protegida."
+  - question: "¿Es compatible con mis cámaras y alarmas ya instaladas?"
+    answer: "En la mayoría de los casos sí. Realizamos una evaluación técnica gratuita de su sistema existente para determinar compatibilidad y, de ser necesario, recomendamos actualizaciones mínimas para integración completa."
+draft: false
 ---
 
-## Tecnología y Monitoreo 24/7
+<div class="prose-intro">
+  <p><strong>ORIGINS Private Security</strong> integra videovigilancia CCTV, monitoreo de alarmas y rastreo GPS satelital en una plataforma unificada supervisada por operadores humanos certificados en nuestra central de operaciones en CDMX. No vendemos tecnología aislada — la operamos y respondemos cuando importa.</p>
+  <div class="prose-highlight">
+    <strong>La diferencia real:</strong> Muchas empresas venden cámaras que generan 50 notificaciones al día por cada sombra. Nosotros filtramos. Solo te contactamos cuando hay algo real que necesitas saber, con evidencia fotográfica adjunta.
+  </div>
+</div>
 
-### Nunca Estás Solo — Ojos Expertos Cuidando tu Casa o Negocio Desde Cualquier Lugar
+---
 
-Central de monitoreo propia en CDMX. Alertas reales con foto o video, operadores certificados 24/7/365.
+<div class="prose-section-header">
+  <span class="prose-section-badge">Sistema Integrado</span>
+  <h2>Los 3 Componentes del Sistema</h2>
+  <p class="prose-section-sub">Cada componente opera de forma independiente o integrada. Juntos conforman la plataforma de seguridad más completa disponible para condominios y empresas en CDMX.</p>
+</div>
 
-### Paz mental desde cualquier lugar del mundo
+---
 
-¿Sales de vacaciones y no dejas de pensar si tu casa está bien? Nuestra central de monitoreo 24/7 te da algo invaluable: paz mental desde cualquier lugar. Operadores humanos certificados vigilan tus instalaciones en tiempo real, discriminan falsas alarmas y te contactan únicamente cuando realmente importa, con evidencia fotográfica clara.
+<div class="prose-section-block">
+  <div class="prose-section-block__header">
+    <span class="prose-section-block__num">01</span>
+    <div>
+      <span class="prose-section-block__label">Vigilancia y Monitoreo</span>
+      <h3 class="prose-section-block__title">Vigilancia Remota CCTV — Ojos que nunca duermen</h3>
+    </div>
+  </div>
 
-### Ojos donde no puedes estar, sin complicaciones
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>Nuestra central de monitoreo en CDMX tiene operadores certificados revisando tus instalaciones en tiempo real. Cuando detectan movimiento, verifican si es real antes de notificarte. Resultado: solo recibes alertas cuando tu propiedad está en riesgo real, con foto o video como evidencia.</p>
+      <ul>
+        <li>Cámaras IP de alta resolución (2MP a 8MP) con visión nocturna infrarroja</li>
+        <li>Analítica inteligente: detección de intrusos, reconocimiento de placas, conteo de personas</li>
+        <li>Grabación continua de <strong>30 días</strong> con acceso remoto por fecha y hora</li>
+        <li>Acceso en vivo desde iPhone, Android o computadora</li>
+        <li>Alertas push con imagen adjunta al detectar eventos reales</li>
+        <li>Descarga de videos con marca de agua oficial para evidencia legal</li>
+      </ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/img-vigilancia-remota/central-monitoreo-cctv-24-7.avif" alt="Central de monitoreo CCTV 24/7 con operadores certificados en CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/img-vigilancia-remota/camaras-vision-nocturna-infrarroja.avif" alt="Cámaras CCTV con visión nocturna infrarroja para condominios" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
 
-Desde tu celular recibes alertas reales con foto o video. Nuestro sistema combina cámaras de alta resolución, sensores inteligentes y GPS satelital, con personas capacitadas interpretando cada evento 24/7/365. Si detectan movimiento real, recibes notificación con imagen. Si es tu jardinero o mascota, no te molestan.
+---
 
-Tecnología inteligente monitoreada por expertos humanos. Alertas
-                reales con evidencia, sin falsas alarmas que te quiten el sueño.
+<div class="prose-section-block">
+  <div class="prose-section-block__header">
+    <span class="prose-section-block__num">02</span>
+    <div>
+      <span class="prose-section-block__label">Protección Activa</span>
+      <h3 class="prose-section-block__title">Monitoreo de Alarmas — Verificación humana antes de molestarte</h3>
+    </div>
+  </div>
 
-Imagina poder ver tu casa o negocio en tiempo real desde
-                      la playa, desde el aeropuerto, o desde tu hotel en otra
-                      ciudad. Nuestra
-                    central de monitoreo 24/7 con operadores humanos
-                    vigila tus cámaras constantemente, pero tú también puedes
-                    abrir la app en tu celular cuando quieras y ver exactamente
-                    qué está pasando. ¿Te preguntaste si cerraste bien? Revísalo
-                    en segundos. ¿Llegó el proveedor? Mira la grabación.
-                    Es como tener ojos en todas partes sin estar ahí.
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>Cuando tu alarma se activa, nuestros operadores no te llaman de inmediato — primero <strong>verifican</strong> qué pasó. Si es tu empleado que olvidó desarmar, lo resuelven sin despertarte. Si es una intrusión real, recibes llamada con evidencia y activamos protocolo de respuesta.</p>
+      <ul>
+        <li>Sensores en puertas y ventanas con detección magnética</li>
+        <li>Detectores de movimiento PIR que <strong>ignoran mascotas</strong> hasta 25kg</li>
+        <li>Comunicación dual: línea fija + celular 4G (funciona si cortan cables)</li>
+        <li>Batería de respaldo de 24 horas ante apagones</li>
+        <li>Detección de humo, fuego e inundación</li>
+        <li>Botones de pánico fijos e inalámbricos</li>
+      </ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/img-monitoreo-de-alarmas/central-monitoreo-alarmas-24-7-cdmx.avif" alt="Central de monitoreo de alarmas certificada UL en CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/img-monitoreo-de-alarmas/app-control-alarma-smartphone.avif" alt="Control de alarma desde smartphone en tiempo real" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
 
-Lo mejor es que nuestros operadores
-                    filtran las falsas alarmas por ti. Si tus
-                    cámaras detectan movimiento, ellos revisan primero: ¿es una
-                    persona extraña o tu jardinero programado? ¿Es un intruso o
-                    simplemente el viento moviendo una rama? Solo te contactan
-                    cuando hay algo real que debas saber,
-                    con foto o video adjunto para que no tengas dudas. Cámaras con visión nocturna de alta resolución, grabación
-                    de 30 días, y acceso desde cualquier celular o tablet. Sin
-                    complicaciones técnicas, sin falsas alarmas que te
-                    despierten a las 3 AM. Solo tranquilidad.
+  <div class="prose-table-wrap">
 
-¿Has tenido alarmas que suenan por todo y te vuelven
-                      loco?
-                    Nosotros hacemos lo opuesto. Cuando tu alarma se dispara,
-                    operadores certificados verifican inmediatamente si es
-                      real antes de molestarte. Revisan las cámaras conectadas, llaman a tus contactos de
-                    confianza, analizan qué sensor se activó. Si es tu empleado
-                    que olvidó desarmar, lo resuelven sin despertarte. Si es un
-                    intruso real, recibes llamada con evidencia fotográfica y ya
-                    activamos el protocolo de respuesta.
-                    Sin falsas alarmas que estresan, solo alertas reales
-                      cuando tu propiedad está en riesgo.
+| Tipo de evento | Tiempo de respuesta | Acción del operador |
+|---|---|---|
+| Intrusión detectada | < 90 segundos | Verifica en cámaras → contacto → respuesta |
+| Alarma de pánico | < 30 segundos | Contacto inmediato + despacho de unidad |
+| Fallo de energía | Automático | Notificación + activación de respaldo |
+| Alarma de humo/fuego | < 60 segundos | Contacto + coordinación con bomberos |
 
-El sistema incluye
-                    sensores en puertas, ventanas, detectores de movimiento
-                      que ignoran mascotas, botones de pánico, y comunicación por línea telefónica más celular (para que
-                    funcione aunque corten cables). Lo importante: tú viajas
-                    tranquilo sabiendo que hay
-                    ojos expertos monitoreando 24/7. Cada
-                    evento queda registrado con hora exacta, ubicación y
-                    evidencia. Si algún día necesitas revisar qué pasó cierto
-                    día a cierta hora, tienes todo documentado.
-                    Es como tener un guardia de seguridad experto vigilando
-                      sin descanso, pero sin pagar nómina completa.
+  </div>
+</div>
 
-¿Prestaste tu auto a tu hijo adolescente? ¿Tu flotilla de
-                      trabajo está haciendo las rutas correctas?
-                    Con nuestro
-                    rastreo GPS en tiempo real sabes
-                    exactamente dónde está cada vehículo en cualquier momento,
-                    desde tu celular. Ves su ubicación en el mapa al instante,
-                    recibes alertas si sale de las zonas permitidas que
-                    configures, si va a exceso de velocidad, o si se detiene en
-                    lugares no autorizados.
-                    Es tranquilidad de saber que tus activos móviles están
-                      bajo control aunque tú estés fuera.
+---
 
-La instalación es profesional y discreta, con
-                    batería de respaldo para que funcione aunque desconecten
-                      la corriente del auto. Incluye botón de pánico oculto para emergencias, sensores
-                    de apertura de puertas, y puedes ver historial completo de
-                    rutas. ¿Necesitas saber dónde estuvo tu vehículo el martes
-                    pasado? Lo revisas en minutos. ¿Quieres reportes de uso para
-                    optimizar gasolina? Los generas automáticos. Para flotillas
-                    empresariales, esto significa
-                    control total de operaciones y protección contra robo o
-                      mal uso, todo desde una app sencilla que no requiere ser experto
-                    en sistemas.
+<div class="prose-section-block">
+  <div class="prose-section-block__header">
+    <span class="prose-section-block__num">03</span>
+    <div>
+      <span class="prose-section-block__label">Activos Móviles</span>
+      <h3 class="prose-section-block__title">Rastreo GPS Satelital — Control total de tus vehículos</h3>
+    </div>
+  </div>
 
-Porque saben que nunca están solos: una central con humanos
-              expertos vigila por ellos 24/7/365
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>Sabe exactamente dónde están tus vehículos en cualquier momento desde tu celular. Ideal para flotillas empresariales, transporte de valores y vehículos personales de alto valor.</p>
+      <ul>
+        <li>Ubicación en tiempo real con actualización cada <strong>30 segundos</strong></li>
+        <li>Geocercas configurables con alertas al entrar o salir de zonas</li>
+        <li>Alertas por exceso de velocidad, paradas no autorizadas y conducción nocturna</li>
+        <li>Historial completo de rutas (90 días de datos)</li>
+        <li>Reportes automáticos de uso y eficiencia de combustible</li>
+        <li>Botón de pánico oculto y sensor de apertura de puertas</li>
+      </ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/img-rastreo-gps/monitoreo-satelital-flotillas-cdmx.avif" alt="Monitoreo satelital de flotillas empresariales en CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/img-rastreo-gps/geocercas-virtuales-alertas-gps.avif" alt="Geocercas virtuales y alertas GPS para empresas CDMX" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
 
-La diferencia entre un sistema de seguridad y uno que
-                  realmente te da tranquilidad está en quién lo
-                  monitorea. Muchas empresas venden cámaras y alarmas que te envían 50
-                notificaciones al día por cada sombra que detectan. Nosotros no.
-                Nuestra
-                central de operaciones en CDMX con personal
-                  certificado
-                revisa cada evento antes de molestarte. ¿Se activó un sensor?
-                Ellos verifican en las cámaras si es real. ¿Detectaron
-                movimiento? Analizan si es una amenaza o tu mascota.
-                Solo te contactan cuando hay algo que realmente necesitas
-                  saber, con evidencia fotográfica clara adjunta. Esto significa que cuando viajas a Cancún o estás en junta en
-                Monterrey, no recibes 20 alertas falsas que te estresan, sino
-                solo información real cuando importa.
+---
 
-Nuestros clientes en
-                Polanco, Santa Fe, Interlomas y toda CDMX
-                eligen este servicio porque les da
-                control sin complicaciones. No necesitas ser
-                experto: abres la app, ves tus cámaras en vivo, revisas lo que
-                pasó ayer. ¿Tu alarma incluye botón de pánico? Un operador
-                responde al instante. ¿Necesitas saber dónde está tu flotilla?
-                El mapa te muestra ubicación exacta en tiempo real.
-                Es como tener un equipo de seguridad profesional trabajando
-                  para ti 24/7, pero accesible desde cualquier lugar del
-                  mundo. Tecnología de punta sí, pero lo importante es la tranquilidad
-                de saber que hay ojos expertos cuidando lo tuyo mientras
-                disfrutas tu vida sin preocupaciones.
+<div class="prose-section-header">
+  <span class="prose-section-badge">Análisis</span>
+  <h2>Sistema Integrado vs. Servicios Independientes</h2>
+  <p class="prose-section-sub">Por qué un sistema unificado supervisado por operadores humanos ofrece mayor seguridad que múltiples tecnologías sin coordinación.</p>
+</div>
 
-Pregunta válida: ¿cómo garantizamos que tu sistema funciona
-                  incluso si hay apagón, corte de internet, o falla
-                  técnica?
-                Nuestra central tiene
-                respaldos de energía UPS más planta de emergencia, para que siga operando aunque se vaya la luz en toda la
-                colonia. La comunicación usa internet principal más celular
-                4G/5G de respaldo, entonces aunque corten los cables, seguimos
-                conectados. Las grabaciones se guardan en servidores con
-                tecnología RAID que duplica la información, así que aunque falle
-                un disco duro, tu evidencia de video queda protegida.
-                No es solo tecnología instalada, es infraestructura diseñada
-                  para nunca fallar.
+<div class="prose-table-wrap">
 
-Acceso desde cualquier dispositivo sin complicaciones: descarga la app en iPhone o Android, o entra desde tu
-                computadora. Ves tus cámaras en vivo, descargas videos de
-                incidentes con marca de agua oficial (por si necesitas evidencia
-                legal), configuras alertas personalizadas. ¿Quieres saber
-                cuántas veces se activó tu alarma este mes y cuántas fueron
-                reales versus falsas? Recibes reportes automáticos. ¿Necesitas
-                revisar qué pasó el 15 de marzo a las 11 PM? Buscas por fecha y
-                hora.
-                Todo diseñado para darte control total sin que tengas que ser
-                  ingeniero en sistemas. ¿Listo para viajar tranquilo sabiendo que nunca estás solo?
-                Escríbenos por WhatsApp al 55 3025 5580 y te
-                mostramos el sistema funcionando en vivo.
+| Característica | Sistema aislado | Sistema ORIGINS |
+|---|---|---|
+| Monitoreo humano 24/7 | ❌ Solo tecnología | ✅ Operadores certificados |
+| Verificación antes de alertar | ❌ Alertas automáticas | ✅ Revisión humana previa |
+| CCTV + Alarma + GPS unificados | ❌ Sistemas separados | ✅ Plataforma única |
+| Respaldo ante apagón | ⚠️ Variable | ✅ UPS + planta + 4G |
+| Evidencia en alertas | ❌ Solo texto | ✅ Foto/video adjunto |
+| Tiempo de respuesta alarma | > 5 minutos | ✅ < 90 segundos |
+| Reportes automáticos | ❌ Manual | ✅ Programados |
 
-Plataformas tecnológicas de seguridad que proporcionan
-                visibilidad total, respuesta inmediata y control operativo 24/7.
-                Sistemas integrados que transforman datos de seguridad en
-                inteligencia accionable.
+</div>
 
-La verdadera tranquilidad no viene de tener más alarmas o
-                    cámaras, sino de
-                    tener ojos expertos interpretando lo que esas tecnologías
-                      detectan 24/7. Por eso combinamos sistemas de videovigilancia CCTV con
-                    visión nocturna, monitoreo de alarmas con verificación
-                    humana, y rastreo GPS con geocercas inteligentes, todo
-                    supervisado por operadores certificados que filtran falsas
-                    alarmas y te contactan solo cuando realmente importa. Ya sea
-                    que estés de vacaciones en Cancún, en junta de negocios en
-                    Monterrey, o simplemente durmiendo tranquilo en casa,
-                    recibes solo alertas reales con evidencia fotográfica clara.
+---
 
-Con
-                    control total desde tu celular sin ser experto en
-                      tecnología, abres la app y ves tus cámaras en vivo, revisas dónde
-                    están tus vehículos en el mapa, o consultas qué pasó ayer a
-                    las 3 AM. Respaldos redundantes de energía y comunicación
-                    garantizan que el sistema funciona aunque haya apagones o
-                    cortes de internet. Desde hogares en Polanco hasta flotillas
-                    empresariales en toda CDMX, escalamos soluciones que te dan
-                    una sola cosa invaluable: paz mental sabiendo que nunca
-                    estás solo.
+<div class="prose-section-header">
+  <span class="prose-section-badge">Galería</span>
+  <h2>El Sistema en Operación</h2>
+  <p class="prose-section-sub">Infraestructura tecnológica y operativa que respalda el servicio de monitoreo 24/7 de ORIGINS en CDMX.</p>
+</div>
 
-Únete a miles de personas que viajan, trabajan y viven tranquilas
-            porque saben que nunca están solos.
+<div class="prose-gallery">
+  <figure>
+    <img src="/img/img-vigilancia-remota/analisis-video-inteligencia-artificial.avif" alt="Analítica de video con IA para seguridad en CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Analítica de video con IA — detección de comportamiento anómalo</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-vigilancia-remota/camaras-ip-alta-resolucion-vigilancia.avif" alt="Cámaras IP de alta resolución para condominios CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Cámaras IP HD — resolución hasta 8MP con zoom óptico</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-monitoreo-de-alarmas/operadores-certificados-monitoreo-alarmas.avif" alt="Operadores certificados en central de monitoreo CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Operadores certificados — verificación humana 24/7/365</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-rastreo-gps/plataforma-rastreo-vehicular-avanzada.avif" alt="Plataforma GPS para flotillas en CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Plataforma GPS — mapa en tiempo real con historial de rutas</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-vigilancia-remota/acceso-remoto-celular-tablet.avif" alt="Acceso remoto a cámaras desde celular o tablet" loading="lazy" width="640" height="480" />
+    <figcaption>Acceso remoto — ve tus cámaras desde cualquier lugar del mundo</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-monitoreo-de-alarmas/backup-bateria-sistema-alarma.avif" alt="Batería de respaldo para sistema de alarma CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Respaldo de energía — el sistema funciona aunque haya apagón</figcaption>
+  </figure>
+</div>
 
-Personal certificado monitoreando y filtrando falsas alarmas por
-                ti, todos los días del año
+---
 
-Evidencia fotográfica en cada notificación, sin falsas alarmas
-                que te quiten el sueño
+<div class="prose-section-header">
+  <span class="prose-section-badge">¿Para quién?</span>
+  <h2>Solución según tu Perfil</h2>
+  <p class="prose-section-sub">Diseñamos el sistema según el tipo de propiedad, operación y nivel de riesgo. Cada implementación es diferente.</p>
+</div>
 
-Ve tus cámaras en vivo, revisa grabaciones y recibe alertas
-                desde cualquier lugar del mundo
+<div class="prose-table-wrap">
 
+| Perfil | Necesidad | Solución recomendada |
+|---|---|---|
+| **Condominio vertical** | Lobby, estacionamiento y accesos | CCTV + Alarmas + Control de accesos |
+| **Fraccionamiento** | Vigilancia perimetral + casetas | CCTV perimetral + GPS patrullaje |
+| **Empresa con flotilla** | Control de rutas y activos | GPS + Geofencing + Reportes |
+| **Retail / tienda** | Prevención de pérdidas | CCTV analítico + Alarmas |
+| **Propiedad vacacional** | Seguridad sin personal fijo | CCTV + Alarmas + Acceso remoto |
+| **Ejecutivo / directivo** | Seguridad personal y del hogar | Sistema integrado + Respuesta express |
+
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Proceso</span>
+  <h2>Del Diagnóstico al Sistema Activo</h2>
+  <p class="prose-section-sub">4 pasos con tiempos definidos. Sin sorpresas, sin letra pequeña.</p>
+</div>
+
+<div class="prose-steps">
+  <div class="prose-step">
+    <span class="prose-step__num">01</span>
+    <div class="prose-step__content">
+      <strong>Diagnóstico gratuito</strong>
+      <p>Evaluación técnica de sus instalaciones: puntos ciegos, cobertura actual y vulnerabilidades. Sin costo y sin compromiso.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">02</span>
+    <div class="prose-step__content">
+      <strong>Propuesta personalizada</strong>
+      <p>Diseño del sistema con número de cámaras, sensores y configuración de central. Entrega en 24 horas.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">03</span>
+    <div class="prose-step__content">
+      <strong>Instalación profesional</strong>
+      <p>Técnicos certificados instalan el equipo de forma discreta. 1 día para residencial, 2-3 días para corporativo.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">04</span>
+    <div class="prose-step__content">
+      <strong>Activación y capacitación</strong>
+      <p>Configuración completa, integración con la central de monitoreo y capacitación al personal. Sistema activo el mismo día.</p>
+    </div>
+  </div>
+</div>

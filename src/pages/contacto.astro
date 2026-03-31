@@ -1,8 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import HeroPagina from '../components/HeroPagina.astro';
+import NavCTA from '../components/NavCTA.astro';
 import SectionHeader from '../components/SectionHeader.astro';
-import PageCTA from '../components/PageCTA.astro';
 import '../styles/pages/contacto.css';
 
 const siteUrl = 'https://seguridad-privada.com.mx';
@@ -23,6 +23,16 @@ const siteUrl = 'https://seguridad-privada.com.mx';
     ctaPrimario={{ texto: 'Solicitar Cotización', href: '#formulario' }}
     seoParrafo1='¿Necesitas <a href="/servicios/guardias-intramuros">guardias intramuros</a> para tu condominio? ¿Quieres mejorar el <a href="/servicios/control-de-accesos">control de accesos</a> en tu fraccionamiento? Nuestro equipo de atención está disponible <strong>24 horas al día, los 7 días de la semana</strong>. La primera consulta y el diagnóstico de seguridad son completamente gratuitos.'
     seoParrafo2='Atendemos a administradores de condominio, comités de vigilancia y desarrolladoras en toda la <a href="/zonas">Zona Metropolitana</a>. Con <strong>Permiso SSC 0102-15</strong> y más de 15 años de operación, entregamos una propuesta formal en menos de 24 horas con costos transparentes, sin letra pequeña.'
+  />
+
+  <NavCTA
+    ariaLabel="Navega por ORIGINS Private Security"
+    cards={[
+      { label: 'Nuestros Servicios', sublabel: 'Guardias, CCTV y consultoría', href: '/servicios', icon: 'shield' },
+      { label: 'Zonas de Cobertura', sublabel: 'CDMX y Zona Metropolitana', href: '/zonas', icon: 'map' },
+      { label: 'Quiénes Somos', sublabel: 'Permiso SSC 0102-15 · Desde 2008', href: '/nosotros', icon: 'people' },
+      { label: 'WhatsApp Directo', sublabel: 'Respuesta en menos de 2 horas', href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
+    ]}
   />
 
   <!-- Canales de contacto -->
@@ -244,11 +254,15 @@ const siteUrl = 'https://seguridad-privada.com.mx';
     </div>
   </section>
 
-  <PageCTA
-    titulo="¿Prefieres contacto directo?"
-    descripcion="Nuestro equipo responde en minutos por WhatsApp. Sin bots, sin esperas."
-    ctaWhatsapp={true}
-    ctaPrimario={{ texto: 'Ver Servicios', href: '/servicios' }}
+  <NavCTA
+    footer={true}
+    ariaLabel="Continúa explorando el sitio"
+    cards={[
+      { label: 'Nuestros Servicios', sublabel: 'Guardias, accesos y monitoreo',          href: '/servicios',  icon: 'shield'  },
+      { label: 'Zonas de Cobertura', sublabel: 'CDMX y Zona Metropolitana',              href: '/zonas',      icon: 'map'     },
+      { label: 'Quiénes Somos',      sublabel: 'Permiso SSC 0102-15 · Desde 2008',      href: '/nosotros',   icon: 'people'  },
+      { label: 'WhatsApp Directo',   sublabel: 'Respuesta en menos de 2 horas',          href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
+    ]}
   />
 
 </Base>

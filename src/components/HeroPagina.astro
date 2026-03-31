@@ -345,15 +345,16 @@ const hasSeo = seoParrafo1 || seoParrafo2;
   margin: 0;
 }
 
-.hero-page__seo-text strong { color: rgba(255,255,255,0.95); font-weight: 600; }
+/* :global() necesario porque el contenido viene de set:html y escapa el scope de Astro */
+:global(.hero-page__seo-text strong) { color: rgba(255,255,255,0.95); font-weight: 600; }
 
-.hero-page__seo-text a {
-  color: rgba(255,255,255,0.92);
+:global(.hero-page__seo-text a) {
+  color: rgba(255,255,255,0.92) !important;
   text-decoration-color: rgba(255,255,255,0.3);
   text-underline-offset: 3px;
 }
-.hero-page__seo-text a:hover {
-  color: #ffffff;
+:global(.hero-page__seo-text a:hover) {
+  color: #ffffff !important;
   text-decoration-color: rgba(255,255,255,0.7);
 }
 

@@ -1,0 +1,340 @@
+---
+/**
+ * ServicioCatalogCard.astro — ORIGINS Private Security
+ * Módulo de 2 columnas para catálogo completo de servicios.
+ * Col izq: etiqueta + título H3 + 2 párrafos descriptivos + badges + CTA
+ * Col der: imagen representativa con overlay de credencial
+ * Alterna imagen izq/der en filas pares para romper ritmo visual.
+ */
+
+interface Props {
+  titulo: string;
+  slug: string;
+  descripcion: string;           // Párrafo 1 — descripción general del servicio
+  parrafo2: string;              // Párrafo 2 — beneficios / diferenciadores
+  etiqueta: string;              // Badge de categoría (ej: "Seguridad Residencial")
+  imagen: string;                // Ruta a la imagen avif
+  imagenAlt: string;
+  credencial?: string;           // Texto del badge sobre la imagen (ej: "Permiso SSC 0102-15")
+  badges?: string[];             // Chips de características (ej: ["24/7", "Certificado SSC"])
+  reverse?: boolean;             // Imagen a la izquierda
+}
+
+const {
+  titulo,
+  slug,
+  descripcion,
+  parrafo2,
+  etiqueta,
+  imagen,
+  imagenAlt,
+  credencial = 'Permiso SSC 0102-15',
+  badges = [],
+  reverse = false,
+} = Astro.props;
+---
+
+<article class:list={['scc', { 'scc--reverse': reverse }]} id={slug}>
+  <!-- Columna de contenido -->
+  <div class="scc__content">
+
+    <span class="scc__etiqueta">{etiqueta}</span>
+
+    <h3 class="scc__titulo">
+      <a href={`/servicios/${slug}`}>{titulo}</a>
+    </h3>
+
+    <p class="scc__desc">{descripcion}</p>
+    <p class="scc__desc scc__desc--2">{parrafo2}</p>
+
+    {badges.length > 0 && (
+      <div class="scc__badges">
+        {badges.map(b => (
+          <span class="scc__badge">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            {b}
+          </span>
+        ))}
+      </div>
+    )}
+
+    <div class="scc__actions">
+      <a href={`/servicios/${slug}`} class="scc__cta">
+        Ver servicio completo
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a
+        href={`https://wa.me/525530255580?text=${encodeURIComponent('Hola, me interesa cotizar ' + titulo + ' para mi propiedad')}`}
+        class="scc__wa"
+        target="_blank"
+        rel="noopener"
+        aria-label={`Cotizar ${titulo} por WhatsApp`}
+      >
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Cotizar ahora
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Columna imagen -->
+  <div class="scc__img-col">
+    <div class="scc__img-wrap">
+      <img
+        src={imagen}
+        alt={imagenAlt}
+        loading="lazy"
+        width="640"
+        height="420"
+      />
+      {credencial && (
+        <span class="scc__img-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          {credencial}
+        </span>
+      )}
+    </div>
+  </div>
+</article>
+
+<style>
+/* ============================================================
+   SERVICIO CATALOG CARD — Mobile First
+============================================================ */
+.scc {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  background: #ffffff;
+  border: 1px solid rgba(10,15,30,0.07);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(10,15,30,0.05);
+  align-items: center; /* imagen y contenido alineados verticalmente */
+}
+
+/* ============================================================
+   COLUMNA IMAGEN — siempre primera en mobile
+============================================================ */
+.scc__img-col {
+  order: -1; /* imagen arriba en mobile */
+}
+
+.scc__img-wrap {
+  position: relative;
+  aspect-ratio: 4/3;   /* Homologado a la proporción nativa de todas las imágenes 640×480 */
+  overflow: hidden;
+}
+
+.scc__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.scc__img-badge {
+  position: absolute;
+  bottom: 0.875rem;
+  left: 0.875rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.875rem;
+  background: rgba(10,15,30,0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 980px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.scc__img-badge svg { color: #25D366; flex-shrink: 0; }
+
+/* ============================================================
+   COLUMNA CONTENIDO
+============================================================ */
+.scc__content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.scc__etiqueta {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.3rem 0.75rem;
+  background: rgba(10,15,30,0.05);
+  border: 1px solid rgba(10,15,30,0.1);
+  border-radius: 980px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(10,15,30,0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 0.875rem;
+}
+
+.scc__titulo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0a0f1e;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.875rem;
+}
+
+.scc__titulo a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.scc__titulo a:hover { opacity: 0.78; }
+
+.scc__desc {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: rgba(10,15,30,0.65);
+  margin: 0 0 0.875rem;
+}
+
+.scc__desc--2 {
+  color: rgba(10,15,30,0.55);
+  margin-bottom: 1.25rem;
+  display: none; /* Oculto en mobile — se muestra desde tablet */
+}
+
+@media (min-width: 768px) {
+  .scc__desc--2 { display: block; }
+}
+
+/* Badges / chips de características */
+.scc__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-bottom: 1.5rem;
+}
+
+.scc__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.75rem;
+  background: rgba(37,211,102,0.08);
+  border: 1px solid rgba(37,211,102,0.2);
+  border-radius: 980px;
+  font-size: 0.725rem;
+  font-weight: 600;
+  color: rgba(10,15,30,0.7);
+}
+
+.scc__badge svg { color: #25D366; flex-shrink: 0; }
+
+/* Acciones */
+.scc__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.scc__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1.25rem;
+  background: #0a0f1e;
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.scc__cta:hover { background: #131b2e; }
+.scc__cta svg { flex-shrink: 0; }
+
+.scc__wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.7rem 1.125rem;
+  background: rgba(37,211,102,0.1);
+  border: 1px solid rgba(37,211,102,0.3);
+  color: #1a8040;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.scc__wa:hover {
+  background: #25D366;
+  border-color: #25D366;
+  color: #ffffff;
+}
+
+/* ============================================================
+   Tablet 768px+ — 2 columnas: texto izq | imagen der (siempre)
+============================================================ */
+@media (min-width: 768px) {
+  .scc {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
+
+  /* Imagen siempre a la derecha — orden natural del DOM */
+  .scc__img-col {
+    order: 0;
+  }
+
+  /* El wrap mantiene aspect-ratio 4:3 — NO se estira con el texto */
+  .scc__img-wrap {
+    aspect-ratio: 4/3;
+    height: auto;
+    align-self: center;
+  }
+
+  .scc__content {
+    padding: 2rem 2.25rem;
+    order: -1; /* contenido siempre primero a la izquierda */
+  }
+
+  .scc__titulo {
+    font-size: 1.375rem;
+  }
+}
+
+/* ============================================================
+   Desktop 1024px+
+============================================================ */
+@media (min-width: 1024px) {
+  .scc {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+
+  .scc__img-wrap {
+    aspect-ratio: 4/3;
+  }
+
+  .scc__content {
+    padding: 2.5rem 2.75rem;
+  }
+
+  .scc__titulo {
+    font-size: 1.5rem;
+  }
+
+  .scc__desc {
+    font-size: 0.9375rem;
+    line-height: 1.8;
+  }
+}
+</style>

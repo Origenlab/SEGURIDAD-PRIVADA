@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import HeroPagina from '../components/HeroPagina.astro';
+import NavCTA from '../components/NavCTA.astro';
 import '../styles/pages/legal.css';
 
 const servicios = await getCollection('servicios', ({ data }) => !data.draft);
@@ -60,4 +61,14 @@ const siteUrl = 'https://seguridad-privada.com.mx';
     </div>
   </section>
 
+  <NavCTA
+    footer={true}
+    ariaLabel="Explora ORIGINS Private Security"
+    cards={[
+      { label: 'Nuestros Servicios', sublabel: 'Guardias, accesos y monitoreo',         href: '/servicios', icon: 'shield'  },
+      { label: 'Zonas de Cobertura', sublabel: 'CDMX y Zona Metropolitana',             href: '/zonas',     icon: 'map'     },
+      { label: 'Quiénes Somos',     sublabel: 'Permiso SSC 0102-15 · Desde 2008',      href: '/nosotros',  icon: 'people'  },
+      { label: 'Cotización Gratuita', sublabel: 'Diagnóstico en menos de 24 horas',     href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
+    ]}
+  />
 </Base>
