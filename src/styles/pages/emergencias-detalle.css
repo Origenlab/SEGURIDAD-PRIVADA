@@ -1,0 +1,1381 @@
+/* ==========================================================================
+   EMERGENCIAS — Páginas de Detalle por Categoría (cruz-roja, bomberos, etc.)
+   Complementa emergencias.css. Mobile-first.
+   ========================================================================== */
+
+/* ── URGENCY BAR — Números destacados post-hero ──────────────────────── */
+.emgd-urgency-bar {
+  background: var(--color-primary, #0a0f1e);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.emgd-urgency-bar__inner {
+  max-width: var(--container-max, 1280px);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+@media (min-width: 768px) {
+  .emgd-urgency-bar__inner {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+.emgd-urgency-bar__num {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  padding: 1.5rem 1rem;
+  flex: 1;
+  gap: 0.2rem;
+  transition: background 0.15s ease;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+@media (min-width: 768px) {
+  .emgd-urgency-bar__num {
+    border-bottom: none;
+    border-right: 1px solid rgba(255,255,255,0.06);
+  }
+  .emgd-urgency-bar__num:last-of-type {
+    border-right: none;
+  }
+}
+
+.emgd-urgency-bar__num:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+.emgd-urgency-bar__num--cr {
+  background: rgba(220,38,38,0.12);
+}
+.emgd-urgency-bar__num--cr:hover {
+  background: rgba(220,38,38,0.2);
+}
+
+.emgd-urgency-bar__num--911 {
+  background: rgba(255,255,255,0.04);
+}
+
+.emgd-urgency-bar__eyebrow {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: rgba(255,255,255,0.45);
+}
+
+.emgd-urgency-bar__digit {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.emgd-urgency-bar__num--cr .emgd-urgency-bar__digit {
+  color: #f87171;
+}
+
+.emgd-urgency-bar__sub {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.45);
+  font-weight: 500;
+}
+
+.emgd-urgency-bar__sep {
+  display: none;
+}
+
+/* ── SECCIÓN PRIMERO — sin padding-top doble ─────────────────────────── */
+.emgd-section--first {
+  padding-top: 3.5rem;
+}
+
+/* ── CARDS DE SEDE ───────────────────────────────────────────────────── */
+.emgd-sedes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .emgd-sedes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.emgd-sede-card {
+  background: #fff;
+  border: 1.5px solid rgba(10,15,30,0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.emgd-sede-card:hover {
+  box-shadow: 0 8px 32px rgba(10,15,30,0.1);
+  transform: translateY(-2px);
+}
+
+/* Header rojo Cruz Roja */
+.emgd-sede-card__header {
+  background: #dc2626;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.emgd-sede-card__header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.emgd-sede-card__tipo {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: rgba(255,255,255,0.65);
+}
+
+.emgd-sede-card__nombre {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.emgd-sede-card__horario-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.12);
+  padding: 0.3rem 0.75rem;
+  border-radius: 980px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+/* Body */
+.emgd-sede-card__body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  flex: 1;
+}
+
+/* Dirección */
+.emgd-sede-card__dir {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.emgd-sede-card__dir--link {
+  text-decoration: none;
+  padding: 0.875rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #e9ecef;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.emgd-sede-card__dir--link:hover {
+  background: #f1f3f5;
+  border-color: #dc2626;
+}
+
+.emgd-sede-card__dir-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(220,38,38,0.08);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dc2626;
+  flex-shrink: 0;
+}
+
+.emgd-sede-card__dir-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.emgd-sede-card__calle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.3;
+}
+
+.emgd-sede-card__colonia {
+  font-size: 0.8rem;
+  color: #6c757d;
+  line-height: 1.4;
+}
+
+.emgd-sede-card__maps-cta {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #dc2626;
+  margin-top: 0.2rem;
+}
+
+/* Teléfonos */
+.emgd-sede-card__tels {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.emgd-sede-card__tel-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  border: 1.5px solid #e9ecef;
+  background: #fff;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.emgd-sede-card__tel-btn:hover {
+  background: rgba(220,38,38,0.04);
+  border-color: rgba(220,38,38,0.3);
+}
+
+.emgd-sede-card__tel-btn--primary {
+  background: rgba(220,38,38,0.06);
+  border-color: rgba(220,38,38,0.2);
+}
+
+.emgd-sede-card__tel-btn--primary svg {
+  color: #dc2626;
+}
+
+.emgd-sede-card__tel-btn svg {
+  color: #6c757d;
+  flex-shrink: 0;
+}
+
+.emgd-sede-card__tel-num {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #111;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+
+.emgd-sede-card__tel-label {
+  font-size: 0.75rem;
+  color: #6c757d;
+  margin-left: auto;
+  text-align: right;
+  line-height: 1.3;
+}
+
+/* Servicios lista */
+.emgd-sede-card__servicios {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.emgd-sede-card__servicios-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6c757d;
+  margin: 0;
+}
+
+.emgd-sede-card__servicios-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.emgd-sede-card__servicios-list li {
+  font-size: 0.775rem;
+  color: #495057;
+  background: #f1f3f5;
+  border: 1px solid #e9ecef;
+  padding: 0.25rem 0.6rem;
+  border-radius: 5px;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+/* Nota */
+.emgd-sede-card__nota {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  padding: 0.875rem;
+  background: rgba(220,38,38,0.04);
+  border: 1px solid rgba(220,38,38,0.12);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: #6c757d;
+  line-height: 1.55;
+  margin-top: auto;
+}
+
+.emgd-sede-card__nota svg {
+  color: #dc2626;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── PASOS "Cómo solicitar" ──────────────────────────────────────────── */
+.emgd-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  counter-reset: none;
+}
+
+.emgd-step {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+  position: relative;
+}
+
+.emgd-step:last-child {
+  border-bottom: none;
+}
+
+.emgd-step__num {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: rgba(220,38,38,0.15);
+  line-height: 1;
+  min-width: 3.5rem;
+  letter-spacing: -0.03em;
+  flex-shrink: 0;
+  padding-top: 0.1rem;
+}
+
+.emgd-step__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.emgd-step__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.emgd-step__title a {
+  color: #dc2626;
+  text-decoration: none;
+  font-weight: 800;
+  border-bottom: 1.5px solid rgba(220,38,38,0.3);
+}
+
+.emgd-step__title a:hover {
+  border-color: #dc2626;
+}
+
+.emgd-step__desc {
+  font-size: 0.875rem;
+  color: #6c757d;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Tip box */
+.emgd-tip-box {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.25rem 1.5rem;
+  background: rgba(217,119,6,0.06);
+  border: 1px solid rgba(217,119,6,0.2);
+  border-left: 4px solid #d97706;
+  border-radius: 10px;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: #495057;
+  line-height: 1.65;
+}
+
+.emgd-tip-box__icon {
+  color: #d97706;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.emgd-tip-box strong {
+  color: #111;
+  display: block;
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+}
+
+/* ── SERVICIOS GRID ──────────────────────────────────────────────────── */
+.emgd-services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .emgd-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.emgd-service-card {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1.5px solid #e9ecef;
+  border-radius: 14px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.emgd-service-card:hover {
+  box-shadow: 0 4px 20px rgba(10,15,30,0.07);
+  border-color: rgba(220,38,38,0.25);
+  transform: translateY(-1px);
+}
+
+.emgd-service-card--cr .emgd-service-card__icon {
+  background: rgba(220,38,38,0.08);
+  color: #dc2626;
+}
+
+.emgd-service-card__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.emgd-service-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.emgd-service-card__body h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.emgd-service-card__body p {
+  font-size: 0.84rem;
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.65;
+}
+
+.emgd-service-card__tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #dc2626;
+  background: rgba(220,38,38,0.08);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-top: 0.25rem;
+}
+
+/* ── FAQs ────────────────────────────────────────────────────────────── */
+.emgd-faqs {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1.5px solid #e9ecef;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.emgd-faq {
+  border-bottom: 1px solid #e9ecef;
+}
+
+.emgd-faq:last-child {
+  border-bottom: none;
+}
+
+.emgd-faq__q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.4;
+  transition: background 0.15s ease;
+  user-select: none;
+}
+
+.emgd-faq__q::-webkit-details-marker { display: none; }
+
+.emgd-faq__q:hover {
+  background: rgba(10,15,30,0.025);
+}
+
+details[open] .emgd-faq__q {
+  color: #dc2626;
+  background: rgba(220,38,38,0.03);
+}
+
+.emgd-faq__chevron {
+  flex-shrink: 0;
+  color: #adb5bd;
+  transition: transform 0.2s ease;
+}
+
+details[open] .emgd-faq__chevron {
+  transform: rotate(180deg);
+  color: #dc2626;
+}
+
+.emgd-faq__a {
+  padding: 0 1.5rem 1.25rem;
+}
+
+.emgd-faq__a p {
+  font-size: 0.875rem;
+  color: #6c757d;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── OTRAS CATEGORÍAS GRID ───────────────────────────────────────────── */
+.emgd-otros-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.875rem;
+}
+
+@media (min-width: 768px) {
+  .emgd-otros-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.emgd-otro-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.125rem;
+  background: #fff;
+  border: 1.5px solid #e9ecef;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  position: relative;
+}
+
+.emgd-otro-card:hover {
+  border-color: var(--otro-color, #111);
+  box-shadow: 0 4px 16px rgba(10,15,30,0.07);
+  transform: translateY(-1px);
+}
+
+.emgd-otro-card--all {
+  border-style: dashed;
+  background: #f8f9fa;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.emgd-otro-card--all:hover {
+  border-color: #111;
+  background: #fff;
+}
+
+.emgd-otro-card__top {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.emgd-otro-card__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--otro-color, #111);
+  flex-shrink: 0;
+}
+
+.emgd-otro-card__badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #6c757d;
+  line-height: 1.3;
+}
+
+.emgd-otro-card__label {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #111;
+  line-height: 1.3;
+}
+
+.emgd-otro-card--all .emgd-otro-card__label {
+  font-size: 0.85rem;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.emgd-otro-card__arrow {
+  color: var(--otro-color, #6c757d);
+  margin-top: auto;
+  transition: transform 0.15s ease;
+}
+
+.emgd-otro-card:hover .emgd-otro-card__arrow {
+  transform: translateX(3px);
+}
+
+/* ── SIDEBAR — Datos de Sede ─────────────────────────────────────────── */
+.emgd-sb-sede {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.emgd-sb-sede__row {
+  display: flex;
+  gap: 0.6rem;
+  align-items: flex-start;
+}
+
+.emgd-sb-sede__row svg {
+  color: #6c757d;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.emgd-sb-sede__row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.emgd-sb-sede__row strong {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.emgd-sb-sede__row span {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.emgd-sb-sede__row a {
+  font-size: 0.8rem;
+  color: #dc2626;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emgd-sb-sede__row a:hover {
+  text-decoration: underline;
+}
+
+.emgd-sb-sede__maps {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #dc2626;
+  text-decoration: none;
+  margin-top: 0.25rem;
+  border-bottom: 1px solid rgba(220,38,38,0.3);
+  padding-bottom: 1px;
+  transition: border-color 0.15s ease;
+}
+
+.emgd-sb-sede__maps:hover {
+  border-color: #dc2626;
+}
+
+/* ── SIDEBAR — 911 card override para Cruz Roja ─────────────────────── */
+.emg-sb-card--911 {
+  --sb911-bg: #dc2626;
+  background: var(--sb911-bg);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   v2 BOMBEROS — Grupos por alcaldía + cards de estación
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Urgency bar variante info (sin color de peligro) */
+.emgd-urgency-bar__num--bomberos {
+  background: rgba(234,88,12,0.12);
+}
+.emgd-urgency-bar__num--bomberos:hover {
+  background: rgba(234,88,12,0.2);
+}
+.emgd-urgency-bar__num--bomberos .emgd-urgency-bar__digit {
+  color: #fb923c;
+}
+.emgd-urgency-bar__num--info {
+  cursor: default;
+}
+.emgd-urgency-bar__num--info .emgd-urgency-bar__digit {
+  color: rgba(255,255,255,0.6);
+}
+
+/* Grupo por alcaldía */
+.emgd-alcaldia-group {
+  margin-bottom: 2.5rem;
+}
+
+.emgd-alcaldia-group:last-child {
+  margin-bottom: 0;
+}
+
+.emgd-alcaldia-group__header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid rgba(234,88,12,0.15);
+}
+
+.emgd-alcaldia-group__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ea580c;
+  flex-shrink: 0;
+}
+
+.emgd-alcaldia-group__name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #111;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.emgd-alcaldia-group__count {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #ea580c;
+  background: rgba(234,88,12,0.08);
+  padding: 0.2rem 0.55rem;
+  border-radius: 980px;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.emgd-alcaldia-group__nota {
+  font-size: 0.82rem;
+  color: #6c757d;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(234,88,12,0.04);
+  border-left: 3px solid rgba(234,88,12,0.3);
+  border-radius: 0 6px 6px 0;
+}
+
+/* Grid de estaciones */
+.emgd-estaciones-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .emgd-estaciones-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Card de estación individual */
+.emgd-estacion-card {
+  background: #fff;
+  border: 1.5px solid rgba(10,15,30,0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.emgd-estacion-card:hover {
+  box-shadow: 0 6px 24px rgba(234,88,12,0.1);
+  transform: translateY(-2px);
+}
+
+/* Header naranja Bomberos */
+.emgd-estacion-card__header {
+  background: linear-gradient(135deg, #ea580c, #c2410c);
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.emgd-estacion-card__tipo {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.6);
+}
+
+.emgd-estacion-card__nombre {
+  font-size: 0.9375rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.emgd-estacion-card__comandante {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.7);
+  font-weight: 500;
+  margin-top: 0.15rem;
+}
+
+/* Body de la estación */
+.emgd-estacion-card__body {
+  padding: 1.125rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+/* Teléfonos de estación */
+.emgd-estacion-card__tels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.emgd-estacion-card__tel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #495057;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.emgd-estacion-card__tel svg {
+  color: #adb5bd;
+}
+
+.emgd-estacion-card__tel--primary {
+  background: rgba(234,88,12,0.07);
+  border-color: rgba(234,88,12,0.2);
+  color: #c2410c;
+  font-weight: 700;
+}
+
+.emgd-estacion-card__tel--primary svg {
+  color: #ea580c;
+}
+
+.emgd-estacion-card__tel:hover {
+  background: rgba(234,88,12,0.1);
+  color: #c2410c;
+  border-color: rgba(234,88,12,0.3);
+}
+
+/* Clases faltantes detectadas en auditoría */
+.emgd-estacion-card__header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* Variante bomberos del service-card */
+.emgd-service-card--bomberos .emgd-service-card__icon {
+  background: rgba(234,88,12,0.08);
+  color: #ea580c;
+}
+
+/* Card central destacada en Protección Civil */
+.emgd-sede-card--central {
+  border-color: rgba(217,119,6,0.35);
+  box-shadow: 0 2px 12px rgba(217,119,6,0.1);
+}
+
+/* dir-icon variante bomberos */
+.emgd-sede-card__dir-icon--bomberos {
+  background: rgba(234,88,12,0.08);
+  color: #ea580c;
+}
+
+/* Override: details[open] FAQ para color de bomberos */
+.emgd-faqs--bomberos details[open] .emgd-faq__q {
+  color: #ea580c;
+  background: rgba(234,88,12,0.03);
+}
+.emgd-faqs--bomberos details[open] .emgd-faq__chevron {
+  color: #ea580c;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   v4 PROTECCIÓN CIVIL — Temporadas + tel-btn variante PC
+   ═══════════════════════════════════════════════════════════════════════ */
+.emgd-temporadas-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.125rem;
+}
+@media (min-width: 640px) { .emgd-temporadas-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.emgd-temporada-card {
+  background: #fff;
+  border: 1.5px solid #e9ecef;
+  border-radius: 14px;
+  padding: 1.375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+}
+.emgd-temporada-card:hover { box-shadow: 0 4px 18px rgba(217,119,6,0.1); border-color: rgba(217,119,6,0.3); transform: translateY(-1px); }
+
+.emgd-temporada-card__top { display: flex; align-items: center; gap: 0.75rem; }
+.emgd-temporada-card__emoji { font-size: 1.5rem; line-height: 1; flex-shrink: 0; }
+.emgd-temporada-card__tipo { font-size: 0.9375rem; font-weight: 700; color: #111; margin: 0; line-height: 1.2; }
+.emgd-temporada-card__temporada {
+  display: inline-block; font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; color: #d97706; background: rgba(217,119,6,0.08);
+  padding: 0.15rem 0.5rem; border-radius: 4px; margin-top: 0.2rem;
+}
+.emgd-temporada-card__desc { font-size: 0.84rem; color: #6c757d; line-height: 1.65; margin: 0; flex: 1; }
+.emgd-temporada-card__tel {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  font-size: 0.9rem; font-weight: 700; color: #d97706;
+  text-decoration: none; border-bottom: 1.5px solid rgba(217,119,6,0.3);
+  padding-bottom: 1px; align-self: flex-start;
+  transition: border-color 0.15s;
+}
+.emgd-temporada-card__tel:hover { border-color: #d97706; }
+
+/* tel-btn variante PC (amber) */
+.emgd-sede-card__tel-btn--pc {
+  background: rgba(217,119,6,0.06); border-color: rgba(217,119,6,0.2);
+}
+.emgd-sede-card__tel-btn--pc svg { color: #d97706; }
+
+/* ── Variantes de color por categoría (evitan inline styles) ─────────── */
+
+/* Urgency bar — protección civil */
+.emgd-urgency-bar__num--protcivil {
+  background: rgba(217,119,6,0.15);
+}
+.emgd-urgency-bar__num--protcivil:hover {
+  background: rgba(217,119,6,0.22);
+}
+.emgd-urgency-bar__num--protcivil .emgd-urgency-bar__digit {
+  color: #fbbf24;
+}
+
+/* Header sede — protección civil */
+.emgd-sede-card__header--protcivil {
+  background: linear-gradient(135deg, #d97706, #b45309);
+}
+
+/* Dir-icon — protección civil */
+.emgd-sede-card__dir-icon--protcivil {
+  background: rgba(217,119,6,0.08);
+  color: #d97706;
+}
+
+/* Tip-box — protección civil */
+.emgd-tip-box--protcivil {
+  background: rgba(217,119,6,0.06);
+  border-color: rgba(217,119,6,0.2);
+  border-left-color: #d97706;
+}
+.emgd-tip-box--protcivil .emgd-tip-box__icon {
+  color: #d97706;
+}
+
+/* Sidebar 911-card — protección civil */
+.emg-sb-card--protcivil {
+  background: #d97706;
+}
+
+/* Sidebar ref num — protección civil */
+.emg-sb-ref__num--protcivil {
+  color: #d97706;
+}
+
+/* Icon sección protección civil (override del inline style) */
+.emg-section__icon--gray {
+  background: #f1f3f5;
+  color: #495057;
+}
+
+/* tel-btn variante MP (gray) */
+.emgd-sede-card__tel-btn--mp {
+  background: rgba(75,85,99,0.06); border-color: rgba(75,85,99,0.2);
+}
+.emgd-sede-card__tel-btn--mp svg { color: #4b5563; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   v6 NÚMEROS UNIVERSALES — Número hero + grid + tabla cuándo
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* 911 hero card */
+.emgd-num-hero {
+  display: flex; flex-direction: column; gap: 1.25rem;
+  background: #0a0f1e; color: #fff;
+  border-radius: 16px; padding: 2rem;
+  text-decoration: none; margin-bottom: 1.5rem;
+  transition: opacity 0.15s ease;
+}
+@media (min-width: 640px) { .emgd-num-hero { flex-direction: row; align-items: center; gap: 2.5rem; } }
+.emgd-num-hero:hover { opacity: 0.92; }
+
+.emgd-num-hero__left { display: flex; flex-direction: column; gap: 0.35rem; align-items: flex-start; flex-shrink: 0; }
+.emgd-num-hero__badge {
+  font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em;
+  color: rgba(255,255,255,0.55); background: rgba(255,255,255,0.1);
+  padding: 0.2rem 0.6rem; border-radius: 4px;
+}
+.emgd-num-hero__num {
+  font-size: clamp(3rem, 10vw, 4.5rem); font-weight: 900; color: #fff;
+  letter-spacing: -0.03em; line-height: 1;
+}
+.emgd-num-hero__label { font-size: 0.875rem; font-weight: 600; color: rgba(255,255,255,0.6); }
+
+.emgd-num-hero__right { display: flex; flex-direction: column; gap: 0.75rem; }
+.emgd-num-hero__desc { font-size: 0.9375rem; color: rgba(255,255,255,0.8); line-height: 1.65; margin: 0; }
+.emgd-num-hero__tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.emgd-num-hero__tags span {
+  font-size: 0.72rem; font-weight: 600; color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+  padding: 0.2rem 0.55rem; border-radius: 4px;
+}
+
+/* Grid de números */
+.emgd-nums-grid {
+  display: grid; grid-template-columns: 1fr; gap: 1rem;
+}
+@media (min-width: 480px) { .emgd-nums-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 768px) { .emgd-nums-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.emgd-num-card-full {
+  display: flex; flex-direction: column; gap: 0.5rem;
+  background: var(--n-bg, rgba(10,15,30,0.04));
+  border: 1.5px solid rgba(10,15,30,0.07);
+  border-radius: 12px; padding: 1.25rem;
+  text-decoration: none;
+  transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+}
+.emgd-num-card-full:hover { border-color: var(--n-color, #111); box-shadow: 0 4px 14px rgba(10,15,30,0.08); transform: translateY(-1px); }
+
+.emgd-num-card-full__top { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; }
+.emgd-num-card-full__num { font-size: 1.5rem; font-weight: 900; color: var(--n-color, #111); letter-spacing: -0.02em; line-height: 1; }
+.emgd-num-card-full__cobertura {
+  font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;
+  color: #6c757d; background: #f1f3f5; padding: 0.2rem 0.5rem; border-radius: 4px;
+}
+.emgd-num-card-full__label { font-size: 0.875rem; font-weight: 700; color: #111; margin: 0; }
+.emgd-num-card-full__desc { font-size: 0.8rem; color: #6c757d; line-height: 1.6; margin: 0; }
+
+/* Tabla cuándo usar cada número */
+.emgd-cuando-tabla { display: flex; flex-direction: column; gap: 0; border: 1.5px solid #e9ecef; border-radius: 14px; overflow: hidden; background: #fff; }
+.emgd-cuando-row { display: flex; flex-direction: column; gap: 0.75rem; padding: 1.25rem 1.5rem; border-bottom: 1px solid #e9ecef; background: var(--r-bg, #fff); transition: background 0.15s; }
+@media (min-width: 640px) { .emgd-cuando-row { flex-direction: row; align-items: flex-start; gap: 1.5rem; } }
+.emgd-cuando-row:last-child { border-bottom: none; }
+.emgd-cuando-row__num {
+  font-size: 1.5rem; font-weight: 900; color: var(--r-color, #111);
+  text-decoration: none; letter-spacing: -0.02em; line-height: 1;
+  min-width: 5rem; flex-shrink: 0; padding-top: 0.1rem;
+  border-bottom: 1.5px solid rgba(0,0,0,0.1); padding-bottom: 1px;
+}
+.emgd-cuando-row__list {
+  list-style: none; padding: 0; margin: 0;
+  display: flex; flex-wrap: wrap; gap: 0.4rem; align-content: flex-start;
+}
+.emgd-cuando-row__list li {
+  font-size: 0.82rem; color: #495057;
+  background: rgba(255,255,255,0.75); border: 1px solid rgba(10,15,30,0.08);
+  padding: 0.25rem 0.6rem; border-radius: 5px; line-height: 1.3;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   v3 POLICÍA — Escenarios + Comparativa SSC vs Privado
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Grid de escenarios "qué número usar" */
+.emgd-escenarios-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .emgd-escenarios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.emgd-escenario-card {
+  background: var(--e-bg, rgba(10,15,30,0.04));
+  border: 1.5px solid rgba(10,15,30,0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.emgd-escenario-card:hover {
+  border-color: var(--e-color, #111);
+  box-shadow: 0 4px 18px rgba(10,15,30,0.08);
+}
+
+.emgd-escenario-card__num-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem 0.75rem;
+  border-bottom: 1px solid rgba(10,15,30,0.07);
+  gap: 0.75rem;
+}
+
+.emgd-escenario-card__num {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--e-color, #111);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+  padding-bottom: 1px;
+  transition: opacity 0.15s ease;
+}
+
+.emgd-escenario-card__num:hover {
+  opacity: 0.75;
+}
+
+.emgd-escenario-card__velocidad {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6c757d;
+  background: rgba(255,255,255,0.7);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  border: 1px solid rgba(10,15,30,0.08);
+  white-space: nowrap;
+}
+
+.emgd-escenario-card__body {
+  padding: 1rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.emgd-escenario-card__cuando {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.emgd-escenario-card__ejemplos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.emgd-escenario-card__ejemplos li {
+  font-size: 0.82rem;
+  color: #495057;
+  padding-left: 1rem;
+  position: relative;
+  line-height: 1.4;
+}
+
+.emgd-escenario-card__ejemplos li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--e-color, #adb5bd);
+  font-size: 0.75rem;
+}
+
+.emgd-escenario-card__nota {
+  font-size: 0.8rem;
+  color: #6c757d;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0.6rem 0.75rem;
+  background: rgba(255,255,255,0.6);
+  border-radius: 6px;
+  border-left: 3px solid var(--e-color, #adb5bd);
+  font-style: italic;
+}
+
+/* Comparativa SSC vs Privado */
+.emgd-compare-policia {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .emgd-compare-policia {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.emgd-compare-policia__col {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1.5px solid #e9ecef;
+}
+
+.emgd-compare-policia__col--ssc {
+  border-color: rgba(29,78,216,0.2);
+}
+
+.emgd-compare-policia__col--gap {
+  border-color: rgba(220,38,38,0.2);
+}
+
+.emgd-compare-policia__col-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.25rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.emgd-compare-policia__col--ssc .emgd-compare-policia__col-header {
+  background: rgba(29,78,216,0.08);
+  color: #1d4ed8;
+}
+
+.emgd-compare-policia__col--gap .emgd-compare-policia__col-header {
+  background: rgba(220,38,38,0.06);
+  color: #dc2626;
+}
+
+.emgd-compare-policia__list {
+  list-style: none;
+  padding: 1rem 1.25rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #fff;
+}
+
+.emgd-compare-policia__list li {
+  font-size: 0.875rem;
+  color: #495057;
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.4;
+}
+
+.emgd-compare-policia__list--yes li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #1d4ed8;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.emgd-compare-policia__list--no li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: #dc2626;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
+
+/* emg-section__note (ya definido en emergencias.css pero por si acaso) */
+.emg-section__note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.875rem 1rem;
+  background: rgba(10,15,30,0.03);
+  border: 1px solid rgba(10,15,30,0.07);
+  border-radius: 8px;
+  font-size: 0.82rem;
+  color: #6c757d;
+  line-height: 1.6;
+}

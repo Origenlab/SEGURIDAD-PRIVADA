@@ -1,0 +1,616 @@
+---
+import Base from '../../layouts/Base.astro';
+import HeroPagina from '../../components/HeroPagina.astro';
+import NavCTA from '../../components/NavCTA.astro';
+import '../../styles/pages/emergencias.css';
+
+// SVG reutilizables — evitar repetición en el template
+const svgPhone = `<svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.82 15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.93 4.11h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`;
+const svgPin   = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>`;
+const svgArrow = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
+import '../../styles/pages/emergencias-detalle.css';
+
+const siteUrl = 'https://seguridad-privada.com.mx';
+
+// ── Datos Bomberos ─────────────────────────────────────────────────────────
+const alcaldias = [
+  {
+    nombre: 'Miguel Hidalgo',
+    estaciones: [
+      { nombre:'Estación Tacuba', comandante:'Cte. Antonio Pimentel', direccion:'Golfo Gabes No. 29, Esq. Golfo San Jorge', colonia:'Tacuba', cp:'11410', tels:['55 5527-7004','55 5527-9633'], maps:'https://goo.gl/maps/MeL778RxiSAxo6xR7' },
+      { nombre:'Estación Tacubaya', comandante:'Cte. Artemio Venegas Mancera', direccion:'José María Vigil No. 56, Esq. Carlos B. Zetina', colonia:'Tacubaya', cp:'11870', tels:['55 5515-5994','55 5515-0437'], maps:'https://goo.gl/maps/N4fYi1SPqn4oggMH6' },
+    ],
+  },
+  {
+    nombre: 'Benito Juárez',
+    estaciones: [
+      { nombre:'Estación Portales', comandante:'Cte. Enrique Padilla Lupercio', direccion:'Eje Central Lázaro Cárdenas, Esq. Santa Cruz', colonia:'Portales', cp:'03300', tels:['55 5672-8955','55 5672-9124','55 5672-9212'], maps:'https://goo.gl/maps/jtvCJbADqxLjSzkC6' },
+    ],
+  },
+  {
+    nombre: 'Cuauhtémoc',
+    estaciones: [
+      { nombre:'Estación San Rafael', comandante:'Cte. Eulalio Mujica Pérez', direccion:'Av. Insurgentes Norte No. 95', colonia:'San Rafael', cp:'06470', tels:['55 5705-3369','55 5705-4230'], maps:'https://goo.gl/maps/txx7SP7MmLv7PPes6' },
+    ],
+  },
+  {
+    nombre: 'Coyoacán',
+    estaciones: [
+      { nombre:'Estación CTM Culhuacán', comandante:'Cte. Miguel Félix Bravo', direccion:'Av. Canal Nacional No. 1130, Esq. Calzada de la Virgen', colonia:'CTM Culhuacán', cp:'04920', tels:['55 5656-1044','55 5656-1047','55 5589-8500'], maps:'https://goo.gl/maps/SpjhSP8QxJaUgw2x9' },
+    ],
+  },
+  {
+    nombre: 'Álvaro Obregón',
+    estaciones: [
+      { nombre:'Estación San Pedro de los Pinos', comandante:'Cte. Isidoro Solache', direccion:'Av. Escuadrón 201, Esq. Antiguo Camino a La Venta', colonia:'San Pedro de los Pinos', cp:'01150', tels:['55 5527-1248','55 5527-1461','55 5527-1516'], maps:'https://goo.gl/maps/tnCecf29j51N29xZ7' },
+      { nombre:'Subestación Olivar de los Padres', comandante:null, direccion:'Av. Toluca, Esq. San Pablo', colonia:'Olivar de los Padres', cp:'01780', tels:['55 5705-4233','55 5893-1072'], maps:'https://goo.gl/maps/9gYCbzkdfzKfSZzM7' },
+    ],
+  },
+  {
+    nombre: 'Gustavo A. Madero',
+    estaciones: [
+      { nombre:'Estación Guadalupe Tepeyac', comandante:'Cte. José Saavedra del Razo', direccion:'Av. Henry Ford, Esq. Martha', colonia:'Guadalupe Tepeyac', cp:'07840', tels:['55 5517-0330','55 5759-5785'], maps:'https://goo.gl/maps/eBSUNMXiJs9yPfVQ8' },
+      { nombre:'Subestación Villa Madero', comandante:null, direccion:'Calle 5 de Mayo No. 59', colonia:'Villa Madero', cp:'07200', tels:['55 5667-8004','55 5871-7988'], maps:'https://goo.gl/maps/Gvqtzsv7MgyscMsJ6' },
+    ],
+  },
+  {
+    nombre: 'Iztapalapa',
+    estaciones: [
+      { nombre:'Estación Constitución de 1917', comandante:'Cte. Jesús Blanquel Corona', direccion:'Calzada Ermita Iztapalapa No. 2121', colonia:'Constitución de 1917', cp:'09260', tels:['55 5612-1080','55 5612-1140','55 5894-4312'], maps:'https://goo.gl/maps/bSwpbhH5yRVn8hMF8' },
+      { nombre:'Estación Chinampac de Juárez', comandante:'Cte. Felipe Zepeda Díaz', direccion:'Prolongación Marcelino Buendía', colonia:'Chinampac de Juárez', cp:'09208', tels:['55 5744-5345','55 5744-5354'], maps:'https://goo.gl/maps/qBumYsjUxYwzUahj8' },
+    ],
+  },
+  {
+    nombre: 'Xochimilco',
+    estaciones: [
+      { nombre:'Estación Xochimilco', comandante:'Cte. Ignacio Ponce de León', direccion:'Prol. 16 de Septiembre, Esq. Capulines', colonia:'Infonavit Nativitas', cp:'16090', tels:['55 5555-8420','55 5555-8987'], maps:'https://goo.gl/maps/QcDXexge63RuCh2V9' },
+    ],
+  },
+  {
+    nombre: 'Estado de México',
+    nota: 'Los municipios del EdoMex cuentan con unidades propias de Protección Civil y Bomberos. Para emergencias inmediatas siempre marca 9-1-1.',
+    estaciones: [
+      { nombre:'Bomberos / Protección Civil Naucalpan', comandante:null, direccion:'Av. Benito Juárez 39, Edif. de Seguridad', colonia:'El Mirador', cp:'53050', tels:['55 5371-8300'], maps:null },
+      { nombre:'Protección Civil Tlalnepantla', comandante:null, direccion:'Av. Sor Juana Inés de la Cruz s/n', colonia:'Centro', cp:'54000', tels:['55 5390-6548','55 5683-1154'], maps:null },
+    ],
+  },
+];
+
+const totalEstaciones = alcaldias.reduce((acc, a) => acc + a.estaciones.length, 0);
+
+const faqs = [
+  {
+    q: '¿Cómo llamo a los Bomberos de CDMX?',
+    a: 'Marca 068 o 9-1-1 desde cualquier teléfono — ambos son gratuitos, sin saldo, 24 horas. El 068 conecta directo con Bomberos CDMX. El 9-1-1 despacha la unidad más cercana disponible y puede activar simultáneamente a Bomberos y Cruz Roja.',
+  },
+  {
+    q: '¿Cuántas estaciones de Bomberos hay en CDMX?',
+    a: 'El Heroico Cuerpo de Bomberos opera 14 estaciones físicas en CDMX, distribuidas en alcaldías como Miguel Hidalgo (2 estaciones), Álvaro Obregón (2), Gustavo A. Madero (2) e Iztapalapa (2). Cada estación tiene comandante responsable, dirección exacta y teléfonos directos.',
+  },
+  {
+    q: '¿Cuánto tarda en llegar Bomberos?',
+    a: 'El tiempo depende de la distancia a la estación más cercana, el tráfico y la disponibilidad de unidades. En CDMX el tiempo de respuesta promedio es de 6 a 12 minutos para incendios estructurales. Mientras esperas, desaloja el área, cierra puertas para contener el fuego y espera en la calle para guiar a la unidad.',
+  },
+  {
+    q: '¿Los Bomberos cobran por el servicio?',
+    a: 'No. El servicio del Heroico Cuerpo de Bomberos de la Ciudad de México es completamente gratuito. Es una institución pública financiada por el gobierno de la CDMX. No se condiciona la atención al pago en ningún caso.',
+  },
+  {
+    q: '¿Qué debo hacer mientras espero a los Bomberos en un incendio?',
+    a: 'Desaloja el edificio inmediatamente. Activa la alarma de incendio. Cierra las puertas al salir (sin llave) para ralentizar la propagación del fuego. No uses elevadores. Reúnete en el punto de encuentro del condominio. Pon a alguien en la entrada principal para guiar a la unidad. Nunca regreses al interior.',
+  },
+  {
+    q: '¿Los Bomberos atienden rescates y no solo incendios?',
+    a: 'Sí. El Heroico Cuerpo de Bomberos también atiende rescates en altura, accidentes vehiculares con atrapados, derrumbes, fugas de gas, inundaciones y materiales peligrosos. El 068 o el 9-1-1 son los números correctos para cualquier emergencia que requiera sus capacidades técnicas.',
+  },
+  {
+    q: '¿Qué pasa si hay un incendio en mi condominio y el portón está cerrado?',
+    a: 'El guardia o encargado tiene la obligación de abrir el acceso inmediatamente ante cualquier emergencia. Retrasar el acceso a Bomberos en un incendio puede ser sancionado legalmente. El condominio debe tener un protocolo de emergencia que incluya el acceso inmediato sin obstáculos para servicios de emergencia.',
+  },
+];
+
+const otrasCategoriasEmg = [
+  { label:'Cruz Roja Mexicana', href:'/emergencias/cruz-roja', color:'#dc2626', badge:'065 · Delegación CDMX' },
+  { label:'Policía SSC', href:'/emergencias/policia', color:'#1d4ed8', badge:'9-1-1 · Líneas directas' },
+  { label:'Protección Civil', href:'/emergencias/proteccion-civil', color:'#d97706', badge:'9 alcaldías CDMX' },
+  { label:'Ministerio Público', href:'/emergencias/ministerio-publico', color:'#4b5563', badge:'089 · FGJ CDMX' },
+  { label:'Números Universales', href:'/emergencias/numeros-emergencia', color:'#059669', badge:'9-1-1 · 065 · 068 · 089' },
+];
+
+const zonasLinks = [
+  { label:'Miguel Hidalgo (Polanco)', href:'/zonas/miguel-hidalgo' },
+  { label:'Benito Juárez (Del Valle)', href:'/zonas/benito-juarez' },
+  { label:'Cuauhtémoc (Condesa)', href:'/zonas/cuauhtemoc' },
+  { label:'Coyoacán', href:'/zonas/coyoacan' },
+  { label:'Álvaro Obregón', href:'/zonas/alvaro-obregon' },
+  { label:'Gustavo A. Madero', href:'/zonas/gustavo-a-madero' },
+  { label:'Iztapalapa', href:'/zonas/iztapalapa' },
+  { label:'Xochimilco', href:'/zonas/xochimilco' },
+  { label:'Naucalpan', href:'/zonas/naucalpan' },
+  { label:'Tlalnepantla', href:'/zonas/tlalnepantla' },
+];
+
+const allEstaciones = alcaldias.flatMap(a => a.estaciones);
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/emergencias/bomberos`,
+      "name": "Bomberos CDMX — Estaciones, Dirección y Teléfonos · ORIGINS",
+      "description": `Directorio de las ${totalEstaciones} estaciones del Heroico Cuerpo de Bomberos CDMX con dirección, comandante y teléfonos directos. Verificado de fuentes oficiales.`,
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": siteUrl },
+          { "@type": "ListItem", "position": 2, "name": "Directorio de Emergencias", "item": `${siteUrl}/emergencias` },
+          { "@type": "ListItem", "position": 3, "name": "Bomberos CDMX", "item": `${siteUrl}/emergencias/bomberos` },
+        ]
+      }
+    },
+    ...allEstaciones.map(e => ({
+      "@type": "FireStation",
+      "name": e.nombre,
+      "telephone": e.tels[0].replace(/\s/g,''),
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": e.direccion,
+        "addressLocality": e.colonia,
+        "postalCode": e.cp,
+        "addressCountry": "MX"
+      }
+    })),
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    }
+  ]
+};
+---
+
+<Base
+  title={`Bomberos CDMX — ${totalEstaciones} Estaciones, Dirección y Teléfonos · ORIGINS`}
+  description={`Directorio de ${totalEstaciones} estaciones Heroico Cuerpo de Bomberos CDMX: dirección, comandante y teléfonos directos por alcaldía. Fuente oficial. Verificado abr. 2026.`}
+  canonical={`${siteUrl}/emergencias/bomberos`}
+  schema={schema}
+>
+
+  <div class="emg-strip">
+    <div class="emg-strip__inner">
+      <span class="emg-strip__badge">Emergencia</span>
+      <a href="tel:911" class="emg-strip__link">9-1-1</a>
+      <span class="emg-strip__label">· Gratuito · 24h · Policía, bomberos y ambulancias</span>
+    </div>
+  </div>
+
+  <HeroPagina
+    badge="Directorio de Emergencias · Bomberos"
+    titulo={`Heroico Cuerpo de Bomberos CDMX — ${totalEstaciones} Estaciones Verificadas`}
+    descripcion="Dirección exacta, comandante responsable y teléfonos directos de cada estación de Bomberos en CDMX y Estado de México. Para emergencias inmediatas: 068 o 9-1-1."
+    breadcrumb={[
+      { label:'Directorio de Emergencias', href:'/emergencias' },
+      { label:'Bomberos CDMX', href:'/emergencias/bomberos' },
+    ]}
+    ctaPrimario={{ texto:'Llamar: 068', href:'tel:068' }}
+    ctaWhatsapp={false}
+    seoParrafo1={`El <strong>Heroico Cuerpo de Bomberos de la Ciudad de México</strong> opera <strong>${totalEstaciones} estaciones físicas</strong> distribuidas en alcaldías como Miguel Hidalgo, Benito Juárez, Cuauhtémoc, Coyoacán, Álvaro Obregón, Gustavo A. Madero, Iztapalapa y Xochimilco. Cada estación tiene comandante responsable, dirección exacta y teléfonos directos.`}
+    seoParrafo2={`Para reportar un incendio o solicitar rescate marca <strong>068</strong> — es gratuito desde cualquier teléfono, 24 horas. También puedes marcar <strong>9-1-1</strong> para despachar la unidad más cercana. Fuente: <a href="https://bomberos.cdmx.gob.mx/estaciones" target="_blank" rel="noopener">bomberos.cdmx.gob.mx</a>. Verificado abril 2026.`}
+  />
+
+  <!-- ── URGENCY BAR ─────────────────────────────────────────────────────── -->
+  <div class="emgd-urgency-bar">
+    <div class="container">
+      <div class="emgd-urgency-bar__inner">
+        <a href="tel:068" class="emgd-urgency-bar__num emgd-urgency-bar__num--bomberos">
+          <span class="emgd-urgency-bar__eyebrow">Bomberos CDMX · Gratuito · Todo México</span>
+          <span class="emgd-urgency-bar__digit">068</span>
+          <span class="emgd-urgency-bar__sub">Heroico Cuerpo de Bomberos · 24 horas</span>
+        </a>
+        <a href="tel:911" class="emgd-urgency-bar__num emgd-urgency-bar__num--911">
+          <span class="emgd-urgency-bar__eyebrow">Emergencia inmediata · Todo México</span>
+          <span class="emgd-urgency-bar__digit">9-1-1</span>
+          <span class="emgd-urgency-bar__sub">Policía · Bomberos · Ambulancias</span>
+        </a>
+        <div class="emgd-urgency-bar__num emgd-urgency-bar__num--info">
+          <span class="emgd-urgency-bar__eyebrow">Estaciones verificadas en esta página</span>
+          <span class="emgd-urgency-bar__digit">{totalEstaciones}</span>
+          <span class="emgd-urgency-bar__sub">CDMX y Estado de México · Abr. 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ BODY CON SIDEBAR ═══════════════════════════════════════════════ -->
+  <div class="emg-layout">
+    <div class="container">
+      <div class="emg-layout__grid">
+
+        <main class="emg-layout__main">
+
+          <!-- ══ ESTACIONES POR ALCALDÍA ══════════════════════════════════ -->
+          <section class="emg-section emgd-section--first" id="estaciones" aria-labelledby="estaciones-title">
+            <div class="emg-section__header emg-section__header--bomberos">
+              <div class="emg-section__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+              </div>
+              <div>
+                <h2 id="estaciones-title" class="emg-section__title">Estaciones del Heroico Cuerpo de Bomberos CDMX</h2>
+                <p class="emg-section__sub">{totalEstaciones} estaciones verificadas · <a href="https://bomberos.cdmx.gob.mx/estaciones" target="_blank" rel="noopener">bomberos.cdmx.gob.mx</a> · Abr. 2026</p>
+              </div>
+              <a href="tel:068" class="emg-section__cta emg-section__cta--orange">Llamar: 068</a>
+            </div>
+
+            {alcaldias.map(alcaldia => (
+              <div class="emgd-alcaldia-group">
+                <div class="emgd-alcaldia-group__header">
+                  <div class="emgd-alcaldia-group__dot"></div>
+                  <h3 class="emgd-alcaldia-group__name">{alcaldia.nombre}</h3>
+                  <span class="emgd-alcaldia-group__count">{alcaldia.estaciones.length} estación{alcaldia.estaciones.length > 1 ? 'es' : ''}</span>
+                </div>
+                {alcaldia.nota && (
+                  <p class="emgd-alcaldia-group__nota">{alcaldia.nota}</p>
+                )}
+                <div class="emgd-estaciones-grid">
+                  {alcaldia.estaciones.map(e => (
+                    <article class="emgd-estacion-card">
+                      <div class="emgd-estacion-card__header">
+                        <div class="emgd-estacion-card__header-content">
+                          <span class="emgd-estacion-card__tipo">{e.comandante ? 'Estación' : 'Subestación'}</span>
+                          <h4 class="emgd-estacion-card__nombre">{e.nombre}</h4>
+                        </div>
+                        {e.comandante && (
+                          <div class="emgd-estacion-card__comandante">
+                            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                            {e.comandante}
+                          </div>
+                        )}
+                      </div>
+                      <div class="emgd-estacion-card__body">
+                        {e.maps ? (
+                          <a href={e.maps} target="_blank" rel="noopener" class="emgd-sede-card__dir emgd-sede-card__dir--link" style="--sede-color:#ea580c">
+                            <div class="emgd-sede-card__dir-icon emgd-sede-card__dir-icon--bomberos">
+                              <svg width="14" height="14" aria-hidden="true"><use href="#icon-pin"/></svg>
+                            </div>
+                            <div class="emgd-sede-card__dir-text">
+                              <span class="emgd-sede-card__calle">{e.direccion}</span>
+                              <span class="emgd-sede-card__colonia">Col. {e.colonia} · C.P. {e.cp}</span>
+                              <span class="emgd-sede-card__maps-cta" style="color:#ea580c">Ver en Google Maps →</span>
+                            </div>
+                          </a>
+                        ) : (
+                          <div class="emgd-sede-card__dir">
+                            <div class="emgd-sede-card__dir-icon emgd-sede-card__dir-icon--bomberos">
+                              <svg width="14" height="14" aria-hidden="true"><use href="#icon-pin"/></svg>
+                            </div>
+                            <div class="emgd-sede-card__dir-text">
+                              <span class="emgd-sede-card__calle">{e.direccion}</span>
+                              <span class="emgd-sede-card__colonia">Col. {e.colonia} · C.P. {e.cp}</span>
+                            </div>
+                          </div>
+                        )}
+                        <div class="emgd-estacion-card__tels">
+                          {e.tels.map((t, i) => (
+                            <a href={`tel:${t.replace(/\s/g,'')}`} class={`emgd-estacion-card__tel${i===0?' emgd-estacion-card__tel--primary':''}`}>
+                              <svg width="11" height="11" aria-hidden="true"><use href="#icon-phone"/></svg>
+                              {t}
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </section>
+
+          <!-- ══ CÓMO REPORTAR ════════════════════════════════════════════ -->
+          <section class="emg-section emg-section--alt" id="como-llamar" aria-labelledby="llamar-title">
+            <div class="emg-section__header emg-section__header--bomberos">
+              <div class="emg-section__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.82 15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.93 4.11h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <h2 id="llamar-title" class="emg-section__title">Cómo Reportar un Incendio o Pedir Rescate</h2>
+                <p class="emg-section__sub">Pasos exactos para llamar al 068 y qué hacer mientras llegan los Bomberos</p>
+              </div>
+            </div>
+            <div class="emgd-steps">
+              <div class="emgd-step" style="--step-color:#ea580c">
+                <div class="emgd-step__num">01</div>
+                <div class="emgd-step__content">
+                  <h3 class="emgd-step__title"><a href="tel:068" style="color:#ea580c">Marca 068</a> o <a href="tel:911" style="color:#ea580c">9-1-1</a> de inmediato</h3>
+                  <p class="emgd-step__desc">No esperes para ver si el fuego crece. El 068 conecta directo a Bomberos CDMX. El 9-1-1 puede despachar múltiples unidades a la vez: bomberos, ambulancias y policía. Ambos son gratuitos, sin saldo, desde cualquier celular.</p>
+                </div>
+              </div>
+              <div class="emgd-step" style="--step-color:#ea580c">
+                <div class="emgd-step__num">02</div>
+                <div class="emgd-step__content">
+                  <h3 class="emgd-step__title">Desaloja el área antes de llamar o mientras llamas</h3>
+                  <p class="emgd-step__desc">Tu seguridad primero. Activa la alarma de incendio, da la voz de alerta a los vecinos y sal del edificio. Puedes llamar al 068 desde la calle. No regreses a buscar objetos personales.</p>
+                </div>
+              </div>
+              <div class="emgd-step" style="--step-color:#ea580c">
+                <div class="emgd-step__num">03</div>
+                <div class="emgd-step__content">
+                  <h3 class="emgd-step__title">Di la dirección exacta: calle, número, colonia y alcaldía</h3>
+                  <p class="emgd-step__desc">Mientras más preciso, más rápido llega la unidad. Si estás en un condominio: "Edificio Torre X, Av. Insurgentes 1234, Col. Del Valle, Benito Juárez. Incendio en piso 8, departamento 801."</p>
+                </div>
+              </div>
+              <div class="emgd-step" style="--step-color:#ea580c">
+                <div class="emgd-step__num">04</div>
+                <div class="emgd-step__content">
+                  <h3 class="emgd-step__title">Cierra las puertas al salir — sin seguro</h3>
+                  <p class="emgd-step__desc">Cerrar las puertas (sin llave) reduce el oxígeno disponible para el fuego y puede cortar la propagación. Es una de las medidas más efectivas para ganar tiempo hasta que lleguen Bomberos. No uses elevadores en ninguna circunstancia.</p>
+                </div>
+              </div>
+              <div class="emgd-step" style="--step-color:#ea580c">
+                <div class="emgd-step__num">05</div>
+                <div class="emgd-step__content">
+                  <h3 class="emgd-step__title">Pon a alguien en la entrada principal para guiar a la unidad</h3>
+                  <p class="emgd-step__desc">En condominios con acceso controlado, el guardia debe abrir el portón de inmediato. Designa a alguien para esperar en la calle y guiar a las unidades al punto exacto del incendio. Cada minuto de retraso importa: el fuego se duplica en tamaño cada 60 segundos.</p>
+                </div>
+              </div>
+            </div>
+            <div class="emgd-tip-box" style="--tip-color:#ea580c;background:rgba(234,88,12,0.06);border-color:rgba(234,88,12,0.2);border-left-color:#ea580c">
+              <div class="emgd-tip-box__icon" style="color:#ea580c">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <div>
+                <strong>Si estás en un condominio con acceso controlado</strong>: el guardia tiene la obligación legal de abrir el portón inmediatamente ante la llegada de Bomberos. Un retraso en el acceso puede ser la diferencia entre un incendio controlado y una pérdida total. El protocolo debe incluir: portón abierto, elevador reservado en planta baja y guía hasta el punto de emergencia.
+              </div>
+            </div>
+          </section>
+
+          <!-- ══ TIPOS DE EMERGENCIA ══════════════════════════════════════ -->
+          <section class="emg-section" id="servicios-bomberos" aria-labelledby="servicios-b-title">
+            <div class="emg-section__header emg-section__header--bomberos">
+              <div class="emg-section__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+              <div>
+                <h2 id="servicios-b-title" class="emg-section__title">Qué Atiende el Heroico Cuerpo de Bomberos CDMX</h2>
+                <p class="emg-section__sub">Más allá de incendios: el catálogo completo de emergencias que responde el 068</p>
+              </div>
+            </div>
+            <div class="emgd-services-grid">
+              <div class="emgd-service-card emgd-service-card--bomberos">
+                <div class="emgd-service-card__icon" style="background:rgba(234,88,12,0.08);color:#ea580c">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                </div>
+                <div class="emgd-service-card__body">
+                  <h3>Incendios Estructurales</h3>
+                  <p>Incendios en edificios, casas, bodegas y locales comerciales. Control, extinción y rescate de personas atrapadas. Marca 068 o 9-1-1.</p>
+                  <span class="emgd-service-card__tag" style="color:#ea580c;background:rgba(234,88,12,0.08)">Emergencia principal · 068</span>
+                </div>
+              </div>
+              <div class="emgd-service-card emgd-service-card--bomberos">
+                <div class="emgd-service-card__icon" style="background:rgba(234,88,12,0.08);color:#ea580c">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <div class="emgd-service-card__body">
+                  <h3>Rescate Urbano</h3>
+                  <p>Personas atrapadas en elevadores, derrumbes, accidentes vehiculares y estructuras colapsadas. Equipo especializado de corte y extricación.</p>
+                  <span class="emgd-service-card__tag" style="color:#ea580c;background:rgba(234,88,12,0.08)">Rescate · Corte y extricación</span>
+                </div>
+              </div>
+              <div class="emgd-service-card emgd-service-card--bomberos">
+                <div class="emgd-service-card__icon" style="background:rgba(234,88,12,0.08);color:#ea580c">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </div>
+                <div class="emgd-service-card__body">
+                  <h3>Fugas de Gas y Materiales Peligrosos</h3>
+                  <p>Control de fugas de gas LP y natural, derrames de sustancias peligrosas y confinamiento de materiales. Evaluación del riesgo antes del ingreso.</p>
+                  <span class="emgd-service-card__tag" style="color:#ea580c;background:rgba(234,88,12,0.08)">Hazmat · Gas LP y natural</span>
+                </div>
+              </div>
+              <div class="emgd-service-card emgd-service-card--bomberos">
+                <div class="emgd-service-card__icon" style="background:rgba(234,88,12,0.08);color:#ea580c">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="emgd-service-card__body">
+                  <h3>Inundaciones y Rescate Acuático</h3>
+                  <p>Rescate de personas en zonas inundadas, barrancas y cuerpos de agua. Especialmente relevante en Xochimilco, Iztapalapa y zonas de drenaje pluvial.</p>
+                  <span class="emgd-service-card__tag" style="color:#ea580c;background:rgba(234,88,12,0.08)">Temporada de lluvias · Rescate acuático</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ══ FAQ ══════════════════════════════════════════════════════ -->
+          <section class="emg-section emg-section--alt" id="preguntas" aria-labelledby="faq-b-title">
+            <div class="emg-section__header emg-section__header--bomberos" style="margin-bottom:1.5rem">
+              <div class="emg-section__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <div>
+                <h2 id="faq-b-title" class="emg-section__title">Preguntas Frecuentes sobre Bomberos CDMX</h2>
+                <p class="emg-section__sub">Las dudas más comunes sobre el 068 y las estaciones de Bomberos</p>
+              </div>
+            </div>
+            <div class="emgd-faqs">
+              {faqs.map((faq, i) => (
+                <details class="emgd-faq" open={i === 0}>
+                  <summary class="emgd-faq__q" style={i===0?'color:#ea580c;background:rgba(234,88,12,0.03)':''}>
+                    <span>{faq.q}</span>
+                    <svg class="emgd-faq__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </summary>
+                  <div class="emgd-faq__a"><p>{faq.a}</p></div>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          <!-- ══ OTRAS CATEGORÍAS ═════════════════════════════════════════ -->
+          <section class="emg-section" id="otros" aria-labelledby="otros-b-title">
+            <div class="emg-section__header" style="margin-bottom:1.5rem">
+              <div class="emg-section__icon" style="background:#f1f3f5;color:#495057">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div>
+                <h2 id="otros-b-title" class="emg-section__title">Otras Categorías del Directorio de Emergencias</h2>
+                <p class="emg-section__sub">Cruz Roja, Policía, Protección Civil, Ministerio Público y Números Universales</p>
+              </div>
+            </div>
+            <div class="emgd-otros-grid">
+              {otrasCategoriasEmg.map(cat => (
+                <a href={cat.href} class="emgd-otro-card" style={`--otro-color:${cat.color}`}>
+                  <div class="emgd-otro-card__top">
+                    <div class="emgd-otro-card__dot"></div>
+                    <span class="emgd-otro-card__badge">{cat.badge}</span>
+                  </div>
+                  <span class="emgd-otro-card__label">{cat.label}</span>
+                  <svg class="emgd-otro-card__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              ))}
+              <a href="/emergencias" class="emgd-otro-card emgd-otro-card--all">
+                <span class="emgd-otro-card__label">Ver directorio completo</span>
+                <svg class="emgd-otro-card__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </section>
+
+          <section class="emg-disclaimer" style="padding:2rem 0 1rem">
+            <div class="emg-disclaimer__inner">
+              <div class="emg-disclaimer__card">
+                <div class="emg-disclaimer__icon emg-disclaimer__icon--warn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+                <div><h3 class="emg-disclaimer__title">Incendio activo: 068 o 9-1-1 primero</h3><p class="emg-disclaimer__text">No busques en este directorio si hay fuego ahora. Desaloja y llama de inmediato.</p></div>
+              </div>
+              <div class="emg-disclaimer__card">
+                <div class="emg-disclaimer__icon emg-disclaimer__icon--info"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+                <div><h3 class="emg-disclaimer__title">Verificado — abril 2026</h3><p class="emg-disclaimer__text">Fuente: <a href="https://bomberos.cdmx.gob.mx/estaciones" target="_blank" rel="noopener">bomberos.cdmx.gob.mx</a>. <a href="mailto:hola@originsecurity.mx">Reportar dato incorrecto →</a></p></div>
+              </div>
+              <div class="emg-disclaimer__card">
+                <div class="emg-disclaimer__icon emg-disclaimer__icon--update"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
+                <div><h3 class="emg-disclaimer__title">Recurso ciudadano independiente</h3><p class="emg-disclaimer__text">ORIGINS no representa al Heroico Cuerpo de Bomberos. Directorio de orientación ciudadana.</p></div>
+              </div>
+            </div>
+          </section>
+
+        </main>
+
+        <!-- ── SIDEBAR ──────────────────────────────────────────────────── -->
+        <aside class="emg-sidebar">
+
+          <div class="emg-sb-card" style="background:#ea580c">
+            <p class="emg-sb-911__eyebrow">Bomberos CDMX · Gratuito · 24h</p>
+            <a href="tel:068" class="emg-sb-911__num" style="letter-spacing:0.05em">068</a>
+            <p class="emg-sb-911__desc">Desde cualquier teléfono · Sin saldo<br>Heroico Cuerpo de Bomberos CDMX</p>
+          </div>
+
+          <div class="emg-sb-card">
+            <h4 class="emg-sb-card__title">Líneas de Bomberos CDMX</h4>
+            <div class="emg-sb-reflist">
+              <a href="tel:068" class="emg-sb-ref">
+                <span class="emg-sb-ref__num" style="color:#ea580c">068</span>
+                <span class="emg-sb-ref__info"><strong>Bomberos CDMX</strong><span>Gratuito · Todo México · 24h</span></span>
+              </a>
+              <a href="tel:911" class="emg-sb-ref">
+                <span class="emg-sb-ref__num" style="color:#111">9-1-1</span>
+                <span class="emg-sb-ref__info"><strong>Emergencias · Todo México</strong><span>Despacha múltiples unidades</span></span>
+              </a>
+              <a href="tel:5556272721" class="emg-sb-ref">
+                <span class="emg-sb-ref__num emg-sb-ref__num--md" style="color:#ea580c">5627-2721</span>
+                <span class="emg-sb-ref__info"><strong>Bomberos CDMX — Central</strong><span>Dirección General · Admin.</span></span>
+              </a>
+            </div>
+          </div>
+
+          <div class="emg-sb-card">
+            <h4 class="emg-sb-card__title">En esta página</h4>
+            <nav class="emg-sb-nav">
+              <a href="#estaciones" class="emg-sb-nav__link emg-sb-nav__link--bomberos">{totalEstaciones} estaciones por alcaldía</a>
+              <a href="#como-llamar" class="emg-sb-nav__link emg-sb-nav__link--bomberos">Cómo reportar incendio o rescate</a>
+              <a href="#servicios-bomberos" class="emg-sb-nav__link emg-sb-nav__link--bomberos">Qué atiende el 068</a>
+              <a href="#preguntas" class="emg-sb-nav__link emg-sb-nav__link--bomberos">Preguntas frecuentes</a>
+              <a href="#otros" class="emg-sb-nav__link">Otras emergencias</a>
+            </nav>
+          </div>
+
+          <div class="emg-sb-card">
+            <h4 class="emg-sb-card__title">Estaciones por zona — resumen</h4>
+            <div class="emg-sb-reflist">
+              {alcaldias.filter(a=>a.nombre!=='Estado de México').map(a => (
+                <div class="emg-sb-ref" style="cursor:default">
+                  <span class="emg-sb-ref__num emg-sb-ref__num--md" style="color:#ea580c;font-size:1rem">{a.estaciones.length}</span>
+                  <span class="emg-sb-ref__info">
+                    <strong>{a.nombre}</strong>
+                    <span>{a.estaciones.map(e=>e.colonia).join(' · ')}</span>
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div class="emg-sb-card">
+            <h4 class="emg-sb-card__title">Zonas de cobertura ORIGINS</h4>
+            <p class="emg-sb-card__intro">Seguridad privada para condominios en las mismas alcaldías donde operan los Bomberos.</p>
+            <ul class="emg-sb-zones">
+              {zonasLinks.map(z => (<li><a href={z.href}>{z.label}</a></li>))}
+            </ul>
+          </div>
+
+          <div class="emg-sb-card emg-sb-card--origins">
+            <p class="emg-sb-card__origins-eyebrow">ORIGINS Private Security</p>
+            <h4 class="emg-sb-card__origins-title">Los Bomberos entran más rápido cuando el acceso está listo.</h4>
+            <p class="emg-sb-card__origins-text">En un incendio, cada segundo importa. Nuestros guardias tienen el protocolo de acceso de emergencias: portón abierto, elevador reservado en planta baja y guía directa al punto de intervención. La unidad de Bomberos no pierde tiempo esperando.</p>
+            <div class="emg-sb-card__origins-services">
+              <a href="/servicios/guardias-intramuros">Guardias Intramuros 24/7</a>
+              <a href="/servicios/control-de-accesos">Control de Accesos</a>
+              <a href="/servicios/monitoreo-alarmas">Detección Temprana de Humo</a>
+            </div>
+            <a href="https://wa.me/525530255580" class="emg-sb-card__origins-cta" target="_blank" rel="noopener">Cotización gratuita — 24h</a>
+            <p class="emg-sb-card__origins-permit">Permiso SSC 0102-15 · CDMX y Estado de México</p>
+          </div>
+
+          <div class="emg-sb-card">
+            <h4 class="emg-sb-card__title">Directorio de Emergencias</h4>
+            <nav class="emg-sb-nav">
+              <a href="/emergencias/cruz-roja"          class="emg-sb-nav__link emg-sb-nav__link--cruzroja">Cruz Roja · 065</a>
+              <a href="/emergencias/policia"            class="emg-sb-nav__link emg-sb-nav__link--policia">Policía SSC · 9-1-1</a>
+              <a href="/emergencias/proteccion-civil"   class="emg-sb-nav__link emg-sb-nav__link--protcivil">Protección Civil · Alcaldías</a>
+              <a href="/emergencias/ministerio-publico" class="emg-sb-nav__link emg-sb-nav__link--mp">Ministerio Público · FGJ</a>
+              <a href="/emergencias/numeros-emergencia" class="emg-sb-nav__link emg-sb-nav__link--numeros">Números Universales</a>
+              <a href="/emergencias" class="emg-sb-nav__link" style="font-weight:700">← Directorio completo</a>
+            </nav>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </div>
+
+  <section class="emg-cta">
+    <div class="container">
+      <div class="emg-cta__inner">
+        <div>
+          <span class="emg-cta__badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>ORIGINS Private Security</span>
+          <h2 class="emg-cta__title">El Tiempo de Respuesta de Bomberos Empieza Cuando Abren el Portón</h2>
+          <p class="emg-cta__text">Las estaciones de Bomberos más cercanas están a 6-12 minutos. Pero en condominios con acceso controlado, pueden pasar 2-5 minutos adicionales esperando que alguien abra. ORIGINS entrena a sus guardias con un protocolo específico de acceso de emergencias: portón abierto en 15 segundos, elevador reservado, guía al piso sin demora.</p>
+          <div class="emg-cta__stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Protocolo ORIGINS: acceso a emergencias en &lt;15 segundos</div>
+        </div>
+        <div class="emg-cta__actions">
+          <a href="/servicios/guardias-intramuros" class="emg-cta__btn emg-cta__btn--primary">Ver Guardias Intramuros</a>
+          <a href="https://wa.me/525530255580" class="emg-cta__btn emg-cta__btn--wa" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <NavCTA footer={true} cards={[
+    { label:'Directorio de Emergencias', sublabel:'Bomberos, Cruz Roja y más', href:'/emergencias', icon:'shield' },
+    { label:'Guardias Intramuros', sublabel:'Acceso para emergencias en &lt;15s', href:'/servicios/guardias-intramuros', icon:'shield' },
+    { label:'Zonas de Cobertura', sublabel:'CDMX y Estado de México', href:'/zonas', icon:'map' },
+    { label:'Cotización Gratis', sublabel:'Diagnóstico en 24h', href:'https://wa.me/525530255580', whatsapp:true, accent:true, external:true },
+  ]}/>
+
+</Base>

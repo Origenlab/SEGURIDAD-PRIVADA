@@ -1,0 +1,310 @@
+---
+import Base from '../../layouts/Base.astro';
+import HeroPagina from '../../components/HeroPagina.astro';
+import NavCTA from '../../components/NavCTA.astro';
+import '../../styles/pages/emergencias.css';
+import '../../styles/pages/emergencias-detalle.css';
+
+const siteUrl = 'https://seguridad-privada.com.mx';
+
+const numeros = [
+  { num:'9-1-1', label:'Emergencias', desc:'Policía, bomberos y ambulancias simultáneos. Primer número que debes marcar en cualquier emergencia.', tel:'911', color:'#111', bg:'rgba(10,15,30,0.06)', priority:true, cobertura:'Todo México · Gratuito · 24h' },
+  { num:'065',   label:'Cruz Roja',   desc:'Ambulancias Cruz Roja Mexicana. Atención prehospitalaria y traslados de emergencia.', tel:'065', color:'#dc2626', bg:'rgba(220,38,38,0.06)', priority:false, cobertura:'Todo México · Gratuito · 24h' },
+  { num:'068',   label:'Bomberos',    desc:'Heroico Cuerpo de Bomberos CDMX. Incendios, rescates, fugas de gas y materiales peligrosos.', tel:'068', color:'#ea580c', bg:'rgba(234,88,12,0.06)', priority:false, cobertura:'CDMX · Gratuito · 24h' },
+  { num:'060',   label:'Radio Patrulla', desc:'Patrullas SSC CDMX. Reportes directos de incidentes en proceso.', tel:'060', color:'#1d4ed8', bg:'rgba(29,78,216,0.06)', priority:false, cobertura:'CDMX · Gratuito · 24h' },
+  { num:'089',   label:'Denuncia Anónima', desc:'Reportes anónimos a la SSC CDMX. Para información sobre delitos sin identificarse. No despacha patrulla.', tel:'089', color:'#4b5563', bg:'rgba(75,85,99,0.06)', priority:false, cobertura:'CDMX · Gratuito · 24h' },
+  { num:'040',   label:'Locatel / Info',   desc:'Información ciudadana, orientación y localización de personas en el ERUM.', tel:'040', color:'#059669', bg:'rgba(5,150,105,0.06)', priority:false, cobertura:'CDMX · 24h' },
+  { num:'800 000 0025', label:'FGJ CDMX', desc:'Fiscalía General de Justicia. Asesoría jurídica y orientación para denuncias. Línea gratuita.', tel:'8000000025', color:'#4b5563', bg:'rgba(75,85,99,0.04)', priority:false, cobertura:'CDMX · Gratuito · Lun–Vie' },
+  { num:'55 5683-2222', label:'Protección Civil', desc:'SGIRPC Central CDMX. Sismos, inundaciones, derrumbes y evaluación de riesgos.', tel:'5556832222', color:'#d97706', bg:'rgba(217,119,6,0.06)', priority:false, cobertura:'CDMX · 24h' },
+  { num:'55 5557-5757', label:'Cruz Roja — Delegación', desc:'Línea directa de la Delegación CDMX de la Cruz Roja Mexicana. Los Morales Polanco.', tel:'5555575757', color:'#dc2626', bg:'rgba(220,38,38,0.04)', priority:false, cobertura:'CDMX · 24h' },
+  { num:'55 5208-9898', label:'SSC Atención Ciudadana', desc:'Línea de atención ciudadana de la Secretaría de Seguridad Ciudadana CDMX.', tel:'5552089898', color:'#1d4ed8', bg:'rgba(29,78,216,0.04)', priority:false, cobertura:'CDMX · 24h' },
+];
+
+const categorias = [
+  { label:'Cruz Roja CDMX', href:'/emergencias/cruz-roja', color:'#dc2626', desc:'Sede y ambulancias' },
+  { label:'Bomberos CDMX', href:'/emergencias/bomberos', color:'#ea580c', desc:'14 estaciones verificadas' },
+  { label:'Policía SSC', href:'/emergencias/policia', color:'#1d4ed8', desc:'Líneas directas por alcaldía' },
+  { label:'Protección Civil', href:'/emergencias/proteccion-civil', color:'#d97706', desc:'9 unidades · Por alcaldía' },
+  { label:'Ministerio Público', href:'/emergencias/ministerio-publico', color:'#4b5563', desc:'FGJ · Denuncia digital' },
+];
+
+const faqsNumeros = [
+  { q:'¿Cuál es el número de emergencias en México?', a:'El 9-1-1 es el número de emergencias nacional en México. Es gratuito, funciona sin saldo desde cualquier celular o teléfono fijo, disponible las 24 horas los 365 días del año. Despacha policía, bomberos y ambulancias simultáneamente según el tipo de emergencia.' },
+  { q:'¿Para qué sirve el 065?', a:'El 065 es el número directo de la Cruz Roja Mexicana para solicitar ambulancias. Es gratuito desde cualquier teléfono en todo México, disponible 24 horas. Para emergencias donde también necesitas policía o bomberos, el 9-1-1 puede despachar múltiples servicios en una sola llamada.' },
+  { q:'¿Para qué sirve el 068?', a:'El 068 es el número directo del Heroico Cuerpo de Bomberos de la CDMX. Gratuito, 24 horas. Para incendios, rescates, fugas de gas y materiales peligrosos en la Ciudad de México.' },
+  { q:'¿Para qué sirve el 089?', a:'El 089 es la línea de denuncia anónima de la SSC CDMX. Permite reportar información sobre delitos sin identificarse. No despacha patrullas ni genera carpeta de investigación — es para inteligencia policial. Para emergencias activas usa el 9-1-1.' },
+  { q:'¿Funcionan estos números sin saldo en el celular?', a:'Sí. El 9-1-1, 065, 068 y 089 son números de emergencia que funcionan desde cualquier celular sin importar el saldo, la operadora ni si el teléfono está bloqueado. Solo necesitas tener señal.' },
+];
+
+const schema = {
+  "@context":"https://schema.org",
+  "@graph":[
+    { "@type":"WebPage","@id":`${siteUrl}/emergencias/numeros-emergencia`,
+      "name":"Números de Emergencia México — 9-1-1, 065, 068, 089 y más · ORIGINS",
+      "description":"Guía completa de números de emergencia en México: 9-1-1, 065 Cruz Roja, 068 Bomberos, 089 denuncia anónima, 060 radio patrulla y más. Gratuitos desde cualquier teléfono.",
+      "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Inicio","item":siteUrl},
+        {"@type":"ListItem","position":2,"name":"Directorio de Emergencias","item":`${siteUrl}/emergencias`},
+        {"@type":"ListItem","position":3,"name":"Números de Emergencia","item":`${siteUrl}/emergencias/numeros-emergencia`},
+      ]}},
+    { "@type":"FAQPage","mainEntity":faqsNumeros.map(f=>({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) }
+  ]
+};
+---
+
+<Base
+  title="Números de Emergencia México — 9-1-1, 065, 068 y más · ORIGINS"
+  description="Números de emergencia México: 9-1-1, 065 Cruz Roja, 068 Bomberos, 089 denuncia anónima y más. Gratuitos 24h. Cuándo usar cada número. Verificado 2026."
+  canonical={`${siteUrl}/emergencias/numeros-emergencia`}
+  schema={schema}
+>
+
+  <div class="emg-strip"><div class="emg-strip__inner">
+    <span class="emg-strip__badge">Emergencia</span>
+    <a href="tel:911" class="emg-strip__link">9-1-1</a>
+    <span class="emg-strip__label">· Gratuito · 24h · Policía, bomberos y ambulancias</span>
+  </div></div>
+
+  <HeroPagina
+    badge="Directorio de Emergencias · Números Universales"
+    titulo="Números de Emergencia en México — Guía Completa para Guardar"
+    descripcion="9-1-1, 065, 068, 089, 060 y más — todos los números de emergencia gratuitos disponibles desde cualquier teléfono en México, con instrucciones de cuándo usar cada uno."
+    breadcrumb={[
+      { label:'Directorio de Emergencias', href:'/emergencias' },
+      { label:'Números Universales', href:'/emergencias/numeros-emergencia' },
+    ]}
+    ctaPrimario={{ texto:'Emergencia: 9-1-1', href:'tel:911' }}
+    ctaWhatsapp={false}
+    seoParrafo1={`Los <strong>números de emergencia en México</strong> son gratuitos, funcionan sin saldo, desde cualquier celular o teléfono fijo, las 24 horas. El <strong>9-1-1</strong> es el número principal — despacha policía, bomberos y ambulancias simultáneamente. El <strong>065</strong> conecta a Cruz Roja, el <strong>068</strong> a Bomberos y el <strong>089</strong> para denuncias anónimas.`}
+    seoParrafo2={`Guarda esta página en favoritos para tenerla disponible cuando la necesites. Cada número tiene un propósito específico — saber cuál usar ahorra tiempo crítico en una emergencia. Datos verificados de fuentes oficiales. Verificado abril 2026.`}
+  />
+
+  <!-- Urgency bar del 911 solamente — esta es la página de referencia -->
+  <div class="emgd-urgency-bar">
+    <div class="container"><div class="emgd-urgency-bar__inner">
+      <a href="tel:911" class="emgd-urgency-bar__num" style="background:rgba(10,15,30,0.3);flex:2">
+        <span class="emgd-urgency-bar__eyebrow">PRIMER NÚMERO · Cualquier emergencia · Todo México</span>
+        <span class="emgd-urgency-bar__digit" style="font-size:3rem">9-1-1</span>
+        <span class="emgd-urgency-bar__sub">Gratuito · Sin saldo · Policía + Bomberos + Ambulancias · 24h · 365 días</span>
+      </a>
+    </div></div>
+  </div>
+
+  <div class="emg-layout">
+    <div class="container"><div class="emg-layout__grid">
+      <main class="emg-layout__main">
+
+        <!-- ══ GRID DE NÚMEROS ════════════════════════════════════════════ -->
+        <section class="emg-section emgd-section--first" id="numeros" aria-labelledby="numeros-u-title">
+          <div class="emg-section__header" style="--icon-bg:#f1f3f5;--icon-color:#111">
+            <div class="emg-section__icon" style="background:#f1f3f5;color:#111">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.82 15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.93 4.11h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h2 id="numeros-u-title" class="emg-section__title">Todos los Números de Emergencia en México</h2>
+              <p class="emg-section__sub">{numeros.length} números verificados · Gratuitos · Sin saldo · Desde cualquier teléfono</p>
+            </div>
+          </div>
+
+          <!-- 911 destacado -->
+          <a href="tel:911" class="emgd-num-hero">
+            <div class="emgd-num-hero__left">
+              <span class="emgd-num-hero__badge">Primer número en toda emergencia</span>
+              <span class="emgd-num-hero__num">9-1-1</span>
+              <span class="emgd-num-hero__label">Emergencias Nacionales</span>
+            </div>
+            <div class="emgd-num-hero__right">
+              <p class="emgd-num-hero__desc">Despacha policía, bomberos y ambulancias simultáneamente. No cuelgues — el operador coordina todas las unidades.</p>
+              <div class="emgd-num-hero__tags">
+                <span>Gratuito</span><span>Sin saldo</span><span>24h · 365 días</span><span>Todo México</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Resto de números -->
+          <div class="emgd-nums-grid">
+            {numeros.filter(n=>n.num!=='9-1-1').map(n=>(
+              <a href={`tel:${n.tel}`} class="emgd-num-card-full" style={`--n-color:${n.color};--n-bg:${n.bg}`}>
+                <div class="emgd-num-card-full__top">
+                  <span class="emgd-num-card-full__num">{n.num}</span>
+                  <span class="emgd-num-card-full__cobertura">{n.cobertura}</span>
+                </div>
+                <strong class="emgd-num-card-full__label">{n.label}</strong>
+                <p class="emgd-num-card-full__desc">{n.desc}</p>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <!-- ══ CUÁNDO USAR CADA UNO ════════════════════════════════════ -->
+        <section class="emg-section emg-section--alt" id="cuando" aria-labelledby="cuando-title">
+          <div class="emg-section__header" style="margin-bottom:1.5rem">
+            <div class="emg-section__icon" style="background:#f1f3f5;color:#111">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div>
+              <h2 id="cuando-title" class="emg-section__title">Cuándo Usar Cada Número — Guía de Referencia</h2>
+              <p class="emg-section__sub">La regla de oro: en caso de duda, siempre 9-1-1 primero</p>
+            </div>
+          </div>
+          <div class="emgd-cuando-tabla">
+            {[
+              { num:'9-1-1', color:'#111', bg:'rgba(10,15,30,0.05)', situaciones:['Robo en proceso','Incendio activo','Persona herida o inconsciente','Agresión con arma','Cualquier emergencia activa'] },
+              { num:'065', color:'#dc2626', bg:'rgba(220,38,38,0.05)', situaciones:['Accidente con heridos','Persona que no respira','Traslado médico urgente','Primeros auxilios a domicilio'] },
+              { num:'068', color:'#ea580c', bg:'rgba(234,88,12,0.05)', situaciones:['Incendio estructural','Persona atrapada','Fuga de gas con riesgo de explosión','Rescate en altura o derrumbe'] },
+              { num:'089', color:'#4b5563', bg:'rgba(75,85,99,0.05)', situaciones:['Conoces quién cometió un delito','Tráfico de drogas en la colonia','Información sin querer identificarte','Reporte sin respuesta inmediata'] },
+              { num:'060', color:'#1d4ed8', bg:'rgba(29,78,216,0.05)', situaciones:['Sospechoso en la zona','Persona sospechosa rondando','Vehículo abandonado','Solicitud de patrullaje sin urgencia'] },
+            ].map(r=>(
+              <div class="emgd-cuando-row" style={`--r-color:${r.color};--r-bg:${r.bg}`}>
+                <a href={`tel:${r.num.replace(/[\s-]/g,'')}`} class="emgd-cuando-row__num">{r.num}</a>
+                <ul class="emgd-cuando-row__list">
+                  {r.situaciones.map(s=><li>{s}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- ══ CATEGORÍAS DEL DIRECTORIO ══════════════════════════════ -->
+        <section class="emg-section" id="directorio" aria-labelledby="dir-title">
+          <div class="emg-section__header" style="margin-bottom:1.5rem">
+            <div class="emg-section__icon" style="background:#f1f3f5;color:#111">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <div>
+              <h2 id="dir-title" class="emg-section__title">Directorio Completo — Sedes, Direcciones y Más Datos</h2>
+              <p class="emg-section__sub">Cada categoría tiene dirección física, teléfonos directos y guía de uso</p>
+            </div>
+          </div>
+          <div class="emgd-otros-grid" style="grid-template-columns:repeat(2,1fr)">
+            {categorias.map(cat=>(
+              <a href={cat.href} class="emgd-otro-card" style={`--otro-color:${cat.color}`}>
+                <div class="emgd-otro-card__top"><div class="emgd-otro-card__dot"></div><span class="emgd-otro-card__badge">{cat.desc}</span></div>
+                <span class="emgd-otro-card__label">{cat.label}</span>
+                <svg class="emgd-otro-card__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            ))}
+            <a href="/emergencias" class="emgd-otro-card emgd-otro-card--all" style="grid-column:1/-1">
+              <span class="emgd-otro-card__label">Ver directorio completo de emergencias</span>
+              <svg class="emgd-otro-card__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </section>
+
+        <!-- ══ FAQ ══════════════════════════════════════════════════════ -->
+        <section class="emg-section emg-section--alt" id="preguntas" aria-labelledby="faq-n-title">
+          <div class="emg-section__header" style="margin-bottom:1.5rem">
+            <div class="emg-section__icon" style="background:#f1f3f5;color:#059669">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <div>
+              <h2 id="faq-n-title" class="emg-section__title">Preguntas Frecuentes sobre Números de Emergencia</h2>
+              <p class="emg-section__sub">Lo que más preguntan sobre el 9-1-1, 065, 068 y 089</p>
+            </div>
+          </div>
+          <div class="emgd-faqs">
+            {faqsNumeros.map((f, i) => (
+              <details class="emgd-faq" open={i === 0}>
+                <summary class="emgd-faq__q">
+                  <span>{f.q}</span>
+                  <svg class="emgd-faq__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <div class="emgd-faq__a"><p>{f.a}</p></div>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <section class="emg-disclaimer" style="padding:2rem 0 1rem">
+          <div class="emg-disclaimer__inner">
+            <div class="emg-disclaimer__card"><div class="emg-disclaimer__icon emg-disclaimer__icon--warn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg></div><div><h3 class="emg-disclaimer__title">Emergencia: 9-1-1 primero, siempre</h3><p class="emg-disclaimer__text">No busques el número correcto en una emergencia activa. El 9-1-1 funciona para todo.</p></div></div>
+            <div class="emg-disclaimer__card"><div class="emg-disclaimer__icon emg-disclaimer__icon--info"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div><h3 class="emg-disclaimer__title">Verificado — abril 2026</h3><p class="emg-disclaimer__text">Fuentes: ssc.cdmx.gob.mx · bomberos.cdmx.gob.mx · cruzrojamexicana.org.mx. <a href="mailto:hola@originsecurity.mx">Reportar dato incorrecto →</a></p></div></div>
+            <div class="emg-disclaimer__card"><div class="emg-disclaimer__icon emg-disclaimer__icon--update"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div><div><h3 class="emg-disclaimer__title">Guarda esta página</h3><p class="emg-disclaimer__text">Agrega a favoritos para tenerla disponible cuando la necesites — sin buscar.</p></div></div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ── SIDEBAR ──────────────────────────────────────────────────── -->
+      <aside class="emg-sidebar">
+        <div class="emg-sb-card" style="background:#0a0f1e">
+          <p class="emg-sb-911__eyebrow">Emergencia · Todo México · Primero siempre</p>
+          <a href="tel:911" class="emg-sb-911__num">9-1-1</a>
+          <p class="emg-sb-911__desc">Gratuito · Sin saldo · 24h · 365 días<br>Policía + Bomberos + Ambulancias</p>
+        </div>
+        <div class="emg-sb-card">
+          <h4 class="emg-sb-card__title">Números de referencia rápida</h4>
+          <div class="emg-sb-reflist">
+            {[
+              { num:'065', label:'Cruz Roja · Ambulancias', sub:'Gratuito · Todo México', color:'#dc2626' },
+              { num:'068', label:'Bomberos CDMX', sub:'Gratuito · CDMX', color:'#ea580c' },
+              { num:'060', label:'Radio Patrulla SSC', sub:'CDMX · 24h', color:'#1d4ed8' },
+              { num:'089', label:'Denuncia Anónima', sub:'CDMX · Sin identificarse', color:'#4b5563' },
+              { num:'040', label:'Locatel · Info', sub:'CDMX · 24h', color:'#059669' },
+            ].map(n=>(
+              <a href={`tel:${n.num}`} class="emg-sb-ref">
+                <span class="emg-sb-ref__num" style={`color:${n.color}`}>{n.num}</span>
+                <span class="emg-sb-ref__info"><strong>{n.label}</strong><span>{n.sub}</span></span>
+              </a>
+            ))}
+          </div>
+        </div>
+        <div class="emg-sb-card">
+          <h4 class="emg-sb-card__title">En esta página</h4>
+          <nav class="emg-sb-nav">
+            <a href="#numeros"    class="emg-sb-nav__link emg-sb-nav__link--numeros">Todos los números con descripción</a>
+            <a href="#cuando"     class="emg-sb-nav__link emg-sb-nav__link--numeros">Cuándo usar cada número</a>
+            <a href="#directorio" class="emg-sb-nav__link emg-sb-nav__link--numeros">Directorio completo por institución</a>
+            <a href="#preguntas"  class="emg-sb-nav__link emg-sb-nav__link--numeros">Preguntas frecuentes</a>
+          </nav>
+        </div>
+        <div class="emg-sb-card emg-sb-card--origins">
+          <p class="emg-sb-card__origins-eyebrow">ORIGINS Private Security</p>
+          <h4 class="emg-sb-card__origins-title">Ningún número llega en menos de 90 segundos. ORIGINS sí.</h4>
+          <p class="emg-sb-card__origins-text">El 9-1-1, el 065 y el 068 son excelentes — pero llegan en minutos. ORIGINS monitorea tu condominio en tiempo real y responde en menos de 90 segundos. Para los primeros momentos de una emergencia, la velocidad lo es todo.</p>
+          <div class="emg-sb-card__origins-services">
+            <a href="/servicios/monitoreo-alarmas">Monitoreo 24/7 · Respuesta &lt;90s</a>
+            <a href="/servicios/guardias-intramuros">Guardia físico en tu condominio</a>
+            <a href="/servicios/vigilancia-remota-cctv">CCTV con grabación continua</a>
+          </div>
+          <a href="https://wa.me/525530255580" class="emg-sb-card__origins-cta" target="_blank" rel="noopener">Cotización gratuita — 24h</a>
+          <p class="emg-sb-card__origins-permit">Permiso SSC 0102-15 · CDMX y Estado de México</p>
+        </div>
+        <div class="emg-sb-card">
+          <h4 class="emg-sb-card__title">Directorio por institución</h4>
+          <nav class="emg-sb-nav">
+            <a href="/emergencias/cruz-roja"          class="emg-sb-nav__link emg-sb-nav__link--cruzroja">Cruz Roja · Sede + 065</a>
+            <a href="/emergencias/bomberos"           class="emg-sb-nav__link emg-sb-nav__link--bomberos">Bomberos · 14 estaciones</a>
+            <a href="/emergencias/policia"            class="emg-sb-nav__link emg-sb-nav__link--policia">Policía SSC · Líneas directas</a>
+            <a href="/emergencias/proteccion-civil"   class="emg-sb-nav__link emg-sb-nav__link--protcivil">Protección Civil · Alcaldías</a>
+            <a href="/emergencias/ministerio-publico" class="emg-sb-nav__link emg-sb-nav__link--mp">Ministerio Público · FGJ</a>
+            <a href="/emergencias" class="emg-sb-nav__link" style="font-weight:700">← Directorio completo</a>
+          </nav>
+        </div>
+      </aside>
+    </div></div>
+  </div>
+
+  <section class="emg-cta"><div class="container"><div class="emg-cta__inner">
+    <div>
+      <span class="emg-cta__badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>ORIGINS Private Security</span>
+      <h2 class="emg-cta__title">Los Números de Emergencia Llegan en Minutos. ORIGINS en Segundos.</h2>
+      <p class="emg-cta__text">El 9-1-1 es el mejor número de emergencia del mundo — pero sigue tardando entre 8 y 20 minutos. En ese intervalo, lo que ocurre en el lobby, el estacionamiento o el pasillo de tu condominio depende de quien esté ahí. ORIGINS monitorea y responde antes de que la patrulla salga del cuartel.</p>
+      <div class="emg-cta__stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Monitoreo ORIGINS: &lt;90 segundos · Guardia físico 24/7/365</div>
+    </div>
+    <div class="emg-cta__actions">
+      <a href="/servicios/monitoreo-alarmas" class="emg-cta__btn emg-cta__btn--primary">Ver Monitoreo 24/7</a>
+      <a href="https://wa.me/525530255580" class="emg-cta__btn emg-cta__btn--wa" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div></div></section>
+
+  <NavCTA footer={true} cards={[
+    { label:'Directorio de Emergencias', sublabel:'Con sedes, direcciones y más', href:'/emergencias', icon:'shield' },
+    { label:'Monitoreo 24/7', sublabel:'Respuesta en &lt;90 segundos', href:'/servicios/monitoreo-alarmas', icon:'monitor' },
+    { label:'Zonas de Cobertura', sublabel:'CDMX y Estado de México', href:'/zonas', icon:'map' },
+    { label:'Cotización Gratis', sublabel:'Diagnóstico en 24h', href:'https://wa.me/525530255580', whatsapp:true, accent:true, external:true },
+  ]}/>
+</Base>

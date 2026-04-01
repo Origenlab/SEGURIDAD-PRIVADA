@@ -211,6 +211,68 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
           </a>
         </li>
 
+        <!-- DIRECTORIO EMERGENCIAS → dropdown -->
+        <li class="nav__item nav__item--dropdown">
+          <a
+            href="/emergencias"
+            class:list={['nav__link nav__link--has-dropdown', { 'nav__link--active': isActive('/emergencias') }]}
+            aria-haspopup="true"
+          >
+            Emergencias
+            <svg class="nav__chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="dropdown dropdown--emg" role="menu">
+            <div class="dropdown__section">
+              <p class="dropdown__title">Directorio de emergencias</p>
+              <ul>
+                <li>
+                  <a href="/emergencias/cruz-roja" class="dropdown__link dropdown__link--emg" style="--emg-c:#dc2626">
+                    <span class="dropdown__emg-dot"></span>
+                    Cruz Roja Mexicana
+                    <small>065 · Delegación CDMX · Ambulancias</small>
+                  </a>
+                </li>
+                <li>
+                  <a href="/emergencias/bomberos" class="dropdown__link dropdown__link--emg" style="--emg-c:#ea580c">
+                    <span class="dropdown__emg-dot"></span>
+                    Bomberos CDMX
+                    <small>068 · 14 estaciones verificadas</small>
+                  </a>
+                </li>
+                <li>
+                  <a href="/emergencias/policia" class="dropdown__link dropdown__link--emg" style="--emg-c:#1d4ed8">
+                    <span class="dropdown__emg-dot"></span>
+                    Policía SSC
+                    <small>9-1-1 · 060 · Líneas por alcaldía</small>
+                  </a>
+                </li>
+                <li>
+                  <a href="/emergencias/proteccion-civil" class="dropdown__link dropdown__link--emg" style="--emg-c:#d97706">
+                    <span class="dropdown__emg-dot"></span>
+                    Protección Civil
+                    <small>9 unidades · Por alcaldía CDMX</small>
+                  </a>
+                </li>
+                <li>
+                  <a href="/emergencias/ministerio-publico" class="dropdown__link dropdown__link--emg" style="--emg-c:#4b5563">
+                    <span class="dropdown__emg-dot"></span>
+                    Ministerio Público
+                    <small>089 · FGJ CDMX · Denuncia digital</small>
+                  </a>
+                </li>
+                <li>
+                  <a href="/emergencias/numeros-emergencia" class="dropdown__link dropdown__link--emg" style="--emg-c:#059669">
+                    <span class="dropdown__emg-dot"></span>
+                    Números Universales
+                    <small>9-1-1 · 065 · 068 · 089 · Todo México</small>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <a href="/emergencias" class="dropdown__footer">Ver directorio completo →</a>
+          </div>
+        </li>
+
       </ul>
     </nav>
 
@@ -319,6 +381,35 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
 
         <li><a href="/nosotros" class="drawer__link">Nosotros</a></li>
         <li><a href="/blog" class="drawer__link">Blog</a></li>
+        <!-- Emergencias accordion (móvil) -->
+        <li class="drawer__item--accordion">
+          <button class="drawer__accordion-toggle" aria-expanded="false">
+            Emergencias
+            <svg class="drawer__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="drawer__accordion-panel">
+            <a href="/emergencias" class="drawer__link drawer__link--sub drawer__link--all">Ver directorio completo →</a>
+            <p class="drawer__sub-title">Servicios de emergencia</p>
+            <a href="/emergencias/cruz-roja" class="drawer__link drawer__link--sub drawer__link--emg" style="--emg-c:#dc2626">
+              <span class="drawer__emg-dot"></span>Cruz Roja Mexicana
+            </a>
+            <a href="/emergencias/bomberos" class="drawer__link drawer__link--sub drawer__link--emg" style="--emg-c:#ea580c">
+              <span class="drawer__emg-dot"></span>Bomberos CDMX
+            </a>
+            <a href="/emergencias/policia" class="drawer__link drawer__link--sub drawer__link--emg" style="--emg-c:#1d4ed8">
+              <span class="drawer__emg-dot"></span>Policía SSC
+            </a>
+            <a href="/emergencias/proteccion-civil" class="drawer__link drawer__link--sub drawer__link--emg" style="--emg-c:#d97706">
+              <span class="drawer__emg-dot"></span>Protección Civil
+            </a>
+            <a href="/emergencias/ministerio-publico" class="drawer__link drawer__link--sub drawer__link--emg" style="--emg-c:#4b5563">
+              <span class="drawer__emg-dot"></span>Ministerio Público
+            </a>
+            <a href="/emergencias/numeros-emergencia" class="drawer__link drawer__link--sub drawer__link--emg" style="--emg-c:#059669">
+              <span class="drawer__emg-dot"></span>Números Universales
+            </a>
+          </div>
+        </li>
         <li><a href="/bolsa-de-trabajo" class="drawer__link">Bolsa de Trabajo</a></li>
 
       </ul>
@@ -813,6 +904,52 @@ const isActive = (path: string) => currentPath === path || currentPath.startsWit
   border-radius: 0 0 8px 8px;
 }
 .dropdown__footer:hover { background: rgba(10,15,30,0.04); }
+
+/* Dropdown emergencias — dot de color por categoría */
+.dropdown--emg {
+  width: 320px;
+}
+
+.dropdown__link--emg {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.625rem;
+  padding: 0.55rem 0.625rem;
+  flex-wrap: wrap;
+}
+
+.dropdown__link--emg small {
+  width: 100%;
+  padding-left: 1.25rem; /* alinea con el texto, tras el dot */
+  margin-top: -0.1rem;
+  font-size: 0.72rem;
+  color: rgba(10,15,30,0.42);
+  display: block;
+}
+
+.dropdown__emg-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--emg-c, #adb5bd);
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+/* Drawer — dot emergencias móvil */
+.drawer__link--emg {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.drawer__emg-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--emg-c, #adb5bd);
+  flex-shrink: 0;
+}
 
 /* ============================================================
    MOBILE DRAWER

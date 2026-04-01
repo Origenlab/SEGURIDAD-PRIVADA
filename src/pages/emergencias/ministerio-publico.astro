@@ -1,0 +1,337 @@
+---
+import Base from '../../layouts/Base.astro';
+import HeroPagina from '../../components/HeroPagina.astro';
+import NavCTA from '../../components/NavCTA.astro';
+import '../../styles/pages/emergencias.css';
+import '../../styles/pages/emergencias-detalle.css';
+
+const siteUrl = 'https://seguridad-privada.com.mx';
+
+const sedes = [
+  { nombre:'FGJ CDMX — Sede Central', tipo:'Fiscalía General de Justicia', direccion:'Calle Digna Ochoa y Plácido S/N', colonia:'Doctores', alcaldia:'Cuauhtémoc', cp:'06720', tel:'55 5345-5557', horario:'24 horas', web:'fgjcdmx.gob.mx', maps:'https://maps.google.com/?q=Digna+Ochoa+y+Placido,+Doctores,+Cuauhtemoc,+CDMX' },
+  { nombre:'FGJ — Benito Juárez', tipo:'Coordinación de Administración', direccion:'Av. Coyoacán 1635', colonia:'Del Valle Sur', alcaldia:'Benito Juárez', cp:'03104', tel:'55 5200-9770', horario:'Lun–Vie 9–17h', web:'fgjcdmx.gob.mx', maps:'https://maps.google.com/?q=Av+Coyoacan+1635,+Del+Valle,+Benito+Juarez,+CDMX' },
+  { nombre:'FGJ — Cuauhtémoc (Juárez)', tipo:'Coordinación de Implementación', direccion:'Calle Amberes 54', colonia:'Juárez', alcaldia:'Cuauhtémoc', cp:'06600', tel:'55 5200-9260', horario:'Lun–Vie 9–17h', web:'fgjcdmx.gob.mx', maps:'https://maps.google.com/?q=Calle+Amberes+54,+Juarez,+Cuauhtemoc,+CDMX' },
+  { nombre:'Denuncia Digital FGJ', tipo:'Plataforma web 24h · Sin ir en persona', direccion:'denuncia.fgjcdmx.gob.mx', colonia:'Acceso desde internet', alcaldia:'Todo CDMX', cp:'—', tel:'800 000 0025', horario:'24 horas · 7 días', web:'denuncia.fgjcdmx.gob.mx', maps:null },
+  { nombre:'Denuncia Anónima SSC', tipo:'Sin identificarse · Gratuito', direccion:'Marcación directa: 089', colonia:'Todo CDMX', alcaldia:'CDMX', cp:'—', tel:'089', horario:'24 horas', web:'ssc.cdmx.gob.mx', maps:null },
+];
+
+const flujo = [
+  { n:'01', t:'Asegúrate de que no hay riesgo activo', d:'Si el robo está ocurriendo: 9-1-1 primero. El Ministerio Público es para después del incidente — no despacha patrullas. Si ya pasó y estás a salvo, entonces inicia el proceso de denuncia.' },
+  { n:'02', t:'Reúne la evidencia antes de denunciar', d:'Fotos de la escena, inventario de lo robado (con números de serie si los tienes), testigos con nombre y teléfono, grabaciones de cámaras de seguridad (guarda el video antes de que se sobreescriba). Cuanta más evidencia, más sólida la denuncia.' },
+  { n:'03', t:'Elige el canal: digital o presencial', d:'Para robos a casa habitación, fraccionamientos o dentro de un condominio puedes iniciar la denuncia en denuncia.fgjcdmx.gob.mx sin ir en persona. Si hay violencia, lesiones o necesitas medidas cautelares, ve directamente a la sede central.' },
+  { n:'04', t:'Levanta la denuncia formal (No. de Carpeta)', d:'La carpeta de investigación es el documento oficial que activa la persecución del delito. El número de carpeta es tu referencia para seguimiento. Guárdalo. Sin carpeta formal, el robo no existe legalmente.' },
+  { n:'05', t:'Solicita el NARP para el seguro', d:'El Número de Acta de Robo de Vehículo (NARP) o constancia de robo es requerido por las aseguradoras para tramitar la indemnización. Se obtiene al levantar la denuncia en el MP.' },
+];
+
+const faqs = [
+  { q:'¿Dónde denuncio un robo en CDMX?', a:'Tienes tres opciones: (1) En línea en denuncia.fgjcdmx.gob.mx — disponible 24h sin ir en persona para robos a casa habitación, robo de vehículo y otros delitos. (2) Presencialmente en la sede FGJ más cercana. (3) Denuncia anónima al 089 si no quieres identificarte. Para delitos con violencia o en proceso: 9-1-1 primero.' },
+  { q:'¿Puedo hacer la denuncia en línea sin ir al MP?', a:'Sí. La plataforma denuncia.fgjcdmx.gob.mx permite iniciar denuncias por robo a casa habitación, robo de vehículo, fraude, daño a la propiedad y otros delitos sin presentarte físicamente. El proceso genera un número de carpeta de investigación con el mismo valor legal que la presencial.' },
+  { q:'¿Qué necesito para levantar una denuncia por robo en mi condominio?', a:'Identificación oficial, descripción de los hechos (fecha, hora, lugar, forma en que ocurrió), inventario de bienes robados (con valores aproximados), evidencia disponible (fotos, video, testigos). Si hay cámaras de seguridad en el condominio, el video es fundamental — resguárdalo antes de que se sobreescriba.' },
+  { q:'¿Las cámaras del condominio sirven como prueba?', a:'Sí, y son de las pruebas más sólidas en delitos patrimoniales. El video de las cámaras de seguridad del condominio (lobby, estacionamiento, pasillos) puede identificar al responsable y establecer la secuencia exacta de los hechos. El guardia o administrador debe resguardar el video inmediatamente después del incidente.' },
+  { q:'¿Cuánto tiempo tengo para denunciar?', a:'En México, los delitos tienen plazos de prescripción. Para robos simples, el plazo es de un año. Para robos calificados (con violencia, en pandilla) puede ser mayor. En la práctica, mientras más pronto denuncies, mejor es la posibilidad de recuperar bienes o identificar al responsable.' },
+  { q:'¿El 089 es lo mismo que levantar una denuncia formal?', a:'No. El 089 es para denuncias anónimas de inteligencia — información sobre delitos, personas sospechosas o actividades ilícitas. No genera carpeta de investigación ni activa persecución formal del delito. Para que el MP actúe legalmente necesitas una carpeta de investigación, que requiere que te identifiques.' },
+];
+
+const otrasCategoriasEmg = [
+  { label:'Cruz Roja Mexicana',  href:'/emergencias/cruz-roja',         color:'#dc2626', badge:'065 · Ambulancias' },
+  { label:'Bomberos CDMX',       href:'/emergencias/bomberos',           color:'#ea580c', badge:'068 · 14 estaciones' },
+  { label:'Policía SSC',         href:'/emergencias/policia',            color:'#1d4ed8', badge:'9-1-1 · 060 · 089' },
+  { label:'Protección Civil',    href:'/emergencias/proteccion-civil',   color:'#d97706', badge:'55 5683-2222' },
+  { label:'Números Universales', href:'/emergencias/numeros-emergencia', color:'#059669', badge:'9-1-1 · 065 · 068' },
+];
+
+const schema = {
+  "@context":"https://schema.org",
+  "@graph":[
+    { "@type":"WebPage","@id":`${siteUrl}/emergencias/ministerio-publico`,
+      "name":"Ministerio Público CDMX — FGJ, Denuncia Digital y Teléfonos · ORIGINS",
+      "description":"Sedes de la Fiscalía CDMX para levantar denuncias: dirección, teléfono y horario. Cómo denunciar en línea en denuncia.fgjcdmx.gob.mx. Verificado abril 2026.",
+      "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Inicio","item":siteUrl},
+        {"@type":"ListItem","position":2,"name":"Directorio de Emergencias","item":`${siteUrl}/emergencias`},
+        {"@type":"ListItem","position":3,"name":"Ministerio Público CDMX","item":`${siteUrl}/emergencias/ministerio-publico`},
+      ]}},
+    { "@type":"GovernmentOffice","name":"Fiscalía General de Justicia CDMX","url":"https://fgjcdmx.gob.mx","telephone":"+525553455557","areaServed":"Ciudad de México","openingHours":"Mo-Su 00:00-23:59","address":{"@type":"PostalAddress","streetAddress":"Calle Digna Ochoa y Plácido S/N","addressLocality":"Doctores","postalCode":"06720","addressCountry":"MX"}},
+    { "@type":"FAQPage","mainEntity":faqs.map(f=>({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) }
+  ]
+};
+---
+
+<Base
+  title="Ministerio Público CDMX — FGJ, Denuncia Digital y Sedes · ORIGINS"
+  description="Sedes de la Fiscalía General de Justicia CDMX para levantar denuncias. Cómo denunciar en línea. Denuncia anónima 089. Verificado abril 2026."
+  canonical={`${siteUrl}/emergencias/ministerio-publico`}
+  schema={schema}
+>
+
+  <div class="emg-strip"><div class="emg-strip__inner">
+    <span class="emg-strip__badge">Emergencia</span>
+    <a href="tel:911" class="emg-strip__link">9-1-1</a>
+    <span class="emg-strip__label">· Gratuito · 24h · Policía, bomberos y ambulancias</span>
+  </div></div>
+
+  <HeroPagina
+    badge="Directorio de Emergencias · Ministerio Público"
+    titulo="Ministerio Público CDMX — FGJ, Sedes para Denuncia y Denuncia Digital"
+    descripcion="Sedes físicas de la Fiscalía General de Justicia CDMX para levantar denuncias formales. Cómo denunciar un robo en línea sin ir al MP, denuncia anónima 089 y carpetas de investigación."
+    breadcrumb={[
+      { label:'Directorio de Emergencias', href:'/emergencias' },
+      { label:'Ministerio Público', href:'/emergencias/ministerio-publico' },
+    ]}
+    ctaPrimario={{ texto:'Denuncia digital: FGJ', href:'https://denuncia.fgjcdmx.gob.mx' }}
+    ctaWhatsapp={false}
+    seoParrafo1={`La <strong>Fiscalía General de Justicia (FGJ) de la Ciudad de México</strong> es la institución donde se levantan denuncias formales por robo, daño a la propiedad, fraude y otros delitos. Opera sedes físicas en CDMX y una <strong>plataforma de denuncia digital</strong> disponible 24 horas en <a href="https://denuncia.fgjcdmx.gob.mx" target="_blank" rel="noopener">denuncia.fgjcdmx.gob.mx</a>.`}
+    seoParrafo2={`Para denuncias anónimas usa el <strong>089</strong> — gratuito, 24h, sin identificarte. Para robos con violencia activa: <strong>9-1-1</strong> primero. El Ministerio Público actúa después del incidente, no durante. Fuente: <a href="https://fgjcdmx.gob.mx" target="_blank" rel="noopener">fgjcdmx.gob.mx</a>. Verificado abril 2026.`}
+  />
+
+  <div class="emgd-urgency-bar">
+    <div class="container"><div class="emgd-urgency-bar__inner">
+      <a href="https://denuncia.fgjcdmx.gob.mx" target="_blank" rel="noopener" class="emgd-urgency-bar__num" style="background:rgba(75,85,99,0.2)">
+        <span class="emgd-urgency-bar__eyebrow">Denuncia digital · Sin ir en persona · 24h</span>
+        <span class="emgd-urgency-bar__digit" style="color:#d1d5db;font-size:1.25rem">denuncia.fgjcdmx.gob.mx</span>
+        <span class="emgd-urgency-bar__sub">Robo · Fraude · Daño a propiedad</span>
+      </a>
+      <a href="tel:089" class="emgd-urgency-bar__num">
+        <span class="emgd-urgency-bar__eyebrow">Denuncia anónima · SSC CDMX</span>
+        <span class="emgd-urgency-bar__digit" style="color:rgba(255,255,255,0.6)">089</span>
+        <span class="emgd-urgency-bar__sub">Sin identificarse · Gratuito · 24h</span>
+      </a>
+      <a href="tel:911" class="emgd-urgency-bar__num emgd-urgency-bar__num--911">
+        <span class="emgd-urgency-bar__eyebrow">Delito en proceso · Primero</span>
+        <span class="emgd-urgency-bar__digit">9-1-1</span>
+        <span class="emgd-urgency-bar__sub">Patrulla · No el MP</span>
+      </a>
+    </div></div>
+  </div>
+
+  <div class="emg-layout">
+    <div class="container"><div class="emg-layout__grid">
+      <main class="emg-layout__main">
+
+        <!-- ══ SEDES FGJ ════════════════════════════════════════════════ -->
+        <section class="emg-section emgd-section--first" id="sedes" aria-labelledby="sedes-mp-title">
+          <div class="emg-section__header emg-section__header--mp">
+            <div class="emg-section__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <div>
+              <h2 id="sedes-mp-title" class="emg-section__title">Fiscalía General de Justicia CDMX — Sedes y Acceso Digital</h2>
+              <p class="emg-section__sub">3 sedes físicas + denuncia digital + línea anónima · <a href="https://fgjcdmx.gob.mx" target="_blank" rel="noopener">fgjcdmx.gob.mx</a></p>
+            </div>
+            <a href="tel:5553455557" class="emg-section__cta emg-section__cta--gray">55 5345-5557</a>
+          </div>
+          <div class="emgd-sedes-grid">
+            {sedes.map(s=>(
+              <article class="emgd-sede-card">
+                <div class="emgd-sede-card__header" style="background:linear-gradient(135deg,#4b5563,#374151)">
+                  <div class="emgd-sede-card__header-content">
+                    <span class="emgd-sede-card__tipo">{s.tipo}</span>
+                    <h3 class="emgd-sede-card__nombre">{s.nombre}</h3>
+                  </div>
+                  <div class="emgd-sede-card__horario-badge" style="background:rgba(255,255,255,0.12)">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    {s.horario}
+                  </div>
+                </div>
+                <div class="emgd-sede-card__body">
+                  {s.maps ? (
+                    <a href={s.maps} target="_blank" rel="noopener" class="emgd-sede-card__dir emgd-sede-card__dir--link">
+                      <div class="emgd-sede-card__dir-icon" style="background:rgba(75,85,99,0.08);color:#4b5563">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+                      </div>
+                      <div class="emgd-sede-card__dir-text">
+                        <span class="emgd-sede-card__calle">{s.direccion}</span>
+                        <span class="emgd-sede-card__colonia">Col. {s.colonia} · {s.alcaldia}{s.cp!=='—'?` · C.P. ${s.cp}`:''}</span>
+                        <span class="emgd-sede-card__maps-cta" style="color:#4b5563">Ver en Google Maps →</span>
+                      </div>
+                    </a>
+                  ) : (
+                    <div class="emgd-sede-card__dir">
+                      <div class="emgd-sede-card__dir-icon" style="background:rgba(75,85,99,0.08);color:#4b5563">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                      </div>
+                      <div class="emgd-sede-card__dir-text">
+                        <span class="emgd-sede-card__calle">{s.direccion}</span>
+                        <span class="emgd-sede-card__colonia">{s.colonia}</span>
+                        {s.web && <a href={`https://${s.web}`} target="_blank" rel="noopener" class="emgd-sede-card__maps-cta" style="color:#4b5563">{s.web} →</a>}
+                      </div>
+                    </div>
+                  )}
+                  <div class="emgd-sede-card__tels">
+                    <a href={`tel:${s.tel.replace(/[\s-]/g,'')}`} class="emgd-sede-card__tel-btn emgd-sede-card__tel-btn--mp">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.82 15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.93 4.11h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                      <span class="emgd-sede-card__tel-num">{s.tel}</span>
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <!-- ══ FLUJO DE DENUNCIA ════════════════════════════════════════ -->
+        <section class="emg-section emg-section--alt" id="como-denunciar" aria-labelledby="denuncia-title">
+          <div class="emg-section__header emg-section__header--mp">
+            <div class="emg-section__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <div>
+              <h2 id="denuncia-title" class="emg-section__title">Cómo Denunciar un Robo en CDMX — Paso a Paso</h2>
+              <p class="emg-section__sub">Proceso desde el incidente hasta la carpeta de investigación</p>
+            </div>
+          </div>
+          <div class="emgd-steps">
+            {flujo.map(s=>(
+              <div class="emgd-step">
+                <div class="emgd-step__num">{s.n}</div>
+                <div class="emgd-step__content">
+                  <h3 class="emgd-step__title">{s.t}</h3>
+                  <p class="emgd-step__desc">{s.d}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div class="emgd-tip-box" style="background:rgba(75,85,99,0.05);border-color:rgba(75,85,99,0.15);border-left-color:#4b5563">
+            <div class="emgd-tip-box__icon" style="color:#4b5563">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div>
+              <strong>Las cámaras del condominio son tu mejor aliado en la denuncia.</strong> Un sistema CCTV con grabación continua permite identificar al responsable, establecer horarios y reconstruir la secuencia exacta. El fiscal puede solicitar el video como prueba. Si el condominio no tiene cámaras, no hay evidencia visual — y la probabilidad de resolución del caso cae dramáticamente.
+            </div>
+          </div>
+        </section>
+
+        <!-- ══ FAQ ══════════════════════════════════════════════════════ -->
+        <section class="emg-section" id="preguntas" aria-labelledby="faq-mp-title">
+          <div class="emg-section__header emg-section__header--mp" style="margin-bottom:1.5rem">
+            <div class="emg-section__icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+            <div>
+              <h2 id="faq-mp-title" class="emg-section__title">Preguntas Frecuentes sobre el Ministerio Público CDMX</h2>
+              <p class="emg-section__sub">Lo que vecinos y administradores necesitan saber sobre denuncias</p>
+            </div>
+          </div>
+          <div class="emgd-faqs">
+            {faqs.map((f,i)=>(
+              <details class="emgd-faq" open={i===0}>
+                <summary class="emgd-faq__q"><span>{f.q}</span>
+                  <svg class="emgd-faq__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <div class="emgd-faq__a"><p>{f.a}</p></div>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <!-- ══ OTRAS CATEGORÍAS ═════════════════════════════════════════ -->
+        <section class="emg-section emg-section--alt" id="otros">
+          <div class="emg-section__header" style="margin-bottom:1.5rem">
+            <div class="emg-section__icon" style="background:#f1f3f5;color:#495057"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <div><h2 class="emg-section__title">Otras Categorías del Directorio</h2><p class="emg-section__sub">Cruz Roja, Bomberos, Policía, Protección Civil y Números</p></div>
+          </div>
+          <div class="emgd-otros-grid">
+            {otrasCategoriasEmg.map(cat=>(
+              <a href={cat.href} class="emgd-otro-card" style={`--otro-color:${cat.color}`}>
+                <div class="emgd-otro-card__top"><div class="emgd-otro-card__dot"></div><span class="emgd-otro-card__badge">{cat.badge}</span></div>
+                <span class="emgd-otro-card__label">{cat.label}</span>
+                <svg class="emgd-otro-card__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            ))}
+            <a href="/emergencias" class="emgd-otro-card emgd-otro-card--all">
+              <span class="emgd-otro-card__label">Ver directorio completo</span>
+              <svg class="emgd-otro-card__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </section>
+
+        <section class="emg-disclaimer" style="padding:2rem 0 1rem">
+          <div class="emg-disclaimer__inner">
+            <div class="emg-disclaimer__card"><div class="emg-disclaimer__icon emg-disclaimer__icon--warn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg></div><div><h3 class="emg-disclaimer__title">Delito en proceso: 9-1-1 primero</h3><p class="emg-disclaimer__text">El MP actúa después del incidente. Si hay peligro ahora: 9-1-1.</p></div></div>
+            <div class="emg-disclaimer__card"><div class="emg-disclaimer__icon emg-disclaimer__icon--info"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div><h3 class="emg-disclaimer__title">Verificado — abril 2026</h3><p class="emg-disclaimer__text">Fuente: <a href="https://fgjcdmx.gob.mx" target="_blank" rel="noopener">fgjcdmx.gob.mx</a>. <a href="mailto:hola@originsecurity.mx">Reportar dato incorrecto →</a></p></div></div>
+            <div class="emg-disclaimer__card"><div class="emg-disclaimer__icon emg-disclaimer__icon--update"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div><div><h3 class="emg-disclaimer__title">Recurso ciudadano independiente</h3><p class="emg-disclaimer__text">ORIGINS no representa a la FGJ. Directorio de orientación ciudadana.</p></div></div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ── SIDEBAR ──────────────────────────────────────────────────── -->
+      <aside class="emg-sidebar">
+        <div class="emg-sb-card" style="background:#4b5563">
+          <p class="emg-sb-911__eyebrow">Denuncia anónima · SSC CDMX</p>
+          <a href="tel:089" class="emg-sb-911__num" style="letter-spacing:0.05em">089</a>
+          <p class="emg-sb-911__desc">Sin identificarse · Gratuito · 24h<br>No genera carpeta de investigación</p>
+        </div>
+        <div class="emg-sb-card">
+          <h4 class="emg-sb-card__title">Canales de denuncia</h4>
+          <div class="emg-sb-reflist">
+            <a href="https://denuncia.fgjcdmx.gob.mx" target="_blank" rel="noopener" class="emg-sb-ref">
+              <span class="emg-sb-ref__num emg-sb-ref__num--md" style="color:#4b5563;font-size:0.65rem;line-height:1.3">Denuncia digital</span>
+              <span class="emg-sb-ref__info"><strong>FGJ CDMX — En línea</strong><span>24h · Sin ir en persona · Carpeta legal</span></span>
+            </a>
+            <a href="tel:5553455557" class="emg-sb-ref">
+              <span class="emg-sb-ref__num emg-sb-ref__num--md" style="color:#4b5563">5345-5557</span>
+              <span class="emg-sb-ref__info"><strong>FGJ — Sede Central</strong><span>Doctores · Cuauhtémoc · 24h</span></span>
+            </a>
+            <a href="tel:8000000025" class="emg-sb-ref">
+              <span class="emg-sb-ref__num emg-sb-ref__num--md" style="color:#4b5563;font-size:0.75rem">800 000 0025</span>
+              <span class="emg-sb-ref__info"><strong>FGJ — Línea gratuita</strong><span>Asesoría y orientación jurídica</span></span>
+            </a>
+            <a href="tel:089" class="emg-sb-ref">
+              <span class="emg-sb-ref__num" style="color:#4b5563">089</span>
+              <span class="emg-sb-ref__info"><strong>Denuncia Anónima SSC</strong><span>Sin identificarse · No genera carpeta</span></span>
+            </a>
+          </div>
+        </div>
+        <div class="emg-sb-card">
+          <h4 class="emg-sb-card__title">En esta página</h4>
+          <nav class="emg-sb-nav">
+            <a href="#sedes" class="emg-sb-nav__link emg-sb-nav__link--mp">Sedes FGJ y denuncia digital</a>
+            <a href="#como-denunciar" class="emg-sb-nav__link emg-sb-nav__link--mp">Cómo denunciar paso a paso</a>
+            <a href="#preguntas" class="emg-sb-nav__link emg-sb-nav__link--mp">Preguntas frecuentes</a>
+          </nav>
+        </div>
+        <div class="emg-sb-card emg-sb-card--origins">
+          <p class="emg-sb-card__origins-eyebrow">ORIGINS Private Security</p>
+          <h4 class="emg-sb-card__origins-title">Cámaras ORIGINS = evidencia sólida para la FGJ.</h4>
+          <p class="emg-sb-card__origins-text">Sin video del incidente, la denuncia depende de testimonios. Con las cámaras del condominio monitoreadas por ORIGINS tienes grabación continua en lobby, estacionamiento y accesos. Un clip de 30 segundos puede ser la diferencia entre una carpeta archivada y un detenido.</p>
+          <div class="emg-sb-card__origins-services">
+            <a href="/servicios/vigilancia-remota-cctv">Vigilancia CCTV 24/7</a>
+            <a href="/servicios/monitoreo-alarmas">Monitoreo con respaldo en nube</a>
+            <a href="/servicios/guardias-intramuros">Guardia como testigo presencial</a>
+          </div>
+          <a href="https://wa.me/525530255580" class="emg-sb-card__origins-cta" target="_blank" rel="noopener">Cotización gratuita — 24h</a>
+          <p class="emg-sb-card__origins-permit">Permiso SSC 0102-15 · CDMX y Estado de México</p>
+        </div>
+        <div class="emg-sb-card">
+          <h4 class="emg-sb-card__title">Directorio de Emergencias</h4>
+          <nav class="emg-sb-nav">
+            <a href="/emergencias/cruz-roja"          class="emg-sb-nav__link emg-sb-nav__link--cruzroja">Cruz Roja · 065</a>
+            <a href="/emergencias/bomberos"           class="emg-sb-nav__link emg-sb-nav__link--bomberos">Bomberos · 068</a>
+            <a href="/emergencias/policia"            class="emg-sb-nav__link emg-sb-nav__link--policia">Policía SSC · 9-1-1</a>
+            <a href="/emergencias/proteccion-civil"   class="emg-sb-nav__link emg-sb-nav__link--protcivil">Protección Civil</a>
+            <a href="/emergencias/numeros-emergencia" class="emg-sb-nav__link emg-sb-nav__link--numeros">Números Universales</a>
+            <a href="/emergencias" class="emg-sb-nav__link" style="font-weight:700">← Directorio completo</a>
+          </nav>
+        </div>
+      </aside>
+    </div></div>
+  </div>
+
+  <section class="emg-cta"><div class="container"><div class="emg-cta__inner">
+    <div>
+      <span class="emg-cta__badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>ORIGINS Private Security</span>
+      <h2 class="emg-cta__title">Sin Evidencia, la Denuncia se Archiva. Con CCTV, Hay Caso.</h2>
+      <p class="emg-cta__text">La FGJ puede abrir carpeta de investigación, pero sin evidencia sólida la mayoría de los casos de robo en condominios se archivan por falta de pruebas. Un sistema CCTV monitoreado por ORIGINS graba y respalda en nube continuamente — para que cuando lo necesites, el video esté ahí y no sobreescrito.</p>
+      <div class="emg-cta__stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>ORIGINS CCTV: grabación continua + respaldo en nube · Entregable a la FGJ</div>
+    </div>
+    <div class="emg-cta__actions">
+      <a href="/servicios/vigilancia-remota-cctv" class="emg-cta__btn emg-cta__btn--primary">Ver Vigilancia CCTV</a>
+      <a href="https://wa.me/525530255580" class="emg-cta__btn emg-cta__btn--wa" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div></div></section>
+
+  <NavCTA footer={true} cards={[
+    { label:'Directorio de Emergencias', sublabel:'Bomberos, Cruz Roja y más', href:'/emergencias', icon:'shield' },
+    { label:'Vigilancia CCTV', sublabel:'Evidencia para la FGJ', href:'/servicios/vigilancia-remota-cctv', icon:'monitor' },
+    { label:'Zonas de Cobertura', sublabel:'CDMX y Estado de México', href:'/zonas', icon:'map' },
+    { label:'Cotización Gratis', sublabel:'Diagnóstico en 24h', href:'https://wa.me/525530255580', whatsapp:true, accent:true, external:true },
+  ]}/>
+</Base>

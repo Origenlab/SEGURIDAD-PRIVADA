@@ -1,0 +1,656 @@
+---
+import Base from '../../layouts/Base.astro';
+import HeroPagina from '../../components/HeroPagina.astro';
+import NavCTA from '../../components/NavCTA.astro';
+import '../../styles/pages/emergencias.css';
+import '../../styles/pages/emergencias-detalle.css';
+
+const siteUrl = 'https://seguridad-privada.com.mx';
+
+// ── Datos Cruz Roja ────────────────────────────────────────────────────────
+const sedes = [
+  {
+    id: 'sede-cdmx',
+    nombre: 'Delegación Cruz Roja Mexicana CDMX',
+    tipo: 'Sede central de la delegación',
+    direccion: 'Juan Luis Vives No. 200-2',
+    colonia: 'Los Morales Polanco',
+    alcaldia: 'Miguel Hidalgo',
+    cp: '11510',
+    tels: [
+      { num: '55 5557-5757', label: 'Línea directa delegación', primary: true },
+      { num: '065', label: 'Número corto nacional (gratuito)', primary: false },
+    ],
+    horario: '24 horas · 365 días',
+    maps: 'https://maps.google.com/?q=Juan+Luis+Vives+200,+Los+Morales+Polanco,+Miguel+Hidalgo,+CDMX',
+    fuente: 'cruzrojamexicana.org.mx',
+    servicios: ['Ambulancias de emergencia', 'Primeros auxilios', 'Traslados médicos', 'Atención prehospitalaria'],
+    nota: 'Sede de la Delegación Distrito Federal/CDMX. Coordina los servicios de ambulancias en toda la ciudad.',
+  },
+  {
+    id: 'linea-ambulancias',
+    nombre: 'Central de Ambulancias — Todo México',
+    tipo: 'Línea de emergencia nacional',
+    direccion: 'Servicio disponible desde cualquier teléfono del país',
+    colonia: 'Cobertura nacional',
+    alcaldia: 'CDMX · EdoMex · Todo México',
+    cp: '—',
+    tels: [
+      { num: '065', label: 'Gratuito · Ambulancias Cruz Roja', primary: true },
+    ],
+    horario: '24 horas · 365 días · Todo el país',
+    maps: null,
+    fuente: 'cruzrojamexicana.org.mx',
+    servicios: ['Ambulancias de emergencia', 'Despacho inmediato a domicilio', 'Disponible sin costo', 'Desde teléfono fijo o celular'],
+    nota: 'El 065 funciona en toda la república. No requiere saldo ni acceso a internet. Disponible desde líneas prepagadas sin saldo.',
+  },
+];
+
+const faqs = [
+  {
+    q: '¿Cómo llamo a la Cruz Roja en CDMX?',
+    a: 'Marca 065 desde cualquier teléfono — es gratuito, incluso sin saldo. Para comunicarte directamente con la delegación CDMX marca 55 5557-5757.',
+  },
+  {
+    q: '¿La Cruz Roja cobra por el servicio de ambulancia?',
+    a: 'El 065 es un número de emergencia gratuito. El traslado en ambulancia puede tener un costo dependiendo de la distancia y el tipo de servicio. Para casos de emergencia inmediata, la atención no se condiciona al pago.',
+  },
+  {
+    q: '¿Cuánto tarda en llegar una ambulancia de la Cruz Roja?',
+    a: 'El tiempo de respuesta varía por zona, tráfico y disponibilidad de unidades. En CDMX el promedio histórico es de 8 a 15 minutos. Para emergencias donde el tiempo es crítico, también puedes llamar al 9-1-1 para despachar la unidad más cercana disponible.',
+  },
+  {
+    q: '¿Qué diferencia hay entre llamar al 065 y al 9-1-1?',
+    a: 'El 9-1-1 despacha la unidad más cercana disponible (Cruz Roja, ERUM o SSC). El 065 conecta directamente con Cruz Roja. En emergencias extremas, marca 9-1-1 — en 10 segundos o menos lo despachan, sin importar qué número llamas primero.',
+  },
+  {
+    q: '¿El 065 funciona desde celulares sin saldo?',
+    a: 'Sí. El 065, igual que el 9-1-1, funciona desde cualquier teléfono celular sin importar el saldo o la operadora. También funciona desde teléfonos fijos.',
+  },
+  {
+    q: '¿La Cruz Roja cubre zonas fuera del Centro de CDMX como Naucalpan o Tlalnepantla?',
+    a: 'La delegación CDMX opera principalmente dentro de los límites de la ciudad. Para municipios del Estado de México como Naucalpan, Tlalnepantla y Atizapán, marca el 065 — te conectarán con la delegación o unidad de ambulancias más cercana según tu ubicación.',
+  },
+];
+
+const otrasCategoriasEmg = [
+  { label: 'Bomberos CDMX', href: '/emergencias/bomberos', color: '#ea580c', badge: '068 · 14 estaciones' },
+  { label: 'Policía SSC', href: '/emergencias/policia', color: '#1d4ed8', badge: '9-1-1 · Líneas directas' },
+  { label: 'Protección Civil', href: '/emergencias/proteccion-civil', color: '#d97706', badge: '9 alcaldías CDMX' },
+  { label: 'Ministerio Público', href: '/emergencias/ministerio-publico', color: '#4b5563', badge: '089 · FGJ CDMX' },
+  { label: 'Números Universales', href: '/emergencias/numeros-emergencia', color: '#059669', badge: '9-1-1 · 065 · 068 · 089' },
+];
+
+const zonasLinks = [
+  { label: 'Miguel Hidalgo (Polanco)', href: '/zonas/miguel-hidalgo' },
+  { label: 'Benito Juárez (Del Valle)', href: '/zonas/benito-juarez' },
+  { label: 'Cuauhtémoc (Condesa)', href: '/zonas/cuauhtemoc' },
+  { label: 'Coyoacán', href: '/zonas/coyoacan' },
+  { label: 'Álvaro Obregón', href: '/zonas/alvaro-obregon' },
+  { label: 'Naucalpan', href: '/zonas/naucalpan' },
+  { label: 'Tlalnepantla', href: '/zonas/tlalnepantla' },
+];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/emergencias/cruz-roja`,
+      "name": "Cruz Roja Mexicana CDMX — Delegación, Dirección y Teléfonos",
+      "description": "Datos verificados de la delegación Cruz Roja en CDMX: dirección exacta, teléfono directo y número de ambulancias 065.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": siteUrl },
+          { "@type": "ListItem", "position": 2, "name": "Directorio de Emergencias", "item": `${siteUrl}/emergencias` },
+          { "@type": "ListItem", "position": 3, "name": "Cruz Roja Mexicana CDMX", "item": `${siteUrl}/emergencias/cruz-roja` },
+        ]
+      }
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Cruz Roja Mexicana — Delegación CDMX",
+      "url": "https://cruzrojamexicana.org.mx",
+      "telephone": "+525555575757",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Juan Luis Vives No. 200-2",
+        "addressLocality": "Los Morales Polanco",
+        "addressRegion": "Ciudad de México",
+        "postalCode": "11510",
+        "addressCountry": "MX"
+      },
+      "openingHours": "Mo-Su 00:00-23:59",
+      "description": "Delegación Ciudad de México de la Cruz Roja Mexicana. Servicios de ambulancias y atención prehospitalaria 24 horas."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question",
+        "name": f.q,
+        "acceptedAnswer": { "@type": "Answer", "text": f.a }
+      }))
+    }
+  ]
+};
+---
+
+<Base
+  title="Cruz Roja CDMX — Dirección, Teléfono y Línea 065 · ORIGINS"
+  description="Delegación Cruz Roja en CDMX: Juan Luis Vives 200-2, Los Morales Polanco. Ambulancias: 065 gratuito. Dirección y tel. verificados abril 2026."
+  canonical={`${siteUrl}/emergencias/cruz-roja`}
+  schema={schema}
+>
+
+  <!-- ── 911 STRIP ──────────────────────────────────────────────────────── -->
+  <div class="emg-strip">
+    <div class="emg-strip__inner">
+      <span class="emg-strip__badge">Emergencia</span>
+      <a href="tel:911" class="emg-strip__link">9-1-1</a>
+      <span class="emg-strip__label">· Gratuito · 24h · Policía, bomberos y ambulancias</span>
+    </div>
+  </div>
+
+  <!-- ── HERO ───────────────────────────────────────────────────────────── -->
+  <HeroPagina
+    badge="Directorio de Emergencias · Cruz Roja"
+    titulo="Cruz Roja Mexicana CDMX — Delegación, Teléfono y Ambulancias"
+    descripcion="Dirección exacta de la sede, línea directa de la delegación y número de ambulancias disponible desde cualquier teléfono del país sin costo. Datos verificados de fuentes oficiales."
+    breadcrumb={[
+      { label: 'Directorio de Emergencias', href: '/emergencias' },
+      { label: 'Cruz Roja Mexicana', href: '/emergencias/cruz-roja' },
+    ]}
+    ctaPrimario={{ texto: 'Llamar: 065', href: 'tel:065' }}
+    ctaWhatsapp={false}
+    seoParrafo1={`La <strong>Delegación CDMX de la Cruz Roja Mexicana</strong> opera su sede central en Juan Luis Vives No. 200-2, colonia Los Morales Polanco, alcaldía Miguel Hidalgo. Coordina los servicios de <strong>ambulancias y atención prehospitalaria</strong> en toda la Ciudad de México las 24 horas.`}
+    seoParrafo2={`Para solicitar una ambulancia marca <strong>065</strong> — es gratuito desde cualquier teléfono, sin saldo, sin importar la operadora. También puedes llamar al <strong>55 5557-5757</strong> para comunicarte directamente con la delegación. Fuente: <a href="https://cruzrojamexicana.org.mx" target="_blank" rel="noopener">cruzrojamexicana.org.mx</a>. Verificado abril 2026.`}
+  />
+
+  <!-- ── STAT BAR URGENTE ───────────────────────────────────────────────── -->
+  <div class="emgd-urgency-bar">
+    <div class="container">
+      <div class="emgd-urgency-bar__inner">
+        <a href="tel:065" class="emgd-urgency-bar__num emgd-urgency-bar__num--cr">
+          <span class="emgd-urgency-bar__eyebrow">Ambulancias · Gratuito · Todo México</span>
+          <span class="emgd-urgency-bar__digit">065</span>
+          <span class="emgd-urgency-bar__sub">Cruz Roja Mexicana · 24 horas</span>
+        </a>
+        <div class="emgd-urgency-bar__sep" aria-hidden="true"></div>
+        <a href="tel:5555575757" class="emgd-urgency-bar__num">
+          <span class="emgd-urgency-bar__eyebrow">Delegación CDMX · Línea directa</span>
+          <span class="emgd-urgency-bar__digit">55 5557-5757</span>
+          <span class="emgd-urgency-bar__sub">Los Morales Polanco · 24 horas</span>
+        </a>
+        <div class="emgd-urgency-bar__sep" aria-hidden="true"></div>
+        <a href="tel:911" class="emgd-urgency-bar__num emgd-urgency-bar__num--911">
+          <span class="emgd-urgency-bar__eyebrow">Emergencia inmediata · Todo México</span>
+          <span class="emgd-urgency-bar__digit">9-1-1</span>
+          <span class="emgd-urgency-bar__sub">Policía · Bomberos · Ambulancias</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       BODY CON SIDEBAR
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <div class="emg-layout">
+    <div class="container">
+      <div class="emg-layout__grid">
+
+        <!-- ── MAIN ──────────────────────────────────────────────────────── -->
+        <main class="emg-layout__main">
+
+          <!-- ══ SEDES ════════════════════════════════════════════════════ -->
+          <section class="emg-section emgd-section--first" id="sedes" aria-labelledby="sedes-title">
+            <div class="emg-section__header emg-section__header--cruzroja">
+              <div class="emg-section__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/>
+                  <path d="M9 12h6M12 9v6"/>
+                </svg>
+              </div>
+              <div>
+                <h2 id="sedes-title" class="emg-section__title">Cruz Roja Mexicana — Delegación Ciudad de México</h2>
+                <p class="emg-section__sub">Sede central y línea de ambulancias · <a href="https://cruzrojamexicana.org.mx" target="_blank" rel="noopener">cruzrojamexicana.org.mx</a> · Verificado abril 2026</p>
+              </div>
+              <a href="tel:065" class="emg-section__cta emg-section__cta--red">Llamar: 065</a>
+            </div>
+
+            <div class="emgd-sedes-grid">
+              {sedes.map(sede => (
+                <article class="emgd-sede-card" id={sede.id}>
+
+                  {/* Encabezado de color */}
+                  <div class="emgd-sede-card__header">
+                    <div class="emgd-sede-card__header-content">
+                      <span class="emgd-sede-card__tipo">{sede.tipo}</span>
+                      <h3 class="emgd-sede-card__nombre">{sede.nombre}</h3>
+                    </div>
+                    <div class="emgd-sede-card__horario-badge">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                      {sede.horario}
+                    </div>
+                  </div>
+
+                  {/* Cuerpo */}
+                  <div class="emgd-sede-card__body">
+
+                    {/* Dirección */}
+                    {sede.maps ? (
+                      <a href={sede.maps} target="_blank" rel="noopener" class="emgd-sede-card__dir emgd-sede-card__dir--link">
+                        <div class="emgd-sede-card__dir-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+                        </div>
+                        <div class="emgd-sede-card__dir-text">
+                          <span class="emgd-sede-card__calle">{sede.direccion}</span>
+                          <span class="emgd-sede-card__colonia">Col. {sede.colonia} · {sede.alcaldia} · C.P. {sede.cp}</span>
+                          <span class="emgd-sede-card__maps-cta">Ver en Google Maps →</span>
+                        </div>
+                      </a>
+                    ) : (
+                      <div class="emgd-sede-card__dir">
+                        <div class="emgd-sede-card__dir-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.82 15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.93 4.11h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div class="emgd-sede-card__dir-text">
+                          <span class="emgd-sede-card__calle">{sede.direccion}</span>
+                          <span class="emgd-sede-card__colonia">{sede.colonia} · {sede.alcaldia}</span>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Teléfonos */}
+                    <div class="emgd-sede-card__tels">
+                      {sede.tels.map(t => (
+                        <a href={`tel:${t.num.replace(/[\s-]/g,'')}`} class={`emgd-sede-card__tel-btn${t.primary ? ' emgd-sede-card__tel-btn--primary' : ''}`}>
+                          <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.82 15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.93 4.11h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                          <span class="emgd-sede-card__tel-num">{t.num}</span>
+                          <span class="emgd-sede-card__tel-label">{t.label}</span>
+                        </a>
+                      ))}
+                    </div>
+
+                    {/* Servicios */}
+                    <div class="emgd-sede-card__servicios">
+                      <p class="emgd-sede-card__servicios-label">Servicios disponibles</p>
+                      <ul class="emgd-sede-card__servicios-list">
+                        {sede.servicios.map(s => <li>{s}</li>)}
+                      </ul>
+                    </div>
+
+                    {/* Nota */}
+                    <div class="emgd-sede-card__nota">
+                      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                      <span>{sede.nota}</span>
+                    </div>
+
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <!-- ══ CÓMO SOLICITAR UNA AMBULANCIA ═══════════════════════════ -->
+          <section class="emg-section emg-section--alt" id="como-llamar" aria-labelledby="llamar-title">
+            <div class="emg-section__header emg-section__header--cruzroja">
+              <div class="emg-section__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.82 15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.93 4.11h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <h2 id="llamar-title" class="emg-section__title">Cómo Solicitar una Ambulancia de la Cruz Roja</h2>
+                <p class="emg-section__sub">Pasos exactos para llamar al 065 desde cualquier teléfono en México</p>
+              </div>
+            </div>
+
+            <div class="emgd-steps">
+              <div class="emgd-step">
+                <div class="emgd-step__num">01</div>
+                <div class="emgd-step__content">
+                  <h3 class="emgd-step__title">Marca <a href="tel:065">065</a> o <a href="tel:911">9-1-1</a></h3>
+                  <p class="emgd-step__desc">Ambos números son gratuitos, sin saldo, 24 horas. El 065 conecta directo a Cruz Roja. El 9-1-1 despacha la unidad más cercana disponible (Cruz Roja, ERUM o SSC) — úsalo si no sabes qué servicio está más cerca.</p>
+                </div>
+              </div>
+              <div class="emgd-step">
+                <div class="emgd-step__num">02</div>
+                <div class="emgd-step__content">
+                  <h3 class="emgd-step__title">Di la dirección exacta con referencias</h3>
+                  <p class="emgd-step__desc">Calle y número + colonia + alcaldía o municipio. Si no sabes la dirección exacta, menciona referencias: "frente al Oxxo de Insurgentes", "a una cuadra del metro Polanco". Entre más preciso, más rápido llega la unidad.</p>
+                </div>
+              </div>
+              <div class="emgd-step">
+                <div class="emgd-step__num">03</div>
+                <div class="emgd-step__content">
+                  <h3 class="emgd-step__title">Describe la emergencia brevemente</h3>
+                  <p class="emgd-step__desc">"Persona inconsciente", "caída con posible fractura", "infarto". El operador te pedirá los datos mínimos. No cuelgues hasta que te lo indiquen — puede darte instrucciones mientras la unidad está en camino.</p>
+                </div>
+              </div>
+              <div class="emgd-step">
+                <div class="emgd-step__num">04</div>
+                <div class="emgd-step__content">
+                  <h3 class="emgd-step__title">Mantén a alguien esperando en la entrada</h3>
+                  <p class="emgd-step__desc">Si estás en un edificio o condominio, pon a alguien en la planta baja o calle para guiar a la unidad. Cada segundo cuenta. El acceso rápido puede ser la diferencia entre llegar a tiempo o no.</p>
+                </div>
+              </div>
+              <div class="emgd-step">
+                <div class="emgd-step__num">05</div>
+                <div class="emgd-step__content">
+                  <h3 class="emgd-step__title">No muevas al paciente salvo riesgo inmediato</h3>
+                  <p class="emgd-step__desc">En caídas, accidentes o lesiones en columna, mover al paciente puede agravar el daño. Solo muévelo si hay peligro directo (fuego, agua, tráfico). El operador del 065 puede orientarte mientras esperas.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="emgd-tip-box">
+              <div class="emgd-tip-box__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <div>
+                <strong>Si estás en un condominio</strong>: informa al guardia o vigilante de inmediato. Un acceso controlado por guardia puede retrasar la entrada de la ambulancia. El protocolo correcto es que el acceso se abra automáticamente ante cualquier emergencia médica.
+              </div>
+            </div>
+          </section>
+
+          <!-- ══ QUÉ HACE LA CRUZ ROJA ════════════════════════════════════ -->
+          <section class="emg-section" id="servicios-cr" aria-labelledby="servicios-cr-title">
+            <div class="emg-section__header emg-section__header--cruzroja">
+              <div class="emg-section__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                </svg>
+              </div>
+              <div>
+                <h2 id="servicios-cr-title" class="emg-section__title">Qué Ofrece la Cruz Roja Mexicana en CDMX</h2>
+                <p class="emg-section__sub">Servicios de la delegación CDMX para emergencias y atención prehospitalaria</p>
+              </div>
+            </div>
+
+            <div class="emgd-services-grid">
+              <div class="emgd-service-card emgd-service-card--cr">
+                <div class="emgd-service-card__icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                </div>
+                <div class="emgd-service-card__body">
+                  <h3>Ambulancias de Emergencia</h3>
+                  <p>Unidades equipadas con desfibriladores, oxígeno, camillas de inmovilización y medicamentos de urgencia. Tripuladas por técnicos en urgencias médicas (TUM).</p>
+                  <span class="emgd-service-card__tag">Disponibles 24 horas · 365 días</span>
+                </div>
+              </div>
+              <div class="emgd-service-card emgd-service-card--cr">
+                <div class="emgd-service-card__icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </div>
+                <div class="emgd-service-card__body">
+                  <h3>Atención Prehospitalaria</h3>
+                  <p>Estabilización del paciente en el lugar del accidente antes del traslado. Incluye manejo de vía aérea, control de hemorragias e inmovilización de fracturas.</p>
+                  <span class="emgd-service-card__tag">Primeros auxilios avanzados</span>
+                </div>
+              </div>
+              <div class="emgd-service-card emgd-service-card--cr">
+                <div class="emgd-service-card__icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <div class="emgd-service-card__body">
+                  <h3>Traslados Médicos Programados</h3>
+                  <p>Traslado de pacientes con movilidad reducida a hospitales, clínicas o domicilio. Requiere solicitud previa. No emergencia — para planear con anticipación.</p>
+                  <span class="emgd-service-card__tag">Con cita · Requiere programación</span>
+                </div>
+              </div>
+              <div class="emgd-service-card emgd-service-card--cr">
+                <div class="emgd-service-card__icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div class="emgd-service-card__body">
+                  <h3>Capacitación en Primeros Auxilios</h3>
+                  <p>Cursos de primeros auxilios básicos y RCP para condominios, empresas y público en general. Ideal para comités de seguridad y brigadistas internos.</p>
+                  <span class="emgd-service-card__tag">Cursos para condominios y empresas</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ══ FAQ ══════════════════════════════════════════════════════ -->
+          <section class="emg-section emg-section--alt" id="preguntas" aria-labelledby="faq-title">
+            <div class="emg-section__header emg-section__header--cruzroja" style="margin-bottom:1.5rem">
+              <div class="emg-section__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <div>
+                <h2 id="faq-title" class="emg-section__title">Preguntas Frecuentes sobre Cruz Roja en CDMX</h2>
+                <p class="emg-section__sub">Las dudas más comunes sobre el 065 y la delegación CDMX</p>
+              </div>
+            </div>
+
+            <div class="emgd-faqs">
+              {faqs.map((faq, i) => (
+                <details class="emgd-faq" open={i === 0}>
+                  <summary class="emgd-faq__q">
+                    <span>{faq.q}</span>
+                    <svg class="emgd-faq__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                  </summary>
+                  <div class="emgd-faq__a">
+                    <p>{faq.a}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          <!-- ══ OTROS SERVICIOS DE EMERGENCIA ═══════════════════════════ -->
+          <section class="emg-section" id="otros" aria-labelledby="otros-title">
+            <div class="emg-section__header" style="margin-bottom:1.5rem">
+              <div class="emg-section__icon" style="background:#f1f3f5;color:#495057">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div>
+                <h2 id="otros-title" class="emg-section__title">Otras Categorías del Directorio de Emergencias</h2>
+                <p class="emg-section__sub">Bomberos, Policía, Protección Civil, Ministerio Público y Números Universales</p>
+              </div>
+            </div>
+
+            <div class="emgd-otros-grid">
+              {otrasCategoriasEmg.map(cat => (
+                <a href={cat.href} class="emgd-otro-card" style={`--otro-color:${cat.color}`}>
+                  <div class="emgd-otro-card__top">
+                    <div class="emgd-otro-card__dot"></div>
+                    <span class="emgd-otro-card__badge">{cat.badge}</span>
+                  </div>
+                  <span class="emgd-otro-card__label">{cat.label}</span>
+                  <svg class="emgd-otro-card__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              ))}
+              <a href="/emergencias" class="emgd-otro-card emgd-otro-card--all">
+                <span class="emgd-otro-card__label">Ver directorio completo</span>
+                <svg class="emgd-otro-card__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </section>
+
+          <!-- ── DISCLAIMER ─────────────────────────────────────────────── -->
+          <section class="emg-disclaimer" style="padding:2rem 0 1rem">
+            <div class="emg-disclaimer__inner">
+              <div class="emg-disclaimer__card">
+                <div class="emg-disclaimer__icon emg-disclaimer__icon--warn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+                <div><h3 class="emg-disclaimer__title">Emergencia activa: 9-1-1 primero</h3><p class="emg-disclaimer__text">Si hay peligro ahora mismo, marca 9-1-1 — no busques en este directorio.</p></div>
+              </div>
+              <div class="emg-disclaimer__card">
+                <div class="emg-disclaimer__icon emg-disclaimer__icon--info"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+                <div><h3 class="emg-disclaimer__title">Verificado — abril 2026</h3><p class="emg-disclaimer__text">Fuente: <a href="https://cruzrojamexicana.org.mx" target="_blank" rel="noopener">cruzrojamexicana.org.mx</a>. <a href="mailto:hola@originsecurity.mx">Reportar dato incorrecto →</a></p></div>
+              </div>
+              <div class="emg-disclaimer__card">
+                <div class="emg-disclaimer__icon emg-disclaimer__icon--update"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
+                <div><h3 class="emg-disclaimer__title">Recurso ciudadano independiente</h3><p class="emg-disclaimer__text">ORIGINS no representa a la Cruz Roja. Directorio de fuentes oficiales para orientación ciudadana.</p></div>
+              </div>
+            </div>
+          </section>
+
+        </main>
+        <!-- ── fin main ─────────────────────────────────────────────────── -->
+
+        <!-- ── SIDEBAR ────────────────────────────────────────────────── -->
+        <aside class="emg-sidebar" aria-label="Recursos Cruz Roja CDMX">
+
+          <!-- Card 1: Números urgentes Cruz Roja -->
+          <div class="emg-sb-card emg-sb-card--911" style="--sb911-bg:#dc2626">
+            <p class="emg-sb-911__eyebrow">Cruz Roja · Ambulancias · Gratuito</p>
+            <a href="tel:065" class="emg-sb-911__num" style="letter-spacing:0.05em">065</a>
+            <p class="emg-sb-911__desc">Desde cualquier teléfono · Sin saldo · 24 horas</p>
+          </div>
+
+          <!-- Card 2: Números directos -->
+          <div class="emg-sb-card">
+            <h4 class="emg-sb-card__title">Líneas Cruz Roja CDMX</h4>
+            <div class="emg-sb-reflist">
+              <a href="tel:065" class="emg-sb-ref">
+                <span class="emg-sb-ref__num" style="color:#dc2626">065</span>
+                <span class="emg-sb-ref__info">
+                  <strong>Ambulancias · Cruz Roja</strong>
+                  <span>Gratuito · Todo México · 24h</span>
+                </span>
+              </a>
+              <a href="tel:5555575757" class="emg-sb-ref">
+                <span class="emg-sb-ref__num emg-sb-ref__num--md" style="color:#dc2626">5557-5757</span>
+                <span class="emg-sb-ref__info">
+                  <strong>Delegación CDMX</strong>
+                  <span>Los Morales Polanco · 24h</span>
+                </span>
+              </a>
+              <a href="tel:911" class="emg-sb-ref">
+                <span class="emg-sb-ref__num" style="color:#111">9-1-1</span>
+                <span class="emg-sb-ref__info">
+                  <strong>Emergencias · Todo México</strong>
+                  <span>Despacha la unidad más cercana</span>
+                </span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Navegación interna -->
+          <div class="emg-sb-card">
+            <h4 class="emg-sb-card__title">En esta página</h4>
+            <nav class="emg-sb-nav">
+              <a href="#sedes" class="emg-sb-nav__link emg-sb-nav__link--cruzroja">Sede y contacto CDMX</a>
+              <a href="#como-llamar" class="emg-sb-nav__link emg-sb-nav__link--cruzroja">Cómo solicitar ambulancia</a>
+              <a href="#servicios-cr" class="emg-sb-nav__link emg-sb-nav__link--cruzroja">Qué hace la Cruz Roja</a>
+              <a href="#preguntas" class="emg-sb-nav__link emg-sb-nav__link--cruzroja">Preguntas frecuentes</a>
+              <a href="#otros" class="emg-sb-nav__link">Otras emergencias</a>
+            </nav>
+          </div>
+
+          <!-- Card 4: Datos de la sede -->
+          <div class="emg-sb-card">
+            <h4 class="emg-sb-card__title">Sede Central — CDMX</h4>
+            <div class="emgd-sb-sede">
+              <div class="emgd-sb-sede__row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+                <div>
+                  <strong>Juan Luis Vives No. 200-2</strong>
+                  <span>Col. Los Morales Polanco</span>
+                  <span>Miguel Hidalgo · C.P. 11510</span>
+                </div>
+              </div>
+              <div class="emgd-sb-sede__row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <div>
+                  <strong>24 horas · 365 días</strong>
+                </div>
+              </div>
+              <div class="emgd-sb-sede__row">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                <div><a href="https://cruzrojamexicana.org.mx" target="_blank" rel="noopener">cruzrojamexicana.org.mx</a></div>
+              </div>
+              <a href="https://maps.google.com/?q=Juan+Luis+Vives+200,+Los+Morales+Polanco,+Miguel+Hidalgo,+CDMX" target="_blank" rel="noopener" class="emgd-sb-sede__maps">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                Ver en Google Maps
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 5: Zonas de cobertura ORIGINS -->
+          <div class="emg-sb-card">
+            <h4 class="emg-sb-card__title">Zonas de cobertura ORIGINS</h4>
+            <p class="emg-sb-card__intro">Seguridad privada para condominios en estas alcaldías y municipios.</p>
+            <ul class="emg-sb-zones">
+              {zonasLinks.map(z => (
+                <li><a href={z.href}>{z.label}</a></li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Card 6: ORIGINS CTA -->
+          <div class="emg-sb-card emg-sb-card--origins">
+            <p class="emg-sb-card__origins-eyebrow">ORIGINS Private Security</p>
+            <h4 class="emg-sb-card__origins-title">La Cruz Roja cubre el exterior. ORIGINS cubre el interior.</h4>
+            <p class="emg-sb-card__origins-text">El 065 llega en minutos — pero si no hay acceso al condominio, pierde tiempo. Nuestros guardias conocen el protocolo de acceso para ambulancias y coordinan la entrada en segundos, no en minutos.</p>
+            <div class="emg-sb-card__origins-services">
+              <a href="/servicios/guardias-intramuros">Guardias Intramuros 24/7</a>
+              <a href="/servicios/control-de-accesos">Control de Accesos</a>
+              <a href="/servicios/monitoreo-alarmas">Monitoreo de Alarmas</a>
+            </div>
+            <a href="https://wa.me/525530255580" class="emg-sb-card__origins-cta" target="_blank" rel="noopener">
+              Cotización gratuita — respuesta en 24h
+            </a>
+            <p class="emg-sb-card__origins-permit">Permiso SSC 0102-15 · CDMX y Estado de México</p>
+          </div>
+
+          <!-- Card 7: Otras categorías directorio -->
+          <div class="emg-sb-card">
+            <h4 class="emg-sb-card__title">Directorio de Emergencias</h4>
+            <nav class="emg-sb-nav">
+              <a href="/emergencias#bomberos"         class="emg-sb-nav__link emg-sb-nav__link--bomberos">Bomberos CDMX · 068</a>
+              <a href="/emergencias#policia"          class="emg-sb-nav__link emg-sb-nav__link--policia">Policía SSC · 9-1-1</a>
+              <a href="/emergencias#proteccion-civil" class="emg-sb-nav__link emg-sb-nav__link--protcivil">Protección Civil · Alcaldías</a>
+              <a href="/emergencias#ministerio-publico" class="emg-sb-nav__link emg-sb-nav__link--mp">Ministerio Público · FGJ</a>
+              <a href="/emergencias#numeros"          class="emg-sb-nav__link emg-sb-nav__link--numeros">Números Universales</a>
+              <a href="/emergencias" class="emg-sb-nav__link" style="font-weight:700">← Ver directorio completo</a>
+            </nav>
+          </div>
+
+        </aside>
+        <!-- ── fin sidebar ───────────────────────────────────────────── -->
+
+      </div><!-- /.emg-layout__grid -->
+    </div><!-- /.container -->
+  </div><!-- /.emg-layout -->
+
+  <!-- ── CTA FINAL ────────────────────────────────────────────────────── -->
+  <section class="emg-cta">
+    <div class="container">
+      <div class="emg-cta__inner">
+        <div>
+          <span class="emg-cta__badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            ORIGINS Private Security
+          </span>
+          <h2 class="emg-cta__title">El 065 Llega Más Rápido Cuando el Acceso Está Preparado</h2>
+          <p class="emg-cta__text">En condominios con control de acceso, la ambulancia puede perder 2 a 5 minutos esperando que abran el portón. Nuestros guardias tienen un protocolo específico para emergencias médicas: acceso inmediato, ascensor reservado, guía hasta el departamento. Segundos que importan.</p>
+          <div class="emg-cta__stat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Protocolo ORIGINS de acceso de emergencias: &lt;30 segundos para abrir paso a ambulancias
+          </div>
+        </div>
+        <div class="emg-cta__actions">
+          <a href="/servicios/guardias-intramuros" class="emg-cta__btn emg-cta__btn--primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Ver Guardias Intramuros
+          </a>
+          <a href="https://wa.me/525530255580" class="emg-cta__btn emg-cta__btn--wa" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <NavCTA footer={true} cards={[
+    { label: 'Directorio de Emergencias', sublabel: 'Bomberos, Policía y más', href: '/emergencias', icon: 'shield' },
+    { label: 'Guardias Intramuros', sublabel: 'Acceso 24/7 para emergencias', href: '/servicios/guardias-intramuros', icon: 'shield' },
+    { label: 'Zonas de Cobertura', sublabel: 'CDMX y Estado de México', href: '/zonas', icon: 'map' },
+    { label: 'Cotización Gratis', sublabel: 'Diagnóstico en 24h', href: 'https://wa.me/525530255580', whatsapp: true, accent: true, external: true },
+  ]}/>
+
+</Base>

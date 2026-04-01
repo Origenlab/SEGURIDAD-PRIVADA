@@ -1454,3 +1454,565 @@
 }
 
 .emg-num-card--priority .emg-num-card__desc { color: rgba(255,255,255,0.7); }
+
+/* ══════════════════════════════════════════════════════════
+   LAYOUT: MAIN + SIDEBAR
+   ══════════════════════════════════════════════════════════ */
+.emg-layout { padding: 3rem 0 5rem; }
+
+.emg-layout__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .emg-layout__grid {
+    grid-template-columns: 1fr 380px;
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .emg-layout__grid {
+    grid-template-columns: 1fr 420px;
+    gap: 3.5rem;
+  }
+}
+
+/* ── Main ──────────────────────────────────────────────── */
+.emg-layout__main {
+  min-width: 0; /* evita overflow en grids */
+}
+
+.emg-section { padding: 2.5rem 0; scroll-margin-top: 5rem; border-bottom: 1px solid var(--color-border, #e0e0e0); }
+.emg-section:last-child { border-bottom: none; }
+.emg-section--alt { background: transparent; } /* dentro de main no necesita fondo */
+
+/* ── Sidebar ──────────────────────────────────────────── */
+.emg-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+}
+
+@media (min-width: 1024px) {
+  .emg-sidebar {
+    position: sticky;
+    top: 5.5rem;
+    align-self: start;
+    max-height: calc(100vh - 7rem);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(10,15,30,0.15) transparent;
+    padding-right: 4px;
+  }
+}
+
+/* ── Sidebar Card ─────────────────────────────────────── */
+.emg-sb-card {
+  background: #fff;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 16px;
+  padding: 1.125rem;
+}
+
+.emg-sb-card__title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: rgba(10,15,30,0.45);
+  margin: 0 0 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding-bottom: 0.625rem;
+  border-bottom: 1px solid var(--color-border, #e0e0e0);
+}
+
+/* ── Sidebar Nav ──────────────────────────────────────── */
+.emg-sb-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.emg-sb-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.625rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(10,15,30,0.65);
+  text-decoration: none;
+  transition: all 0.12s;
+}
+
+.emg-sb-nav__link span { font-size: 0.875rem; flex-shrink: 0; }
+.emg-sb-nav__link:hover { background: rgba(10,15,30,0.05); color: var(--color-primary, #0a0f1e); }
+
+.emg-sb-nav__link--bomberos:hover  { color: #ea580c; background: rgba(234,88,12,0.06); }
+.emg-sb-nav__link--policia:hover   { color: #1d4ed8; background: rgba(29,78,216,0.06); }
+.emg-sb-nav__link--protcivil:hover { color: #d97706; background: rgba(217,119,6,0.06); }
+.emg-sb-nav__link--cruzroja:hover  { color: #dc2626; background: rgba(220,38,38,0.06); }
+.emg-sb-nav__link--mp:hover        { color: #6b7280; background: rgba(107,114,128,0.06); }
+.emg-sb-nav__link--numeros:hover   { color: #059669; background: rgba(5,150,105,0.06); }
+
+/* ── 911 Card ─────────────────────────────────────────── */
+.emg-sb-card--911 {
+  background: #dc2626;
+  border-color: #dc2626;
+  text-align: center;
+  padding: 1.5rem 1.25rem;
+}
+
+.emg-sb-911__eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.65);
+  margin: 0 0 0.75rem;
+}
+
+.emg-sb-911__num {
+  display: block;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+}
+
+.emg-sb-911__num:hover { opacity: 0.85; }
+
+.emg-sb-911__desc {
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Lista de referencia rápida ───────────────────────── */
+.emg-sb-reflist {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.emg-sb-ref {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 0.625rem 0;
+  border-bottom: 1px solid rgba(10,15,30,0.06);
+  text-decoration: none;
+  transition: background 0.1s;
+  border-radius: 6px;
+  margin: 0 -0.25rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.emg-sb-ref:last-child { border-bottom: none; }
+.emg-sb-ref:hover { background: rgba(10,15,30,0.03); }
+
+.emg-sb-ref__num {
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  min-width: 56px;
+  flex-shrink: 0;
+}
+
+.emg-sb-ref__num--md {
+  font-size: 0.9375rem;
+  letter-spacing: -0.01em;
+}
+
+.emg-sb-ref__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.emg-sb-ref__info strong {
+  font-size: 0.8375rem;
+  font-weight: 700;
+  color: var(--color-primary, #0a0f1e);
+  line-height: 1.2;
+  display: block;
+}
+
+.emg-sb-ref__info span {
+  font-size: 0.75rem;
+  color: rgba(10,15,30,0.45);
+  line-height: 1.3;
+  display: block;
+}
+
+/* ── Zonas list ───────────────────────────────────────── */
+.emg-sb-card__intro {
+  font-size: 0.8125rem;
+  color: rgba(10,15,30,0.5);
+  margin: 0 0 0.875rem;
+  line-height: 1.5;
+}
+
+.emg-sb-zones {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.emg-sb-zones li { border-bottom: 1px solid rgba(10,15,30,0.05); }
+.emg-sb-zones li:last-child { border-bottom: none; }
+
+.emg-sb-zones a {
+  display: block;
+  padding: 0.45rem 0;
+  font-size: 0.8375rem;
+  font-weight: 500;
+  color: rgba(10,15,30,0.65);
+  text-decoration: none;
+  transition: color 0.12s;
+}
+
+.emg-sb-zones a:hover { color: var(--color-primary, #0a0f1e); }
+
+/* ── ORIGINS sidebar card ─────────────────────────────── */
+.emg-sb-card--origins {
+  background: var(--color-primary, #0a0f1e);
+  border-color: transparent;
+  padding: 1.375rem;
+}
+
+.emg-sb-card__origins-eyebrow {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #25D366;
+  margin: 0 0 0.625rem;
+}
+
+.emg-sb-card__origins-title {
+  font-size: 0.9375rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.35;
+  margin: 0 0 0.625rem;
+}
+
+.emg-sb-card__origins-text {
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.emg-sb-card__origins-services {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 1.125rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 0.875rem;
+}
+
+.emg-sb-card__origins-services a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.45rem 0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  transition: color 0.12s;
+}
+
+.emg-sb-card__origins-services a:last-child { border-bottom: none; }
+
+.emg-sb-card__origins-services a::after {
+  content: '→';
+  font-size: 0.75rem;
+  opacity: 0.4;
+}
+
+.emg-sb-card__origins-services a:hover { color: #fff; }
+.emg-sb-card__origins-services a:hover::after { opacity: 1; }
+
+.emg-sb-card__origins-cta {
+  display: block;
+  text-align: center;
+  background: #25D366;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.15s;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+.emg-sb-card__origins-cta:hover { background: #1ebe5d; }
+
+.emg-sb-card__origins-permit {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.3);
+  text-align: center;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ── Sources card ─────────────────────────────────────── */
+.emg-sb-card--sources { background: var(--color-accent, #f8f9fa); }
+
+.emg-sb-sources-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0.875rem;
+}
+
+.emg-sb-sources-table td {
+  padding: 0.375rem 0;
+  font-size: 0.78rem;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(10,15,30,0.06);
+}
+
+.emg-sb-sources-table tr:last-child td { border-bottom: none; }
+
+.emg-sb-sources-table td:first-child {
+  color: rgba(10,15,30,0.5);
+  font-weight: 600;
+  width: 38%;
+  padding-right: 0.5rem;
+}
+
+.emg-sb-sources-table td:last-child { color: rgba(10,15,30,0.45); }
+
+.emg-sb-sources-table a {
+  font-size: 0.75rem;
+  color: rgba(10,15,30,0.5);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.emg-sb-sources-table a:hover { color: var(--color-primary, #0a0f1e); text-decoration: underline; }
+
+.emg-sb-sources__date {
+  font-size: 0.72rem;
+  color: rgba(10,15,30,0.4);
+  margin: 0;
+}
+
+.emg-sb-sources__date a {
+  color: rgba(10,15,30,0.5);
+  font-weight: 600;
+}
+
+/* ── Index de categorías (dentro del main) ────────────── */
+.emg-index { padding: 0 0 3rem; border-bottom: 1px solid var(--color-border, #e0e0e0); }
+
+.emg-index__header { margin-bottom: 1.75rem; }
+
+.emg-index__title {
+  font-size: 1.375rem;
+  font-weight: 800;
+  color: var(--color-primary, #0a0f1e);
+  margin: 0.5rem 0 0.375rem;
+  letter-spacing: -0.02em;
+}
+
+.emg-index__sub {
+  font-size: 0.9375rem;
+  color: rgba(10,15,30,0.5);
+  margin: 0;
+}
+
+.emg-index__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.125rem;
+}
+
+@media (min-width: 580px) {
+  .emg-index__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+  .emg-index__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ── Category Card — misma anatomía que ServiceCard ──── */
+.emg-cat-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.emg-cat-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.11), 0 2px 8px rgba(0,0,0,0.06);
+  transform: translateY(-2px);
+}
+
+/* ── Header (equivalente a service-card__image) ────────── */
+.emg-cat-card__header {
+  position: relative;
+  padding: 1.625rem 1.5rem 1.375rem;
+  background: var(--cat-bg, rgba(10,15,30,0.06));
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  overflow: hidden;
+  min-height: 110px;
+}
+
+.emg-cat-card__header-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* Acento decorativo esquina inferior derecha */
+.emg-cat-card__header-accent {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  background: var(--cat-color, #0a0f1e);
+  opacity: 0.08;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.emg-cat-card:hover .emg-cat-card__header {
+  background: var(--cat-bg, rgba(10,15,30,0.06));
+}
+
+/* Badge — igual que service-card__badge */
+.emg-cat-card__badge {
+  display: inline-block;
+  padding: 0.35rem 0.875rem;
+  background: var(--cat-color, #0a0f1e);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border-radius: 50px;
+  margin-bottom: 0.625rem;
+}
+
+/* Título del header */
+.emg-cat-card__title {
+  font-size: 1.375rem;
+  font-weight: 900;
+  color: var(--color-primary, #0a0f1e);
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+/* ── Body ─────────────────────────────────────────────── */
+.emg-cat-card__body {
+  padding: 1.25rem 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.emg-cat-card__subtitulo {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--cat-color, rgba(10,15,30,0.45));
+  margin: 0 0 0.625rem;
+}
+
+.emg-cat-card__desc {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: rgba(10,15,30,0.6);
+  margin: 0 0 1rem;
+  flex: 1;
+}
+
+/* Features — mismo estilo pill que service-card__list */
+.emg-cat-card__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.emg-cat-card__features li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.75rem;
+  background: var(--cat-bg, rgba(10,15,30,0.05));
+  color: rgba(10,15,30,0.65);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 50px;
+  border: 1px solid rgba(10,15,30,0.08);
+}
+
+.emg-cat-card__features li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: var(--cat-color, #0a0f1e);
+  border-radius: 50%;
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+/* CTA barra inferior — igual que service-card__cta */
+.emg-cat-card__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--color-primary, #0a0f1e);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: auto;
+  transition: background 0.2s;
+}
+
+.emg-cat-card__cta svg { flex-shrink: 0; }
+
+.emg-cat-card:hover .emg-cat-card__cta {
+  background: var(--cat-color, #0a0f1e);
+}
+
+/* ── Section CTA colors ───────────────────────────────── */
+.emg-section__cta--orange { background: #ea580c; }
+.emg-section__cta--amber  { background: #d97706; }

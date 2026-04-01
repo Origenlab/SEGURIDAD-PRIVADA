@@ -1,0 +1,393 @@
+---
+import Base from '../../layouts/Base.astro';
+import HeroPagina from '../../components/HeroPagina.astro';
+import NavCTA from '../../components/NavCTA.astro';
+import '../../styles/pages/emergencias.css';
+import '../../styles/pages/emergencias-detalle.css';
+
+const siteUrl = 'https://seguridad-privada.com.mx';
+
+const unidades = [
+  { zona:'Miguel Hidalgo',    direccion:'José Morán esq. Parque Lira',              colonia:'Amp. Daniel Garza',            cp:'11800', tels:['55 1041-8150','55 5276-7769'] },
+  { zona:'Benito Juárez',     direccion:'Av. Cuauhtémoc 1240 esq. Municipio Libre', colonia:'Santa Cruz Atoyac',            cp:'03310', tels:['55 5604-4926','55 5422-5555'] },
+  { zona:'Cuauhtémoc',        direccion:'Aldama, entre Mina y Violeta',             colonia:'Buenavista',                   cp:'06350', tels:['55 2452-3330','55 2452-3319'] },
+  { zona:'Coyoacán',          direccion:'Prol. Viaducto Tlalpan esq. Acoxpa',       colonia:'Viejo Ejido de Santa Úrsula',  cp:'04980', tels:['55 5610-8719','55 5610-8722'] },
+  { zona:'Álvaro Obregón',    direccion:'Prol. Calle 4 esq. Canario',               colonia:'Tolteca',                      cp:'01150', tels:['55 5277-4177','55 5516-0561'] },
+  { zona:'Gustavo A. Madero', direccion:'Vicente Villada esq. 5 de Febrero',        colonia:'Villa Gustavo A. Madero',      cp:'07050', tels:['55 3751-0104','55 5781-3608'] },
+  { zona:'Iztapalapa',        direccion:'Aldama 63 esq. Ayuntamiento',              colonia:'San Lucas Casino',             cp:'09000', tels:['55 6417-5128','55 5445-1178'] },
+  { zona:'Xochimilco',        direccion:'Prol. Aldama esq. Cerezos',                colonia:'Paseo del Sur',                cp:'16010', tels:['55 5675-7020'] },
+  { zona:'SGIRPC — Central',  direccion:'Av. Patriotismo 711',                      colonia:'San Juan, Benito Juárez',      cp:'03730', tels:['55 5683-2222','55 1519-1864'] },
+];
+
+const tiposEmergencia = [
+  { icono:'🌧️', tipo:'Lluvias e inundaciones', temporada:'May–Oct', desc:'Encharcamientos, desbordamientos de arroyos y desalojos preventivos en zonas de riesgo. Especialmente crítico en Iztapalapa, Xochimilco y Gustavo A. Madero.', num:'55 5683-2222' },
+  { icono:'🏚️', tipo:'Sismos y derrumbes',     temporada:'Todo el año', desc:'Evaluación estructural post-sismo, desalojo de inmuebles dañados y coordinación de búsqueda y rescate en edificios colapsados.', num:'55 5683-2222' },
+  { icono:'🔥', tipo:'Incendios forestales',    temporada:'Feb–May', desc:'Temporada seca en el sur y poniente de CDMX. Coordinación con Bomberos para contención de incendios en Ajusco, Desierto de los Leones y Xochimilco.', num:'068' },
+  { icono:'⚗️', tipo:'Materiales peligrosos',  temporada:'Todo el año', desc:'Fugas de gas, derrames químicos y accidentes industriales. La SGIRPC coordina con la SSC y Bomberos para perímetros de seguridad.', num:'55 5683-2222' },
+];
+
+const faqs = [
+  { q:'¿Cuál es el teléfono de Protección Civil CDMX?', a:'La línea central de la SGIRPC es 55 5683-2222, disponible 24 horas. Para emergencias inmediatas como sismos o inundaciones activas, el 9-1-1 es más rápido porque despacha múltiples unidades simultáneamente.' },
+  { q:'¿Qué hace Protección Civil que no hacen los Bomberos?', a:'Los Bomberos atienden incendios, rescates y fugas de gas. Protección Civil coordina la respuesta integral ante desastres: evaluación de riesgo estructural, planes de evacuación, albergues, distribución de apoyo y coordinación entre múltiples dependencias (Bomberos, SSC, Cruz Roja, SACMEX). Son el organizador, no solo el respondedor.' },
+  { q:'¿Protección Civil puede ordenar la evacuación de mi condominio?', a:'Sí. La SGIRPC y sus unidades de alcaldía tienen facultades para emitir órdenes de desalojo preventivo en caso de riesgo inminente (sismo severo, inundación, estructura dañada). El administrador del condominio está obligado a acatar estas disposiciones.' },
+  { q:'¿Qué hago si mi edificio tiene daños visibles después de un sismo?', a:'No regreses hasta que Protección Civil evalúe la estructura. Llama al 55 5683-2222 o a la unidad de tu alcaldía. Un ingeniero evaluador del gobierno revisará el inmueble y emitirá un dictamen de habitabilidad. Entrar a un edificio con daño estructural sin dictamen es un riesgo de vida.' },
+  { q:'¿Cómo puedo solicitar una revisión de riesgo en mi condominio?', a:'Puedes solicitar una visita de evaluación de riesgos a la Unidad de Protección Civil de tu alcaldía. El servicio es gratuito. Lleva el nombre del condominio, dirección y contacto del administrador. El tiempo de respuesta varía por alcaldía y carga de trabajo.' },
+  { q:'¿Qué es el CDMX Alerta y cómo funciona en condominios?', a:'CDMX Alerta es el sistema de alerta sísmica de la ciudad, coordinado por la SGIRPC. El sonido de las sirenas da entre 40 y 120 segundos de aviso antes de sentir el sismo, dependiendo de la distancia al epicentro. Tu condominio debe tener un plan de evacuación probado para ese margen de tiempo.' },
+];
+
+const otrasCategoriasEmg = [
+  { label:'Cruz Roja Mexicana',  href:'/emergencias/cruz-roja',         color:'#dc2626', badge:'065 · Ambulancias' },
+  { label:'Bomberos CDMX',       href:'/emergencias/bomberos',           color:'#ea580c', badge:'068 · 14 estaciones' },
+  { label:'Policía SSC',         href:'/emergencias/policia',            color:'#1d4ed8', badge:'9-1-1 · 060 · 089' },
+  { label:'Ministerio Público',  href:'/emergencias/ministerio-publico', color:'#4b5563', badge:'089 · FGJ CDMX' },
+  { label:'Números Universales', href:'/emergencias/numeros-emergencia', color:'#059669', badge:'9-1-1 · 065 · 068' },
+];
+
+const zonasLinks = [
+  { label:'Miguel Hidalgo',    href:'/zonas/miguel-hidalgo' },
+  { label:'Benito Juárez',     href:'/zonas/benito-juarez' },
+  { label:'Cuauhtémoc',        href:'/zonas/cuauhtemoc' },
+  { label:'Coyoacán',          href:'/zonas/coyoacan' },
+  { label:'Álvaro Obregón',    href:'/zonas/alvaro-obregon' },
+  { label:'Gustavo A. Madero', href:'/zonas/gustavo-a-madero' },
+  { label:'Iztapalapa',        href:'/zonas/iztapalapa' },
+  { label:'Xochimilco',        href:'/zonas/xochimilco' },
+  { label:'Naucalpan',         href:'/zonas/naucalpan' },
+];
+
+const schema = {
+  "@context":"https://schema.org",
+  "@graph":[
+    { "@type":"WebPage", "@id":`${siteUrl}/emergencias/proteccion-civil`,
+      "name":"Protección Civil CDMX — Unidades por Alcaldía y Teléfonos · ORIGINS",
+      "description":"Directorio de las 9 Unidades de Protección Civil CDMX por alcaldía: dirección exacta y teléfonos. SGIRPC central y protocolos ante sismos, inundaciones y emergencias.",
+      "breadcrumb":{ "@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Inicio","item":siteUrl},
+        {"@type":"ListItem","position":2,"name":"Directorio de Emergencias","item":`${siteUrl}/emergencias`},
+        {"@type":"ListItem","position":3,"name":"Protección Civil CDMX","item":`${siteUrl}/emergencias/proteccion-civil`},
+      ]}},
+    ...unidades.map(u=>({ "@type":"GovernmentOffice","name":`UGIRPC ${u.zona}`,
+      "telephone":u.tels[0].replace(/[\s-]/g,''),
+      "address":{"@type":"PostalAddress","streetAddress":u.direccion,"addressLocality":u.colonia,"postalCode":u.cp,"addressCountry":"MX"} })),
+    { "@type":"FAQPage","mainEntity":faqs.map(f=>({ "@type":"Question","name":f.q,"acceptedAnswer":{"@type":"Answer","text":f.a} })) }
+  ]
+};
+---
+
+<Base
+  title="Protección Civil CDMX — Unidades, Dirección y Teléfono · ORIGINS"
+  description="Directorio de 9 Unidades UGIRPC CDMX por alcaldía: dirección y teléfono. SGIRPC: 55 5683-2222. Protocolos sismos e inundaciones. Verificado abr. 2026."
+  canonical={`${siteUrl}/emergencias/proteccion-civil`}
+  schema={schema}
+>
+
+  <div class="emg-strip"><div class="emg-strip__inner">
+    <span class="emg-strip__badge">Emergencia</span>
+    <a href="tel:911" class="emg-strip__link">9-1-1</a>
+    <span class="emg-strip__label">· Gratuito · 24h · Policía, bomberos y ambulancias</span>
+  </div></div>
+
+  <HeroPagina
+    badge="Directorio de Emergencias · Protección Civil"
+    titulo="Protección Civil CDMX — Unidades por Alcaldía, Dirección y Teléfonos"
+    descripcion="Directorio de las 9 Unidades de Gestión Integral de Riesgos y Protección Civil (UGIRPC) en CDMX con dirección exacta y teléfonos directos. Sede central SGIRPC y protocolos ante sismos, inundaciones y emergencias."
+    breadcrumb={[
+      { label:'Directorio de Emergencias', href:'/emergencias' },
+      { label:'Protección Civil', href:'/emergencias/proteccion-civil' },
+    ]}
+    ctaPrimario={{ texto:'Central: 55 5683-2222', href:'tel:5556832222' }}
+    ctaWhatsapp={false}
+    seoParrafo1={`La <strong>Secretaría de Gestión Integral de Riesgos y Protección Civil (SGIRPC)</strong> de CDMX coordina las respuestas ante sismos, inundaciones, incendios forestales y emergencias estructurales. Opera <strong>9 Unidades UGIRPC</strong> distribuidas en las principales alcaldías, cada una con dirección física y teléfono directo.`}
+    seoParrafo2={`La sede central de la SGIRPC está en Av. Patriotismo 711, Col. San Juan, Benito Juárez, Tel. <strong>55 5683-2222</strong>. Para emergencias activas siempre marca primero <strong>9-1-1</strong>. Fuente: <a href="https://proteccioncivil.cdmx.gob.mx" target="_blank" rel="noopener">proteccioncivil.cdmx.gob.mx</a>. Verificado abril 2026.`}
+  />
+
+  <div class="emgd-urgency-bar">
+    <div class="container">
+      <div class="emgd-urgency-bar__inner">
+        <a href="tel:5556832222" class="emgd-urgency-bar__num emgd-urgency-bar__num--protcivil">
+          <span class="emgd-urgency-bar__eyebrow">SGIRPC Central CDMX · 24 horas</span>
+          <span class="emgd-urgency-bar__digit">5683-2222</span>
+          <span class="emgd-urgency-bar__sub">Av. Patriotismo 711 · Benito Juárez</span>
+        </a>
+        <a href="tel:911" class="emgd-urgency-bar__num emgd-urgency-bar__num--911">
+          <span class="emgd-urgency-bar__eyebrow">Emergencia activa · Todo México</span>
+          <span class="emgd-urgency-bar__digit">9-1-1</span>
+          <span class="emgd-urgency-bar__sub">Despacha múltiples unidades</span>
+        </a>
+        <div class="emgd-urgency-bar__num emgd-urgency-bar__num--info">
+          <span class="emgd-urgency-bar__eyebrow">Unidades UGIRPC verificadas</span>
+          <span class="emgd-urgency-bar__digit">{unidades.length}</span>
+          <span class="emgd-urgency-bar__sub">8 alcaldías + Central · Abr. 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="emg-layout">
+    <div class="container">
+      <div class="emg-layout__grid">
+        <main class="emg-layout__main">
+
+          <!-- ══ TIPOS DE EMERGENCIA POR TEMPORADA ══════════════════════ -->
+          <section class="emg-section emgd-section--first" id="tipos" aria-labelledby="tipos-title">
+            <div class="emg-section__header emg-section__header--protcivil">
+              <div class="emg-section__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <div>
+                <h2 id="tipos-title" class="emg-section__title">Tipos de Emergencia que Atiende Protección Civil CDMX</h2>
+                <p class="emg-section__sub">Por temporada y tipo de riesgo — cuándo llamar a la SGIRPC</p>
+              </div>
+            </div>
+            <div class="emgd-temporadas-grid">
+              {tiposEmergencia.map(t => (
+                <div class="emgd-temporada-card">
+                  <div class="emgd-temporada-card__top">
+                    <span class="emgd-temporada-card__emoji">{t.icono}</span>
+                    <div>
+                      <h3 class="emgd-temporada-card__tipo">{t.tipo}</h3>
+                      <span class="emgd-temporada-card__temporada">{t.temporada}</span>
+                    </div>
+                  </div>
+                  <p class="emgd-temporada-card__desc">{t.desc}</p>
+                  <a href={`tel:${t.num.replace(/[\s-]/g,'')}`} class="emgd-temporada-card__tel">{t.num}</a>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <!-- ══ UNIDADES POR ALCALDÍA ════════════════════════════════════ -->
+          <section class="emg-section emg-section--alt" id="unidades" aria-labelledby="unidades-title">
+            <div class="emg-section__header emg-section__header--protcivil">
+              <div class="emg-section__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+              </div>
+              <div>
+                <h2 id="unidades-title" class="emg-section__title">Unidades UGIRPC — Dirección y Teléfonos por Alcaldía</h2>
+                <p class="emg-section__sub">{unidades.length} unidades verificadas · <a href="https://proteccioncivil.cdmx.gob.mx" target="_blank" rel="noopener">proteccioncivil.cdmx.gob.mx</a> · Abr. 2026</p>
+              </div>
+              <a href="tel:5556832222" class="emg-section__cta emg-section__cta--amber">55 5683-2222</a>
+            </div>
+            <div class="emg-dir__grid">
+              {unidades.map(u => (
+                <div class={`emgd-sede-card${u.zona==='SGIRPC — Central'?' emgd-sede-card--central':''}`}>
+                  <div class="emgd-sede-card__header emgd-sede-card__header--protcivil">
+                    <div class="emgd-sede-card__header-content">
+                      <span class="emgd-sede-card__tipo">{u.zona==='SGIRPC — Central'?'Sede Central':'Unidad UGIRPC'}</span>
+                      <h3 class="emgd-sede-card__nombre">{u.zona==='SGIRPC — Central'?'SGIRPC — Sede Central':u.zona}</h3>
+                    </div>
+                    <div class="emgd-sede-card__horario-badge" style="background:rgba(255,255,255,0.15)">
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                      24h
+                    </div>
+                  </div>
+                  <div class="emgd-sede-card__body">
+                    <div class="emgd-sede-card__dir">
+                      <div class="emgd-sede-card__dir-icon emgd-sede-card__dir-icon--protcivil">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+                      </div>
+                      <div class="emgd-sede-card__dir-text">
+                        <span class="emgd-sede-card__calle">{u.direccion}</span>
+                        <span class="emgd-sede-card__colonia">Col. {u.colonia} · C.P. {u.cp}</span>
+                      </div>
+                    </div>
+                    <div class="emgd-sede-card__tels">
+                      {u.tels.map((t,i)=>(
+                        <a href={`tel:${t.replace(/[\s-]/g,'')}`} class={`emgd-sede-card__tel-btn${i===0?' emgd-sede-card__tel-btn--pc':''}`}>
+                          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.82 15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.93 4.11h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                          <span class="emgd-sede-card__tel-num">{t}</span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <!-- ══ PASOS EN SISMO ══════════════════════════════════════════ -->
+          <section class="emg-section" id="protocolo-sismo" aria-labelledby="sismo-title">
+            <div class="emg-section__header emg-section__header--protcivil">
+              <div class="emg-section__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div>
+                <h2 id="sismo-title" class="emg-section__title">Qué Hacer en un Sismo en tu Condominio</h2>
+                <p class="emg-section__sub">Protocolo coordinado con Protección Civil — antes, durante y después</p>
+              </div>
+            </div>
+            <div class="emgd-steps">
+              {[
+                { n:'01', t:'Al escuchar la alerta sísmica: desaloja por las escaleras', d:'La alerta sísmica da entre 40 y 120 segundos de aviso. Activa el protocolo de evacuación inmediatamente. No uses el elevador bajo ninguna circunstancia. El punto de reunión debe estar definido y conocido por todos los residentes.' },
+                { n:'02', t:'No regreses al edificio hasta el dictamen de Protección Civil', d:'Después del sismo, espera fuera. No entres aunque el edificio parezca intacto visualmente. Las grietas estructurales no siempre son visibles desde afuera. Llama al 55 5683-2222 o a la unidad de tu alcaldía para solicitar evaluación.' },
+                { n:'03', t:'Reporta daños visibles a la unidad de tu alcaldía', d:'Grietas en columnas o muros estructurales, inclinación del edificio, puertas que no cierran, pisos hundidos o cualquier cambio visible post-sismo. La unidad UGIRPC enviará un evaluador para dictamen de habitabilidad.' },
+                { n:'04', t:'Coordina con el guardia o administrador el acceso de evaluadores', d:'El personal de Protección Civil debe poder ingresar inmediatamente para la evaluación. El guardia no debe obstaculizar el acceso bajo ningún motivo. Tener el protocolo claro antes del sismo elimina confusión y retrasos.' },
+                { n:'05', t:'Activa el plan de contingencia del condominio', d:'Agua, botiquín, linternas, radio y lista de residentes vulnerables (adultos mayores, personas con movilidad reducida). Protección Civil puede activar albergues si el edificio resulta inhabitable — la unidad de tu alcaldía coordina este proceso.' },
+              ].map(s=>(
+                <div class="emgd-step">
+                  <div class="emgd-step__num">{s.n}</div>
+                  <div class="emgd-step__content">
+                    <h3 class="emgd-step__title">{s.t}</h3>
+                    <p class="emgd-step__desc">{s.d}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div class="emgd-tip-box emgd-tip-box--protcivil">
+              <div class="emgd-tip-box__icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              </div>
+              <div><strong>Los condominios con guardia evacúan hasta 3 veces más rápido.</strong> Un guardia entrenado activa la alarma, guía la evacuación por escaleras, coordina a personas con movilidad reducida y da el conteo en el punto de reunión. Sin guardia, nadie coordina el proceso y el resultado es caos.</div>
+            </div>
+          </section>
+
+          <!-- ══ FAQ ══════════════════════════════════════════════════════ -->
+          <section class="emg-section emg-section--alt" id="preguntas" aria-labelledby="faq-pc-title">
+            <div class="emg-section__header emg-section__header--protcivil" style="margin-bottom:1.5rem">
+              <div class="emg-section__icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <div>
+                <h2 id="faq-pc-title" class="emg-section__title">Preguntas Frecuentes sobre Protección Civil CDMX</h2>
+                <p class="emg-section__sub">Lo que todo administrador de condominio necesita saber</p>
+              </div>
+            </div>
+            <div class="emgd-faqs">
+              {faqs.map((f,i)=>(
+                <details class="emgd-faq" open={i===0}>
+                  <summary class="emgd-faq__q"><span>{f.q}</span>
+                    <svg class="emgd-faq__chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                  </summary>
+                  <div class="emgd-faq__a"><p>{f.a}</p></div>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          <!-- ══ OTRAS CATEGORÍAS ═════════════════════════════════════════ -->
+          <section class="emg-section" id="otros">
+            <div class="emg-section__header" style="margin-bottom:1.5rem">
+              <div class="emg-section__icon emg-section__icon--gray">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <div><h2 class="emg-section__title">Otras Categorías del Directorio</h2>
+              <p class="emg-section__sub">Cruz Roja, Bomberos, Policía, Ministerio Público y Números</p></div>
+            </div>
+            <div class="emgd-otros-grid">
+              {otrasCategoriasEmg.map(cat=>(
+                <a href={cat.href} class="emgd-otro-card" style={`--otro-color:${cat.color}`}>
+                  <div class="emgd-otro-card__top"><div class="emgd-otro-card__dot"></div><span class="emgd-otro-card__badge">{cat.badge}</span></div>
+                  <span class="emgd-otro-card__label">{cat.label}</span>
+                  <svg class="emgd-otro-card__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              ))}
+              <a href="/emergencias" class="emgd-otro-card emgd-otro-card--all">
+                <span class="emgd-otro-card__label">Ver directorio completo</span>
+                <svg class="emgd-otro-card__arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </section>
+
+          <section class="emg-disclaimer" style="padding:2rem 0 1rem">
+            <div class="emg-disclaimer__inner">
+              <div class="emg-disclaimer__card"><div class="emg-disclaimer__icon emg-disclaimer__icon--warn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg></div><div><h3 class="emg-disclaimer__title">Emergencia activa: 9-1-1 primero</h3><p class="emg-disclaimer__text">Si hay peligro ahora mismo, marca 9-1-1 — no busques en este directorio.</p></div></div>
+              <div class="emg-disclaimer__card"><div class="emg-disclaimer__icon emg-disclaimer__icon--info"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><div><h3 class="emg-disclaimer__title">Verificado — abril 2026</h3><p class="emg-disclaimer__text">Fuente: <a href="https://proteccioncivil.cdmx.gob.mx" target="_blank" rel="noopener">proteccioncivil.cdmx.gob.mx</a>. <a href="mailto:hola@originsecurity.mx">Reportar dato incorrecto →</a></p></div></div>
+              <div class="emg-disclaimer__card"><div class="emg-disclaimer__icon emg-disclaimer__icon--update"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div><div><h3 class="emg-disclaimer__title">Recurso ciudadano independiente</h3><p class="emg-disclaimer__text">ORIGINS no representa a la SGIRPC. Directorio de orientación ciudadana.</p></div></div>
+            </div>
+          </section>
+
+        </main>
+
+        <!-- ── SIDEBAR ──────────────────────────────────────────────────── -->
+        <aside class="emg-sidebar">
+          <div class="emg-sb-card emg-sb-card--protcivil">
+            <p class="emg-sb-911__eyebrow">SGIRPC Central CDMX · 24h</p>
+            <a href="tel:5556832222" class="emg-sb-911__num" style="font-size:1.6rem;letter-spacing:0">5683-2222</a>
+            <p class="emg-sb-911__desc">Av. Patriotismo 711 · Benito Juárez<br>Sismos · Inundaciones · Emergencias</p>
+          </div>
+          <div class="emg-sb-card">
+            <h4 class="emg-sb-card__title">Líneas Protección Civil</h4>
+            <div class="emg-sb-reflist">
+              <a href="tel:5556832222" class="emg-sb-ref"><span class="emg-sb-ref__num emg-sb-ref__num--md emg-sb-ref__num--protcivil">5683-2222</span><span class="emg-sb-ref__info"><strong>SGIRPC Central</strong><span>Patriotismo 711 · 24h</span></span></a>
+              <a href="tel:5515191864" class="emg-sb-ref"><span class="emg-sb-ref__num emg-sb-ref__num--md emg-sb-ref__num--protcivil">1519-1864</span><span class="emg-sb-ref__info"><strong>SGIRPC Alterna</strong><span>Línea de respaldo</span></span></a>
+              <a href="tel:911" class="emg-sb-ref"><span class="emg-sb-ref__num" style="color:#111">9-1-1</span><span class="emg-sb-ref__info"><strong>Emergencias · Todo México</strong><span>Despacha múltiples unidades</span></span></a>
+            </div>
+          </div>
+          <div class="emg-sb-card">
+            <h4 class="emg-sb-card__title">En esta página</h4>
+            <nav class="emg-sb-nav">
+              <a href="#tipos" class="emg-sb-nav__link emg-sb-nav__link--protcivil">Tipos de emergencia · Por temporada</a>
+              <a href="#unidades" class="emg-sb-nav__link emg-sb-nav__link--protcivil">{unidades.length} unidades · Por alcaldía</a>
+              <a href="#protocolo-sismo" class="emg-sb-nav__link emg-sb-nav__link--protcivil">Protocolo de sismo en condominio</a>
+              <a href="#preguntas" class="emg-sb-nav__link emg-sb-nav__link--protcivil">Preguntas frecuentes</a>
+            </nav>
+          </div>
+          <div class="emg-sb-card">
+            <h4 class="emg-sb-card__title">Unidades rápidas por zona</h4>
+            <div class="emg-sb-reflist">
+              {unidades.filter(u=>u.zona!=='SGIRPC — Central').slice(0,5).map(u=>(
+                <div class="emg-sb-ref" style="cursor:default">
+                  <span class="emg-sb-ref__num emg-sb-ref__num--md emg-sb-ref__num--protcivil" style="font-size:0.75rem">{u.tels[0].slice(-8)}</span>
+                  <span class="emg-sb-ref__info"><strong>{u.zona}</strong><span>{u.colonia}</span></span>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div class="emg-sb-card">
+            <h4 class="emg-sb-card__title">Zonas de cobertura ORIGINS</h4>
+            <p class="emg-sb-card__intro">Seguridad privada complementaria en las mismas alcaldías.</p>
+            <ul class="emg-sb-zones">{zonasLinks.map(z=>(<li><a href={z.href}>{z.label}</a></li>))}</ul>
+          </div>
+          <div class="emg-sb-card emg-sb-card--origins">
+            <p class="emg-sb-card__origins-eyebrow">ORIGINS Private Security</p>
+            <h4 class="emg-sb-card__origins-title">Protección Civil coordina el exterior. Tu guardia coordina el interior.</h4>
+            <p class="emg-sb-card__origins-text">En un sismo, Protección Civil llega a evaluar — pero en los primeros minutos, la evacuación depende de quien esté adentro. Nuestros guardias están entrenados en protocolos de evacuación sísmica: alarma, escaleras, conteo en punto de reunión y coordinación con la unidad UGIRPC cuando llega.</p>
+            <div class="emg-sb-card__origins-services">
+              <a href="/servicios/guardias-intramuros">Guardias con protocolo sísmico</a>
+              <a href="/servicios/consultoria-seguridad">Planes de evacuación</a>
+              <a href="/servicios/monitoreo-alarmas">Monitoreo de alertas 24/7</a>
+            </div>
+            <a href="https://wa.me/525530255580" class="emg-sb-card__origins-cta" target="_blank" rel="noopener">Cotización gratuita — 24h</a>
+            <p class="emg-sb-card__origins-permit">Permiso SSC 0102-15 · CDMX y Estado de México</p>
+          </div>
+          <div class="emg-sb-card">
+            <h4 class="emg-sb-card__title">Directorio de Emergencias</h4>
+            <nav class="emg-sb-nav">
+              <a href="/emergencias/cruz-roja"          class="emg-sb-nav__link emg-sb-nav__link--cruzroja">Cruz Roja · 065</a>
+              <a href="/emergencias/bomberos"           class="emg-sb-nav__link emg-sb-nav__link--bomberos">Bomberos · 068</a>
+              <a href="/emergencias/policia"            class="emg-sb-nav__link emg-sb-nav__link--policia">Policía SSC · 9-1-1</a>
+              <a href="/emergencias/ministerio-publico" class="emg-sb-nav__link emg-sb-nav__link--mp">Ministerio Público · FGJ</a>
+              <a href="/emergencias/numeros-emergencia" class="emg-sb-nav__link emg-sb-nav__link--numeros">Números Universales</a>
+              <a href="/emergencias" class="emg-sb-nav__link" style="font-weight:700">← Directorio completo</a>
+            </nav>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <section class="emg-cta">
+    <div class="container"><div class="emg-cta__inner">
+      <div>
+        <span class="emg-cta__badge"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>ORIGINS Private Security</span>
+        <h2 class="emg-cta__title">Protección Civil Evalúa Después. Tu Guardia Actúa Antes.</h2>
+        <p class="emg-cta__text">Los evaluadores de Protección Civil llegan minutos o horas después del sismo. En ese intervalo, la evacuación del condominio depende enteramente de quien esté físicamente adentro. Un guardia entrenado puede evacuar un edificio de 100 departamentos en menos de 4 minutos — o convertir ese tiempo en caos si nadie coordina.</p>
+        <div class="emg-cta__stat"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Guardias ORIGINS: protocolo sísmico certificado · Punto de reunión en &lt;4 min</div>
+      </div>
+      <div class="emg-cta__actions">
+        <a href="/servicios/guardias-intramuros" class="emg-cta__btn emg-cta__btn--primary">Ver Guardias Intramuros</a>
+        <a href="https://wa.me/525530255580" class="emg-cta__btn emg-cta__btn--wa" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div></div>
+  </section>
+
+  <NavCTA footer={true} cards={[
+    { label:'Directorio de Emergencias', sublabel:'Bomberos, Cruz Roja y más', href:'/emergencias', icon:'shield' },
+    { label:'Guardias Intramuros', sublabel:'Protocolo sísmico certificado', href:'/servicios/guardias-intramuros', icon:'shield' },
+    { label:'Zonas de Cobertura', sublabel:'CDMX y Estado de México', href:'/zonas', icon:'map' },
+    { label:'Cotización Gratis', sublabel:'Diagnóstico en 24h', href:'https://wa.me/525530255580', whatsapp:true, accent:true, external:true },
+  ]}/>
+</Base>
