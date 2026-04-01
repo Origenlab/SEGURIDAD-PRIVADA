@@ -1,155 +1,411 @@
 ---
-title: "Custodia de Efectivo y Valores CDMX | Seguridad Privada Traslado Blindado"
-description: "Custodia de efectivo, valores y mercancías con seguridad privada en CDMX. Traslado blindado certificado, póliza de seguro integral. ☎ 55 3025 5580"
+title: "Custodia de Mercancías CDMX | Transporte Seguro — ORIGINS"
+description: "Custodia de mercancías y valores en CDMX y rutas nacionales. Escoltas vehiculares, GPS satelital, protocolos anti-robo. Para logística y transporte."
 category: service
 publishDate: 2024-01-01
+updatedDate: 2026-04-01
+draft: false
 keywords:
-  - seguridad
-  - custodia de mercancias
+  - custodia de mercancias cdmx
+  - traslado de valores cdmx
+  - escoltas para mercancias ciudad de mexico
+  - transporte seguro mercancias alto riesgo cdmx
+  - custodia de efectivo cdmx
+  - traslado seguro mercancias polanco santa fe
+  - custodia valores transporte cdmx
+  - escoltas vehiculares mercancias
+  - proteccion carga rutas nacionales
+  - seguridad logistica transporte mexico
+relatedServices:
+  - seguridad-gps-satelital
+  - proteccion-ejecutiva
+  - guardias-intramuros
+  - patrullaje
+  - tecnologia-monitoreo-seguridad
+targetLocations:
+  - Ciudad de México
+  - Estado de México
+  - Rutas Nacionales
+serviceFeatures:
+  - title: "Escoltas Certificados SSC"
+    description: "Todo el personal de custodia cuenta con permiso SSC vigente. Armados o no armados según el perfil de riesgo del traslado. Verificación previa al embarque."
+    icon: "shield"
+  - title: "Vehículos con GPS en Tiempo Real"
+    description: "Todas las unidades de custodia tienen rastreo satelital activo durante el traslado. El cliente puede monitorear la posición de su carga en cualquier momento."
+    icon: "map-pin"
+  - title: "Cadena de Custodia Documentada"
+    description: "Evidencia fotográfica en origen y destino, registro de tiempos, firma de recepción y copia al cliente. Trazabilidad completa del traslado."
+    icon: "clipboard"
+  - title: "Cobertura CDMX y Zona Metropolitana"
+    description: "Traslados dentro de CDMX, Estado de México y rutas interurbanas. Evaluación de ruta previa a cada servicio para identificar tramos de riesgo."
+    icon: "truck"
+  - title: "Póliza de Seguro Integral"
+    description: "Cobertura de seguro para mercancías en tránsito disponible según valor y tipo de carga. Sin grises en caso de siniestro."
+    icon: "file-text"
+  - title: "Protocolo Anti-Asalto Activo"
+    description: "Rutas alternativas, comunicación constante con central, protocolos de contingencia ante intentos de asalto o seguimiento. Personal entrenado en conducción evasiva."
+    icon: "alert-triangle"
 faqs:
-  - question: "¿Qué sucede si hay un asalto exitoso durante el traslado y se pierde el efectivo/valores?"
-    answer: "Esta es la pregunta crítica que todo CFO responsable debe hacer antes de contratar custodia. Respuesta directa en dos partes: (Parte 1 - Probabilidad de Pérdida) La combinación de vehículos blindados nivel III-A que resisten armamento delictivo común, escoltas profesionales certificados con protocolos anti-asalto, rutas variables que evitan patrones predecibles, y monitoreo GPS con respuesta coordinada hace que asaltos exitosos sean estadísticamente raros (tasa < 0.3% en últimos 5 años operativos). (Parte 2 - Protección Financiera Total) Cada operación está respaldada por póliza de seguro integral que cubre 100% del valor declarado de activos en tránsito. Si ocurre pérdida, cliente presenta documentación de cadena de custodia certificada, aseguradora valida incidente mediante investigación con autoridades, y compensación se paga dentro de 30-60 días hábiles. El cliente NO pierde su inversión - riesgo financiero catastrófico queda eliminado mediante transferencia a aseguradora. Esto convierte custodia profesional en decisión fiduciaria prudente: proteges activos corporativos con debida diligencia documentada."
-  - question: "¿El blindaje nivel III-A realmente protege contra armas de alto poder que delincuentes usan?"
-    answer: "Blindaje nivel III-A está específicamente diseñado para resistir armamento de uso común en asaltos a transporte de valores en México según análisis de incidentes documentados. Estadísticas de Fiscalía General de Justicia CDMX muestran que 94% de asaltos a traslado de efectivo involucran pistolas calibre .38 Special, 9mm Parabellum, .40 S&W, o .45 ACP - TODAS resistidas por blindaje nivel III-A. El 5% adicional involucra rifles de asalto AK-47 o AR-15 con munición estándar (no perforante) que blindaje nivel III-A también resiste. Solo < 1% de casos extremadamente raros involucran armamento especializado (rifles de francotirador con munición perforante, explosivos) que requeriría blindaje nivel IV+ impracticable para vehículos civiles por peso (> 2,000 kg adicionales que comprometen movilidad). Análisis costo-beneficio: blindaje nivel III-A protege contra 99% de amenazas reales documentadas mientras mantiene vehículos operables con movilidad adecuada para tráfico urbano. Para ese < 1% de amenazas extraordinarias, el seguro proporciona respaldo financiero."
-  - question: "¿Cómo garantizan que el personal de custodia no esté coludido con delincuentes?"
-    answer: "El riesgo de colusión interna (escoltas que proporcionan información a delincuentes o participan directamente en asaltos simulados) es amenaza reconocida en industria de custodia de valores. Controles implementados para mitigar este riesgo: (1) Exámenes de Confiabilidad C3 cada 6 meses incluyen evaluación psicológica que detecta rasgos de personalidad incompatibles (tendencias antisociales, baja tolerancia a frustración), examen toxicológico, y estudio socioeconómico profundo que identifica deudas excesivas o gastos incompatibles con salario (señales de corrupción); (2) Rotación continua de personal asignado a rutas específicas impide que escoltas establezcan patrones conocidos por delincuentes; (3) Supervisión aleatoria mediante unidades de seguimiento encubiertas que validan cumplimiento de protocolos sin conocimiento de escoltas; (4) Investigación de antecedentes con referencias laborales verificables y consulta de bases de datos de seguridad pública. Adicionalmente, compensación competitiva (salarios 30-40% superiores a promedio de industria) reduce incentivos económicos para colusión. Casos de colusión detectada resultan en terminación inmediata, denuncia ante MP, y inhabilitación permanente en Padrón Nacional."
-  - question: "¿Cuál es el costo real del servicio comparado con el riesgo de pérdida total sin custodia?"
-    answer: "Análisis financiero que ningún proveedor de mensajería convencional te mostrará: (Escenario Sin Custodia Profesional) Empresa que traslada $2,000,000 MXN semanales en efectivo usando vehículo comercial sin blindaje ni escoltas paga mensajería $3,000 MXN/traslado. Si sufre 1 asalto exitoso al año (probabilidad conservadora 15-20% sin protección), pierde $2,000,000 MXN que mensajería NO compensa (cobertura máxima ridícula de $50,000 MXN). Pérdida neta anual: $1,950,000 MXN + daño reputacional + trauma de personal. (Escenario Con Custodia Profesional) Mismo traslado con vehículo blindado, escoltas certificados, y seguro integral cuesta $12,000 MXN/traslado × 52 semanas = $624,000 MXN anuales. Probabilidad de pérdida < 0.3% y si ocurre, seguro compensa 100%. Ahorro documentado vs. escenario sin custodia: $1,950,000 - $624,000 = $1,326,000 MXN anuales. ROI 212%. La custodia profesional NO es gasto - es transferencia de riesgo catastrófico a aseguradora con prima predecible."
-  - question: "¿Proporcionan documentación de cumplimiento normativo para auditorías internas o externas?"
-    answer: "Sí, proporcionamos paquete completo de documentación de cumplimiento que satisface requisitos de auditorías internas, auditores externos, aseguradoras, y reguladores (CNBV para instituciones financieras, COFEPRIS para farmacéuticas). Documentación incluye: (1) Certificados de blindaje vigentes emitidos por blindadora autorizada SEDENA con verificaciones anuales de integridad balística; (2) Registros SSC de escoltas con certificación de Elementos de Seguridad Privada vigente en Padrón Nacional; (3) Pólizas de seguro con aseguradoras calificación AAA especificando coberturas, sublímites, y términos de reclamación; (4) Bitácoras de operación trazables con evidencia de cadena de custodia certificada (actas de entrega, fotografías, GPS tracking) que demuestran \"medidas razonables\" de protección; (5) Certificados de capacitación de personal en protocolos anti-asalto, uso de fuerza, y primeros auxilios; (6) Resultados de exámenes de confiabilidad C3 (anonimizados para privacidad) que validan integridad de personal. Esta documentación permite a CFO/Contralor demostrar ante auditores que empresa implementó controles adecuados para protección de activos líquidos en tránsito - cumpliendo obligación fiduciaria de debida diligencia."
-  - question: "¿Qué diferencia hay entre su servicio y las grandes blindadoras nacionales?"
-    answer: "Diferenciadores clave vs. blindadoras masivas (Cometra, Sepsa, Prosegur): (1) Servicio Personalizado No Commoditizado - Grandes blindadoras operan modelo de alto volumen con rutas estandarizadas y horarios fijos que generan patrones predecibles. Nosotros diseñamos rutas variables personalizadas según perfil de riesgo específico del cliente. (2) Escoltas Dedicados No Rotatorios - En blindadoras masivas, personal rota constantemente entre clientes sin familiaridad con operación. Nuestros escoltas se asignan a clientes específicos desarrollando conocimiento profundo de instalaciones, personal autorizado, y protocolos internos. (3) Flexibilidad Operacional Inmediata - Blindadoras requieren programación con semanas de anticipación. Nosotros activamos traslados urgentes en 24-48 horas. (4) Atención Directa de Dueños - En corporativos multinacionales, cliente es número de cuenta. Aquí, dueños están disponibles directamente para resolver incidencias. (5) Pricing Competitivo Sin Economías de Escala - Grandes blindadoras tienen costos corporativos elevados (headquarters, staff administrativo masivo). Nuestra estructura lean permite pricing 15-25% inferior con margen de servicio superior. Ideal para empresas que valoran relación personalizada sobre marca masiva."
-  - question: "¿Cuánta anticipación se requiere para activar un servicio de custodia?"
-    answer: "Tiempo de activación varía según complejidad de operación: (Traslados Estándar Zona Metropolitana) Operaciones dentro de CDMX o Estado de México con valor moderado (< $3M MXN) se activan en 24-48 horas sujeto a disponibilidad de unidades blindadas y escoltas. Cliente proporciona detalles vía WhatsApp o formulario web (origen, destino, valor, horario preferido), evaluamos perfil de riesgo, cotizamos servicio, y una vez aceptado, programamos operación. (Traslados Complejos Interestatales) Rutas de larga distancia (CDMX → Guadalajara, Monterrey, etc.) o valores muy elevados (> $10M MXN) requieren 1-2 semanas de anticipación para: análisis detallado de ruta identificando zonas de riesgo, coordinación con aseguradora para emisión de póliza específica, planificación de checkpoints y protocolos de contingencia. (Contratos Marco Recurrentes) Clientes con necesidades permanentes (bancos, retailers con traslados semanales) establecen contrato marco que garantiza disponibilidad prioritaria de unidades en fechas programadas con flexibilidad de modificación 48 horas antes. Para emergencias genuinas (traslado urgente imprevisto), hacemos máximo esfuerzo de activación en < 24 horas aunque no garantizado."
-  - question: "¿El servicio opera en fin de semana, días festivos, y horario nocturno?"
-    answer: "Sí, operamos 24/7/365 incluyendo fines de semana, días festivos, y horarios nocturnos con recargos variables según disponibilidad de personal. Traslados en horario laboral estándar (Lunes-Viernes 8 AM - 6 PM) tienen pricing base. Traslados fuera de horario laboral aplican recargos: Nocturno (10 PM - 6 AM) +25% por mayor riesgo estadístico de asalto en horarios de baja visibilidad y reducida presencia policial, Fin de Semana (Sábado-Domingo) +15% por disponibilidad limitada de personal, Días Festivos (1 enero, 5 febrero, 21 marzo, 1 mayo, 16 sept, 20 nov, 25 dic) +30% por escasez crítica de personal dispuesto a operar. Para clientes con necesidades recurrentes de horarios no estándar (centros nocturnos que depositan efectivo en madrugada, retailers con operación dominical), ofrecemos contratos marco con pricing preferencial que elimina recargos. Coordinación con centro de comando opera 24/7 con personal de guardia para atención de emergencias. Algunas instituciones financieras específicamente solicitan traslados nocturnos (menor tráfico vehicular, menor visibilidad para delincuentes) - acomodamos preferencias operacionales de cada cliente."
+  - question: "¿Qué tipo de mercancías pueden custodiar?"
+    answer: "Efectivo y valores, joyería, mercancía farmacéutica, equipos electrónicos de alto valor, documentos legales confidenciales, carga especializada y cualquier mercancía cuyo robo o pérdida represente un impacto económico o legal significativo. Si tienes dudas sobre tu tipo de carga, llámanos — hacemos una evaluación gratuita del perfil de riesgo."
+  - question: "¿Cuál es la diferencia entre escolta armada y no armada?"
+    answer: "La escolta armada se recomienda para traslados de efectivo, joyas, mercancía farmacéutica controlada o cualquier carga cuyo valor justifique un nivel de protección mayor. La no armada aplica para documentos confidenciales, mercancía de valor moderado o traslados dentro de zonas de bajo riesgo. En ambos casos el personal tiene certificación SSC."
+  - question: "¿Cómo funciona el monitoreo GPS durante el traslado?"
+    answer: "Todas nuestras unidades tienen rastreo satelital activo. Desde el momento en que la mercancía sale de origen hasta la confirmación de entrega, la central monitorea la posición del vehículo. Si hay una desviación de ruta o el vehículo se detiene en un punto no autorizado, central activa el protocolo de verificación de inmediato."
+  - question: "¿Qué pasa si hay un intento de asalto durante el traslado?"
+    answer: "El personal está entrenado en protocolos anti-asalto: prioridad absoluta a la integridad de los escoltas, comunicación inmediata con central, activación de rastreo de emergencia y notificación simultánea a la policía. El objetivo es la prevención — rutas evaluadas, horarios variables y comunicación constante minimizan el riesgo desde antes de salir."
+  - question: "¿Cuánto tiempo de anticipación necesitan para programar un traslado?"
+    answer: "Para traslados estándar dentro de CDMX: mínimo 4 horas de anticipación. Para traslados fuera de CDMX o de alto valor que requieren evaluación de ruta y personal adicional: 24 horas. Para servicios recurrentes (nóminas semanales, traslados de efectivo diarios), programamos calendario mensual con confirmación 24 horas antes de cada servicio."
+  - question: "¿Ofrecen servicio de custodia de nómina en efectivo?"
+    answer: "Sí. Es uno de los servicios más solicitados. Empresas que pagan nómina en efectivo en zonas industriales de Vallejo, Naucalpan o Tlalnepantla contratan nuestro servicio de custodia recurrente. Evaluamos el punto de retiro, la ruta y el punto de entrega, y definimos protocolos específicos para cada empresa."
+  - question: "¿Tienen póliza de seguro para la mercancía en tránsito?"
+    answer: "Sí. Contamos con póliza de responsabilidad civil y ofrecemos opciones de seguro de carga en tránsito según el valor y tipo de mercancía. En caso de siniestro, el proceso de reclamación está documentado desde el inicio del traslado con evidencia fotográfica y registro de cadena de custodia."
 ---
 
-## Custodia de Efectivo y Valores
-
-### Traslado Blindado Certificado Nivel III-A en CDMX
-
-ORIGINS Private Security: Servicio empresarial de custodia con vehículos blindados certificados, protocolos UNE 167005 y póliza de seguro integral. 94% de reducción en incidentes de pérdida vs. traslado convencional.
-
-### Blindaje certificado contra calibres delictivos
-
-Vehículos blindados nivel III-A que resisten .38 Special, 9mm y .357 Magnum. Escoltas profesionales con certificación SSC vigente y experiencia en protección de valores. Cadena de custodia trazable con evidencia fotográfica y GPS en cada etapa del traslado.
-
-### Cobertura total de sus activos
-
-Póliza de seguro integral que cubre 100% del valor declarado en tránsito. Ideal para instituciones financieras, retailers multi-sucursal, casinos y centros cambiarios. Elimine el riesgo de traslados convencionales sin blindaje ni cobertura real.
-
-Sistema de traslado blindado con protocolos certificados y cobertura de seguro integral en CDMX
-
-Unidades nivel III-A con blindaje balístico certificado
-
-Personal capacitado en protocolos de custodia de valores
-
-Trazabilidad completa con evidencia fotográfica
-
-Protocolos especializados para bancos y casas de cambio
-
-Monitoreo continuo desde centro de comando
-
-Cobertura 100% del valor declarado en tránsito
-
-Rutas variables y procedimientos evasivos certificados
-
-Temperatura controlada para productos sensibles
-
-Personal con acuerdos de confidencialidad vigentes
-
-En contexto empresarial donde la debida diligencia determina responsabilidad ante stakeholders, el traslado de efectivo o valores sin medidas de seguridad documentadas representa negligencia corporativa con implicaciones legales y financieras. Circular Única CNBV establece para instituciones financieras obligación de implementar "medidas razonables" para protección de activos en tránsito - interpretado por jurisprudencia como blindaje certificado, personal capacitado, y cobertura de seguro adecuada.
-
-Empresas que sufren pérdida de efectivo durante traslado sin protocolos certificados enfrentan: (1) Pérdida directa 100% del efectivo sustraído sin recuperación; (2) Responsabilidad ante aseguradoras que rechazan reclamaciones por "custodia inadecuada"; (3) Exposición a demandas de socios/accionistas por negligencia en protección de activos corporativos; (4) Daño reputacional ante clientes que confían valores. El costo de implementar custodia blindada profesional representa fracción mínima del riesgo financiero y legal que elimina - matemática fiduciaria simple.
-
-Más de 320 empresas con traslados recurrentes de efectivo confían en nuestros protocolos blindados para mitigar riesgo operacional y cumplir obligaciones fiduciarias de protección de activos
-
-Operamos exclusivamente con vehículos blindados nivel III-A certificados por empresas blindadoras autorizadas que cumplen normativa de Secretaría de la Defensa Nacional (SEDENA). Blindaje balístico nivel III-A resiste impactos de armamento de uso delictivo común en México: pistolas calibre .38 Special, 9mm Parabellum, .40 S&W, .45 ACP, y rifles de asalto AK-47 y AR-15. Cristales balísticos multicapa de 40mm espesor con capa de policarbonato interior anti-astillamiento, chasis reforzado estructuralmente para soportar peso adicional del blindaje (800-1200 kg según modelo), neumáticos run-flat que permiten circulación hasta 80 km con pérdida total de presión. Certificados de blindaje vigentes emitidos por blindadora autorizada con verificaciones anuales de integridad balística. Placas de circulación especiales que autorizan operación como unidad de traslado de valores. Complementa con rastreo GPS satelital para monitoreo continuo.
-
-Personal de custodia cuenta con certificación de Elementos de Seguridad Privada emitida por Secretaría de Seguridad Ciudadana (SSC) con registro vigente en Padrón Nacional. Capacitación especializada en protocolos de custodia de valores incluye: técnicas anti-asalto y evasión táctica, protocolos de uso proporcional de fuerza bajo marco de legítima defensa, primeros auxilios certificados, y manejo de situaciones de alto estrés. Exámenes de confiabilidad periódicos (psicométricos, toxicológicos, socioeconómicos) garantizan integridad del personal con acceso a valores. Escoltas operan en parejas con comunicación encriptada continua hacia centro de comando que monitorea ruta en tiempo real. Vestimenta discreta o uniformada según perfil de operación (bancos prefieren uniformes para efecto disuasorio, joyerías prefieren discreto para no atraer atención). Rotación de personal evita patrones predecibles que delincuentes aprovechan para planear asaltos.
-
-Protocolo de cadena de custodia documenta cada etapa del proceso con evidencia que resiste escrutinio legal y auditorías. Etapa 1 - Origen: Inventario detallado de efectivo/valores en presencia de cliente con conteo verificado, fotografías de paquetes/maletas cerradas con precintos numerados inviolables, acta de entrega firmada digitalmente con timestamp. Etapa 2 - Tránsito: Monitoreo GPS continuo registra ruta exacta, velocidades, paradas y desviaciones con alertas automáticas ante anomalías, comunicación encriptada entre escoltas y centro de comando con checkpoints pre-establecidos. Etapa 3 - Destino: Nuevo inventario en presencia de receptor verificando integridad de precintos, fotografías de entrega con confirmación de persona autorizada, acta de recepción firmada digitalmente. Toda documentación se almacena en plataforma cloud con backup redundante disponible para auditorías internas, requisitos de aseguradoras, o procedimientos legales durante 24 meses.
-
-Cada operación de custodia está respaldada por póliza de seguro integral que cubre pérdida total de valores por cualquier causa durante tránsito: asalto violento, robo hormiga interno, accidente vehicular con volcadura/incendio, o sustracción durante carga/descarga. Cobertura se calcula sobre valor declarado por cliente al contratar servicio (responsabilidad del cliente proporcionar valuación precisa). Proceso de reclamación ante siniestro: cliente presenta documentación de cadena de custodia certificada, aseguradora valida incidente mediante investigación, compensación se paga dentro de 30-60 días hábiles según términos de póliza. Prima de seguro se incluye en costo de servicio proporcional a valor transportado y distancia. Aseguradoras reconocidas (AXA, Qualitas, GNP) con respaldo financiero documentado. Casos de incidentes son estadísticamente raros (tasa < 0.3% de operaciones) pero cuando ocurren, cliente está protegido totalmente - eliminando riesgo financiero catastrófico de pérdida sin compensación.
-
-Instituciones financieras reguladas por Comisión Nacional Bancaria y de Valores (CNBV) tienen obligación normativa de implementar controles adecuados para protección de efectivo durante traslado entre sucursales, bóvedas, y centros de procesamiento. Circular Única CNBV establece requisitos de "medidas razonables" que jurisprudencia interpreta como: vehículos blindados certificados, personal con registro en Padrón Nacional de Elementos de Seguridad Privada, y póliza de seguro que refleje valor real de activos en tránsito. Incumplimiento genera sanciones administrativas por CNBV (multas $500,000 - $5,000,000 MXN según gravedad) y responsabilidad civil ante pérdidas no cubiertas. Nuestro servicio proporciona documentación completa de cumplimiento: certificados de blindaje vigentes, registros SSC de escoltas, pólizas de seguro, y bitácoras de operación trazables. Auditorías internas o externas validan que controles implementados son "razonables" según estándares regulatorios.
-
-Cadenas de retail con múltiples puntos de venta enfrentan desafío operacional de concentrar efectivo diario desde sucursales hacia bóvedas centrales o depósitos bancarios. Traslado convencional con vehículos comerciales sin blindaje expone a riesgo de asalto en trayectos predecibles (delincuentes identifican patrones de horarios y rutas). Nuestro servicio opera rutas variables con horarios flexibles evitando patrones, vehículos blindados que neutralizan amenaza balística, escoltas que disuaden intentos de asalto. Para retailers con operación regional, ofrecemos circuitos de recolección que visitan múltiples sucursales en ruta optimizada consolidando efectivo en unidad blindada antes de depósito final. Reducción documentada: retailers implementando custodia profesional reportan eliminación total de pérdidas por asalto (de 2-3 incidentes/año con mensajería convencional a 0 incidentes con blindaje). ROI es inmediato: una sola pérdida evitada compensa inversión anual completa en custodia.
-
-Joyerías que transportan piezas de alto valor entre tienda matriz, sucursales, talleres de reparación, o eventos/subastas requieren custodia discreta con aseguramiento que refleje valor real de joyas, relojes de lujo, o metales preciosos. Pólizas estándar de mensajería limitan cobertura a montos ridículos (máximo $50,000 MXN) insuficientes para piezas que valen $500,000 - $5,000,000 MXN. Nuestro servicio especializado ofrece: vehículos blindados con compartimentos seguros climatizados, escoltas capacitados en manejo de activos de lujo, póliza de seguro que cubre valor total declarado de cada pieza (cliente proporciona valuación de gemólogo certificado), protocolos discretos para entregas en residencias de clientes VIP o galerías exclusivas. Para subastas o eventos temporales (Zona Maco, Art Basel), coordinamos logística de traslado desde almacén hacia venue y retorno con cadena de custodia certificada para cada obra.
-
-Traslado de sustancias controladas por COFEPRIS (narcóticos médicos, psicotrópicos, precursores químicos) tiene obligación normativa de documentar cadena de custodia desde laboratorio productor hasta punto de dispensación. Circular de COFEPRIS establece requisitos de transporte seguro para sustancias controladas clase II y III: vehículos cerrados con candado, personal con identificación oficial, y bitácoras de traslado con firma de responsable en origen y destino. Para distribuidoras que manejan volúmenes significativos (oxicodona, fentanilo, midazolam), recomendamos blindaje adicional que protege contra robo violento de sustancias con valor de reventa en mercado ilícito. Protocolo incluye temperatura controlada para productos termosensibles (insulinas, vacunas, biológicos), comunicación encriptada que impide interceptación de información logística sensible, y coordinación con autoridades sanitarias ante incidentes. Conoce más en seguridad hospitalaria para cumplimiento integral.
-
-Traslado de equipos tecnológicos costosos (servidores blade, storage arrays, switches core) entre data centers, oficinas corporativas, o centros de reparación requiere protección contra robo Y manejo especializado para prevenir daño físico. Vehículos con suspensión reforzada y sistemas anti-vibración protegen equipos sensibles durante transporte, compartimentos seguros con amarres ajustables evitan movimiento durante frenado/aceleración, blindaje protege contra robo oportunista de tecnología con alto valor de reventa. Para traslados de infraestructura crítica (core switches que interrumpen operación si se pierden), coordinamos ventanas de mantenimiento nocturno con escoltas dedicados y monitoreo GPS continuo. Póliza de seguro cubre no solo valor de reposición del equipo sino costo de oportunidad por interrupción de negocio si traslado falla.
-
-Despachos legales, notarías, y corporativos manejan documentación confidencial cuya pérdida o exposición genera responsabilidad profesional y legal: contratos originales con firmas autógrafas, expedientes de litigios con información privilegiada, testamentos y documentos notariales, títulos de propiedad. Traslado de documentos sensibles requiere: personal con acuerdos de confidencialidad (NDA) vigentes que prohíben divulgación de información observada, vehículos cerrados que impiden visualización de contenido durante tránsito, protocolos de cadena de custodia con inventario sellado que certifica integridad de documentos desde origen hasta destino. Para documentación legal con valor probatorio (originales que no pueden reponerse), ofrecemos servicio premium con duplicado de custodia: documentos viajan en maleta sellada dentro de vehículo blindado, fotografías de maleta cerrada en origen se envían digitalmente a receptor antes de iniciar trayecto, receptor verifica precintos intactos al recibir. Casos documentados: evitamos pérdida de expedientes que hubieran generado nulidad de procedimientos legales con perjuicios millonarios.
-
-Configuraciones escalables desde traslados ocasionales hasta contratos marco con operación recurrente
-
-Protocolos certificados de protección balística y cadena de custodia trazable
-
-Vehículos blindados que resisten .38 Special, 9mm, .40 S&W, .45 ACP, AK-47 y AR-15
-
-Personal con certificación Secretaría de Seguridad Ciudadana en Padrón Nacional
-
-Precintos de seguridad inviolables con número único y evidencia fotográfica completa
-
-Monitoreo continuo desde centro de comando con alertas automáticas ante desviaciones
-
-Radio comunicación cifrada que impide interceptación de información logística
-
-Cobertura 100% del valor declarado con aseguradoras de primer nivel
-
-Rutas variables, horarios flexibles, procedimientos evasivos según norma UNE 167005
-
-Vidrio laminado con policarbonato interior anti-astillamiento certificado
-
-Permiten circulación hasta 80 km con pérdida total de presión
-
-Personal sometido a evaluaciones psicométricas, toxicológicas y socioeconómicas
-
-Complete el formulario para recibir evaluación confidencial de necesidades y propuesta personalizada de custodia blindada
-
-Respuesta en menos de 24 horas · Evaluación Confidencial · Cobertura CDMX y Estado de México
-
-Credenciales técnicas, certificaciones vigentes y casos documentados que respaldan nuestro liderazgo en traslado blindado
-
-Operamos exclusivamente con vehículos blindados por empresas certificadas autorizadas por Secretaría de la Defensa Nacional (SEDENA) cumpliendo normativa mexicana de blindaje. Blindaje nivel III-A resiste impactos balísticos de pistolas calibre .38 Special, 9mm Parabellum, .40 S&W, .45 ACP, y rifles de asalto AK-47 y AR-15 - armamento de uso común en asaltos a transporte de valores. Cristales balísticos multicapa de 40mm espesor con capa de policarbonato interior anti-astillamiento certificados por laboratorios independientes. Chasis reforzado estructuralmente para soportar peso adicional del blindaje (800-1200 kg según modelo) sin comprometer estabilidad vehicular.
-
-Cada unidad cuenta con certificado de blindaje vigente emitido por blindadora autorizada con verificaciones anuales de integridad balística mediante inspección de puntos críticos. Placas de circulación especiales que autorizan operación como unidad de traslado de valores conforme a Ley Federal de Armas de Fuego. Mantenimiento preventivo cada 5,000 km incluye revisión de sistema de frenado reforzado, suspensión de alta capacidad, neumáticos run-flat Michelin PAX que permiten circulación hasta 80 km con pérdida total de presión, y sistemas eléctricos duplicados. Telemetría GPS satelital en tiempo real permite monitoreo continuo desde centro de comando con alertas automáticas ante desviaciones de ruta, exceso de velocidad, o paradas no programadas.
-
-Todo el personal operativo de custodia cuenta con certificación de Elementos de Seguridad Privada emitida por Secretaría de Seguridad Ciudadana (SSC) con registro vigente en Padrón Nacional de Empresas de Seguridad Privada. Capacitación especializada incluye: técnicas anti-asalto y evasión táctica, uso proporcional de fuerza bajo marco legal de legítima defensa, primeros auxilios certificados por Cruz Roja, manejo de situaciones de alto estrés, y protocolos de cadena de custodia certificada. Escoltas operan en parejas o tríos según perfil de riesgo de operación con comunicación encriptada continua hacia centro de comando.
-
-Exámenes de confiabilidad C3 (Centro de Control de Confianza) cada 6 meses garantizan integridad del personal con acceso a valores: evaluación psicológica detecta rasgos de personalidad incompatibles con manejo de efectivo, examen toxicológico verifica ausencia de sustancias, estudio socioeconómico identifica vulnerabilidades que delincuencia aprovecha para cooptar personal. Rotación de rutas y horarios evita patrones predecibles que facilitan planificación de asaltos por delincuentes. Póliza de responsabilidad civil patronal cubre actos u omisiones de personal durante operación. Tasa de retención de escoltas > 80% refleja condiciones laborales competitivas que atraen y retienen talento confiable.
-
-Cada operación de custodia está respaldada por póliza de seguro integral emitida por aseguradoras de primer nivel (AXA, GNP, Qualitas) con calificación crediticia AAA. Cobertura incluye pérdida total de valores por cualquier causa durante tránsito: asalto violento con intimidación o lesiones, robo hormiga interno por personal deshonesto, accidente vehicular con volcadura/incendio que destruye efectivo, sustracción durante carga/descarga en origen o destino. Valor asegurado se calcula sobre monto declarado por cliente al contratar servicio - responsabilidad del cliente proporcionar valuación precisa bajo penalización de invalidar cobertura si declara valor inferior al real.
-
-Proceso de reclamación ante siniestro: (1) Cliente notifica incidente a aseguradora dentro de 48 horas proporcionando documentación de cadena de custodia certificada (actas de entrega, fotografías, GPS tracking); (2) Aseguradora designa ajustador que valida incidente mediante investigación con autoridades competentes (denuncias MP, reportes policiales); (3) Compensación se paga dentro de 30-60 días hábiles según términos de póliza una vez validada reclamación. Prima de seguro se incluye en costo de servicio proporcional a valor transportado, distancia de ruta, y perfil de riesgo de zona. Casos de reclamación son estadísticamente raros (tasa < 0.3% de operaciones en últimos 5 años) pero cuando ocurren, clientes están protegidos totalmente - eliminando riesgo financiero catastrófico.
-
-Implementamos protocolos de protección de valores basados en norma europea UNE 167005 que establece mejores prácticas internacionales para custodia de efectivo y valores. Rutas variables impiden patrones predecibles: cada traslado utiliza ruta diferente entre múltiples opciones disponibles, horarios flexibles evitan concentración de operaciones en ventanas horarias específicas que delincuentes identifican. Análisis previo de ruta identifica zonas de alto riesgo (colonias con alta incidencia delictiva, puntos ciegos sin cobertura policial) que deben evitarse, checkpoints obligatorios donde escoltas reportan posición a centro de comando, y rutas de escape alternativas ante emergencias.
-
-Centro de comando monitorea todas las unidades en tránsito mediante plataforma GPS en tiempo real con alertas automáticas: desviación > 500m de ruta autorizada, velocidad excesiva o inusualmente baja, paradas no programadas > 3 minutos, pérdida de señal GPS (posible jamming). Protocolo de escalación ante incidente: escoltas activan botón de pánico silencioso, centro de comando contacta a C5 CDMX o C4 Estado de México proporcionando ubicación exacta, coordinación con corporaciones policiales para intercepción o cerco. Simulacros trimestrales con personal operativo garantizan ejecución correcta de protocolos bajo estrés. Auditorías anuales por consultoras especializadas (Control Risks, Kroll) verifican cumplimiento de estándares internacionales.
-
-Protocolo de cadena de custodia documenta cada etapa con evidencia que resiste auditorías internas, requisitos de aseguradoras, y procedimientos legales. Etapa Origen: Inventario detallado de efectivo/valores en presencia de personal autorizado del cliente con conteo verificado, fotografías de paquetes/maletas cerradas con precintos de seguridad numerados conformes a ISO 17712 (estándar internacional anti-sabotaje), acta de entrega firmada digitalmente con timestamp inmutable. Precintos utilizan tecnología RFID que detecta apertura no autorizada generando alerta automática.
-
-Etapa Tránsito: Monitoreo GPS satelital registra ruta exacta con coordenadas cada 10 segundos almacenadas en servidor cloud con backup redundante, comunicación encriptada TETRA entre escoltas y centro de comando con checkpoints pre-establecidos cada 15 minutos, cámaras vehiculares interiores graban continuamente cadena de custodia durante trayecto (video almacenado 90 días). Etapa Destino: Nuevo inventario en presencia de receptor verificando integridad de precintos RFID (cualquier apertura invalida custodia), fotografías de entrega con confirmación de identidad de persona autorizada mediante INE, acta de recepción firmada digitalmente. Toda documentación se almacena en plataforma blockchain que garantiza inmutabilidad de registros - evidencia forense que sustenta reclamaciones de seguro o litigios.
-
-Estadísticas operacionales documentadas 2019-2024: 18,500+ traslados blindados completados sin pérdida de valores, valor agregado transportado > $8,500,000,000 MXN, 53 incidentes menores (retrasos por tráfico, fallas mecánicas) resueltos sin afectación a cliente, 0 pérdidas totales de efectivo por asalto exitoso. Tasa de éxito 99.7% supera ampliamente promedio de industria (92-94% para empresas blindadoras no certificadas) reflejando efectividad de protocolos implementados. Los 0.3% incidentes registrados corresponden a: daños menores en embalaje durante manipulación (compensados por seguro), retrasos significativos (> 2 horas) por condiciones de tráfico extraordinarias (bloqueos viales, manifestaciones), y 1 intento de asalto frustrado donde escoltas ejecutaron protocolo evasivo sin pérdida de valores ni lesiones.
-
-Clientes con contratos marco de largo plazo (> 3 años) reportan eliminación total de pérdidas por asalto comparado con períodos previos usando mensajería convencional: banco regional redujo pérdidas anuales de $2.8M MXN (promedio 3 asaltos/año sin blindaje) a $0 MXN tras implementar custodia profesional. ROI es inmediato para empresas con traslados recurrentes de efectivo: una sola pérdida evitada compensa inversión anual completa en servicio de custodia. Proporcionamos referencias contactables de clientes actuales (previo NDA confidencialidad) para validación directa de desempeño operacional.
-
-Soluciones estratégicas para quienes no pueden darse el lujo de correr riesgos. Protección discreta, análisis preventivo e inteligencia empresarial que te permite tomar decisiones con confianza.
-
-Cuando transportas efectivo, valores negociables o mercancía de alto valor, cada minuto en tránsito es un punto de vulnerabilidad crítica. Nuestra custodia de mercancías integra vehículos blindados certificados nivel III-A, escoltas armados con registro SSC vigente, protocolos de cadena de custodia con documentación completa, y póliza de seguro que cubre 100% del valor declarado. Desde traslados bancarios hasta distribución de nóminas en efectivo, protegemos activos críticos con debida diligencia documentada.
-
-Complementamos con protección ejecutiva para directivos que supervisan operaciones de alto riesgo, análisis de riesgos de rutas identificando zonas de peligro y horarios críticos, e investigaciones de confiabilidad para personal que maneja valores. Con más de 15 años protegiendo tesorerías corporativas, joyerías y empresas de logística de valores, garantizamos que tus activos lleguen completos y documentados de origen a destino.
-
-CFOs y tesoreros corporativos responsables entienden que traslado de efectivo sin blindaje certificado es negligencia fiduciaria evitable. Una sola pérdida por asalto sin compensación perjudica balance anual completo. Custodia profesional con vehículos blindados, escoltas certificados SSC, y póliza de seguro integral transfiere riesgo catastrófico a aseguradora con prima predecible. No es gasto - es protección de activos corporativos con ROI documentado.
-
-Vehículos que resisten 99% de amenazas balísticas reales documentadas
-
-Cobertura total del valor declarado con aseguradoras AAA
-
-18,500+ traslados sin pérdidas en últimos 5 años operativos
-
+<div class="prose-intro">
+  <p><strong>ORIGINS Private Security</strong> proporciona servicios de custodia de mercancías y traslado de valores en CDMX con escoltas certificados SSC, vehículos con rastreo GPS activo y cadena de custodia documentada. <strong>Desde traslados de efectivo hasta mercancía farmacéutica o joyería</strong> — cada servicio con protocolo específico, no una fórmula genérica.</p>
+  <div class="prose-highlight">
+    <strong>El momento más vulnerable de tu mercancía es cuando está en tránsito.</strong> Tu almacén tiene cámaras y guardias. Pero en el trayecto entre el origen y el destino, la carga queda expuesta a seguimientos, intercepciones y asaltos. Un escolta profesional no solo acompaña — evalúa la ruta, detecta seguimientos y tiene protocolos activos para cada tipo de incidencia. Todas nuestras unidades cuentan con <a href="/servicios/seguridad-gps-satelital">rastreo GPS satelital</a> en tiempo real, y para traslados de alto valor se puede complementar con un esquema de <a href="/servicios/proteccion-ejecutiva">protección ejecutiva</a> o <a href="/servicios/patrullaje">patrullaje vehicular</a> en la zona de entrega.
+  </div>
+</div>
+
+---
+
+<div class="trust-bar">
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+    <div>
+      <strong>Permiso SSC 0102-15</strong>
+      <span>Vigente y verificable</span>
+    </div>
+  </div>
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    <div>
+      <strong>GPS en tiempo real</strong>
+      <span>Todas las unidades monitoreadas</span>
+    </div>
+  </div>
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+    <div>
+      <strong>+15 años</strong>
+      <span>En traslado de valores CDMX</span>
+    </div>
+  </div>
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+    <div>
+      <strong>Alta IMSS</strong>
+      <span>Todo el personal con prestaciones</span>
+    </div>
+  </div>
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+    <div>
+      <strong>Póliza de seguro</strong>
+      <span>Carga en tránsito cubierta</span>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Casos Reales</span>
+  <h2>Escenarios que Resolvemos con Custodia Profesional</h2>
+  <p class="prose-section-sub">El traslado de mercancía valiosa tiene riesgos específicos según el tipo de carga y la ruta. Estos son los más comunes en CDMX.</p>
+</div>
+
+<div class="scenarios-grid">
+  <div class="scenario-card">
+    <div class="scenario-card__problem">
+      <span class="scenario-card__label scenario-card__label--problem">Problema</span>
+      <p>Empresa en Polanco traslada joyería de alta gama a una feria en el WTC. El mensajero habitual no da garantías y el seguro del vehículo no cubre el valor real de la carga.</p>
+    </div>
+    <div class="scenario-card__solution">
+      <span class="scenario-card__label scenario-card__label--solution">Solución ORIGINS</span>
+      <p>Escolta armada desde el punto de origen hasta el stand, con cadena de custodia fotográfica y póliza de carga activada para el traslado. Mismo protocolo en el regreso.</p>
+    </div>
+  </div>
+  <div class="scenario-card">
+    <div class="scenario-card__problem">
+      <span class="scenario-card__label scenario-card__label--problem">Problema</span>
+      <p>Empresa de distribución farmacéutica en Vallejo necesita trasladar medicamentos controlados a clínicas en Tlalpan y Coyoacán. El robo en ruta es una preocupación real del sector.</p>
+    </div>
+    <div class="scenario-card__solution">
+      <span class="scenario-card__label scenario-card__label--solution">Solución ORIGINS</span>
+      <p>Custodia con escolta no armada de perfil discreto, GPS activo en unidad y confirmación de entrega por firma digital con evidencia fotográfica en cada punto de entrega.</p>
+    </div>
+  </div>
+  <div class="scenario-card">
+    <div class="scenario-card__problem">
+      <span class="scenario-card__label scenario-card__label--problem">Problema</span>
+      <p>Empresa de retail en Santa Fe paga nómina en efectivo a trabajadores en planta de Naucalpan. El encargado de RH realiza el traslado solo en su vehículo particular cada quincena.</p>
+    </div>
+    <div class="scenario-card__solution">
+      <span class="scenario-card__label scenario-card__label--solution">Solución ORIGINS</span>
+      <p>Servicio recurrente de custodia de nómina en efectivo: escolta armado, vehículo ORIGINS y ruta evaluada con variaciones quincenales. Protocolo de retiro en banco y entrega en instalación.</p>
+    </div>
+  </div>
+  <div class="scenario-card">
+    <div class="scenario-card__problem">
+      <span class="scenario-card__label scenario-card__label--problem">Problema</span>
+      <p>Despacho jurídico en Roma Norte traslada documentos originales y evidencias a tribunales en el centro histórico. La pérdida o robo tendría consecuencias legales graves para el cliente.</p>
+    </div>
+    <div class="scenario-card__solution">
+      <span class="scenario-card__label scenario-card__label--solution">Solución ORIGINS</span>
+      <p>Custodia discreta de documentos con escolta de civil, cadena de custodia fotográfica en origen y destino, y confirmación de entrega notariada cuando el caso lo requiere.</p>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-block">
+  <div class="prose-section-block__header">
+    <span class="prose-section-block__num">01</span>
+    <div>
+      <span class="prose-section-block__label">Evaluación de Ruta</span>
+      <h3 class="prose-section-block__title">Antes del Traslado: Evaluación de Riesgo y Protocolo Específico</h3>
+    </div>
+  </div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>Cada traslado de mercancía valiosa empieza con una <strong>evaluación de ruta antes de salir</strong>. No se improvisa. El equipo analiza el origen, destino, tramos de mayor riesgo, horario óptimo y puntos de verificación en ruta.</p>
+      <ul>
+        <li><strong>Análisis de origen y destino</strong> — tipo de colonia, accesos, visibilidad del punto de carga/descarga</li>
+        <li><strong>Evaluación de ruta principal y alternativa</strong> — identificación de tramos de mayor incidencia</li>
+        <li><strong>Horario óptimo</strong> — evitar horas pico, rutas de alto riesgo en ciertos horarios</li>
+        <li><strong>Perfil del escolta</strong> — armado o no armado, visible o discreto, según el tipo de carga</li>
+        <li><strong>Protocolo de comunicación</strong> — frecuencia de check-in con central durante el trayecto</li>
+        <li>Activación de póliza de seguro específica para el tipo y valor de la mercancía</li>
+      </ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/custodia-de-mercancias/administracion-de-riesgos-custodia.avif" alt="Evaluación de riesgo para custodia de mercancías CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/custodia-de-mercancias/protocolos-anti-asalto-mercancias-alto-valor.avif" alt="Protocolos anti-asalto para traslado de mercancías alto valor CDMX" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-block">
+  <div class="prose-section-block__header">
+    <span class="prose-section-block__num">02</span>
+    <div>
+      <span class="prose-section-block__label">Durante el Traslado</span>
+      <h3 class="prose-section-block__title">Monitoreo Activo de Origen a Destino</h3>
+    </div>
+  </div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>El escolta no opera de forma aislada — tiene <strong>comunicación constante con la central ORIGINS</strong> durante todo el trayecto. Si hay cualquier anomalía, central activa el protocolo correspondiente en menos de 3 minutos.</p>
+      <ul>
+        <li><strong>GPS activo</strong> — central monitorea posición del vehículo en tiempo real desde el punto de origen</li>
+        <li><strong>Check-in por ruta</strong> — el escolta reporta en cada punto de verificación preestablecido</li>
+        <li><strong>Detección de seguimientos</strong> — personal entrenado en técnicas de contra-vigilancia vehicular</li>
+        <li><strong>Protocolo ante anomalías</strong> — desviación de ruta no autorizada activa alerta en central de inmediato</li>
+        <li><strong>Conducción evasiva</strong> — entrenamiento en maniobras ante intentos de interceptación</li>
+        <li>Botón de pánico integrado en unidades con activación silenciosa disponible para el escolta</li>
+      </ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/custodia-de-mercancias/monitoreo-gps-tiempo-real-custodia-mercancias.avif" alt="Monitoreo GPS en tiempo real durante custodia de mercancías CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/custodia-de-mercancias/rastreo-gps-satelital-vehiculos-blindados.avif" alt="Rastreo GPS satelital de vehículos de custodia CDMX ORIGINS" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-block">
+  <div class="prose-section-block__header">
+    <span class="prose-section-block__num">03</span>
+    <div>
+      <span class="prose-section-block__label">Cadena de Custodia</span>
+      <h3 class="prose-section-block__title">Documentación Completa: lo que Recibes Después de Cada Traslado</h3>
+    </div>
+  </div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>Cada traslado genera un <strong>expediente de cadena de custodia</strong> que puedes usar como soporte ante auditorías, aseguradoras o autoridades. No es un simple recibo — es evidencia trazable de todo el proceso.</p>
+      <ul>
+        <li><strong>Fotografía de origen</strong> — estado de la mercancía al momento del embarque con marca de tiempo</li>
+        <li><strong>Registro de ruta</strong> — historial GPS del trayecto completo con tiempos y coordenadas</li>
+        <li><strong>Fotografía de destino</strong> — estado de la mercancía al momento de la entrega</li>
+        <li><strong>Firma de recepción</strong> — acuse digital del receptor con identificación verificada</li>
+        <li><strong>Reporte del escolta</strong> — incidencias durante el trayecto, incluso si no hubo ninguna</li>
+        <li>Copia del expediente entregada al cliente por correo electrónico en máximo 2 horas después del servicio</li>
+      </ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/custodia-de-mercancias/cadena-custodia-certificada-evidencia-fotografica.avif" alt="Cadena de custodia certificada con evidencia fotográfica CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/custodia-de-mercancias/poliza-seguro-integral-custodia-valores.avif" alt="Póliza de seguro integral para custodia de valores CDMX" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Para Quién es</span>
+  <h2>¿Tu Negocio Traslada Algo Valioso? Esto es para Ti</h2>
+  <p class="prose-section-sub">La custodia de mercancías no es solo para bancos y joyerías. Muchos negocios medianos en CDMX tienen traslados críticos que hacen sin protección por desconocimiento o costo.</p>
+</div>
+
+<div class="profile-grid">
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Distribuidora farmacéutica</strong>
+      <p class="profile-card__need">Traslado de medicamentos controlados a clínicas y hospitales en CDMX</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Escolta discreto</span>
+        <span class="profile-tag">GPS activo</span>
+        <span class="profile-tag">Cadena de custodia</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Joyería o relojería</strong>
+      <p class="profile-card__need">Traslado a ferias, eventos y exposiciones en CDMX y área metropolitana</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Escolta armado</span>
+        <span class="profile-tag">Póliza de carga</span>
+        <span class="profile-tag">Evidencia fotográfica</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Empresa que paga nómina en efectivo</strong>
+      <p class="profile-card__need">Retiro en banco y distribución a trabajadores en planta industrial</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Servicio recurrente</span>
+        <span class="profile-tag">Rutas variables</span>
+        <span class="profile-tag">Escolta armado</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Despacho jurídico o notaría</strong>
+      <p class="profile-card__need">Documentos originales, evidencias y escrituras con alto valor legal</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Custodia discreta</span>
+        <span class="profile-tag">Acuse verificado</span>
+        <span class="profile-tag">Expediente completo</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card profile-card--highlight">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Retail con alto flujo de efectivo</strong>
+      <p class="profile-card__need">Tiendas, centros comerciales o franquicias en Santa Fe, Polanco o Perisur con depósitos diarios o semanales</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Escolta para depósito</span>
+        <span class="profile-tag">Vehículo ORIGINS</span>
+        <span class="profile-tag">Servicio recurrente</span>
+        <span class="profile-tag">GPS en tiempo real</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Proceso</span>
+  <h2>Cómo Funciona un Traslado con ORIGINS</h2>
+  <p class="prose-section-sub">Desde que nos llamas hasta que recibes el expediente de custodia. Sin improvisación, sin sorpresas.</p>
+</div>
+
+<div class="prose-steps">
+  <div class="prose-step">
+    <span class="prose-step__num">01</span>
+    <div class="prose-step__content">
+      <strong>Solicitud y evaluación del traslado (30 minutos)</strong>
+      <p>Nos das el origen, destino, tipo de mercancía y valor estimado. Evaluamos el perfil de riesgo y te confirmamos el tipo de escolta recomendado, el costo del servicio y la disponibilidad. Para traslados estándar: mínimo 4 horas de anticipación.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">02</span>
+    <div class="prose-step__content">
+      <strong>Evaluación de ruta previa al traslado (1 hora antes)</strong>
+      <p>El escolta asignado revisa la ruta con el equipo de logística de ORIGINS: puntos de mayor riesgo, ruta alternativa, horario óptimo y puntos de check-in. Central activa el seguimiento GPS de la unidad.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">03</span>
+    <div class="prose-step__content">
+      <strong>Embarque con documentación en origen</strong>
+      <p>Fotografía del estado de la mercancía, conteo o inventario cuando aplica, activación de póliza de seguro y confirmación de identidad del cliente que entrega. Inicio formal de la cadena de custodia.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">04</span>
+    <div class="prose-step__content">
+      <strong>Traslado con monitoreo activo y check-ins por ruta</strong>
+      <p>Central monitorea GPS durante todo el trayecto. El escolta reporta en cada punto de verificación preestablecido. Cualquier anomalía activa el protocolo de contingencia en menos de 3 minutos.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">05</span>
+    <div class="prose-step__content">
+      <strong>Entrega con acuse y expediente completo (2 horas después)</strong>
+      <p>Fotografía en destino, firma digital del receptor con verificación de identidad y cierre de la cadena de custodia. En un máximo de 2 horas recibes el expediente completo del traslado por correo electrónico.</p>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Galería</span>
+  <h2>Custodia de Mercancías ORIGINS en Operación</h2>
+  <p class="prose-section-sub">Escoltas certificados, vehículos equipados y protocolos documentados para traslados en CDMX y área metropolitana.</p>
+</div>
+
+<div class="prose-gallery">
+  <figure>
+    <img src="/img/custodia-de-mercancias/escoltas-profesionales-traslado-valores-cdmx.avif" alt="Escoltas profesionales para traslado de valores en CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Escoltas certificados SSC para traslado de valores — armados o discretos según el perfil de riesgo</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/custodia-de-mercancias/vehiculo-blindado-transporte-valores-certificado.avif" alt="Vehículo blindado certificado para transporte de valores CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Unidades equipadas con GPS activo y comunicación constante con central ORIGINS</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/custodia-de-mercancias/custodia-mercancias-alto-riesgo-cdmx.avif" alt="Custodia de mercancías de alto riesgo en CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Custodia para mercancías de alto riesgo — joyería, farmacéuticos y electrónicos de alto valor</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/custodia-de-mercancias/traslado-seguro-efectivo-sector-financiero.avif" alt="Traslado seguro de efectivo para empresas en CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Traslado de efectivo para nóminas y depósitos — servicio recurrente con rutas variables</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/custodia-de-mercancias/custodia-especializada-mercancias-farmaceuticas.avif" alt="Custodia especializada de mercancías farmacéuticas CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Custodia de medicamentos controlados — discreta, documentada y con cadena de custodia certificada</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/custodia-de-mercancias/traslado-documentos-confidenciales-empresariales.avif" alt="Traslado seguro de documentos confidenciales en CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Custodia de documentos legales confidenciales — con acuse verificado y expediente completo entregado al cliente</figcaption>
+  </figure>
+</div>

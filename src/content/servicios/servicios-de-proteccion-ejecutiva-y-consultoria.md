@@ -1,11 +1,21 @@
 ---
 title: "Protección Ejecutiva y Consultoría CDMX | Escoltas"
-description: "Protección ejecutiva y consultoría de seguridad privada en CDMX. Escoltas certificados SSC, custodia de valores y análisis de riesgos. +15 años. ☎ 55 3025 5580"
+description: "Protección ejecutiva y consultoría de seguridad privada en CDMX. Escoltas certificados SSC, custodia de valores y análisis de riesgos. +15 años de experiencia."
 category: service
 publishDate: 2024-01-01
+updatedDate: 2026-04-01
+draft: true
 keywords:
   - seguridad
   - servicios de proteccion ejecutiva y consultoria
+  - protección ejecutiva CDMX
+  - consultoría seguridad privada
+targetLocations:
+  - Ciudad de México
+  - Estado de México
+  - Polanco
+  - Santa Fe
+  - Lomas de Chapultepec
 faqs:
   - question: "¿Cuál es la diferencia entre sus servicios corporativos y los servicios tradicionales de guardias?"
     answer: "Nuestros servicios especializados de protección ejecutiva y consultoría se diferencian fundamentalmente del servicio tradicional de guardias en su enfoque estratégico, nivel de especialización del personal y valor agregado proporcionado. Mientras el servicio de guardias tradicional se enfoca en presencia física disuasiva y respuesta reactiva ante incidentes, nuestros servicios corporativos adoptan perspectiva proactiva mediante análisis de amenazas, inteligencia preventiva, evaluación de vulnerabilidades y diseño de estrategias personalizadas de mitigación. El personal asignado cuenta con formación avanzada especializada: escoltas ejecutivos con experiencia en fuerzas especiales, consultores con certificaciones internacionales (CPP, PSP), investigadores certificados en verificación de antecedentes y analistas de riesgos formados en metodologías como ISO 31000. Además, estos servicios operan bajo estrictos protocolos de confidencialidad con acuerdos NDA, protección de datos nivel bancario y entregables ejecutivos diseñados para toma de decisiones estratégicas por directivos o consejos de administración."

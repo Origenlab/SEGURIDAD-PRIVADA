@@ -1,0 +1,759 @@
+/* ==========================================================================
+   EMERGENCIAS — Directorio de Emergencias por Zona
+   Mobile-first: esta página se consulta en crisis desde móvil
+   ========================================================================== */
+
+/* ── 911 STRIP (sticky top) ─────────────────────────────────────────── */
+.emg-strip {
+  background: #dc2626;
+  color: #fff;
+  text-align: center;
+  padding: 0.625rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 800;
+}
+
+.emg-strip__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  max-width: var(--container-max, 1280px);
+  margin: 0 auto;
+}
+
+.emg-strip__num {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.emg-strip__label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  opacity: 0.9;
+  letter-spacing: 0.02em;
+}
+
+.emg-strip__badge {
+  background: rgba(255,255,255,0.2);
+  border-radius: 980px;
+  padding: 0.2rem 0.625rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+.emg-strip__link {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-decoration: none;
+  background: rgba(255,255,255,0.15);
+  padding: 0.25rem 0.875rem;
+  border-radius: 980px;
+  transition: background 0.15s;
+}
+
+.emg-strip__link:hover { background: rgba(255,255,255,0.25); }
+
+/* ── HERO ───────────────────────────────────────────────────────────── */
+/* El HeroPagina.astro ya tiene sus propios estilos — solo añadimos      */
+/* el contenido específico de esta página en el component slot           */
+
+/* ── NÚMEROS UNIVERSALES ────────────────────────────────────────────── */
+.emg-universal {
+  padding: 3.5rem 0;
+  background: var(--color-accent, #f8f9fa);
+}
+
+.emg-universal__header {
+  text-align: center;
+  margin-bottom: 2.25rem;
+}
+
+.emg-universal__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(220,38,38,0.08);
+  border: 1px solid rgba(220,38,38,0.15);
+  color: #b91c1c;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 980px;
+  padding: 0.35rem 0.875rem;
+  margin-bottom: 0.875rem;
+}
+
+.emg-universal__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary, #0a0f1e);
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.emg-universal__sub {
+  font-size: 0.9375rem;
+  color: rgba(10,15,30,0.55);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.emg-universal__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.875rem;
+}
+
+@media (min-width: 480px) {
+  .emg-universal__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 768px) {
+  .emg-universal__grid { grid-template-columns: repeat(3, 1fr); }
+  .emg-universal__title { font-size: 1.875rem; }
+}
+
+@media (min-width: 1024px) {
+  .emg-universal__grid { grid-template-columns: repeat(6, 1fr); }
+}
+
+/* ── Universal Number Card ───────────────────────────────────────────── */
+.emg-ucard {
+  background: #fff;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 16px;
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.18s, transform 0.15s;
+}
+
+.emg-ucard:hover {
+  box-shadow: 0 4px 18px rgba(10,15,30,0.08);
+  transform: translateY(-2px);
+}
+
+.emg-ucard--911 {
+  border-color: #dc2626;
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  color: #fff;
+}
+
+.emg-ucard--policia { border-left: 3px solid #1d4ed8; }
+.emg-ucard--bomberos { border-left: 3px solid #ea580c; }
+.emg-ucard--cruzroja { border-left: 3px solid #dc2626; }
+.emg-ucard--denuncia { border-left: 3px solid #6b7280; }
+.emg-ucard--locatel { border-left: 3px solid #059669; }
+
+.emg-ucard__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.emg-ucard--911 .emg-ucard__icon { background: rgba(255,255,255,0.2); color: #fff; }
+.emg-ucard--policia .emg-ucard__icon { background: rgba(29,78,216,0.08); color: #1d4ed8; }
+.emg-ucard--bomberos .emg-ucard__icon { background: rgba(234,88,12,0.08); color: #ea580c; }
+.emg-ucard--cruzroja .emg-ucard__icon { background: rgba(220,38,38,0.08); color: #dc2626; }
+.emg-ucard--denuncia .emg-ucard__icon { background: rgba(107,114,128,0.08); color: #6b7280; }
+.emg-ucard--locatel .emg-ucard__icon { background: rgba(5,150,105,0.08); color: #059669; }
+
+.emg-ucard__num {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--color-primary, #0a0f1e);
+}
+
+.emg-ucard--911 .emg-ucard__num { color: #fff; font-size: 2rem; }
+
+.emg-ucard__label {
+  font-size: 0.7875rem;
+  font-weight: 600;
+  color: rgba(10,15,30,0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.emg-ucard--911 .emg-ucard__label { color: rgba(255,255,255,0.85); }
+
+.emg-ucard__available {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 980px;
+  background: rgba(5,150,105,0.1);
+  color: #047857;
+}
+
+.emg-ucard--911 .emg-ucard__available {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+/* ── FILTRO DE TABS ─────────────────────────────────────────────────── */
+.emg-tabs {
+  padding: 2.5rem 0 0;
+}
+
+.emg-tabs__nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.emg-tabs__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.625rem 1.25rem;
+  border: 2px solid var(--color-border, #e0e0e0);
+  border-radius: 980px;
+  background: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(10,15,30,0.55);
+  cursor: pointer;
+  transition: all 0.15s;
+  text-decoration: none;
+}
+
+.emg-tabs__btn:hover,
+.emg-tabs__btn--active {
+  border-color: var(--color-primary, #0a0f1e);
+  background: var(--color-primary, #0a0f1e);
+  color: #fff;
+}
+
+.emg-tabs__count {
+  background: rgba(10,15,30,0.1);
+  border-radius: 980px;
+  padding: 0.1rem 0.45rem;
+  font-size: 0.7rem;
+}
+
+.emg-tabs__btn--active .emg-tabs__count,
+.emg-tabs__btn:hover .emg-tabs__count {
+  background: rgba(255,255,255,0.2);
+}
+
+.emg-tabs__section {
+  margin-bottom: 3.5rem;
+}
+
+.emg-tabs__section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--color-border, #e0e0e0);
+}
+
+.emg-tabs__section-icon {
+  width: 36px;
+  height: 36px;
+  background: var(--color-primary, #0a0f1e);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.emg-tabs__section-title {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--color-primary, #0a0f1e);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.emg-tabs__section-sub {
+  font-size: 0.8125rem;
+  color: rgba(10,15,30,0.45);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ── DIRECTORIO GRID ────────────────────────────────────────────────── */
+.emg-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .emg-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .emg-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+}
+
+/* ── EMERGENCY ZONE CARD ─────────────────────────────────────────────── */
+.emg-card {
+  background: #fff;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.emg-card__head {
+  padding: 1.125rem 1.25rem 1rem;
+  background: var(--color-primary, #0a0f1e);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.emg-card__shield {
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.9);
+  flex-shrink: 0;
+}
+
+.emg-card__title {
+  font-size: 0.9375rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.emg-card__state {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+/* ── 911 Hero Number dentro de card ─────────────────────────────────── */
+.emg-card__911 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1.25rem;
+  background: #dc2626;
+  gap: 0.5rem;
+}
+
+.emg-card__911-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.emg-card__911-icon {
+  width: 30px;
+  height: 30px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.emg-card__911-text {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.emg-card__911-num {
+  font-size: 1.625rem;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.emg-card__911-num:hover { opacity: 0.85; }
+
+/* ── Números de la card ─────────────────────────────────────────────── */
+.emg-card__numbers {
+  padding: 0.75rem 0;
+  flex: 1;
+}
+
+.emg-card__row {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 1.25rem;
+  border-bottom: 1px solid rgba(10,15,30,0.05);
+  transition: background 0.12s;
+}
+
+.emg-card__row:last-child { border-bottom: none; }
+.emg-card__row:hover { background: rgba(10,15,30,0.02); }
+
+.emg-card__row-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.875rem;
+}
+
+.emg-card__row-icon--policia { background: rgba(29,78,216,0.08); color: #1d4ed8; }
+.emg-card__row-icon--bomberos { background: rgba(234,88,12,0.08); color: #ea580c; }
+.emg-card__row-icon--cruzroja { background: rgba(220,38,38,0.08); color: #dc2626; }
+.emg-card__row-icon--protcivil { background: rgba(107,114,128,0.08); color: #6b7280; }
+.emg-card__row-icon--denuncia { background: rgba(100,116,139,0.08); color: #475569; }
+
+.emg-card__row-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.emg-card__row-label {
+  font-size: 0.7125rem;
+  font-weight: 600;
+  color: rgba(10,15,30,0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  line-height: 1.2;
+}
+
+.emg-card__row-num {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-primary, #0a0f1e);
+  text-decoration: none;
+  display: block;
+  line-height: 1.3;
+}
+
+.emg-card__row-num:hover { color: #1d4ed8; }
+
+.emg-card__row-badge {
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.1rem 0.4rem;
+  border-radius: 980px;
+  flex-shrink: 0;
+}
+
+.emg-card__row-badge--24h {
+  background: rgba(5,150,105,0.1);
+  color: #047857;
+}
+
+.emg-card__row-badge--horario {
+  background: rgba(234,88,12,0.1);
+  color: #c2410c;
+}
+
+/* ── Footer de card ─────────────────────────────────────────────────── */
+.emg-card__footer {
+  padding: 0.875rem 1.25rem;
+  border-top: 1px solid var(--color-border, #e0e0e0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.emg-card__zone-link {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-primary, #0a0f1e);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+}
+
+.emg-card__zone-link:hover { opacity: 1; }
+
+.emg-card__verified {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.675rem;
+  font-weight: 600;
+  color: #047857;
+}
+
+/* ── DISCLAIMER ─────────────────────────────────────────────────────── */
+.emg-disclaimer {
+  padding: 2.5rem 0;
+  background: var(--color-accent, #f8f9fa);
+  border-top: 1px solid var(--color-border, #e0e0e0);
+}
+
+.emg-disclaimer__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .emg-disclaimer__inner { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1024px) {
+  .emg-disclaimer__inner { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+.emg-disclaimer__card {
+  background: #fff;
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: 14px;
+  padding: 1.25rem;
+  display: flex;
+  gap: 0.875rem;
+  align-items: flex-start;
+}
+
+.emg-disclaimer__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.emg-disclaimer__icon--warn { background: rgba(245,158,11,0.1); color: #b45309; }
+.emg-disclaimer__icon--info { background: rgba(29,78,216,0.08); color: #1d4ed8; }
+.emg-disclaimer__icon--update { background: rgba(5,150,105,0.08); color: #059669; }
+
+.emg-disclaimer__title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-primary, #0a0f1e);
+  margin: 0 0 0.25rem;
+  line-height: 1.3;
+}
+
+.emg-disclaimer__text {
+  font-size: 0.8125rem;
+  color: rgba(10,15,30,0.55);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.emg-disclaimer__text a {
+  color: var(--color-primary, #0a0f1e);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(10,15,30,0.25);
+}
+
+/* ── CTA CONTEXTUAL (ORIGINS) ───────────────────────────────────────── */
+.emg-cta {
+  padding: 4rem 0;
+  background: var(--color-primary, #0a0f1e);
+  position: relative;
+  overflow: hidden;
+}
+
+.emg-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.emg-cta__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .emg-cta__inner { grid-template-columns: 1fr auto; gap: 3rem; }
+}
+
+.emg-cta__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.8);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border-radius: 980px;
+  padding: 0.35rem 0.875rem;
+  margin-bottom: 0.875rem;
+}
+
+.emg-cta__title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 0.625rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) { .emg-cta__title { font-size: 1.875rem; } }
+
+.emg-cta__text {
+  font-size: 0.9375rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.7;
+  margin: 0 0 0.5rem;
+}
+
+.emg-cta__stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #4ade80;
+  margin-top: 0.25rem;
+}
+
+.emg-cta__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+@media (min-width: 480px) {
+  .emg-cta__actions { flex-direction: row; }
+}
+
+.emg-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  border-radius: 12px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+
+.emg-cta__btn--primary {
+  background: #fff;
+  color: var(--color-primary, #0a0f1e);
+}
+
+.emg-cta__btn--primary:hover { background: #f0f0f0; transform: translateY(-1px); }
+
+.emg-cta__btn--wa {
+  background: #25D366;
+  color: #fff;
+}
+
+.emg-cta__btn--wa:hover { background: #1ebe5d; transform: translateY(-1px); }
+
+/* ── STATS BAR ──────────────────────────────────────────────────────── */
+.emg-stats {
+  padding: 1.5rem 0;
+  background: #fff;
+  border-top: 1px solid var(--color-border, #e0e0e0);
+  border-bottom: 1px solid var(--color-border, #e0e0e0);
+}
+
+.emg-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+}
+
+@media (min-width: 640px) {
+  .emg-stats__grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.emg-stats__item {
+  text-align: center;
+  padding: 0.75rem;
+  border-right: 1px solid var(--color-border, #e0e0e0);
+}
+
+.emg-stats__item:last-child,
+.emg-stats__item:nth-child(2) { border-right: none; }
+
+@media (min-width: 640px) {
+  .emg-stats__item:nth-child(2) { border-right: 1px solid var(--color-border, #e0e0e0); }
+  .emg-stats__item:last-child { border-right: none; }
+}
+
+.emg-stats__num {
+  font-size: 1.375rem;
+  font-weight: 900;
+  color: var(--color-primary, #0a0f1e);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.emg-stats__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: rgba(10,15,30,0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────────────────── */
+@media (min-width: 768px) {
+  .emg-universal { padding: 5rem 0; }
+  .emg-tabs { padding: 3.5rem 0 0; }
+}

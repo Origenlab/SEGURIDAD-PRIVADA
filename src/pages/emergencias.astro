@@ -1,0 +1,623 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroPagina from '../components/HeroPagina.astro';
+import NavCTA from '../components/NavCTA.astro';
+import '../styles/pages/emergencias.css';
+
+const siteUrl = 'https://seguridad-privada.com.mx';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// DATOS DEL DIRECTORIO
+// Fuentes verificadas al 2026-04-01
+// En caso de emergencia: SIEMPRE marcar 9-1-1 primero
+// ─────────────────────────────────────────────────────────────────────────────
+
+interface EmergencyNumber {
+  type: 'policia' | 'bomberos' | 'cruzroja' | 'protcivil' | 'denuncia' | 'ciudadana';
+  label: string;
+  number: string;
+  tel: string;          // formato tel: para href
+  available?: '24h' | 'horario';
+  note?: string;
+}
+
+interface ZoneDirectory {
+  slug: string;
+  name: string;
+  state: 'Ciudad de México' | 'Estado de México';
+  numbers: EmergencyNumber[];
+  fuente?: string;
+}
+
+const directoriosCDMX: ZoneDirectory[] = [
+  {
+    slug: 'miguel-hidalgo',
+    name: 'Miguel Hidalgo',
+    state: 'Ciudad de México',
+    fuente: 'SSC CDMX',
+    numbers: [
+      { type: 'policia',    label: 'Línea Ciudadana SSC', number: '55 5208-9898', tel: '+525552089898', available: '24h' },
+      { type: 'policia',    label: 'SSC Central',         number: '55 5242-5100', tel: '+525552425100', available: '24h' },
+      { type: 'bomberos',   label: 'Bomberos CDMX',       number: '068 / 55 5768-3700', tel: 'tel:068', available: '24h' },
+      { type: 'cruzroja',   label: 'Cruz Roja',           number: '065 / 55 5557-5757', tel: 'tel:065', available: '24h' },
+      { type: 'denuncia',   label: 'Denuncia Anónima',    number: '089', tel: 'tel:089' },
+    ],
+  },
+  {
+    slug: 'benito-juarez',
+    name: 'Benito Juárez',
+    state: 'Ciudad de México',
+    fuente: 'SSC CDMX / ddmbj.mx',
+    numbers: [
+      { type: 'policia',    label: 'Base Plata (policía)', number: '55 5604-4926', tel: '+525556044926', available: '24h', note: 'Emergencias Benito Juárez' },
+      { type: 'policia',    label: 'SSC Ciudadana',        number: '55 5208-9898', tel: '+525552089898', available: '24h' },
+      { type: 'bomberos',   label: 'Bomberos CDMX',        number: '068 / 55 5768-3700', tel: 'tel:068', available: '24h' },
+      { type: 'cruzroja',   label: 'Cruz Roja',            number: '065 / 55 5557-5757', tel: 'tel:065', available: '24h' },
+      { type: 'denuncia',   label: 'Denuncia Anónima',     number: '089', tel: 'tel:089' },
+    ],
+  },
+  {
+    slug: 'cuauhtemoc',
+    name: 'Cuauhtémoc',
+    state: 'Ciudad de México',
+    fuente: 'SSC CDMX',
+    numbers: [
+      { type: 'policia',    label: 'SSC Ciudadana',    number: '55 5208-9898', tel: '+525552089898', available: '24h' },
+      { type: 'policia',    label: 'SSC Central',      number: '55 5242-5100', tel: '+525552425100', available: '24h' },
+      { type: 'policia',    label: 'Policía Auxiliar', number: '55 4757-2000', tel: '+525547572000', available: '24h' },
+      { type: 'bomberos',   label: 'Bomberos CDMX',    number: '068 / 55 5768-3700', tel: 'tel:068', available: '24h' },
+      { type: 'cruzroja',   label: 'Cruz Roja',        number: '065 / 55 5557-5757', tel: 'tel:065', available: '24h' },
+    ],
+  },
+  {
+    slug: 'coyoacan',
+    name: 'Coyoacán',
+    state: 'Ciudad de México',
+    fuente: 'SSC CDMX',
+    numbers: [
+      { type: 'policia',    label: 'SSC Ciudadana',  number: '55 5208-9898', tel: '+525552089898', available: '24h' },
+      { type: 'policia',    label: 'SSC Central',    number: '55 5242-5100', tel: '+525552425100', available: '24h' },
+      { type: 'bomberos',   label: 'Bomberos CDMX',  number: '068 / 55 5768-3700', tel: 'tel:068', available: '24h' },
+      { type: 'cruzroja',   label: 'Cruz Roja',      number: '065 / 55 5557-5757', tel: 'tel:065', available: '24h' },
+      { type: 'denuncia',   label: 'Denuncia Anón.', number: '089', tel: 'tel:089' },
+    ],
+  },
+  {
+    slug: 'alvaro-obregon',
+    name: 'Álvaro Obregón',
+    state: 'Ciudad de México',
+    fuente: 'SSC CDMX',
+    numbers: [
+      { type: 'policia',    label: 'SSC Ciudadana',  number: '55 5208-9898', tel: '+525552089898', available: '24h' },
+      { type: 'policia',    label: 'SSC Central',    number: '55 5242-5100', tel: '+525552425100', available: '24h' },
+      { type: 'bomberos',   label: 'Bomberos CDMX',  number: '068 / 55 5768-3700', tel: 'tel:068', available: '24h' },
+      { type: 'cruzroja',   label: 'Cruz Roja',      number: '065 / 55 5557-5757', tel: 'tel:065', available: '24h' },
+      { type: 'denuncia',   label: 'Denuncia Anón.', number: '089', tel: 'tel:089' },
+    ],
+  },
+  {
+    slug: 'gustavo-a-madero',
+    name: 'Gustavo A. Madero',
+    state: 'Ciudad de México',
+    fuente: 'SSC CDMX',
+    numbers: [
+      { type: 'policia',    label: 'SSC Ciudadana',  number: '55 5208-9898', tel: '+525552089898', available: '24h' },
+      { type: 'policia',    label: 'SSC Central',    number: '55 5242-5100', tel: '+525552425100', available: '24h' },
+      { type: 'bomberos',   label: 'Bomberos CDMX',  number: '068 / 55 5768-3700', tel: 'tel:068', available: '24h' },
+      { type: 'cruzroja',   label: 'Cruz Roja',      number: '065 / 55 5557-5757', tel: 'tel:065', available: '24h' },
+      { type: 'denuncia',   label: 'Denuncia Anón.', number: '089', tel: 'tel:089' },
+    ],
+  },
+  {
+    slug: 'iztapalapa',
+    name: 'Iztapalapa',
+    state: 'Ciudad de México',
+    fuente: 'SSC CDMX',
+    numbers: [
+      { type: 'policia',    label: 'SSC Ciudadana',  number: '55 5208-9898', tel: '+525552089898', available: '24h' },
+      { type: 'policia',    label: 'SSC Central',    number: '55 5242-5100', tel: '+525552425100', available: '24h' },
+      { type: 'bomberos',   label: 'Bomberos CDMX',  number: '068 / 55 5768-3700', tel: 'tel:068', available: '24h' },
+      { type: 'cruzroja',   label: 'Cruz Roja',      number: '065 / 55 5557-5757', tel: 'tel:065', available: '24h' },
+      { type: 'denuncia',   label: 'Denuncia Anón.', number: '089', tel: 'tel:089' },
+    ],
+  },
+  {
+    slug: 'xochimilco',
+    name: 'Xochimilco',
+    state: 'Ciudad de México',
+    fuente: 'SSC CDMX',
+    numbers: [
+      { type: 'policia',    label: 'SSC Ciudadana',  number: '55 5208-9898', tel: '+525552089898', available: '24h' },
+      { type: 'policia',    label: 'SSC Central',    number: '55 5242-5100', tel: '+525552425100', available: '24h' },
+      { type: 'bomberos',   label: 'Bomberos CDMX',  number: '068 / 55 5768-3700', tel: 'tel:068', available: '24h' },
+      { type: 'cruzroja',   label: 'Cruz Roja',      number: '065 / 55 5557-5757', tel: 'tel:065', available: '24h' },
+      { type: 'denuncia',   label: 'Denuncia Anón.', number: '089', tel: 'tel:089' },
+    ],
+  },
+];
+
+const directoriosEdoMex: ZoneDirectory[] = [
+  {
+    slug: 'naucalpan',
+    name: 'Naucalpan',
+    state: 'Estado de México',
+    fuente: 'Gob. Naucalpan',
+    numbers: [
+      { type: 'policia',    label: 'Comisaría Seg. Pública', number: '55 3605-1440', tel: '+525536051440', available: '24h' },
+      { type: 'policia',    label: 'Dir. de Seguridad',      number: '55 5371-8300', tel: '+525553718300', available: '24h', note: 'ext. 1894' },
+      { type: 'bomberos',   label: 'Bomberos / Emergencias', number: '9-1-1', tel: 'tel:911', available: '24h' },
+      { type: 'cruzroja',   label: 'Cruz Roja',              number: '065 / 55 5557-5757', tel: 'tel:065', available: '24h' },
+      { type: 'denuncia',   label: 'Denuncia Anón. (Estado)', number: '800 900 3900', tel: '+528009003900' },
+    ],
+  },
+  {
+    slug: 'tlalnepantla',
+    name: 'Tlalnepantla',
+    state: 'Estado de México',
+    fuente: 'Gob. Tlalnepantla',
+    numbers: [
+      { type: 'policia',    label: 'Policía Municipal',    number: '55 5366-3922', tel: '+525553663922', available: '24h' },
+      { type: 'policia',    label: 'Policía Municipal 2',  number: '55 5366-3923', tel: '+525553663923', available: '24h' },
+      { type: 'protcivil',  label: 'Protección Civil',     number: '55 5390-6548', tel: '+525553906548', available: '24h' },
+      { type: 'bomberos',   label: 'Bomberos / Prot. Civil', number: '55 5683-1154', tel: '+525556831154', available: '24h' },
+      { type: 'ciudadana',  label: 'Atención Ciudadana',   number: '55 5366-4450', tel: '+525553664450', available: 'horario', note: 'Lun–Dom 8–20h' },
+    ],
+  },
+  {
+    slug: 'atizapan',
+    name: 'Atizapán de Zaragoza',
+    state: 'Estado de México',
+    fuente: 'atizapan.gob.mx',
+    numbers: [
+      { type: 'policia',    label: 'C4 — Seguridad',      number: '55 5366-7193', tel: '+525553667193', available: '24h' },
+      { type: 'policia',    label: 'C4 — Seguridad 2',    number: '55 1106-2163', tel: '+525511062163', available: '24h' },
+      { type: 'bomberos',   label: 'Bomberos',            number: '55 3622-1004', tel: '+525536221004', available: '24h' },
+      { type: 'protcivil',  label: 'Protec. Civil',       number: '55 3622-1005', tel: '+525536221005', available: '24h' },
+      { type: 'ciudadana',  label: 'App Atizapán',        number: 'Atizapán Te Escucha', tel: '', note: 'Disponible en iOS y Android' },
+    ],
+  },
+];
+
+// ── Íconos SVG para los tipos de número ──────────────────────────────────────
+const iconos: Record<string, string> = {
+  policia:   `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+  bomberos:  `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>`,
+  cruzroja:  `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12h6M12 9v6"/></svg>`,
+  protcivil: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>`,
+  denuncia:  `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.82 15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.93 4.11h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`,
+  ciudadana: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>`,
+};
+
+// ── Schema.org ────────────────────────────────────────────────────────────────
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/emergencias`,
+      "name": "Directorio de Emergencias — Policía, Bomberos y Cruz Roja por Alcaldía",
+      "description": "Números de emergencia verificados para policía, bomberos, Cruz Roja y protección civil en CDMX y Estado de México.",
+      "url": `${siteUrl}/emergencias`,
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": siteUrl },
+          { "@type": "ListItem", "position": 2, "name": "Directorio de Emergencias", "item": `${siteUrl}/emergencias` }
+        ]
+      }
+    },
+    {
+      "@type": "EmergencyService",
+      "name": "Emergencias Nacionales — 9-1-1",
+      "telephone": "911",
+      "description": "Número de emergencias nacional de México. Gratuito, 24 horas, 365 días.",
+      "areaServed": { "@type": "Country", "name": "México" },
+      "availableChannel": { "@type": "ServiceChannel", "serviceUrl": "tel:911" }
+    }
+  ]
+};
+---
+
+<Base
+  title="Directorio de Emergencias CDMX | Policía y Bomberos por Alcaldía · ORIGINS"
+  description="Números de emergencia verificados para policía, bomberos y Cruz Roja en CDMX y Estado de México. Álvaro Obregón, Benito Juárez, Naucalpan y más. Marca 9-1-1."
+  canonical={`${siteUrl}/emergencias`}
+  schema={schema}
+>
+
+  <!-- ── STRIP 911 STICKY ─────────────────────────────────────────────────── -->
+  <div class="emg-strip" role="alert" aria-label="Número de emergencias">
+    <div class="emg-strip__inner">
+      <span class="emg-strip__badge">Emergencia</span>
+      <span class="emg-strip__label">Marca ahora mismo:</span>
+      <a href="tel:911" class="emg-strip__link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:inline;vertical-align:middle;margin-right:3px"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.82 15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.93 4.11h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        9-1-1
+      </a>
+      <span class="emg-strip__label">· Gratuito · 24h · Todo México</span>
+    </div>
+  </div>
+
+  <!-- ── HERO ─────────────────────────────────────────────────────────────── -->
+  <HeroPagina
+    badge="Recursos de Seguridad"
+    titulo="Directorio de Emergencias por Zona"
+    descripcion="Teléfonos verificados de policía, bomberos, Cruz Roja y protección civil para las 11 zonas donde opera ORIGINS — CDMX y Estado de México."
+    breadcrumb={[
+      { label: 'Recursos', href: '/' },
+      { label: 'Directorio de Emergencias', href: '/emergencias' }
+    ]}
+    ctaPrimario={{ texto: 'Cotizar Seguridad Privada', href: '/contacto' }}
+    ctaWhatsapp={true}
+    seoParrafo1={`Ante una emergencia, el primer número siempre es <strong>9-1-1</strong> — gratuito, las 24 horas, en todo el país. Este directorio complementa ese recurso con los números directos de las <strong>Comisarías, Sectores y Direcciones de Seguridad</strong> de cada alcaldía y municipio donde operamos.`}
+    seoParrafo2={`La seguridad privada y la pública son complementarias, no sustitutos. <a href="/servicios/monitoreo-alarmas">Nuestro monitoreo de alarmas</a> responde en menos de 90 segundos mientras la patrulla llega — juntos forman la protección real que tu condominio necesita. Verifica también nuestra cobertura en <a href="/zonas">todas las zonas</a> de la Zona Metropolitana.`}
+  />
+
+  <!-- ── STATS BAR ─────────────────────────────────────────────────────────── -->
+  <div class="emg-stats">
+    <div class="container">
+      <div class="emg-stats__grid">
+        <div class="emg-stats__item">
+          <div class="emg-stats__num">11</div>
+          <div class="emg-stats__label">Zonas cubiertas</div>
+        </div>
+        <div class="emg-stats__item">
+          <div class="emg-stats__num">9-1-1</div>
+          <div class="emg-stats__label">Emergencias todas las zonas</div>
+        </div>
+        <div class="emg-stats__item">
+          <div class="emg-stats__num">24/7</div>
+          <div class="emg-stats__label">Disponibilidad 911</div>
+        </div>
+        <div class="emg-stats__item">
+          <div class="emg-stats__num">Apr'26</div>
+          <div class="emg-stats__label">Última verificación</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── NÚMEROS UNIVERSALES ──────────────────────────────────────────────── -->
+  <section class="emg-universal" aria-labelledby="universal-title">
+    <div class="container">
+      <div class="emg-universal__header">
+        <span class="emg-universal__badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Válidos en toda la República
+        </span>
+        <h2 class="emg-universal__title" id="universal-title">Números de Emergencia Universales</h2>
+        <p class="emg-universal__sub">Funcionan desde cualquier teléfono, en cualquier zona, sin costo. Memoriza el 9-1-1.</p>
+      </div>
+
+      <div class="emg-universal__grid">
+
+        <!-- 911 -->
+        <a href="tel:911" class="emg-ucard emg-ucard--911">
+          <div class="emg-ucard__icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.82 15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.93 4.11h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="emg-ucard__num">9-1-1</div>
+          <div class="emg-ucard__label">Emergencias</div>
+          <span class="emg-ucard__available">24h · Gratuito</span>
+        </a>
+
+        <!-- 065 Cruz Roja -->
+        <a href="tel:065" class="emg-ucard emg-ucard--cruzroja">
+          <div class="emg-ucard__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12h6M12 9v6"/></svg>
+          </div>
+          <div class="emg-ucard__num">065</div>
+          <div class="emg-ucard__label">Cruz Roja</div>
+          <span class="emg-ucard__available">24h</span>
+        </a>
+
+        <!-- 068 Bomberos -->
+        <a href="tel:068" class="emg-ucard emg-ucard--bomberos">
+          <div class="emg-ucard__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+          </div>
+          <div class="emg-ucard__num">068</div>
+          <div class="emg-ucard__label">Bomberos</div>
+          <span class="emg-ucard__available">24h</span>
+        </a>
+
+        <!-- 089 Denuncia -->
+        <a href="tel:089" class="emg-ucard emg-ucard--denuncia">
+          <div class="emg-ucard__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.82 15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.93 4.11h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="emg-ucard__num">089</div>
+          <div class="emg-ucard__label">Denuncia Anón.</div>
+        </a>
+
+        <!-- 060 Radio Patrulla -->
+        <a href="tel:060" class="emg-ucard emg-ucard--policia">
+          <div class="emg-ucard__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="emg-ucard__num">060</div>
+          <div class="emg-ucard__label">Radio Patrulla</div>
+          <span class="emg-ucard__available">24h</span>
+        </a>
+
+        <!-- 040 Info / Locatel -->
+        <a href="tel:040" class="emg-ucard emg-ucard--locatel">
+          <div class="emg-ucard__icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <div class="emg-ucard__num">040</div>
+          <div class="emg-ucard__label">Locatel / Info</div>
+          <span class="emg-ucard__available">24h</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── DIRECTORIO POR ZONA ──────────────────────────────────────────────── -->
+  <section class="emg-tabs" aria-labelledby="directorio-title">
+    <div class="container">
+
+      <div style="margin-bottom:1.5rem">
+        <span class="prose-section-badge">Directorio por Alcaldía</span>
+        <h2 id="directorio-title" style="font-size:1.75rem;font-weight:800;color:var(--color-primary);letter-spacing:-0.02em;margin:0.5rem 0 0.375rem">Números por Zona de Cobertura</h2>
+        <p style="font-size:0.9375rem;color:rgba(10,15,30,0.55);margin:0;line-height:1.65">Directorio verificado para las 11 zonas donde ORIGINS opera. Haz clic en cualquier número para llamar directamente desde tu teléfono.</p>
+      </div>
+
+      <!-- Tabs de filtro -->
+      <nav class="emg-tabs__nav" aria-label="Filtrar por estado">
+        <a href="#cdmx" class="emg-tabs__btn emg-tabs__btn--active">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+          Ciudad de México
+          <span class="emg-tabs__count">{directoriosCDMX.length}</span>
+        </a>
+        <a href="#edomex" class="emg-tabs__btn">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+          Estado de México
+          <span class="emg-tabs__count">{directoriosEdoMex.length}</span>
+        </a>
+      </nav>
+
+      <!-- ── SECCIÓN CDMX ──────────────────────────────────────────────────── -->
+      <div class="emg-tabs__section" id="cdmx">
+        <div class="emg-tabs__section-header">
+          <div class="emg-tabs__section-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+          </div>
+          <div>
+            <h3 class="emg-tabs__section-title">Ciudad de México — Alcaldías</h3>
+            <p class="emg-tabs__section-sub">Para emergencias en CDMX, la SSC responde al 9-1-1 en toda la ciudad.</p>
+          </div>
+        </div>
+
+        <div class="emg-grid">
+          {directoriosCDMX.map((zona) => (
+            <article class="emg-card" id={zona.slug} aria-labelledby={`title-${zona.slug}`}>
+
+              <!-- Cabecera -->
+              <div class="emg-card__head">
+                <div class="emg-card__shield" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                  <h3 class="emg-card__title" id={`title-${zona.slug}`}>{zona.name}</h3>
+                  <p class="emg-card__state">{zona.state}</p>
+                </div>
+              </div>
+
+              <!-- 911 destacado -->
+              <div class="emg-card__911">
+                <div class="emg-card__911-left">
+                  <div class="emg-card__911-icon" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.82 15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.93 4.11h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <span class="emg-card__911-text">Emergencias</span>
+                </div>
+                <a href="tel:911" class="emg-card__911-num" aria-label="Llamar al 911 para emergencias">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.82 15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.93 4.11h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  9-1-1
+                </a>
+              </div>
+
+              <!-- Números adicionales -->
+              <div class="emg-card__numbers">
+                {zona.numbers.map((n) => (
+                  <div class="emg-card__row">
+                    <div class={`emg-card__row-icon emg-card__row-icon--${n.type}`} aria-hidden="true" set:html={iconos[n.type] || iconos.ciudadana} />
+                    <div class="emg-card__row-body">
+                      <span class="emg-card__row-label">{n.label}</span>
+                      {n.tel ? (
+                        <a href={n.tel.startsWith('+') ? `tel:${n.tel}` : n.tel} class="emg-card__row-num" aria-label={`Llamar a ${n.label}: ${n.number}`}>
+                          {n.number}
+                        </a>
+                      ) : (
+                        <span class="emg-card__row-num" style="cursor:default">{n.number}</span>
+                      )}
+                      {n.note && <span style="font-size:0.7rem;color:rgba(10,15,30,0.4);display:block">{n.note}</span>}
+                    </div>
+                    {n.available && (
+                      <span class={`emg-card__row-badge emg-card__row-badge--${n.available}`}>{n.available}</span>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              <!-- Footer con link a zona -->
+              <div class="emg-card__footer">
+                <a href={`/zonas/${zona.slug}`} class="emg-card__zone-link">
+                  Seguridad privada en {zona.name}
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                <span class="emg-card__verified">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  {zona.fuente}
+                </span>
+              </div>
+
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <!-- ── SECCIÓN EDOMEX ─────────────────────────────────────────────────── -->
+      <div class="emg-tabs__section" id="edomex">
+        <div class="emg-tabs__section-header">
+          <div class="emg-tabs__section-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+          </div>
+          <div>
+            <h3 class="emg-tabs__section-title">Estado de México — Municipios</h3>
+            <p class="emg-tabs__section-sub">Cada municipio tiene su propia policía y protección civil. El 9-1-1 funciona en todo el Estado de México.</p>
+          </div>
+        </div>
+
+        <div class="emg-grid">
+          {directoriosEdoMex.map((zona) => (
+            <article class="emg-card" id={zona.slug} aria-labelledby={`title-${zona.slug}`}>
+
+              <div class="emg-card__head">
+                <div class="emg-card__shield" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div>
+                  <h3 class="emg-card__title" id={`title-${zona.slug}`}>{zona.name}</h3>
+                  <p class="emg-card__state">{zona.state}</p>
+                </div>
+              </div>
+
+              <div class="emg-card__911">
+                <div class="emg-card__911-left">
+                  <div class="emg-card__911-icon" aria-hidden="true">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.82 15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.93 4.11h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <span class="emg-card__911-text">Emergencias</span>
+                </div>
+                <a href="tel:911" class="emg-card__911-num" aria-label="Llamar al 911">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.82 15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.93 4.11h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  9-1-1
+                </a>
+              </div>
+
+              <div class="emg-card__numbers">
+                {zona.numbers.map((n) => (
+                  <div class="emg-card__row">
+                    <div class={`emg-card__row-icon emg-card__row-icon--${n.type}`} aria-hidden="true" set:html={iconos[n.type] || iconos.ciudadana} />
+                    <div class="emg-card__row-body">
+                      <span class="emg-card__row-label">{n.label}</span>
+                      {n.tel ? (
+                        <a href={n.tel.startsWith('+') ? `tel:${n.tel}` : n.tel} class="emg-card__row-num" aria-label={`Llamar a ${n.label}: ${n.number}`}>
+                          {n.number}
+                        </a>
+                      ) : (
+                        <span class="emg-card__row-num" style="cursor:default">{n.number}</span>
+                      )}
+                      {n.note && <span style="font-size:0.7rem;color:rgba(10,15,30,0.4);display:block">{n.note}</span>}
+                    </div>
+                    {n.available && (
+                      <span class={`emg-card__row-badge emg-card__row-badge--${n.available}`}>{n.available}</span>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              <div class="emg-card__footer">
+                <a href={`/zonas/${zona.slug}`} class="emg-card__zone-link">
+                  Seguridad privada en {zona.name}
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+                <span class="emg-card__verified">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  {zona.fuente}
+                </span>
+              </div>
+
+            </article>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── DISCLAIMER ────────────────────────────────────────────────────────── -->
+  <section class="emg-disclaimer" aria-label="Notas sobre el directorio">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:1.75rem">
+        <span class="prose-section-badge">Información importante</span>
+        <h2 style="font-size:1.25rem;font-weight:800;color:var(--color-primary);margin:0.5rem 0 0">Sobre este directorio</h2>
+      </div>
+      <div class="emg-disclaimer__inner">
+        <div class="emg-disclaimer__card">
+          <div class="emg-disclaimer__icon emg-disclaimer__icon--warn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <div>
+            <h3 class="emg-disclaimer__title">En emergencia: siempre 9-1-1 primero</h3>
+            <p class="emg-disclaimer__text">El 9-1-1 conecta con policía, bomberos y ambulancias de forma simultánea. Es el número más eficiente ante cualquier emergencia. Los números complementarios de este directorio son para consultas no urgentes.</p>
+          </div>
+        </div>
+        <div class="emg-disclaimer__card">
+          <div class="emg-disclaimer__icon emg-disclaimer__icon--info">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <div>
+            <h3 class="emg-disclaimer__title">Números verificados, no infalibles</h3>
+            <p class="emg-disclaimer__text">Los números de este directorio fueron verificados en fuentes oficiales en <strong>abril 2026</strong>. Los números de sectores específicos de policía pueden cambiar sin previo aviso. Ante duda, usa el 9-1-1. <a href="/contacto">Reportar número incorrecto →</a></p>
+          </div>
+        </div>
+        <div class="emg-disclaimer__card">
+          <div class="emg-disclaimer__icon emg-disclaimer__icon--update">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+          </div>
+          <div>
+            <h3 class="emg-disclaimer__title">Fuentes oficiales</h3>
+            <p class="emg-disclaimer__text">Los datos provienen de la <strong>SSC CDMX</strong> (ssc.cdmx.gob.mx), los sitios web de cada alcaldía y municipio. ORIGINS no tiene relación con las instituciones de seguridad pública. Este directorio es un recurso de orientación ciudadana.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA CONTEXTUAL ORIGINS ────────────────────────────────────────────── -->
+  <section class="emg-cta" aria-labelledby="cta-title">
+    <div class="container">
+      <div class="emg-cta__inner">
+        <div>
+          <span class="emg-cta__badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Seguridad Privada · ORIGINS
+          </span>
+          <h2 class="emg-cta__title" id="cta-title">La Policía y ORIGINS son Complementarios</h2>
+          <p class="emg-cta__text">El tiempo de respuesta promedio de una patrulla en CDMX es de 8 a 15 minutos. Nuestro <strong>monitoreo de alarmas</strong> verifica el incidente y activa la respuesta en menos de 90 segundos. Mientras esperas a la patrulla, ya tenemos a alguien respondiendo.</p>
+          <div class="emg-cta__stat">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Monitoreo: respuesta en &lt; 90 segundos · Guardia 24/7 en tu condominio
+          </div>
+        </div>
+        <div class="emg-cta__actions">
+          <a href="/servicios/monitoreo-alarmas" class="emg-cta__btn emg-cta__btn--primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Ver Monitoreo de Alarmas
+          </a>
+          <a href="https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20privada%20para%20mi%20condominio" class="emg-cta__btn emg-cta__btn--wa" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp Directo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NAVCTA FOOTER ─────────────────────────────────────────────────────── -->
+  <NavCTA
+    footer={true}
+    ariaLabel="Navegar a zonas y servicios de seguridad"
+    cards={[
+      { label: 'Zonas de Cobertura', sublabel: 'CDMX y Estado de México', href: '/zonas', icon: 'map' },
+      { label: 'Nuestros Servicios', sublabel: 'Guardias, accesos y monitoreo', href: '/servicios', icon: 'shield' },
+      { label: 'Monitoreo 24/7', sublabel: 'Respuesta en < 90 segundos', href: '/servicios/monitoreo-alarmas', icon: 'monitor' },
+      { label: 'Cotización Gratis', sublabel: 'Diagnóstico en 24 horas', href: 'https://wa.me/525530255580', whatsapp: true, accent: true, external: true },
+    ]}
+  />
+
+</Base>

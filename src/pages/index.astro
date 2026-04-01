@@ -18,6 +18,13 @@ import { homepageTestimonials, trustMetrics } from '../data/homepage-testimonial
 import { homepageFaqs } from '../data/homepage-faqs';
 import { homepageCredentials, companyStats } from '../data/homepage-credentials';
 
+// Blog posts para preview
+import { getCollection } from 'astro:content';
+const allBlogPosts = await getCollection('blog', ({ data }) => !data.draft);
+const featuredBlogPosts = allBlogPosts
+  .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
+  .slice(0, 3);
+
 // Import section styles
 import '../styles/sections/index.css';
 
@@ -34,7 +41,9 @@ const schema = {
       "legalName": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
       "alternateName": ["ORIGINS Private Security", "Seguridad Privada para Condominios CDMX"],
       "image": `${siteUrl}/img/logo.avif`,
-      "description": "Empresa especializada en seguridad privada para condominios y residenciales en CDMX. Guardias intramuros certificados SSC para condominios verticales y horizontales, control de accesos 24/7, monitoreo CCTV. +15 años protegiendo comunidades residenciales. Permiso SSC 0102-15.",
+      "description": "Empresa especializada en seguridad privada para condominios y residenciales en CDMX y Estado de México. Guardias intramuros certificados SSC, control de accesos 24/7, monitoreo CCTV y supervisión semanal documentada. +15 años protegiendo comunidades residenciales. Permiso SSC 0102-15.",
+      "foundingDate": "2008",
+      "priceRange": "$$",
       "url": siteUrl,
       "telephone": "+52-55-3025-5580",
       "email": "contacto@seguridad-privada.com.mx",
@@ -120,8 +129,8 @@ const schema = {
 ---
 
 <Base
-  title="Seguridad Privada para Condominios en CDMX | Guardias Intramuros SSC"
-  description="Seguridad privada para condominios en CDMX. Guardias intramuros certificados SSC para condominios y residenciales: control de accesos 24/7, rondines, monitoreo CCTV. +15 años. Cotización gratis."
+  title="Empresa de Seguridad Privada para Condominios CDMX | ORIGINS"
+  description="Empresa de seguridad privada especializada en condominios y residenciales en CDMX. Guardias intramuros SSC, control de accesos 24/7, +15 años, +50 desarrollos. Diagnóstico sin costo."
   canonical={siteUrl}
   schema={schema}
 >
@@ -142,11 +151,11 @@ const schema = {
           </div>
 
           <h1 id="hero-title" class="hero__title">
-            Seguridad Privada para Condominios en CDMX — Guardias Intramuros Certificados 24/7
+            Empresa de Seguridad Privada para Condominios en CDMX — Guardias Intramuros Certificados SSC
           </h1>
 
           <p class="hero__subtitle">
-            Especialistas en <strong>seguridad privada para condominios</strong> y residenciales: guardias intramuros, control de accesos y monitoreo permanente en la Zona Metropolitana
+            <strong>Guardias intramuros certificados SSC</strong>, control de accesos 24/7 y protocolos diseñados para tu comunidad residencial. Más de 50 desarrollos protegidos en CDMX y Estado de México.
           </p>
 
           <!-- Trust signals -->
@@ -163,16 +172,20 @@ const schema = {
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               <span>Atención 24/7</span>
             </div>
+            <div class="hero__trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>98% tasa de renovación</span>
+            </div>
           </div>
 
           <div class="hero__cta">
-            <a href="#cotizacion" class="btn btn-primary btn-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              Solicitar Cotización Gratis
+            <a href="#servicios" class="btn btn-primary btn-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              Explora nuestros servicios
             </a>
-            <a href="https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp Directo
+            <a href="#cotizacion" class="btn btn-outline btn-lg">
+              Solicitar evaluación gratis
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
             </a>
           </div>
         </div>
@@ -180,10 +193,10 @@ const schema = {
         <!-- Columna derecha: contenido SEO -->
         <div class="hero__seo">
           <p class="hero__seo-text">
-            En <strong>ORIGINS Private Security</strong> llevamos más de 15 años protegiendo <a href="/servicios/seguridad-condominios">condominios verticales y horizontales</a> en la Ciudad de México. Nos diferenciamos de las empresas generalistas porque trabajamos exclusivamente con comunidades residenciales: nuestros <a href="/servicios/guardias-intramuros">guardias intramuros</a> conocen a cada residente, dominan los protocolos de acceso y entienden que en un condominio la discreción y el trato profesional son tan importantes como la vigilancia misma.
+            En <strong>ORIGINS Private Security</strong> llevamos más de 15 años protegiendo <a href="/servicios/seguridad-condominios">condominios verticales y horizontales</a>, fraccionamientos y residenciales privados en la Zona Metropolitana de México. Nos diferenciamos de las empresas generalistas porque trabajamos exclusivamente con comunidades residenciales: nuestros <a href="/servicios/guardias-intramuros">guardias intramuros</a> conocen a cada residente, dominan los protocolos de acceso y entienden que en un condominio la discreción y el trato profesional son tan importantes como la vigilancia misma.
           </p>
           <p class="hero__seo-text">
-            Operamos con <strong>Permiso SSC 0102-15</strong>, póliza de responsabilidad civil vigente y cumplimiento total de obligaciones laborales. Cada elemento pasa por verificación de antecedentes, exámenes psicométricos y capacitación específica para entornos residenciales. Si buscas una empresa con <a href="/servicios/control-de-accesos">control de accesos</a> real, bitácoras digitales y supervisión documentada semana a semana, esto es para ti. Más de 50 comunidades en CDMX y <a href="/zonas">Zona Metropolitana</a> ya confían en ORIGINS.
+            Operamos con <strong>Permiso SSC 0102-15</strong>, póliza de responsabilidad civil vigente y cumplimiento total de obligaciones laborales ante el IMSS. Cada elemento pasa por verificación de antecedentes, exámenes psicométricos y capacitación específica para entornos residenciales. Si buscas una <a href="/servicios/control-de-accesos">empresa de seguridad privada</a> con control de accesos real, bitácoras digitales y supervisión documentada semana a semana, esto es para ti. Más de 50 comunidades en <a href="/zonas">CDMX y Estado de México</a> ya confían en ORIGINS.
           </p>
         </div>
 
@@ -259,9 +272,9 @@ const schema = {
       <SectionHeader
         badge="Nuestros Servicios"
         titulo="Especialistas en Seguridad para Condominios y Residenciales"
-        subtitulo="Soluciones de seguridad intramuros diseñadas específicamente para comunidades residenciales en CDMX"
-        parrafo1='En <a href="/nosotros"><strong>ORIGINS Private Security</strong></a> nos especializamos exclusivamente en comunidades residenciales. Nuestros guardias conocen a cada residente, gestionan accesos con registro digital y coordinan directamente con la administración del condominio.'
-        parrafo2='Más de 50 desarrollos en CDMX y <a href="/zonas">Zona Metropolitana</a> confían en nosotros porque ofrecemos lo que las empresas generalistas no pueden: protocolos diseñados para la convivencia en comunidad, supervisión semanal documentada y <a href="/servicios/guardias-intramuros">guardias intramuros</a> con certificación SSC vigente.'
+        subtitulo="Guardias intramuros, control de accesos y monitoreo diseñados exclusivamente para comunidades residenciales en CDMX y Estado de México"
+        parrafo1='En <a href="/nosotros"><strong>ORIGINS Private Security</strong></a> nos especializamos exclusivamente en comunidades residenciales. No somos una empresa generalista: cada guardia, protocolo y proceso está diseñado para la convivencia en comunidad. Nuestros guardias intramuros conocen a cada residente, gestionan accesos con registro digital y coordinan directamente con la administración del condominio.'
+        parrafo2='Más de 50 desarrollos en <a href="/zonas">CDMX y Estado de México</a> confían en nosotros porque ofrecemos lo que las empresas generalistas no pueden: protocolos adaptados a cada inmueble, supervisión semanal documentada y <a href="/servicios/guardias-intramuros">guardias intramuros</a> con certificación SSC vigente. El 98% de nuestros clientes renueva el contrato.'
         align="left"
       />
 
@@ -363,7 +376,7 @@ const schema = {
           descripcion="Servicios de alto valor para empresas y ejecutivos: protección personal, custodia de valores, consultoría estratégica y análisis de vulnerabilidades con metodología internacional."
           imagenHero="/img/img-index/proteccion-ejecutiva.avif"
           imagenHeroAlt="Protección ejecutiva y consultoría de seguridad CDMX"
-          href="/servicios/servicios-de-proteccion-ejecutiva-y-consultoria"
+          href="/servicios/seguridad-especializada"
           ctaTexto="Ver Protección y Consultoría"
           subServicios={[
             {
@@ -410,6 +423,69 @@ const schema = {
     </div>
   </section>
 
+  <!-- CÓMO TRABAJAMOS — Proceso 4 pasos -->
+  <section class="proceso-section" id="proceso" aria-labelledby="proceso-title">
+    <div class="container">
+
+      <SectionHeader
+        badge="Nuestro Proceso"
+        titulo="Cómo Protegemos tu Condominio, Paso a Paso"
+        subtitulo="Un método claro, documentado y sin sorpresas. Desde el primer diagnóstico hasta la operación diaria, sabes exactamente qué esperar de ORIGINS."
+        align="center"
+      />
+
+      <div class="proceso-grid">
+
+        <div class="proceso-step">
+          <div class="proceso-step__number" aria-hidden="true">01</div>
+          <div class="proceso-step__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3 class="proceso-step__title">Diagnóstico sin costo</h3>
+          <p class="proceso-step__desc">Evaluamos tu condominio en menos de 24 horas: número de accesos, tipo de inmueble, vulnerabilidades detectadas y recomendaciones concretas. Sin compromiso.</p>
+        </div>
+
+        <div class="proceso-step">
+          <div class="proceso-step__number" aria-hidden="true">02</div>
+          <div class="proceso-step__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3 class="proceso-step__title">Propuesta personalizada</h3>
+          <p class="proceso-step__desc">Diseñamos un plan operativo específico para tu inmueble: consignas, turnos, protocolos de acceso, número de elementos y servicios complementarios. Todo por escrito.</p>
+        </div>
+
+        <div class="proceso-step">
+          <div class="proceso-step__number" aria-hidden="true">03</div>
+          <div class="proceso-step__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="proceso-step__title">Arranque operativo</h3>
+          <p class="proceso-step__desc">Asignamos guardias certificados SSC ya capacitados para tu tipo de desarrollo. El supervisor presenta al equipo en persona. Operación activa desde el primer día.</p>
+        </div>
+
+        <div class="proceso-step">
+          <div class="proceso-step__number" aria-hidden="true">04</div>
+          <div class="proceso-step__icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="proceso-step__title">Supervisión continua</h3>
+          <p class="proceso-step__desc">Visitas semanales del supervisor, bitácoras digitales en tiempo real, reportes mensuales a la administración y canal directo para cualquier incidencia. Sin sorpresas.</p>
+        </div>
+
+      </div>
+
+      <!-- CTA de transición hacia nosotros -->
+      <div class="proceso-footer">
+        <p class="proceso-footer__text">¿Quieres conocer más sobre quiénes somos y cómo operamos?</p>
+        <a href="/nosotros" class="proceso-footer__link">
+          Conoce a ORIGINS
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
   <!-- ABOUT ORIGINS -->
   <section class="about-origins" aria-labelledby="about-title">
     <div class="container">
@@ -424,16 +500,16 @@ const schema = {
           </span>
 
           <h2 id="about-title" class="about-origins__title">
-            Empresa de Seguridad Privada para Condominios en CDMX — Desde 2008
+            +15 Años Protegiendo Comunidades Residenciales en la Zona Metropolitana
           </h2>
 
           <p class="about-origins__tagline">
-            Nos dedicamos exclusivamente a comunidades residenciales. Eso nos hace distintos.
+            Nos especializamos exclusivamente en comunidades residenciales. No somos generalistas — y eso se nota desde el primer día.
           </p>
 
           <div class="about-origins__text">
-            <p><strong>ORIGINS PRIVATE SECURITY S.A. DE C.V.</strong> trabaja exclusivamente con condominios, fraccionamientos y residenciales privados en la Zona Metropolitana. No somos una empresa generalista: cada protocolo, cada guardia y cada proceso están diseñados para la convivencia en comunidad.</p>
-            <p>Operamos con <strong>Permiso SSC 0102-15</strong> vigente, póliza de responsabilidad civil y cumplimiento total de obligaciones laborales. Supervisión semanal documentada y reportes mensuales a la administración de cada desarrollo.</p>
+            <p><strong>ORIGINS PRIVATE SECURITY S.A. DE C.V.</strong> trabaja exclusivamente con condominios, fraccionamientos y residenciales privados en la Zona Metropolitana. Cada protocolo, cada guardia y cada proceso están diseñados para la convivencia en comunidad: discreción, trato profesional y respuesta inmediata cuando se necesita.</p>
+            <p>Operamos con <strong>Permiso SSC 0102-15</strong> vigente, póliza de responsabilidad civil y cumplimiento total de obligaciones laborales ante IMSS-INFONAVIT. Supervisión semanal documentada, bitácoras digitales de incidencias y reportes mensuales a la administración de cada desarrollo. Lo que firmamos, lo cumplimos.</p>
           </div>
 
           <!-- Stats -->
@@ -451,9 +527,9 @@ const schema = {
             <a href="/nosotros" class="about-origins__btn about-origins__btn--outline">
               Conoce nuestra empresa
             </a>
-            <a href="https://wa.me/525530255580?text=Hola%2C%20quiero%20información%20sobre%20ORIGINS%20Private%20Security" class="about-origins__btn about-origins__btn--wa" target="_blank" rel="noopener">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              55 3025 5580
+            <a href="#proceso" class="about-origins__btn about-origins__btn--outline">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              Cómo trabajamos
             </a>
           </div>
 
@@ -474,14 +550,176 @@ const schema = {
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
+  <!-- PARA QUIÉN ES — Buyer Personas -->
+  <section class="para-quien" aria-label="¿Para quién es nuestro servicio de seguridad?">
+    <div class="container">
+
+      <SectionHeader
+        badge="¿Para quién es este servicio?"
+        titulo="Seguridad Privada Adaptada a Cada Responsabilidad"
+        subtitulo="Administradores de condominio, comités vecinales y desarrolladores inmobiliarios tienen necesidades distintas. Nosotros trabajamos distinto con cada perfil."
+        align="center"
+        tema="dark"
+      />
+
+      <div class="para-quien__grid">
+
+        <div class="para-quien__card">
+          <div class="para-quien__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <h3>Administradores de Condominio</h3>
+          <p>Necesitas guardias que cumplan protocolos sin excusas, reportes semanales documentados y un supervisor al que puedas exigirle resultados. Con ORIGINS tienes un canal directo, bitácoras en tiempo real y cero sorpresas operativas.</p>
+          <a href="#cotizacion" class="para-quien__link">
+            Solicitar propuesta
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+
+        <div class="para-quien__card">
+          <div class="para-quien__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Comités de Vigilancia</h3>
+          <p>Tu responsabilidad con los vecinos es real. Resultados visibles desde el primer mes: menos incidencias, orden en accesos y guardias que los residentes reconocen y respetan. Informes que te ayudan a rendir cuentas a la asamblea.</p>
+          <a href="#cotizacion" class="para-quien__link">
+            Solicitar propuesta
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+
+        <div class="para-quien__card">
+          <div class="para-quien__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3>Desarrolladores Inmobiliarios</h3>
+          <p>Si administras varios desarrollos, necesitas estándares homogéneos y capacidad de escala. Protocolos estandarizables, condiciones comerciales por volumen y un solo punto de contacto para toda tu cartera de inmuebles en CDMX y EdoMex.</p>
+          <a href="#cotizacion" class="para-quien__link">
+            Solicitar propuesta
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COBERTURA GEOGRÁFICA -->
+  <section class="cobertura-section" aria-labelledby="cobertura-title">
+    <div class="container">
+
+      <SectionHeader
+        badge="Zonas de Cobertura"
+        titulo="Seguridad Privada en CDMX y Estado de México"
+        subtitulo="Presencia operativa en las principales zonas residenciales de la Zona Metropolitana. ¿Está tu condominio en nuestra área de cobertura?"
+        align="center"
+      />
+
+      <div class="cobertura-grid">
+
+        <div class="cobertura-zona">
+          <div class="cobertura-zona__header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+            <h3>Ciudad de México</h3>
+          </div>
+          <ul class="cobertura-zona__list">
+            <li><a href="/zonas/miguel-hidalgo">Miguel Hidalgo · Polanco · Lomas</a></li>
+            <li><a href="/zonas/cuauhtemoc">Cuauhtémoc · Roma · Condesa</a></li>
+            <li><a href="/zonas/benito-juarez">Benito Juárez · Del Valle · Nápoles</a></li>
+            <li><a href="/zonas/alvaro-obregon">Álvaro Obregón · Santa Fe · Pedregal</a></li>
+            <li><a href="/zonas/coyoacan">Coyoacán · Perisur · Tlalpan</a></li>
+            <li><span class="cobertura-zona__more">+ todas las 16 alcaldías CDMX</span></li>
+          </ul>
+        </div>
+
+        <div class="cobertura-zona">
+          <div class="cobertura-zona__header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+            <h3>Estado de México</h3>
+          </div>
+          <ul class="cobertura-zona__list">
+            <li><a href="/zonas/naucalpan">Naucalpan · Interlomas · Satélite</a></li>
+            <li><a href="/zonas/tlalnepantla">Tlalnepantla · Boulevares</a></li>
+            <li><a href="/zonas/atizapan">Atizapán · Hacienda del Parque</a></li>
+            <li><span>Huixquilucan · Bosques de las Lomas</span></li>
+            <li><span>Cuautitlán Izcalli · Metepec</span></li>
+            <li><span class="cobertura-zona__more">+ municipios conurbados</span></li>
+          </ul>
+        </div>
+
+        <div class="cobertura-zona cobertura-zona--cta">
+          <div class="cobertura-zona__cta-inner">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            <h3>¿Tu zona está cubierta?</h3>
+            <p>Verificamos cobertura en tu área y te enviamos una propuesta personalizada en menos de 24 horas.</p>
+            <a href="#cotizacion" class="btn btn-primary">Verificar mi zona</a>
+            <a href="/zonas" class="cobertura-zona__ver-todas">Ver todas las zonas →</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMPROMISOS OPERATIVOS -->
+  <section class="compromisos-section" aria-labelledby="compromisos-title">
+    <div class="container">
+
+      <SectionHeader
+        badge="Nuestros Compromisos"
+        titulo="Garantías Operativas que Puedes Exigir por Escrito"
+        subtitulo="No son promesas comerciales — son compromisos contractuales. Si no los cumplimos, lo ajustamos sin costo."
+        align="center"
+      />
+
+      <div class="compromisos-grid">
+
+        <div class="compromiso-card">
+          <div class="compromiso-card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="compromiso-card__title">Reemplazo en menos de 4 horas</h3>
+          <p class="compromiso-card__desc">Si un guardia falta, enviamos un elemento de respaldo con las mismas consignas en un máximo de 4 horas. Tu operación no se detiene.</p>
+        </div>
+
+        <div class="compromiso-card">
+          <div class="compromiso-card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3 class="compromiso-card__title">Supervisión semanal documentada</h3>
+          <p class="compromiso-card__desc">Cada semana un supervisor visita tu condominio, revisa bitácoras, verifica cumplimiento de rondines y te envía un informe con evidencia fotográfica.</p>
+        </div>
+
+        <div class="compromiso-card">
+          <div class="compromiso-card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3 class="compromiso-card__title">100% cumplimiento legal</h3>
+          <p class="compromiso-card__desc">Permiso SSC vigente, todo el personal dado de alta en IMSS-INFONAVIT, póliza de responsabilidad civil activa y facturación fiscal completa. Verificable en cualquier momento.</p>
+        </div>
+
+        <div class="compromiso-card">
+          <div class="compromiso-card__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3 class="compromiso-card__title">Propuesta en menos de 24 horas</h3>
+          <p class="compromiso-card__desc">Evaluamos tu condominio, detectamos vulnerabilidades y te entregamos una propuesta operativa personalizada en menos de un día hábil. Sin compromiso.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS — Red de Confianza -->
   <section class="testimonials-section" aria-labelledby="testimonials-title">
     <div class="container">
       <div class="testimonials-header">
         <SectionHeader
-          badge="Testimonios"
-          titulo="Lo Que Dicen Nuestros Clientes"
-          subtitulo="Administradores y comités de vigilancia comparten su experiencia con ORIGINS"
+          badge="Red de Confianza"
+          titulo="Lo Que Dicen Empresas y Profesionales del Sector"
+          subtitulo="Empresas de seguridad, equipamiento industrial y protección contra incendios que conocen nuestra operación y respaldan nuestro trabajo con su nombre."
           align="center"
         />
       </div>
@@ -523,28 +761,6 @@ const schema = {
     </div>
   </section>
 
-  <!-- CTA BANNER -->
-  <section class="cta-banner" aria-labelledby="cta-title">
-    <div class="container">
-      <div class="cta-banner__content">
-        <div class="cta-banner__text">
-          <h2 id="cta-title">¿Listo para Proteger tu Condominio?</h2>
-          <p>Diagnóstico de seguridad gratuito + propuesta personalizada en 24 horas</p>
-        </div>
-        <div class="cta-banner__actions">
-          <a href="#cotizacion" class="btn btn-primary btn-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Solicitar Cotización Gratis
-          </a>
-          <a href="https://wa.me/525530255580" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            WhatsApp Directo
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- MÓDULO FAQ + COTIZACIÓN -->
   <section class="faq-cotizacion" id="cotizacion" aria-labelledby="faq-title">
     <div class="container">
@@ -552,8 +768,8 @@ const schema = {
       <!-- Header unificado -->
       <SectionHeader
         badge="FAQ y Cotización"
-        titulo="Todo lo que necesitas saber"
-        subtitulo="Preguntas frecuentes y cotización personalizada en un solo lugar"
+        titulo="Preguntas frecuentes sobre seguridad para condominios"
+        subtitulo="Respuestas directas para que tomes la mejor decisión para tu comunidad — y cotización personalizada sin costo"
         align="center"
       />
 
@@ -567,7 +783,7 @@ const schema = {
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
               Preguntas Frecuentes
             </span>
-            <h2 id="faq-title" class="faq-cotizacion__col-title">Lo que administradores y comités preguntan</h2>
+            <h2 id="faq-title" class="faq-cotizacion__col-title">Lo que administradores y comités de vigilancia nos preguntan</h2>
             <p class="faq-cotizacion__col-sub">¿No encuentras tu respuesta? Escríbenos al <a href="https://wa.me/525530255580">WhatsApp 55 3025 5580</a>.</p>
           </div>
 
@@ -587,14 +803,14 @@ const schema = {
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 Cotización Gratuita
               </span>
-              <h3 class="faq-cotizacion__col-title">Solicita tu diagnóstico de seguridad</h3>
-              <p class="faq-cotizacion__col-sub">Respuesta personalizada en menos de 24 horas. Sin compromiso.</p>
+              <h3 class="faq-cotizacion__col-title">Solicita tu diagnóstico de seguridad sin costo</h3>
+              <p class="faq-cotizacion__col-sub">Evaluamos las necesidades de tu condominio y enviamos una propuesta personalizada en menos de 24 horas. Sin compromiso.</p>
             </div>
 
             <form id="securityForm" class="faq-cotizacion__form" action="https://formsubmit.co/josecruz@originsecurity.mx" method="POST" novalidate>
               <input type="text" name="_honey" style="display:none" aria-hidden="true">
               <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_next" value="https://seguridad-privada.com.mx/gracias.html">
+              <input type="hidden" name="_next" value="https://seguridad-privada.com.mx/gracias">
 
               <div class="faq-form__field">
                 <label for="nombre">Nombre completo <span aria-hidden="true">*</span></label>
@@ -664,14 +880,29 @@ const schema = {
                 <label for="terminos">Acepto la <a href="/aviso-de-privacidad">política de privacidad</a> y recibir información comercial</label>
               </div>
 
+              <div class="faq-form__proof">
+                <div class="faq-form__proof-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>+50 condominios protegidos</span>
+                </div>
+                <div class="faq-form__proof-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>98% tasa de renovación</span>
+                </div>
+                <div class="faq-form__proof-item">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Permiso SSC 0102-15</span>
+                </div>
+              </div>
+
               <button type="submit" class="faq-form__submit">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                Solicitar Cotización por WhatsApp
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Solicitar mi Evaluación Gratuita
               </button>
 
               <p class="faq-form__note">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-                Diagnóstico gratuito · Respuesta en 24h · Permiso SSC 0102-15
+                Diagnóstico gratuito · Respuesta en menos de 24h · Sin compromiso
               </p>
             </form>
 
@@ -681,6 +912,51 @@ const schema = {
       </div>
     </div>
   </section>
+
+  <!-- BLOG PREVIEW — Artículos recientes -->
+  {featuredBlogPosts.length > 0 && (
+  <section class="blog-preview-section" aria-labelledby="blog-preview-title">
+    <div class="container">
+
+      <SectionHeader
+        badge="Guías y Recursos"
+        titulo="Todo lo que Necesitas Saber Sobre Seguridad para Condominios"
+        subtitulo="Artículos escritos por nuestro equipo operativo. Información real para administradores, comités y desarrolladores."
+        align="center"
+      />
+
+      <div class="blog-preview-grid">
+        {featuredBlogPosts.map((post) => (
+          <article class="blog-preview-card">
+            <div class="blog-preview-card__body">
+              <span class="blog-preview-card__cluster">
+                {post.data.cluster === 'guardias-intramuros' ? 'Guardias Intramuros' :
+                 post.data.cluster === 'seguridad-condominios' ? 'Seguridad Condominios' :
+                 post.data.cluster === 'seguridad-residenciales' ? 'Seguridad Residenciales' : 'Seguridad Privada'}
+              </span>
+              <h3 class="blog-preview-card__title">
+                <a href={`/blog/${post.id}`}>{post.data.title}</a>
+              </h3>
+              <p class="blog-preview-card__desc">{post.data.description}</p>
+              <a href={`/blog/${post.id}`} class="blog-preview-card__link">
+                Leer artículo completo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="blog-preview-footer">
+        <a href="/blog" class="blog-preview-ver-todos">
+          Ver todos los artículos de seguridad
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+  )}
 
   <!-- NAV-CTA FOOTER — Accesos rápidos antes del footer -->
   <section class="nav-cta nav-cta--footer" aria-label="Explora el sitio">
@@ -700,14 +976,14 @@ const schema = {
           </div>
         </a>
 
-        <a href="/bolsa-de-trabajo" class="nav-cta__card nav-cta__card--2">
+        <a href="#preguntas-frecuentes" class="nav-cta__card nav-cta__card--2">
           <div class="nav-cta__card-inner">
             <span class="nav-cta__icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
             </span>
             <div class="nav-cta__text">
-              <strong>Bolsa de Trabajo</strong>
-              <span>Únete al equipo ORIGINS</span>
+              <strong>Preguntas Frecuentes</strong>
+              <span>Costos, procesos y requisitos</span>
             </div>
             <svg class="nav-cta__arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
           </div>
@@ -744,6 +1020,573 @@ const schema = {
   </section>
 
 </Base>
+
+<style>
+  /* =====================================================
+     PARA QUIÉN ES — Buyer Persona Section
+     ===================================================== */
+  .para-quien {
+    padding: 5rem 0;
+    background: #111111;
+  }
+
+  .para-quien__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .para-quien__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .para-quien__card {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+    padding: 2rem 1.75rem;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .para-quien__card:hover {
+    border-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+  }
+
+  .para-quien__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    margin-bottom: 1.25rem;
+    color: #f8f9fa;
+    flex-shrink: 0;
+  }
+
+  .para-quien__card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #f8f9fa;
+    margin: 0 0 0.75rem;
+    line-height: 1.35;
+  }
+
+  .para-quien__card p {
+    font-size: 0.9rem;
+    color: rgba(248, 249, 250, 0.62);
+    line-height: 1.7;
+    margin: 0 0 1.5rem;
+    flex: 1;
+  }
+
+  .para-quien__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #f8f9fa;
+    text-decoration: none;
+    opacity: 0.65;
+    transition: opacity 0.2s ease;
+    margin-top: auto;
+  }
+
+  .para-quien__link:hover {
+    opacity: 1;
+  }
+
+  /* =====================================================
+     PROCESO — Cómo Trabajamos
+     ===================================================== */
+  .proceso-section {
+    padding: 5rem 0;
+    background: #f8f9fa;
+  }
+
+  .proceso-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  @media (min-width: 640px) {
+    .proceso-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .proceso-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .proceso-step {
+    position: relative;
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+
+  .proceso-step:hover {
+    box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+  }
+
+  .proceso-step__number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #f1f3f5;
+    line-height: 1;
+    margin-bottom: 0.75rem;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
+  }
+
+  .proceso-step__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #111;
+    border-radius: 10px;
+    color: #fff;
+    margin-bottom: 1.25rem;
+  }
+
+  .proceso-step__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 0.75rem;
+    line-height: 1.3;
+  }
+
+  .proceso-step__desc {
+    font-size: 0.875rem;
+    color: #6c757d;
+    line-height: 1.7;
+    margin: 0;
+    flex: 1;
+  }
+
+  .proceso-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  }
+
+  .proceso-footer__text {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin: 0;
+  }
+
+  .proceso-footer__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+    border-bottom: 1.5px solid #111;
+    padding-bottom: 1px;
+    transition: opacity 0.2s ease;
+  }
+
+  .proceso-footer__link:hover {
+    opacity: 0.65;
+  }
+
+  /* =====================================================
+     COBERTURA GEOGRÁFICA
+     ===================================================== */
+  .cobertura-section {
+    padding: 5rem 0;
+    background: #fff;
+  }
+
+  .cobertura-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .cobertura-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .cobertura-zona {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 2rem;
+  }
+
+  .cobertura-zona__header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1.25rem;
+    color: #111;
+  }
+
+  .cobertura-zona__header h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 0;
+    color: #111;
+  }
+
+  .cobertura-zona__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .cobertura-zona__list li {
+    font-size: 0.875rem;
+    color: #495057;
+    line-height: 1.4;
+  }
+
+  .cobertura-zona__list a {
+    color: #495057;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .cobertura-zona__list a:hover {
+    color: #111;
+    text-decoration: underline;
+  }
+
+  .cobertura-zona__more {
+    font-size: 0.8rem;
+    color: #adb5bd;
+    font-style: italic;
+  }
+
+  .cobertura-zona--cta {
+    background: #111;
+    border-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cobertura-zona__cta-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    color: #fff;
+  }
+
+  .cobertura-zona__cta-inner svg {
+    color: rgba(255,255,255,0.4);
+  }
+
+  .cobertura-zona__cta-inner h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+  }
+
+  .cobertura-zona__cta-inner p {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.7);
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .cobertura-zona__ver-todas {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .cobertura-zona__ver-todas:hover {
+    color: rgba(255,255,255,0.85);
+  }
+
+  /* =====================================================
+     BLOG PREVIEW
+     ===================================================== */
+  .blog-preview-section {
+    padding: 5rem 0;
+    background: #f8f9fa;
+  }
+
+  .blog-preview-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    .blog-preview-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .blog-preview-card {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+  }
+
+  .blog-preview-card:hover {
+    box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+  }
+
+  .blog-preview-card__body {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .blog-preview-card__cluster {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6c757d;
+    background: #f1f3f5;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+
+  .blog-preview-card__title {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 0.75rem;
+    color: #111;
+    flex: 1;
+  }
+
+  .blog-preview-card__title a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .blog-preview-card__title a:hover {
+    color: #444;
+  }
+
+  .blog-preview-card__desc {
+    font-size: 0.875rem;
+    color: #6c757d;
+    line-height: 1.65;
+    margin: 0 0 1.25rem;
+  }
+
+  .blog-preview-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+    margin-top: auto;
+    transition: gap 0.2s ease;
+  }
+
+  .blog-preview-card__link:hover {
+    gap: 0.5rem;
+  }
+
+  .blog-preview-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+
+  .blog-preview-ver-todos {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+    border: 1.5px solid #111;
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .blog-preview-ver-todos:hover {
+    background: #111;
+    color: #fff;
+  }
+
+  /* =====================================================
+     COMPROMISOS OPERATIVOS
+     ===================================================== */
+  .compromisos-section {
+    padding: 5rem 0;
+    background: #f8f9fa;
+  }
+
+  .compromisos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  @media (min-width: 640px) {
+    .compromisos-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .compromisos-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .compromiso-card {
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 2rem 1.75rem;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+    position: relative;
+  }
+
+  .compromiso-card:hover {
+    box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+  }
+
+  .compromiso-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #111;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .compromiso-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: #f1f3f5;
+    border-radius: 10px;
+    margin-bottom: 1.25rem;
+    color: #111;
+  }
+
+  .compromiso-card__title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 0.75rem;
+    line-height: 1.3;
+  }
+
+  .compromiso-card__desc {
+    font-size: 0.85rem;
+    color: #6c757d;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* =====================================================
+     MICRO SOCIAL PROOF — Formulario
+     ===================================================== */
+  .faq-form__proof {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+  }
+
+  .faq-form__proof-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: #495057;
+    font-weight: 500;
+  }
+
+  .faq-form__proof-item svg {
+    color: #28a745;
+    flex-shrink: 0;
+  }
+
+  /* btn-outline para hero */
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.45);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+
+  .btn-outline:hover {
+    border-color: rgba(255,255,255,0.85);
+    background: rgba(255,255,255,0.08);
+  }
+</style>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {

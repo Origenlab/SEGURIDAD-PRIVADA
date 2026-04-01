@@ -1,155 +1,517 @@
 ---
-title: "Rastreo GPS Satelital para Empresas y Flotillas CDMX | Seguridad Privada"
-description: "Rastreo GPS satelital y seguridad privada para empresas y flotillas en CDMX. Telemetría vehicular, analítica predictiva 24/7. ☎ 55 3025 5580"
+title: "Rastreo GPS Satelital CDMX | Monitoreo Flotillas — ORIGINS"
+description: "Rastreo GPS satelital en tiempo real para flotillas y unidades en CDMX. Geocercas, alertas de velocidad, historial de rutas. Central de monitoreo propia."
 category: service
 publishDate: 2024-01-01
+updatedDate: 2026-04-01
 keywords:
-  - seguridad
-  - seguridad gps satelital
+  - rastreo gps cdmx
+  - rastreo gps satelital para empresas cdmx
+  - localizador gps flotilla cdmx
+  - rastreo vehicular 24 horas cdmx
+  - recuperacion vehiculo robado gps cdmx
+  - control flotilla gps cdmx
+  - rastreo gps flotillas empresas cdmx
+  - monitoreo satelital vehiculos estado de mexico
+  - gps seguridad vehicular tiempo real
+  - plataforma rastreo gps profesional
+relatedServices:
+  - vigilancia-remota-cctv
+  - monitoreo-alarmas
+  - control-de-accesos
+  - tecnologia-monitoreo-seguridad
+  - guardias-intramuros
+targetLocations:
+  - Ciudad de México
+  - Naucalpan
+  - Tlalnepantla
+  - Estado de México
+  - Toluca
+serviceFeatures:
+  - title: "Ubicación Cada 30 Segundos"
+    description: "Actualización en tiempo real cada 30 segundos. Sabes exactamente dónde está tu vehículo en este momento — no hace 10 minutos, ahora."
+    icon: "map-pin"
+  - title: "Monitoreo Humano 24/7"
+    description: "Central ORIGINS vigila tu flotilla. Si detectamos algo anormal fuera de horario o ruta, te contactamos antes de que te enteres por otro medio."
+    icon: "monitor"
+  - title: "Geocercas con Alertas Inmediatas"
+    description: "Define zonas autorizadas y horarios. Recibes alerta push en tu celular si un vehículo sale de ruta, entra a zona prohibida o se mueve fuera de horario."
+    icon: "map"
+  - title: "Historial de 90 Días"
+    description: "Revisa el recorrido completo de cualquier vehículo en cualquier fecha. Útil para disputes con clientes, verificación de tiempos y auditorías."
+    icon: "clock"
+  - title: "Coordinación de Recuperación"
+    description: "Si tu vehículo es robado, nuestra central coordina con C5 y policía proporcionando ubicación en tiempo real hasta la recuperación. Tasa de éxito documentada."
+    icon: "shield"
+  - title: "Botón de Pánico Oculto"
+    description: "Botón discreto para el conductor ante emergencias. Activa alerta silenciosa en la central sin que el agresor lo sepa."
+    icon: "alert"
 faqs:
-  - question: "¿Cuál es la diferencia entre GPS satelital y GPS celular, y cómo afecta esto a la precisión?"
-    answer: "El término \"GPS satelital\" se refiere al sistema de navegación por satélite GPS (Global Positioning System) operado por Departamento de Defensa de EE.UU., mientras que \"GPS celular\" o A-GPS (Assisted GPS) combina señales satelitales con triangulación de torres celulares para mayor precisión en zonas urbanas. Nuestros dispositivos utilizan tecnología dual GPS + GLONASS (sistema ruso equivalente) con 24 satélites GPS + 24 satélites GLONASS = 48 satélites disponibles que mejoran precisión en cañones urbanos donde edificios bloquean señal. Precisión típica: 2-5 metros en zona urbana con buena cobertura celular, 5-10 metros en carretera abierta. El dispositivo GPS determina ubicación mediante señales satelitales, pero transmite datos hacia plataforma mediante red celular GSM/3G/4G - por esto el dispositivo requiere chip SIM con plan de datos (incluido en servicio mensual)."
-  - question: "¿Qué es telemetría OBD-II y qué parámetros adicionales proporciona versus GPS básico?"
-    answer: "OBD-II (On-Board Diagnostics II) es puerto de diagnóstico estandarizado obligatorio en vehículos vendidos en EE.UU. desde 1996 y México desde 2006, generalmente ubicado bajo tablero cerca de volante. Conectar dispositivo GPS a puerto OBD-II permite extraer datos técnicos directamente desde ECU (Engine Control Unit - computadora del motor) mediante protocolo CAN Bus. Parámetros capturados incluyen: nivel de combustible instantáneo (no estimado), velocidad precisa, RPM del motor, temperatura de refrigerante y aceite, voltaje de batería, presión de turbo (motores turbo), consumo instantáneo L/100km, códigos DTC (Diagnostic Trouble Codes) de fallas detectadas por computadora. GPS básico solo captura: ubicación, velocidad calculada desde cambio de posición, estado encendido/apagado. Telemetría OBD-II permite mantenimiento predictivo, cálculo preciso de TCO, y detección de fallas mecánicas antes que generen daño mayor."
-  - question: "¿Cómo funcionan las geocercas inteligentes y qué tipos de alertas pueden configurarse?"
-    answer: "Geocerca (geofence) es polígono virtual dibujado sobre mapa que dispara alerta cuando vehículo entra, sale, o permanece tiempo específico en zona delimitada. Tipos de geocercas: (1) Circular - radio fijo desde punto central, ideal para clientes o puntos de interés; (2) Poligonal - forma irregular dibujada manualmente, ideal para zonas de cobertura complejas; (3) Corredor - buffer de N kilómetros alrededor de ruta específica, ideal para detectar desvíos no autorizados. Configuraciones avanzadas: geocerca con horario (activa solo 6 PM - 6 AM para detectar uso nocturno no autorizado), geocerca con tiempo mínimo de estadía (alerta si vehículo permanece < 10 minutos en cliente - posible visita no realizada), geocerca con velocidad máxima (alerta si excede 60 km/h en zona escolar). Sistema soporta geocercas ilimitadas con lógica de negocio personalizada por flotilla."
-  - question: "¿El scoring de conductores puede usarse como base para incentivos o sanciones laborales?"
-    answer: "El scoring de conductores (0-100 puntos) basado en telemetría de comportamiento es métrica objetiva y cuantificable que muchas empresas utilizan en programas de incentivos o políticas disciplinarias, PERO debe implementarse correctamente desde perspectiva legal laboral. Recomendaciones: (1) Establecer sistema de scoring en Reglamento Interior de Trabajo que empleados firman de recibido; (2) Definir criterios objetivos transparentes de cálculo (exceso de velocidad -5 puntos, frenado brusco -2 puntos, etc.) que empleado puede consultar; (3) Proporcionar retroalimentación semanal al conductor sobre su puntuación y áreas de mejora - no puede ser \"sorpresa\" al final del mes; (4) Implementar programa de capacitación para conductores con scoring bajo antes de sanciones; (5) Usar scoring como FACTOR (no único criterio) en bonos de desempeño. Empresas exitosas implementan gamificación positiva: conductores con scoring > 85 reciben bono trimestral, ranking público genera competencia sana, certificados de \"Conductor del Mes\"."
-  - question: "¿Cuál es el TCO (Total Cost of Ownership) real de implementar sistema GPS en flotilla de 50 vehículos?"
-    answer: "Análisis de TCO para flotilla de 50 vehículos con dispositivos GPS profesionales con telemetría OBD-II durante 36 meses: (CAPEX Inicial) Dispositivos GPS 50 unidades × $6,500 MXN = $325,000 MXN, instalación profesional 50 vehículos × $1,200 MXN = $60,000 MXN. Total CAPEX: $385,000 MXN. (OPEX Mensual) Plataforma SaaS + datos celular 50 vehículos × $350 MXN/mes = $17,500 MXN/mes × 36 meses = $630,000 MXN. TCO Total 3 Años: $1,015,000 MXN o $20,300 MXN por vehículo o $563 MXN/vehículo/mes. (ROI Proyectado Año 1) Reducción 12% consumo combustible: $840,000 MXN ahorro (asumiendo $14,000 MXN/mes/vehículo baseline), reducción 22% mantenimiento correctivo: $180,000 MXN ahorro, recuperación 1 vehículo robado avaluado $450,000 MXN (vs. 0 sin GPS). Total beneficios año 1: $1,470,000 MXN vs. inversión año 1 $595,000 MXN = ROI 147%. Payback period: 5.8 meses."
-  - question: "¿Cómo funciona el proceso de recuperación de vehículo robado con coordinación de autoridades?"
-    answer: "Protocolo de recuperación paso a paso: (1) Cliente detecta robo de vehículo (ausencia física sin autorización) y reporta vía teléfono/WhatsApp a central de monitoreo proporcionando datos de unidad; (2) Operador de central activa modo \"silencioso\" en dispositivo GPS que incrementa frecuencia de transmisión de cada 30 seg a cada 10 seg SIN generar alertas audibles/visuales/LEDs que delaten al delincuente; (3) Central contacta a autoridad competente según ubicación: C5 CDMX si vehículo está en CDMX, C4 EdoMex si está en zona conurbada, Fiscalía de Robo de Vehículos si está en otro estado; (4) Coordinador proporciona ubicación en tiempo real con coordenadas latitud/longitud, descripción de vehículo, placas, y datos de propietario; (5) Central mantiene línea telefónica abierta con autoridades durante operativo actualizando ubicación si vehículo se mueve; (6) Si vehículo cuenta con inmovilizador remoto, se puede activar cuando está a < 20 km/h para detener motor de manera segura; (7) Tras recuperación, proporcionamos bitácora completa de movimientos desde momento de robo para denuncia ante Ministerio Público."
-  - question: "¿El sistema GPS funciona en cualquier vehículo o tiene limitaciones por marca/modelo/año?"
-    answer: "Compatibilidad universal con 99.5% de vehículos circulando en México: (Alimentación Eléctrica) Dispositivos GPS soportan voltaje 12V DC (vehículos ligeros) y 24V DC (camiones pesados, maquinaria) con detección automática. (Puerto OBD-II) Obligatorio en vehículos vendidos en México desde 2006, ubicado generalmente bajo tablero. Vehículos 1996-2005 pueden tener OBD-I (estándar anterior) - para estos usamos dispositivo GPS sin telemetría OBD-II, instalando alimentación directa desde batería. (Protocolos OBD) Nuestros dispositivos soportan 5 protocolos principales: ISO 9141-2, ISO 14230-4 (KWP2000), ISO 15765-4 (CAN), SAE J1850 PWM, SAE J1850 VPW - cubren 99% de vehículos con OBD-II. (Limitaciones) Vehículos eléctricos (Tesla, Nissan Leaf, Chevrolet Bolt) tienen OBD-II pero parámetros disponibles son diferentes (no RPM, no temperatura refrigerante) - capturamos nivel de batería, autonomía restante, estado de carga. Vehículos híbridos (Prius, Civic Hybrid) funcionan perfectamente."
-  - question: "¿Qué sucede si dispositivo GPS se queda sin señal celular en zona remota o túnel largo?"
-    answer: "Dispositivos GPS cuentan con memoria interna (8-32 MB dependiendo modelo) que almacena trayecto completo cuando pierde conectividad celular. Protocolo de almacenamiento local: (1) Dispositivo detecta pérdida de señal celular (sin respuesta de torre > 60 segundos); (2) Entra en modo \"store-and-forward\" guardando cada punto GPS con timestamp en memoria flash interna - capacidad típica 50,000 - 200,000 puntos dependiendo de modelo; (3) Continúa intentando reconexión cada 30-60 segundos; (4) Cuando recupera señal celular, transmite buffer completo de puntos almacenados en ráfaga (batch upload); (5) Plataforma reconstruye trayecto completo sin gaps. Casos de uso: carreteras rurales con cobertura intermitente, túneles largos (Túnel de La Marquesa 2.1 km, Túnel Emisor Oriente), estacionamientos subterráneos con estructura de concreto que bloquea señal. Batería interna garantiza que dispositivo siga operando incluso si permanece sin señal celular por 72 horas - cuando reconecta, transmite historial completo."
+  - question: "¿Cuánto tarda en actualizarse la ubicación? ¿Es realmente en tiempo real?"
+    answer: "Sí es tiempo real — actualización cada 30 segundos en condiciones normales. En modo de emergencia o recuperación de robo, activamos modo de alta frecuencia que actualiza cada 10 segundos. La ubicación que ves en la app tiene máximo 30 segundos de retraso, no minutos como con sistemas básicos."
+  - question: "¿El GPS funciona si el ladrón saca el vehículo del DF o va a zona sin cobertura?"
+    answer: "Sí. El dispositivo usa red celular 4G con cobertura nacional. Si el vehículo entra a una zona sin señal (carretera rural, estacionamiento subterráneo), guarda los puntos en memoria interna y los envía en cuanto recupera señal — el historial de ruta nunca se pierde. Solo se pierde señal en zonas sin ninguna cobertura celular, lo que es cada vez más raro en el centro del país."
+  - question: "¿Pueden desconectar el GPS si se dan cuenta que lo tiene?"
+    answer: "Los dispositivos se instalan en puntos discretos no obvios del vehículo — no en el puerto OBD visible. Además, el dispositivo tiene batería interna de respaldo: aunque corten la corriente del vehículo, sigue transmitiendo durante horas. Si se detecta desconexión intencional, nuestra central recibe una alerta inmediata."
+  - question: "¿Cómo funciona la recuperación si me roban el vehículo?"
+    answer: "Llamas a nuestra central o mandas WhatsApp reportando el robo. Activamos modo silencioso en el dispositivo (actualización cada 10 seg, sin alertas audibles que delaten al ladrón). Nuestra central contacta directamente al C5 o la Fiscalía de Robo de Vehículos con coordenadas en tiempo real, descripción del vehículo y datos del propietario. Mantenemos la comunicación abierta con las autoridades durante todo el operativo actualizando la ubicación si el vehículo se mueve."
+  - question: "¿Funciona en todos los vehículos? ¿Camiones, pickups, motos?"
+    answer: "Sí, instalamos en vehículos ligeros (12V), camiones pesados (24V) y motocicletas. Compatible con todos los vehículos del año 2006 en adelante con puerto OBD-II. Para vehículos más antiguos instalamos alimentación directa desde la batería. Un instalador certificado va a tu empresa o domicilio — no tienes que llevar el vehículo a ningún taller."
+  - question: "¿Cuántos vehículos puedo monitorear desde una sola cuenta?"
+    answer: "No hay límite de vehículos por cuenta. Desde la misma app o plataforma web puedes ver toda tu flotilla en un solo mapa, filtrar por vehículo, conductor o zona, y recibir alertas configuradas para cada unidad. Tenemos clientes con 2 vehículos y clientes con más de 200 — la plataforma escala sin costo adicional por vehículo adicional."
+  - question: "¿En qué zonas de CDMX y Estado de México tienen cobertura de instalación?"
+    answer: "Instalamos en toda la CDMX y Zona Metropolitana: Polanco, Santa Fe, Lomas, Condesa, Del Valle, Coyoacán, Xochimilco y todas las alcaldías. En Estado de México: Naucalpan, Tlalnepantla, Atizapán, Huixquilucan, Ecatepec, Nezahualcóyotl, Toluca. El instalador va a tu ubicación — empresa, domicilio o donde estén los vehículos."
+draft: false
 ---
 
-## Rastreo GPS Satelital Empresarial
-
-### Telemetría Vehicular y Gestión de Flotillas en CDMX
-
-ORIGINS Private Security: Plataforma SaaS de geolocalización con tecnología dual GPS + GLONASS. ROI documentado del 23% en reducción de costos operativos, geocercas inteligentes y 87% de tasa de recuperación de vehículos robados.
-
-### Inteligencia operacional en tiempo real
-
-Nuestra plataforma SaaS captura 47 parámetros técnicos desde el puerto OBD-II: velocidad, RPM, temperatura, combustible y comportamiento de conducción. Más que localización, es control total de su flotilla con telemetría avanzada y analítica predictiva para optimizar cada kilómetro recorrido.
-
-### ROI comprobado en el primer año
-
-Empresas con 50+ vehículos documentan 23% de ahorro anual: reducción de combustible, optimización de rutas hasta 18% menos kilometraje, primas de seguro reducidas por telemetría compartida, y recuperación de activos con tasa de éxito del 87%. Su inversión se traduce en resultados medibles.
-
-Sistema SaaS de gestión de flotillas con telemetría vehicular y analítica predictiva en CDMX
-
-Monitoreo continuo de ubicación y estatus de toda la flotilla vehicular
-
-Alertas automáticas de entrada y salida de zonas autorizadas
-
-Gestión integral de flotas vehiculares mediante tecnología satelital GPS
-
-Control y gestión avanzada de activos vehiculares corporativos
-
-Tecnología anti-sabotaje con batería de respaldo e instalación oculta
-
-Análisis detallado de rutas y optimización de recorridos vehiculares
-
-Dashboard ejecutivo con analítica avanzada y KPIs en tiempo real
-
-Operación continua con operadores certificados y protocolos estandarizados
-
-Gestión completa de flotillas mediante tecnología GPS satelital avanzada
-
-En el entorno corporativo moderno, las flotillas vehiculares representan el segundo o tercer rubro de mayor gasto operativo después de nómina e instalaciones. La diferencia entre empresas que gestionan flotillas de manera reactiva (respondiendo a incidentes) versus proactiva (previniendo desperdicios mediante datos) se refleja directamente en márgenes de rentabilidad.
-
-Nuestro sistema de rastreo GPS no es un dispositivo de localización pasivo: es una plataforma de inteligencia operacional que transforma datos de geolocalización y telemetría en decisiones ejecutivas. Empresas que implementan gestión de flotillas basada en datos documentan retornos de inversión promedio del 23% en primer año mediante optimización de rutas, reducción de consumo de combustible, disminución de uso no autorizado, y recuperación rápida de activos robados.
-
-Más de 850 empresas con flotillas de 5 a 5,000+ vehículos confían en nuestra plataforma SaaS para reducir costos operativos, optimizar logística y garantizar seguridad de activos móviles
-
-Más allá de la geolocalización básica, nuestra solución extrae datos técnicos directamente desde puerto OBD-II (On-Board Diagnostics) del vehículo mediante protocolo CAN Bus. Esto captura parámetros críticos imposibles de obtener con GPS estándar: nivel de combustible instantáneo (no estimado), temperatura de motor y transmisión, presión de turbo, voltaje de batería, códigos DTC (Diagnostic Trouble Codes) de fallas mecánicas. Integración con sistemas de mantenimiento preventivo alerta cuando unidad requiere servicio basándose en kilometraje real, horas de motor, y patrones de uso detectados. Ahorro documentado: reducción 22% en costos de mantenimiento correctivo al prevenir fallas mayores mediante mantenimiento predictivo. Complementa con custodia de mercancías para logística integral.
-
-Sistema avanzado de geocercas permite definir polígonos ilimitados sobre mapa con reglas de negocio específicas: zonas autorizadas de operación, clientes que deben visitarse en ruta, áreas de riesgo a evitar, puntos de carga/descarga obligatorios. Alertas configurables disparan notificaciones cuando vehículo entra, sale, o permanece tiempo excesivo en geocerca específica. Ejemplo aplicado: empresa de reparto configura geocerca en cada cliente con tiempo máximo de estadía de 15 minutos - si unidad permanece 20+ minutos, sistema alerta a supervisor de posible demora que afecta entregas subsecuentes. Geocercas horarias permiten definir zonas prohibidas según hora del día: vehículos corporativos no deben circular fines de semana, unidades de reparto solo operan 8 AM - 8 PM. Violación de geocerca genera evidencia fotográfica timestamp para auditoría.
-
-Algoritmo propietario asigna puntuación de seguridad y eficiencia (0-100) a cada conductor basándose en telemetría de comportamiento: excesos de velocidad detectados, frenados bruscos (desaceleración > 0.4g), aceleraciones agresivas (> 0.3g), curvas peligrosas (fuerza lateral excesiva), ralentí prolongado (motor encendido sin movimiento > 5 minutos). Dashboard ejecutivo muestra ranking de conductores por puntuación permitiendo identificar operadores que requieren capacitación adicional o representan riesgo de accidentes. Empresas de logística implementan programas de incentivos basados en scoring: conductores con puntuación > 85 reciben bonos trimestrales. Reducción documentada: 31% menos accidentes viales y 18% reducción en consumo de combustible entre conductores con scoring > 80 vs. < 60.
-
-Plataforma genera reportes automatizados de Total Cost of Ownership (TCO) por vehículo con desglose completo: costo de combustible (consumo real medido vía telemetría × precio por litro), depreciación vehicular, seguros, tenencias, mantenimientos preventivos y correctivos, multas de tránsito, costos de operador. Dashboard ejecutivo permite comparar TCO por unidad identificando vehículos con costos operativos anómalos que requieren sustitución o mantenimiento mayor. Reportes mensuales incluyen análisis de tendencias: ¿el costo de combustible por kilómetro está aumentando? Puede indicar deterioro de motor o hábitos de conducción ineficientes. Empresas de transporte utilizan TCO por kilómetro como métrica clave para cotización de fletes y cálculo de rentabilidad por ruta.
-
-Empresas de reparto y logística con 10-200 entregas diarias enfrentan problema de optimización matemática: dado N destinos, ¿cuál es la secuencia óptima de visitas que minimiza kilometraje total? Nuestra plataforma integra algoritmos de optimización de rutas (Traveling Salesman Problem - TSP con heurísticas Greedy y Simulated Annealing) que calculan ruta óptima considerando: ubicación actual del vehículo, ubicaciones de destinos pendientes, tráfico en tiempo real, ventanas de tiempo de entrega (cliente X solo recibe 2-5 PM), prioridades (entregas urgentes primero). Reducción documentada: 18% menos kilómetros recorridos comparado con rutas manuales planificadas por despachador, traducido en ahorro directo de combustible y tiempo de operador. Integración con apps de conductor proporciona navegación turn-by-turn de ruta optimizada.
-
-Empresas que transportan mercancías de alto valor o sensibles (electrónica, farmacéuticos, perecederos) requieren monitoreo continuo de cadena de custodia. Sistema GPS se integra con sensores adicionales: apertura de puertas de caja seca/refrigerada (alerta si puerta se abre en ruta no autorizada), temperatura interior de caja refrigerada (crítico para cadena de frío), sensores de vibración/impacto (detectan golpes o volcaduras). Integración con plataforma SaaS permite a clientes B2B consultar ubicación de su carga en tiempo real mediante portal web: embarcador visualiza en qué punto de trayecto está su mercancía con ETA (Estimated Time of Arrival) dinámico. Reducción 67% en reclamaciones de clientes por entregas tardías al proporcionar visibilidad completa de trayecto.
-
-Equipos de construcción (retroexcavadoras, minicargadores, plantas de luz, compresores) representan inversiones de $500,000 - $3,000,000 MXN por unidad con alto riesgo de robo en obra. Dispositivos GPS para maquinaria pesada incluyen batería de litio de alta capacidad (15,000 mAh) que permite hasta 5 años de operación con 1 transmisión diaria en modo ultra bajo consumo. Ideal para equipos que permanecen apagados períodos largos. Geocercas de obra alertan si maquinaria sale de perímetro autorizado fuera de horario laboral. Inmovilizador electrónico integrado permite bloqueo remoto de arranque en caso de robo detectado. Casos documentados: recuperación de retroexcavadora robada avaluada en $2.8M MXN localizada en terreno baldío a 85 km de obra original - GPS siguió transmitiendo 72 horas después de robo, permitiendo coordinación con SSC para recuperación sin daño.
-
-Empresas con vehículos asignados a ejecutivos (directores, vendedores, gerentes de zona) enfrentan desafío de uso mixto: parte del kilometraje es empresarial deducible, parte es personal no deducible. Sistema GPS genera bitácora automática de viajes con categorización fiscal: operador marca viaje como "empresarial" o "personal" mediante app móvil al inicio de trayecto. Reporte mensual proporciona kilometraje deducible vs. no deducible para cumplimiento con SAT. Detección de uso no autorizado: alertas si vehículo circula fines de semana, horario nocturno, o zonas no relacionadas con operación empresarial. Política típica: empresa permite 10% de uso personal sin penalización, excesos generan descuento de nómina. Ahorro documentado: reducción 28% en kilometraje personal al implementar monitoreo transparente.
-
-Empresas que transportan residuos peligrosos (hospitales, laboratorios, industria química) deben cumplir NOM-087-SEMARNAT que establece cadena de custodia documentada desde generación hasta disposición final. Sistema GPS proporciona evidencia de trayecto completo con timestamps inmutables: hora de recolección en instalación generadora, ruta seguida, paradas intermedias (no autorizadas), hora de entrega en confinamiento autorizado por SEMARNAT. Integración con plataforma permite generar reportes de cumplimiento para auditorías ambientales. Integración con manifiestos electrónicos de SEMARNAT agiliza trámites. Multas por incumplimiento: $300,000 - $3,000,000 MXN según gravedad - sistema GPS proporciona evidencia documental que protege contra sanciones. Conoce más en seguridad hospitalaria para cumplimiento integral.
-
-Ante reporte de robo de vehículo, central de monitoreo proporciona ubicación en tiempo real a autoridades competentes: C5 CDMX (Centro de Comando, Control, Cómputo, Comunicaciones y Contacto Ciudadano), Fiscalía de Investigación de Robo de Vehículos, Policía Cibernética SSC. Protocolo establecido: cliente reporta robo, central activa modo de rastreo silencioso (incrementa frecuencia de transmisión a cada 10 segundos sin alertar a delincuente con LEDs o sonidos), coordinador contacta a autoridades proporcionando ubicación exacta con latitud/longitud, mantenemos comunicación constante durante persecución o cerco. Función de inmovilizador remoto detiene motor de manera segura cuando vehículo está a < 20 km/h. Tasa de recuperación documentada: 87% de unidades recuperadas en < 48 horas vs. 12% sin GPS. Tiempo promedio de recuperación: 6-14 horas desde reporte.
-
-Configuraciones escalables desde flotillas pequeñas hasta plataformas enterprise multi-tenant con integración ERP
-
-Infraestructura cloud-native con arquitectura de microservicios y disponibilidad enterprise-grade
-
-Sistema dual de navegación satelital para precisión 2-5 metros en zona urbana, 5-10 metros en carretera
-
-Transmisión de datos vía red celular 4G LTE con fallback automático a 3G. Roaming nacional incluido
-
-Extracción de 47 parámetros vehiculares desde ECU: combustible, RPM, temperatura, códigos DTC
-
-Batería interna 3000 mAh que mantiene transmisión 72 horas si delincuente corta alimentación
-
-Interfaz HTML5 responsiva con visualización de flotilla en mapa interactivo, KPIs en tiempo real
-
-Aplicaciones móviles nativas con notificaciones push en tiempo real, disponibles en App Store y Play Store
-
-Endpoints documentados con Swagger para integración con ERP, WMS, TMS y sistemas corporativos
-
-Retención de trayectos, eventos y telemetría por 24 meses con exportación CSV/PDF/Excel
-
-Datacenter redundante con RTO < 15 minutos, backup diario automatizado, SLA 99.9% uptime
-
-Mesa de ayuda disponible vía teléfono, WhatsApp, email y chat en vivo para incidencias técnicas
-
-Complete el formulario para recibir análisis de ROI proyectado y propuesta personalizada para su flotilla vehicular
-
-Respuesta en menos de 24 horas · Demo Ejecutiva Sin Costo · Cobertura Nacional
-
-Credenciales técnicas, casos documentados y metodologías que respaldan nuestro liderazgo en telemetría vehicular
-
-Nuestra plataforma SaaS opera sobre arquitectura de microservicios en AWS (Amazon Web Services) región US-East-1 (N. Virginia) con redundancia automática. Load balancers distribuyen tráfico entre múltiples instancias EC2, base de datos RDS PostgreSQL con réplicas Multi-AZ, almacenamiento S3 con replicación cross-region, CDN CloudFront para entrega de assets estáticos. Monitoreo 24/7 con CloudWatch detecta anomalías y ejecuta autoscaling automático ante picos de tráfico.
-
-SLA contractual 99.9% uptime mensual (máximo 43 minutos de downtime permitido/mes) con penalizaciones económicas por incumplimiento. Backups automatizados cada 6 horas con retención de 30 días, backup completo semanal con retención 12 meses. RTO (Recovery Time Objective) documentado < 15 minutos, RPO (Recovery Point Objective) < 6 horas. Certificación ISO 27001 en proceso (auditoría programada Q2 2025).
-
-Implementaciones en 850+ empresas con flotillas documentadas de 5 a 5,000+ vehículos demuestran ROI promedio 23% en primer año completo de operación. Componentes de ahorro cuantificado: (1) Reducción 12-15% en consumo de combustible mediante eliminación de kilometraje no autorizado y coaching de comportamiento eficiente basado en scoring; (2) Disminución 18% en kilómetros recorridos vía optimización algorítmica de rutas en logística última milla; (3) Reducción 22% en costos de mantenimiento correctivo al implementar mantenimiento predictivo basado en telemetría OBD-II; (4) Disminución 31% en accidentes viales que generan costos de reparación y aumentos en prima de seguro.
-
-Casos específicos verificables: (Caso A) Empresa de distribución bebidas con 127 camiones 3.5 ton documentó ahorro $1.8M MXN año 1 en combustible + mantenimiento. (Caso B) Transportista regional con 63 tractocamiones redujo robo de diesel en ruta de 8% a 1.2% mediante alertas de ralentí prolongado. (Caso C) Flotilla corporativa 45 vehículos ejecutivos redujo uso personal no autorizado de 23% a 4% tras implementar monitoreo transparente. Proporcionamos referencias contactables previo NDA.
-
-Dispositivos GPS de grado comercial incluyen batería interna Li-Ion 3000 mAh que mantiene transmisión 72 horas continuas aunque delincuente corte batería principal del vehículo. Instalación oculta en múltiples ubicaciones del vehículo (bajo tablero, detrás de paneles, cavidades de chasis) que solo técnico instalador conoce - no hay LEDs delatores ni cables visibles. Detección de jamming (interferencia de señal GPS) alerta a central de monitoreo cuando dispositivo detecta ruido en bandas L1/L2 característico de bloqueadores GPS comerciales.
-
-Protocolo de recuperación ante robo: cliente reporta robo, central activa modo silencioso (incrementa frecuencia de transmisión a cada 10 segundos sin generar alertas audibles/visuales), coordinador contacta a C5 CDMX o Fiscalía de Robo de Vehículos proporcionando ubicación exacta, mantenemos comunicación constante durante operativo de recuperación. Inmovilizador remoto opcional detiene motor cuando vehículo está a < 20 km/h. Estadística documentada 2019-2024: 87% de unidades recuperadas en < 48 horas desde reporte, tiempo promedio de recuperación 8.3 horas.
-
-Plataforma expone API RESTful completa con autenticación OAuth 2.0 que permite integración bidireccional con sistemas empresariales: ERP (SAP, Oracle NetSuite, Microsoft Dynamics), WMS (Warehouse Management Systems), TMS (Transportation Management Systems), plataformas SIEM de ciberseguridad. Endpoints permiten: consultar ubicación actual de vehículo específico, obtener historial de trayectos con filtros temporales, configurar geocercas programáticamente, recibir webhooks en tiempo real cuando evento se dispara (entrada/salida de geocerca, velocidad excesiva, desconexión de batería).
-
-Documentación completa disponible en formato Swagger/OpenAPI con ejemplos de código en Python, JavaScript, PHP, Java. Autenticación mediante API keys con permisos granulares (read-only vs. read-write). Rate limiting 1000 requests/hora en plan estándar, ilimitado en plan enterprise. Casos de uso implementados: integración con SAP para sincronizar órdenes de servicio con ubicación de técnico más cercano, webhooks hacia Slack para alertas de flota, push de telemetría hacia plataforma Power BI para dashboards ejecutivos personalizados.
-
-Implementación de rastreo GPS vehicular en contexto laboral genera obligaciones específicas bajo Ley Federal de Protección de Datos Personales en Posesión de Particulares (LFPDPPP) y jurisprudencia laboral. Asesoramiento legal incluye: (1) Redacción de Aviso de Privacidad específico que informa a operadores que vehículos cuentan con sistema GPS con fines de seguridad y optimización operacional; (2) Inclusión de cláusula en contrato laboral que establece que operador acepta monitoreo GPS como condición de asignación vehicular; (3) Política de uso aceptable que establece % permitido de uso personal sin penalización; (4) Procedimiento disciplinario progresivo ante detección de uso no autorizado grave.
-
-Controles técnicos de privacidad: acceso a datos de ubicación mediante sistema RBAC (Role-Based Access Control) que permite definir quién puede visualizar qué vehículos - supervisor solo ve su equipo, gerente regional ve zona asignada, director general ve flotilla completa. Retención limitada de datos con eliminación automatizada tras 24 meses. Encriptación TLS 1.3 para transmisión de datos, AES-256 para almacenamiento en reposo. Cumplimiento con criterios de Comisión Nacional de Derechos Humanos (CNDH) sobre monitoreo laboral no invasivo.
-
-Mesa de ayuda disponible 24/7/365 vía múltiples canales: teléfono directo (55 3025 5580), WhatsApp Business, correo electrónico (soporte@originsecurity.mx), chat en vivo en plataforma web. Sistema de tickets con categorización por severidad: (Sev-1) Incidente crítico que afecta operación completa de cliente - respuesta en < 30 minutos; (Sev-2) Incidente mayor que afecta múltiples vehículos - respuesta en < 2 horas; (Sev-3) Incidente menor o consulta técnica - respuesta en < 8 horas laborales; (Sev-4) Consulta general o solicitud de capacitación - respuesta en < 24 horas.
-
-Equipo de soporte técnico capacitado en telemetría vehicular, protocolos de comunicación celular, diagnóstico de fallas OBD-II, y troubleshooting de integración API. Acceso remoto a plataforma de cliente (previo consentimiento) para diagnóstico avanzado. Base de conocimiento en línea con 200+ artículos de ayuda, videos tutoriales, y webinars mensuales gratuitos de capacitación. Gerente de cuenta dedicado para clientes enterprise (> 100 vehículos) con revisiones trimestrales de utilización de plataforma y recomendaciones de optimización.
-
-Plataformas tecnológicas de seguridad que proporcionan visibilidad total, respuesta inmediata y control operativo 24/7. Sistemas integrados que transforman datos de seguridad en inteligencia accionable.
-
-El rastreo GPS empresarial trasciende la simple localización: es plataforma integral de inteligencia operacional que correlaciona ubicación con telemetría vehicular, comportamiento de conductores y cumplimiento de rutas. Geocercas programables generan alertas automáticas ante desviaciones, zonas de riesgo o tiempos de inactividad anormales. Integración con CCTV permite verificación visual de eventos, mientras que botones de pánico brindan línea directa con central de monitoreo 24/7.
-
-Con capacidad de recuperación documentada del 92% en casos de robo vehicular, protegemos inversiones críticas de su flotilla. Reportes ejecutivos automáticos rastrean KPIs de rendimiento de combustible, mantenimiento predictivo y productividad de campo. Desde flotas logísticas hasta vehículos ejecutivos, escalamos soluciones que reducen costos operativos mientras incrementan seguridad y visibilidad gerencial de operaciones móviles.
-
-Empresas líderes en logística, transporte y gestión de flotillas ya entendieron que el rastreo GPS no es solo localización vehicular: es plataforma integral de inteligencia operacional que transforma datos en decisiones ejecutivas. No permita que su flotilla siga operando sin visibilidad, desperdiciando combustible en rutas ineficientes, o exponiéndose a robo sin capacidad de recuperación.
-
-Ahorro cuantificable en combustible, mantenimiento y recuperación de activos
-
-47 parámetros vehiculares para mantenimiento predictivo y TCO
-
-Coordinación directa con autoridades y dispositivos anti-sabotaje
-
+<div class="prose-intro">
+  <p><strong>ORIGINS Private Security</strong> instala y opera rastreo GPS satelital con monitoreo humano 24/7 en CDMX. No es solo saber dónde está tu vehículo — es tener a alguien vigilando cuando tú no puedes, y una central que <strong>coordina la recuperación con las autoridades</strong> si algo sale mal. Para operaciones de <a href="/servicios/custodia-de-mercancias">custodia de mercancías</a>, el GPS es esencial para garantizar la integridad de cada traslado.</p>
+  <div class="prose-highlight">
+    <strong>La pregunta que lo cambia todo:</strong> ¿Dónde están tus vehículos en este momento? Si no puedes responder eso en los próximos 5 segundos desde tu celular — o si dependes de llamar al conductor para saberlo — tienes un problema de control que el rastreo GPS resuelve desde el primer día de instalación. Este servicio forma parte de nuestra <a href="/servicios/tecnologia-monitoreo-seguridad">plataforma integral de tecnología y monitoreo</a> y se complementa con nuestras unidades de <a href="/servicios/patrullaje">patrullaje vehicular</a>.
+  </div>
+</div>
+
+---
+
+<div class="trust-bar">
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    <div>
+      <strong>30 segundos</strong>
+      <span>Frecuencia de actualización de ubicación</span>
+    </div>
+  </div>
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+    <div>
+      <strong>Recuperación coordinada</strong>
+      <span>Central ORIGINS + C5 + Fiscalía en tiempo real</span>
+    </div>
+  </div>
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    <div>
+      <strong>Geocercas ilimitadas</strong>
+      <span>Zonas y horarios sin límite de configuraciones</span>
+    </div>
+  </div>
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    <div>
+      <strong>90 días de historial</strong>
+      <span>Recorrido completo de cualquier fecha</span>
+    </div>
+  </div>
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+    <div>
+      <strong>Permiso SSC 0102-15</strong>
+      <span>Monitoreo operado por empresa certificada</span>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Lo que Cuesta No Tenerlo</span>
+  <h2>Un Robo vs. Un Año de GPS</h2>
+  <p class="prose-section-sub">No es un gasto — es una póliza de protección para tus activos móviles. Los números lo explican mejor que cualquier argumento.</p>
+</div>
+
+<div class="cost-vs-loss">
+  <div class="cost-vs-loss__side cost-vs-loss__side--loss">
+    <div class="cost-vs-loss__label">Sin rastreo GPS</div>
+    <div class="cost-vs-loss__amount">$350,000</div>
+    <div class="cost-vs-loss__unit">MXN promedio por vehículo robado en CDMX</div>
+    <ul class="cost-vs-loss__list">
+      <li>Pérdida total del vehículo sin posibilidad de recuperación</li>
+      <li>Proceso de seguro: 30–90 días sin el activo</li>
+      <li>Interrupción de operaciones o rutas de entrega</li>
+      <li>Deducible del seguro: $15,000–$40,000 MXN adicionales</li>
+      <li>Posible pérdida de carga o mercancía a bordo</li>
+    </ul>
+  </div>
+  <div class="cost-vs-loss__divider">
+    <span>vs.</span>
+  </div>
+  <div class="cost-vs-loss__side cost-vs-loss__side--cost">
+    <div class="cost-vs-loss__label">Con rastreo GPS ORIGINS</div>
+    <div class="cost-vs-loss__amount">$399</div>
+    <div class="cost-vs-loss__unit">MXN por vehículo al mes — todo incluido</div>
+    <ul class="cost-vs-loss__list">
+      <li>Ubicación en tiempo real desde tu celular</li>
+      <li>Coordinación de recuperación con autoridades 24/7</li>
+      <li>Geocercas, historial 90 días y alertas configuradas</li>
+      <li>Instalación profesional incluida sin costo</li>
+      <li>Un robo prevenido paga 73 años de servicio</li>
+    </ul>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">En Tiempo Real</span>
+  <h2>Lo que Ves Desde tu Celular Ahora Mismo</h2>
+  <p class="prose-section-sub">Una plataforma clara y sin complicaciones — toda tu flotilla en un solo mapa, alertas en tiempo real y 90 días de historial a un toque de distancia.</p>
+</div>
+
+<div class="gps-preview">
+  <div class="gps-preview__screen">
+    <div class="gps-preview__map">
+      <div class="gps-preview__route"></div>
+      <div class="gps-preview__dot">
+        <span></span>
+      </div>
+      <div class="gps-preview__pin gps-preview__pin--origin"></div>
+    </div>
+    <div class="gps-preview__panel">
+      <div class="gps-preview__vehicle">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <span>Unidad 03 — Nissan NP300</span>
+      </div>
+      <div class="gps-preview__stats">
+        <div class="gps-preview__stat">
+          <span class="gps-preview__stat-val gps-preview__stat-val--live">68 km/h</span>
+          <span class="gps-preview__stat-key">Velocidad</span>
+        </div>
+        <div class="gps-preview__stat">
+          <span class="gps-preview__stat-val">Polanco</span>
+          <span class="gps-preview__stat-key">Zona</span>
+        </div>
+        <div class="gps-preview__stat">
+          <span class="gps-preview__stat-val gps-preview__stat-val--ok">En ruta</span>
+          <span class="gps-preview__stat-key">Estado</span>
+        </div>
+        <div class="gps-preview__stat">
+          <span class="gps-preview__stat-val">hace 12 seg</span>
+          <span class="gps-preview__stat-key">Última señal</span>
+        </div>
+      </div>
+      <div class="gps-preview__alert gps-preview__alert--ok">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Dentro de zona autorizada · Sin alertas activas
+      </div>
+    </div>
+  </div>
+  <div class="gps-preview__features">
+    <div class="gps-preview__feature">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span>Todos tus vehículos en un solo mapa</span>
+    </div>
+    <div class="gps-preview__feature">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+      <span>Alertas push cuando algo sale de ruta</span>
+    </div>
+    <div class="gps-preview__feature">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>Historial de recorridos con 90 días de datos</span>
+    </div>
+    <div class="gps-preview__feature">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+      <span>Reportes automáticos para el área de flotilla</span>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-block">
+  <div class="prose-section-block__header">
+    <span class="prose-section-block__num">01</span>
+    <div>
+      <span class="prose-section-block__label">Control de Flotilla</span>
+      <h3 class="prose-section-block__title">Sabe Exactamente Qué Está Haciendo Cada Vehículo</h3>
+    </div>
+  </div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>Para empresas con 3 o más vehículos en operación, el GPS no es un costo — es el fin de las <strong>conversaciones incómodas</strong>: "¿por qué tardaste 3 horas en una entrega de 45 minutos?" o "¿dónde estuvo la camioneta el viernes por la tarde?". Los datos lo responden sin confrontación.</p>
+      <ul>
+        <li>Mapa en tiempo real con todos los vehículos activos simultáneamente</li>
+        <li>Alertas por exceso de velocidad configurables por zona (60 km/h en colonias residenciales)</li>
+        <li>Detección de paradas no autorizadas con tiempo y ubicación exacta</li>
+        <li>Reporte de kilometraje real vs. declarado por el conductor</li>
+        <li>Alertas por conducción nocturna o en fines de semana fuera de autorización</li>
+        <li>Historial de 90 días para auditorías, disputas con clientes o análisis de eficiencia</li>
+      </ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/img-rastreo-gps/control-flotilla-gps-satelital.avif" alt="Control de flotilla GPS satelital para empresas CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/img-rastreo-gps/monitoreo-rutas-gps-tiempo-real.avif" alt="Monitoreo de rutas GPS en tiempo real para flotillas CDMX" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-block">
+  <div class="prose-section-block__header">
+    <span class="prose-section-block__num">02</span>
+    <div>
+      <span class="prose-section-block__label">Recuperación de Vehículos</span>
+      <h3 class="prose-section-block__title">Si lo Roban — Tenemos un Protocolo, No una Esperanza</h3>
+    </div>
+  </div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>La mayoría de los servicios GPS te dan la ubicación del vehículo y te desean suerte. ORIGINS opera una <strong>central de monitoreo que coordina activamente la recuperación</strong> — habla con el C5, la Fiscalía y las autoridades mientras tú estás informado en tiempo real.</p>
+      <ul>
+        <li>Reporte de robo vía llamada o WhatsApp — respuesta en menos de 5 minutos</li>
+        <li>Activación de <strong>modo silencioso</strong>: alta frecuencia sin alertas audibles que delaten el dispositivo</li>
+        <li>Contacto directo con C5 CDMX, C4 EdoMex o Fiscalía de Robo de Vehículos</li>
+        <li>Transmisión de coordenadas en tiempo real a las autoridades durante el operativo</li>
+        <li>Opción de inmovilizador remoto para detener el motor cuando el vehículo está a baja velocidad</li>
+        <li>Bitácora completa de movimientos desde el robo — evidencia para el Ministerio Público</li>
+      </ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/img-rastreo-gps/central-monitoreo-gps-24-7.avif" alt="Central de monitoreo GPS 24/7 para recuperación de vehículos CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/img-rastreo-gps/gestion-riesgos-rastreo-gps.avif" alt="Gestión de riesgos y coordinación de recuperación GPS CDMX" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-block">
+  <div class="prose-section-block__header">
+    <span class="prose-section-block__num">03</span>
+    <div>
+      <span class="prose-section-block__label">Geocercas y Alertas</span>
+      <h3 class="prose-section-block__title">Define Zonas y Horarios — El Sistema Trabaja Solo</h3>
+    </div>
+  </div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>Las geocercas son el corazón del control preventivo. No necesitas estar viendo la pantalla todo el día — defines las reglas una vez y el sistema te avisa cuando algo se sale de lo normal. <strong>Control sin micromanagement</strong>.</p>
+      <ul>
+        <li>Zona de trabajo: alerta si el vehículo sale del área de reparto autorizada</li>
+        <li>Horario de operación: alerta si el vehículo se mueve fuera del horario laboral</li>
+        <li>Clientes específicos: alerta si el vehículo no llegó al cliente en el tiempo estimado</li>
+        <li>Zona prohibida: alerta inmediata si el vehículo entra a colonia o zona restringida</li>
+        <li>Estacionamiento nocturno: alerta si el vehículo no está en la base al final del turno</li>
+        <li>Corredor de ruta: alerta si el vehículo se desvía más de N kilómetros de la ruta asignada</li>
+      </ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/img-rastreo-gps/geocercas-virtuales-alertas-gps.avif" alt="Geocercas virtuales y alertas GPS para empresas CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/img-rastreo-gps/rastreo-gps-tiempo-real-vehiculos.avif" alt="Rastreo GPS en tiempo real de vehículos empresariales CDMX" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Escenarios Reales</span>
+  <h2>Situaciones que Resolvemos Cada Semana en CDMX</h2>
+  <p class="prose-section-sub">Clientes de Polanco, Naucalpan, Santa Fe y Del Valle — lo que enfrentan y cómo el GPS lo resuelve en tiempo real.</p>
+</div>
+
+<div class="scenarios-grid">
+  <div class="scenario-card">
+    <div class="scenario-card__situation">
+      <span class="scenario-card__badge scenario-card__badge--problem">Situación real</span>
+      <p>"Mi repartidor dijo que estuvo en el cliente 2 horas pero el cliente dice que nunca llegó"</p>
+    </div>
+    <div class="scenario-card__solution">
+      <span class="scenario-card__badge scenario-card__badge--solution">Con GPS ORIGINS</span>
+      <p>El historial muestra exactamente dónde estuvo el vehículo, a qué hora y cuánto tiempo. Disputa resuelta en 2 minutos con datos objetivos.</p>
+    </div>
+  </div>
+  <div class="scenario-card">
+    <div class="scenario-card__situation">
+      <span class="scenario-card__badge scenario-card__badge--problem">Situación real</span>
+      <p>"Robaron mi camioneta en Naucalpan. La aseguradora dice que hay que esperar el proceso"</p>
+    </div>
+    <div class="scenario-card__solution">
+      <span class="scenario-card__badge scenario-card__badge--solution">Con GPS ORIGINS</span>
+      <p>Central activa protocolo de recuperación. Coordina con C4 EdoMex con ubicación en tiempo real. El 65% de los vehículos se recuperan en las primeras 6 horas.</p>
+    </div>
+  </div>
+  <div class="scenario-card">
+    <div class="scenario-card__situation">
+      <span class="scenario-card__badge scenario-card__badge--problem">Situación real</span>
+      <p>"Uno de mis conductores estaba usando la camioneta del trabajo los fines de semana para trabajo personal"</p>
+    </div>
+    <div class="scenario-card__solution">
+      <span class="scenario-card__badge scenario-card__badge--solution">Con GPS ORIGINS</span>
+      <p>La geocerca de horario genera alerta automática en el momento exacto. El historial documenta todos los movimientos no autorizados con fecha, hora y ruta.</p>
+    </div>
+  </div>
+  <div class="scenario-card">
+    <div class="scenario-card__situation">
+      <span class="scenario-card__badge scenario-card__badge--problem">Situación real</span>
+      <p>"Mi ejecutivo salió a visitar a un cliente en Tlalnepantla y lleva 4 horas sin reportarse"</p>
+    </div>
+    <div class="scenario-card__solution">
+      <span class="scenario-card__badge scenario-card__badge--solution">Con GPS ORIGINS</span>
+      <p>El vehículo aparece en el mapa en tiempo real. Si está detenido en una ubicación inesperada, la central ya lo detectó y está verificando la situación antes de que tú llames.</p>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Para Quién es</span>
+  <h2>Tu Operación, Tu Sistema GPS</h2>
+  <p class="prose-section-sub">Desde 1 vehículo hasta flotillas de 200 unidades — el sistema escala sin cambiar la plataforma ni el precio base por unidad.</p>
+</div>
+
+<div class="profile-grid">
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Empresa con flotilla de reparto</strong>
+      <p class="profile-card__need">Naucalpan, Tlalnepantla — rutas de entrega y verificación de tiempos</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Control de rutas</span>
+        <span class="profile-tag">Historial 90 días</span>
+        <span class="profile-tag">Reporte de km</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Ejecutivo o vehículo de alto valor</strong>
+      <p class="profile-card__need">Polanco, Lomas — tranquilidad y recuperación garantizada</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Instalación discreta</span>
+        <span class="profile-tag">Botón de pánico</span>
+        <span class="profile-tag">Recuperación 24/7</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Comercio con vehículo de servicio</strong>
+      <p class="profile-card__need">Verificación de técnicos y repartidores propios</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">1–5 vehículos</span>
+        <span class="profile-tag">Alertas horario</span>
+        <span class="profile-tag">App móvil</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Empresa de transporte o logística</strong>
+      <p class="profile-card__need">CDMX y EdoMex — múltiples rutas y conductores simultáneos</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Flotilla ilimitada</span>
+        <span class="profile-tag">Dashboard operativo</span>
+        <span class="profile-tag">Reporte ejecutivo</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card profile-card--highlight">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Constructora o empresa con maquinaria pesada</strong>
+      <p class="profile-card__need">Control de equipo en obra — robos de maquinaria en fines de semana</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Compatibilidad 24V</span>
+        <span class="profile-tag">Geocerca de obra</span>
+        <span class="profile-tag">Alerta movimiento nocturno</span>
+        <span class="profile-tag">Inmovilizador remoto</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Proceso</span>
+  <h2>Instalado y Activo en 24 Horas — Sin Llevar el Vehículo a Ningún Taller</h2>
+  <p class="prose-section-sub">El instalador va a donde estén tus vehículos. En un día tienes toda la flotilla activa y monitoreada.</p>
+</div>
+
+<div class="prose-steps">
+  <div class="prose-step">
+    <span class="prose-step__num">01</span>
+    <div class="prose-step__content">
+      <strong>Hoy — Diagnóstico rápido por teléfono o WhatsApp (15 minutos)</strong>
+      <p>Cuéntanos cuántos vehículos tienes, qué tipo y qué necesitas controlar. En 15 minutos te decimos exactamente qué dispositivo necesitas, el costo por vehículo y cuándo podemos instalar. Sin visita previa necesaria.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">02</span>
+    <div class="prose-step__content">
+      <strong>Día 1 — Instalación en tu empresa, domicilio o donde estén los vehículos</strong>
+      <p>Un técnico certificado instala el dispositivo en 30–45 minutos por vehículo. No necesitas llevarlos a ningún taller. La instalación es discreta — en un punto no obvio del vehículo, con batería de respaldo incluida.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">03</span>
+    <div class="prose-step__content">
+      <strong>Día 1 — Activación y configuración de tu cuenta</strong>
+      <p>Configuramos la plataforma con tus vehículos, conductores, geocercas iniciales y alertas prioritarias. Te mostramos cómo usar la app en tu celular. En 2 horas después de la instalación ya estás viendo tus vehículos en tiempo real.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">04</span>
+    <div class="prose-step__content">
+      <strong>Día 1 — Alta en la central de monitoreo ORIGINS</strong>
+      <p>Tu flotilla queda registrada en nuestra central 24/7. Si algo anormal ocurre fuera de horario, nuestros operadores lo detectan y te contactan. En caso de robo, el protocolo de recuperación se activa desde el primer reporte.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">05</span>
+    <div class="prose-step__content">
+      <strong>Semana 1 — Ajuste de geocercas y alertas sin costo</strong>
+      <p>Durante la primera semana ajustamos las geocercas, horarios y umbrales de alerta según lo que descubres en el uso real. Si las alertas son demasiado frecuentes o necesitas configuraciones adicionales, las hacemos sin cargo extra.</p>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Galería</span>
+  <h2>Dispositivos y Plataforma ORIGINS GPS en Operación</h2>
+  <p class="prose-section-sub">Hardware discreto, plataforma clara y central de monitoreo propia — todo lo que necesitas para tener control real de tus vehículos.</p>
+</div>
+
+<div class="prose-gallery">
+  <figure>
+    <img src="/img/img-rastreo-gps/dispositivos-gps-rastreo-vehicular.avif" alt="Dispositivos GPS de rastreo vehicular para flotillas CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Dispositivos GPS compactos — instalación discreta en punto no obvio del vehículo</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-rastreo-gps/plataforma-rastreo-vehicular-avanzada.avif" alt="Plataforma de rastreo vehicular para gestión de flotillas CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Plataforma web y app móvil — toda la flotilla en un solo mapa en tiempo real</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-rastreo-gps/monitoreo-satelital-flotillas-cdmx.avif" alt="Monitoreo satelital de flotillas empresariales en CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Central de monitoreo ORIGINS — seguimiento 24/7 con protocolo de recuperación activo</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-rastreo-gps/geocercas-virtuales-alertas-gps.avif" alt="Configuración de geocercas y alertas GPS para empresas CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Geocercas configuradas por zona, horario y ruta — alertas automáticas sin intervención</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-rastreo-gps/historial-ubicaciones-gps-vehiculos.avif" alt="Historial de ubicaciones GPS de vehículos empresariales" loading="lazy" width="640" height="480" />
+    <figcaption>90 días de historial — recorrido completo por fecha, hora y conductor</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-rastreo-gps/reportes-gps-analisis-recorridos.avif" alt="Reportes GPS y análisis de recorridos para flotillas CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Reportes automáticos semanales — kilometraje, paradas, velocidades y alertas</figcaption>
+  </figure>
+</div>

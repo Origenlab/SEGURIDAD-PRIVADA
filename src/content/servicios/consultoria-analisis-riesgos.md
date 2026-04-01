@@ -1,155 +1,166 @@
 ---
-title: "Análisis de Riesgos de Seguridad Privada CDMX | Consultoría ISO 31000"
-description: "Análisis de riesgos de seguridad privada para empresas y condominios en CDMX. Metodología ISO 31000, matrices ejecutivas. ☎ 55 3025 5580"
+title: "Análisis de Riesgos CDMX | Consultoría Seguridad — ORIGINS"
+description: "Análisis de riesgos profesional para empresas y residenciales en CDMX. Identificación de vulnerabilidades, evaluación de amenazas y plan de mitigación."
 category: service
 publishDate: 2024-01-01
+updatedDate: 2026-04-01
 keywords:
-  - seguridad
-  - consultoria analisis riesgos
+  - analisis riesgos seguridad cdmx
+  - evaluacion vulnerabilidades empresas cdmx
+  - auditoria riesgos seguridad cdmx
+  - matriz riesgos seguridad corporativa cdmx
+  - diagnostico seguridad empresarial cdmx
+  - consultoria riesgos seguridad cdmx
+  - analisis riesgos seguridad empresas cdmx
+  - evaluacion amenazas inmuebles cdmx
+  - consultoria riesgos seguridad corporativa
+  - plan mitigacion riesgos seguridad
+relatedServices:
+  - consultoria-seguridad
+  - vigilancia-remota-cctv
+  - guardias-intramuros
+  - control-de-accesos
+  - monitoreo-alarmas
+targetLocations:
+  - Ciudad de México
+  - Estado de México
+  - Polanco
+  - Santa Fe
+serviceFeatures:
+  - title: "Evaluación Física de Vulnerabilidades"
+    description: "Recorrido exhaustivo de tu propiedad: perímetros, accesos, iluminación, puntos ciegos y zonas de alto valor. Lo que el ojo entrenado detecta y el tuyo no nota."
+    icon: "search"
+  - title: "Matriz de Riesgos Cuantificada"
+    description: "Cada vulnerabilidad clasificada por probabilidad e impacto financiero. Sabes exactamente qué resolver primero y cuánto cuesta cada mejora."
+    icon: "bar-chart"
+  - title: "Análisis de Sistemas Existentes"
+    description: "Evaluamos si tu CCTV, alarmas y control de accesos realmente cumplen su función — antes de que compres tecnología nueva que no necesitas."
+    icon: "settings"
+  - title: "Plan de Implementación Priorizado"
+    description: "Mejoras ordenadas por impacto y costo. Las urgentes primero, las costosas en fases. Diseñado para tu presupuesto real, no para un ideal inalcanzable."
+    icon: "list"
+  - title: "Cumplimiento Normativo"
+    description: "Verificamos cumplimiento con NOM-002-STPS, protección civil, LFPDPPP y regulaciones sectoriales. Documentación válida para auditorías."
+    icon: "check-circle"
+  - title: "Diagnóstico Inicial Gratuito"
+    description: "2 horas en sitio con un consultor. Sin compromiso de continuar. Si no necesitas más, te lo decimos — no vendemos auditorías innecesarias."
+    icon: "gift"
 faqs:
-  - question: "¿En qué se diferencia un análisis de riesgos de una auditoría de seguridad?"
-    answer: "Una auditoría de seguridad evalúa cumplimiento de controles existentes contra estándares o mejores prácticas: ¿tienen guardias? ¿tienen CCTV? ¿funciona el sistema de alarma? Es un checklist de lo que ya existe. Un análisis de riesgos es prospectivo: identifica amenazas futuras, cuantifica pérdidas potenciales si se materializan y prioriza inversiones para mitigarlas. Auditoría responde \"¿qué tenemos?\", análisis de riesgos responde \"¿qué necesitamos?\" basado en amenazas reales y su impacto financiero. Ambos servicios son complementarios: auditoría valida efectividad de controles actuales, análisis de riesgos identifica brechas críticas que requieren nuevos controles."
-  - question: "¿Cuánto cuesta un análisis de riesgos profesional?"
-    answer: "El costo varía según alcance y complejidad: análisis básico ejecutivo para empresa mono-ubicación desde $45,000 MXN, análisis intermedio multi-site (3-5 ubicaciones) desde $85,000 MXN, análisis avanzado due diligence con escenarios de crisis desde $150,000 MXN, análisis enterprise corporativo para multinacionales desde $250,000 MXN. Monitoreo continuo con actualización trimestral desde $25,000 MXN/trimestre. Incluye visitas de campo a ubicaciones críticas, entrevistas con stakeholders, matrices Heat Map ejecutivas, roadmap de mitigación priorizado y presentación ejecutiva a comité de dirección. El ROI típico es 15:1 - cada peso invertido en análisis evita $15 en pérdidas potenciales mediante priorización correcta de inversiones en seguridad."
-  - question: "¿Qué información necesitan de nuestra empresa para el análisis?"
-    answer: "Para análisis robusto requerimos: descripción de operaciones y procesos críticos, ubicaciones de instalaciones y sucursales, número de empleados por ubicación, activos de alto valor (equipos, inventarios, información confidencial), controles de seguridad existentes (guardias, CCTV, alarmas, políticas), historial de incidentes previos (robos, accidentes, interrupciones), dependencias operacionales críticas (proveedores únicos, sistemas IT esenciales) y estados financieros básicos para calcular impacto de interrupciones. Realizamos entrevistas con directores de operaciones, seguridad, finanzas y RH. Toda información se maneja bajo acuerdos de confidencialidad estrictos. Empresas con información sensible pueden optar por análisis en sitio sin transferir documentos fuera de instalaciones."
-  - question: "¿Cuánto tiempo toma completar un análisis de riesgos?"
-    answer: "Depende del alcance: análisis básico ejecutivo 2-3 semanas, análisis intermedio multi-site 4-6 semanas, análisis avanzado due diligence 6-8 semanas, análisis enterprise corporativo 8-12 semanas. Timeline incluye: kick-off meeting (día 1), recopilación de información (semana 1-2), visitas de campo e entrevistas (semana 2-3), análisis y cuantificación (semana 3-4), elaboración de matriz y roadmap (semana 4-5), presentación ejecutiva (semana 5-6). Ofrecemos servicio urgente con sobrecargo del 40% que reduce tiempos en 50% para necesidades críticas (ej: requisito de auditoría inmediato, proceso de M&A acelerado). Actualizaciones de análisis existente toman 50% menos tiempo que análisis inicial."
-  - question: "¿El análisis incluye recomendaciones de proveedores de seguridad?"
-    answer: "No, mantenemos independencia profesional. El análisis identifica brechas y recomienda tipos de controles necesarios (ej: \"implementar sistema de control de accesos biométrico en área de servidores\", \"contratar protección ejecutiva certificada para CEO durante traslados\"), pero no recomendamos proveedores específicos ni recibimos comisiones de terceros. Esta independencia garantiza objetividad: nuestras recomendaciones están basadas en mitigar sus riesgos, no en colocar servicios de afiliados. Si requieren apoyo para selección de proveedores, ofrecemos servicio adicional de RFP (Request for Proposal) donde definimos especificaciones técnicas, solicitamos cotizaciones de 3-5 proveedores pre-calificados y evaluamos propuestas objetivamente según criterios técnicos y financieros."
-  - question: "¿Pueden cuantificar riesgos reputacionales o solo riesgos tangibles?"
-    answer: "Sí, cuantificamos riesgos reputacionales usando metodología específica. Para empresas con marca pública calculamos impacto de escenarios como: video de robo violento en sucursal viralizado (pérdida estimada de clientes, caída de ventas, inversión en PR de crisis), filtración de datos de clientes (multas regulatorias, indemnizaciones, caída de valor de acciones si cotizan en bolsa), accidente laboral con víctima fatal mal manejado en medios (litigios, sanciones, daño de marca empleadora). Utilizamos benchmarks de incidentes similares en empresas comparables: cuando X retail sufrió robo violento viral perdió Y% de ventas durante Z meses. Estos datos históricos permiten estimaciones razonables. Para empresas B2B cuantificamos impacto en contratos perdidos si clientes corporativos cancelan por percepciones de inseguridad."
-  - question: "¿El análisis cumple requisitos para pólizas de seguro o auditorías ISO?"
-    answer: "Sí, nuestros análisis cumplen requisitos documentales de: aseguradoras institucionales que exigen análisis de riesgos formal para pólizas de alto valor (responsabilidad civil, interrupción de negocio, secuestro y extorsión), auditorías ISO 27001 (gestión de seguridad de información), auditorías ISO 22301 (continuidad de negocio), auditorías SOC2 (controles de seguridad para servicios), due diligence de inversionistas o adquirentes en procesos de M&A y comités de auditoría de consejos de administración. La metodología ISO 31000 que aplicamos es estándar reconocido internacionalmente. Entregamos documentación certificada firmada por consultor responsable con cédula profesional, anexos de evidencia y declaración de independencia profesional. Varios clientes han presentado nuestros análisis exitosamente en auditorías externas sin objeciones."
-  - question: "¿Analizan riesgos de cadena de suministro y proveedores?"
-    answer: "Sí, análisis de cadena de suministro es componente crítico especialmente para empresas manufactureras, retail o con dependencias de proveedores únicos. Evaluamos: single points of failure (proveedores críticos sin alternativas que si sufren interrupción paralizan su operación), riesgos geográficos de proveedores (ubicados en zonas de alta criminalidad, propensas a desastres naturales, inestabilidad social), solidez financiera de proveedores críticos (riesgo de quiebra que los dejaría sin suministro), cumplimiento de estándares de seguridad por proveedores que acceden a sus instalaciones y robustez de contratos con cláusulas de continuidad de negocio. Recomendamos estrategias de mitigación: diversificación de proveedores, inventarios de seguridad, proveedores de respaldo pre-calificados, cláusulas contractuales de penalizaciones por incumplimiento."
-  - question: "¿Qué pasa después de recibir el análisis? ¿Ayudan con implementación?"
-    answer: "El entregable principal es análisis ejecutivo con matriz de riesgos y roadmap de mitigación priorizado que su equipo puede implementar internamente. Opcionalmente ofrecemos servicios post-análisis: acompañamiento de implementación (revisamos implementación de controles recomendados, validamos efectividad, ajustamos según resulte necesario), servicio de project management para coordinar múltiples proveedores durante implementación de controles complejos, capacitación a personal interno en gestión de riesgos para que puedan mantener análisis actualizado y servicio de monitoreo continuo con actualizaciones trimestrales de matriz de riesgos y alertas de amenazas emergentes. Muchos clientes inician con análisis único, implementan controles críticos usando roadmap y posteriormente contratan monitoreo continuo para mantener gestión de riesgos dinámica."
+  - question: "¿Qué diferencia hay entre análisis de riesgos y consultoría de seguridad?"
+    answer: "El análisis de riesgos es la fase de diagnóstico — evaluamos qué tienes, qué te falta y dónde están las vulnerabilidades. La consultoría de seguridad incluye el análisis de riesgos más el diseño de protocolos, capacitación del personal y acompañamiento en la implementación. Si solo necesitas saber en qué estado está tu seguridad, el análisis de riesgos es suficiente. Si necesitas que además te ayudemos a resolverlo, la consultoría completa es lo adecuado."
+  - question: "¿Cuánto tiempo toma y cuánto cuesta?"
+    answer: "El diagnóstico inicial gratuito son 2 horas en sitio con evaluación verbal ese mismo día. La auditoría completa con reporte escrito y matriz de riesgos toma 1 a 3 semanas según el tamaño de las instalaciones. El costo depende del alcance pero está diseñado para que el retorno sea positivo con un solo incidente prevenido."
+  - question: "¿Necesito análisis de riesgos si ya tengo empresa de seguridad?"
+    answer: "Especialmente si ya tienes una. El análisis verifica si lo que tienes realmente funciona — si los guardias cumplen protocolo, si las cámaras cubren los ángulos correctos, si las alarmas responden en los tiempos que te prometieron. Es una segunda opinión independiente sin conflicto de interés."
+  - question: "¿Qué entregables recibo al terminar?"
+    answer: "Reporte ejecutivo para la dirección (2-3 páginas), reporte técnico con hallazgos detallados y fotografías, matriz de riesgos con probabilidad e impacto, y plan de implementación priorizado con costos estimados. Todo en formato editable que puedes ajustar internamente."
+  - question: "¿Sirve para cumplir requisitos de protección civil o certificaciones?"
+    answer: "Sí. El reporte incluye evaluación de cumplimiento normativo (NOM-002-STPS, programa interno de protección civil) y genera documentación que puedes presentar ante inspectores, aseguradoras o auditorías corporativas."
+  - question: "¿Trabajan con condominios además de empresas?"
+    answer: "Sí. Para condominios hacemos auditorías específicas: control de accesos, cobertura de CCTV, protocolos del personal de seguridad, y vulnerabilidades del perímetro. Muchos comités lo solicitan antes de renovar contrato con su proveedor actual."
+  - question: "¿Operan en toda la CDMX y Estado de México?"
+    answer: "Sí. Cubrimos toda la CDMX y la Zona Metropolitana. Para instalaciones fuera del área, evaluamos viabilidad según el alcance del proyecto. Llama al 55 3025 5580."
+draft: false
 ---
 
-## Análisis de Riesgos Corporativos
+<div class="prose-intro">
+  <p><strong>ORIGINS Private Security</strong> realiza análisis de riesgos de seguridad para empresas y condominios en CDMX. Un diagnóstico profesional e independiente que identifica <strong>exactamente dónde están tus vulnerabilidades, cuánto te costaría un incidente en cada una, y qué resolver primero</strong> — antes de que un delincuente haga el mismo análisis por ti.</p>
+  <div class="prose-highlight">
+    <strong>La verdad incómoda:</strong> La mayoría de las empresas invierten en seguridad sin saber qué están protegiendo ni contra qué. Compran cámaras para el lobby cuando el problema está en la bodega. Ponen guardias en la entrada cuando la vulnerabilidad está en el perímetro trasero. El análisis de riesgos te da la fotografía real antes de gastar un peso. Si necesitas ir más allá del diagnóstico, nuestra <a href="/servicios/consultoria-seguridad">consultoría de seguridad</a> diseña los protocolos e implementa las mejoras. Y para ejecutivos con exposición personal, el análisis puede derivar en un esquema de <a href="/servicios/proteccion-ejecutiva">protección ejecutiva</a> basado en datos reales, no en suposiciones.
+  </div>
+</div>
 
-### Metodología ISO 31000 con Matrices Heat Map en CDMX
+---
 
-ORIGINS Private Security: Evaluación de amenazas, cuantificación de pérdidas potenciales y priorización de inversiones. Identifica vulnerabilidades críticas antes de desperdiciar presupuesto. +15 años aplicando ISO 31000 en empresas Fortune 500.
+<div class="trust-bar">
+  <div class="trust-bar__item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><div><strong>Permiso SSC 0102-15</strong><span>Empresa certificada en CDMX</span></div></div>
+  <div class="trust-bar__item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><strong>+15 años de experiencia</strong><span>Auditando propiedades en CDMX y ZM</span></div></div>
+  <div class="trust-bar__item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/><line x1="3" y1="3" x2="21" y2="21"/></svg><div><strong>Sin conflicto de interés</strong><span>No vendemos lo que recomendamos</span></div></div>
+  <div class="trust-bar__item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><div><strong>Diagnóstico gratuito</strong><span>2 horas en sitio · Sin compromiso</span></div></div>
+  <div class="trust-bar__item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><div><strong>+50 auditorías realizadas</strong><span>Empresas y condominios en CDMX</span></div></div>
+</div>
 
-### Priorización estratégica, no intuición
+---
 
-La mayoría de empresas invierten en sistemas costosos para riesgos de bajo impacto mientras ignoran vulnerabilidades críticas. Un análisis profesional le permite tomar decisiones basadas en datos cuantificables, no en percepciones o miedos infundados.
+<div class="prose-section-block">
+  <div class="prose-section-block__header"><span class="prose-section-block__num">01</span><div><span class="prose-section-block__label">Evaluación Física</span><h3 class="prose-section-block__title">Lo que un Consultor Entrenado Ve en tu Propiedad en 3 Horas</h3></div></div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>El consultor llega sin conocer tu propiedad — igual que un delincuente que la evalúa por primera vez. <strong>Ve los mismos puntos vulnerables que vería alguien con intenciones de entrar</strong>. La diferencia es que te los documenta con foto y te dice cómo resolverlos.</p>
+      <ul><li>Perímetros: bardas escalables, rejas oxidadas, zonas sin iluminación</li><li>Accesos secundarios sin control ni cámara</li><li>Puntos ciegos de CCTV — ángulos que no cubren lo que deberían</li><li>Flujo de personas que permite tailgating o piggybacking</li><li>Áreas de alto valor sin protección adecuada (bodegas, servidores, cajas)</li><li>Iluminación deficiente en estacionamientos y perímetro nocturno</li></ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/analisis-de-riesgos/estudios-seguridad-fisica-perimetral.avif" alt="Estudios de seguridad física y perimetral en empresas CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/analisis-de-riesgos/identificacion-puntos-criticos-seguridad.avif" alt="Identificación de puntos críticos de seguridad en instalaciones CDMX" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
 
-### Heat Map ejecutivo en una página
+---
 
-Matriz visual que muestra qué amenazas pueden quebrar su empresa vs. cuáles son ruido. Identificamos activos críticos, cuantificamos pérdida potencial por amenaza y priorizamos inversiones por ROI de protección. Decisiones claras, inversión inteligente.
+<div class="prose-section-block">
+  <div class="prose-section-block__header"><span class="prose-section-block__num">02</span><div><span class="prose-section-block__label">Cuantificación</span><h3 class="prose-section-block__title">Matriz de Riesgos — Cada Vulnerabilidad con Probabilidad e Impacto en Pesos</h3></div></div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>No todos los riesgos son iguales. La matriz cuantifica cada vulnerabilidad con <strong>probabilidad de ocurrencia y costo estimado si ocurre</strong>. Esto convierte "tenemos un problema de seguridad" en "este punto específico nos puede costar $X y tiene Y% de probabilidad este año".</p>
+      <ul><li>Clasificación por nivel: crítico, alto, moderado, bajo</li><li>Impacto financiero estimado por tipo de incidente</li><li>Probabilidad basada en datos de incidentes en la zona y el sector</li><li>Priorización automática: lo crítico-barato primero, lo costoso en fases</li><li>Formato visual que puedes presentar al consejo o comité en 5 minutos</li><li>Plan de implementación con costo estimado por cada mejora recomendada</li></ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/analisis-de-riesgos/matriz-riesgos-seguridad-corporativa.avif" alt="Matriz de riesgos de seguridad corporativa CDMX ORIGINS" loading="lazy" width="640" height="480" />
+      <img src="/img/analisis-de-riesgos/cuantificacion-impacto-financiero-riesgos.avif" alt="Cuantificación de impacto financiero de riesgos de seguridad" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
 
-Evaluación sistemática de amenazas con cuantificación financiera y roadmap de mitigación priorizado
+---
 
-Inventario sistemático de activos empresariales prioritarios
+<div class="prose-section-block">
+  <div class="prose-section-block__header"><span class="prose-section-block__num">03</span><div><span class="prose-section-block__label">Recomendaciones</span><h3 class="prose-section-block__title">Plan de Acción Priorizado — No una Lista de Compras</h3></div></div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>El plan de implementación no es "compra 20 cámaras y contrata 5 guardias". Es una hoja de ruta realista que <strong>separa lo urgente de lo importante, lo barato de lo costoso</strong>, y te permite implementar en fases según tu presupuesto real.</p>
+      <ul><li>Quick wins: mejoras de bajo costo con alto impacto inmediato (protocolo, iluminación, reconfiguración)</li><li>Fase 1: vulnerabilidades críticas que requieren inversión moderada (1-3 meses)</li><li>Fase 2: mejoras estructurales que requieren mayor presupuesto (3-12 meses)</li><li>Cada recomendación con costo estimado para facilitar presupuesto</li><li>Análisis costo-beneficio: "invertir $X en esta mejora evita un riesgo de $Y"</li><li>Formato editable que puedes ajustar internamente</li></ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/analisis-de-riesgos/plan-implementacion-mejoras-seguridad.avif" alt="Plan de implementación de mejoras de seguridad para empresas CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/analisis-de-riesgos/recomendaciones-mitigacion-riesgos-seguridad.avif" alt="Recomendaciones de mitigación de riesgos de seguridad CDMX" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
 
-Análisis de vectores de ataque y probabilidades
+---
 
-Cálculo de impacto financiero por escenario de riesgo
+<div class="prose-section-header"><span class="prose-section-badge">Para Quién es</span><h2>Cualquier Propiedad que Necesita Saber Dónde Está Parada</h2><p class="prose-section-sub">El análisis de riesgos es el primer paso antes de contratar, cambiar o ampliar cualquier servicio de seguridad.</p></div>
 
-Visualización ejecutiva de probabilidad vs impacto
+<div class="profile-grid">
+  <div class="profile-card"><div class="profile-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><div class="profile-card__body"><strong class="profile-card__name">Condominio o fraccionamiento</strong><p class="profile-card__need">El comité quiere evaluar si la seguridad actual funciona antes de renovar contrato</p><div class="profile-card__solution"><span class="profile-tag">Auditoría del servicio</span><span class="profile-tag">Reporte para asamblea</span><span class="profile-tag">Recomendaciones</span></div></div></div>
+  <div class="profile-card"><div class="profile-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><div class="profile-card__body"><strong class="profile-card__name">Empresa corporativa</strong><p class="profile-card__need">Auditoría interna o de clientes exige documentar gestión de riesgos</p><div class="profile-card__solution"><span class="profile-tag">Matriz de riesgos</span><span class="profile-tag">Cumplimiento normativo</span><span class="profile-tag">Reporte ejecutivo</span></div></div></div>
+  <div class="profile-card"><div class="profile-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg></div><div class="profile-card__body"><strong class="profile-card__name">Comercio o retail</strong><p class="profile-card__need">Merma alta — no sabe si el problema es de seguridad física o de procesos</p><div class="profile-card__solution"><span class="profile-tag">Auditoría integral</span><span class="profile-tag">CCTV vs. proceso</span><span class="profile-tag">Plan correctivo</span></div></div></div>
+  <div class="profile-card"><div class="profile-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="profile-card__body"><strong class="profile-card__name">Desarrollador inmobiliario</strong><p class="profile-card__need">Diseñar seguridad desde cero para nuevo proyecto residencial o corporativo</p><div class="profile-card__solution"><span class="profile-tag">Diseño preventivo</span><span class="profile-tag">Especificaciones técnicas</span><span class="profile-tag">Supervisión obra</span></div></div></div>
+  <div class="profile-card profile-card--highlight"><div class="profile-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div class="profile-card__body"><strong class="profile-card__name">Empresa con múltiples ubicaciones</strong><p class="profile-card__need">Estandarizar seguridad en todas las sucursales o plantas — identificar cuáles tienen más riesgo</p><div class="profile-card__solution"><span class="profile-tag">Auditoría multi-sitio</span><span class="profile-tag">Comparativa</span><span class="profile-tag">Estándares corporativos</span><span class="profile-tag">Priorización por sitio</span></div></div></div>
+</div>
 
-Identificación de brechas de seguridad existentes
+---
 
-Roadmap de mitigación ordenado por ROI
+<div class="prose-section-header"><span class="prose-section-badge">Proceso</span><h2>Del Diagnóstico Gratuito al Reporte Completo</h2><p class="prose-section-sub">Un proceso claro donde cada paso tiene un entregable. Tú decides hasta dónde llegas — sin compromisos obligatorios entre etapas.</p></div>
 
-Análisis de efectividad de medidas actuales
+<div class="prose-steps">
+  <div class="prose-step"><span class="prose-step__num">01</span><div class="prose-step__content"><strong>Diagnóstico gratuito en sitio — 2 horas, sin compromiso</strong><p>Un consultor recorre tu propiedad contigo. Al terminar te da su evaluación verbal: qué está bien, qué tiene riesgo y si vale la pena la auditoría completa. Absolutamente gratuito.</p></div></div>
+  <div class="prose-step"><span class="prose-step__num">02</span><div class="prose-step__content"><strong>Auditoría completa con trabajo de campo (1–3 semanas)</strong><p>Recorridos detallados, entrevistas al personal, revisión de sistemas instalados y análisis de bitácoras. Sin interrumpir tus operaciones — la auditoría es invisible para el día a día.</p></div></div>
+  <div class="prose-step"><span class="prose-step__num">03</span><div class="prose-step__content"><strong>Elaboración de matriz de riesgos y plan de implementación</strong><p>Cada hallazgo cuantificado y priorizado. El plan incluye quick wins de bajo costo y fases de mayor inversión según tu presupuesto.</p></div></div>
+  <div class="prose-step"><span class="prose-step__num">04</span><div class="prose-step__content"><strong>Presentación de resultados al comité o dirección (90 min)</strong><p>Sesión donde presentamos hallazgos, respondemos preguntas y ajustamos el plan según restricciones. El reporte queda en tu poder en formato editable.</p></div></div>
+  <div class="prose-step"><span class="prose-step__num">05</span><div class="prose-step__content"><strong>Acompañamiento en implementación — opcional</strong><p>Si lo necesitas, supervisamos que los proveedores implementen las mejoras según nuestras especificaciones. Sin comisión por recomendación de proveedor.</p></div></div>
+</div>
 
-Simulación de impactos por materialización de riesgos
+---
 
-Documentación certificable para auditorías
+<div class="prose-section-header"><span class="prose-section-badge">Galería</span><h2>Análisis de Riesgos ORIGINS en Empresas de CDMX</h2><p class="prose-section-sub">Trabajo de campo, matrices de riesgo y reportes ejecutivos — documentación profesional que respalda decisiones de inversión en seguridad.</p></div>
 
-La mayoría de empresas gastan presupuesto de seguridad sin priorización estratégica: invierten en sistemas costosos para riesgos de bajo impacto mientras ignoran vulnerabilidades críticas. El análisis de riesgos cuantifica pérdida potencial esperada por cada amenaza y prioriza inversiones por ROI de protección real.
-
-Evite desperdiciar presupuesto en riesgos irrelevantes mientras deja expuestos activos críticos. Nuestro análisis ISO 31000 le proporciona datos cuantificables para decisiones informadas, matrices Heat Map ejecutivas que visualizan prioridades en una página y roadmaps de mitigación que maximizan retorno de cada peso invertido en seguridad.
-
-Evaluación sistemática con cuantificación financiera y entregables ejecutivos accionables para empresas en CDMX
-
-El análisis comienza identificando todos los activos empresariales críticos: infraestructura física (instalaciones, flotilla, equipamiento), activos intangibles (propiedad intelectual, bases de datos, reputación), capital humano (ejecutivos clave, personal especializado) y dependencias operacionales (proveedores críticos, cadenas de suministro). Evaluamos cuáles activos son verdaderamente críticos vs. importantes pero reemplazables. Analizamos interdependencias: qué sistemas dependen de cuáles activos.
-
-Identificamos amenazas específicas para su industria y contexto: robo con violencia, secuestro de ejecutivos, robo hormiga interno, fuga de información, sabotaje, fraude corporativo, ciberataques, desastres naturales, incendios, fallas de infraestructura crítica. Para cada amenaza calculamos probabilidad de ocurrencia basada en estadísticas sectoriales, historial de incidentes similares en empresas comparables y factores de riesgo específicos de su operación. Complementa con consultoría de seguridad.
-
-No usamos etiquetas subjetivas como "riesgo alto" sin cuantificar. Calculamos pérdida potencial esperada en pesos para cada amenaza: pérdida directa (valor robado, equipos destruidos, rescates), costos operacionales (interrupción de negocio, tiempo de recuperación, horas-hombre perdidas), costos reputacionales (pérdida de clientes, daño de marca, impacto en ventas) y costos regulatorios (multas, litigios, indemnizaciones). Esta cuantificación permite priorizar racionalmente.
-
-Entregamos matriz de riesgos tipo Heat Map que visualiza todos los riesgos en gráfica de probabilidad (eje Y) vs. impacto financiero (eje X). Riesgos en zona roja (alta probabilidad, alto impacto) requieren acción inmediata. Riesgos en zona amarilla (probabilidad o impacto moderado) requieren monitoreo. Riesgos en zona verde (baja probabilidad, bajo impacto) no justifican inversión. Esta matriz ONE-PAGE permite a CFOs y comités ejecutivos entender prioridades sin leer 100 páginas.
-
-Evaluamos efectividad de controles de seguridad actuales: ¿tienen guardias pero sin capacitación anti-secuestro? ¿Tienen CCTV pero nadie monitorea? ¿Tienen políticas de seguridad que nadie cumple? Identificamos brechas (GAPs) entre su postura de seguridad actual y la necesaria para mitigar riesgos críticos. Este análisis evita duplicar inversiones en controles que ya funcionan mientras ignora brechas peligrosas. Conoce más en seguridad para condominios.
-
-No solo identificamos riesgos: entregamos plan de acción priorizado. Para cada riesgo crítico especificamos controles recomendados, costo estimado de implementación, reducción esperada de probabilidad o impacto y ROI de protección (pérdida evitada / costo de control). Controles con ROI más alto se priorizan. El roadmap incluye timeline de implementación: qué hacer este trimestre (riesgos críticos urgentes), qué hacer próximo semestre (riesgos importantes) y qué monitorear (riesgos aceptables).
-
-Modelamos escenarios específicos: "¿Qué pasa si secuestran a nuestro CFO?" "¿Qué pasa si incendian nuestra planta principal?" "¿Qué pasa si filtran nuestra base de datos de clientes?" Para cada escenario calculamos impacto operacional, financiero, legal y reputacional. Estos escenarios ayudan a comités ejecutivos entender consecuencias reales de riesgos que parecen abstractos. También validan inversiones en controles: "invertir $500K en protección ejecutiva evita pérdida potencial de $50M por secuestro".
-
-No solo riesgos internos: evaluamos riesgos de cadena de suministro. ¿Qué pasa si su proveedor crítico de insumos sufre robo o incendio? ¿Tiene proveedores alternativos? ¿Qué tan robustos son contratos con cláusulas de continuidad? Identificamos dependencias peligrosas (single points of failure) donde un incidente en proveedor paraliza su operación. Recomendamos estrategias de diversificación o controles colaborativos con proveedores estratégicos. Complementa con custodia de mercancías.
-
-Cuantificamos riesgos reputacionales: ¿cuánto perdería en ventas si video de robo violento en sucursal se viraliza? ¿Qué impacto tendría en valor de acciones filtración de datos de clientes? Evaluamos preparación para comunicación de crisis: ¿tienen vocero capacitado? ¿Tienen protocolos de respuesta a medios? ¿Pueden contener narrativa negativa en 24 horas? Empresas sin plan de comunicación de crisis sufren daño reputacional 3x mayor que empresas preparadas.
-
-Utilizamos metodología ISO 31000 para gestión de riesgos, estándar internacional reconocido por comités de auditoría y certificadores. El análisis sigue estructura sistemática: establecimiento de contexto → identificación de riesgos → análisis de riesgos → evaluación de riesgos → tratamiento de riesgos → monitoreo y revisión. La documentación es certificable: puede ser presentada en auditorías externas (ISO 27001, ISO 22301, auditorías financieras) como evidencia de due diligence en gestión de riesgos. Conoce también investigaciones de confiabilidad.
-
-Alcances diferenciados según complejidad operativa y nivel de profundidad requerido
-
-Todo análisis de riesgos ORIGINS incluye estos elementos de evaluación profesional
-
-Análisis estructurado conforme estándar internacional para gestión de riesgos
-
-Visualización de riesgos por probabilidad vs impacto financiero
-
-Cálculo de pérdida potencial esperada en pesos por cada amenaza
-
-Evaluación de controles existentes vs controles necesarios
-
-Plan de acción priorizado con timeline de implementación
-
-Modelado de impactos por materialización de riesgos críticos
-
-Evaluación de riesgos de proveedores y dependencias
-
-Identificación de brechas de seguridad física y operativa
-
-Reportes que cumplen requisitos de auditorías ISO y compliance
-
-Análisis costo-beneficio de inversiones en controles de seguridad
-
-Complete el formulario y reciba propuesta con alcance específico para su empresa y nivel de complejidad operativa
-
-Respuesta en menos de 24 horas · Metodología ISO 31000 · Matrices Heat Map
-
-Diferenciadores técnicos y metodológicos que generan entregables accionables vs reportes teóricos
-
-No usamos etiquetas subjetivas como "riesgo alto" sin cuantificar. Calculamos pérdida potencial esperada en pesos para cada amenaza: pérdida directa, costos operacionales, costos reputacionales y costos regulatorios. Esta cuantificación permite priorizar racionalmente: un riesgo con probabilidad 10% pero impacto $50M es más crítico que riesgo con probabilidad 80% pero impacto $10K.
-
-Utilizamos datos históricos de incidentes similares en su sector, estadísticas de aseguradoras y benchmarks de pérdidas promedio para calcular cifras realistas, no estimaciones arbitrarias.
-
-Entregamos matriz de riesgos tipo Heat Map que visualiza todos los riesgos en gráfica de probabilidad vs impacto. CFOs y comités ejecutivos entienden prioridades en 2 minutos sin leer reportes extensos. Riesgos en zona roja requieren acción inmediata, zona amarilla requiere monitoreo, zona verde no justifica inversión.
-
-La matriz incluye tamaño de burbujas proporcional a costo de mitigación, permitiendo decisiones informadas sobre qué riesgos atender primero considerando tanto criticidad como viabilidad económica.
-
-El roadmap incluye timeline realista: qué implementar este trimestre (riesgos críticos urgentes), qué implementar próximo semestre (riesgos importantes) y qué monitorear (riesgos aceptables con bajo ROI de mitigación).
-
-Utilizamos metodología ISO 31000 para gestión de riesgos, estándar internacional reconocido por comités de auditoría, certificadores y reguladores. El análisis sigue estructura sistemática documentada que puede ser presentada en auditorías externas (ISO 27001, ISO 22301, auditorías financieras) como evidencia de due diligence.
-
-Para empresas que cotizan en bolsa, aseguradoras institucionales o con requerimientos de compliance, el análisis cumple estándares documentales exigidos. No es "reporte informal" sino análisis con rigor metodológico comprobable.
-
-Cada industria tiene riesgos específicos: retail enfrenta robo hormiga y asaltos, manufactura enfrenta sabotaje y robos de maquinaria, tecnología enfrenta fuga de propiedad intelectual, construcción enfrenta robo de materiales y extorsión de sindicatos. No usamos plantillas genéricas que listan riesgos irrelevantes para su operación.
-
-Nuestros consultores tienen experiencia sectorial: quien analiza empresas retail entiende patrones de merma, quien analiza construcción entiende logística de obra. El análisis refleja amenazas reales que enfrentan empresas comparables en su sector.
-
-Más de 140 empresas de sectores diversos han implementado recomendaciones de nuestros análisis de riesgos. Clientes reportan reducción promedio del 67% en incidentes críticos post-implementación de controles priorizados. Resultados cuantificables que justifican inversión en análisis profesional vs decisiones basadas en intuición.
-
-Contamos con RFC OPS1308309M5 y más de 15 años aplicando metodología ISO 31000 en empresas Fortune 500, multinacionales y grupos empresariales mexicanos. Nuestro historial es impecable: cero litigios por negligencia profesional.
-
-Soluciones estratégicas para quienes no pueden darse el lujo de correr riesgos. Protección discreta, análisis preventivo e inteligencia empresarial que te permite tomar decisiones con confianza.
-
-No puedes mitigar riesgos que no has identificado ni cuantificado. Nuestro análisis de riesgos empresarial mapea amenazas específicas a tu industria, ubicación y operación, cuantificando probabilidad de ocurrencia e impacto financiero potencial. Desde evaluaciones de vulnerabilidad física hasta análisis de riesgos operacionales, entregamos matrices priorizadas que permiten decisiones de inversión en seguridad basadas en ROI documentado, no en intuición o miedo.
-
-Complementamos con consultoría de seguridad para implementar controles recomendados, investigaciones de confiabilidad mitigando riesgos internos de fraude, y protección ejecutiva para liderazgo expuesto a amenazas identificadas. Con más de 15 años asesorando desde PYMEs hasta corporativos multinacionales, transformamos incertidumbre en planes de acción ejecutivos con presupuestos justificados y KPIs medibles.
-
-Deje de gastar presupuesto de seguridad sin priorización estratégica. Invierta en análisis de riesgos profesional que cuantifica amenazas reales, prioriza inversiones por ROI y proporciona roadmap accionable. Empresas Fortune 500 ya entendieron que decisiones informadas previenen crisis costosas.
-
-Análisis certificable para auditorías corporativas
-
-Visualización ejecutiva de prioridades en una página
-
-Roadmap con retorno calculado de cada inversión
-
+<div class="prose-gallery">
+  <figure><img src="/img/analisis-de-riesgos/estudios-seguridad-fisica-perimetral.avif" alt="Estudios de seguridad física perimetral en empresas CDMX" loading="lazy" width="640" height="480" /><figcaption>Evaluación física del perímetro — cada punto vulnerable documentado con fotografía</figcaption></figure>
+  <figure><img src="/img/analisis-de-riesgos/evaluacion-amenazas-seguridad-empresarial-cdmx.avif" alt="Evaluación de amenazas de seguridad empresarial en CDMX" loading="lazy" width="640" height="480" /><figcaption>Análisis de amenazas por zona — probabilidad e impacto cuantificados</figcaption></figure>
+  <figure><img src="/img/analisis-de-riesgos/matriz-riesgos-seguridad-corporativa.avif" alt="Matriz de riesgos de seguridad corporativa ORIGINS" loading="lazy" width="640" height="480" /><figcaption>Matriz de riesgos — clasificación visual por urgencia e impacto financiero</figcaption></figure>
+  <figure><img src="/img/analisis-de-riesgos/diagnostico-sistemas-seguridad-existentes.avif" alt="Diagnóstico de sistemas de seguridad existentes CDMX" loading="lazy" width="640" height="480" /><figcaption>Auditoría de sistemas instalados — evaluamos si lo que tienes realmente funciona</figcaption></figure>
+  <figure><img src="/img/analisis-de-riesgos/informe-ejecutivo-analisis-riesgos.avif" alt="Informe ejecutivo de análisis de riesgos para dirección" loading="lazy" width="640" height="480" /><figcaption>Reporte ejecutivo — formato presentable para consejo de administración o comité</figcaption></figure>
+  <figure><img src="/img/analisis-de-riesgos/plan-implementacion-mejoras-seguridad.avif" alt="Plan de implementación de mejoras de seguridad prioritarias" loading="lazy" width="640" height="480" /><figcaption>Plan de acción priorizado — qué resolver primero, qué puede esperar y cuánto cuesta</figcaption></figure>
+</div>

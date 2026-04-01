@@ -1,157 +1,164 @@
 ---
-title: "Investigaciones de Confiabilidad y Antecedentes CDMX | Seguridad Privada"
-description: "Investigaciones de confiabilidad y seguridad privada en CDMX. Verificación de antecedentes, estudios socioeconómicos. +15 años. ☎ 55 3025 5580"
+title: "Investigaciones de Confiabilidad CDMX — ORIGINS"
+description: "Investigaciones de confiabilidad para empresas en CDMX. Verificación de antecedentes, pruebas de confianza, auditorías de personal. Resultados confidenciales."
 category: service
 publishDate: 2024-01-01
+updatedDate: 2026-04-01
 keywords:
-  - seguridad
-  - investigaciones confiabilidad
+  - investigaciones confiabilidad cdmx
+  - verificacion antecedentes laborales cdmx
+  - estudios socioeconomicos empresas cdmx
+  - examen confianza empleados cdmx
+  - investigacion antecedentes penales cdmx
+  - evaluacion personal seguridad cdmx
+  - verificacion antecedentes empleados cdmx
+  - investigaciones laborales confiabilidad
+  - pruebas confianza personal empresas
+  - auditoria personal seguridad cdmx
+relatedServices:
+  - consultoria-seguridad
+  - guardias-intramuros
+  - prevencion-de-perdidas
+  - proteccion-ejecutiva
+  - control-de-accesos
+targetLocations:
+  - Ciudad de México
+  - Estado de México
+serviceFeatures:
+  - title: "Verificación de Antecedentes Penales"
+    description: "Consulta verificada en el RNSP (Registro Nacional de Seguridad Pública). Confirmamos que el candidato no tiene historial criminal documentado."
+    icon: "shield"
+  - title: "Estudios Socioeconómicos"
+    description: "Visita domiciliaria para verificar condiciones de vida, entorno familiar, estilo de vida y coherencia con los ingresos declarados."
+    icon: "home"
+  - title: "Exámenes Psicométricos"
+    description: "Evaluación de estabilidad emocional, honestidad, toma de decisiones bajo presión y perfil de riesgo para posiciones sensibles."
+    icon: "brain"
+  - title: "Pruebas Toxicológicas"
+    description: "Panel completo de sustancias. Resultados en 48 horas con certificado de laboratorio autorizado."
+    icon: "check-circle"
+  - title: "Verificación de Referencias Laborales"
+    description: "Contacto directo con empleadores anteriores para confirmar fechas, puesto, motivo de salida y desempeño documentado."
+    icon: "phone"
+  - title: "Informe Confidencial Integrado"
+    description: "Reporte completo con hallazgos de todas las evaluaciones en un solo documento. Confidencialidad total bajo NDA."
+    icon: "file-text"
 faqs:
-  - question: "¿Qué incluye exactamente un estudio de confiabilidad estándar?"
-    answer: "El paquete estándar empresarial incluye: entrevista domiciliaria presencial con investigador certificado, verificación de antecedentes penales en bases de datos oficiales de CDMX y Estado de México, contacto con 2 empleadores anteriores para confirmar periodos laborales y motivo de separación, entrevistas telefónicas con 3 referencias personales usando preguntas de control, validación de documentos oficiales (INE, comprobante de domicilio, CURP), análisis patrimonial básico para detectar riesgos financieros, validación de último grado académico con institución educativa, reporte ejecutivo certificado con evidencia fotográfica y recomendación de contratación fundamentada. Tiempo de entrega: 5-7 días hábiles."
-  - question: "¿Es legal realizar investigaciones de confiabilidad bajo la LFPDPPP?"
-    answer: "Totalmente legal siempre que se obtenga consentimiento expreso del candidato. La LFPDPPP permite tratamiento de datos personales para finalidad de contratación cuando la persona otorga autorización por escrito. Cada estudio inicia con formato de consentimiento firmado por candidato que autoriza verificación de antecedentes, contacto con referencias y consulta de bases de datos oficiales. Incluimos aviso de privacidad específico que cumple con todos los requisitos legales. Su empresa está protegida con documentación que demuestra cumplimiento normativo completo."
-  - question: "¿Qué diferencia hay entre paquete básico, estándar y ejecutivo?"
-    answer: "El paquete básico verifica integridad mínima: antecedentes penales, entrevista domiciliaria y 2 referencias personales. Es suficiente para personal operativo sin acceso a activos. El estándar añade verificación de empleos anteriores, análisis patrimonial y validación académica, ideal para coordinadores y supervisores. El ejecutivo incluye verificación exhaustiva de 4 empleos, análisis financiero profundo, revisión de presencia digital, detección de conflictos de interés y entrevistas extendidas, diseñado para gerentes y directores con acceso a información privilegiada. El premium C-level agrega verificación internacional, investigación de reputación corporativa y análisis de litigios para alta dirección."
-  - question: "¿Cómo verifican empleos anteriores si empresas no dan referencias?"
-    answer: "Utilizamos técnicas especializadas de verificación laboral: contacto con departamento de RH usando validación de datos que solo un ex-empleado conocería, consulta con ex-supervisores directos cuyos contactos obtenemos mediante LinkedIn y redes profesionales, validación cruzada con información de IMSS cuando candidato autoriza, entrevistas con ex-compañeros de trabajo para confirmar periodos y responsabilidades. Si empresa no confirma, documentamos intentos de contacto y utilizamos evidencia alternativa (recibos de nómina, cartas de recomendación, constancias laborales). Cuando no es posible verificar, lo señalamos explícitamente en reporte como factor de alerta amarillo."
-  - question: "¿Detectan si candidatos mintieron en su CV o entrevista?"
-    answer: "Sí, una de nuestras especialidades es detección de inconsistencias y datos falsos. Verificamos directamente con instituciones educativas si títulos son auténticos, contactamos empleadores para confirmar periodos laborales y puestos declarados, realizamos preguntas de control a referencias que solo personas reales pueden responder correctamente, validamos autenticidad de documentos oficiales con técnicas forenses y comparamos información declarada en CV con datos reales obtenidos en investigación. Aproximadamente 18% de candidatos presentan información falsa o exagerada: títulos inexistentes, periodos laborales inflados, empleos inventados o responsabilidades exageradas. Lo documentamos con evidencia en reporte ejecutivo."
-  - question: "¿Qué sucede si candidato se niega a firmar autorización?"
-    answer: "Si candidato rechaza firmar consentimiento para investigación de confiabilidad, es una bandera roja importante que debe considerar. Personas con antecedentes limpios y trayectoria honesta no tienen motivos para negar verificación. La negativa puede indicar: antecedentes penales que prefiere ocultar, referencias laborales negativas que no quiere que conozca, información falsa en CV que será descubierta o situación patrimonial comprometida. Legalmente, su empresa puede condicionar contratación a estudios de confiabilidad, especialmente para puestos con acceso a activos, información sensible o representación corporativa. Es su derecho como empleador verificar antecedentes con consentimiento."
-  - question: "¿Pueden investigar candidatos que viven fuera de CDMX?"
-    answer: "Sí, tenemos cobertura nacional mediante red de investigadores asociados certificados en todos los estados de México. Si candidato vive en Guadalajara, Monterrey, Puebla, Querétaro u otra ciudad, coordinamos con investigador local quien realiza entrevista domiciliaria presencial siguiendo nuestra metodología certificada. Verificamos antecedentes penales en base de datos del estado correspondiente, contactamos empleadores y referencias sin importar ubicación geográfica y producimos reporte ejecutivo con mismos estándares de calidad. Tiempo de entrega puede extenderse 2-3 días por logística de campo. Cobertura internacional disponible para candidatos con historial laboral en Estados Unidos, Canadá o Europa."
-  - question: "¿Cuánto cuestan los estudios de confiabilidad?"
-    answer: "Los costos varían según alcance de verificación y urgencia: paquete básico desde $1,200 MXN, estándar desde $2,500 MXN, ejecutivo desde $4,500 MXN, premium C-level desde $8,500 MXN. Ofrecemos descuentos por volumen: 10% para 10-20 estudios, 15% para 21-50 estudios, 20% para más de 50 estudios mensuales. Servicio express con entrega acelerada tiene sobrecargo del 30%. Incluimos reporte ejecutivo certificado, evidencia fotográfica, documentación de cumplimiento LFPDPPP y actualizaciones durante proceso sin costo adicional. Aceptamos facturación corporativa con crédito de 30 días para clientes establecidos. Cotizaciones personalizadas sin compromiso disponibles en menos de 24 horas."
-  - question: "¿Qué tan confiable es la información de antecedentes penales?"
-    answer: "Consultamos bases de datos oficiales de Secretaría de Seguridad Ciudadana de CDMX, Fiscalía General de Justicia, Registro Nacional de Población y bases nacionales de antecedentes penales. Sin embargo, ningún sistema es 100% perfecto: registros pueden estar desactualizados, delitos cometidos en otros estados pueden no aparecer en bases locales, procesos penales en curso no siempre están digitalizados. Por eso complementamos consultas digitales con entrevista presencial, preguntas directas al candidato y verificación cruzada con referencias. Si detectamos inconsistencias entre información declarada y bases de datos, lo investigamos exhaustivamente. Aclaramos en reporte que consulta refleja información disponible a la fecha de investigación."
+  - question: "¿Cuánto tiempo toma una investigación completa de confiabilidad?"
+    answer: "La investigación estándar (antecedentes, estudio socioeconómico, referencias y psicométrico) toma 5 a 7 días hábiles. La versión express para posiciones urgentes puede entregarse en 3 días hábiles. Las pruebas toxicológicas tienen resultado en 48 horas. El informe integrado se entrega máximo 2 días después de completar la última evaluación."
+  - question: "¿Es legal verificar antecedentes de un candidato?"
+    answer: "Sí, siempre que el candidato dé su consentimiento por escrito. Toda nuestra investigación se realiza con autorización firmada del evaluado y cumple con la Ley Federal de Protección de Datos Personales. El candidato sabe que será evaluado — no hacemos investigaciones sin su conocimiento."
+  - question: "¿Qué incluye exactamente el estudio socioeconómico?"
+    answer: "Visita domiciliaria por un investigador certificado. Verifica condiciones de vivienda, coherencia entre ingresos y estilo de vida, composición familiar, y entorno del vecindario. Incluye fotografías de la vivienda (con autorización) y entrevista con referencias personales. El objetivo es detectar inconsistencias que indiquen un perfil de riesgo."
+  - question: "¿Pueden hacer investigaciones para personal que ya está contratado?"
+    answer: "Sí. Muchas empresas solicitan evaluaciones periódicas de personal en posiciones sensibles — manejo de efectivo, acceso a información confidencial o custodias. La evaluación se hace con consentimiento del empleado y los resultados se manejan con absoluta confidencialidad."
+  - question: "¿Los resultados son válidos para uso legal?"
+    answer: "Los resultados son documentación interna para toma de decisiones de contratación. No constituyen prueba judicial por sí solos, pero la documentación puede respaldar un proceso disciplinario interno o una decisión de no contratación. Los antecedentes penales verificados en RNSP tienen validez oficial."
+  - question: "¿Pueden investigar candidatos en otros estados o solo en CDMX?"
+    answer: "Cubrimos toda la República Mexicana. Para investigaciones fuera de CDMX y Estado de México, coordinamos con investigadores certificados en la localidad del candidato. Los tiempos pueden extenderse 2-3 días adicionales dependiendo de la ubicación."
+  - question: "¿Qué costo tiene y a partir de cuántos candidatos trabajan?"
+    answer: "Trabajamos desde 1 candidato. No hay mínimo. Para empresas con volumen alto (10+ evaluaciones mensuales) ofrecemos tarifas preferenciales. El costo depende del nivel de profundidad: verificación básica de antecedentes hasta investigación integral con todas las evaluaciones. Llama al 55 3025 5580 para cotización."
+draft: false
 ---
 
-## Investigaciones de Confiabilidad
-
-### Verificación de Antecedentes para Empresas en CDMX
-
-ORIGINS Private Security: Estudios socioeconómicos profesionales con reportes ejecutivos en 5-7 días hábiles. Certeza documentada sobre integridad, trayectoria laboral y situación socioeconómica. +15 años verificando personal para Fortune 500.
-
-### Evite el costo de una mala contratación
-
-Contratar sin verificación exhaustiva es asumir riesgos legales, operativos y reputacionales evitables. Una mala contratación cuesta entre 30% y 150% del salario anual del puesto, sin contar robo interno, fuga de información o litigios laborales.
-
-### Certeza documentada antes de firmar
-
-Verificación profesional de integridad, trayectoria laboral real y situación socioeconómica de candidatos. Metodología certificada que detecta inconsistencias, referencias falsas y antecedentes problemáticos antes de comprometer a su organización.
-
-Verificación profesional exhaustiva con metodología certificada para decisiones de contratación informadas
-
-Consulta de registros oficiales y base de datos nacional
-
-Visita del investigador con validación de datos
-
-Confirmación de empleo con empresas anteriores
-
-Evaluación de estabilidad económica y riesgos
-
-Validación de carácter y reputación personal
-
-Documentos profesionales con evidencia fotográfica
-
-Confirmación de certificados y credenciales
-
-Indicadores rojos y factores de alerta temprana
-
-Cumplimiento LFPDPPP y protocolos corporativos
-
-Cada año, empresas mexicanas pierden millones de pesos por malas contrataciones que pudieron evitarse con estudios de confiabilidad profesionales. Robo interno, fuga de información, demandas laborales fraudulentas, acoso, violencia y negligencia que generan pérdidas económicas y reputacionales masivas.
-
-Las organizaciones que invierten en investigaciones de confiabilidad pre-empleo reducen rotación en 40%, minimizan riesgos legales en 60% y protegen activos críticos que tomaría años recuperar. En ORIGINS, nuestros estudios socioeconómicos certificados le proporcionan tranquilidad documentada con evidencia verificable que resiste auditorías corporativas y cumple normativas de protección de datos.
-
-Más de 15 años verificando personal para empresas líderes en CDMX demuestran que la inversión en investigaciones profesionales genera retornos tangibles en seguridad, reducción de rotación y protección legal
-
-Nuestras investigaciones de confiabilidad siguen protocolos certificados con 28 puntos de verificación obligatorios. Cada estudio incluye entrevista domiciliaria presencial, verificación de antecedentes penales en bases de datos oficiales, validación de referencias laborales con contacto directo a empresas anteriores, entrevistas a referencias personales con preguntas de control, análisis patrimonial básico y revisión de historial crediticio. Detectamos inconsistencias, omisiones y datos falsos que candidatos ocultan en entrevistas tradicionales.
-
-El costo promedio de una mala contratación en posiciones gerenciales alcanza 150% del salario anual: indemnización, reclutamiento, capacitación, pérdidas operativas y daño reputacional. Un solo caso de robo interno o fuga de información confidencial puede generar pérdidas de 6 cifras. Nuestros estudios cuestan una fracción del riesgo que mitigan. Complementa con consultoría de seguridad corporativa para protección integral.
-
-Cada investigación culmina en reporte ejecutivo certificado con evidencia fotográfica, validación de documentos oficiales, transcripciones de entrevistas, análisis de riesgos con semáforo de alertas (verde, amarillo, rojo) y recomendaciones de contratación fundamentadas. Los reportes incluyen firma del investigador responsable, sellos de la empresa y anexos documentales que cumplen con requisitos de auditorías corporativas ISO y SOC2.
-
-Operamos bajo estricto cumplimiento de la Ley Federal de Protección de Datos Personales en Posesión de Particulares. Cada candidato firma autorización expresa para investigación, se respeta confidencialidad de datos sensibles y cumplimos con períodos de retención reglamentarios. Su empresa está protegida legalmente: los estudios incluyen documentación de consentimiento que minimizan riesgos de demandas por privacidad.
-
-Directores, gerentes, CFOs y roles con acceso a información privilegiada requieren verificación exhaustiva. Nuestros estudios ejecutivos incluyen validación de títulos profesionales con instituciones educativas, verificación de empleos en empresas multinacionales, análisis de presencia digital y redes sociales, consulta de listas negras corporativas y detección de conflictos de interés. Esencial para empresas que contratan personal con facultades para comprometer recursos o tomar decisiones estratégicas.
-
-Cajeros, almacenistas, choferes, personal administrativo con manejo de efectivo o inventarios de alto valor necesitan verificación especializada. Investigamos historial de demandas laborales anteriores, antecedentes de despidos por robo o fraude, estabilidad financiera (personas con deudas severas son 3x más propensas a robo interno) y referencias cruzadas con antiguos empleadores sobre integridad. Reducimos riesgo de mermas inexplicables y faltantes de caja. Complementa con prevención de pérdidas para retail.
-
-Desarrolladores, personal de IT, analistas con acceso a bases de datos de clientes, fórmulas industriales o estrategias comerciales requieren estudios enfocados en integridad digital. Verificamos historial de competidores donde trabajó candidato (posible fuga de información), vínculos con industrias competidoras, análisis de presencia online para detectar venta de información y evaluación de litigios anteriores por propiedad intelectual. Protegemos secretos industriales que tardó años en desarrollar.
-
-Vendedores, ejecutivos de cuenta, personal de atención telefónica representan su marca ante clientes y prospectos. Verificamos historial de quejas por mal servicio, demandas por acoso u hostigamiento, antecedentes de fraudes a clientes en empleos anteriores y evaluación de estabilidad emocional mediante referencias personales. Un empleado con conductas agresivas o fraudulentas puede destruir reputación corporativa que tomó décadas construir. Conoce más en seguridad para eventos corporativos.
-
-Personal médico, enfermeras, técnicos y administrativos en hospitales deben cumplir normativa NOM-030-SSA3 que exige constancia de no antecedentes penales y verificación de cédula profesional. Nuestros estudios incluyen validación de títulos con instituciones registradas ante SEP, verificación de cédula ante Dirección General de Profesiones, consulta de sanciones disciplinarias en colegios profesionales y referencias cruzadas con hospitales anteriores sobre conducta ética.
-
-No solo personal interno: también verificamos antecedentes de proveedores estratégicos, socios comerciales y consultores externos que accederán a sus instalaciones, información o procesos. Investigamos reputación corporativa, litigios comerciales pendientes, solvencia financiera, antecedentes de fraude y referencias de otros clientes. Previene asociaciones con empresas fantasma, proveedores vinculados a lavado de dinero o socios con historial de incumplimiento. Complementa con análisis de riesgos corporativos.
-
-Esquemas de verificación profesional adaptados a diferentes niveles de riesgo y responsabilidad de posiciones empresariales
-
-Todo estudio de confiabilidad ORIGINS incluye estos elementos de verificación profesional
-
-Visita del investigador certificado al domicilio declarado con validación de datos
-
-Consulta de bases de datos oficiales de secretarías de seguridad y fiscalías
-
-Contacto telefónico con referencias y preguntas de control sobre carácter
-
-Evaluación de estabilidad económica y detección de riesgos financieros
-
-Validación de autenticidad de INE, comprobantes de domicilio y documentos
-
-Documento profesional con evidencia fotográfica y firma del investigador
-
-Semáforo de alertas (verde, amarillo, rojo) con factores de riesgo identificados
-
-Opinión profesional fundamentada sobre viabilidad del candidato
-
-Documentación de consentimiento y protección legal contra demandas de privacidad
-
-Manejo seguro de información con protocolos de encriptación y acceso restringido
-
-Complete el formulario y reciba propuesta personalizada en menos de 24 horas con esquema de verificación adaptado a sus necesidades
-
-Respuesta en menos de 24 horas · Reportes Certificados · Cumplimiento LFPDPPP
-
-Más de 15 años verificando personal para empresas multinacionales y organizaciones de alto perfil
-
-Nuestras investigaciones de confiabilidad siguen protocolos sistemáticos certificados con checklist de 28 elementos de verificación que garantizan exhaustividad. Cada investigador tiene capacitación especializada en entrevista forense, detección de inconsistencias y análisis de riesgos conductuales.
-
-Utilizamos metodología híbrida: investigación de campo presencial más consulta de bases de datos digitales oficiales. Esto asegura detección de banderas rojas que estudios meramente digitales omiten.
-
-Todo nuestro personal investigador cuenta con certificación profesional en investigación privada, capacitación en LFPDPPP y experiencia mínima de 5 años en verificación de antecedentes. No contratamos becarios sin experiencia que comprometan calidad de los estudios.
-
-Los investigadores reciben evaluación trimestral de calidad con revisión de reportes, auditorías de campo y capacitación continua en técnicas de entrevista avanzada.
-
-Cada investigación culmina en reporte ejecutivo con estructura profesional: resumen ejecutivo, metodología aplicada, hallazgos documentados, evidencia fotográfica, análisis de riesgos con semáforo de alertas, recomendaciones de contratación fundamentadas y anexos documentales.
-
-Los reportes incluyen firma digital del investigador responsable, sellos de autenticidad y cumplimiento de formatos que resisten auditorías corporativas internacionales. Empresas multinacionales que reportan a casas matrices usan nuestros estudios sin objeciones de compliance.
-
-Operamos bajo estricto cumplimiento de la Ley Federal de Protección de Datos Personales en Posesión de Particulares. Cada estudio incluye formato de autorización firmado por candidato, aviso de privacidad específico y documentación de consentimiento expreso que protege legalmente a su empresa.
-
-Mantenemos sistemas de encriptación de datos, acceso restringido por roles y auditorías de seguridad trimestrales. Cumplimos con períodos de retención reglamentarios y destrucción certificada de información sensible. Su empresa está cubierta contra demandas por privacidad.
-
-Nos comprometemos contractualmente con tiempos de entrega específicos según paquete: básico 3-5 días, estándar 5-7 días, ejecutivo 7-10 días. Si incumplimos sin causa de fuerza mayor atribuible a candidato (referencias no responden, domicilio falso), aplicamos descuento del 20% sobre costo del estudio.
-
-Ofrecemos servicio express con sobrecargo del 30% que reduce tiempos de entrega en 40% para urgencias reales.
-
-Desde nuestro inicio, hemos realizado más de 12,000 investigaciones de confiabilidad para empresas Fortune 500, multinacionales tecnológicas, hospitales privados, instituciones financieras y organizaciones de alto perfil en CDMX y Estado de México. Nuestro historial es impecable: cero demandas por privacidad, 96% de satisfacción del cliente y reconocimiento de casas matrices internacionales.
-
-Contamos con RFC OPS1308309M5 y permisos vigentes que acreditan formalidad legal completa. Operamos con transparencia fiscal y cumplimiento normativo total.
-
-Soluciones estratégicas para quienes no pueden darse el lujo de correr riesgos. Protección discreta, análisis preventivo e inteligencia empresarial que te permite tomar decisiones con confianza.
-
-Una mala contratación no solo cuesta el sueldo: cuesta reputación, clientes y años de confianza corporativa construida. Nuestras investigaciones de confiabilidad detectan banderas rojas que currículums embellecidos ocultan: antecedentes penales no declarados, verificaciones laborales falsificadas, referencias inventadas, deudas críticas o vínculos con competencia. Desde candidatos ejecutivos hasta personal operativo con acceso a activos sensibles, validamos integridad antes de que firmes contratos.
-
-Complementamos con consultoría de seguridad diseñando políticas de contratación segura, análisis de riesgos identificando posiciones críticas que requieren verificación exhaustiva, y protección ejecutiva para liderazgo expuesto públicamente. Con más de 15 años verificando candidatos para corporativos, instituciones financieras y organizaciones gubernamentales, entregamos reportes ejecutivos en 5-7 días con evidencia documentada y recomendaciones claras de contratación.
-
-Empresas líderes en CDMX ya entendieron que verificar antecedentes profesionalmente no es gasto, es inversión que previene pérdidas millonarias. No permita que una mala contratación destruya años de construcción corporativa. Invierta en investigaciones de confiabilidad que SÍ detectan banderas rojas antes de firmar contratos.
-
-28 puntos de verificación con investigadores profesionales
-
-Documentos certificados que resisten auditorías ISO
-
-Protección legal contra demandas de privacidad
-
+<div class="prose-intro">
+  <p><strong>ORIGINS Private Security</strong> realiza investigaciones de confiabilidad para empresas en CDMX. Antes de que una persona entre a tu organización — o si ya está dentro en posición sensible — <strong>verificamos que es quien dice ser, que su historial es limpio y que su perfil corresponde a la responsabilidad que va a tener</strong>.</p>
+  <div class="prose-highlight">
+    <strong>Lo que no puedes ver en una entrevista:</strong> El candidato puede presentar un CV impecable y causar excelente impresión. Pero el 18% de los candidatos omite información relevante en su historial laboral. El 7% tiene antecedentes que no declara. Y el estudio socioeconómico detecta inconsistencias entre lo que dice y cómo vive. La investigación de confiabilidad encuentra lo que la entrevista no puede. Este servicio es clave para empresas que contratan <a href="/servicios/guardias-intramuros">guardias intramuros</a> o personal con acceso a activos, y se integra naturalmente con nuestra <a href="/servicios/consultoria-seguridad">consultoría de seguridad</a> y los programas de <a href="/servicios/prevencion-de-perdidas">prevención de pérdidas</a>.
+  </div>
+</div>
+
+---
+
+<div class="trust-bar">
+  <div class="trust-bar__item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><div><strong>Permiso SSC 0102-15</strong><span>Investigadores certificados</span></div></div>
+  <div class="trust-bar__item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><div><strong>Confidencialidad bajo NDA</strong><span>Información protegida legalmente</span></div></div>
+  <div class="trust-bar__item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><strong>Resultados en 5–7 días</strong><span>Express en 3 días para urgencias</span></div></div>
+  <div class="trust-bar__item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><div><strong>Cobertura nacional</strong><span>CDMX y toda la República Mexicana</span></div></div>
+  <div class="trust-bar__item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><div><strong>Cumplimiento LFPDPPP</strong><span>Todo con consentimiento firmado</span></div></div>
+</div>
+
+---
+
+<div class="prose-section-block">
+  <div class="prose-section-block__header"><span class="prose-section-block__num">01</span><div><span class="prose-section-block__label">Antecedentes y Referencias</span><h3 class="prose-section-block__title">Lo que el CV no Dice — Nosotros lo Verificamos</h3></div></div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>La verificación de antecedentes es la primera línea de defensa contra contrataciones de riesgo. <strong>Confirmamos que el candidato no tiene historial criminal, que las referencias laborales son reales y que los motivos de salida de empleos anteriores son consistentes</strong> con lo que declaró.</p>
+      <ul><li>Consulta verificada en RNSP (Registro Nacional de Seguridad Pública)</li><li>Verificación de identificación oficial (INE) con base de datos del INE</li><li>Contacto directo con 2-3 empleadores anteriores: fechas, puesto, motivo de salida</li><li>Verificación de documentos académicos (título, cédula profesional si aplica)</li><li>Consulta en buró de crédito (cuando el puesto lo requiere — manejo de efectivo)</li><li>Verificación de domicilio declarado vs. domicilio real</li></ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/investigaciones-de-confiabilidad/verificacion-referencias-laborales-candidatos.avif" alt="Verificación de referencias laborales de candidatos CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/investigaciones-de-confiabilidad/antecedentes-penales-investigacion-judicial.avif" alt="Investigación de antecedentes penales para empresas CDMX" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-block">
+  <div class="prose-section-block__header"><span class="prose-section-block__num">02</span><div><span class="prose-section-block__label">Estudio Socioeconómico</span><h3 class="prose-section-block__title">Visita Domiciliaria — Lo que el Entorno Dice del Candidato</h3></div></div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>El estudio socioeconómico detecta lo que ninguna entrevista puede: <strong>inconsistencias entre lo que el candidato declara y cómo vive realmente</strong>. Si dice ganar $15,000 al mes pero vive en una zona que requiere $40,000, hay algo que no cuadra.</p>
+      <ul><li>Visita domiciliaria con investigador certificado — evaluación de vivienda y entorno</li><li>Entrevista con familiares y referencias personales en el domicilio</li><li>Verificación de coherencia entre ingresos declarados y estilo de vida</li><li>Fotografías documentales de la vivienda (con autorización firmada)</li><li>Evaluación del vecindario: nivel socioeconómico, seguridad de la zona</li><li>Detección de señales de alerta: deudas no declaradas, inestabilidad familiar</li></ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/investigaciones-de-confiabilidad/investigacion-confiabilidad-estudio-socioeconomico.avif" alt="Visita domiciliaria para verificación de residencia de candidatos" loading="lazy" width="640" height="480" />
+      <img src="/img/investigaciones-de-confiabilidad/estudios-socioeconomicos-personal-empresarial.avif" alt="Estudios socioeconómicos para personal empresarial CDMX" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-block">
+  <div class="prose-section-block__header"><span class="prose-section-block__num">03</span><div><span class="prose-section-block__label">Evaluación Psicométrica y Toxicológica</span><h3 class="prose-section-block__title">Lo que la Persona no Puede Preparar ni Falsificar</h3></div></div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>Las pruebas psicométricas y toxicológicas son las únicas evaluaciones que <strong>el candidato no puede preparar de antemano</strong>. Miden respuestas genuinas, no respuestas ensayadas.</p>
+      <ul><li>Evaluación psicométrica: honestidad, estabilidad emocional, toma de decisiones bajo presión</li><li>Perfil de riesgo: tendencia a conductas impulsivas, deshonestidad o agresividad</li><li>Prueba toxicológica: panel completo de 12 sustancias con certificado de laboratorio autorizado</li><li>Resultados del toxicológico en 48 horas</li><li>Interpretación profesional de resultados — no solo un número, sino un perfil contextualizado</li><li>Recomendación: apto / apto con observaciones / no apto — con justificación documentada</li></ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/investigaciones-de-confiabilidad/poligrafo-examen-confianza-certificado.avif" alt="Pruebas de confianza y exámenes para candidatos CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/investigaciones-de-confiabilidad/entrevistas-profundidad-psicologicas-candidatos.avif" alt="Entrevistas psicológicas a profundidad para candidatos" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header"><span class="prose-section-badge">Para Quién es</span><h2>Cualquier Empresa que Contrate Personal en Posiciones de Confianza</h2><p class="prose-section-sub">El costo de una mala contratación es mucho mayor que el costo de verificar correctamente antes de contratar.</p></div>
+
+<div class="profile-grid">
+  <div class="profile-card"><div class="profile-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><div class="profile-card__body"><strong class="profile-card__name">Empresa con personal de confianza</strong><p class="profile-card__need">Cajeros, almacenistas, contadores, personal con acceso a efectivo o activos</p><div class="profile-card__solution"><span class="profile-tag">Antecedentes + socioeconómico</span><span class="profile-tag">Toxicológico</span><span class="profile-tag">Psicométrico</span></div></div></div>
+  <div class="profile-card"><div class="profile-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="profile-card__body"><strong class="profile-card__name">Empresa de seguridad privada</strong><p class="profile-card__need">Verificación de guardias, escoltas y personal operativo de seguridad</p><div class="profile-card__solution"><span class="profile-tag">Investigación integral</span><span class="profile-tag">RNSP verificado</span><span class="profile-tag">Psicométrico SSC</span></div></div></div>
+  <div class="profile-card"><div class="profile-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="profile-card__body"><strong class="profile-card__name">Condominio o fraccionamiento</strong><p class="profile-card__need">Verificar al personal de seguridad, intendencia o mantenimiento del edificio</p><div class="profile-card__solution"><span class="profile-tag">Antecedentes penales</span><span class="profile-tag">Referencias verificadas</span><span class="profile-tag">Toxicológico</span></div></div></div>
+  <div class="profile-card"><div class="profile-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><div class="profile-card__body"><strong class="profile-card__name">Personal doméstico</strong><p class="profile-card__need">Empleadas del hogar, conductores, nanas — acceso a tu casa y tu familia</p><div class="profile-card__solution"><span class="profile-tag">Socioeconómico</span><span class="profile-tag">Referencias personales</span><span class="profile-tag">Antecedentes</span></div></div></div>
+  <div class="profile-card profile-card--highlight"><div class="profile-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div class="profile-card__body"><strong class="profile-card__name">Empresa con contratación masiva</strong><p class="profile-card__need">10+ contrataciones mensuales — necesita proceso estandarizado y volumen</p><div class="profile-card__solution"><span class="profile-tag">Proceso en lote</span><span class="profile-tag">Tarifas volumen</span><span class="profile-tag">Dashboard de resultados</span><span class="profile-tag">Entrega en 5 días</span></div></div></div>
+</div>
+
+---
+
+<div class="prose-section-header"><span class="prose-section-badge">Proceso</span><h2>Del Candidato al Informe — en 5 a 7 Días Hábiles</h2><p class="prose-section-sub">Un proceso paralelo donde todas las evaluaciones se realizan simultáneamente para entregar el informe integrado lo antes posible.</p></div>
+
+<div class="prose-steps">
+  <div class="prose-step"><span class="prose-step__num">01</span><div class="prose-step__content"><strong>Día 1 — Recepción de datos del candidato y consentimiento firmado</strong><p>Nos envías los datos del candidato (nombre, CURP, domicilio, empleos previos) junto con la carta de consentimiento firmada. Ese mismo día arrancamos las consultas de antecedentes.</p></div></div>
+  <div class="prose-step"><span class="prose-step__num">02</span><div class="prose-step__content"><strong>Días 1–3 — Evaluaciones simultáneas: antecedentes + toxicológico + psicométrico</strong><p>Todo en paralelo: consulta RNSP, verificación de INE, contacto con empleadores anteriores, prueba toxicológica en laboratorio certificado y evaluación psicométrica presencial o en línea.</p></div></div>
+  <div class="prose-step"><span class="prose-step__num">03</span><div class="prose-step__content"><strong>Días 3–5 — Visita domiciliaria y estudio socioeconómico</strong><p>Investigador certificado visita el domicilio del candidato, entrevista a familiares y vecinos, y documenta las condiciones de vivienda y entorno. Fotografías incluidas con autorización.</p></div></div>
+  <div class="prose-step"><span class="prose-step__num">04</span><div class="prose-step__content"><strong>Días 5–7 — Integración del informe y entrega</strong><p>Consolidamos todos los hallazgos en un informe integrado: resumen ejecutivo + detalles por evaluación + conclusión con recomendación (apto / apto con observaciones / no apto). Entrega digital en PDF confidencial.</p></div></div>
+  <div class="prose-step"><span class="prose-step__num">05</span><div class="prose-step__content"><strong>Post-entrega — Seguimiento y evaluaciones periódicas (opcional)</strong><p>Para personal en posiciones sensibles, ofrecemos evaluaciones de seguimiento cada 6 o 12 meses. Toxicológico periódico, actualización de antecedentes y evaluación de desempeño.</p></div></div>
+</div>
+
+---
+
+<div class="prose-section-header"><span class="prose-section-badge">Galería</span><h2>Investigaciones de Confiabilidad ORIGINS</h2><p class="prose-section-sub">Proceso profesional, confidencial y documentado — la base para contrataciones seguras en cualquier empresa.</p></div>
+
+<div class="prose-gallery">
+  <figure><img src="/img/investigaciones-de-confiabilidad/verificacion-referencias-laborales-candidatos.avif" alt="Verificación de referencias laborales de candidatos CDMX" loading="lazy" width="640" height="480" /><figcaption>Verificación de referencias — contacto directo con empleadores anteriores</figcaption></figure>
+  <figure><img src="/img/investigaciones-de-confiabilidad/estudios-socioeconomicos-personal-empresarial.avif" alt="Estudios socioeconómicos para personal empresarial CDMX" loading="lazy" width="640" height="480" /><figcaption>Estudio socioeconómico — visita domiciliaria con documentación fotográfica</figcaption></figure>
+  <figure><img src="/img/investigaciones-de-confiabilidad/pruebas-confianza-examenes-poligraficos.avif" alt="Pruebas de confianza y evaluaciones para candidatos" loading="lazy" width="640" height="480" /><figcaption>Evaluaciones psicométricas — perfil de honestidad y estabilidad emocional</figcaption></figure>
+  <figure><img src="/img/investigaciones-de-confiabilidad/analisis-historial-crediticio-financiero.avif" alt="Investigación financiera e historial crediticio de candidatos" loading="lazy" width="640" height="480" /><figcaption>Verificación financiera — historial crediticio para posiciones con manejo de efectivo</figcaption></figure>
+  <figure><img src="/img/investigaciones-de-confiabilidad/validacion-documentos-identidad-academicos.avif" alt="Validación de documentos de identidad y académicos" loading="lazy" width="640" height="480" /><figcaption>Validación documental — INE, CURP, título y cédula profesional verificados</figcaption></figure>
+  <figure><img src="/img/investigaciones-de-confiabilidad/informe-confidencial-investigacion-confiabilidad.avif" alt="Informe confidencial de investigación de confiabilidad" loading="lazy" width="640" height="480" /><figcaption>Informe integrado confidencial — recomendación documentada para cada candidato</figcaption></figure>
+</div>

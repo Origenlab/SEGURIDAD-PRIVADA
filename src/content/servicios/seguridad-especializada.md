@@ -1,271 +1,198 @@
 ---
-title: "Seguridad Especializada CDMX | Condominios y Empresas"
-description: "Seguridad privada especializada para condominios, residenciales, construcción, eventos y hospitales en CDMX. Guardias intramuros certificados SSC 24/7. ☎ 55 3025 5580"
-category: service
+title: "Seguridad Especializada CDMX | Soluciones a Medida — ORIGINS"
+description: "Servicios de seguridad especializada en CDMX. Soluciones a medida para sectores específicos: farmacéutico, joyería, tecnología, lujo. Permiso SSC vigente."
+category: pillar
 publishDate: 2024-01-01
+updatedDate: 2026-04-01
 keywords:
-  - seguridad
-  - seguridad especializada
+  - seguridad especializada cdmx
+  - seguridad sectorial empresas cdmx
+  - guardias especializados cdmx
+  - seguridad para hospitales eventos construccion cdmx
+  - empresa seguridad especializada cdmx
+  - servicios seguridad por sector cdmx
+  - seguridad especializada sectores especificos cdmx
+  - seguridad farmaceutica joyeria cdmx
+  - soluciones seguridad medida empresas
+  - servicios seguridad nicho cdmx
+relatedServices:
+  - seguridad-eventos
+  - seguridad-construccion
+  - seguridad-hospitalaria
+  - guardias-intramuros
+  - consultoria-seguridad
+targetLocations:
+  - Ciudad de México
+  - Polanco
+  - Santa Fe
+  - Estado de México
+serviceFeatures:
+  - title: "Protocolo por Sector"
+    description: "Cada industria tiene riesgos distintos. No usamos el mismo protocolo en un hospital que en una obra. El guardia se capacita en las reglas y el lenguaje de TU sector."
+    icon: "settings"
+  - title: "Personal Certificado SSC"
+    description: "Todos nuestros elementos tienen permiso SSC vigente y capacitación adicional en el sector donde van a operar — salud, eventos o construcción."
+    icon: "shield"
+  - title: "Experiencia Documentada"
+    description: "+15 años operando en sectores especializados de CDMX. No estamos aprendiendo — ya pasamos por las situaciones que a ti te preocupan."
+    icon: "clock"
+  - title: "Integración con tu Operación"
+    description: "El guardia no opera aislado — se integra con tu equipo: enfermería, producción de eventos, o residente de obra. Comunicación en el lenguaje de tu industria."
+    icon: "users"
+  - title: "Supervisión Semanal"
+    description: "Supervisor visita cada semana y entrega reporte firmado. Sabes exactamente cómo está operando tu servicio — sin tener que preguntar."
+    icon: "check-circle"
+  - title: "Flexibilidad por Temporada"
+    description: "Eventos puntuales, obras con fase activa, hospitales con temporada alta. Escalamos personal sin penalización — tu presupuesto no paga lo que no usas."
+    icon: "refresh"
+faqs:
+  - question: "¿Qué sectores cubren con seguridad especializada?"
+    answer: "Tres verticales principales: hospitales y clínicas (protocolo de salud), eventos corporativos y sociales (control de aforo y logística), y obras en construcción (custodia de materiales y control de personal). Cada uno con capacitación, equipamiento y protocolos totalmente distintos."
+  - question: "¿Por qué no puedo usar los mismos guardias de mi condominio para un evento?"
+    answer: "Porque el contexto es completamente diferente. Un guardia de condominio conoce residentes habituales y opera en un entorno estable. Un evento tiene cientos de desconocidos, flujo masivo, logística compleja y duración limitada. El guardia de eventos necesita capacitación en control de aforo, credencialización y manejo de multitudes — habilidades que el guardia de condominio no tiene."
+  - question: "¿Pueden cubrir una necesidad temporal como una obra de 6 meses?"
+    answer: "Sí. Trabajamos con contratos flexibles — mensuales, trimestrales o por duración del proyecto. Para obras en construcción es especialmente útil: arrancas con máxima cobertura en la fase de estructura y reduces conforme el proyecto avanza. Sin penalización por ajustar."
+  - question: "¿Cuánto tiempo necesitan para arrancar?"
+    answer: "Para servicios estándar: 5 días desde el primer contacto hasta el primer turno. Para eventos programados: mínimo 1 semana de anticipación para advance security y briefing del equipo. Para emergencias o eventos de último minuto: podemos movilizar personal en 24–48 horas con esquema temporal."
+  - question: "¿Operan en toda la CDMX y Estado de México?"
+    answer: "Sí. Hospitales, venues de eventos y obras en cualquier punto de CDMX y la Zona Metropolitana: Naucalpan, Tlalnepantla, Huixquilucan, Atizapán y más. Llama al 55 3025 5580."
+  - question: "¿Incluyen póliza de responsabilidad civil?"
+    answer: "Sí en todos los sectores. Póliza de RC vigente, seguro vehicular cuando aplica, y cumplimiento total de obligaciones laborales — Alta IMSS e INFONAVIT desde el primer día."
+  - question: "¿Cómo garantizan que el guardia entiende mi sector?"
+    answer: "Capacitación específica antes de iniciar: si es hospital, protocolo de trato a pacientes y custodia de farmacia. Si es evento, control de aforo y credencialización. Si es obra, custodia de materiales y control de acceso de contratistas. El guardia no llega improvisando."
+draft: false
 ---
 
-## Seguridad Especializada en CDMX
+<div class="prose-intro">
+  <p><strong>ORIGINS Private Security</strong> opera seguridad especializada para tres sectores que requieren protocolos únicos: <strong>hospitales y centros de salud, eventos corporativos y sociales, y obras en construcción</strong>. Un guardia genérico en estos entornos no funciona — cada sector tiene riesgos, lenguaje y reglas de operación completamente distintos. Todo respaldado por <a href="/servicios/consultoria-seguridad">consultoría de seguridad</a> que diseña el protocolo antes de desplegar al personal.</p>
+  <div class="prose-highlight">
+    <strong>Por qué la seguridad genérica falla en sectores especializados:</strong> Un guardia que funciona en una torre de oficinas no sabe manejar un familiar alterado en urgencias, un flujo de 2,000 invitados en un evento, o la custodia de $3M en materiales en una obra de fin de semana. Cada sector requiere <a href="/servicios/guardias-intramuros">guardias intramuros</a> con capacitación específica, <a href="/servicios/tecnologia-monitoreo-seguridad">tecnología de monitoreo</a> adaptada y experiencia real en ese tipo de operación.
+  </div>
+</div>
 
-### De Condominios Familiares a Obras Millonarias — Protección que Entiende los Riesgos Únicos de Tu Sector
+---
 
-Guardias certificados SSC con protocolos específicos por industria. Condominios, construcción, eventos y hospitales en CDMX.
+<div class="trust-bar">
+  <div class="trust-bar__item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><div><strong>Permiso SSC 0102-15</strong><span>Personal 100% certificado</span></div></div>
+  <div class="trust-bar__item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><div><strong>+15 años en CDMX</strong><span>Hospitales, eventos y obras</span></div></div>
+  <div class="trust-bar__item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><div><strong>Alta IMSS día 1</strong><span>Sin riesgo laboral para tu empresa</span></div></div>
+  <div class="trust-bar__item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><div><strong>Póliza RC vigente</strong><span>Cobertura en cualquier instalación</span></div></div>
+  <div class="trust-bar__item"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/></svg><div><strong>Contratos flexibles</strong><span>Por proyecto, temporada o permanente</span></div></div>
+</div>
 
-### Cada sector tiene riesgos únicos
+---
 
-¿Alguna vez contrataste seguridad y el guardia no entendía los protocolos de tu industria? Un guardia de retail no sabe manejar situaciones en hospitales. Uno de condominios no entiende la dinámica de obras. Cada sector tiene riesgos, flujos operativos y regulaciones únicas que la seguridad genérica no cubre. Desarrollamos protocolos especializados durante más de 15 años.
+<div class="prose-section-header">
+  <span class="prose-section-badge">Nuestros 3 Sectores</span>
+  <h2>Cada Sector Tiene sus Propios Riesgos — y su Propio Protocolo</h2>
+  <p class="prose-section-sub">No es el mismo servicio ni el mismo guardia. El protocolo, la capacitación y el equipamiento cambian por completo según dónde opera.</p>
+</div>
 
-### Protección que entiende tu negocio
+<div class="pillars-grid">
+  <div class="pillar-card pillar-card--1" style="grid-column: span 1">
+    <div class="pillar-card__num">01</div>
+    <div class="pillar-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+    <strong>Seguridad Hospitalaria</strong>
+    <p>Guardias con protocolo de trato a pacientes, custodia de farmacia, control de visitas y prevención de sustracción de neonatos.</p>
+    <a href="/servicios/seguridad-hospitalaria" class="pillar-card__link">Ver Seguridad Hospitalaria →</a>
+  </div>
+  <div class="pillar-card pillar-card--2" style="grid-column: span 1">
+    <div class="pillar-card__num">02</div>
+    <div class="pillar-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+    <strong>Seguridad para Eventos</strong>
+    <p>Control de aforo, credencialización, logística de accesos y manejo de multitudes. Desde conferencias corporativas hasta eventos masivos.</p>
+    <a href="/servicios/seguridad-eventos" class="pillar-card__link">Ver Seguridad para Eventos →</a>
+  </div>
+  <div class="pillar-card pillar-card--3" style="grid-column: span 1">
+    <div class="pillar-card__num">03</div>
+    <div class="pillar-card__icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+    <strong>Seguridad en Construcción</strong>
+    <p>Custodia de materiales y maquinaria, control de contratistas, cobertura nocturna y de fines de semana contra robo.</p>
+    <a href="/servicios/seguridad-construccion" class="pillar-card__link">Ver Seguridad en Construcción →</a>
+  </div>
+</div>
 
-Desde seguridad para condominios donde tus hijos juegan sin miedo, hasta protección de obras que previene robos de materiales, seguridad hospitalaria con protocolos NOM-004-SSA3, y eventos corporativos con coordinación perfecta. Supervisión 24/7, personal capacitado en protocolos sectoriales y tecnología adaptada a tu industria.
+---
 
-Condominios, construcción, eventos y hospitales: cada uno
-                enfrenta amenazas diferentes. ¿Por qué arriesgarte con guardias
-                genéricos? Protocolos especializados probados en más de una
-                década protegiendo cada sector.
+<div class="prose-section-block">
+  <div class="prose-section-block__header"><span class="prose-section-block__num">01</span><div><span class="prose-section-block__label">Salud</span><h3 class="prose-section-block__title">Hospitales y Clínicas — Protocolo de Trato Sensible</h3></div></div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>La seguridad hospitalaria requiere <strong>empatía y firmeza al mismo tiempo</strong>. El guardia enfrenta familiares bajo estrés emocional extremo, pacientes vulnerables, y sustancias controladas que requieren custodia formal.</p>
+      <ul><li>Control de visitas con horario y autorización de enfermería</li><li>Custodia de farmacia hospitalaria y medicamentos controlados</li><li>Protocolo de prevención de sustracción de neonatos (código rosa)</li><li>Manejo de familiares alterados sin confrontación</li><li>Protección del personal médico ante agresiones</li><li>Evacuación adaptada a pacientes en cama, silla y equipos portátiles</li></ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/seguridad-especializada/seguridad-hospitalaria-y-proteccion-de-centros-medicos.avif" alt="Seguridad hospitalaria y protección de centros médicos CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/img-hospitalaria/guardias-seguridad-centros-medicos.avif" alt="Guardias de seguridad para centros médicos CDMX ORIGINS" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
 
-¿Quieres que tus hijos jueguen libremente en áreas comunes
-                    sin ese miedo constante? ¿Te preocupa salir de vacaciones
-                    dejando tu departamento? La
-                    seguridad para condominios en CDMX y Estado de
-                      México
-                    va más allá de "poner un guardia en la caseta": creamos
-                    ambientes donde familias viven tranquilas. Guardias que
-                    conocen a cada residente por nombre, que saludan a tus
-                    hijos, que detectan inmediatamente cuando alguien no
-                    pertenece. Hemos protegido desarrollos premium en
-                    Interlomas, Bosques, Santa Fe durante más de 10 años.
-                    Vigilancia 24/7, control de accesos riguroso con registro
-                    digital de cada visitante (¿quién entró a las 3 AM?),
-                    patrullaje en estacionamientos y zonas vulnerables,
-                    monitoreo CCTV de áreas donde juegan niños. Una inversión de
-                    mantenimientos elevados mensuales en mantenimiento que
-                    aumenta plusvalía del inmueble y tranquilidad familiar.
-                    ¿Cuánto vale dormir sin preocupación?
+---
 
-Nuestros
-                    guardias especializados en seguridad residencial
-                    están capacitados en atención al cliente, protocolos de
-                    emergencia habitacional, primeros auxilios, evacuaciones, y
-                    coordinación con administración de condominios para
-                    garantizar convivencia armónica sin comprometer la
-                    seguridad. El servicio incluye control de acceso vehicular
-                    con plumas automáticas, verificación de identificación de
-                    residentes y visitas, apertura remota de puertas, rondines
-                    nocturnos en sótanos y áreas de servicio, atención de
-                    reportes de residentes por ruidos o situaciones sospechosas,
-                    y coordinación con autoridades locales ante emergencias.
-                    Solución ideal para consejos de administración que buscan
-                    reducir incidentes de robo, vandalismo o accesos no
-                    autorizados mientras mejoran la plusvalía del inmueble con
-                    servicios de seguridad certificados.
+<div class="prose-section-block">
+  <div class="prose-section-block__header"><span class="prose-section-block__num">02</span><div><span class="prose-section-block__label">Eventos</span><h3 class="prose-section-block__title">Conferencias, Galas y Eventos Masivos — Control sin Incomodar</h3></div></div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>La seguridad de un evento es invisible cuando funciona bien y evidente cuando falla. El desafío es <strong>controlar sin que los invitados sientan que están controlados</strong> — fluidez en los accesos, presencia discreta y respuesta inmediata ante cualquier situación.</p>
+      <ul><li>Advance security del venue: recorrido previo con análisis de accesos y salidas</li><li>Credencialización y control de aforo en tiempo real</li><li>Guardias en puntos estratégicos sin interferir con el flujo del evento</li><li>Coordinación con producción, catering y logística del organizador</li><li>Protocolo de evacuación adaptado al tipo de evento y venue</li><li>Cobertura desde 10 personas (evento ejecutivo) hasta 5,000+ (evento masivo)</li></ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/seguridad-especializada/seguridad-para-eventos-corporativos-sociales-y-masivos.avif" alt="Seguridad para eventos corporativos sociales y masivos CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/img-eventos/control-accesos-eventos-corporativos.avif" alt="Control de accesos para eventos corporativos CDMX ORIGINS" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
 
-¿Alguna vez llegaste a tu obra y faltaban pérdidas
-                    sustanciales en cable de cobre, herramientas o cemento? ¿O
-                    peor: descubriste que el robo hormiga de semanas suma más
-                    que un robo único? Cada semana de retraso por robo de
-                    materiales son penalizaciones, inversionistas preguntando,
-                    flujo de efectivo comprometido. El servicio de
-                    seguridad para obras de construcción en CDMX
-                    no solo "vigila": protege tu cronograma, tu inversión y tu
-                    reputación. Guardias que entienden dinámicas de
-                    construcción, verifican remisiones (¿ese camión sí debería
-                    salir con material?), inspeccionan vehículos al salir (adiós
-                    robo hormiga), controlan accesos de
-                    trabajadores/contratistas y patrullan de noche cuando la
-                    obra está vulnerable. Protegemos cemento, varilla,
-                    herramientas eléctricas, transformadores, plantas de luz -
-                    todo lo que delincuencia organizada roba para revender.
+---
 
-La
-                    vigilancia profesional en sitios de construcción
-                    incluye supervisión de perímetros temporales con malla
-                    ciclónica o bardas provisionales, monitoreo de puntos de
-                    acceso múltiples que cambian según avance de obra,
-                    protección de bodegas donde se almacenan materiales de alto
-                    valor, custodia de plantas de luz, transformadores, y equipo
-                    pesado como retroexcavadoras, grúas y montacargas que son
-                    objetivos frecuentes de robo organizado. Coordinamos con
-                    ingenieros residentes y gerentes de proyecto para adaptar
-                    protocolos de seguridad a cada etapa constructiva, desde
-                    excavación hasta acabados finales, brindando reportes de
-                    bitácora digital que documentan novedades, visitantes, y
-                    cualquier incidente que pueda afectar el cumplimiento de
-                    plazos de entrega comprometidos con inversionistas o
-                    compradores de desarrollos inmobiliarios.
+<div class="prose-section-block">
+  <div class="prose-section-block__header"><span class="prose-section-block__num">03</span><div><span class="prose-section-block__label">Construcción</span><h3 class="prose-section-block__title">Obras en Proceso — Lo que Desaparece el Fin de Semana</h3></div></div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>Los robos en obras ocurren en fines de semana y periodos de vacaciones — cuando la obra se vacía y el material queda expuesto. Cobre, varilla, equipo pesado y herramienta especializada son los blancos principales. <strong>Un solo robo puede costar más que un año de seguridad</strong>.</p>
+      <ul><li>Custodia de materiales y maquinaria las 24 horas — especialmente viernes a lunes</li><li>Control de acceso de contratistas, proveedores y personal temporal</li><li>Rondines nocturnos con verificación fotográfica del inventario</li><li>CCTV con conectividad 4G para obras sin infraestructura eléctrica</li><li>Registro de entrada y salida de materiales con bitácora digital</li><li>Coordinación con el residente de obra para accesos autorizados</li></ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/seguridad-especializada/seguridad-para-obras-en-construccion-y-desarrollos-inmobiliarios.avif" alt="Seguridad para obras en construcción y desarrollos inmobiliarios CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/img-construccion/custodia-materiales-construccion.avif" alt="Custodia de materiales en obra de construcción CDMX ORIGINS" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
 
-Nuestro servicio de
-                    seguridad para eventos en CDMX cubre
-                    congresos empresariales, convenciones, lanzamientos de
-                    productos, eventos sociales privados, bodas de alto perfil,
-                    conciertos, festivales, y cualquier reunión que requiera
-                    control de accesos, protección de asistentes, y manejo
-                    profesional de multitudes. El equipo especializado en
-                    seguridad de eventos diseña planes operativos personalizados
-                    que incluyen análisis previo del venue, identificación de
-                    salidas de emergencia, ubicación estratégica de personal en
-                    puntos críticos, protocolos de evacuación, coordinación con
-                    staff del lugar, y comunicación permanente mediante radios
-                    de frecuencia privada para respuesta coordinada ante
-                    cualquier incidencia.
+---
 
-La
-                    protección profesional de eventos incluye
-                    control de accesos con verificación de invitaciones,
-                    brazaletes o acreditaciones, revisión discreta de bolsos y
-                    paquetes cuando el protocolo lo requiere, detección de
-                    comportamientos sospechosos, prevención de accesos no
-                    autorizados a áreas VIP o backstage, protección cercana de
-                    personalidades o speakers principales, custodia de
-                    obsequios, premios o materiales de valor durante el
-                    desarrollo del evento, y vigilancia de estacionamientos para
-                    prevenir robo de vehículos. Personal capacitado en primeros
-                    auxilios y protocolos de emergencia médica, evacuaciones
-                    ante amenazas de bomba o desastres naturales, y manejo de
-                    situaciones conflictivas sin uso excesivo de fuerza que
-                    garantice experiencia positiva para asistentes mientras se
-                    mantiene ambiente seguro y controlado durante toda la
-                    duración del evento corporativo o social.
+<div class="prose-section-header"><span class="prose-section-badge">Para Quién es</span><h2>El Sector Define el Servicio — No al Revés</h2><p class="prose-section-sub">Evaluamos tu operación específica antes de proponer. Si necesitas algo que no encaja en estas categorías, lo diseñamos a medida.</p></div>
 
-¿Cómo manejas a un familiar alterado gritando en urgencias
-                    sin usar fuerza excesiva? ¿O a un paciente psiquiátrico en
-                    crisis sin violar NOM-004-SSA3? La
-                    seguridad hospitalaria en CDMX requiere
-                    especialización extrema: entornos 24/7 donde conviven
-                    pacientes vulnerables, familiares bajo estrés emocional
-                    intenso, personal médico exhausto y visitantes constantes.
-                    Un error puede ser demanda millonaria o tragedia. Guardias
-                    capacitados en manejo de situaciones médicas sensibles,
-                    protocolos de confidencialidad médica (información
-                    protegida), prevención de secuestro de recién nacidos en
-                    maternidad, control de accesos a quirófanos/UTI/farmacias
-                    (medicamentos controlados son objetivos frecuentes), y
-                    coordinación con personal médico en códigos de emergencia.
-                    Incluso capacitados en RCP y uso de desfibriladores - pueden
-                    salvar vidas mientras llega personal médico.
+<div class="profile-grid">
+  <div class="profile-card"><div class="profile-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div><div class="profile-card__body"><strong class="profile-card__name">Hospital o clínica privada</strong><p class="profile-card__need">Control de visitas, custodia de farmacia, protección al personal médico</p><div class="profile-card__solution"><span class="profile-tag">Protocolo hospitalario</span><span class="profile-tag">CCTV áreas críticas</span><span class="profile-tag">Código rosa</span></div></div></div>
+  <div class="profile-card"><div class="profile-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg></div><div class="profile-card__body"><strong class="profile-card__name">Organizador de eventos corporativos</strong><p class="profile-card__need">Conferencias, premiaciones, lanzamientos — flujo controlado sin incomodar</p><div class="profile-card__solution"><span class="profile-tag">Advance security</span><span class="profile-tag">Credencialización</span><span class="profile-tag">Control aforo</span></div></div></div>
+  <div class="profile-card"><div class="profile-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><div class="profile-card__body"><strong class="profile-card__name">Constructora o desarrollador</strong><p class="profile-card__need">Custodia de materiales, control de subcontratistas, cobertura fin de semana</p><div class="profile-card__solution"><span class="profile-tag">Custodia 24/7</span><span class="profile-tag">Control contratistas</span><span class="profile-tag">CCTV 4G solar</span></div></div></div>
+  <div class="profile-card"><div class="profile-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="profile-card__body"><strong class="profile-card__name">Venue o salón de eventos</strong><p class="profile-card__need">Seguridad permanente para el espacio + refuerzos por evento</p><div class="profile-card__solution"><span class="profile-tag">Base permanente</span><span class="profile-tag">Refuerzos temporales</span><span class="profile-tag">Protocolos flexibles</span></div></div></div>
+  <div class="profile-card profile-card--highlight"><div class="profile-card__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="profile-card__body"><strong class="profile-card__name">Empresa con necesidad mixta</strong><p class="profile-card__need">Corporativo + evento anual + obra de remodelación — todo el paquete</p><div class="profile-card__solution"><span class="profile-tag">Guardias permanentes</span><span class="profile-tag">Eventos puntuales</span><span class="profile-tag">Obra temporal</span><span class="profile-tag">Un solo proveedor</span></div></div></div>
+</div>
 
-El servicio de
-                    protección en instalaciones médicas incluye
-                    manejo profesional de situaciones conflictivas con pacientes
-                    psiquiátricos, familiares alterados por noticias difíciles,
-                    prevención de secuestros de recién nacidos en áreas de
-                    maternidad, custodia de equipos médicos de alto valor como
-                    resonadores magnéticos o tomógrafos, control de acceso
-                    vehicular a urgencias para mantener vías despejadas para
-                    ambulancias, y coordinación con personal de enfermería y
-                    administrativo para responder rápidamente ante códigos de
-                    emergencia hospitalaria. Personal capacitado en
-                    confidencialidad de información médica protegida por
-                    normativas de privacidad (NOM-004-SSA3), protocolos de
-                    evacuación de pacientes con movilidad reducida, uso de
-                    desfibriladores y técnicas de RCP que pueden salvar vidas
-                    mientras llega personal médico, y manejo de sustancias
-                    peligrosas o residuos biológico-infecciosos con estándares
-                    rigurosos que protegen salud de pacientes, visitantes y
-                    personal hospitalario en todo momento.
+---
 
-Más de 15 años desarrollando soluciones de protección específicas
-              para cada industria en CDMX y Estado de México
+<div class="prose-section-header"><span class="prose-section-badge">Proceso</span><h2>Un Solo Contacto para Cualquier Necesidad Especializada</h2><p class="prose-section-sub">No necesitas tres proveedores para tres sectores. Un equipo que conoce los tres protocolos y te asigna el personal correcto para cada uno.</p></div>
 
-A diferencia de empresas de seguridad genéricas, hemos invertido
-                años en desarrollar
-                protocolos especializados para cada sector industrial. Nuestra
-                seguridad para condominios residenciales ha
-                protegido desarrollos premium en Interlomas, Bosques de las
-                Lomas y Santa Fe, donde la discreción y atención personalizada
-                son fundamentales. Hemos custodiado obras de construcción para
-                desarrolladores inmobiliarios líderes, protegiendo millones de
-                pesos en materiales y maquinaria pesada durante todas las etapas
-                constructivas desde cimentación hasta entrega final.
+<div class="prose-steps">
+  <div class="prose-step"><span class="prose-step__num">01</span><div class="prose-step__content"><strong>Evaluación de tu operación específica (2 horas gratuitas)</strong><p>Un supervisor visita tu instalación — hospital, venue o obra — y evalúa los riesgos específicos de tu sector. No es una evaluación genérica: conoce las reglas de tu industria.</p></div></div>
+  <div class="prose-step"><span class="prose-step__num">02</span><div class="prose-step__content"><strong>Propuesta con protocolo sectorial personalizado</strong><p>Esquema de seguridad diseñado para tu tipo de operación: número de guardias, turnos, equipamiento, protocolos de emergencia y costo mensual. Todo transparente y presentable a tu dirección.</p></div></div>
+  <div class="prose-step"><span class="prose-step__num">03</span><div class="prose-step__content"><strong>Selección y capacitación sectorial del personal (2–3 días)</strong><p>Asignamos guardias con experiencia en tu sector. Los capacitamos en los protocolos específicos de tu instalación antes del primer turno. No llegan improvisando.</p></div></div>
+  <div class="prose-step"><span class="prose-step__num">04</span><div class="prose-step__content"><strong>Inicio con supervisión intensiva del sector</strong><p>Las primeras 2 semanas el supervisor verifica que los protocolos sectoriales funcionan en la práctica. Si algo necesita ajuste, se corrige en tiempo real.</p></div></div>
+  <div class="prose-step"><span class="prose-step__num">05</span><div class="prose-step__content"><strong>Reporte sectorial para tu dirección o comité</strong><p>Estadísticas de operación adaptadas a tu sector: incidencias, accesos, protocolos activados y recomendaciones de mejora. Formato que sirve para auditorías, acreditaciones o presentación ejecutiva.</p></div></div>
+</div>
 
-Nuestro equipo de seguridad para eventos ha
-                brindado protección en congresos internacionales con más de
-                5,000 asistentes, bodas de alto perfil en venues exclusivos, y
-                lanzamientos de producto para marcas multinacionales que
-                requieren coordinación impecable con autoridades locales. En el
-                sector hospitalario, protegemos centros médicos
-                privados de prestigio donde la confidencialidad médica, manejo
-                de situaciones sensibles y protocolos de bioseguridad son
-                prioritarios. Cada guardia recibe capacitación específica del
-                sector donde operará, cumpliendo con certificaciones SSC,
-                normativas industriales y mejores prácticas internacionales de
-                seguridad física.
+---
 
-Entendemos que
-                cada industria tiene flujos operativos únicos
-                que la seguridad debe respetar sin interrumpir. En condominios,
-                nuestros guardias gestionan accesos familiares con cortesía
-                mientras mantienen protocolos rigurosos contra intrusos. En
-                construcción, adaptamos turnos y protocolos según avance de
-                obra, coordinando con contratistas sin retrasar entregas. En
-                eventos, desplegamos equipos escalables desde 5 hasta 50
-                elementos según tamaño y complejidad, con coordinación en tiempo
-                real mediante radios de frecuencia privada.
+<div class="prose-section-header"><span class="prose-section-badge">Galería</span><h2>ORIGINS en Hospitales, Eventos y Obras de CDMX</h2><p class="prose-section-sub">Personal especializado en los tres sectores — el mismo nivel de profesionalismo, protocolos completamente distintos.</p></div>
 
-Todos nuestros servicios incluyen
-                supervisión continua mediante central de operaciones
-                  24/7, bitácoras digitales en tiempo real accesibles desde
-                smartphone, sistemas de control de rondines con tecnología NFC
-                que elimina rondines fantasma, y reportes ejecutivos
-                personalizados con estadísticas de incidencias, accesos
-                registrados y actividades realizadas. Brindamos
-                cobertura en toda la Zona Metropolitana
-                incluyendo CDMX, Naucalpan, Tlalnepantla, Atizapán,
-                Huixquilucan, Cuautitlán Izcalli y todos los municipios del
-                Estado de México. ¿Listo para proteger su organización con
-                seguridad especializada certificada?
-                Contáctanos por WhatsApp al 55 3025 5580 y
-                recibe una cotización personalizada sin compromiso para tu
-                sector industrial.
-
-Completa el formulario y recibe una propuesta personalizada para
-              tu sector industrial
-
-Respuesta en menos de 24 horas • Personal Certificado SSC •
-                  Cobertura CDMX y Estado de México
-
-Más de 15 años de experiencia desarrollando soluciones de seguridad
-            personalizadas para cada sector industrial en CDMX y Estado de
-            México.
-
-Personal capacitado en procedimientos específicos de cada
-                industria
-
-Central de operaciones con monitoreo continuo y reportes en
-                tiempo real
-
-Todo nuestro personal cuenta con certificaciones vigentes y
-                pólizas de responsabilidad
-
-Cada industria tiene riesgos únicos que te quitan el sueño.
-                Entendemos tus preocupaciones específicas y diseñamos soluciones
-                que te permiten concentrarte en hacer crecer tu negocio sin la
-                ansiedad constante por la seguridad.
-
-Un guardia de retail no sabe manejar pacientes
-                    psiquiátricos. Uno de oficinas no entiende los robos típicos
-                    de obras.
-                    Cada industria tiene amenazas únicas, regulaciones
-                      específicas y protocolos especializados. Por eso desarrollamos soluciones verticales durante 15+
-                    años: seguridad para condominios donde tus hijos juegan sin
-                    miedo con guardias que conocen cada residente, protección de
-                    construcción que previene robos de materiales valorados en
-                    cientos de miles, seguridad hospitalaria con manejo
-                    NOM-004-SSA3 de situaciones médicas sensibles, y eventos con
-                    coordinación impecable para 5,000+ asistentes.
-
-No es solo vigilancia: es
-                    protección que habla el idioma operativo de tu
-                      industria. Guardias capacitados en tus protocolos sectoriales,
-                    supervisión 24/7 que entiende tus flujos operativos, y
-                    tecnología adaptada a tu modelo de negocio. Desde
-                    verificación de remisiones en construcción hasta manejo
-                    empático de familiares alterados en hospitales, cada
-                    servicio resuelve problemas reales documentados en más de
-                    una década protegiendo cada sector. La seguridad
-                    especializada no es lujo: es prevenir pérdidas millonarias
-                    que la seguridad genérica simplemente no detecta.
-
+<div class="prose-gallery">
+  <figure><img src="/img/seguridad-especializada/seguridad-hospitalaria-y-proteccion-de-centros-medicos.avif" alt="Seguridad hospitalaria CDMX ORIGINS" loading="lazy" width="640" height="480" /><figcaption>Seguridad hospitalaria — protocolo de trato sensible con pacientes y familiares</figcaption></figure>
+  <figure><img src="/img/seguridad-especializada/seguridad-para-eventos-corporativos-sociales-y-masivos.avif" alt="Seguridad para eventos corporativos CDMX ORIGINS" loading="lazy" width="640" height="480" /><figcaption>Eventos corporativos — control de aforo y credencialización sin interrumpir la experiencia</figcaption></figure>
+  <figure><img src="/img/seguridad-especializada/seguridad-para-obras-en-construccion-y-desarrollos-inmobiliarios.avif" alt="Seguridad para obras en construcción CDMX ORIGINS" loading="lazy" width="640" height="480" /><figcaption>Obras en construcción — custodia de materiales 24/7 especialmente en fines de semana</figcaption></figure>
+  <figure><img src="/img/img-hospitalaria/vigilancia-urgencias-hospitales.avif" alt="Vigilancia en urgencias de hospitales CDMX" loading="lazy" width="640" height="480" /><figcaption>Urgencias hospitalarias — presencia que contiene sin confrontar en momentos de tensión</figcaption></figure>
+  <figure><img src="/img/img-eventos/control-invitados-eventos-premium.avif" alt="Control de invitados en eventos premium CDMX" loading="lazy" width="640" height="480" /><figcaption>Eventos premium — seguridad invisible que solo aparece cuando es necesaria</figcaption></figure>
+  <figure><img src="/img/img-construccion/control-accesos-personal-obra-construccion.avif" alt="Control de accesos para personal de obra en construcción" loading="lazy" width="640" height="480" /><figcaption>Control de acceso en obra — registro de contratistas, proveedores y material que entra y sale</figcaption></figure>
+</div>

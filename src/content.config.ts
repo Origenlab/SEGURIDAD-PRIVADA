@@ -271,7 +271,16 @@ const zonasCollection = defineCollection({
     draft: z.boolean().default(false),
 
     // Related zones
-    nearbyZones: z.array(z.string()).optional()
+    nearbyZones: z.array(z.string()).optional(),
+
+    // FAQ for schema markup
+    faqs: z.array(z.object({
+      pregunta: z.string(),
+      respuesta: z.string()
+    })).optional(),
+
+    // Colonias principales de la zona
+    colonias: z.array(z.string()).optional()
   })
 });
 

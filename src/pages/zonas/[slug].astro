@@ -3,6 +3,11 @@ import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import HeroPagina from '../../components/HeroPagina.astro';
 import NavCTA from '../../components/NavCTA.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import FAQItem from '../../components/FAQItem.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import '../../styles/sections/faq-cotizacion.css';
+import '../../styles/pages/zona-detalle.css';
 
 export async function getStaticPaths() {
   const zonas = await getCollection('zonas', ({ data }) => !data.draft);
@@ -18,11 +23,133 @@ const { Content } = await render(zona);
 const siteUrl = 'https://seguridad-privada.com.mx';
 const zonaNombre = zona.data.zoneName;
 const waZona = 'https://wa.me/525530255580?text=' + encodeURIComponent('Hola, me interesa cotizar seguridad privada para mi condominio en ' + zonaNombre);
-const waZonaSidebar = 'https://wa.me/525530255580?text=' + encodeURIComponent('Hola, quiero información de seguridad para mi condominio en ' + zonaNombre);
-const waCTA = 'https://wa.me/525530255580?text=' + encodeURIComponent('Hola, me interesa cotizar seguridad para mi condominio en ' + zonaNombre);
 
+// ServiceCard data map
+const serviceCardData: Record<string, { image: string; imageAlt: string; badge: string; title: string; description: string; features: string[]; ctaText: string }> = {
+  'guardias-intramuros': {
+    image: '/img/img-guardias-intramuros/elementos-de-seguridad-intramuros.avif',
+    imageAlt: `Guardias intramuros en ${zonaNombre}`,
+    badge: 'Guardias',
+    title: 'Guardias Intramuros',
+    description: `Vigilancia 24/7 con guardias certificados SSC asignados a tu condominio en ${zonaNombre}.`,
+    features: ['Certificación SSC', 'Vigilancia 24/7', 'Rondines programados'],
+    ctaText: 'Ver Guardias Intramuros',
+  },
+  'seguridad-condominios': {
+    image: '/img/img-guardias-intramuros/seguridad-intramuros-para-condominios.avif',
+    imageAlt: `Seguridad para condominios en ${zonaNombre}`,
+    badge: 'Condominios',
+    title: 'Seguridad para Condominios',
+    description: `Protección integral para condominios verticales y horizontales en ${zonaNombre}.`,
+    features: ['Lobby 24/7', 'Control vehicular', 'CCTV coordinado'],
+    ctaText: 'Ver Seguridad Condominios',
+  },
+  'seguridad-residenciales': {
+    image: '/img/img-guardias-intramuros/guardias-intramuros-para-empresas.avif',
+    imageAlt: `Seguridad para residenciales en ${zonaNombre}`,
+    badge: 'Residenciales',
+    title: 'Seguridad para Residenciales',
+    description: `Casetas de acceso, patrullaje interno y vigilancia perimetral para fraccionamientos en ${zonaNombre}.`,
+    features: ['Casetas de acceso', 'Patrullaje interno', 'Vigilancia perimetral'],
+    ctaText: 'Ver Seguridad Residenciales',
+  },
+  'control-de-accesos': {
+    image: '/img/control-de-accesos/control-de-accesos-en-corporativos.avif',
+    imageAlt: `Control de accesos en ${zonaNombre}`,
+    badge: 'Accesos',
+    title: 'Control de Accesos',
+    description: `Registro digital de visitantes, control biométrico y gestión vehicular en ${zonaNombre}.`,
+    features: ['Registro digital', 'Control biométrico', 'Gestión vehicular'],
+    ctaText: 'Ver Control de Accesos',
+  },
+  'patrullaje': {
+    image: '/img/patrullaje/patrullaje-residencial-privado.avif',
+    imageAlt: `Patrullaje vehicular en ${zonaNombre}`,
+    badge: 'Patrullaje',
+    title: 'Patrullaje Vehicular',
+    description: `Rondines vehiculares con GPS en tiempo real para fraccionamientos y residenciales en ${zonaNombre}.`,
+    features: ['GPS en tiempo real', 'Rondines programados', 'Disuasión activa'],
+    ctaText: 'Ver Patrullaje',
+  },
+  'monitoreo-alarmas': {
+    image: '/img/img-monitoreo-de-alarmas/central-monitoreo-alarmas-24-7-cdmx.avif',
+    imageAlt: `Monitoreo de alarmas en ${zonaNombre}`,
+    badge: 'Monitoreo',
+    title: 'Monitoreo de Alarmas',
+    description: `Central de monitoreo 24/7 con respuesta en menos de 90 segundos para tu condominio en ${zonaNombre}.`,
+    features: ['Central 24/7', '< 90 seg respuesta', 'Verificación humana'],
+    ctaText: 'Ver Monitoreo',
+  },
+  'proteccion-ejecutiva': {
+    image: '/img/img-proteccion-ejecutiva/escoltas-profesionales-ejecutivos-cdmx.avif',
+    imageAlt: `Protección ejecutiva en ${zonaNombre}`,
+    badge: 'Protección',
+    title: 'Protección Ejecutiva',
+    description: `Escoltas certificados y análisis de rutas para ejecutivos y familias en ${zonaNombre}.`,
+    features: ['Escoltas certificados', 'Análisis de rutas', 'Discreción total'],
+    ctaText: 'Ver Protección Ejecutiva',
+  },
+  'guardias-de-seguridad-y-vigilancia': {
+    image: '/img/img-guardias-de-seguridad/guardias-de-seguridad-cdmx.avif',
+    imageAlt: `Guardias de seguridad en ${zonaNombre}`,
+    badge: 'Guardias',
+    title: 'Guardias de Seguridad',
+    description: `Elementos de seguridad capacitados para vigilancia de instalaciones comerciales e industriales en ${zonaNombre}.`,
+    features: ['Capacitación SSC', 'Vigilancia 24/7', 'Rondines documentados'],
+    ctaText: 'Ver Guardias de Seguridad',
+  },
+};
 
-// Schema LocalBusiness con variante de zona geográfica
+// Sidebar service labels
+const serviceLabels: Record<string, string> = {
+  'guardias-intramuros': 'Guardias Intramuros',
+  'seguridad-condominios': 'Seguridad para Condominios',
+  'seguridad-residenciales': 'Seguridad para Residenciales',
+  'control-de-accesos': 'Control de Accesos',
+  'patrullaje': 'Patrullaje Vehicular',
+  'monitoreo-alarmas': 'Monitoreo de Alarmas',
+  'proteccion-ejecutiva': 'Protección Ejecutiva',
+  'guardias-de-seguridad-y-vigilancia': 'Guardias de Seguridad',
+};
+
+// Colonias fallback por zona
+const coloniasFallback: Record<string, string[]> = {
+  'miguel-hidalgo': ['Polanco I-V Sección', 'Lomas de Chapultepec', 'Anzures', 'Bosques de las Lomas', 'Santa Fe', 'San Miguel Chapultepec'],
+  'benito-juarez': ['Del Valle Norte', 'Del Valle Sur', 'Narvarte Poniente', 'Narvarte Oriente', 'Nápoles', 'Insurgentes Mixcoac'],
+  'cuauhtemoc': ['Roma Norte', 'Roma Sur', 'Condesa', 'Hipódromo', 'Juárez', 'Doctores'],
+  'coyoacan': ['Pedregal de San Ángel', 'Copilco el Alto', 'Del Carmen', 'Xotepingo', 'Churubusco', 'Villa Coyoacán'],
+  'alvaro-obregon': ['Santa Fe', 'Lomas de Plateros', 'Tizapán San Ángel', 'Tetelpan', 'Observatorio', 'Escandón'],
+  'naucalpan': ['Interlomas', 'Ciudad Satélite', 'Lomas Verdes', 'Bosques de Echegaray', 'Las Américas', 'San Mateo'],
+  'tlalnepantla': ['Ciudad Lago', 'Industrial Vallejo', 'Lomas de San Agustín', 'San Lucas Tepetlacalco', 'Viveros del Valle'],
+  'atizapan': ['Bosques de la Hacienda', 'Lomas de Atizapán', 'Hacienda de las Palmas', 'Ciudad López Mateos', 'Fuentes del Valle'],
+  'iztapalapa': ['Santa Cruz Meyehualco', 'Constitución de 1917', 'Paraje San Juan', 'Reforma Política', 'Leyes de Reforma'],
+  'gustavo-a-madero': ['Lindavista', 'Insurgentes Norte', 'Residencial Zacatenco', 'Industrial Vallejo', 'La Villa'],
+  'xochimilco': ['Santa Cruz Acalpixca', 'San Gregorio Atlapulco', 'Tepepan', 'Huichapan', 'Barrio 18'],
+};
+
+const colonias = zona.data.colonias || coloniasFallback[zona.data.zoneSlug] || [];
+
+// FAQs: use frontmatter or generate defaults
+const defaultFaqs = [
+  { pregunta: `¿En cuánto tiempo inician el servicio en ${zonaNombre}?`, respuesta: `Una vez aprobada la propuesta, podemos iniciar operaciones en ${zonaNombre} en un plazo de 5 a 7 días hábiles. Esto incluye la selección del personal, verificación de antecedentes y capacitación específica para tu condominio.` },
+  { pregunta: `¿Qué colonias de ${zonaNombre} cubren?`, respuesta: `Cubrimos todas las colonias de ${zonaNombre}. Nuestros guardias son asignados específicamente a la zona donde viven, lo que garantiza conocimiento del entorno y tiempos de respuesta óptimos.` },
+  { pregunta: `¿Tienen experiencia con condominios en ${zonaNombre}?`, respuesta: `Sí. ORIGINS tiene amplia experiencia protegiendo condominios verticales y horizontales en ${zonaNombre}. Nuestros guardias conocen los protocolos específicos que requieren los edificios de esta zona, incluyendo control de accesos, gestión de visitantes y coordinación con sistemas CCTV.` },
+  { pregunta: `¿Qué incluye el contrato de seguridad en ${zonaNombre}?`, respuesta: `El contrato incluye: elementos de seguridad certificados SSC, uniformes e identificación, supervisión semanal documentada, bitácora electrónica, reemplazos sin costo adicional, y coordinación con el administrador del condominio. Todo respaldado por el <strong>Permiso SSC 0102-15</strong>.` },
+  { pregunta: `¿Qué pasa si necesito más guardias en ${zonaNombre}?`, respuesta: `Podemos escalar el servicio de forma inmediata. Contamos con personal de respaldo en cada zona de cobertura, por lo que si tu condominio necesita refuerzos temporales o permanentes, los activamos en un plazo máximo de 48 horas.` },
+];
+
+const faqs = zona.data.faqs && zona.data.faqs.length > 0 ? zona.data.faqs : defaultFaqs;
+
+// Determine NavCTA cards based on zone type
+const isResidential = zona.data.zoneType === 'residential';
+const navCard1 = isResidential
+  ? { label: 'Guardias Intramuros', sublabel: `Vigilancia 24/7 en ${zonaNombre}`, href: '/servicios/guardias-intramuros', icon: 'shield' as const }
+  : { label: 'Control de Accesos', sublabel: 'Registro digital peatonal y vehicular', href: '/servicios/control-de-accesos', icon: 'monitor' as const };
+const navCard2 = isResidential
+  ? { label: 'Control de Accesos', sublabel: 'Registro digital peatonal y vehicular', href: '/servicios/control-de-accesos', icon: 'monitor' as const }
+  : { label: 'Guardias Intramuros', sublabel: `Vigilancia 24/7 en ${zonaNombre}`, href: '/servicios/guardias-intramuros', icon: 'shield' as const };
+
+// Schema
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -50,6 +177,14 @@ const schema = {
         { "@type": "ListItem", "position": 2, "name": "Zonas de Servicio", "item": `${siteUrl}/zonas` },
         { "@type": "ListItem", "position": 3, "name": zona.data.zoneName, "item": `${siteUrl}/zonas/${zona.data.zoneSlug}` }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({
+        "@type": "Question",
+        "name": f.pregunta,
+        "acceptedAnswer": { "@type": "Answer", "text": f.respuesta }
+      }))
     }
   ]
 };
@@ -61,73 +196,64 @@ const schema = {
   canonical={`${siteUrl}/zonas/${zona.data.zoneSlug}`}
   schema={schema}
 >
+  <!-- SECCIÓN 1: Hero -->
   <HeroPagina
     badge={zona.data.state}
-    titulo={`Seguridad Privada en ${zona.data.zoneName}`}
+    titulo={`Seguridad Privada en ${zonaNombre}`}
     descripcion={zona.data.description}
     breadcrumb={[
       { label: 'Zonas de Servicio', href: '/zonas' },
-      { label: zona.data.zoneName, href: `/zonas/${zona.data.zoneSlug}` }
+      { label: zonaNombre, href: `/zonas/${zona.data.zoneSlug}` }
     ]}
-    ctaPrimario={{ texto: 'Solicitar Cotización Gratis', href: '#cotizacion' }}
+    ctaPrimario={{ texto: 'Solicitar Cotización Gratis', href: '/contacto' }}
     ctaWhatsapp={true}
-    seoParrafo1={`En <strong>ORIGINS Private Security</strong> tenemos presencia activa en ${zona.data.zoneName} con guardias que conocen la zona, sus accesos y sus condominios. Nuestros elementos viven cerca del área de servicio — eso se traduce en puntualidad real y respuesta rápida ante cualquier incidente.`}
+    seoParrafo1={`En <strong>ORIGINS Private Security</strong> tenemos presencia activa en ${zonaNombre} con guardias que conocen la zona, sus accesos y sus condominios. Nuestros elementos viven cerca del área de servicio — eso se traduce en puntualidad real y respuesta rápida ante cualquier incidente.`}
     seoParrafo2={`Operamos con <strong>Permiso SSC 0102-15</strong> y cobertura de <a href="/zonas">toda la Zona Metropolitana</a>. Servicios disponibles: <a href="/servicios/guardias-intramuros">guardias intramuros</a>, <a href="/servicios/control-de-accesos">control de accesos</a>, <a href="/servicios/vigilancia-remota-cctv">CCTV</a> y <a href="/servicios/patrullaje">patrullaje vehicular</a>. Cotización gratuita en menos de 24 horas.`}
   />
 
+  <!-- SECCIÓN 2: NavCTA post-hero -->
   <NavCTA
     ariaLabel={`Servicios de seguridad en ${zonaNombre}`}
     cards={[
-      { label: 'Guardias Intramuros',   sublabel: `Vigilancia 24/7 en ${zonaNombre}`,     href: '/servicios/guardias-intramuros',   icon: 'shield'  },
-      { label: 'Control de Accesos',    sublabel: 'Registro digital peatonal y vehicular', href: '/servicios/control-de-accesos',    icon: 'shield'  },
-      { label: 'Todas las Zonas',       sublabel: 'CDMX y Zona Metropolitana',             href: '/zonas',                           icon: 'map'     },
-      { label: 'Cotización en ' + zonaNombre, sublabel: 'Diagnóstico gratuito en 24h',     href: waZona, whatsapp: true, accent: true, external: true },
+      navCard1,
+      navCard2,
+      { label: 'Todas las Zonas', sublabel: 'CDMX y Zona Metropolitana', href: '/zonas', icon: 'map' },
+      { label: `Cotización en ${zonaNombre}`, sublabel: 'Diagnóstico gratuito en 24h', href: waZona, whatsapp: true, accent: true, external: true },
     ]}
   />
 
-  <!-- Servicios disponibles en la zona -->
-  <section class="zona-servicios">
-    <div class="container">
-      <h2>Servicios de Seguridad en {zona.data.zoneName}</h2>
-      <p class="zona-servicios__intro">Soluciones de seguridad privada disponibles para condominios, residenciales y fraccionamientos en {zona.data.zoneName}, {zona.data.state}</p>
-      <div class="zona-servicios__grid">
-        {zona.data.availableServices.map((slug) => {
-          const nombres = {
-            'guardias-intramuros': { nombre: 'Guardias Intramuros', icon: '🛡️', url: '/servicios/guardias-intramuros' },
-            'seguridad-condominios': { nombre: 'Seguridad para Condominios', icon: '🏢', url: '/servicios/seguridad-condominios' },
-            'seguridad-residenciales': { nombre: 'Seguridad para Residenciales', icon: '🏘️', url: '/servicios/seguridad-residenciales' },
-            'control-de-accesos': { nombre: 'Control de Accesos', icon: '🚪', url: '/servicios/control-de-accesos' },
-            'patrullaje': { nombre: 'Patrullaje Vehicular', icon: '🚔', url: '/servicios/patrullaje' },
-            'monitoreo-alarmas': { nombre: 'Monitoreo de Alarmas', icon: '📡', url: '/servicios/monitoreo-alarmas' },
-            'proteccion-ejecutiva': { nombre: 'Protección Ejecutiva', icon: '🤵', url: '/servicios/proteccion-ejecutiva' },
-            'guardias-de-seguridad-y-vigilancia': { nombre: 'Guardias de Seguridad', icon: '👮', url: '/servicios/guardias-de-seguridad-y-vigilancia' },
-          };
-          const s = nombres[slug] || { nombre: slug, icon: '🛡️', url: `/servicios/${slug}` };
-          return (
-            <a href={s.url} class="zona-servicio-card">
-              <span class="zona-servicio-card__icon">{s.icon}</span>
-              <span class="zona-servicio-card__nombre">{s.nombre}</span>
-              <span class="zona-servicio-card__arrow">→</span>
-            </a>
-          );
-        })}
-      </div>
-    </div>
-  </section>
-
-  <!-- Contenido de la zona (markdown) -->
+  <!-- SECCIÓN 3: Contenido MD + Sidebar -->
   <section class="zona-content">
     <div class="container">
+      <SectionHeader
+        badge={`Cobertura en ${zonaNombre}`}
+        titulo={`¿Qué Incluye la Seguridad para Condominios en ${zonaNombre}?`}
+        subtitulo={zona.data.description}
+        align="left"
+      />
       <div class="zona-content__grid">
         <div class="zona-content__main prose">
           <Content />
         </div>
         <aside class="zona-content__sidebar">
           <div class="zona-sidebar-card zona-sidebar-card--cta">
-            <h3>¿Tu condominio está en {zona.data.zoneName}?</h3>
+            <h3>¿Tu condominio está en {zonaNombre}?</h3>
             <p>Diagnóstico de seguridad gratuito + propuesta personalizada en 24 horas.</p>
-            <a href={waZonaSidebar} class="btn btn-whatsapp btn-block" target="_blank" rel="noopener">WhatsApp Directo</a>
+            <a href={waZona} class="btn btn-whatsapp btn-block" target="_blank" rel="noopener">WhatsApp Directo</a>
             <p class="zona-sidebar-card__phone"><a href="tel:+525530255580">55 3025 5580</a></p>
+          </div>
+          <div class="zona-sidebar-card">
+            <h4>Servicios Disponibles</h4>
+            <ul class="zona-sidebar-services">
+              {zona.data.availableServices.map((slug) => (
+                <li>
+                  <a href={`/servicios/${slug}`}>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    {serviceLabels[slug] || slug}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
           <div class="zona-sidebar-card">
             <h4>Zonas Cercanas</h4>
@@ -145,85 +271,194 @@ const schema = {
     </div>
   </section>
 
+  <!-- SECCIÓN 4: FAQ + Formulario (sfaq-cot) -->
+  <section class="zona-sfaq-cot" id="cotizacion">
+    <div class="container">
+      <div class="zona-sfaq-cot__header">
+        <div class="prose-section-header" style="margin:0">
+          <span class="prose-section-badge">FAQ y Cotización</span>
+          <h2>Preguntas Frecuentes sobre Seguridad en {zonaNombre}</h2>
+          <p class="prose-section-sub">Respondemos las dudas más comunes de administradores y residentes de {zonaNombre}.</p>
+        </div>
+      </div>
+
+      <div class="zona-sfaq-cot__grid">
+        <!-- COL 1: FAQs -->
+        <div>
+          <div class="zona-sfaq-cot__col-header">
+            <span class="faq-cotizacion__col-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              Preguntas Frecuentes
+            </span>
+            <h3 class="zona-sfaq-cot__col-title">Lo que más nos preguntan en {zonaNombre}</h3>
+            <p class="zona-sfaq-cot__col-sub">¿No encuentras tu respuesta? Escríbenos al <a href="https://wa.me/525530255580">WhatsApp 55 3025 5580</a>.</p>
+          </div>
+          <div class="zona-sfaq-cot__items">
+            {faqs.map((faq, i) => (
+              <FAQItem question={faq.pregunta} answer={faq.respuesta} open={i === 0} />
+            ))}
+          </div>
+        </div>
+
+        <!-- COL 2: Formulario -->
+        <div class="zona-sfaq-cot__form-col">
+          <div class="zona-sfaq-cot__form-card">
+            <div class="zona-sfaq-cot__form-header">
+              <span class="faq-cotizacion__col-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.82 15a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.93 4.11h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 11.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Cotización Gratuita
+              </span>
+              <h3 class="zona-sfaq-cot__col-title">Solicita tu diagnóstico gratuito</h3>
+              <p class="zona-sfaq-cot__col-sub">Respuesta personalizada en menos de 24 horas. Sin compromiso.</p>
+            </div>
+
+            <form class="faq-cotizacion__form" action="https://formsubmit.co/josecruz@originsecurity.mx" method="POST" novalidate>
+              <input type="text" name="_honey" style="display:none" aria-hidden="true" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value="https://seguridad-privada.com.mx/gracias.html" />
+              <input type="hidden" name="_subject" value={`Cotización zona: ${zonaNombre}`} />
+
+              <div class="faq-form__field">
+                <label for={`sfaq-nombre-${zona.data.zoneSlug}`}>Nombre completo <span aria-hidden="true">*</span></label>
+                <input type="text" id={`sfaq-nombre-${zona.data.zoneSlug}`} name="nombre" required placeholder="Tu nombre completo" autocomplete="name" />
+              </div>
+
+              <div class="faq-form__row">
+                <div class="faq-form__field">
+                  <label for={`sfaq-tel-${zona.data.zoneSlug}`}>Teléfono <span aria-hidden="true">*</span></label>
+                  <input type="tel" id={`sfaq-tel-${zona.data.zoneSlug}`} name="telefono" required placeholder="55 1234 5678" autocomplete="tel" />
+                </div>
+                <div class="faq-form__field">
+                  <label for={`sfaq-email-${zona.data.zoneSlug}`}>Correo electrónico</label>
+                  <input type="email" id={`sfaq-email-${zona.data.zoneSlug}`} name="email" placeholder="correo@empresa.com" autocomplete="email" />
+                </div>
+              </div>
+
+              <div class="faq-form__field">
+                <label for={`sfaq-empresa-${zona.data.zoneSlug}`}>Condominio / empresa <span aria-hidden="true">*</span></label>
+                <input type="text" id={`sfaq-empresa-${zona.data.zoneSlug}`} name="empresa" required placeholder="Ej: Torre Santa Fe 4, Residencial Lomas de Plateros" />
+              </div>
+
+              <div class="faq-form__row">
+                <div class="faq-form__field">
+                  <label for={`sfaq-zona-${zona.data.zoneSlug}`}>Zona <span aria-hidden="true">*</span></label>
+                  <select id={`sfaq-zona-${zona.data.zoneSlug}`} name="ubicacion" required>
+                    <option value="">Selecciona</option>
+                    <optgroup label="CDMX">
+                      <option value="cdmx-miguel-hidalgo">Miguel Hidalgo</option>
+                      <option value="cdmx-cuauhtemoc">Cuauhtémoc</option>
+                      <option value="cdmx-benito-juarez">Benito Juárez</option>
+                      <option value="cdmx-alvaro-obregon" selected>Álvaro Obregón</option>
+                      <option value="cdmx-coyoacan">Coyoacán</option>
+                      <option value="cdmx-otras">Otra alcaldía CDMX</option>
+                    </optgroup>
+                    <optgroup label="Estado de México">
+                      <option value="edomex-naucalpan">Naucalpan / Interlomas</option>
+                      <option value="edomex-tlalnepantla">Tlalnepantla</option>
+                      <option value="edomex-atizapan">Atizapán</option>
+                      <option value="edomex-otros">Otro municipio EdoMex</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="faq-form__field">
+                  <label for={`sfaq-servicio-${zona.data.zoneSlug}`}>Servicio de interés</label>
+                  <select id={`sfaq-servicio-${zona.data.zoneSlug}`} name="tipoServicio">
+                    <option value="">Selecciona</option>
+                    <option value="guardias-intramuros">Guardias Intramuros</option>
+                    <option value="seguridad-condominios">Seguridad Condominios</option>
+                    <option value="control-accesos">Control de Accesos</option>
+                    <option value="patrullaje">Patrullaje</option>
+                    <option value="vigilancia-cctv">Vigilancia CCTV</option>
+                    <option value="monitoreo-alarmas">Monitoreo de Alarmas</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="faq-form__field">
+                <label for={`sfaq-msg-${zona.data.zoneSlug}`}>Cuéntanos más <span class="faq-form__optional">(opcional)</span></label>
+                <textarea id={`sfaq-msg-${zona.data.zoneSlug}`} name="mensaje" rows="3" placeholder="Número de accesos, torres, residentes aproximados..."></textarea>
+              </div>
+
+              <div class="faq-form__terms">
+                <input type="checkbox" id={`sfaq-terms-${zona.data.zoneSlug}`} name="terminos" required />
+                <label for={`sfaq-terms-${zona.data.zoneSlug}`}>Acepto la <a href="/aviso-de-privacidad">política de privacidad</a> y recibir información comercial</label>
+              </div>
+
+              <button type="submit" class="faq-form__submit">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Enviar por WhatsApp
+              </button>
+
+              <p class="faq-form__note">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                Información 100% confidencial · Sin compromiso
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: Servicios disponibles en zona (sc-section) -->
+  <section class="zona-sc-section">
+    <div class="container">
+      <div class="prose-section-header" style="margin-bottom:2.5rem">
+        <span class="prose-section-badge">Protección Integral</span>
+        <h2>Servicios Disponibles en {zonaNombre}</h2>
+        <p class="prose-section-sub">Soluciones de seguridad privada para condominios, residenciales y fraccionamientos en {zonaNombre}, {zona.data.state}.</p>
+      </div>
+      <div class="zona-sc-section__grid">
+        {zona.data.availableServices.map((slug) => {
+          const card = serviceCardData[slug];
+          if (!card) return null;
+          return (
+            <ServiceCard
+              href={`/servicios/${slug}`}
+              image={card.image}
+              imageAlt={card.imageAlt}
+              badge={card.badge}
+              title={card.title}
+              description={card.description}
+              features={card.features}
+              ctaText={card.ctaText}
+            />
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 6: Colonias -->
+  {colonias.length > 0 && (
+    <section class="zona-colonias">
+      <div class="container">
+        <SectionHeader
+          badge={`Colonias en ${zonaNombre}`}
+          titulo={`Colonias que Atendemos en ${zonaNombre}`}
+          subtitulo={`Presencia activa en las principales colonias y fraccionamientos de ${zonaNombre}.`}
+        />
+        <div class="zona-colonias__grid">
+          {colonias.map((colonia) => (
+            <span class="zona-colonia-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+              {colonia}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- SECCIÓN 7: NavCTA footer -->
   <NavCTA
     footer={true}
     ariaLabel={`Explora más sobre seguridad en ${zonaNombre}`}
     cards={[
-      { label: 'Guardias Intramuros',  sublabel: `Vigilancia 24/7 en ${zonaNombre}`,    href: '/servicios/guardias-intramuros',  icon: 'shield'  },
-      { label: 'Nuestros Servicios',   sublabel: 'Guardias, accesos y monitoreo',        href: '/servicios',                      icon: 'shield'  },
-      { label: 'Todas las Zonas',      sublabel: 'CDMX y Zona Metropolitana',            href: '/zonas',                          icon: 'map'     },
-      { label: `Cotizar en ${zonaNombre}`, sublabel: 'Diagnóstico gratuito en 24h',      href: waCTA, whatsapp: true, accent: true, external: true },
+      { label: 'Guardias Intramuros', sublabel: `Vigilancia 24/7 en ${zonaNombre}`, href: '/servicios/guardias-intramuros', icon: 'shield' },
+      { label: 'Nuestros Servicios', sublabel: 'Guardias, accesos y monitoreo', href: '/servicios', icon: 'briefcase' },
+      { label: 'Todas las Zonas', sublabel: 'CDMX y Zona Metropolitana', href: '/zonas', icon: 'map' },
+      { label: `Cotizar en ${zonaNombre}`, sublabel: 'Diagnóstico gratuito en 24h', href: waZona, whatsapp: true, accent: true, external: true },
     ]}
   />
 </Base>
-
-<style>
-  /* Breadcrumbs */
-  .breadcrumbs { padding: 0.75rem 0; background: var(--color-accent); font-size: 0.875rem; }
-  .breadcrumbs__list { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; margin: 0; padding: 0; }
-  .breadcrumbs__list li { display: flex; align-items: center; gap: 0.5rem; }
-  .breadcrumbs__list li:not(:last-child)::after { content: '/'; color: var(--color-text-muted); }
-  .breadcrumbs__list a { color: var(--color-text-light); text-decoration: none; }
-  .breadcrumbs__list li[aria-current="page"] { color: var(--color-primary); font-weight: 600; }
-
-  /* Hero */
-  .zona-hero { padding: 3rem 0 4rem; background: linear-gradient(135deg, var(--color-primary) 0%, #1a1a2e 100%); color: #fff; }
-  .zona-hero__content { max-width: 700px; }
-  .zona-hero__badge { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(255,255,255,0.15); color: #fff; font-size: 0.8125rem; padding: 0.3rem 0.875rem; border-radius: 980px; margin-bottom: 1rem; }
-  .zona-hero h1 { font-size: 2rem; color: #fff; margin-bottom: 1rem; line-height: 1.2; }
-  .zona-hero__desc { font-size: 1.0625rem; opacity: 0.9; margin-bottom: 1.75rem; line-height: 1.7; }
-  .zona-hero__cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem; }
-  .zona-hero__badges { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-  .zona-badge { font-size: 0.8125rem; background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); padding: 0.3rem 0.75rem; border-radius: 980px; }
-
-  @media (min-width: 768px) {
-    .zona-hero h1 { font-size: 2.5rem; }
-  }
-
-  /* Servicios */
-  .zona-servicios { padding: 3rem 0; }
-  .zona-servicios h2 { font-size: 1.75rem; margin-bottom: 0.75rem; }
-  .zona-servicios__intro { color: var(--color-text-light); margin-bottom: 2rem; }
-  .zona-servicios__grid { display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
-  .zona-servicio-card { display: flex; align-items: center; gap: 0.875rem; background: var(--color-accent); border: 1px solid var(--color-border); border-radius: var(--border-radius); padding: 1rem 1.25rem; text-decoration: none; color: var(--color-primary); font-weight: 500; transition: border-color 0.2s, box-shadow 0.2s; }
-  .zona-servicio-card:hover { border-color: var(--color-primary); box-shadow: 0 2px 12px rgba(0,0,0,0.08); opacity: 1; }
-  .zona-servicio-card__icon { font-size: 1.375rem; flex-shrink: 0; }
-  .zona-servicio-card__nombre { flex: 1; font-size: 0.9375rem; }
-  .zona-servicio-card__arrow { opacity: 0.4; transition: transform 0.2s, opacity 0.2s; }
-  .zona-servicio-card:hover .zona-servicio-card__arrow { opacity: 1; transform: translateX(3px); }
-  @media (min-width: 640px) { .zona-servicios__grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (min-width: 1024px) { .zona-servicios__grid { grid-template-columns: repeat(3, 1fr); } }
-
-  /* Content */
-  .zona-content { padding: 3rem 0; }
-  .zona-content__grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
-  .zona-content__main.prose { font-size: 1rem; line-height: 1.8; color: var(--color-text); }
-  .zona-content__main.prose h2 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 1rem; color: var(--color-primary); }
-  .zona-content__main.prose h3 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
-  .zona-content__main.prose p { margin-bottom: 1.25rem; }
-  .zona-content__main.prose ul { padding-left: 1.5rem; margin-bottom: 1.25rem; }
-  .zona-content__main.prose li { margin-bottom: 0.4rem; }
-  .zona-content__main.prose strong { color: var(--color-primary); }
-  @media (min-width: 1024px) { .zona-content__grid { grid-template-columns: 1fr 300px; gap: 3rem; } }
-
-  /* Sidebar */
-  .zona-content__sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
-  .zona-sidebar-card { background: var(--color-accent); border-radius: var(--border-radius); padding: 1.5rem; }
-  .zona-sidebar-card--cta { background: var(--color-primary); color: #fff; }
-  .zona-sidebar-card--cta h3 { color: #fff; font-size: 1.1rem; margin-bottom: 0.75rem; }
-  .zona-sidebar-card--cta p { opacity: 0.9; margin-bottom: 1rem; font-size: 0.9375rem; }
-  .zona-sidebar-card--cta .zona-sidebar-card__phone { margin-top: 0.75rem; margin-bottom: 0; font-size: 0.9375rem; }
-  .zona-sidebar-card--cta .zona-sidebar-card__phone a { color: #fff; text-decoration: none; font-weight: 600; }
-  .zona-sidebar-card h4 { font-size: 0.9375rem; font-weight: 600; margin-bottom: 0.875rem; }
-  .btn-block { display: block; width: 100%; text-align: center; }
-  .zona-nearby-list { list-style: none; padding: 0; margin: 0 0 0.875rem; }
-  .zona-nearby-list li { border-bottom: 1px solid var(--color-border); }
-  .zona-nearby-list li:last-child { border-bottom: none; }
-  .zona-nearby-list a { display: block; color: var(--color-primary); text-decoration: none; font-size: 0.9rem; padding: 0.5rem 0; text-transform: capitalize; }
-  .zona-nearby-list a:hover { opacity: 0.7; }
-  .zona-ver-mas { color: var(--color-primary); font-size: 0.875rem; font-weight: 500; text-decoration: none; }
-  .zona-ver-mas:hover { opacity: 0.7; }
-  @media (min-width: 1024px) { .zona-content__sidebar { position: sticky; top: 2rem; align-self: start; } }
-
-  /* CTA */
-</style>

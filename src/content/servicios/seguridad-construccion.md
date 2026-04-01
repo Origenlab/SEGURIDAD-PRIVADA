@@ -1,157 +1,412 @@
 ---
-title: "Seguridad para Construcción CDMX | Guardias 24/7"
-description: "Seguridad privada para obras de construcción en CDMX. Guardias intramuros certificados SSC 24/7, custodia de materiales y maquinaria. +15 años. ☎ 55 3025 5580"
+title: "Seguridad para Obras y Construcción CDMX — ORIGINS"
+description: "Seguridad para obras de construcción en CDMX. Guardias SSC, control de acceso de personal, vigilancia de materiales y maquinaria 24/7. Prevención de robo."
 category: service
 publishDate: 2024-01-01
+updatedDate: 2026-04-01
+draft: false
 keywords:
-  - seguridad
-  - seguridad construccion
+  - seguridad para obras en construccion cdmx
+  - vigilancia de obra construccion ciudad de mexico
+  - guardias para construccion cdmx
+  - seguridad privada obras inmobiliarias cdmx
+  - control de accesos obras construccion cdmx
+  - vigilancia nocturna obra negra cdmx
+  - guardias seguridad obras construccion cdmx
+  - vigilancia materiales maquinaria obra
+  - seguridad sitios construccion estado de mexico
+  - control acceso personal obra cdmx
+relatedServices:
+  - guardias-intramuros
+  - vigilancia-remota-cctv
+  - control-de-accesos
+  - patrullaje
+  - tecnologia-monitoreo-seguridad
+targetLocations:
+  - Ciudad de México
+  - Estado de México
+  - Naucalpan
+  - Tlalnepantla
+serviceFeatures:
+  - title: "Vigilancia 24/7 de Obra y Perímetro"
+    description: "Guardias certificados SSC con presencia permanente en sitio. Turnos diurnos y nocturnos cubiertos sin vacíos, con reportes de incidencias por turno."
+    icon: "clock"
+  - title: "Control de Acceso de Personal y Transportistas"
+    description: "Registro de obreros, subcontratistas y transportistas. Bitácora de quién entra, a qué hora y con qué materiales — trazabilidad completa del movimiento en obra."
+    icon: "clipboard"
+  - title: "Protección de Maquinaria y Materiales"
+    description: "Vigilancia específica de maquinaria pesada, equipo eléctrico y materiales de alto valor almacenados en sitio. Protocolos de cierre de bodega y registro de inventario nocturno."
+    icon: "shield"
+  - title: "Rondines Nocturnos Verificados"
+    description: "Patrullaje perimetral nocturno con puntos de control electrónicos. Cada rondín genera registro con hora y posición — evidencia verificable para el cliente."
+    icon: "map-pin"
+  - title: "Coordinación con CCTV de la Obra"
+    description: "Integración con los sistemas de videovigilancia de la construcción cuando existen. El guardia opera como complemento activo de las cámaras, no como sustituto."
+    icon: "monitor"
+  - title: "Supervisión Semanal y Reportes al Residente"
+    description: "Supervisor ORIGINS visita la obra cada semana y entrega reporte al residente de obra o gerente del proyecto. Documentación completa para la constructora."
+    icon: "check-circle"
 faqs:
-  - question: "¿Cuánto cuesta el servicio de seguridad para una obra de construcción?"
-    answer: "El costo depende de tamaño de obra, número de guardias requeridos y horario de cobertura. Como referencia: esquema básico con 1 guardia nocturno inicia desde $15,000-$18,000 mensuales. Obra mediana con 2 guardias 12x12 (cobertura 24 horas) desde $30,000-$35,000. Proyectos grandes con 4+ guardias desde $60,000+. El costo representa 0.5-1.5% del presupuesto total de obra, pero previene pérdidas de 3-8% por robo y mermas. ROI positivo desde el primer mes. Cotización personalizada considera superficie, ubicación, materiales de alto valor, etapa constructiva y servicios adicionales requeridos."
-  - question: "¿Los guardias están certificados y capacitados en seguridad de obra?"
-    answer: "Absolutamente. 100% de nuestro personal cuenta con certificación SSC vigente (requisito legal en CDMX) más capacitación especializada en: reconocimiento de materiales de construcción de alto valor, protocolos de control de proveedores y entregas, inspección de vehículos para prevenir robo hormiga, coordinación con residentes de obra y contratistas, manejo de bitácoras digitales y documentación de incidentes, y protocolos de seguridad en entorno de construcción. No enviamos vigilantes genéricos: asignamos personal capacitado específicamente en dinámicas de obra que entiende diferencia entre movimiento normal de operación versus situación irregular que requiere atención."
-  - question: "¿Cómo previenen el robo hormiga de trabajadores y contratistas?"
-    answer: "Implementamos sistema de tres capas: 1) Inspección aleatoria de vehículos en salida con registro fotográfico de cajuelas y cajas de pick-ups. Trabajadores saben que hay verificación real lo que disuade intentos. 2) Control de órdenes de salida autorizadas: materiales que salen requieren autorización firmada por residente. 3) Bitácora digital de todos los movimientos: cualquier salida no autorizada queda documentada con foto, hora y descripción. El robo hormiga (pequeñas cantidades repetidas) genera pérdidas acumuladas mayores que robos masivos. Una tubería, unas bolsas de cemento, algo de cableado: cantidades pequeñas que suman miles de pesos mensuales. Nuestro control sistemático reduce robo hormiga en 90%+ porque personal deshonesto desiste al saber que hay verificación real."
-  - question: "¿Pueden coordinar con mi residente de obra y contratistas?"
-    answer: "Sí, coordinación directa es parte esencial del servicio. Antes de iniciar, realizamos reunión con tu residente para entender: horarios típicos de operación, lista de contratistas y proveedores autorizados, materiales de alto valor que requieren custodia especial, protocolos específicos de tu empresa constructora, y canales de comunicación preferidos (WhatsApp, radio, llamada). Durante operación, guardias mantienen comunicación continua: verifican con residente si llega proveedor no programado, reportan incidentes inmediatamente con foto, consultan dudas sobre autorizaciones y documentan entregas para que residente tenga evidencia. No operamos aislados: somos extensión de tu equipo de dirección de obra que ejecuta protocolos de seguridad que tú defines."
-  - question: "¿Qué pasa si detecto que un guardia no está cumpliendo?"
-    answer: "Línea directa con gerente de cuenta 24/7 para reportar cualquier deficiencia. Si guardias no realizan patrullajes, permiten acceso no autorizado, no documentan entregas o cualquier incumplimiento, realizamos reemplazo inmediato sin costo adicional. Adicionalmente, sistema de bitácoras digitales con GPS permite verificar que guardias están en su puesto: cada patrullaje queda registrado con ubicación y hora. Si detectas que guardia reporta patrullaje pero GPS muestra que no se movió, tienes evidencia para reclamar. Implementamos supervisión periódica con visitas aleatorias de supervisores que verifican cumplimiento. Tu satisfacción está garantizada porque monitoreamos activamente calidad del servicio."
-  - question: "¿Incluyen póliza de responsabilidad civil?"
-    answer: "Sí, todos nuestros servicios incluyen póliza de responsabilidad civil vigente que cubre contingencias legales relacionadas con actuación de nuestro personal. Si ocurre accidente, daño a propiedad o situación legal derivada de acciones u omisiones de nuestros guardias, la póliza protege tu empresa constructora. Adicionalmente, cumplimos con todas las obligaciones laborales, seguridad social y fiscales, por lo que no enfrentas riesgos de demandas por personal subcontratado. Operamos con total formalidad legal respaldada por permiso SSC vigente y RFC que acreditan nuestra seriedad empresarial."
-  - question: "¿Puedo incrementar o reducir guardias según avance de obra?"
-    answer: "Absolutamente. Entendemos que necesidades de seguridad cambian según etapa constructiva. Si terminaste cimentación y ya no tienes acero expuesto de alto valor, puedes reducir guardias. Si llega cargamento premium de cancelería importada, puedes incrementar temporalmente. Ajustes se realizan con 1 semana de aviso sin penalizaciones. Contratos flexibles mensuales, trimestrales o por duración de proyecto según prefieras. No imponemos esquemas rígidos anuales que generan sobrecostos cuando obra termina antes o necesidades cambian. Flexibilidad operativa que empresas constructoras necesitan versus proveedores que cobran meses completos aunque solo necesites 15 días."
-  - question: "¿En qué zonas de CDMX y Estado de México operan?"
-    answer: "Tenemos cobertura completa en toda la Ciudad de México y municipios estratégicos del Estado de México. Zonas principales: Benito Juárez, Coyoacán, Cuauhtémoc, Miguel Hidalgo, Álvaro Obregón, Tlalpan, Xochimilco, Iztapalapa. En Estado de México: Naucalpan, Huixquilucan, Tlalnepantla, Atizapán, Cuautitlán Izcalli, Ecatepec, Nezahualcóyotl, Texcoco. Si tu obra está en ubicación no listada, contáctanos para verificar cobertura: tenemos capacidad de expandirnos a zonas específicas según necesidad del proyecto. Experiencia en obras desde zona centro hasta periferias metropolitanas."
-  - question: "¿Cuánto tiempo toma implementar el servicio desde la contratación?"
-    answer: "Dependiendo del paquete: servicios básicos (1-2 guardias) pueden iniciar en 3-5 días hábiles tras visita a obra para evaluar accesos, materiales y necesidades. Servicios para obras grandes (3+ guardias) requieren 1-2 semanas para selección de personal, capacitación específica y coordinación con residente. En casos urgentes donde obra ya sufrió robo y necesitas protección inmediata, podemos movilizar guardias de emergencia en 24-48 horas con esquema temporal mientras completamos proceso de asignación definitiva. Incluimos visita sin costo a tu obra para diseñar esquema de vigilancia personalizado: identificamos puntos vulnerables, materiales de alto valor y definimos protocolos específicos antes de iniciar servicio."
+  - question: "¿Cuántos guardias necesita mi obra?"
+    answer: "Depende del tamaño del sitio, el número de accesos, el valor de la maquinaria y materiales en sitio, y el horario de trabajo. Una obra pequeña de 2,000 m² puede requerir 2 guardias en turno nocturno. Un desarrollo mayor con múltiples accesos puede necesitar hasta 6 elementos en turno completo. Hacemos evaluación gratuita en sitio para darte el número correcto."
+  - question: "¿El robo de materiales en obra es tan frecuente en CDMX?"
+    answer: "Muy frecuente. Varilla, cobre, equipo eléctrico, herramienta menor y hasta cemento son los más robados. El robo hormiga interno (por los propios trabajadores) es otra realidad — la presencia de un guardia que registra entradas y salidas actúa como disuasivo antes que como reacción."
+  - question: "¿Cómo controlan el acceso si hay muchos trabajadores distintos cada semana?"
+    answer: "El guardia lleva una bitácora de registro con nombre, empresa subcontratista y hora de entrada/salida. Para obras con rotación alta de personal, podemos integrar un sistema de gafetes o credenciales de acceso temporal. El objetivo es que en cualquier momento el residente sepa exactamente quién está dentro de la obra."
+  - question: "¿Qué pasa si el guardia detecta un robo en proceso?"
+    answer: "El protocolo no es confrontación directa si el guardia está solo y en situación de desventaja. El procedimiento es: retiro del área de riesgo, activación de alerta a central ORIGINS, llamada a policía, documentación de lo observado y notificación inmediata al supervisor. La seguridad del personal siempre es prioritaria."
+  - question: "¿Los guardias también pueden supervisar el acceso de proveedores durante el día?"
+    answer: "Sí. El control de acceso diurno es uno de los servicios más solicitados en obras activas: registro de transportistas, verificación de guías de remisión, control de qué materiales entran y en qué condición. Esto también ayuda a detectar desvíos o diferencias de inventario antes de que el residente las note."
+  - question: "¿Cuánto tarda en iniciar el servicio en mi obra?"
+    answer: "72 horas desde la firma del contrato. Día 1: evaluación del sitio y análisis de riesgos específicos de la obra. Día 2: asignación del personal y definición de protocolos para ese sitio. Día 3: inicio de operaciones."
+  - question: "¿El servicio puede ajustarse según las fases de la obra?"
+    answer: "Sí. Las necesidades de seguridad cambian entre la etapa de demolición, cimentación, estructura y acabados. Ajustamos el número de guardias, el horario y los protocolos según la fase. Muchas constructoras prefieren un contrato flexible que escala con la obra."
 ---
 
-## Seguridad para Construcción en CDMX
-
-### Tu Presupuesto Desaparece de Noche — Protección Especializada para Obras 24/7
-
-Protege tu inversión contra robo de materiales. Guardias certificados SSC que conocen dinámicas de obra y no estorban a tus trabajadores.
-
-### Cada noche sin vigilancia es dinero perdido
-
-En el sector de construcción, la diferencia entre un proyecto rentable y uno que devora presupuesto está en el control de robo de materiales. Cada noche sin vigilancia profesional es una invitación abierta para que tu inversión desaparezca. Varilla, cemento, herramientas eléctricas, cableado de cobre: materiales que cuestan miles de pesos y se evaporan en minutos.
-
-### Guardias que entienden la dinámica de obra
-
-En ORIGINS, entendemos que cada obra de construcción es única. Nuestro servicio de seguridad especializada está diseñado para eliminar pérdidas por robo mientras mantienes el flujo operativo sin fricciones. Guardias certificados SSC que conocen dinámicas de obra, no vigilantes genéricos que estorban a tus trabajadores.
-
-Protección profesional en obras de construcción en CDMX y Estado de México
-
-Registro digital de proveedores y trabajadores con verificación fotográfica
-
-Protección intensiva de materiales de alto valor las 24 horas
-
-Vigilancia constante cada 30 minutos cuando la obra está vacía
-
-Control de salida para prevenir robo hormiga y mermas
-
-Custodia de equipos pesados, herramientas y maquinaria especializada
-
-Guardias especializados en seguridad de obra con capacitación continua
-
-Registro en tiempo real de incidentes con geolocalización y fotos
-
-Trabajo conjunto con tu equipo de obra y contratistas
-
-Protección completa del perímetro de obra con patrullaje sistemático
-
-En el sector de construcción, la diferencia entre un proyecto que termina en tiempo y forma versus uno que explota en sobrecostos por robo está en la vigilancia profesional. No es solo prevenir que se lleven tu varilla de noche: es controlar proveedores, inspeccionar vehículos en salida, custodiar herramientas eléctricas, documentar entregas y mantener flujo operativo sin fricciones.
-
-En ORIGINS, entendemos que cada obra tiene dinámicas únicas. Nuestro servicio de seguridad para construcción certificado SSC está diseñado para eliminar pérdidas mientras tus trabajadores operan sin interferencias. Protección que entiende de obra, no vigilancia genérica que estorba a tu residente.
-
-Más de 15 años protegiendo obras de construcción en CDMX demuestran que la inversión en seguridad profesional previene sobrecostos que devoran utilidades
-
-El 40% del robo en obra no viene de asaltantes externos: viene de proveedores deshonestos que facturan 100 bultos pero entregan 80, o trabajadores que sacan materiales en vehículos autorizados. Nuestros guardias especializados implementan registro fotográfico de entregas, conteo verificado contra remisiones, inspección aleatoria de vehículos en salida y bitácoras digitales que documentan cada movimiento de material. Cuando tu proveedor sabe que hay control real, las mermas misteriosas desaparecen. Complementa con sistemas de control de accesos biométricos.
-
-Varilla corrugada, alambrón, cableado de cobre, herramientas eléctricas, equipo de soldadura: materiales que cuestan miles de pesos y desaparecen en minutos si no hay vigilancia nocturna profesional. Implementamos custodia diferenciada según valor: materiales premium en áreas con iluminación, patrullaje cada 30 minutos en zonas de almacenamiento, alarmas perimetrales en bodegas temporales y coordinación con tu almacenista para inventarios diarios. Un solo robo de cableado de cobre puede costar más que 6 meses de servicio de seguridad.
-
-De 6pm a 6am, cuando tu obra está deshabitada, es el momento de mayor vulnerabilidad. Ladrones saben que trabajadores ya no están, residentes se fueron a casa y materiales quedan expuestos. Nuestros guardias certificados ejecutan patrullaje sistemático cada 30 minutos con registro GPS, verificación de cerraduras y candados, inspección de perímetro para detectar intentos de ingreso, iluminación de áreas críticas con lámparas portátiles y comunicación inmediata ante cualquier anomalía. La presencia visible disuade a bandas organizadas que buscan obras sin vigilancia. Fortalece con patrullaje vehicular en obras grandes.
-
-El robo hormiga —pequeñas cantidades que acumulan grandes pérdidas— ocurre en vehículos que salen diariamente cargando "solo unas cositas". Implementamos inspección aleatoria de cajuelas y cajas de pick-ups, verificación contra órdenes de salida autorizadas, registro fotográfico de vehículos cargados y bitácora digital de todos los materiales que salen. Trabajadores honestos no se molestan porque entienden que protege a todos; deshonestos desisten porque saben que hay control real. Una inspección que detecta tubería PVC no autorizada paga el mes completo de servicio.
-
-Los riesgos cambian radicalmente según la etapa de tu obra. Durante cimentación y obra negra, custodiamos maquinaria pesada y acero de refuerzo. En instalaciones, protegemos tubería, cableado y equipo eléctrico especializado. Durante acabados, vigilamos materiales premium como pisos importados, cancelería de aluminio y herrajes. Nuestro servicio se adapta dinámicamente: incrementamos guardias cuando llega material de alto valor, intensificamos patrullaje en zonas específicas según avance de obra y coordinamos con tu residente para ajustar protocolos según necesidades cambiantes del proyecto.
-
-Remodelación de 200m² hasta proyecto corporativo de 20,000m²: esquemas diseñados según escala. Remodelaciones necesitan 1 guardia nocturno; obras medianas requieren 2-3 guardias con relevos 12x12; proyectos grandes demandan equipos de 4+ guardias con supervisor dedicado. Pagos flexibles mensuales sin contratos anuales atados. Incrementas o reduces personal según avance: si terminaste fase de cimentación y bajó inventario de acero, reducimos guardias; si llega cargamento de cancelería, reforzamos temporalmente. Flexibilidad operativa que empresas constructoras necesitan versus proveedores rígidos. Considera también seguridad para condominios si tu proyecto es residencial.
-
-Seguridad efectiva no estorba flujo operativo: fortalece sin fricción. Nuestros guardias coordinan con residentes para entender horarios de entregas, reciben instrucciones sobre contratistas autorizados, comunican incidentes vía WhatsApp o radio y documentan todo en bitácoras que tu residente consulta en tiempo real desde smartphone. Si llega proveedor no programado, guardia verifica con residente antes de permitir acceso. Si detecta situación irregular, residente recibe foto instantánea. Transparencia total que genera confianza versus vigilancia que opera sin comunicación.
-
-Revolvedoras, mezcladoras, andamios metálicos, compresores, generadores eléctricos, martillos neumáticos: equipos que cuestan decenas de miles de pesos y son objetivo prioritario de bandas especializadas. Implementamos custodia nocturna con verificación periódica, registro fotográfico diario del estado de equipos, alarmas portátiles en maquinaria de mayor valor, coordinación con encargado de herramienta para inventarios y documentación de cualquier movimiento no autorizado. Un robo de revolvedora industrial cuesta más que un año completo de seguridad profesional.
-
-Cuando ocurre robo, disputa con proveedor o accidente en obra, documentación profesional protege legalmente a tu empresa constructora. Nuestras bitácoras digitales incluyen registro con fecha, hora y GPS, fotografías de evidencia con timestamp, descripción detallada de incidentes, identificación de personas involucradas y firmas digitales que resisten auditorías. ¿Proveedor reclama que entregó 100 bultos pero solo recibiste 80? Tienes fotos con fecha que documentan descarga real. ¿Trabajador alega que le robaron herramienta que él mismo sacó? GPS muestra movimientos del guardia que documentó salida. Protección legal que justifica inversión. Refuerza con cámaras CCTV para evidencia grabada.
-
-A diferencia de vigilancia genérica, nuestros guardias reciben capacitación específica en seguridad de construcción: reconocen materiales de alto valor versus insumos básicos, entienden diferencia entre proveedor legítimo y persona sospechosa merodeando, conocen horarios típicos de entregas versus movimientos irregulares, identifican intentos de robo hormiga camuflados como "me llevo unas cosas para otra obra" y coordinan sin estorbar flujo de trabajadores, proveedores y contratistas. Personal que suma a tu operación, no vigilancia que genera fricciones con maestros de obra que tienen prisa.
-
-Soluciones para Cada Escala de Obra: Esquemas de seguridad profesional adaptados a diferentes tamaños de proyectos de construcción en CDMX
-
-Todo paquete de seguridad para construcción ORIGINS incluye estos estándares de calidad
-
-Credencial vigente de Secretaría de Seguridad Ciudadana obligatoria en CDMX
-
-Entrenamiento especializado en dinámicas de construcción, materiales y protocolos
-
-Sistema de registro con geolocalización y fotografías accesible desde smartphone
-
-Registro fotográfico de entregas, verificación de remisiones y salidas
-
-Verificación aleatoria para prevenir robo hormiga y mermas no autorizadas
-
-Rondines cada 30 minutos con verificación GPS documentada
-
-Comunicación directa vía WhatsApp/radio para instrucciones y reportes inmediatos
-
-Presentación impecable con chaleco reflejante, radio y linterna de alto poder
-
-Cobertura legal incluida que protege tu obra ante contingencias
-
-Visitas de supervisores cada semana con auditorías de calidad documentadas
-
-Complete el formulario y reciba propuesta personalizada en menos de 24 horas con esquema de vigilancia adaptado a su proyecto
-
-Respuesta en menos de 24 horas · Personal Certificado SSC · Cobertura en CDMX y Estado de México
-
-Más de 15 años protegiendo obras de construcción en toda la Ciudad de México y Estado de México
-
-Todos nuestros guardias cuentan con certificación vigente de la Secretaría de Seguridad Ciudadana, requisito legal obligatorio en CDMX. Pero no nos detenemos ahí: cada elemento recibe capacitación especializada en dinámicas de obra, reconocimiento de materiales de alto valor, protocolos de control de proveedores, inspección de vehículos y coordinación con residentes y maestros de obra.
-
-Realizamos exámenes toxicológicos trimestrales y evaluaciones de confiabilidad para garantizar que personal que custodia tu inversión millonaria sea honesto y confiable.
-
-Desde remodelaciones residenciales hasta proyectos corporativos de 20,000m², hemos protegido todo tipo de construcción. Entendemos diferencias operativas: remodelación necesita discreción con vecinos, obra residencial requiere control de materiales premium, proyectos industriales demandan custodia de maquinaria pesada y torres corporativas necesitan coordinación con múltiples contratistas simultáneos.
-
-Nuestro récord operativo es impecable: cero obras con robos masivos bajo nuestra vigilancia, 95% de retención de clientes constructores año con año, y múltiples proyectos donde el mismo cliente nos contrata para sus siguientes obras por resultados comprobados.
-
-Implementamos sistema de registro digital con geolocalización, fotografías con timestamp, descripción detallada de incidentes y firmas digitales que resisten auditorías. ¿Proveedor reclama que entregó materiales que no llegaron? Tienes fotos con fecha exacta. ¿Trabajador alega robo de herramienta? GPS documenta patrullaje del guardia que registró movimiento.
-
-Tu residente de obra accede a bitácoras desde smartphone en tiempo real: ve entregas documentadas, inspecciones realizadas, incidentes reportados y movimientos del personal de seguridad. Transparencia total que genera confianza y protege legalmente ante disputas.
-
-A diferencia de proveedores que imponen contratos anuales rígidos, ofrecemos esquemas mensuales adaptables. ¿Obra avanzó y necesitas reducir guardias? Lo ajustamos sin penalizaciones. ¿Llegó cargamento premium y requieres refuerzo temporal? Movilizamos personal adicional en 48 horas. ¿Proyecto se retrasó y necesitas extender servicio? Renovamos mes a mes sin burocracia.
-
-Entendemos que construcción tiene imprevistos: retrasos de proveedores, cambios de proyecto, ajustes de presupuesto. Nuestro modelo flexible te permite adaptar seguridad a realidad operativa sin ataduras contractuales que generan sobrecostos innecesarios.
-
-Seguridad efectiva fortalece flujo operativo sin generar fricciones. Nuestros guardias coordinan con tu residente de obra para entender horarios de entregas, reciben instrucciones sobre contratistas autorizados, comunican incidentes vía WhatsApp inmediatamente y documentan todo sin estorbar a trabajadores que tienen prisa por avanzar.
-
-Si llega proveedor no programado, guardia verifica con residente antes de permitir acceso. Si detecta situación irregular, residente recibe foto instantánea para decidir acción. Trabajo en equipo que potencia seguridad versus vigilancia aislada que opera sin comunicación con dirección de obra.
-
-Un solo robo de cableado de cobre cuesta más que 6 meses de seguridad profesional. Un cargamento de varilla desviado por proveedor deshonesto devora utilidades completas del proyecto. Maquinaria pesada robada paraliza obra generando penalizaciones por retraso. La inversión en vigilancia especializada se paga en el primer incidente que previene.
-
-Constructoras que operan sin seguridad profesional asumen pérdidas de 3-8% de presupuesto total por robo, mermas y desvíos. Nuestros clientes reportan reducción de 85% en pérdidas no autorizadas tras implementar nuestro servicio. El ROI es inmediato y medible en cada mes sin sobrecostos por materiales desaparecidos.
-
-Cada industria tiene riesgos únicos que te quitan el sueño. Entendemos tus preocupaciones específicas y diseñamos soluciones que te permiten concentrarte en hacer crecer tu negocio sin la ansiedad constante por la seguridad.
-
-¿Vives en un condominio y te preocupa la seguridad de tus hijos jugando en las áreas comunes? Nuestra seguridad para condominios crea ese ambiente de tranquilidad donde tus vecinos se saludan sin miedo y los niños juegan protegidos. ¿Tienes una obra en construcción y despertaste preocupado por el robo de materiales? Nuestros guardias especializados en construcción protegen tu inversión día y noche, para que tu proyecto avance sin pérdidas que afecten tu presupuesto y reputación.
-
-¿Organizas un evento y temes que un incidente arruine años de reputación? Con nuestra seguridad para eventos, tus invitados disfrutan mientras nosotros nos preocupamos por su seguridad. ¿Administras un hospital donde cada segundo cuenta y las emociones están a flor de piel? Nuestra seguridad hospitalaria maneja situaciones delicadas con empatía, protegiendo a pacientes vulnerables y personal médico sin interferir con la atención de emergencia. Conocemos los riesgos específicos de tu sector porque los hemos enfrentado durante más de 15 años.
-
-Constructoras profesionales en CDMX y Estado de México ya entendieron que vigilancia especializada previene pérdidas que devoran utilidades. No permitas que una noche sin protección cueste más que meses de seguridad profesional. Invierte en guardias certificados que SÍ entienden dinámicas de construcción.
-
-100% de guardias con certificación vigente especializada en obra
-
-Registro en tiempo real accesible desde smartphone
-
-Prevención que se paga en el primer robo que evita
-
+<div class="prose-intro">
+  <p><strong>ORIGINS Private Security</strong> protege obras en construcción y desarrollos inmobiliarios en CDMX con <a href="/servicios/guardias-intramuros">guardias intramuros</a> certificados SSC, control de accesos documentado y vigilancia nocturna verificable. <strong>Desde la demolición hasta la entrega de llaves</strong> — con protocolos adaptados a cada fase de la obra.</p>
+  <div class="prose-highlight">
+    <strong>Un fin de semana sin guardia en obra puede significar la pérdida de cientos de miles de pesos en maquinaria, cobre o materiales.</strong> El robo en construcción tiene dos formas: el asalto externo nocturno y el robo hormiga interno. Los dos se previenen con presencia visible, control de accesos y <a href="/servicios/patrullaje">rondines de patrullaje</a> que el personal sabe que están siendo verificados. En obras con infraestructura eléctrica, complementamos con <a href="/servicios/vigilancia-remota-cctv">vigilancia remota CCTV</a> para cobertura nocturna continua.
+  </div>
+</div>
+
+---
+
+<div class="trust-bar">
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+    <div>
+      <strong>Permiso SSC 0102-15</strong>
+      <span>Vigente y verificable</span>
+    </div>
+  </div>
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    <div>
+      <strong>+15 años</strong>
+      <span>En seguridad para construcción CDMX</span>
+    </div>
+  </div>
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+    <div>
+      <strong>+80 obras protegidas</strong>
+      <span>En CDMX y Zona Metropolitana</span>
+    </div>
+  </div>
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+    <div>
+      <strong>Alta IMSS</strong>
+      <span>Todo el personal con prestaciones</span>
+    </div>
+  </div>
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+    <div>
+      <strong>Póliza RC vigente</strong>
+      <span>Responsabilidad civil amplia</span>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Casos Reales</span>
+  <h2>Lo que Previene una Buena Guardia en Obra</h2>
+  <p class="prose-section-sub">Estos son los escenarios más comunes en construcciones de CDMX. Cada uno tiene un protocolo específico.</p>
+</div>
+
+<div class="scenarios-grid">
+  <div class="scenario-card">
+    <div class="scenario-card__problem">
+      <span class="scenario-card__label scenario-card__label--problem">Problema</span>
+      <p>Obra de desarrollo en Cuajimalpa. El viernes al salir los trabajadores hay 8 rollos de cable de cobre en bodega. El lunes en la mañana hay 2. No hay registros de acceso del fin de semana.</p>
+    </div>
+    <div class="scenario-card__solution">
+      <span class="scenario-card__label scenario-card__label--solution">Solución ORIGINS</span>
+      <p>Guardia nocturno de fin de semana con rondines verificados por puntos de control y bitácora digital de cierre de bodegas cada turno. Si alguien accede fuera de horario, queda registrado.</p>
+    </div>
+  </div>
+  <div class="scenario-card">
+    <div class="scenario-card__problem">
+      <span class="scenario-card__label scenario-card__label--problem">Problema</span>
+      <p>Desarrollo residencial en Tlalpan. Personas ajenas a la obra ingresan por un acceso lateral y se instalan en la planta baja por la noche. El residente se entera días después.</p>
+    </div>
+    <div class="scenario-card__solution">
+      <span class="scenario-card__label scenario-card__label--solution">Solución ORIGINS</span>
+      <p>Patrullaje perimetral nocturno con revisión de todos los accesos potenciales. Cierre verificado del sitio al final de cada jornada con fotografía en bitácora digital.</p>
+    </div>
+  </div>
+  <div class="scenario-card">
+    <div class="scenario-card__problem">
+      <span class="scenario-card__label scenario-card__label--problem">Problema</span>
+      <p>Constructora en Azcapotzalco nota diferencias entre el inventario de materiales entregados y los avances de obra. Hay desviíos, pero sin control de entradas no hay forma de rastrearlos.</p>
+    </div>
+    <div class="scenario-card__solution">
+      <span class="scenario-card__label scenario-card__label--solution">Solución ORIGINS</span>
+      <p>Control de acceso de transportistas con registro de guías de remisión y cantidad de material entregado. Bitácora disponible para el residente con historial completo de ingresos por fecha.</p>
+    </div>
+  </div>
+  <div class="scenario-card">
+    <div class="scenario-card__problem">
+      <span class="scenario-card__label scenario-card__label--problem">Problema</span>
+      <p>Obra de remodelación en Polanco con maquinaria de alquiler estacionada en la vía pública fuera de horario. En dos semanas, tres piezas de equipo menor desaparecen durante la noche.</p>
+    </div>
+    <div class="scenario-card__solution">
+      <span class="scenario-card__label scenario-card__label--solution">Solución ORIGINS</span>
+      <p>Guardia nocturno con cobertura de perímetro incluyendo el área pública frente a la obra. Registro fotográfico del equipo al cierre de jornada y verificación al inicio del turno siguiente.</p>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-block">
+  <div class="prose-section-block__header">
+    <span class="prose-section-block__num">01</span>
+    <div>
+      <span class="prose-section-block__label">Control de Accesos</span>
+      <h3 class="prose-section-block__title">Quién Entra, Cuándo y con Qué — Documentado</h3>
+    </div>
+  </div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>El control de accesos en una obra activa es complejo: obreros de múltiples subcontratistas, transportistas de materiales, supervisores, arquitectos y visitas del cliente. El guardia ORIGINS <strong>registra cada movimiento en bitácora digital</strong> — disponible para el residente en cualquier momento.</p>
+      <ul>
+        <li><strong>Registro de personal</strong> — nombre, empresa subcontratista, hora de entrada y salida por cada trabajador</li>
+        <li><strong>Control de transportistas</strong> — verificación de guías de remisión, tipo y cantidad de material entregado</li>
+        <li><strong>Acceso de visitas y supervisores</strong> — identificación verificada y registro de motivo de visita</li>
+        <li><strong>Credenciales temporales</strong> — sistema de gafetes para obras con rotación alta de personal</li>
+        <li><strong>Bitácora de cierre diario</strong> — registro fotográfico del estado de bodegas y equipo al final de cada jornada</li>
+        <li>Reportes de acceso disponibles para el residente, el cliente o la constructora vía portal digital</li>
+      </ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/img-construccion/control-accesos-personal-obra-construccion.avif" alt="Control de accesos de personal en obra de construcción CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/img-construccion/control-acceso-vehicular-construccion.avif" alt="Control de acceso vehicular en obra de construcción CDMX" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-block">
+  <div class="prose-section-block__header">
+    <span class="prose-section-block__num">02</span>
+    <div>
+      <span class="prose-section-block__label">Vigilancia Nocturna</span>
+      <h3 class="prose-section-block__title">Rondines Verificados — No Solo "Estar en la Caseta"</h3>
+    </div>
+  </div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>La mayoría de robos en obra ocurren de noche. Un guardia que solo está en la caseta no disuade — el ladrón lo sabe. ORIGINS implementa <strong>rondines perimetrales con puntos de control electrónicos</strong> que registran cada recorrido con hora y ubicación.</p>
+      <ul>
+        <li><strong>Puntos de control en perímetro</strong> — verifican que el guardia recorra las zonas críticas de la obra</li>
+        <li><strong>Frecuencia de rondines</strong> — cada 30-45 minutos en zonas de alto riesgo (bodegas, maquinaria)</li>
+        <li><strong>Registro fotográfico nocturno</strong> — estado de bodegas, candados y equipo verificado con foto y hora</li>
+        <li><strong>Bitácora de eventos nocturnos</strong> — cualquier anomalía registrada inmediatamente con descripción y ubicación</li>
+        <li><strong>Comunicación con central</strong> — check-in periódico durante toda la noche; si no hay señal, central activa verificación</li>
+        <li>Reporte de turno nocturno entregado al residente antes de las 7 AM del día siguiente</li>
+      </ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/img-construccion/seguridad-nocturna-obras-construccion.avif" alt="Vigilancia nocturna de obras en construcción CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/img-construccion/rondines-seguridad-obras-construccion.avif" alt="Rondines de seguridad verificados en obras de construcción CDMX" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-block">
+  <div class="prose-section-block__header">
+    <span class="prose-section-block__num">03</span>
+    <div>
+      <span class="prose-section-block__label">Protección de Activos</span>
+      <h3 class="prose-section-block__title">Maquinaria, Materiales y Equipo — Protegidos por Fase</h3>
+    </div>
+  </div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>El valor de los activos en una obra varía según la fase. ORIGINS adapta el nivel de vigilancia al <strong>inventario real en sitio</strong> — más intensiva cuando hay cobre, maquinaria o materiales de alto valor; más flexible en etapas de obra terminada.</p>
+      <ul>
+        <li><strong>Etapa de demolición/cimentación</strong> — control de maquinaria pesada, equipo de excavación y herramienta mayor</li>
+        <li><strong>Etapa de estructura</strong> — vigilancia de varilla, cobre y materiales apilados en área de almacenamiento</li>
+        <li><strong>Etapa de instalaciones</strong> — protección de equipo eléctrico, hidráulico y de climatización antes de instalarse</li>
+        <li><strong>Etapa de acabados</strong> — control de acceso diferenciado, supervisión de proveedores especializados</li>
+        <li><strong>Inventario mensual</strong> — revisión documentada de activos en sitio con diferencias detectadas y reportadas</li>
+        <li>Coordinación con el residente de obra para identificar los momentos críticos de cada fase</li>
+      </ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/img-construccion/proteccion-maquinaria-equipo-construccion.avif" alt="Protección de maquinaria y equipo en obras de construcción CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/img-construccion/custodia-materiales-construccion.avif" alt="Custodia de materiales en obra de construcción CDMX ORIGINS" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Para Quién es</span>
+  <h2>El Tipo de Obra Determina el Servicio</h2>
+  <p class="prose-section-sub">Desde una remodelación de 300 m² hasta un desarrollo de 200 departamentos — los riesgos son distintos y la solución también.</p>
+</div>
+
+<div class="profile-grid">
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Desarrollo residencial</strong>
+      <p class="profile-card__need">Torres de departamentos en CDMX — fase de estructura con cobre y materiales en sitio</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Guardia 24/7</span>
+        <span class="profile-tag">Control de accesos</span>
+        <span class="profile-tag">Rondines verificados</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Edificio corporativo en construcción</strong>
+      <p class="profile-card__need">Polanco, Santa Fe, Insurgentes — múltiples subcontratistas y equipo de alto valor</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Control de subcontratistas</span>
+        <span class="profile-tag">Bitácora digital</span>
+        <span class="profile-tag">Supervisión semanal</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Nave industrial o bodega</strong>
+      <p class="profile-card__need">Naucalpan, Vallejo, Tlalnepantla — maquinaria pesada y perímetro extenso</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Perfil industrial</span>
+        <span class="profile-tag">Vigilancia perimetral</span>
+        <span class="profile-tag">Control vehicular</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Remodelación de local comercial</strong>
+      <p class="profile-card__need">Obra en espacio con acceso comercial — equipo de instalación y materiales de acabados</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Guardia diurno</span>
+        <span class="profile-tag">Control proveedores</span>
+        <span class="profile-tag">Cierre nocturno</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card profile-card--highlight">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Desarrollo de uso mixto</strong>
+      <p class="profile-card__need">Proyectos con componente comercial y residencial simultáneos — Cuajimalpa, Xochimilco, Benito Juárez — con fases activas y zonas ya entregadas</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Seguridad por fases</span>
+        <span class="profile-tag">Escalonado por zona</span>
+        <span class="profile-tag">Integración con CCTV</span>
+        <span class="profile-tag">Contrato flexible</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Proceso</span>
+  <h2>Activo en 72 Horas — Desde la Evaluación hasta el Primer Turno</h2>
+  <p class="prose-section-sub">Sin burocracia innecesaria. Desde que nos llamas hasta que el guardia está en tu obra.</p>
+</div>
+
+<div class="prose-steps">
+  <div class="prose-step">
+    <span class="prose-step__num">01</span>
+    <div class="prose-step__content">
+      <strong>Día 1 — Evaluación del sitio (2-3 horas)</strong>
+      <p>Un supervisor visita la obra, evalúa el perímetro, los accesos, las zonas de almacenamiento y el inventario de activos en sitio. Identifica los puntos de mayor riesgo según la fase actual de la obra. Evaluación gratuita y sin compromiso.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">02</span>
+    <div class="prose-step__content">
+      <strong>Día 1 — Propuesta específica para la obra</strong>
+      <p>Número de guardias, turnos, posicionamiento en sitio, protocolos de control de accesos y supervisión. Cotización detallada con desglose por fase de obra si aplica. Sin paquetes genéricos que no se ajustan a tu situación.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">03</span>
+    <div class="prose-step__content">
+      <strong>Día 2 — Asignación y capacitación del personal</strong>
+      <p>Seleccionamos guardias con perfil industrial para tu tipo de obra. Los capacitamos en los protocolos específicos del sitio: zonas de acceso restringido, equipo a proteger, procedimientos ante robo o intrusión y forma de contactar al residente.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">04</span>
+    <div class="prose-step__content">
+      <strong>Día 3 — Inicio con supervisión intensiva los primeros 7 días</strong>
+      <p>El primer turno arranca con el supervisor de zona presente. Los primeros 7 días tienen supervisión diaria para afinar protocolos, identificar puntos ciegos y garantizar que el equipo ya conoce la obra antes de pasar a supervisión semanal.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">05</span>
+    <div class="prose-step__content">
+      <strong>Mensual — Ajuste por fase de obra sin costo adicional</strong>
+      <p>Cuando la obra avanza a una nueva fase, ajustamos el servicio: más o menos guardias, diferentes zonas de cobertura, cambio de protocolos. El objetivo es que el servicio siempre esté dimensionado al riesgo real, no a un contrato fijo que no cambia aunque la obra sí lo haga.</p>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Galería</span>
+  <h2>Seguridad ORIGINS en Obras de Construcción</h2>
+  <p class="prose-section-sub">Guardias certificados, control de accesos documentado y vigilancia nocturna en obras de CDMX y Zona Metropolitana.</p>
+</div>
+
+<div class="prose-gallery">
+  <figure>
+    <img src="/img/img-construccion/guardias-seguridad-certificados-construccion.avif" alt="Guardias de seguridad certificados SSC para obras de construcción CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Personal certificado SSC para obras — perfil industrial adaptado a cada fase de construcción</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-construccion/prevencion-robo-construccion.avif" alt="Prevención de robo en obras de construcción en CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Presencia visible en accesos y zonas de almacenamiento — el mejor disuasivo contra el robo hormiga</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-construccion/monitoreo-cctv-obras-construccion.avif" alt="Monitoreo CCTV integrado en obras de construcción CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Integración con sistemas CCTV de la obra — el guardia como complemento activo de las cámaras</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-construccion/patrullaje-seguridad-sitios-construccion.avif" alt="Patrullaje de seguridad en sitios de construcción CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Patrullaje perimetral nocturno con puntos de control — evidencia verificable de cada rondín</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-construccion/bitacora-digital-seguridad-construccion.avif" alt="Bitácora digital de seguridad para obras en construcción CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Bitácora digital de accesos y eventos — disponible para el residente de obra en tiempo real</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-construccion/seguridad-perimetral-construccion-cdmx.avif" alt="Seguridad perimetral para obras de construcción en CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Vigilancia perimetral 24/7 en desarrollos inmobiliarios de CDMX — sin vacíos de cobertura</figcaption>
+  </figure>
+</div>

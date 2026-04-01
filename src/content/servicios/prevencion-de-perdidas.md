@@ -1,157 +1,537 @@
 ---
-title: "Prevención de Pérdidas para Empresas CDMX | Seguridad Privada Retail"
-description: "Prevención de pérdidas para retail y empresas en CDMX. Personal certificado SSC, control de mermas. Reduce pérdidas 70%. ☎ 55 3025 5580"
+title: "Prevención de Pérdidas CDMX | Control de Mermas — ORIGINS"
+description: "Prevención de pérdidas para empresas en CDMX. Control de mermas, auditoría de inventarios, protocolos anti-robo interno. Reducción medible de pérdidas."
 category: service
 publishDate: 2024-01-01
+updatedDate: 2026-04-01
 keywords:
-  - seguridad
-  - prevencion de perdidas
+  - prevencion de perdidas retail cdmx
+  - control merma tiendas cdmx
+  - robo interno empleados cdmx
+  - personal encubierto retail cdmx
+  - auditoria mermas inventario cdmx
+  - seguridad tiendas comercios cdmx
+  - control mermas empresas cdmx
+  - prevencion robo interno corporativo
+  - auditoria inventarios seguridad cdmx
+  - reduccion perdidas almacenes logistica
+relatedServices:
+  - vigilancia-remota-cctv
+  - control-de-accesos
+  - guardias-intramuros
+  - consultoria-seguridad
+  - monitoreo-alarmas
+targetLocations:
+  - Ciudad de México
+  - Estado de México
+  - Naucalpan
+  - Tlalnepantla
+serviceFeatures:
+  - title: "Personal Encubierto Certificado SSC"
+    description: "Agentes que operan como clientes o empleados dentro de tu negocio. Detectan robo hormiga, fraudes en caja y colusiones internas sin levantar sospechas."
+    icon: "eye"
+  - title: "Detección de Robo Interno"
+    description: "El 70% de las pérdidas en retail vienen de empleados. Identificamos patrones, detectamos a los responsables y documentamos la evidencia para el proceso legal."
+    icon: "search"
+  - title: "Auditoría de Puntos de Venta"
+    description: "Revisión de transacciones en caja: descuentos no autorizados, cancelaciones sospechosas, diferencias entre ventas registradas y efectivo real."
+    icon: "bar-chart"
+  - title: "Control de Inventario y Faltantes"
+    description: "Análisis de patrones de merma por zona, turno y empleado. Identificamos exactamente dónde desaparece el producto antes de que llegue al cliente."
+    icon: "package"
+  - title: "CCTV Analítico para Retail"
+    description: "Cámaras en posiciones estratégicas — cajas, bodegas, zonas de alta rotación — con monitoreo activo que detecta comportamientos anómalos en tiempo real."
+    icon: "camera"
+  - title: "Reporte Ejecutivo con Evidencia"
+    description: "Documentación completa de cada hallazgo: video, fotografía, timestamp y descripción del evento. Válida para proceso disciplinario o denuncia ante autoridades."
+    icon: "file-text"
 faqs:
-  - question: "¿Cuál es la diferencia entre guardias intramuros y guardias perimetrales?"
-    answer: "Los guardias intramuros se posicionan dentro de las instalaciones, típicamente en recepciones, vestíbulos y áreas de acceso principal, enfocándose en control de visitantes, atención al cliente y coordinación con personal interno. Los guardias perimetrales vigilan accesos externos, estacionamientos y perímetros. El servicio intramuros requiere mayor capacitación en atención ejecutiva, manejo de sistemas digitales de registro, protocolos corporativos y representación de imagen empresarial. Son ideales para edificios corporativos, hospitales, hoteles y centros donde la primera impresión y profesionalismo son críticos."
-  - question: "¿Los guardias pueden personalizar uniformes con el logo de mi empresa?"
-    answer: "Sí, ofrecemos uniformes corporativos personalizados que incluyen logotipo, colores corporativos y estilo específico de su empresa. Esto permite integración perfecta a su imagen corporativa, proyectando profesionalismo y cohesión visual. Los uniformes personalizados son especialmente importantes en edificios clase A, recepciones de hospitales privados y lobbies de hoteles boutique donde la presentación es fundamental. El servicio de personalización puede incluirse en paquetes integrales según necesidades del cliente."
-  - question: "¿Qué capacitación adicional reciben comparado con guardias tradicionales?"
-    answer: "Más allá de certificación SSC estándar, nuestros guardias intramuros reciben capacitación especializada en: atención al cliente ejecutivo, manejo de situaciones conflictivas con tacto diplomático, protocolos VIP, operación de sistemas digitales (control de accesos, biométricos, RFID), emisión de credenciales temporales, registro fotográfico de visitantes, coordinación con personal administrativo, gestión de entregas, protocolos de emergencia médica, primeros auxilios certificados y comunicación corporativa efectiva. También reciben inducción específica en procedimientos y cultura de su empresa antes de iniciar servicio."
-  - question: "¿Pueden operar sistemas de control de accesos biométricos o digitales?"
-    answer: "Absolutamente. Nuestros guardias están capacitados para operar lectores biométricos (huella digital, reconocimiento facial), sistemas de credenciales RFID, software de registro digital, torniquetes electrónicos, cámaras CCTV con monitoreo en tiempo real, alarmas de emergencia y plataformas de gestión integradas. Si su edificio cuenta con sistemas propietarios específicos, proporcionamos capacitación personalizada pre-servicio para dominar completamente la tecnología antes de operar. Esto asegura eficiencia sin curva de aprendizaje que afecte seguridad."
-  - question: "¿Cómo garantizan profesionalismo y cortesía constante?"
-    answer: "Implementamos supervisión continua con visitas semanales que evalúan presentación personal, trato a visitantes, cumplimiento de protocolos y actitud profesional. Utilizamos evaluaciones trimestrales basadas en retroalimentación del cliente, reportes de incidencias y auditorías de calidad. Realizamos capacitación continua en atención al cliente, manejo de estrés y comunicación efectiva. Los guardias reciben briefing detallado de expectativas específicas antes de asignación. Si un guardia no cumple estándares, realizamos reemplazo sin costo adicional para asegurar el nivel profesional que su empresa merece."
-  - question: "¿Qué sucede si necesito cambiar horarios o cantidad de personal?"
-    answer: "Ofrecemos flexibilidad operativa para adaptarnos a cambios en sus necesidades. Si requiere aumentar guardias temporalmente (eventos especiales, auditorías, visitas corporativas), coordinamos personal adicional con 48 horas de aviso. Si necesita ajustar horarios o reducir personal, lo gestionamos con 1 semana de notificación sin penalizaciones. Contratos flexibles mensuales, trimestrales o anuales según prefiera. Entendemos que operaciones corporativas tienen variaciones y nos adaptamos para ser su socio estratégico, no un proveedor rígido."
-  - question: "¿Incluyen póliza de responsabilidad civil que proteja a mi empresa?"
-    answer: "Sí, todos nuestros servicios incluyen póliza de responsabilidad civil vigente que cubre contingencias legales relacionadas con actuación de nuestro personal. Si ocurre algún incidente (accidente, daño a propiedad, situación legal) derivado de acciones u omisiones de nuestros guardias, la póliza protege a su empresa. Adicionalmente, cumplimos con todas las obligaciones laborales, de seguridad social y fiscales, por lo que su empresa no enfrenta riesgos de demandas laborales por personal subcontratado. Operamos con total formalidad legal respaldada por permiso SSC 0102-15."
-  - question: "¿En qué zonas de CDMX y Estado de México operan?"
-    answer: "Tenemos cobertura completa en toda la Ciudad de México y municipios estratégicos del Estado de México. Zonas principales: Polanco, Santa Fe, Reforma, Interlomas, Bosques de las Lomas, Lomas de Chapultepec, Benito Juárez, Coyoacán, Cuauhtémoc, Miguel Hidalgo, Álvaro Obregón, Cuajimalpa. En Estado de México: Naucalpan, Huixquilucan, Tlalnepantla, Atizapán, Ecatepec, Nezahualcóyotl. Si su ubicación no aparece listada, contáctenos para verificar cobertura: tenemos capacidad de expandirnos a ubicaciones específicas según necesidad del cliente."
-  - question: "¿Cuánto tiempo toma implementar el servicio desde la contratación?"
-    answer: "Dependiendo del paquete y complejidad: servicios básicos (1-2 guardias) pueden iniciar en 3-5 días hábiles. Servicios empresariales (3-6 guardias) requieren 1-2 semanas para selección, capacitación pre-servicio y coordinación logística. Paquetes enterprise personalizados con uniformes corporativos y capacitación especializada necesitan 2-4 semanas. En casos urgentes, podemos movilizar personal de emergencia en 24-48 horas con esquema temporal mientras completamos proceso de selección definitivo. Nuestro objetivo es balance entre rapidez operativa y calidad de implementación."
+  - question: "¿Cómo sé si tengo un problema de robo interno en mi tienda?"
+    answer: "Las señales más comunes: merma que no coincide con los registros de inventario, diferencias frecuentes en los cortes de caja, empleados que evitan áreas de cámara, productos que desaparecen de bodega entre entregas, o simplemente márgenes que no cuadran con tus ventas. Si alguno de estos puntos describe tu operación, probablemente tienes un problema. La auditoría inicial gratuita te da el diagnóstico concreto."
+  - question: "¿El personal encubierto no va a afectar la operación normal de la tienda?"
+    answer: "No, esa es la razón de ser de la modalidad encubierta. El agente opera como cliente o como empleado temporal sin que nadie — ni los gerentes — sepan su función real. La operación continúa con total normalidad. Cuando hay un hallazgo, lo documentamos primero y solo después actuamos de forma coordinada con la dirección."
+  - question: "¿Qué pasa cuando identificamos a un empleado que está robando?"
+    answer: "Te entregamos la evidencia documentada: video, fotografías, registros de transacciones y descripción detallada de los eventos con timestamp certificado. Tú decides la acción: proceso disciplinario interno, terminación de contrato o denuncia ante el Ministerio Público. Nuestra documentación ha sido aceptada en procedimientos legales como evidencia válida."
+  - question: "¿Cuánto tiempo tarda en verse resultados?"
+    answer: "Los primeros hallazgos suelen aparecer en la primera o segunda semana de operación encubierta. La reducción de merma se vuelve medible en el primer mes de servicio — comparando el índice antes y después de la implementación. En retail con merma alta (3%+), los clientes ven reducción de entre el 40% y el 70% en el primer trimestre."
+  - question: "¿Funciona para empresas fuera del retail? Tenemos una bodega con faltantes"
+    answer: "Sí. Además de retail, trabajamos con bodegas y centros de distribución donde el problema suele ser más complejo: colusiones entre empleados y transportistas, faltantes en recepción de mercancía o robo durante procesos de picking y embalaje. El enfoque cambia pero el principio es el mismo: identificar el patrón, documentar la evidencia y resolver."
+  - question: "¿El servicio incluye la implementación de mejoras o solo el diagnóstico?"
+    answer: "Ambas. Después de identificar los puntos de pérdida hacemos recomendaciones específicas de mejora: reposicionamiento de cámaras, cambios en el proceso de inventario, protocolos de caja, controles de acceso a bodega. Si lo solicitas, supervisamos la implementación. El objetivo no es solo detectar — es que la merma no vuelva a subir después de que el personal encubierto salga."
+  - question: "¿Cuánto cuesta el servicio y cómo se compara con mis pérdidas actuales?"
+    answer: "El costo mensual depende del tamaño de la operación y el nivel de servicio. Para ponerlo en perspectiva: una tienda con ventas de $500,000 mensuales y merma del 3% está perdiendo $15,000 al mes. Nuestro servicio suele costar menos de esa pérdida mensual — y si reduce la merma a 1%, los $10,000 de ahorro mensuales pagan el servicio con excedente. Hacemos el cálculo contigo antes de proponer."
+draft: false
 ---
 
-## Prevención de Pérdidas en CDMX
-
-### Control de Mermas, Robo Hormiga y Pérdidas Operativas — Reduce Tus Pérdidas Hasta 70%
-
-Personal civil encubierto certificado SSC para retail. Detecta robo interno, externo y fraudes antes de que destruyan tus márgenes.
-
-### Identifica exactamente dónde pierdes dinero
-
-La diferencia entre una tienda rentable y una que pierde dinero silenciosamente está en el control de mermas. Cada producto que desaparece sin registro, cada empleado que toma mercancía sin pagarla, cada proveedor que entrega menos de lo facturado destruye tus márgenes. La prevención de pérdidas no es vigilancia: es investigación profesional que identifica exactamente dónde pierdes y quién te está robando.
-
-### El robo hormiga representa el 70% de pérdidas
-
-En ORIGINS, entendemos que el robo hormiga por empleados representa el 70% de las pérdidas en retail. Nuestro servicio de prevención de pérdidas con personal civil encubierto certificado SSC está diseñado para detectar robo interno, robo externo, fraudes en cajas, faltantes de inventario y colusiones con proveedores. Protegemos tu utilidad.
-
-Personal civil encubierto controlando mermas en tiendas, centros comerciales y retail en CDMX y Estado de México
-
-Detección discreta de robo interno
-
-Control de fraudes en puntos de venta
-
-Verificación de faltantes y mermas
-
-Vigilancia de probadores y zonas críticas
-
-Verificación de entregas y facturación
-
-Protección discreta de mercancía premium
-
-Documentación detallada de incidentes
-
-Control de robo externo y hormiga
-
-Protección de medicamentos controlados
-
-La diferencia entre una tienda rentable y una que pierde dinero silenciosamente está en detectar exactamente dónde desaparecen tus productos. Las mermas no son accidentales: son empleados tomando mercancía sin pagar, clientes robando sin que nadie los detenga, proveedores facturando más de lo entregado y cajas registrando menos de lo vendido. La prevención de pérdidas no es vigilancia: es investigación profesional que identifica culpables con evidencia legal.
-
-En ORIGINS, entendemos que cada producto robado destruye tus márgenes y cada empleado ladrón contamina a otros. Nuestro servicio de prevención de pérdidas con personal civil encubierto certificado SSC está diseñado para detectar robo hormiga, fraudes en cajas, faltantes de inventario y coluisiones con proveedores antes de que destruyan tu rentabilidad.
-
-Más de 15 años detectando robo hormiga, fraudes y mermas en tiendas demuestran que el personal civil encubierto profesional protege márgenes de ganancia mejor que guardias uniformados
-
-Los guardias uniformados disuaden robo externo obvio, pero el 70% de las mermas en retail son robo interno de empleados. Nuestro personal civil encubierto certificado SSC se integra como cliente o empleado temporal, detectando patrones de robo hormiga que guardias visibles nunca descubrirían: empleados que toman productos sin pagar, cajeros que anulan ventas para quedarse con efectivo, almacenistas que sacan mercancía por puertas traseras, y gerentes que coluden con proveedores. Operamos discreción total sin alertar a los ladrones que están siendo investigados.
-
-Nuestros clientes reportan reducción promedio del 65-70% en mermas durante los primeros 3 meses de servicio. Una tienda departamental con 2% de merma anual sobre 50 millones de pesos en ventas pierde 1 millón al año. Nuestro servicio cuesta fracción de eso y recupera entre 650,000 - 700,000 pesos anuales. El ROI típico es 7:1 porque cada empleado ladrón detectado y removido evita pérdidas continuas durante años. Complementa con monitoreo CCTV profesional para evidencia documentada.
-
-Despedir empleados por robo sin evidencia sólida genera demandas laborales costosas. Nuestro personal documenta cada incidente con fecha, hora, testigos, videos CCTV correlacionados, y narrativas detalladas que resisten escrutinio legal. Proporcionamos paquete completo de evidencia para recursos humanos: reportes escritos firmados, declaraciones de testigos, fotografías georreferenciadas y videos editados que muestran el robo claramente. Las empresas de retail usan nuestra documentación para despidos justificados y denuncias penales que prosperan en ministerios públicos.
-
-Cajeros cometen fraudes que generan pérdidas mayores que shoplifting de clientes: anulaciones falsas para quedarse con efectivo, devoluciones inventadas, descuentos no autorizados a amigos, y ventas no registradas. Nuestro personal encubierto actúa como cliente realizando compras de prueba, verificando que todo se registre correctamente, detectando descuentos sospechosos y correlacionando video CCTV con transacciones de punto de venta. Un solo cajero ladrón detectado y removido ahorra entre 5,000 - 15,000 pesos mensuales en fraudes continuos.
-
-Departamentos de electrónica, joyería, cosméticos premium y ropa de diseñador donde productos pequeños con alto margen son blanco perfecto para robo hormiga. Personal encubierto monitorea probadores donde clientes quitan etiquetas de seguridad, supervisa cajas en departamentos de alto valor, verifica que todo lo que entra a probadores salga registrado, y detecta empleados que facilitan robos de amigos fingiendo no ver. Reducción típica del 60% en mermas de departamentos de alto riesgo.
-
-Establecimientos donde alto volumen de clientes permite robo constante de productos de canasta básica, bebidas alcohólicas y productos de belleza. Personal encubierto detecta clientes que salen sin pagar productos ocultos, empleados de reposición que toman mercancía, cajeros que no registran productos de amigos, y proveedores que entregan menos de lo facturado. Patrullaje discreto en pasillos críticos, monitoreo de salidas sin registro y verificación de entregas de proveedores genera evidencia para acciones correctivas.
-
-Negocios donde medicamentos controlados, productos dermatológicos premium y suplementos importados generan tentación alta para robo interno. Personal encubierto verifica control de recetas, detecta empleados que toman medicamentos sin pagar, supervisa inventarios de sustancias controladas y documenta faltantes inexplicables. Especialmente crítico para farmacias que enfrentan auditorías COFEPRIS: nuestra documentación demuestra controles internos robustos que previenen sanciones regulatorias.
-
-Establecimientos donde guardias uniformados destruyen la experiencia de compra premium que justifica los altos precios. Personal civil encubierto actúa como cliente sofisticado, protegiendo mercancía de alto valor sin alertar clientela exclusiva. Detecta empleados que roban productos de temporada, clientes que intercambian etiquetas de precios, y robos en grupo coordinados. Mantiene ambiente de lujo sin presencia obvia de seguridad que incomoda compradores premium.
-
-Administradores de plazas donde locatarios exigen reducción de robos o renegocian rentas. Personal encubierto rota entre diferentes tiendas del centro comercial, identificando patrones de robo que afectan múltiples locatarios, detectando bandas organizadas que operan en la plaza, y documentando puntos ciegos de seguridad. Genera reportes consolidados que demuestran valor agregado a locatarios y justifican cuotas de mantenimiento que incluyen seguridad profesional.
-
-Los proveedores deshonestos facturan más de lo entregado, generan pérdidas invisibles que solo aparecen en inventarios. Personal encubierto verifica entregas contra facturas, detecta faltantes sistemáticos, documenta evidencia fotográfica de conteos reales, y identifica coluisiones entre proveedores y personal de almacén. Un solo proveedor deshonesto detectado ahorra miles de pesos mensuales en faltantes continuos. Complementa con guardias en accesos para control de entradas.
-
-Soluciones para Cada Tipo de Retail: Esquemas de prevención de pérdidas adaptados a diferentes tamaños y sectores de tiendas en CDMX
-
-Todo paquete de prevención de pérdidas ORIGINS incluye estos estándares de calidad
-
-Agentes encubiertos con credencial vigente de Secretaría de Seguridad Ciudadana
-
-Evaluaciones psicométricas para trabajo encubierto bajo presión sin alertar sospechosos
-
-Entrenamiento especializado en detección de robo hormiga, fraudes y técnicas encubiertas
-
-Personal que actúa como cliente o empleado sin levantar sospechas de investigación
-
-Documentación detallada con fecha, hora, testigos y videos que resisten escrutinio legal
-
-Análisis de videos existentes correlacionados con incidentes documentados por agentes
-
-Identificación de horarios, empleados y productos con mayor frecuencia de pérdidas
-
-Cambio periódico de agentes para evitar identificación por empleados sospechosos
-
-Cobertura legal incluida que protege a su negocio ante contingencias operativas
-
-Orientación para despidos justificados y denuncias penales con evidencia sólida
-
-Complete el formulario y reciba propuesta personalizada en menos de 24 horas con esquema de investigación adaptado a su tipo de retail
-
-Respuesta en menos de 24 horas · Personal Certificado SSC · Cobertura en CDMX y Estado de México
-
-Más de 15 años protegiendo recepciones corporativas en Polanco, Santa Fe, Reforma e Interlomas
-
-Todos nuestros guardias intramuros cuentan con certificación vigente de la Secretaría de Seguridad Ciudadana, requisito legal obligatorio en CDMX. Pero no nos detenemos ahí: cada elemento recibe capacitación especializada en atención ejecutiva, protocolos de cortesía corporativa, manejo de situaciones conflictivas con tacto diplomático y operación de sistemas tecnológicos de control de accesos.
-
-Realizamos exámenes toxicológicos trimestrales y evaluaciones psicométricas anuales para garantizar estabilidad emocional y confiabilidad de nuestro personal.
-
-A diferencia de empresas que envían personal y olvidan, nosotros implementamos supervisión semanal presencial con auditorías de calidad documentadas. Nuestros supervisores verifican presentación personal, trato a visitantes, cumplimiento de protocolos, operación correcta de sistemas y gestión de bitácoras digitales.
-
-Si detectamos alguna deficiencia, realizamos capacitación correctiva inmediata o reemplazo del elemento en menos de 24 horas sin costo adicional para usted. Su satisfacción está garantizada porque la monitoreamos activamente.
-
-Implementamos sistema de bitácoras digitales con geolocalización, registro fotográfico y timestamps que puede consultar desde su smartphone en cualquier momento. ¿Necesita saber quién visitó su empresa ayer a las 8pm? Lo verifica en 10 segundos con foto de identificación oficial y datos completos del visitante.
-
-¿Requiere evidencia de que el guardia estuvo en su puesto durante una emergencia? Tiene registro GPS que documenta cada movimiento. Transparencia total que protege legalmente a su empresa y facilita auditorías corporativas.
-
-Entendemos que sus guardias intramuros son embajadores de su marca corporativa. Por eso ofrecemos uniformes de calidad superior personalizables con su logotipo, colores corporativos y estilo de presentación específico. Los guardias se integran perfectamente a la estética de su recepción, proyectando cohesión visual y profesionalismo.
-
-Especialmente importante en edificios clase A, recepciones de hospitales privados y lobbies donde la primera impresión determina percepciones de calidad de toda su organización.
-
-Nuestro sistema de reemplazos inmediatos garantiza cero días sin cobertura. Si un guardia presenta ausencia imprevista, tenemos personal certificado de respaldo que cubre en menos de 2 horas. Mantenemos base de datos de elementos capacitados disponibles para emergencias.
-
-Durante vacaciones, incapacidades o cualquier eventualidad, su recepción siempre estará atendida por personal profesional. No experimentará el problema común de hoy no llegó el guardia y nadie me avisó que genera caos operativo y riesgos de seguridad.
-
-Desde nuestro inicio, hemos protegido recepciones corporativas de empresas Fortune 500, edificios clase A+, hospitales de prestigio y torres residenciales premium en CDMX y Estado de México. Nuestro récord operativo es impecable: cero incidentes graves por falta de profesionalismo, 98% de retención de clientes año con año, y cero demandas laborales o legales relacionadas con nuestro personal.
-
-Contamos con permiso SSC vigente 0102-15 y RFC OPS1308309M5 que acreditan nuestra formalidad legal completa.
-
-Soluciones integrales de seguridad diseñadas para proteger cada aspecto de su operación empresarial. Personal certificado que eleva los estándares de seguridad en su organización.
-
-La seguridad empresarial moderna requiere más que uniformes: necesita profesionales certificados que comprendan los protocolos corporativos. Nuestros guardias pasan por procesos rigurosos de selección, capacitación en atención ejecutiva y evaluaciones continuas de desempeño. Ya sea en recepción, perímetro exterior o puntos críticos de acceso, cada miembro representa los valores de excelencia de su organización.
-
-Desde edificios clase A hasta instalaciones industriales, implementamos soluciones personalizadas que se adaptan a su industria. Con supervisión constante, tecnología de rastreo GPS y reportes digitales en tiempo real, mantiene control total sobre la seguridad de sus instalaciones. Confíe en el respaldo de más de 15 años protegiendo empresas líderes en CDMX.
-
-Tiendas líderes en retail ya entendieron que el robo hormiga destruye márgenes silenciosamente. No permitas que empleados ladrones roben tu utilidad mes tras mes. Invierte en prevención de pérdidas profesional que SÍ detecta quién te roba y te proporciona evidencia legal para actuar.
-
-Agentes civiles certificados SSC que se integran sin levantar sospechas
-
-Reportes documentados que resisten demandas laborales
-
-Cada peso invertido recupera 7 pesos en mermas evitadas
-
+<div class="prose-intro">
+  <p><strong>ORIGINS Private Security</strong> opera prevención de pérdidas para retail y empresas en CDMX. Personal certificado SSC que detecta robo interno, fraudes en caja e irregularidades de inventario — de forma encubierta, con evidencia documentada y sin interrumpir la operación. Complementamos con <a href="/servicios/investigaciones-confiabilidad">investigaciones de confiabilidad</a> para validar al personal antes de contratarlo. <strong>Proteger tus márgenes es tan importante como proteger tu local</strong>.</p>
+  <div class="prose-highlight">
+    <strong>Lo que la mayoría no quiere ver:</strong> El robo externo —el que todos imaginan— representa el 30% de las pérdidas en retail. El otro 70% son empleados. Personal de confianza que lleva semanas o meses tomando mercancía, haciendo descuentos no autorizados o coludido con proveedores. El problema no es la falta de cámaras — es que nadie está mirando lo que pasa desde adentro. Por eso integramos <a href="/servicios/vigilancia-remota-cctv">vigilancia remota CCTV</a> con <a href="/servicios/control-de-accesos">control de accesos</a> para cubrir los puntos ciegos que el personal encubierto no alcanza.
+  </div>
+</div>
+
+---
+
+<div class="trust-bar">
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+    <div>
+      <strong>Permiso SSC 0102-15</strong>
+      <span>Personal certificado · Operación legal</span>
+    </div>
+  </div>
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/><line x1="3" y1="3" x2="21" y2="21"/></svg>
+    <div>
+      <strong>100% encubierto</strong>
+      <span>Sin que el personal sepa que está siendo evaluado</span>
+    </div>
+  </div>
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>
+    <div>
+      <strong>Evidencia legal</strong>
+      <span>Documentación válida para denuncia o proceso disciplinario</span>
+    </div>
+  </div>
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    <div>
+      <strong>Primeros hallazgos en 1–2 semanas</strong>
+      <span>Resultados visibles desde el primer mes</span>
+    </div>
+  </div>
+  <div class="trust-bar__item">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+    <div>
+      <strong>ROI desde el primer mes</strong>
+      <span>El ahorro en merma suele superar el costo del servicio</span>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Tu Merma en Números</span>
+  <h2>¿Cuánto Estás Perdiendo Sin Saberlo?</h2>
+  <p class="prose-section-sub">La merma promedio en retail mexicano es del 2–4% de las ventas. Para la mayoría de los negocios, eso es más de lo que ganan de margen neto. Estos son tus números reales.</p>
+</div>
+
+<div class="loss-calculator">
+  <div class="loss-calculator__header">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+    Calculadora de pérdidas estimadas por merma
+  </div>
+  <div class="loss-calculator__grid">
+    <div class="loss-calculator__scenario">
+      <div class="loss-calculator__label">Negocio pequeño</div>
+      <div class="loss-calculator__sales">$200,000 MXN/mes en ventas</div>
+      <div class="loss-calculator__rates">
+        <div class="loss-calculator__rate">
+          <span class="loss-calculator__pct">2% merma</span>
+          <span class="loss-calculator__amount loss-calculator__amount--yellow">$4,000/mes</span>
+          <span class="loss-calculator__year">$48,000 al año</span>
+        </div>
+        <div class="loss-calculator__rate">
+          <span class="loss-calculator__pct">4% merma</span>
+          <span class="loss-calculator__amount loss-calculator__amount--red">$8,000/mes</span>
+          <span class="loss-calculator__year">$96,000 al año</span>
+        </div>
+      </div>
+    </div>
+    <div class="loss-calculator__scenario loss-calculator__scenario--accent">
+      <div class="loss-calculator__label">Negocio mediano</div>
+      <div class="loss-calculator__sales">$800,000 MXN/mes en ventas</div>
+      <div class="loss-calculator__rates">
+        <div class="loss-calculator__rate">
+          <span class="loss-calculator__pct">2% merma</span>
+          <span class="loss-calculator__amount loss-calculator__amount--yellow">$16,000/mes</span>
+          <span class="loss-calculator__year">$192,000 al año</span>
+        </div>
+        <div class="loss-calculator__rate">
+          <span class="loss-calculator__pct">4% merma</span>
+          <span class="loss-calculator__amount loss-calculator__amount--red">$32,000/mes</span>
+          <span class="loss-calculator__year">$384,000 al año</span>
+        </div>
+      </div>
+    </div>
+    <div class="loss-calculator__scenario">
+      <div class="loss-calculator__label">Cadena o multi-sucursal</div>
+      <div class="loss-calculator__sales">$3,000,000 MXN/mes en ventas</div>
+      <div class="loss-calculator__rates">
+        <div class="loss-calculator__rate">
+          <span class="loss-calculator__pct">2% merma</span>
+          <span class="loss-calculator__amount loss-calculator__amount--yellow">$60,000/mes</span>
+          <span class="loss-calculator__year">$720,000 al año</span>
+        </div>
+        <div class="loss-calculator__rate">
+          <span class="loss-calculator__pct">4% merma</span>
+          <span class="loss-calculator__amount loss-calculator__amount--red">$120,000/mes</span>
+          <span class="loss-calculator__year">$1,440,000 al año</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="loss-calculator__footer">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    El costo mensual del servicio de prevención de pérdidas ORIGINS suele ser menor a la pérdida mensual de un solo punto de merma. El ahorro neto es positivo desde el primer mes.
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Cómo Roban</span>
+  <h2>Los 5 Métodos más Comunes que Destruyen tus Márgenes</h2>
+  <p class="prose-section-sub">No es solo "sacar producto en la bolsa". Estos son los métodos que los responsables de prevención de pérdidas conocen — y que los dueños descubren cuando ya es tarde.</p>
+</div>
+
+<div class="theft-methods">
+  <div class="theft-method">
+    <div class="theft-method__num">01</div>
+    <div class="theft-method__content">
+      <strong>Robo hormiga sistemático</strong>
+      <p>El empleado que toma 1 o 2 piezas por turno, varios días a la semana. Pequeños montos que juntos suman $5,000–$15,000 mensuales. Difícil de detectar sin análisis de patrones y observación directa.</p>
+      <span class="theft-method__signal">Señal: merma alta sin robos evidentes registrados</span>
+    </div>
+  </div>
+  <div class="theft-method">
+    <div class="theft-method__num">02</div>
+    <div class="theft-method__content">
+      <strong>Descuentos y cancelaciones no autorizadas en caja</strong>
+      <p>El cajero aplica descuento "de empleado" a un cliente externo a cambio de dinero, o cancela transacciones y se queda con el efectivo. Invisible sin auditoría de POS y observación de caja.</p>
+      <span class="theft-method__signal">Señal: índice de descuentos y cancelaciones inusualmente alto en ciertos turnos</span>
+    </div>
+  </div>
+  <div class="theft-method">
+    <div class="theft-method__num">03</div>
+    <div class="theft-method__content">
+      <strong>Colusión con proveedor o transportista</strong>
+      <p>El encargado de recepción firma remisiones con más cantidad de la recibida, o el proveedor "olvida" unidades en el camión. La diferencia se reparte entre ambos. Requiere acceso a registros y observación de recepciones.</p>
+      <span class="theft-method__signal">Señal: faltantes en inventario que no coinciden con ventas ni devoluciones</span>
+    </div>
+  </div>
+  <div class="theft-method">
+    <div class="theft-method__num">04</div>
+    <div class="theft-method__content">
+      <strong>Salida de mercancía por zona ciega</strong>
+      <p>Producto que "sale de bodega" hacia área de basura, cocina o salida de servicio donde no hay cámara. Coordinado entre dos o más empleados. Requiere reconocimiento del espacio físico y observación de puntos ciegos.</p>
+      <span class="theft-method__signal">Señal: merma concentrada en categorías específicas sin explicación lógica</span>
+    </div>
+  </div>
+  <div class="theft-method">
+    <div class="theft-method__num">05</div>
+    <div class="theft-method__content">
+      <strong>Fraude en inventario — producto "dañado" o "vencido"</strong>
+      <p>El encargado de inventario registra producto como dañado o de baja, pero sale íntegro. Pequeñas cantidades recurrentes que legalmente justifican la merma. Solo detectable con auditoría cruzada de registros y observación encubierta.</p>
+      <span class="theft-method__signal">Señal: porcentaje de merma justificada por daño inusualmente alto vs. industria</span>
+    </div>
+  </div>
+</div>
+
+---
+
+<function_calls>
+<invoke name="exec">
+<parameter name="command">cat >> /Users/carsolio/Desktop/PAGINAS-HTML/SEGURIDAD-PRIVADA/src/content/servicios/prevencion-de-perdidas.md << 'EOF'
+
+<div class="prose-section-block">
+  <div class="prose-section-block__header">
+    <span class="prose-section-block__num">01</span>
+    <div>
+      <span class="prose-section-block__label">Operación Encubierta</span>
+      <h3 class="prose-section-block__title">Personal que Detecta desde Adentro — Sin que Nadie lo Sepa</h3>
+    </div>
+  </div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>La modalidad encubierta funciona porque los comportamientos irregulares solo ocurren cuando el empleado cree que nadie lo está viendo. Un guardia uniformado en la tienda cambia el comportamiento — pero no elimina el problema. <strong>Un agente encubierto lo documenta tal como ocurre en la realidad</strong>.</p>
+      <ul>
+        <li>Agente opera como cliente habitual — compras, devoluciones, preguntas al personal</li>
+        <li>O como empleado temporal — integrado al equipo sin revelar su función</li>
+        <li>Documenta en tiempo real: video discreto, notas y registro de transacciones observadas</li>
+        <li>Identifica patrones repetitivos — no solo eventos aislados</li>
+        <li>Coordina con supervisión de cámaras para correlacionar eventos</li>
+        <li>Entrega reporte con evidencia completa cuando hay hallazgo confirmado</li>
+      </ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/prevencion-de-perdidas/investigacion-de-perdidas.avif" alt="Investigación de pérdidas y robo interno en retail CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/prevencion-de-perdidas/proteccion-minorista.avif" alt="Protección minorista y prevención de pérdidas para tiendas CDMX" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-block">
+  <div class="prose-section-block__header">
+    <span class="prose-section-block__num">02</span>
+    <div>
+      <span class="prose-section-block__label">Auditoría de POS y Caja</span>
+      <h3 class="prose-section-block__title">Donde el Dinero Sale Sin Que lo Veas</h3>
+    </div>
+  </div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>El sistema de punto de venta registra todo — pero ¿quién analiza los datos? Los patrones de fraude en caja son claros cuando sabes qué buscar: qué cajero tiene el mayor índice de cancelaciones, en qué turno hay más "errores", qué productos se descuentan con más frecuencia. <strong>El análisis de datos es la segunda capa de detección</strong>.</p>
+      <ul>
+        <li>Revisión de tasas de descuento por cajero y turno — comparativa vs. promedio</li>
+        <li>Análisis de cancelaciones y devoluciones con correlación de video</li>
+        <li>Detección de transacciones atípicas: montos redondos, horarios inusuales, cliente frecuente con descuentos</li>
+        <li>Comparativa de ventas vs. efectivo en cortes de caja — diferencias sistemáticas</li>
+        <li>Identificación de cajeros con patrones anómalos para seguimiento encubierto</li>
+        <li>Reporte ejecutivo con gráficas de tendencias para presentar a dirección</li>
+      </ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/prevencion-de-perdidas/deteccion-de-fraudes.avif" alt="Detección de fraudes en puntos de venta y cajas registradoras CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/prevencion-de-perdidas/control-de-inventarios.avif" alt="Control de inventarios y auditoría de mermas para retail CDMX" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-block">
+  <div class="prose-section-block__header">
+    <span class="prose-section-block__num">03</span>
+    <div>
+      <span class="prose-section-block__label">CCTV Estratégico</span>
+      <h3 class="prose-section-block__title">Cámaras en los Lugares Correctos — No Solo en los Obvios</h3>
+    </div>
+  </div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>La mayoría de los sistemas CCTV en retail tienen cámaras en la entrada, en la caja y en el piso de ventas. Los responsables de robo conocen exactamente esos puntos y trabajan en los que no están cubiertos. <strong>El reposicionamiento estratégico elimina las zonas ciegas que ellos ya identificaron</strong>.</p>
+      <ul>
+        <li>Auditoría de cobertura actual — identificamos zonas sin cámara o con ángulo ineficiente</li>
+        <li>Posicionamiento en bodega, zona de recepción de mercancía y salida de servicio</li>
+        <li>Cámaras en caja con ángulo que cubra las manos del cajero y la pantalla del POS</li>
+        <li>Monitoreo activo en horarios críticos — no solo grabación pasiva</li>
+        <li>Integración con análisis de POS: correlación automática de transacciones con video</li>
+        <li>30 días de grabación con búsqueda por fecha, hora y zona</li>
+      </ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/prevencion-de-perdidas/monitoreo-cctv.avif" alt="Monitoreo CCTV estratégico para prevención de pérdidas en retail CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/prevencion-de-perdidas/control-de-salidas.avif" alt="Control de salidas y zonas de servicio para prevención de robo CDMX" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Situaciones Reales</span>
+  <h2>Casos que Resolvemos en Tiendas y Empresas de CDMX</h2>
+  <p class="prose-section-sub">Situaciones que los dueños y directores de operaciones enfrentan — y que el servicio de prevención de pérdidas convierte en evidencia accionable.</p>
+</div>
+
+<div class="scenarios-grid">
+  <div class="scenario-card">
+    <div class="scenario-card__situation">
+      <span class="scenario-card__badge scenario-card__badge--problem">Situación real</span>
+      <p>"Mi inventario no cuadra desde hace 3 meses. Las ventas están bien pero la merma es del 4.5% y no encuentro la causa"</p>
+    </div>
+    <div class="scenario-card__solution">
+      <span class="scenario-card__badge scenario-card__badge--solution">Con ORIGINS</span>
+      <p>Auditoría de datos de POS identifica el patrón: las cancelaciones en turno vespertino de cierta cajera son el doble del promedio. La operación encubierta lo confirma y documenta. Evidencia entregada en 2 semanas.</p>
+    </div>
+  </div>
+  <div class="scenario-card">
+    <div class="scenario-card__situation">
+      <span class="scenario-card__badge scenario-card__badge--problem">Situación real</span>
+      <p>"Tenemos cámaras pero el robo sigue. El personal ya sabe dónde están las cámaras y trabaja en los ángulos ciegos"</p>
+    </div>
+    <div class="scenario-card__solution">
+      <span class="scenario-card__badge scenario-card__badge--solution">Con ORIGINS</span>
+      <p>Auditoría de cobertura identifica exactamente los puntos ciegos que el personal explota. Reposicionamiento estratégico + operación encubierta en esas zonas específicas. El problema se documenta y resuelve.</p>
+    </div>
+  </div>
+  <div class="scenario-card">
+    <div class="scenario-card__situation">
+      <span class="scenario-card__badge scenario-card__badge--problem">Situación real</span>
+      <p>"Sospecho que mi encargado de bodega está coordinado con el proveedor. Los faltantes siempre son en las entregas de cierto proveedor"</p>
+    </div>
+    <div class="scenario-card__solution">
+      <span class="scenario-card__badge scenario-card__badge--solution">Con ORIGINS</span>
+      <p>Auditoría cruzada de remisiones vs. inventario físico confirma el patrón. Observación encubierta de la próxima entrega documenta el procedimiento. Evidencia completa para proceso legal contra ambos.</p>
+    </div>
+  </div>
+  <div class="scenario-card">
+    <div class="scenario-card__situation">
+      <span class="scenario-card__badge scenario-card__badge--problem">Situación real</span>
+      <p>"Abrimos una segunda sucursal y la merma es el doble que en la primera. No sé si es un empleado específico o un problema estructural"</p>
+    </div>
+    <div class="scenario-card__solution">
+      <span class="scenario-card__badge scenario-card__badge--solution">Con ORIGINS</span>
+      <p>Auditoría comparativa entre ambas sucursales identifica las diferencias. Si es un empleado, la operación encubierta lo documenta. Si es estructural, el reporte señala exactamente qué proceso o control está fallando.</p>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Para Quién es</span>
+  <h2>Cualquier Negocio que Vende Producto Físico</h2>
+  <p class="prose-section-sub">La prevención de pérdidas no es solo para grandes cadenas. Un negocio de $300K mensuales con 3% de merma está perdiendo $108,000 al año — más de lo que cuesta el servicio completo.</p>
+</div>
+
+<div class="profile-grid">
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Tienda de conveniencia o abarrotes</strong>
+      <p class="profile-card__need">Merma por robo hormiga de empleados y robo externo frecuente</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Operación encubierta</span>
+        <span class="profile-tag">CCTV cajas</span>
+        <span class="profile-tag">Auditoría POS</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Tienda de ropa o accesorios</strong>
+      <p class="profile-card__need">Robo de temporada alta y descuentos no autorizados</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Cliente misterioso</span>
+        <span class="profile-tag">Control descuentos</span>
+        <span class="profile-tag">Auditoría devoluciones</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Bodega o centro de distribución</strong>
+      <p class="profile-card__need">Faltantes en recepción y colusión con transportistas</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Supervisión recepciones</span>
+        <span class="profile-tag">Auditoría remisiones</span>
+        <span class="profile-tag">CCTV andenes</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 3h18v18H3z"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Farmacia o punto de venta de alto valor</strong>
+      <p class="profile-card__need">Robo de medicamentos de alto valor y fraude en recetas</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">CCTV zonas críticas</span>
+        <span class="profile-tag">Auditoría stock</span>
+        <span class="profile-tag">Control recetas</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card profile-card--highlight">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M21 10H7M21 6H3M21 14H3M21 18H7"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Cadena de tiendas (3+ sucursales)</strong>
+      <p class="profile-card__need">Identificar qué sucursal tiene el problema y por qué</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Auditoría comparativa</span>
+        <span class="profile-tag">Rotación encubierta</span>
+        <span class="profile-tag">Estándares corporativos</span>
+        <span class="profile-tag">Reporte multi-sitio</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Proceso</span>
+  <h2>Del Diagnóstico a la Merma Controlada — Paso a Paso</h2>
+  <p class="prose-section-sub">Un proceso metódico que empieza con datos, continúa con observación y termina con evidencia accionable — no con suposiciones.</p>
+</div>
+
+<div class="prose-steps">
+  <div class="prose-step">
+    <span class="prose-step__num">01</span>
+    <div class="prose-step__content">
+      <strong>Diagnóstico inicial — análisis de datos de tu negocio (1–2 días)</strong>
+      <p>Revisamos tus reportes de ventas, inventario, POS y merma histórica. Identificamos patrones estadísticos: qué días, turnos, empleados o zonas concentran las irregularidades. El análisis de datos es el mapa antes de la operación de campo.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">02</span>
+    <div class="prose-step__content">
+      <strong>Auditoría física del espacio (medio día)</strong>
+      <p>Recorrido del negocio para identificar zonas ciegas de cámara, flujos de mercancía, puntos de salida no controlados y vulnerabilidades en el proceso de caja y bodega. El espacio físico define dónde ocurren los problemas.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">03</span>
+    <div class="prose-step__content">
+      <strong>Operación encubierta activa (2–4 semanas según hallazgos)</strong>
+      <p>Agente en campo documentando en tiempo real. Coordinado con revisión continua de datos de POS y cámara. Los primeros hallazgos suelen aparecer en la primera semana si hay problema activo.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">04</span>
+    <div class="prose-step__content">
+      <strong>Reporte con evidencia completa</strong>
+      <p>Documento con todos los hallazgos: video, fotografías, transcripciones de interacciones, análisis de transacciones y cronología de eventos. Diseñado para ser presentado a dirección y, si aplica, utilizado en proceso legal o disciplinario.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">05</span>
+    <div class="prose-step__content">
+      <strong>Plan de mejoras y seguimiento (opcional)</strong>
+      <p>Recomendaciones específicas para que el problema no regrese: reposicionamiento de cámaras, cambios en procesos, controles adicionales. Si lo solicitas, supervisamos la implementación y hacemos un seguimiento de merma a 60 días para medir el impacto real.</p>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Galería</span>
+  <h2>Servicios de Prevención de Pérdidas ORIGINS en Operación</h2>
+  <p class="prose-section-sub">Operaciones discretas, auditorías de datos y CCTV estratégico — herramientas que protegen los márgenes de negocios en CDMX.</p>
+</div>
+
+<div class="prose-gallery">
+  <figure>
+    <img src="/img/prevencion-de-perdidas/investigacion-de-perdidas.avif" alt="Investigación de pérdidas y mermas en empresas CDMX ORIGINS" loading="lazy" width="640" height="480" />
+    <figcaption>Investigación encubierta — documentación de eventos sin alertar al personal involucrado</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/prevencion-de-perdidas/control-de-inventarios.avif" alt="Control de inventarios y auditoría de mermas para retail CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Auditoría de inventario — análisis cruzado de datos para identificar patrones de merma</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/prevencion-de-perdidas/monitoreo-cctv.avif" alt="Monitoreo CCTV para prevención de pérdidas en tiendas CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>CCTV estratégico — cámaras en zonas críticas que el personal no puede eludir</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/prevencion-de-perdidas/deteccion-de-fraudes.avif" alt="Detección de fraudes en caja y puntos de venta CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Auditoría de POS — análisis de transacciones para detectar descuentos y cancelaciones irregulares</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/prevencion-de-perdidas/reduccion-de-mermas.avif" alt="Reducción de mermas en retail y empresas CDMX con ORIGINS" loading="lazy" width="640" height="480" />
+    <figcaption>Resultados medibles — reducción de merma del 40–70% en el primer trimestre de servicio</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/prevencion-de-perdidas/proteccion-de-activos.avif" alt="Protección de activos e inventario en empresas CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Reporte con evidencia — documentación válida para proceso disciplinario o legal</figcaption>
+  </figure>
+</div>
+EOF

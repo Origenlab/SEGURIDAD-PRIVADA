@@ -266,3 +266,80 @@ strong {
 
 /* Base styles are already mobile-friendly via CSS variables */
 
+
+/* ==========================================================================
+   prose-section-header — Homologado con SectionHeaderBlock
+   ========================================================================== */
+
+.prose-section-header {
+  margin: 3rem 0 1.875rem;
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
+  text-align: left !important;
+}
+
+.prose-section-badge {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.375rem !important;
+  padding: 0.35rem 0.875rem !important;
+  background: rgba(10,15,30,0.06) !important;
+  border: 1px solid rgba(10,15,30,0.1) !important;
+  border-radius: 980px !important;
+  font-size: 0.7rem !important;
+  font-weight: 700 !important;
+  color: rgba(10,15,30,0.6) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.07em !important;
+  margin-bottom: 0.875rem !important;
+}
+
+.prose-section-header h2 {
+  font-size: 1.625rem !important;
+  font-weight: 800 !important;
+  color: #0a0f1e !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.2 !important;
+  margin: 0 0 0.625rem !important;
+  padding-bottom: 0 !important;
+  border-bottom: none !important;
+}
+
+.prose-section-header h2::before {
+  display: none !important;
+}
+
+.prose-section-sub {
+  font-size: 0.9375rem !important;
+  color: rgba(10,15,30,0.55) !important;
+  line-height: 1.6 !important;
+  margin: 0 !important;
+  max-width: 640px;
+}
+
+@media (min-width: 768px) {
+  .prose-section-header h2 { font-size: 2.125rem !important; }
+  .prose-section-sub { font-size: 1.0625rem !important; }
+}
+
+@media (min-width: 1024px) {
+  .prose-section-header h2 { font-size: 2.5rem !important; }
+}
+
+@media (min-width: 1280px) {
+  .prose-section-header h2 { font-size: 2.75rem !important; }
+}
+
+/* === Response Matrix header text fix === */
+.response-matrix__header span {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* === Compare Table header text fix === */
+.compare-table__head-feature,
+.compare-table__head-col--bad {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+.compare-table__head-col--good {
+  color: #4ade80 !important;
+}

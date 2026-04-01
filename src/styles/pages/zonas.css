@@ -1,0 +1,214 @@
+/* ==========================================================================
+   ZONAS INDEX — src/styles/pages/zonas.css
+   Mobile-first · NO animations on cards/images (project rule)
+   ========================================================================== */
+
+/* --- Intro section --- */
+.zonas-intro {
+  padding: 3.5rem 0 2.5rem;
+}
+
+/* --- Zona Advantage (3 cards) --- */
+.zona-advantage {
+  padding: 0 0 3.5rem;
+}
+
+.zona-advantage__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.zona-advantage__card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 1.75rem 1.5rem;
+}
+
+.zona-advantage__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(10,15,30,0.05);
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+
+.zona-advantage__card h3 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 0.5rem;
+}
+
+.zona-advantage__card p {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--color-text-light);
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .zona-advantage__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* --- Grid de Zonas (alcaldías / municipios) --- */
+.zonas-grid-section {
+  padding: 3.5rem 0;
+}
+
+.zonas-grid-section--edomex {
+  background: var(--color-accent);
+}
+
+.zonas-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.zona-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.zona-card--edomex {
+  background: #fff;
+}
+
+.zona-card__header {
+  margin-bottom: 0.75rem;
+}
+
+.zona-card__state {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+  opacity: 0.6;
+  display: inline-block;
+  padding: 0.2rem 0.625rem;
+  background: rgba(10,15,30,0.05);
+  border-radius: 980px;
+  margin-bottom: 0.5rem;
+}
+
+.zona-card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0;
+}
+
+.zona-card__desc {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  line-height: 1.55;
+  flex: 1;
+  margin-bottom: 0.75rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.zona-card__colonias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+  margin-bottom: 1rem;
+  list-style: none;
+  padding: 0;
+}
+
+.zona-card__colonias li {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  background: linear-gradient(135deg, #fef9e7 0%, #fdf3d0 100%);
+  color: #92600a;
+  border-radius: 980px;
+  border: 1px solid #f5d77a;
+  font-weight: 600;
+}
+
+.zona-card__link {
+  font-size: 0.875rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-top: auto;
+}
+
+@media (min-width: 640px) {
+  .zonas-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .zonas-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* --- Stats / Trust Bar --- */
+.zonas-stats {
+  padding: 3.5rem 0;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #1a2634 100%);
+}
+
+.zonas-stats__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.zonas-stats__item {
+  text-align: center;
+}
+
+.zonas-stats__number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 0.375rem;
+}
+
+.zonas-stats__label {
+  display: block;
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.4;
+}
+
+@media (min-width: 640px) {
+  .zonas-stats__grid { grid-template-columns: repeat(4, 1fr); }
+  .zonas-stats__number { font-size: 2.5rem; }
+}
+
+@media (min-width: 1024px) {
+  .zonas-stats__number { font-size: 3rem; }
+  .zonas-stats__label { font-size: 0.9375rem; }
+}
+
+/* --- FAQ section --- */
+.zonas-faq {
+  padding: 3.5rem 0;
+}
+
+.zonas-faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 800px;
+  margin: 0 auto;
+}

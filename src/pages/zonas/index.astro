@@ -3,12 +3,31 @@ import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import HeroPagina from '../../components/HeroPagina.astro';
 import NavCTA from '../../components/NavCTA.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import FAQItem from '../../components/FAQItem.astro';
+import '../../styles/pages/zonas.css';
+import '../../styles/sections/faq-cotizacion.css';
 
 const zonas = await getCollection('zonas', ({ data }) => !data.draft);
 const cdmx = zonas.filter(z => z.data.state === 'Ciudad de México');
 const edomex = zonas.filter(z => z.data.state === 'Estado de México');
 
 const siteUrl = 'https://seguridad-privada.com.mx';
+
+// Colonias destacadas por zona para mostrar en las cards
+const coloniasMap: Record<string, string[]> = {
+  'miguel-hidalgo': ['Polanco', 'Lomas de Chapultepec', 'Santa Fe'],
+  'benito-juarez': ['Del Valle', 'Narvarte', 'Nápoles'],
+  'cuauhtemoc': ['Roma Norte', 'Condesa', 'Juárez'],
+  'coyoacan': ['Pedregal', 'Copilco', 'Del Carmen'],
+  'alvaro-obregon': ['Santa Fe', 'Plateros', 'Tizapán'],
+  'naucalpan': ['Interlomas', 'Satélite', 'Lomas Verdes'],
+  'tlalnepantla': ['Ciudad Lago', 'Industrial Vallejo', 'San Agustín'],
+  'atizapan': ['Bosques de la Hacienda', 'Lomas de Atizapán', 'Las Palmas'],
+  'iztapalapa': ['Santa Cruz Meyehualco', 'Constitución de 1917', 'Paraje San Juan'],
+  'gustavo-a-madero': ['Lindavista', 'Insurgentes Norte', 'La Villa'],
+  'xochimilco': ['Santa Cruz Acalpixca', 'San Gregorio', 'Tepepan'],
+};
 
 const schema = {
   "@context": "https://schema.org",
@@ -25,6 +44,38 @@ const schema = {
     }
   }))
 };
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cubren todas las alcaldías de la CDMX?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. ORIGINS Private Security tiene cobertura en las 16 alcaldías de la Ciudad de México y en los principales municipios del Estado de México. Asignamos guardias que viven cerca de la zona de servicio para garantizar puntualidad y conocimiento del entorno." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tienen guardias que viven en la zona de servicio?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Así es. Nuestra política de asignación prioriza que cada guardia viva a menos de 30 minutos de su punto de trabajo. Esto garantiza puntualidad, conocimiento del entorno y respuesta rápida ante cualquier eventualidad." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué pasa si el guardia no se presenta?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Contamos con personal de respaldo asignado por zona. Si un guardia no puede presentarse, activamos un reemplazo de la misma zona en un máximo de 2 horas, sin costo adicional y sin interrumpir la operación del condominio." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo tarda la cotización para mi alcaldía?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Emitimos cotizaciones personalizadas en menos de 24 horas. Nuestro equipo realiza un diagnóstico inicial por teléfono o videollamada y genera una propuesta adaptada a las necesidades de tu condominio o fraccionamiento." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajan en Estado de México?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Tenemos cobertura activa en municipios como Naucalpan, Tlalnepantla, Atizapán de Zaragoza y otros municipios de la Zona Metropolitana del Valle de México. Operamos con los mismos estándares y permisos que en CDMX." }
+    }
+  ]
+};
 ---
 
 <Base
@@ -33,124 +84,330 @@ const schema = {
   canonical={`${siteUrl}/zonas`}
   schema={schema}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+  <!-- SECCIÓN 1: Hero -->
   <HeroPagina
     badge="Cobertura CDMX y Zona Metropolitana"
-    titulo="Seguridad Privada en CDMX y Estado de México"
-    descripcion="Guardias intramuros, control de accesos y monitoreo CCTV en todas las alcaldías de la Ciudad de México y los principales municipios del Estado de México."
+    titulo="Seguridad Privada en CDMX — Cobertura Total por Alcaldía"
+    descripcion="¿Buscas una empresa de seguridad que realmente conozca tu alcaldía? En ORIGINS asignamos guardias que viven en tu zona — eso se traduce en puntualidad, respuesta rápida y conocimiento real de tu colonia."
     breadcrumb={[{ label: 'Zonas de Servicio', href: '/zonas' }]}
     ctaPrimario={{ texto: 'Solicitar Cotización', href: '/contacto' }}
     ctaWhatsapp={true}
-    seoParrafo1='<strong>ORIGINS Private Security</strong> opera en toda la Zona Metropolitana del Valle de México. Desde <a href="/zonas/miguel-hidalgo">Miguel Hidalgo</a> y <a href="/zonas/cuauhtemoc">Cuauhtémoc</a> hasta <a href="/zonas/naucalpan">Naucalpan</a> y <a href="/zonas/tlalnepantla">Tlalnepantla</a>, asignamos guardias que viven cerca de la zona de servicio para garantizar puntualidad y conocimiento del entorno local.'
-    seoParrafo2='Cada zona tiene sus propias características de riesgo, patrones de acceso y perfil de residente. Por eso diseñamos protocolos específicos por ubicación, no soluciones genéricas. <strong>Permiso SSC 0102-15</strong> vigente. Cotización gratuita en menos de 24 horas para cualquier alcaldía o municipio.'
+    seoParrafo1='<strong>ORIGINS Private Security</strong> opera en toda la Zona Metropolitana del Valle de México. Desde <a href="/zonas/miguel-hidalgo">Polanco y Lomas de Chapultepec</a> hasta <a href="/zonas/naucalpan">Interlomas y Ciudad Satélite</a>, asignamos <a href="/servicios/guardias-intramuros">guardias intramuros</a> que viven cerca de la zona de servicio para garantizar puntualidad y conocimiento del entorno local. Cobertura en las 16 alcaldías de CDMX y los municipios más importantes del Estado de México.'
+    seoParrafo2='Cada zona tiene sus propias características de riesgo, patrones de acceso y perfil de residente. Por eso diseñamos protocolos específicos por ubicación — no soluciones genéricas. <a href="/servicios/control-de-accesos">Control de accesos</a>, <a href="/servicios/vigilancia-remota-cctv">CCTV</a> y patrullaje adaptados a tu colonia. <strong>Permiso SSC 0102-15</strong> vigente. Cotización gratuita en menos de 24 horas para cualquier alcaldía o municipio.'
   />
 
+  <!-- SECCIÓN 2: NavCTA post-hero -->
   <NavCTA
-    ariaLabel="Explora nuestros servicios y empresa"
+    ariaLabel="Servicios principales y cotización"
     cards={[
-      { label: 'Nuestros Servicios', sublabel: 'Guardias, accesos y monitoreo CCTV', href: '/servicios', icon: 'shield' },
-      { label: 'Quiénes Somos',      sublabel: 'Permiso SSC 0102-15 · Desde 2008',   href: '/nosotros', icon: 'people' },
-      { label: 'Blog y Recursos',    sublabel: 'Guías de seguridad para condominios', href: '/blog',     icon: 'blog'   },
-      { label: 'Cotización Gratuita', sublabel: 'Diagnóstico en menos de 24 horas',  href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
+      { label: 'Guardias Intramuros', sublabel: 'Vigilancia 24/7 para tu condominio', href: '/servicios/guardias-intramuros', icon: 'shield' },
+      { label: 'Control de Accesos', sublabel: 'Registro digital peatonal y vehicular', href: '/servicios/control-de-accesos', icon: 'monitor' },
+      { label: 'Nuestros Servicios', sublabel: 'Guardias, accesos, CCTV y más', href: '/servicios', icon: 'briefcase' },
+      { label: 'Cotización Gratuita', sublabel: 'Diagnóstico en menos de 24 horas', href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
     ]}
   />
 
-  <!-- CDMX -->
-  <section class="zonas-grid-section">
+  <!-- SECCIÓN 3: Introducción — Por qué importa la zona -->
+  <section class="zonas-intro">
     <div class="container">
-      <h2>Seguridad Privada por Alcaldía — Ciudad de México</h2>
-      <p class="zonas-grid-section__intro">Atendemos condominios verticales, horizontales y fraccionamientos en las 16 alcaldías de la CDMX</p>
-      <div class="zonas-grid">
-        {cdmx.map((zona) => (
-          <a href={`/zonas/${zona.data.zoneSlug}`} class="zona-card">
-            <div class="zona-card__header">
-              <span class="zona-card__state">CDMX</span>
-              <h3>{zona.data.zoneName}</h3>
-            </div>
-            <p>{zona.data.description}</p>
-            <span class="zona-card__link">Ver cobertura →</span>
-          </a>
-        ))}
+      <SectionHeader
+        badge="Por Qué Importa la Zona"
+        titulo="Un guardia que conoce tu colonia vale más que uno que llega desde lejos"
+        subtitulo="La seguridad efectiva empieza por el conocimiento del entorno. Un guardia que vive en tu zona conoce los accesos, las rutas de evacuación, los horarios de mayor riesgo y hasta los vecinos. Eso no se aprende en una capacitación — se vive."
+        parrafo1='En ORIGINS asignamos <a href="/servicios/guardias-intramuros">guardias intramuros</a> que residen a menos de 30 minutos de tu condominio o fraccionamiento. Si ocurre un incidente fuera de horario, pueden estar en tu puerta en minutos — no en horas. Esto reduce la rotación, mejora la puntualidad y genera confianza real con los residentes.'
+        parrafo2='Operamos con <strong>Permiso SSC 0102-15</strong> en toda la Zona Metropolitana del Valle de México. Cada guardia pasa por verificación de antecedentes, exámenes psicométricos y capacitación específica para la zona donde será asignado. Supervisión semanal documentada con reporte al administrador.'
+        align="left"
+      />
+    </div>
+  </section>
+
+  <!-- Bloque visual: 3 ventajas -->
+  <section class="zona-advantage">
+    <div class="container">
+      <div class="zona-advantage__grid">
+        <div class="zona-advantage__card">
+          <div class="zona-advantage__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.4 7.05 11.5 7.35 11.76a1 1 0 0 0 1.3 0C13 21.5 20 15.4 20 10a8 8 0 0 0-8-8z"/></svg>
+          </div>
+          <h3>Guardia vive cerca</h3>
+          <p>Puntualidad garantizada, conoce los accesos de tu condominio y llega en menos de 15 minutos ante cualquier incidente fuera de horario.</p>
+        </div>
+        <div class="zona-advantage__card">
+          <div class="zona-advantage__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3>Supervisor con ruta fija</h3>
+          <p>Visitas semanales documentadas con evidencia fotográfica y reporte directo al administrador. Sin sorpresas.</p>
+        </div>
+        <div class="zona-advantage__card">
+          <div class="zona-advantage__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Sin rotación constante</h3>
+          <p>El mismo elemento durante meses — los residentes lo conocen, confían en él y la seguridad mejora cuando hay continuidad.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Estado de México -->
+  <!-- SECCIÓN 4: Grid CDMX -->
+  <section class="zonas-grid-section">
+    <div class="container">
+      <SectionHeader
+        badge="Ciudad de México"
+        titulo="Seguridad Privada por Alcaldía — Ciudad de México"
+        subtitulo="Cobertura activa en alcaldías con mayor demanda de seguridad para condominios, residenciales y fraccionamientos."
+        parrafo1='La Ciudad de México concentra miles de condominios verticales y horizontales que requieren <a href="/servicios/guardias-intramuros">guardias intramuros profesionales</a>. En ORIGINS tenemos presencia en las alcaldías de mayor demanda: desde <a href="/zonas/miguel-hidalgo">Miguel Hidalgo</a> y <a href="/zonas/benito-juarez">Benito Juárez</a> hasta <a href="/zonas/cuauhtemoc">Cuauhtémoc</a> y <a href="/zonas/coyoacan">Coyoacán</a>.'
+        align="left"
+      />
+      <div class="zonas-grid">
+        {cdmx.map((zona) => {
+          const cols = zona.data.colonias || coloniasMap[zona.data.zoneSlug] || [];
+          return (
+            <a href={`/zonas/${zona.data.zoneSlug}`} class="zona-card">
+              <div class="zona-card__header">
+                <span class="zona-card__state">CDMX</span>
+                <h3>{zona.data.zoneName}</h3>
+              </div>
+              <p class="zona-card__desc">{zona.data.description}</p>
+              {cols.length > 0 && (
+                <ul class="zona-card__colonias">
+                  {cols.slice(0, 3).map((c) => <li>{c}</li>)}
+                </ul>
+              )}
+              <span class="zona-card__link">Ver cobertura →</span>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 5: Grid Estado de México -->
   {edomex.length > 0 && (
     <section class="zonas-grid-section zonas-grid-section--edomex">
       <div class="container">
-        <h2>Seguridad Privada en Estado de México</h2>
-        <p class="zonas-grid-section__intro">Cobertura en municipios de la Zona Metropolitana del Valle de México</p>
+        <SectionHeader
+          badge="Estado de México"
+          titulo="Seguridad Privada en Estado de México"
+          subtitulo="Cobertura en los municipios de la Zona Metropolitana del Valle de México con mayor concentración de fraccionamientos y residenciales."
+          parrafo1='Los municipios mexiquenses de la ZMVM — <a href="/zonas/naucalpan">Naucalpan</a>, <a href="/zonas/tlalnepantla">Tlalnepantla</a> y <a href="/zonas/atizapan">Atizapán</a> — concentran fraccionamientos cerrados y condominios que demandan seguridad profesional con los mismos estándares que la CDMX.'
+          align="left"
+        />
         <div class="zonas-grid">
-          {edomex.map((zona) => (
-            <a href={`/zonas/${zona.data.zoneSlug}`} class="zona-card zona-card--edomex">
-              <div class="zona-card__header">
-                <span class="zona-card__state">EdoMex</span>
-                <h3>{zona.data.zoneName}</h3>
-              </div>
-              <p>{zona.data.description}</p>
-              <span class="zona-card__link">Ver cobertura →</span>
-            </a>
-          ))}
+          {edomex.map((zona) => {
+            const cols = zona.data.colonias || coloniasMap[zona.data.zoneSlug] || [];
+            return (
+              <a href={`/zonas/${zona.data.zoneSlug}`} class="zona-card zona-card--edomex">
+                <div class="zona-card__header">
+                  <span class="zona-card__state">EdoMex</span>
+                  <h3>{zona.data.zoneName}</h3>
+                </div>
+                <p class="zona-card__desc">{zona.data.description}</p>
+                {cols.length > 0 && (
+                  <ul class="zona-card__colonias">
+                    {cols.slice(0, 3).map((c) => <li>{c}</li>)}
+                  </ul>
+                )}
+                <span class="zona-card__link">Ver cobertura →</span>
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
   )}
 
+  <!-- SECCIÓN 6: Trust bar / Stats -->
+  <section class="zonas-stats">
+    <div class="container">
+      <div class="zonas-stats__grid">
+        <div class="zonas-stats__item">
+          <span class="zonas-stats__number">15+</span>
+          <span class="zonas-stats__label">Años protegiendo condominios en la ZMVM</span>
+        </div>
+        <div class="zonas-stats__item">
+          <span class="zonas-stats__number">16</span>
+          <span class="zonas-stats__label">Alcaldías de CDMX con cobertura activa</span>
+        </div>
+        <div class="zonas-stats__item">
+          <span class="zonas-stats__number">8+</span>
+          <span class="zonas-stats__label">Municipios del Estado de México</span>
+        </div>
+        <div class="zonas-stats__item">
+          <span class="zonas-stats__number">SSC</span>
+          <span class="zonas-stats__label">Permiso 0102-15 vigente ante la SSC</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 7: FAQ + FORMULARIO (idéntico al index) -->
+  <section class="faq-cotizacion" id="cotizacion" aria-labelledby="faq-title-zonas">
+    <div class="container">
+
+      <SectionHeader
+        badge="FAQ y Cotización"
+        titulo="Todo lo que necesitas saber sobre nuestra cobertura"
+        subtitulo="Preguntas frecuentes y cotización personalizada para tu zona — en un solo lugar."
+        align="center"
+      />
+
+      <div class="faq-cotizacion__grid">
+
+        <!-- COL 1: Preguntas Frecuentes -->
+        <div class="faq-cotizacion__faq" id="preguntas-frecuentes">
+          <div class="faq-cotizacion__col-header">
+            <span class="faq-cotizacion__col-badge">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              Preguntas Frecuentes
+            </span>
+            <h2 id="faq-title-zonas" class="faq-cotizacion__col-title">Lo que administradores y comités preguntan sobre cobertura</h2>
+            <p class="faq-cotizacion__col-sub">¿No encuentras tu respuesta? Escríbenos al <a href="https://wa.me/525530255580">WhatsApp 55 3025 5580</a>.</p>
+          </div>
+
+          <div class="faq-cotizacion__items">
+            <FAQItem
+              question="¿Cubren todas las alcaldías de la CDMX?"
+              answer="Sí. ORIGINS Private Security tiene cobertura en las 16 alcaldías de la Ciudad de México y en los principales municipios del Estado de México. Asignamos guardias que viven cerca de la zona de servicio para garantizar puntualidad y conocimiento del entorno local."
+            />
+            <FAQItem
+              question="¿Tienen guardias que viven en la zona de servicio?"
+              answer="Así es. Nuestra política de asignación prioriza que cada guardia viva a menos de 30 minutos de su punto de trabajo. Esto garantiza puntualidad real, conocimiento de los accesos y de los residentes — y reduce la rotación al mínimo."
+            />
+            <FAQItem
+              question="¿Qué pasa si el guardia no se presenta?"
+              answer="Contamos con personal de respaldo asignado por zona. Si un guardia no puede presentarse, activamos un reemplazo en un máximo de 2 horas, sin costo adicional y sin interrumpir la operación del condominio. El administrador recibe notificación inmediata."
+            />
+            <FAQItem
+              question="¿Cuánto tiempo tarda la cotización para mi alcaldía?"
+              answer="Emitimos cotizaciones personalizadas en menos de 24 horas. Nuestro equipo realiza un diagnóstico inicial por teléfono o videollamada y genera una propuesta adaptada al tipo de condominio, número de accesos y perfil de riesgo de tu zona."
+            />
+            <FAQItem
+              question="¿Trabajan en Estado de México?"
+              answer="Sí. Tenemos cobertura activa en Naucalpan, Tlalnepantla, Atizapán de Zaragoza y otros municipios de la ZMVM. Operamos con los mismos estándares, Permiso SSC 0102-15 y supervisión documentada que en CDMX."
+            />
+          </div>
+        </div>
+
+        <!-- COL 2: Formulario -->
+        <div class="faq-cotizacion__form-col">
+          <div class="faq-cotizacion__form-card">
+
+            <div class="faq-cotizacion__form-header">
+              <span class="faq-cotizacion__col-badge">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Cotización Gratuita
+              </span>
+              <h3 class="faq-cotizacion__col-title">Solicita tu diagnóstico de seguridad</h3>
+              <p class="faq-cotizacion__col-sub">Respuesta personalizada en menos de 24 horas. Sin compromiso.</p>
+            </div>
+
+            <form class="faq-cotizacion__form" action="https://formsubmit.co/josecruz@originsecurity.mx" method="POST" novalidate>
+              <input type="text" name="_honey" style="display:none" aria-hidden="true">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_next" value="https://seguridad-privada.com.mx/gracias.html">
+              <input type="hidden" name="_subject" value="Cotización desde: Zonas de Cobertura">
+
+              <div class="faq-form__field">
+                <label for="zonas-nombre">Nombre completo <span aria-hidden="true">*</span></label>
+                <input type="text" id="zonas-nombre" name="nombre" required placeholder="Tu nombre completo" autocomplete="name">
+              </div>
+
+              <div class="faq-form__row">
+                <div class="faq-form__field">
+                  <label for="zonas-telefono">Teléfono <span aria-hidden="true">*</span></label>
+                  <input type="tel" id="zonas-telefono" name="telefono" required placeholder="55 1234 5678" autocomplete="tel">
+                </div>
+                <div class="faq-form__field">
+                  <label for="zonas-email">Correo electrónico <span aria-hidden="true">*</span></label>
+                  <input type="email" id="zonas-email" name="email" required placeholder="correo@empresa.com" autocomplete="email">
+                </div>
+              </div>
+
+              <div class="faq-form__field">
+                <label for="zonas-empresa">Nombre del condominio / residencial <span aria-hidden="true">*</span></label>
+                <input type="text" id="zonas-empresa" name="empresa" required placeholder="Ej: Torre Polanco 200, Residencial Interlomas">
+              </div>
+
+              <div class="faq-form__row">
+                <div class="faq-form__field">
+                  <label for="zonas-ubicacion">Zona <span aria-hidden="true">*</span></label>
+                  <select id="zonas-ubicacion" name="ubicacion" required>
+                    <option value="">Selecciona</option>
+                    <optgroup label="CDMX">
+                      <option value="cdmx-miguel-hidalgo">Miguel Hidalgo · Polanco</option>
+                      <option value="cdmx-cuauhtemoc">Cuauhtémoc · Roma · Condesa</option>
+                      <option value="cdmx-benito-juarez">Benito Juárez · Del Valle</option>
+                      <option value="cdmx-alvaro-obregon">Álvaro Obregón · Santa Fe</option>
+                      <option value="cdmx-coyoacan">Coyoacán · Pedregal</option>
+                      <option value="cdmx-gustavo-madero">Gustavo A. Madero · Lindavista</option>
+                      <option value="cdmx-iztapalapa">Iztapalapa</option>
+                      <option value="cdmx-xochimilco">Xochimilco</option>
+                      <option value="cdmx-otras">Otra alcaldía CDMX</option>
+                    </optgroup>
+                    <optgroup label="Estado de México">
+                      <option value="edomex-naucalpan">Naucalpan / Interlomas</option>
+                      <option value="edomex-tlalnepantla">Tlalnepantla</option>
+                      <option value="edomex-atizapan">Atizapán</option>
+                      <option value="edomex-otros">Otro municipio EdoMex</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <div class="faq-form__field">
+                  <label for="zonas-servicio">Servicio <span aria-hidden="true">*</span></label>
+                  <select id="zonas-servicio" name="tipoServicio" required>
+                    <option value="">Selecciona</option>
+                    <option value="seguridad-condominios">Seguridad Condominios</option>
+                    <option value="guardias-intramuros">Guardias Intramuros</option>
+                    <option value="seguridad-residenciales">Residenciales / Fraccionamientos</option>
+                    <option value="control-accesos">Control de Accesos</option>
+                    <option value="patrullaje">Patrullaje</option>
+                    <option value="vigilancia-cctv">Vigilancia CCTV</option>
+                    <option value="consultoria">Consultoría de Seguridad</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="faq-form__field">
+                <label for="zonas-mensaje">Cuéntanos sobre tu condominio <span class="faq-form__optional">(opcional)</span></label>
+                <textarea id="zonas-mensaje" name="mensaje" rows="3" placeholder="Número de accesos, torres o casas, residentes aproximados..."></textarea>
+              </div>
+
+              <div class="faq-form__terms">
+                <input type="checkbox" id="zonas-terminos" name="terminos" required>
+                <label for="zonas-terminos">Acepto la <a href="/aviso-de-privacidad">política de privacidad</a> y recibir información comercial</label>
+              </div>
+
+              <button type="submit" class="faq-form__submit">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Solicitar Cotización por WhatsApp
+              </button>
+
+              <p class="faq-form__note">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                Diagnóstico gratuito · Respuesta en 24h · Permiso SSC 0102-15
+              </p>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 8: NavCTA footer -->
   <NavCTA
     footer={true}
     ariaLabel="Explora el sitio"
     cards={[
-      { label: 'Nuestros Servicios', sublabel: 'Guardias, accesos y monitoreo',         href: '/servicios', icon: 'shield' },
-      { label: 'Quiénes Somos',     sublabel: 'Permiso SSC 0102-15 · Desde 2008',      href: '/nosotros',  icon: 'people' },
-      { label: 'Blog y Recursos',   sublabel: 'Guías de seguridad para condominios',    href: '/blog',      icon: 'blog'   },
-      { label: 'Cotización Gratuita', sublabel: 'Diagnóstico en menos de 24 horas',     href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
+      { label: 'Nuestros Servicios', sublabel: 'Guardias, accesos y monitoreo', href: '/servicios', icon: 'shield' },
+      { label: 'Quiénes Somos', sublabel: 'Permiso SSC 0102-15 · Desde 2008', href: '/nosotros', icon: 'people' },
+      { label: 'Blog y Recursos', sublabel: 'Guías de seguridad para condominios', href: '/blog', icon: 'blog' },
+      { label: 'Cotización Gratuita', sublabel: 'Diagnóstico en menos de 24 horas', href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
     ]}
   />
 </Base>
-
-<style>
-  .zonas-hero {
-    padding: 3rem 0 4rem;
-    background: linear-gradient(135deg, var(--color-primary) 0%, #1a1a2e 100%);
-    color: #fff;
-    text-align: center;
-  }
-  .zonas-hero__badge {
-    display: inline-flex; align-items: center; gap: 0.4rem;
-    background: rgba(255,255,255,0.15); color: #fff;
-    font-size: 0.8125rem; padding: 0.3rem 0.875rem;
-    border-radius: 980px; margin-bottom: 1rem;
-  }
-  .zonas-hero h1 { color: #fff; font-size: 2rem; margin-bottom: 1rem; }
-  .zonas-hero p { opacity: 0.9; max-width: 700px; margin: 0 auto 2rem; font-size: 1.0625rem; line-height: 1.7; }
-  .zonas-hero__cta { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
-  @media (min-width: 768px) { .zonas-hero h1 { font-size: 2.5rem; } }
-
-  .zonas-grid-section { padding: 3.5rem 0; }
-  .zonas-grid-section--edomex { background: var(--color-accent); }
-  .zonas-grid-section h2 { font-size: 1.75rem; margin-bottom: 0.75rem; }
-  .zonas-grid-section__intro { color: var(--color-text-light); margin-bottom: 2rem; }
-  .zonas-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  @media (min-width: 640px) { .zonas-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (min-width: 1024px) { .zonas-grid { grid-template-columns: repeat(3, 1fr); } }
-
-  .zona-card {
-    display: flex; flex-direction: column;
-    background: #fff; border: 1px solid var(--color-border);
-    border-radius: var(--border-radius); padding: 1.5rem;
-    text-decoration: none; color: inherit;
-    transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
-  }
-  .zona-card--edomex { background: #fff; }
-  .zona-card:hover { border-color: var(--color-primary); box-shadow: 0 4px 16px rgba(0,0,0,0.08); transform: translateY(-2px); opacity: 1; }
-  .zona-card__header { margin-bottom: 0.75rem; }
-  .zona-card__state { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-primary); opacity: 0.7; display: block; margin-bottom: 0.25rem; }
-  .zona-card h3 { font-size: 1.125rem; color: var(--color-primary); margin: 0; }
-  .zona-card p { font-size: 0.875rem; color: var(--color-text-light); line-height: 1.5; flex: 1; margin-bottom: 1rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-  .zona-card__link { font-size: 0.875rem; color: var(--color-primary); font-weight: 500; }
-
-</style>

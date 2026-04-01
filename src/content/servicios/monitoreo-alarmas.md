@@ -1,155 +1,681 @@
 ---
-title: "Monitoreo de Alarmas 24/7 CDMX | Central UL"
-description: "Monitoreo de alarmas y seguridad privada para condominios, residenciales y empresas en CDMX. Central certificada UL 24/7. ☎ 55 3025 5580"
+title: "Monitoreo de Alarmas 24/7 CDMX | Central UL — ORIGINS"
+description: "Monitoreo de alarmas 24/7 con verificación humana en CDMX. Central certificada UL, respuesta en menos de 90 segundos, comunicación dual indestructible. Condominios y empresas."
 category: service
 publishDate: 2024-01-01
+updatedDate: 2026-04-01
 keywords:
-  - seguridad
-  - monitoreo alarmas
+  - monitoreo de alarmas cdmx
+  - central de monitoreo alarmas 24 7
+  - sistema de alarma para condominios cdmx
+  - monitoreo alarmas empresas cdmx
+  - alarma con monitoreo cdmx
+  - central monitoreo seguridad certificada ul cdmx
+  - alarma residencial con monitoreo profesional
+  - sistema alarma inteligente condominios cdmx
+  - monitoreo alarmas estado de mexico
+relatedServices:
+  - vigilancia-remota-cctv
+  - control-de-accesos
+  - tecnologia-monitoreo-seguridad
+  - guardias-intramuros
+  - seguridad-gps-satelital
+targetLocations:
+  - Ciudad de México
+  - Polanco
+  - Santa Fe
+  - Del Valle
+  - Coyoacán
+  - Naucalpan
+  - Tlalnepantla
+serviceFeatures:
+  - title: "Verificación Humana 100%"
+    description: "Antes de llamarte, un operador confirma si es real. Cero llamadas innecesarias a las 3 AM por una mascota o corriente de aire."
+    icon: "check"
+  - title: "Respuesta < 90 Segundos"
+    description: "Central certificada UL con protocolo de respuesta documentado. Cada segundo cuenta — los nuestros están medidos y garantizados."
+    icon: "clock"
+  - title: "Comunicación Dual Indestructible"
+    description: "Línea fija + celular 4G de respaldo automático. Si cortan el cable, el sistema sigue reportando. Sin puntos únicos de fallo."
+    icon: "wifi"
+  - title: "Batería 24 Horas"
+    description: "Ante apagones tu sistema no se apaga. 24 horas de autonomía garantizada para que la protección no dependa de la CFE."
+    icon: "battery"
+  - title: "Detección Integral"
+    description: "Intrusión, humo, fuego, inundación y botones de pánico. Un solo sistema monitorea todas las amenazas desde una central."
+    icon: "shield"
+  - title: "App de Control Total"
+    description: "Arma y desarma desde tu celular, revisa el historial de eventos, recibe alertas push y gestiona tu sistema desde cualquier lugar."
+    icon: "smartphone"
 faqs:
-  - question: "¿Qué diferencia una central de monitoreo certificada UL de una central estándar no certificada?"
-    answer: "La certificación UL 827 (Central Station Alarm Services) establece 127 requerimientos específicos que centrales deben cumplir para obtener y mantener certificación. Incluye: redundancia obligatoria de equipos críticos (servidores, comunicaciones, energía) con failover automático probado mensualmente; personal de monitoreo con capacitación certificada y evaluaciones trimestrales de competencia; protocolos documentados por escrito para cada tipo de evento (intrusión, incendio, pánico, falla técnica) con tiempos de respuesta máximos establecidos; bitácoras de operación con retención mínima 12 meses para auditoría; pruebas de supervisión de línea que detectan falla de comunicación en menos de 200 segundos; auditorías sorpresa trimestrales de Underwriters Laboratories que verifican cumplimiento continuo. Centrales no certificadas no están sujetas a estos estándares ni a auditorías externas."
-  - question: "¿Cómo funcionan los protocolos de comunicación Contact ID y SIA DC-09 entre panel y central?"
-    answer: "Contact ID (también conocido como Ademco Contact ID) es protocolo estándar de la industria que codifica eventos de alarma en mensajes numéricos de 16 dígitos transmitidos vía DTMF (tonos telefónicos) o IP. Cada código identifica: número de cuenta del cliente (4 dígitos), tipo de evento (intrusión/incendio/pánico), número de zona/sensor específico, y si evento es apertura o cierre. SIA DC-09 (Security Industry Association Data Communications) es protocolo más moderno que transmite información similar pero en formato ASCII encriptado con capacidad de enviar datos adicionales. Ventaja crítica de protocolos estandarizados: paneles de cualquier fabricante (DSC, Honeywell, Paradox, Bosch) pueden reportar a cualquier central certificada sin necesidad de software propietario. Esto evita vendor lock-in y permite a empresas cambiar de proveedor de monitoreo sin reemplazar hardware."
-  - question: "¿Qué es verificación secuencial multi-sensor y cómo reduce falsas alarmas en entornos corporativos?"
-    answer: "Verificación secuencial es protocolo de confirmación automatizado que requiere activación de dos o más sensores en secuencia lógica antes de generar alarma verificada. Ejemplo de intrusión real: delincuente fuerza puerta trasera (activa contacto magnético de puerta), luego camina hacia interior (activa sensor PIR de movimiento) - dos sensores en secuencia lógica = alta probabilidad de intrusión real. Ejemplo de falsa alarma: corriente de aire mueve cortina cerca de sensor PIR (activa movimiento) pero puerta/ventana no se abrió = solo un sensor activado = baja probabilidad, sistema NO genera alarma. Configuración típica establece ventana de tiempo de 30-90 segundos: si segundo sensor NO se activa en ese periodo tras primer sensor, evento se clasifica como falsa alarma y NO se notifica a cliente. Esto elimina 70-80% de falsas alarmas causadas por mascotas, cambios de temperatura o vibraciones externas."
-  - question: "¿Cómo se garantiza privacidad y protección de datos ante monitoreo con audio/video bidireccional?"
-    answer: "El monitoreo con verificación por audio y video genera obligaciones específicas bajo Ley Federal de Protección de Datos Personales en Posesión de Particulares (LFPDPPP). Cumplimiento requiere: (1) Aviso de Privacidad específico que informe a empleados/visitantes que instalación cuenta con monitoreo de audio/video con fines exclusivos de seguridad; (2) Señalización visible en accesos principales notificando monitoreo; (3) Configuración de sistema para activar audio/video SOLO cuando alarma se dispara (no grabación continua de conversaciones privadas); (4) Acceso restringido a grabaciones mediante controles RBAC - solo operadores autorizados pueden visualizar video en tiempo real durante verificación; (5) Retención limitada de grabaciones (30-90 días) con destrucción certificada posterior; (6) Encriptación de streams de video/audio durante transmisión (TLS 1.3) y en reposo (AES-256)."
-  - question: "¿Cuál es el proceso de escalamiento y coordinación con autoridades ante alarma verificada como real?"
-    answer: "Protocolo de escalamiento sigue matriz de decisión basada en tipo y severidad de evento: (Nivel 1) Alarma Técnica (falla de AC, batería baja) = notificación vía email/SMS sin urgencia. (Nivel 2) Alarma de Intrusión Sin Confirmación = verificación telefónica a 2-3 contactos solicitando código de cancelación, si no responden O código incorrecto → escala a Nivel 3. (Nivel 3) Alarma Verificada de Intrusión = llamada simultánea a: (a) gerente de seguridad del cliente reportando evento específico, (b) despacho de unidades móviles propias si cliente contrató servicio de respuesta física, (c) coordinación con C5 o policía local proporcionando dirección exacta, tipo de alarma, y datos de contacto. (Nivel 4) Alarma de Incendio Verificada = notificación INMEDIATA a Heroico Cuerpo de Bomberos con dirección, tipo de edificio, presencia de materiales peligrosos si aplica. (Nivel 5) Botón de Pánico o Código de Coacción = máxima prioridad: despacho inmediato de unidades sin llamada telefónica previa."
-  - question: "¿Qué métricas y KPIs se incluyen en reportes mensuales de desempeño del servicio de monitoreo?"
-    answer: "Dashboard ejecutivo y reportes mensuales incluyen KPIs categorizados en cuatro áreas: (1) Disponibilidad del Servicio: uptime de central (meta: 99.95%), eventos de pérdida de comunicación con sitios monitoreados, pruebas de supervisión exitosas vs. fallidas. (2) Desempeño Operativo: tiempo promedio de respuesta de operador tras recepción de señal (meta: < 45 segundos), tiempo promedio de contacto telefónico a cliente (meta: < 60 segundos), distribución de eventos por horario, ranking de sitios con mayor número de eventos. (3) Calidad de Verificación: tasa de falsas alarmas (meta: < 5% del total de eventos), tasa de alarmas verificadas como reales que requirieron respuesta, efectividad de verificación secuencial/audio/video. (4) Cumplimiento de SLA: porcentaje de eventos atendidos dentro de SLA establecido (meta: > 98%), eventos fuera de SLA con análisis de causa raíz, acciones correctivas implementadas. Formatos descargables en PDF ejecutivo y Excel detallado."
-  - question: "¿Cómo se realiza migración desde central actual sin interrupción del servicio de monitoreo?"
-    answer: "Proceso de migración enterprise sin downtime sigue metodología de 5 fases: (Fase 1) Auditoría Técnica Remota - cliente proporciona marca/modelo de panel actual, número de zonas, tipo de comunicador. Verificamos compatibilidad (95% de paneles comerciales son compatibles vía Contact ID o SIA). (Fase 2) Visita de Sitio - técnico certificado inspecciona panel físicamente, documenta configuración con fotografías, realiza pruebas de señalización. (Fase 3) Programación de Migración - se agenda fecha/hora de reprogramación (típicamente horario no laboral). Tiempo estimado: 1-2 horas por sitio. Cliente mantiene monitoreo con central actual hasta completar migración. (Fase 4) Reprogramación y Pruebas - técnico modifica parámetros del panel, realiza pruebas exhaustivas. (Fase 5) Periodo de Doble Monitoreo (Opcional) - para instalaciones críticas, configuramos panel para reportar SIMULTÁNEAMENTE a nuestra central Y central anterior durante 30 días antes de cancelar contrato anterior."
-  - question: "¿Qué nivel de integración es posible con sistemas empresariales existentes (CCTV, control acceso, BMS)?"
-    answer: "Nuestra plataforma de monitoreo soporta integración bidireccional con sistemas empresariales mediante protocolos estándar de la industria: (1) Integración con VMS (Video Management Systems): compatibilidad nativa con Milestone XProtect, Genetec Security Center, Hikvision iVMS, Avigilon Control Center. Cuando alarma se dispara, operador visualiza automáticamente cámaras de zona afectada. (2) Integración con Control de Acceso: sincronización con sistemas Lenel OnGuard, HID VertX, Software House C-CURE, SALTO. Permite correlación de eventos: si alarma de intrusión se activa pero sistema de acceso muestra credencial válida presentada 30 segundos antes, operador puede ajustar protocolo de verificación. (3) Integración con BMS (Building Management Systems): recepción de señales de sistemas HVAC, detección de temperatura/humedad en salas de servidores, status de plantas eléctricas. (4) API REST para Integraciones Personalizadas: clientes con capacidades de desarrollo pueden consumir nuestra API para integrar eventos de alarma con sistemas ERP o plataformas SIEM corporativas."
+  - question: "¿Qué pasa exactamente cuando se activa mi alarma a las 3 AM?"
+    answer: "El panel de alarma envía la señal a nuestra central en menos de 5 segundos. Un operador la recibe, verifica el tipo de sensor activado y llama al sitio primero — si no contestan o dan código incorrecto, te llaman a ti con la información exacta de qué sensor se activó. Si confirmas emergencia o no contestas, activamos el protocolo: guardia de caseta, unidad de respuesta o policía según lo que hayas autorizado. Todo en menos de 90 segundos desde que sonó la alarma."
+  - question: "¿Cuántas veces me van a llamar por falsas alarmas?"
+    answer: "Muy poco — esa es la razón de existir de la verificación humana. Cuando el operador detecta que el evento es una mascota, una corriente de aire o que olvidaste desarmar, lo resuelve sin molestarte. Solo recibes llamada cuando hay algo que genuinamente necesita tu atención. En promedio nuestros clientes reciben 1-2 alertas reales por mes."
+  - question: "¿El sistema funciona si se va la luz o si cortan el teléfono?"
+    answer: "Sí en ambos casos. Ante apagón: el panel tiene batería de 24 horas de respaldo, sigue detectando y reportando. Ante corte de cable o fibra: la comunicación automáticamente cambia al canal celular 4G en menos de 5 segundos. Puedes cortar el teléfono, el internet y la luz — el sistema sigue operando."
+  - question: "¿Es compatible con el sistema de alarma que ya tengo instalado?"
+    answer: "En el 95% de los casos sí. Hacemos una revisión técnica gratuita de tu panel actual. Si es compatible, solo reprogramamos el comunicador para que reporte a nuestra central — sin cambiar sensores, sin obra, sin gasto adicional. Solo en casos de paneles muy antiguos o sistemas analógicos es necesario actualizar."
+  - question: "¿Puedo armar y desarmar el sistema desde mi celular?"
+    answer: "Sí. La app te permite armar y desarmar remotamente, revisar el historial completo de eventos (quién armó, a qué hora), recibir notificaciones push de cualquier actividad, y agregar o quitar usuarios con acceso. Útil para verificar que el personal doméstico o empleados hayan activado la alarma al salir."
+  - question: "¿Qué diferencia tienen si mi vecino ya tiene monitoreo con otra empresa?"
+    answer: "La diferencia principal es la verificación humana antes de cualquier acción. Muchas empresas de monitoreo te llaman automáticamente al primer evento sin verificar — lo que significa llamadas a las 3 AM por tu gato. Nosotros verificamos primero. Además tenemos permiso SSC vigente, central propia en CDMX (no subcontratada), y tiempos de respuesta documentados y garantizados en contrato."
+  - question: "¿Cuánto tiempo tarda la instalación y qué incluye?"
+    answer: "La instalación residencial típica tarda entre 4 y 6 horas. Incluye: sensores en todas las puertas y ventanas que definas, detectores de movimiento PIR en puntos clave, sirena interior y exterior, teclado de control, comunicador dual, y configuración completa de la app en tu celular. Al terminar el técnico te explica cómo funciona todo y queda activo el monitoreo ese mismo día."
+draft: false
 ---
 
-## Monitoreo de Alarmas 24/7 en CDMX
-
-### Central Certificada UL con Verificación Multi-Etapa — Reducción del 87% en Falsas Alarmas
-
-Plataforma empresarial de detección de intrusión, incendio y emergencias. Protocolos Contact ID y SIA DC-09 con comunicación encriptada AES-256.
-
-### Certificación UL 827 con estándares rigurosos
-
-Las centrales de monitoreo corporativas operan bajo certificación UL 827 que establece estándares rigurosos de redundancia, personal capacitado y protocolos de verificación. Nuestra central procesa señales desde sistemas de detección de intrusión, incendio y emergencias, discriminando eventos mediante verificación secuencial multi-sensor, audio bidireccional y video en tiempo real.
-
-### Comunicación dual a prueba de sabotaje
-
-La arquitectura de comunicación dual (GPRS/celular primario + IP/Ethernet secundario) con protocolo encriptado AES-256 end-to-end garantiza que señales críticas lleguen a la central incluso ante sabotaje. Cada evento genera timestamp inmutable, grabación de audio y registro de acciones para auditoría y cumplimiento normativo.
-
-Central certificada UL con tecnología de punta para detección de intrusión, incendio y emergencias en CDMX
-
-Operación 24/7/365 con operadores capacitados y protocolos estándar
-
-Personal capacitado con verificación multi-etapa de eventos
-
-Cumplimiento normativo NOM-002-STPS con respuesta inmediata
-
-Sistemas de última generación con redundancia garantizada
-
-Integración CCTV para validación visual de eventos en vivo
-
-Respuesta inmediata ante situaciones de emergencia crítica
-
-App ejecutiva con notificaciones push y control remoto total
-
-Coordinación directa con C5, bomberos y protección civil
-
-Auditorías trimestrales y cumplimiento de estándares internacionales
-
-En el sector corporativo y empresarial, la diferencia entre una central de monitoreo que genera valor y una que solo genera costos está en la verificación profesional. Las centrales certificadas UL 827 no son solo vigilancia remota: son una inversión estratégica en reducción de riesgos operativos y cumplimiento normativo.
-
-Nuestra central de monitoreo certificada UL está diseñada para eliminar falsas alarmas que generan costos innecesarios mientras garantiza respuesta inmediata ante emergencias reales. Con protocolos Contact ID y SIA DC-09, operadores certificados 24/7 y arquitectura redundante, protegemos sus instalaciones con los más altos estándares de la industria.
-
-Más de 500 empresas confían en nuestra central certificada UL para monitoreo profesional 24/7/365 con verificación multi-etapa que reduce falsas alarmas y garantiza respuesta ante emergencias reales
-
-Nuestra central opera bajo certificación UL 827 (Central Station Alarm Services) que establece 127 requerimientos específicos de operación. Underwriters Laboratories audita trimestralmente: redundancia de equipos críticos, capacitación documentada de operadores, protocolos escritos para cada tipo de evento, simulacros de contingencia, bitácoras de operación con retención de 12 meses. Empresas reguladas (bancos, hospitales, gobierno) exigen esta certificación como requisito de contratación para cumplir con sus propias obligaciones normativas.
-
-Protocolo propietario de verificación multi-etapa antes de despachar respuesta: (1) Verificación secuencial automática - sistema espera 30-60 segundos para detectar activación de segundo sensor; (2) Verificación telefónica - operador llama a 2-3 contactos solicitando código de cancelación; (3) Verificación por audio - escucha en vivo mediante micrófonos bidireccionales; (4) Verificación por video - visualización de cámaras CCTV en tiempo real. Solo después de confirmar emergencia real mediante 2+ métodos se despacha respuesta. Clientes documentan reducción promedio 87% en falsas alarmas. Complementa con monitoreo CCTV profesional para seguridad integral.
-
-Recepción de señales mediante protocolos estandarizados Contact ID (Ademco) y SIA DC-09 garantiza compatibilidad con paneles de cualquier fabricante (DSC, Honeywell, Paradox, Bosch). Esto evita vendor lock-in y permite a empresas cambiar de proveedor de monitoreo sin reemplazar hardware. Protocolo propietario con encriptación AES-256 end-to-end disponible para clientes que requieren máxima seguridad y prevención de interceptación de señales.
-
-Cadenas retail con 10-500 tiendas implementan monitoreo centralizado para protección perimetral fuera de horario comercial. Sistema típico incluye contactos magnéticos en puertas, sensores PIR en áreas de caja/bodega, detectores de rotura de vidrio en vitrinas. Protocolo de verificación secuencial: ante activación de sensor perimetral, sistema espera 30 segundos para detectar sensor de movimiento interior - si ambos se disparan en secuencia lógica, operador inicia verificación. Casos documentados: cadena farmacéutica con 63 sucursales redujo falsas alarmas de 12 eventos semanales a 1.5 eventos semanales, ahorrando $180,000 MXN anuales en respuestas innecesarias.
-
-Instalaciones críticas de TI requieren detección ultra-temprana mediante sistemas VESDA (Very Early Smoke Detection Apparatus) que detectan partículas de combustión 60 minutos antes que detectores convencionales. Integración con central permite coordinar: notificación inmediata a equipo técnico, activación de apagado controlado de servidores, coordinación con bomberos especializados, supervisión de sistemas de supresión FM-200/Inergen. SLA crítico: notificación en < 30 segundos, coordinación con bomberos en < 90 segundos. Criticidad: cada minuto de inactividad en datacenter financiero puede costar $100,000+ USD en pérdidas operativas.
-
-Bancos, casas de bolsa y SOFIPOs deben cumplir Circular Única de Bancos (CNBV) que establece requerimientos específicos para sistemas de alarma monitoreada: comunicación dual redundante, batería de respaldo con autonomía mínima 12 horas, pruebas de supervisión cada 24 horas, coordinación documentada con autoridades. Monitoreo especializado incluye: detección de intrusión en bóvedas con verificación obligatoria por video, botones de pánico bajo mostradores con respuesta prioritaria (código 10-33), detección de apertura de puertas blindadas fuera de horario. Auditorías CNBV solicitan bitácoras completas con evidencia de tiempos de respuesta - proporcionamos reportes forenses con timestamp certificado, grabaciones de audio y logs de coordinación con policía bancaria.
-
-Instalaciones de salud implementan sistemas zonificados de detección de incendio conforme a NOM-002-STPS-2010 con señalización diferenciada por criticidad: Zona Roja (quirófanos, UCI, neonatología) con detectores direccionables que identifican sensor específico y requieren verificación humana antes de activar evacuación; Zona Amarilla (hospitalización general); Zona Verde (áreas administrativas). Central mantiene planos digitales con ubicación exacta de cada detector, permitiendo informar a brigada: "Detector activado en Piso 3, Ala Este, Quirófano 2". Coordinación directa con bomberos especializados en incendios hospitalarios. Criticidad: evacuación incorrecta de pacientes en estado crítico puede ser más peligrosa que incendio contenido.
-
-Campus corporativos con 5-20 edificios implementan plataforma unificada de gestión de alarmas que integra: detección de intrusión perimetral, control de acceso corporativo, detección de incendio NOM-002-STPS, botones de pánico en recepciones/salas de juntas. Central recibe señales de todos los edificios en consola única, permitiendo correlacionar eventos: si control de acceso muestra que empleado presentó credencial válida en Edificio A a las 7:45 PM pero alarma de movimiento se activa en Edificio B a las 8:00 PM donde no tiene acceso, se genera alerta de inconsistencia. Reportes ejecutivos mensuales incluyen: total de eventos por edificio, tiempo promedio de respuesta, tasa de falsas alarmas, recomendaciones de optimización. Empresas Fortune 500 exigen certificación UL como requisito de cumplimiento corporativo.
-
-Condominios verticales y fraccionamientos privados ofrecen servicio de monitoreo de alarmas como amenidad de valor agregado. Cada residencia cuenta con panel conectado a central, permitiendo a propietarios armar/desarmar vía app móvil, recibir notificaciones de eventos, visualizar historial de armado/desarmado (útil para verificar que empleados domésticos activaron alarma al salir). Protocolo de verificación residencial: ante activación, operador llama solicitando código de cancelación - si propietario confirma emergencia real, se despacha guardia de caseta O unidad móvil. Valor diferenciador: desarrollos con monitoreo profesional tienen valuación 8-12% superior versus desarrollos sin este servicio según análisis de mercado inmobiliario premium CDMX. Conoce más en seguridad para condominios.
-
-Plantas industriales con almacenes de materia prima/producto terminado implementan protección perimetral multicapa: sensores PIR para exteriores (inmunes a animales pequeños), contactos magnéticos en portones de carga, sensores de vibración en cercas, barreras de microondas en zonas críticas. Monitoreo 24/7 detecta intentos de intrusión durante fines de semana largos o periodos vacacionales. Integración con CCTV permite verificación visual: cuando sensor perimetral se activa, operador visualiza cámaras de zona afectada para confirmar si es intrusión real o falsa alarma por animales/vegetación. Casos documentados: planta automotriz detectó intento de robo de cable de cobre en fin de semana - monitoreo alertó a seguridad que detuvo intrusos antes de causar daño (pérdida evitada: $850,000 MXN en material y días de producción detenida). Complementa con patrullaje preventivo para cobertura perimetral completa.
-
-Configuraciones escalables desde instalaciones individuales hasta plataformas multi-sitio para corporativos con certificación UL
-
-Infraestructura redundante y protocolos de operación que garantizan disponibilidad 24/7/365
-
-Certificación Underwriters Laboratories con auditorías trimestrales de cumplimiento de estándares
-
-Compatibilidad universal con paneles de todas las marcas. Supervisión de línea cada 60 segundos
-
-Canal primario GPRS/3G/4G celular + canal secundario IP/Ethernet. Failover automático < 5 seg
-
-Software de administración de alarmas con base de datos redundante. Capacidad: 10,000+ eventos simultáneos
-
-Personal capacitado en protocolos de verificación, manejo de emergencias y coordinación con autoridades
-
-Todas las llamadas de verificación grabadas con timestamp y almacenadas por 12 meses para auditoría
-
-Verificación visual en tiempo real mediante integración con Milestone, Genetec, Hikvision
-
-Contacto telefónico < 60 seg, despacho unidades móviles < 120 seg, coordinación C5 < 180 seg
-
-Dashboard en tiempo real, historial de eventos, reportes PDF/Excel, configuración de contactos
-
-UPS 10 KVA + planta generadora 25 KVA. Doble ISP con balanceo. Clúster activo-activo con replicación
-
-Complete el formulario para recibir evaluación profesional de su sistema actual y propuesta personalizada de monitoreo 24/7
-
-Respuesta en menos de 24 horas · Central Certificada UL 827 · Cobertura Nacional
-
-Credenciales, metodologías y casos documentados que respaldan nuestra operación empresarial certificada UL
-
-Underwriters Laboratories certifica nuestra central bajo estándar UL 827 que establece 127 requerimientos específicos de operación: redundancia de equipos críticos, capacitación documentada de operadores, protocolos de verificación por escrito, simulacros de contingencia trimestrales. Auditorías sorpresa de UL verifican cumplimiento continuo - certificación se revoca si se detectan no conformidades.
-
-Empresas reguladas (bancos, hospitales, gobierno) exigen esta certificación como requisito de contratación. Proporcionamos copia certificada de licencia UL vigente con cada propuesta comercial.
-
-Arquitectura de alta disponibilidad con componentes redundantes N+1: doble ISP (Telmex fibra óptica + Totalplay empresarial) con balanceo automático, servidores en clúster activo-activo con replicación sincrónica, UPS dual de 10 KVA cada uno, planta generadora diésel 25 KVA con tanque de 500 litros (autonomía 72 horas). Sistema de gestión de edificios (BMS) monitorea temperatura de sala de servidores, humedad relativa, detección de humo y fugas de agua.
-
-RTO (Recovery Time Objective) garantizado < 5 segundos ante falla de componente primario. Certificación ISO 22301 (Continuidad de Negocio) documenta nuestros procesos de recuperación ante desastres.
-
-Personal de monitoreo recibe 120 horas anuales de capacitación certificada en: protocolos de verificación multi-etapa, manejo de situaciones de crisis (secuestro, amenaza de bomba, tirador activo), primeros auxilios psicológicos para atención de pánico, uso de software AMS (Alarm Management System), y coordinación con autoridades. Evaluaciones trimestrales de desempeño miden: tiempo promedio de respuesta, tasa de error en clasificación de eventos, satisfacción de clientes en llamadas de verificación.
-
-Operadores deben aprobar examen de re-certificación anual o son removidos del puesto. Turnos rotativos 8 horas con máximo 2 operadores por consola para evitar fatiga operativa.
-
-Metodología propietaria de verificación multi-etapa antes de despachar respuesta: (1) Verificación secuencial automática - sistema espera 30-60 segundos para detectar activación de segundo sensor que confirme evento; (2) Verificación telefónica - operador llama a 2-3 contactos registrados solicitando código de cancelación verbal; (3) Verificación por audio - escucha en vivo del sitio mediante micrófonos bidireccionales para detectar voces, ruidos de intrusión o silencio; (4) Verificación por video - visualización de cámaras CCTV de zona afectada en tiempo real.
-
-Solo después de confirmar emergencia real mediante 2+ métodos se despacha respuesta física. Clientes documentan reducción promedio 87% en falsas alarmas versus sistema anterior.
-
-Convenios formales de colaboración con: C5 CDMX (Centro de Comando y Control) para transferencia directa de llamadas de emergencia con geolocalización, Heroico Cuerpo de Bomberos para eventos de incendio con datos de materiales peligrosos si aplica, Protección Civil para evacuaciones y emergencias químicas. Operadores tienen números directos de corporaciones (no 911 público) que reducen tiempo de coordinación. Para clientes en zona conurbada EdoMex, coordinamos con C4 estatal.
-
-Bitácoras de coordinación con autoridades son proporcionadas a clientes para auditorías internas y cumplimiento regulatorio. En eventos críticos, mantenemos línea telefónica abierta con cliente + autoridades hasta resolución completa.
-
-Dashboard corporativo permite a clientes multi-sitio visualizar: mapa con status en tiempo real de cada ubicación (armada/desarmada/en alarma), listado de últimos 100 eventos con filtros por tipo/sitio/fecha, gráficas de tendencias (eventos por hora del día, día de semana, tipo de sensor), ranking de sitios con mayor incidencia de falsas alarmas. Reportes automatizados mensuales incluyen: total de eventos por categoría (intrusión/incendio/pánico/técnico), tiempo promedio de respuesta de operador, tasa de falsas alarmas, recomendaciones de optimización.
-
-Exportación a PDF/Excel para presentaciones a dirección general. API REST permite integración con sistemas de gestión empresarial (ERP, CMMS) para clientes con capacidades técnicas avanzadas.
-
-Plataformas tecnológicas de seguridad que proporcionan visibilidad total, respuesta inmediata y control operativo 24/7. Sistemas integrados que transforman datos de seguridad en inteligencia accionable.
-
-Una central de monitoreo efectiva no solo recibe señales: correlaciona eventos, valida amenazas y coordina respuestas multiagencia en segundos. Nuestra central certificada UL integra sistemas de alarma con verificación de video CCTV, rastreo GPS de unidades de respuesta, y protocolos de escalación directa con C5, Bomberos y Protección Civil. Cada evento se documenta con timestamp forense certificable para cumplimiento legal y análisis posterior.
-
-Con operadores bilingües certificados monitoreando más de 1,200 puntos simultáneamente, garantizamos tiempos de respuesta consistentes bajo 60 segundos. Redundancia de comunicaciones (IP, celular, radio) asegura conectividad ante fallas de red. Dashboards ejecutivos permiten supervisión remota de instalaciones desde smartphone. Desde sucursales retail hasta campus industriales, escalamos capacidad de monitoreo manteniendo estándares enterprise de calidad y documentación.
-
-Empresas líderes en Polanco, Santa Fe, Reforma e Interlomas ya entendieron que el monitoreo de alarmas certificado UL no es un gasto sino una inversión en reducción de riesgos y cumplimiento normativo. No permita que falsas alarmas generen costos innecesarios o que emergencias reales pasen desapercibidas por falta de verificación profesional.
-
-Auditorías trimestrales de cumplimiento de estándares
-
-Verificación multi-etapa con operadores certificados
-
-Respuesta < 60 seg y coordinación directa con C5
-
+<div class="prose-intro">
+  <p><strong>ORIGINS Private Security</strong> opera una central de monitoreo de alarmas 24/7 en CDMX con un principio fundamental: <strong>verificamos antes de molestarte</strong>. Cuando tu alarma se activa, un operador certificado revisa qué pasó — incluso cruzando la señal con nuestro sistema de <a href="/servicios/vigilancia-remota-cctv">vigilancia remota CCTV</a> — antes de llamarte. Si es tu empleada que olvidó desarmar, lo resuelve sin despertarte. Si es real, te contactamos con evidencia y activamos el protocolo en menos de 90 segundos.</p>
+  <div class="prose-highlight">
+    <strong>El problema con el monitoreo ordinario:</strong> La mayoría de los sistemas te llaman automáticamente ante cualquier evento — sin verificar. Resultado: llamadas a las 3 AM por tu gato, tu vecino o una corriente de aire. Con ORIGINS, solo recibes alertas cuando importa. Además, en propiedades con <a href="/servicios/guardias-intramuros">guardias intramuros</a>, coordinamos la respuesta física inmediata desde la misma central.
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Impacto Real</span>
+  <h2>Números que Hablan por Sí Solos</h2>
+  <p class="prose-section-sub">Métricas reales de nuestra operación en condominios y empresas de CDMX — medidas, documentadas y garantizadas en contrato.</p>
+</div>
+
+<div class="alarm-stats">
+  <div class="alarm-stat">
+    <span class="alarm-stat__num">90</span>
+    <span class="alarm-stat__unit">seg</span>
+    <p class="alarm-stat__label">Tiempo máximo de respuesta desde activación hasta protocolo activo</p>
+  </div>
+  <div class="alarm-stat alarm-stat--accent">
+    <span class="alarm-stat__num">24</span>
+    <span class="alarm-stat__unit">hrs</span>
+    <p class="alarm-stat__label">Autonomía de la batería de respaldo ante cortes de energía</p>
+  </div>
+  <div class="alarm-stat">
+    <span class="alarm-stat__num">5</span>
+    <span class="alarm-stat__unit">seg</span>
+    <p class="alarm-stat__label">Tiempo de failover automático a canal celular 4G ante fallo de red</p>
+  </div>
+  <div class="alarm-stat alarm-stat--accent">
+    <span class="alarm-stat__num">100</span>
+    <span class="alarm-stat__unit">%</span>
+    <p class="alarm-stat__label">Verificación humana antes de cualquier alerta o despacho de respuesta</p>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Cómo Funciona</span>
+  <h2>Del Sensor a la Respuesta en 90 Segundos</h2>
+  <p class="prose-section-sub">Un protocolo probado con tiempos definidos — sin improvisación, sin burocracia, sin llamadas innecesarias.</p>
+</div>
+
+<div class="cctv-process">
+  <div class="cctv-process__step">
+    <span class="cctv-process__num">01</span>
+    <div class="cctv-process__content">
+      <strong>Sensor activa — central recibe</strong>
+      <p>El panel envía la señal a nuestra central en menos de 5 segundos. El operador recibe el evento con zona exacta, tipo de sensor y hora.</p>
+    </div>
+  </div>
+  <div class="cctv-process__arrow">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </div>
+  <div class="cctv-process__step">
+    <span class="cctv-process__num">02</span>
+    <div class="cctv-process__content">
+      <strong>Verificación humana inmediata</strong>
+      <p>El operador analiza: ¿qué sensor? ¿a qué hora? ¿está integrado con CCTV? Llama al sitio y pide código de cancelación. 30 segundos.</p>
+    </div>
+  </div>
+  <div class="cctv-process__arrow">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </div>
+  <div class="cctv-process__step">
+    <span class="cctv-process__num">03</span>
+    <div class="cctv-process__content">
+      <strong>Resolución o protocolo activo</strong>
+      <p>Falsa alarma: resuelta sin molestarte. Emergencia real: te contactamos con evidencia y activamos el protocolo acordado en contrato.</p>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Sensores y Detección</span>
+  <h2>Detectamos Todo lo que Amenaza tu Propiedad</h2>
+  <p class="prose-section-sub">Un sistema completo que cubre todas las formas de entrada y todas las emergencias — no solo movimiento.</p>
+</div>
+
+<div class="sensor-grid">
+
+  <div class="sensor-card sensor-card--intrusion">
+    <div class="sensor-card__header">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span>Intrusión</span>
+    </div>
+    <ul>
+      <li>Contactos magnéticos en puertas y ventanas</li>
+      <li>Detectores de movimiento PIR (ignoran mascotas hasta 25kg)</li>
+      <li>Detectores de rotura de vidrio</li>
+      <li>Sensores de vibración en muros y rejas</li>
+    </ul>
+  </div>
+
+  <div class="sensor-card sensor-card--fire">
+    <div class="sensor-card__header">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg>
+      <span>Incendio y Humo</span>
+    </div>
+    <ul>
+      <li>Detectores de humo fotoeléctricos</li>
+      <li>Detectores de calor de tasa fija</li>
+      <li>Detectores de gas LP y CO</li>
+      <li>Sensores de temperatura extrema</li>
+    </ul>
+  </div>
+
+  <div class="sensor-card sensor-card--panic">
+    <div class="sensor-card__header">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span>Emergencia y Pánico</span>
+    </div>
+    <ul>
+      <li>Botones de pánico fijos en puntos clave</li>
+      <li>Botones inalámbricos portátiles</li>
+      <li>Código de coacción en teclado</li>
+      <li>Botón de emergencia médica</li>
+    </ul>
+  </div>
+
+  <div class="sensor-card sensor-card--flood">
+    <div class="sensor-card__header">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      <span>Inundación y Agua</span>
+    </div>
+    <ul>
+      <li>Sensores de inundación en sótanos y cuartos de máquinas</li>
+      <li>Detección de fuga en cisternas y tinacos</li>
+      <li>Alertas de humedad excesiva</li>
+      <li>Monitoreo de bombas de achique</li>
+    </ul>
+  </div>
+
+</div>
+
+---
+
+<div class="prose-section-block">
+  <div class="prose-section-block__header">
+    <span class="prose-section-block__num">01</span>
+    <div>
+      <span class="prose-section-block__label">Comunicación</span>
+      <h3 class="prose-section-block__title">Canal Dual — Indestructible por Diseño</h3>
+    </div>
+  </div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>La mayoría de sistemas tienen un solo canal de comunicación. Si falla, el panel queda mudo — sin que nadie lo sepa. Nuestro sistema usa <strong>dos canales simultáneos e independientes</strong>: si uno falla, el otro toma el control automáticamente en menos de 5 segundos.</p>
+      <ul>
+        <li><strong>Canal primario:</strong> internet (fibra o cable) — alta velocidad y sin costo de datos</li>
+        <li><strong>Canal secundario:</strong> celular 4G LTE — activo ante cortes de cable, fibra o sabotaje</li>
+        <li>Comunicación encriptada — imposible interceptar o manipular señales</li>
+        <li>Supervisión de línea cada 60 segundos — central detecta si el panel deja de reportar</li>
+        <li>Alerta proactiva si se pierde comunicación — te avisamos antes de que sepas que hay problema</li>
+        <li>Sin punto único de fallo — sistema diseñado para operar en condiciones adversas</li>
+      </ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/img-monitoreo-de-alarmas/comunicacion-dual-alarma-celular.avif" alt="Comunicación dual alarma celular 4G y línea fija CDMX" loading="lazy" width="640" height="480" />
+      <img src="/img/img-monitoreo-de-alarmas/backup-bateria-sistema-alarma.avif" alt="Batería de respaldo 24 horas para sistema de alarma" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-block">
+  <div class="prose-section-block__header">
+    <span class="prose-section-block__num">02</span>
+    <div>
+      <span class="prose-section-block__label">Central de Operaciones</span>
+      <h3 class="prose-section-block__title">Nuestra Central — Certificada y Propia en CDMX</h3>
+    </div>
+  </div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>No subcontratamos el monitoreo a un tercero. Operamos <strong>nuestra propia central en CDMX</strong> con operadores certificados que conocen los protocolos de cada cliente. Esto significa respuesta más rápida, más contexto y mayor responsabilidad.</p>
+      <ul>
+        <li>Central propia con certificación UL — no es un call center subcontratado</li>
+        <li>UPS + planta generadora con 72 horas de autonomía ante apagones</li>
+        <li>Doble conexión a internet de proveedores distintos</li>
+        <li>Operadores en turnos de 8 horas para eliminar fatiga operativa</li>
+        <li>Bitácoras digitales de cada evento — disponibles para auditoría</li>
+        <li>Integración con CCTV: el operador ve tus cámaras al momento de la alerta</li>
+      </ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/img-monitoreo-de-alarmas/central-monitoreo-alarmas-24-7-cdmx.avif" alt="Central de monitoreo de alarmas 24/7 en CDMX ORIGINS" loading="lazy" width="640" height="480" />
+      <img src="/img/img-monitoreo-de-alarmas/operadores-certificados-monitoreo-alarmas.avif" alt="Operadores certificados en central de monitoreo de alarmas" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-block">
+  <div class="prose-section-block__header">
+    <span class="prose-section-block__num">03</span>
+    <div>
+      <span class="prose-section-block__label">Respuesta</span>
+      <h3 class="prose-section-block__title">Protocolos de Respuesta — Sin Improvisación</h3>
+    </div>
+  </div>
+  <div class="prose-two-col">
+    <div class="prose-two-col__text">
+      <p>Cada tipo de evento tiene un protocolo escrito y probado. El operador no improvisa — sigue un proceso documentado que garantiza la respuesta correcta en el tiempo correcto, con los recursos correctos.</p>
+      <ul>
+        <li><strong>Intrusión verificada:</strong> contacto inmediato + despacho de guardia o unidad de respuesta</li>
+        <li><strong>Botón de pánico:</strong> máxima prioridad — sin verificación previa, acción inmediata</li>
+        <li><strong>Incendio/humo:</strong> coordinación directa con bomberos con dirección y tipo de edificio</li>
+        <li><strong>Falla técnica:</strong> alerta preventiva a cliente + despacho de técnico en horario hábil</li>
+        <li><strong>Código de coacción:</strong> respuesta silenciosa sin alertar al agresor</li>
+        <li>Historial de cada evento disponible en la app con timestamp certificado</li>
+      </ul>
+    </div>
+    <div class="prose-two-col__img">
+      <img src="/img/img-monitoreo-de-alarmas/protocolo-escalacion-incidentes.avif" alt="Protocolo de escalación y respuesta ante incidentes de alarma" loading="lazy" width="640" height="480" />
+      <img src="/img/img-monitoreo-de-alarmas/respuesta-rapida-emergencias-alarma.avif" alt="Respuesta rápida ante emergencias con sistema de alarma CDMX" loading="lazy" width="640" height="480" />
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Tiempos de Respuesta</span>
+  <h2>Qué Pasa y en Cuánto Tiempo</h2>
+  <p class="prose-section-sub">Cada escenario con su protocolo y su tiempo garantizado — sin letra pequeña.</p>
+</div>
+
+<div class="response-matrix">
+  <div class="response-matrix__header">
+    <span>Tipo de evento</span>
+    <span>Tiempo de respuesta</span>
+    <span>Protocolo del operador</span>
+  </div>
+  <div class="response-matrix__row response-matrix__row--red">
+    <div class="response-matrix__event">
+      <span class="rm-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      </span>
+      <span>Intrusión verificada</span>
+    </div>
+    <div class="response-matrix__time"><span class="rm-badge rm-badge--red">&lt; 90 seg</span></div>
+    <div class="response-matrix__action">Verificación → contacto con evidencia → despacho de unidad o policía</div>
+  </div>
+  <div class="response-matrix__row response-matrix__row--red">
+    <div class="response-matrix__event">
+      <span class="rm-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      </span>
+      <span>Botón de pánico</span>
+    </div>
+    <div class="response-matrix__time"><span class="rm-badge rm-badge--red">&lt; 30 seg</span></div>
+    <div class="response-matrix__action">Sin verificación previa — acción inmediata + despacho de unidad</div>
+  </div>
+  <div class="response-matrix__row response-matrix__row--amber">
+    <div class="response-matrix__event">
+      <span class="rm-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg>
+      </span>
+      <span>Alarma de humo o fuego</span>
+    </div>
+    <div class="response-matrix__time"><span class="rm-badge rm-badge--amber">&lt; 60 seg</span></div>
+    <div class="response-matrix__action">Contacto al propietario + coordinación directa con bomberos</div>
+  </div>
+  <div class="response-matrix__row response-matrix__row--orange">
+    <div class="response-matrix__event">
+      <span class="rm-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </span>
+      <span>Inundación detectada</span>
+    </div>
+    <div class="response-matrix__time"><span class="rm-badge rm-badge--orange">&lt; 2 min</span></div>
+    <div class="response-matrix__action">Alerta al propietario con zona exacta del sensor activado</div>
+  </div>
+  <div class="response-matrix__row response-matrix__row--blue">
+    <div class="response-matrix__event">
+      <span class="rm-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </span>
+      <span>Pérdida de comunicación</span>
+    </div>
+    <div class="response-matrix__time"><span class="rm-badge rm-badge--blue">Automático</span></div>
+    <div class="response-matrix__action">Alerta proactiva al cliente + despacho técnico preventivo</div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Comparativa</span>
+  <h2>Monitoreo ORIGINS vs. Sin Monitoreo Profesional</h2>
+  <p class="prose-section-sub">Lo que parece un gasto es en realidad lo que evita pérdidas mayores — y te deja dormir tranquilo.</p>
+</div>
+
+<div class="compare-table">
+  <div class="compare-table__head">
+    <div class="compare-table__head-feature">Situación</div>
+    <div class="compare-table__head-col compare-table__head-col--bad">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+      Sin monitoreo profesional
+    </div>
+    <div class="compare-table__head-col compare-table__head-col--good">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+      Con ORIGINS 24/7
+    </div>
+  </div>
+  <div class="compare-table__row">
+    <div class="compare-table__feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Intrusión a las 3 AM</div>
+    <div class="compare-table__cell compare-table__cell--bad">Te enteras en la mañana — cuando el daño ya está hecho</div>
+    <div class="compare-table__cell compare-table__cell--good">Respuesta en 90 seg — interceptada antes de que avancen</div>
+  </div>
+  <div class="compare-table__row">
+    <div class="compare-table__feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0011 12c0-1.38-.5-2-1-3C9 7 10 5 12 4c.5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 11-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 002.5 2.5z"/></svg>Conato de incendio</div>
+    <div class="compare-table__cell compare-table__cell--bad">Nadie actúa — puede convertirse en incendio total</div>
+    <div class="compare-table__cell compare-table__cell--good">Bomberos coordinados en &lt; 60 seg desde detección</div>
+  </div>
+  <div class="compare-table__row">
+    <div class="compare-table__feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>Corte de luz o sabotaje</div>
+    <div class="compare-table__cell compare-table__cell--bad">Sistema apagado — sin protección y sin aviso</div>
+    <div class="compare-table__cell compare-table__cell--good">UPS + 4G activo — protección continua y alerta automática</div>
+  </div>
+  <div class="compare-table__row">
+    <div class="compare-table__feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>Falsas alarmas frecuentes</div>
+    <div class="compare-table__cell compare-table__cell--bad">Te despiertan por gatos, viento o empleados que olvidan</div>
+    <div class="compare-table__cell compare-table__cell--good">Verificación previa — solo alertas reales con contexto</div>
+  </div>
+  <div class="compare-table__row">
+    <div class="compare-table__feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>Evidencia para aseguradora</div>
+    <div class="compare-table__cell compare-table__cell--bad">Sin registros verificables — difícil acreditar el siniestro</div>
+    <div class="compare-table__cell compare-table__cell--good">Bitácora digital con timestamp certificado por evento</div>
+  </div>
+  <div class="compare-table__row">
+    <div class="compare-table__feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Inundación nocturna</div>
+    <div class="compare-table__cell compare-table__cell--bad">Daños extensos al encontrarla horas después</div>
+    <div class="compare-table__cell compare-table__cell--good">Alerta inmediata con zona exacta — daño mínimo contenido</div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Para Quién es</span>
+  <h2>Tu Tipo de Propiedad, tu Sistema</h2>
+  <p class="prose-section-sub">Diseñamos la solución de alarma a la medida de cada propiedad — no vendemos paquetes genéricos.</p>
+</div>
+
+<div class="profile-grid">
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Condominio vertical</strong>
+      <p class="profile-card__need">Áreas comunes, bodegas y cuarto de máquinas</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Alarma por zonas</span>
+        <span class="profile-tag">Pánico en lobby</span>
+        <span class="profile-tag">Sensores de inundación</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Casa o residencia</strong>
+      <p class="profile-card__need">Protección perimetral y familiar completa</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Puertas y ventanas</span>
+        <span class="profile-tag">PIR inteligente</span>
+        <span class="profile-tag">Botón de pánico</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Comercio y retail</strong>
+      <p class="profile-card__need">Protección nocturna y evidencia de incidentes</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Horario programado</span>
+        <span class="profile-tag">Sensor caja fuerte</span>
+        <span class="profile-tag">Contacto administrador</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Oficina corporativa</strong>
+      <p class="profile-card__need">Áreas sensibles, servidores y acceso nocturno</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Zonas por depto.</span>
+        <span class="profile-tag">Integración accesos</span>
+        <span class="profile-tag">Historial por usuario</span>
+      </div>
+    </div>
+  </div>
+  <div class="profile-card profile-card--highlight">
+    <div class="profile-card__icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+    </div>
+    <div class="profile-card__body">
+      <strong class="profile-card__name">Bodega, almacén o planta</strong>
+      <p class="profile-card__need">Perímetro extenso con múltiples puntos de acceso</p>
+      <div class="profile-card__solution">
+        <span class="profile-tag">Cobertura perimetral</span>
+        <span class="profile-tag">Sensores de vibración</span>
+        <span class="profile-tag">Barreras de microondas</span>
+        <span class="profile-tag">Integración CCTV</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Proceso</span>
+  <h2>Activo en 48 Horas — Sin Obra Invasiva</h2>
+  <p class="prose-section-sub">Desde el diagnóstico hasta el monitoreo activo en un proceso limpio, rápido y sin sorpresas.</p>
+</div>
+
+<div class="prose-steps">
+  <div class="prose-step">
+    <span class="prose-step__num">01</span>
+    <div class="prose-step__content">
+      <strong>Evaluación técnica gratuita — en sitio o remota</strong>
+      <p>Un técnico revisa tu propiedad o evalúa tu sistema actual de forma remota. Identifica puntos vulnerables, número de zonas requeridas y compatibilidad con tu panel existente. Sin costo y sin compromiso.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">02</span>
+    <div class="prose-step__content">
+      <strong>Propuesta con plano de zonificación</strong>
+      <p>Recibes un plano con la ubicación exacta de cada sensor, el tipo de equipo, los protocolos de respuesta personalizados y la cotización detallada. Todo transparente antes de decidir.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">03</span>
+    <div class="prose-step__content">
+      <strong>Instalación en un día — sin obra invasiva</strong>
+      <p>Técnicos certificados instalan los sensores, el panel, la sirena y el comunicador dual. Los sensores inalámbricos no requieren perforaciones. Instalación residencial típica: 4 a 6 horas.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">04</span>
+    <div class="prose-step__content">
+      <strong>Programación y prueba total del sistema</strong>
+      <p>Configuramos cada zona, probamos todos los sensores y verificamos la comunicación con la central. Definimos los contactos de emergencia, los códigos de acceso y los protocolos personalizados.</p>
+    </div>
+  </div>
+  <div class="prose-step">
+    <span class="prose-step__num">05</span>
+    <div class="prose-step__content">
+      <strong>Monitoreo activo desde el primer día</strong>
+      <p>La central queda conectada al terminar la instalación. Configuramos la app en tu celular y recibes un reporte de las primeras 72 horas confirmando funcionamiento óptimo del sistema.</p>
+    </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Galería</span>
+  <h2>Instalaciones ORIGINS en Operación</h2>
+  <p class="prose-section-sub">Equipos, procesos y central — todo lo que protege tu propiedad las 24 horas del día.</p>
+</div>
+
+<div class="prose-gallery">
+  <figure>
+    <img src="/img/img-monitoreo-de-alarmas/central-monitoreo-alarmas-24-7-cdmx.avif" alt="Central de monitoreo de alarmas 24/7 propia en CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Central propia en CDMX — no subcontratada, no tercerizada</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-monitoreo-de-alarmas/panel-control-alarma-certificado.avif" alt="Panel de control de alarma certificado para condominios CDMX" loading="lazy" width="640" height="480" />
+    <figcaption>Panel de control certificado — compatible con todos los fabricantes principales</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-monitoreo-de-alarmas/app-control-alarma-smartphone.avif" alt="App de control de alarma desde smartphone en tiempo real" loading="lazy" width="640" height="480" />
+    <figcaption>App nativa iOS y Android — arma, desarma y recibe alertas en tiempo real</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-monitoreo-de-alarmas/sensores-puerta-ventana-magneticos.avif" alt="Sensores magnéticos para puertas y ventanas en condominios" loading="lazy" width="640" height="480" />
+    <figcaption>Sensores magnéticos discretos — instalación sin obra en puertas y ventanas</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-monitoreo-de-alarmas/integracion-alarma-cctv-sistema.avif" alt="Integración de alarma con sistema CCTV para verificación" loading="lazy" width="640" height="480" />
+    <figcaption>Integración con CCTV — el operador ve tus cámaras al momento de la alerta</figcaption>
+  </figure>
+  <figure>
+    <img src="/img/img-monitoreo-de-alarmas/historial-eventos-alarma-registro.avif" alt="Historial de eventos y registro de alarmas con timestamp" loading="lazy" width="640" height="480" />
+    <figcaption>Historial digital de eventos — evidencia certificada para aseguradoras y auditorías</figcaption>
+  </figure>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Garantías</span>
+  <h2>Compromisos de Nuestra Central de Monitoreo</h2>
+  <p class="prose-section-sub">Lo que está escrito en tu contrato — no lo que prometemos por teléfono.</p>
+</div>
+
+<div class="guarantees-grid">
+  <div class="guarantee-card">
+    <div class="guarantee-card__icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+    </div>
+    <strong>Respuesta en menos de 90 segundos</strong>
+    <p>Desde que se activa la alarma hasta que un operador verifica y toma acción. Medido y garantizado.</p>
+    <span class="guarantee-card__clause">SLA contractual · Verificable en reportes</span>
+  </div>
+  <div class="guarantee-card">
+    <div class="guarantee-card__icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    </div>
+    <strong>Verificación humana 100%</strong>
+    <p>Ninguna alerta llega al cliente sin que un operador la haya verificado primero. Cero llamadas innecesarias.</p>
+    <span class="guarantee-card__clause">Protocolo operativo · Documentado</span>
+  </div>
+  <div class="guarantee-card">
+    <div class="guarantee-card__icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+    </div>
+    <strong>Comunicación dual indestructible</strong>
+    <p>Internet + 4G de respaldo automático. Si cortan el cable, el sistema sigue reportando sin interrupción.</p>
+    <span class="guarantee-card__clause">Infraestructura redundante · Sin punto único de fallo</span>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Comparativa</span>
+  <h2>Monitoreo Profesional vs. Alarma sin Monitoreo</h2>
+  <p class="prose-section-sub">Una alarma que solo suena no protege — una alarma monitoreada responde.</p>
+</div>
+
+<div class="comparison-table-wrapper">
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>Criterio</th>
+        <th>Alarma sin monitoreo</th>
+        <th>ORIGINS Monitoreo 24/7</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Cuando se activa</strong></td>
+        <td>Suena sirena, nadie responde</td>
+        <td>Operador verifica en 90 segundos</td>
+      </tr>
+      <tr>
+        <td><strong>Falsas alarmas</strong></td>
+        <td>Te despiertan a las 3 AM</td>
+        <td>Operador filtra antes de contactarte</td>
+      </tr>
+      <tr>
+        <td><strong>Corte de luz</strong></td>
+        <td>Sistema se apaga</td>
+        <td>Batería 24h + canal 4G de respaldo</td>
+      </tr>
+      <tr>
+        <td><strong>Coordinación policial</strong></td>
+        <td>Tú debes llamar</td>
+        <td>Central coordina directamente</td>
+      </tr>
+      <tr>
+        <td><strong>Historial</strong></td>
+        <td>Solo el último evento</td>
+        <td>Historial completo con evidencia</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Recursos</span>
+  <h2>Servicios Complementarios al Monitoreo</h2>
+</div>
+
+<div class="resources-grid">
+  <a href="/servicios/vigilancia-remota-cctv" class="resource-card">
+    <span class="resource-card__type">Servicio</span>
+    <strong>Vigilancia CCTV con Monitoreo 24/7</strong>
+    <p>Cámaras HD con operadores que verifican. El complemento visual perfecto para tu sistema de alarmas.</p>
+  </a>
+  <a href="/servicios/seguridad-condominios" class="resource-card">
+    <span class="resource-card__type">Servicio</span>
+    <strong>Seguridad Integral para Condominios</strong>
+    <p>Alarmas + CCTV + guardias + accesos: la protección completa para tu condominio.</p>
+  </a>
+  <a href="/servicios/guardias-intramuros" class="resource-card">
+    <span class="resource-card__type">Servicio</span>
+    <strong>Guardias Intramuros Certificados</strong>
+    <p>Presencia humana que complementa el monitoreo electrónico en tu propiedad.</p>
+  </a>
+</div>
