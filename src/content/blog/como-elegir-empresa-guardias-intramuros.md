@@ -1,6 +1,6 @@
 ---
 title: "Cómo Elegir una Empresa de Guardias Intramuros en México: Guía 2025"
-description: "Aprende a evaluar y seleccionar la mejor empresa de guardias para tu seguridad corporativa o residencial. Puntos clave y señales de alerta."
+description: "No arriesgues tu patrimonio. Aprende a evaluar y seleccionar la mejor empresa de guardias para tu seguridad corporativa o residencial. Puntos clave y señales de alerta."
 keywords:
   - como elegir empresa guardias intramuros
   - contratar seguridad privada mexico
@@ -8,7 +8,7 @@ keywords:
   - evaluar proveedor seguridad
   - servicios de guardias de seguridad
 cluster: guardias-intramuros
-articleType: guide
+articleType: buyer-guide
 author:
   name: "ORIGINS Advisor"
   role: "Consultores en Seguridad Privada"
@@ -17,7 +17,7 @@ updatedDate: 2025-04-01
 draft: false
 featured: true
 heroImage:
-  src: "/images/blog/elegir-empresa-guardias.png"
+  src: "/img/img-condominios/personal-seguridad-certificado-residencial.avif"
   alt: "Director de seguridad evaluando propuestas de empresas de seguridad especializada"
 readingTime: 8
 relatedPillar: guardias-intramuros
@@ -44,6 +44,11 @@ En México, el cumplimiento del **REPSE** no es opcional. Una empresa que no tie
 
 ### 2. Procesos de Selección y Capacitación
 Pregunta directamente: *"¿Cuál es el perfil de sus elementos?"*. Un guardia sin antecedentes laborales verificados es un peligro. En **ORIGINS**, realizamos pruebas de polígrafo y exámenes de confianza para asegurar que el personal que te cuida sea de intachable honestidad, reduciendo así riesgos de robo hormiga o [fuga de inventario en almacenes](/blog/prevencion-perdidas-almacenes-logistica).
+
+<div class="prose-img-full">
+  ![Capacitación y formación continua del personal de seguridad de ORIGINS](/img/consultoria-de-seguridad/capacitacion-personal-seguridad-empresarial.avif)
+  <p class="prose-img-caption">La formación constante en protocolos de respuesta y tecnología es lo que separa a un profesional de un vigilante común.</p>
+</div>
 
 ### 3. Supervisión Operativa — ¿Quién cuida al que cuida?
 Una empresa que solo te envía al guardia y se olvida de él no está dando un servicio de seguridad. Busca una estructura con patrullas de supervisión aleatorias y comunicación 24/7 con una central de monitoreo. La tecnología es el multiplicador de fuerza necesario.

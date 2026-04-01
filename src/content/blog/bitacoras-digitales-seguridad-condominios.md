@@ -1,5 +1,5 @@
 ---
-title: "Bitácoras ilegibles en tu condominio: el riesgo oculto"
+title: "¿Sigues usando papel? El riesgo oculto de las bitácoras ilegibles en tu condominio"
 description: "La seguridad no debería ser un misterio. Cambia el papel por datos reales. Descubre cómo las bitácoras digitales de ORIGINS dan orden y paz a tu hogar en CDMX."
 keywords:
   - bitacoras digitales seguridad privada
@@ -7,8 +7,8 @@ keywords:
   - reporte incidentes condominio
   - transparencia seguridad residencial
   - seguridad condominios modernos
-cluster: general
-articleType: guide
+cluster: tecnologia-seguridad
+articleType: technology-insight
 author:
   name: "ORIGINS Tech Experience"
   role: "Expertos en Seguridad Residencial"
@@ -17,7 +17,7 @@ updatedDate: 2025-04-01
 draft: false
 featured: true
 heroImage:
-  src: "/images/blog/bitacoras-digitales-placeholder.png"
+  src: "/img/img-condominios/control-visitantes-digital-condominios.avif"
   alt: "Guardia de seguridad utilizando una tablet para reportar accesos con precisión"
 readingTime: 7
 relatedPillar: seguridad-residenciales
@@ -53,6 +53,11 @@ Nuestros elementos operan con dispositivos móviles que transforman el caos en c
 
 ### No más "Dijo que..." — Ahora hay Evidencia
 Cuando un repartidor llega, el guardia no solo anota el nombre. Toma una fotografía de la identificación y, opcionalmente, del paquete. Esa imagen se sube a la nube al instante para tu tranquilidad.
+
+<div class="prose-img-full">
+  ![Control de accesos mediante biometría y tecnología digital](/img/img-condominios/reconocimiento-facial-control-accesos.avif)
+  <p class="prose-img-caption">La tecnología elimina las suposiciones y brinda datos inalterables en cada acceso.</p>
+</div>
 
 ### El Reloj que no miente
 ¿Alguna vez has sospechado que el guardia no hizo sus rondas nocturnas? Nuestras bitácoras digitales tienen **geolocalización**. Además, en casos de [emergencia en elevadores](/blog/protocolos-emergencia-elevadores-edificios), el sistema genera una alerta instantánea a la administración para una respuesta coordinada.

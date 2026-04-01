@@ -1,5 +1,5 @@
 ---
-title: "Comités de Vigilancia CDMX: supervisar sin ser experto"
+title: "Comités de Vigilancia en CDMX: Cómo supervisar sin ser experto en seguridad"
 description: "Formar parte del comité de tu condominio es una gran responsabilidad. Descubre cómo evaluar profesionalmente a tu empresa de seguridad bajo la ley de CDMX."
 keywords:
   - comite de vigilancia condominio cdmx
@@ -7,8 +7,8 @@ keywords:
   - administrar seguridad privada residencial
   - auditoria seguridad condominios
   - transparencia seguridad privada cdmx
-cluster: seguridad-residenciales
-articleType: guide
+cluster: seguridad-residencial
+articleType: community-guide
 author:
   name: "ORIGINS Advisor"
   role: "Consultores en Gestión Condominal"
@@ -17,8 +17,8 @@ updatedDate: 2025-04-01
 draft: false
 featured: true
 heroImage:
-  src: "/images/blog/guia-comite-vigilancia-placeholder.png"
-  alt: "Vecinos en asamblea de condominio discutiendo temas de seguridad con profesionalismo"
+  src: "/img/img-condominios/seguridad-perimetral-condominios-premium.avif"
+  alt: "Seguridad perimetral y vigilancia en condominios residenciales de alto valor"
 readingTime: 10
 relatedPillar: seguridad-residenciales
 relatedPosts:
@@ -44,6 +44,11 @@ Antes de cualquier otra cosa, pide la **Autorización Vigente de la Secretaría 
 
 ### 2. El Expediente de los Elementos
 No permitas que el guardia sea un "desconocido". Tienes derecho a conocer que el personal que cuida tus puertas ha pasado exámenes de confianza y tiene seguridad social. **Si el proveedor no te da esta certeza, tu condominio es responsable solidario ante cualquier eventualidad laboral.**
+
+<div class="prose-img-full">
+  ![Diagnóstico de riesgos y auditoría para comités de vigilancia](/img/consultoria-de-seguridad/diagnostico-riesgos-seguridad-corporativa.avif)
+  <p class="prose-img-caption">La supervisión del comité debe basarse en evidencias y diagnósticos profesionales periódicos.</p>
+</div>
 
 ### 3. Bitácoras Auditables (No cuadernos de espiral)
 Supervisar no es ir a ver qué escribió el guardia cada mañana. Es recibir un reporte semanal de [Bitácora Digital de ORIGINS](/blog/bitacoras-digitales-seguridad-condominios) con fotos de accesos, tiempos de rondas y registro de incidentes. Si los datos son digitales, son auditables. Si están en papel, son solo una opinión del guardia.

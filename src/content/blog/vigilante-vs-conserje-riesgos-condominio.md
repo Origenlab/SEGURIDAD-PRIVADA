@@ -1,14 +1,14 @@
 ---
-title: "Vigilante vs conserje: riesgos en tu condominio"
-description: "Descubre por qué un guardia profesional no debe hacer tareas de conserjería. Cómo proteger realmente tu hogar en CDMX."
+title: "¿Vigilante o Conserje? El peligro de la multifuncionalidad en tu condominio"
+description: "No sacrifiques tu seguridad por comodidad. Descubre por qué un guardia profesional no debe hacer tareas de conserjería y cómo proteger realmente tu hogar en CDMX."
 keywords:
   - vigilante vs conserje condominios
   - seguridad privada residencial cdmx
   - profesionalización guardias seguridad
   - riesgos seguridad condominios
   - contratar seguridad privada mexico
-cluster: seguridad-residenciales
-articleType: tips
+cluster: seguridad-residencial
+articleType: professional-insight
 author:
   name: "ORIGINS Experience"
   role: "Especialistas en Gestión de Riesgo"
@@ -17,7 +17,7 @@ updatedDate: 2025-04-01
 draft: false
 featured: true
 heroImage:
-  src: "/images/blog/vigilante-vs-conserje-placeholder.png"
+  src: "/img/img-condominios/guardia-certificado-ssc-condominio-premium.avif"
   alt: "Guardia de seguridad profesional en CDMX manteniendo su puesto de vigilancia"
 readingTime: 8
 relatedPillar: seguridad-residenciales
@@ -42,6 +42,11 @@ Es común que en los condominios de la CDMX se desvirtúe el rol del seguridad, 
 - **El Costo del Puntos Ciego**: Un intruso experto tarda menos de 10 segundos en burlar un portón abierto. Si el guardia está moviendo un contenedor de basura, el sistema simplemente no existe.
 - **Autoridad Diluida**: Cuando el guardia se convierte en el "ayudante" de los vecinos, pierde la capacidad de aplicar los [protocolos rigurosos en el lobby](/blog/control-accesos-lobby-cortesia-seguridad). Es difícil pedir identificación a alguien si hace unos minutos estabas lavando su coche.
 - **Responsabilidad Solidaria**: Si ocurre un incidente mientras el guardia realiza una tarea ajena a su contrato, la empresa de seguridad y el condominio entran en un vacío legal riesgoso.
+
+<div class="prose-img-full">
+  ![Guardia de seguridad profesional de ORIGINS en un condominio de lujo](/img/img-condominios/guardias-intramuros-elite-condominios.avif)
+  <p class="prose-img-caption">La presencia de un guardia capacitado y enfocado es la base de la tranquilidad residencial.</p>
+</div>
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Fuga de inventario en tu almacén: cómo detenerla"
+title: "¿Hacia dónde se va tu dinero? El arte de detener la fuga de inventario en tu almacén"
 description: "Reducir la pérdida desconocida no es solo poner un guardia. Descubre las estrategias de ORIGINS para proteger tu margen de ganancia y tu tranquilidad en México."
 keywords:
   - prevencion de perdidas almacenes mexico
@@ -7,8 +7,8 @@ keywords:
   - auditoria inventarios seguridad
   - reducir merma en almacenes
   - control de inventarios seguridad
-cluster: general
-articleType: guide
+cluster: prevencion-perdidas
+articleType: industry-strategy
 author:
   name: "ORIGINS Logistics Specialist"
   role: "Consultores en Prevención de Pérdidas"
@@ -17,7 +17,7 @@ updatedDate: 2025-04-01
 draft: false
 featured: true
 heroImage:
-  src: "/images/blog/prevencion-perdidas-placeholder.png"
+  src: "/img/prevencion-de-perdidas/reduccion-de-mermas.avif"
   alt: "Especialista en seguridad realizando auditoría de inventario con precisión en centro logístico"
 readingTime: 9
 relatedPillar: prevencion-de-perdidas
@@ -42,6 +42,11 @@ Es fácil culpar al guardia si alguien saca una pieza. Pero la **prevención de 
 - **El Engaño del Muelle**: Un proveedor entrega 90 cajas pero factura 100. Si no hay una auditoría "ciega" en la descarga, ese dinero ya se perdió.
 - **La Merma Fantasma**: Mercancía que se daña por mal manejo y no se reporta. Eso desbalancea tu inventario y frustra a tus clientes.
 - **Riesgo Legal**: No arriesgues tu operación. Asegúrate de que tu proveedor cumpla con el [REPSE para seguridad privada](/blog/guia-repse-seguridad-privada-mexico), protegiéndote de responsabilidades solidarias.
+
+<div class="prose-img-full">
+  ![Auditoría y control de inventarios para prevención de pérdidas](/img/prevencion-de-perdidas/control-de-inventarios.avif)
+  <p class="prose-img-caption">El control riguroso en cada etapa de la cadena logística es la única defensa contra la pérdida desconocida.</p>
+</div>
 
 ---
 

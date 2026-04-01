@@ -1,14 +1,14 @@
 ---
-title: "REPSE y seguridad privada: el riesgo legal oculto"
-description: "Descubre el lado legal del REPSE en la seguridad privada. Cómo proteger tu empresa y tu tranquilidad en México."
+title: "El Dilema del REPSE: ¿Por qué tu seguridad privada podría ser tu mayor riesgo legal?"
+description: "No dejes que una auditoría te quite el sueño. Descubre el lado humano y legal del REPSE en la seguridad privada. Cómo proteger tu empresa y tu tranquilidad en México."
 keywords:
   - repse seguridad privada mexico
   - cumplimiento outsourcing seguridad
   - responsabilidad solidaria contratacion seguridad
   - riesgos legales seguridad privada
   - auditoria stps seguridad
-cluster: general
-articleType: guide
+cluster: cumplimiento-legal
+articleType: legal-guide
 author:
   name: "ORIGINS Insight"
   role: "Consultores en Seguridad y Cumplimiento"
@@ -17,7 +17,7 @@ updatedDate: 2025-04-01
 draft: false
 featured: true
 heroImage:
-  src: "/images/blog/repse-seguridad-privada-placeholder.png"
+  src: "/img/consultoria-de-seguridad/asesoria-normativas-seguridad-privada.avif"
   alt: "Empresario revisando documentación de cumplimiento legal con tranquilidad"
 readingTime: 10
 relatedPillar: consultoria-seguridad
@@ -53,6 +53,11 @@ Si le pides el REPSE a tu proveedor actual y recibes excusas, huye. Aquí te dec
 1.  **La "Opinión Negativa"**: Si su opinión del SAT (32-D) sale en rojo, significa que le deben al país. Y si le deben al país, tarde o temprano, la autoridad tocará a **tu** puerta.
 2.  **Inconsistencia en Facturas**: Si el concepto de tu factura no coincide exactamente con la actividad registrada en su REPSE, el SAT podría invalidar tu deducibilidad de ISR.
 3.  **Falta de Respaldo Operativo**: Una empresa que no cumple lo legal, rara vez cumple lo operativo. Un guardia sin seguridad social es un guardia desmotivado, lo que eleva el riesgo de incidentes como el robo hormiga o la merma logística ([de lo que hablamos aquí](/blog/prevencion-perdidas-almacenes-logistica)).
+
+<div class="prose-img-full">
+  ![Auditoría de cumplimiento legal en seguridad privada](/img/consultoria-de-seguridad/auditoria-seguridad-fisica-instalaciones.avif)
+  <p class="prose-img-caption">La auditoría preventiva es la mejor defensa ante requerimientos de la STPS.</p>
+</div>
 
 ---
 

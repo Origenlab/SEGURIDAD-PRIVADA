@@ -7,8 +7,8 @@ keywords:
   - prevencion robo casa habitacion
   - camaras seguridad condominios
   - protocolos seguridad residencial
-cluster: seguridad-residenciales
-articleType: guide
+cluster: seguridad-residencial
+articleType: security-guide
 author:
   name: "ORIGINS Advisor"
   role: "Especialistas en Protección Residencial"
@@ -17,8 +17,8 @@ updatedDate: 2025-04-01
 draft: false
 featured: true
 heroImage:
-  src: "/images/blog/mejorar-seguridad-residencial.png"
-  alt: "Residencial privado con guardias de seguridad y sistemas de monitoreo activos"
+  src: "/img/img-condominios/tecnologia-seguridad-integral-condominios.avif"
+  alt: "Sistemas tecnológicos integrales para la protección de residenciales privados"
 readingTime: 12
 relatedPillar: seguridad-residenciales
 relatedPosts:
@@ -29,7 +29,7 @@ relatedPosts:
 <div class="prose-intro">
   <p>Vives en un condominio privado en la Ciudad de México porque buscas tranquilidad. Pero cerrar el portón y tener un guardia no siempre es suficiente para garantizar la paz de tu familia. En **ORIGINS Private Security**, sabemos que la seguridad residencial no es un producto que se compra, sino una cultura que se construye día con día. ¿Hacia dónde se está yendo la atención de tu vigilancia?</p>
   <div class="prose-highlight">
-    **La seguridad reactiva es cara.** No esperes a que ocurra un robo para auditar tus protocolos. La verdadera protección es proactiva e inteligente.
+    **La seguridad reactiva es cara.** No esperes a que ocurra un incidente para auditar tus protocolos. La verdadera protección es proactiva e inteligente.
   </div>
 </div>
 
@@ -48,11 +48,16 @@ La confianza es el enemigo número uno. Un guardia que deja pasar a alguien solo
 ### 3. Tecnología de Registro Inalterable
 Abandona los cuadernos de espiral. Las [bitácoras digitales](/blog/bitacoras-digitales-seguridad-condominios) de ORIGINS permiten que cada acceso (incluyendo repartidores de Uber o Rappi) quede registrado con fotografía y geolocalización, lo que elimina cualquier ambigüedad ante un incidente.
 
+<div class="prose-img-full">
+  ![Sistemas de alarma y monitoreo para residenciales de alto valor](/img/img-condominios/sistemas-alarma-residencial-alto-valor.avif)
+  <p class="prose-img-caption">La integración de alarmas y videovigilancia crea círculos de protección concéntricos para tu hogar.</p>
+</div>
+
 ### 4. Supervisión de Puntos Vulnerables
 Revisa periódicamente tus bardas perimetrales, salidas de emergencia y áreas comunes. Un sistema de CCTV con analítica de movimiento puede alertar al guardia antes de que alguien intente saltar una barda, no después.
 
 ### 5. Capacitación en Manejo de Crisis
-¿Saben tus guardias qué hacer ante una inundación, un apagón o una [emergencia en los elevadores](/blog/protocolos-emergencia-elevadores-edificios)? La diferencia entre el éxito y el desastre es el entrenamiento previo.
+¿Saben tus guardias qué hacer ante una inundación, un sismo o una [emergencia en los elevadores](/blog/protocolos-emergencia-elevadores-edificios)? La diferencia entre el éxito y el desastre es el entrenamiento previo.
 
 ---
 

@@ -1,14 +1,14 @@
 ---
 title: "Elevadores y Emergencias: Lo que todo residente de CDMX debe saber"
-description: "Descubre cómo los protocolos de seguridad transforman emergencias en elevadores. Tecnología y respuesta humana para tu tranquilidad en CDMX."
+description: "¿Te has quedado atrapado en un elevador durante un apagón? Descubre cómo los protocolos de seguridad de ORIGINS transforman el pánico en calma con tecnología y respuesta humana."
 keywords:
   - seguridad en elevadores cdmx
   - protocolos de emergencia edificios verticales
   - vigilancia vertical condominios
   - rescate en elevadores cdmx
   - seguridad residencial edificios altos
-cluster: seguridad-residenciales
-articleType: guide
+cluster: seguridad-residencial
+articleType: safety-guide
 author:
   name: "ORIGINS Response"
   role: "Especialistas en Manejo de Crisis"
@@ -17,8 +17,8 @@ updatedDate: 2025-04-01
 draft: false
 featured: true
 heroImage:
-  src: "/images/blog/emergencia-elevadores-placeholder.png"
-  alt: "Guardia de seguridad profesional atendiendo un intercomunicador de elevador con calma"
+  src: "/img/consultoria-de-seguridad/planes-contingencia-emergencias-corporativas.avif"
+  alt: "Equipo de seguridad coordinando planes de contingencia para emergencias en edificios"
 readingTime: 9
 relatedPillar: seguridad-residenciales
 relatedPosts:
@@ -42,6 +42,11 @@ Muchos residentes creen que el seguridad solo cuida la puerta principal. Pero en
 1.  **Comunicación Constante**: Mantener el contacto verbal, explicarte que la ventilación funciona y que el rescate está en marcha, es vital para evitar el pánico.
 2.  **Verificación de Estado**: Priorizamos la rapidez de la respuesta externa si hay niños o ancianos atrapados.
 3.  **Coordinación Digital**: Cada evento se registra en el momento a través de nuestras [bitácoras digitales](/blog/bitacoras-digitales-seguridad-condominios), notificando instantáneamente a la administración y a los técnicos de mantenimiento.
+
+<div class="prose-img-full">
+  ![Análisis de riesgos y protocolos de seguridad para condominios verticales](/img/img-condominios/analisis-riesgos-seguridad-condominios.avif)
+  <p class="prose-img-caption">La identificación proactiva de riesgos permite una respuesta coordinada ante fallas mecánicas o sismos.</p>
+</div>
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Cortesía vs control en el lobby: ¿quién entra a tu casa?"
+title: "¿Quién entra a tu casa? La sutil línea entre cortesía y control en el lobby"
 description: "Por qué los protocolos 'incómodos' son la mejor señal de una buena seguridad. Cortesía vs Control en el lobby de tu edificio de la CDMX."
 keywords:
   - control de accesos lobby cdmx
@@ -7,8 +7,8 @@ keywords:
   - registro de visitas condominio
   - transparencia seguridad residencial
   - seguridad en acceso condominios
-cluster: seguridad-residenciales
-articleType: tips
+cluster: seguridad-residencial
+articleType: community-insight
 author:
   name: "ORIGINS Social"
   role: "Consultores en Convivencia y Seguridad"
@@ -17,7 +17,7 @@ updatedDate: 2025-04-01
 draft: false
 featured: true
 heroImage:
-  src: "/images/blog/control-accesos-lobby-placeholder.png"
+  src: "/img/img-condominios/control-accesos-biometrico-residencial-lujo.avif"
   alt: "Guardia de seguridad profesional atendiendo a un visitante mediante bitácora digital"
 readingTime: 7
 relatedPillar: seguridad-residenciales
@@ -40,6 +40,11 @@ relatedPosts:
 La mayoría de las intrusiones en edificios de la CDMX no ocurren escalando muros; ocurren caminando por la puerta principal. El delincuente moderno no usa máscara; usa una sonrisa amable y aprovecha la **exhibición de confianza** del guardia.
 
 Si el elemento de seguridad deja de pedir identificación a alguien porque "parece buena gente", está dejando de ser un filtro y se convierte en un simple espectador. Por eso, en ORIGINS implementamos [bitácoras digitales de acceso](/blog/bitacoras-digitales-seguridad-condominios) que obligan a seguir el protocolo sin excepciones, eliminando el factor del "caerle bien" al guardia.
+
+<div class="prose-img-full">
+  ![Control de visitantes mediante tecnología digital en el acceso principal](/img/img-condominios/control-visitantes-digital-condominios.avif)
+  <p class="prose-img-caption">El registro digital de visitantes disuade a intrusos y garantiza un historial inalterable para la comunidad.</p>
+</div>
 
 ### ¿Por qué el guardia te hace preguntas "incómodas"?
 

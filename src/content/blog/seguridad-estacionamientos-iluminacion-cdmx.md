@@ -7,8 +7,8 @@ keywords:
   - iluminacion seguridad residencial
   - prevencion robo vehiculos cdmx
   - monitoreo estacionamientos residenciales
-cluster: seguridad-residenciales
-articleType: guide
+cluster: seguridad-residencial
+articleType: technical-insight
 author:
   name: "ORIGINS Prevention"
   role: "Consultores en Seguridad de Estacionamientos"
@@ -17,8 +17,8 @@ updatedDate: 2025-04-01
 draft: false
 featured: true
 heroImage:
-  src: "/images/blog/seguridad-estacionamientos-placeholder.png"
-  alt: "Estacionamiento residencial moderno con iluminación LED de alta visibilidad"
+  src: "/img/img-condominios/videovigilancia-profesional-residencial.avif"
+  alt: "Estacionamiento residencial moderno con monitoreo de cámaras de alta visibilidad"
 readingTime: 8
 relatedPillar: seguridad-residenciales
 relatedPosts:
@@ -44,6 +44,11 @@ Un delincuente de autopartes necesita **tiempo y sombra**. Si el estacionamiento
 
 ### 2. El Factor Humano: Rondas no Predecibles
 Si un guardia siempre hace su ronda a la misma hora, el delincuente solo tiene que esperar a que pase. En **ORIGINS**, diseñamos rondas de vigilancia con intervalos aleatorios. El guardia está en todas partes, en momentos que nadie puede prever.
+
+<div class="prose-img-full">
+  ![Patrullaje preventivo en estacionamientos y áreas comunes](/img/img-condominios/patrullaje-seguridad-condominios-alto-valor.avif)
+  <p class="prose-img-caption">La supervisión activa y aleatoria rompe los patrones de oportunidad para los delincuentes.</p>
+</div>
 
 ### 3. Cámaras con Analítica
 Una cámara que solo graba es un archivo. Una cámara de **ORIGINS** detecta movimiento en áreas restringidas y envía una alerta en vivo a la central de monitoreo. Si alguien se acerca a un coche que no es el suyo, el guardia recibe la notificación antes de que el primer tornillo sea removido.

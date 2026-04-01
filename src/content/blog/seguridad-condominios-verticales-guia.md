@@ -1,14 +1,14 @@
 ---
 title: "La Guía Definitiva de Seguridad en Condominios Verticales: CDMX 2025"
-description: "Protege tu edificio vertical con protocolos específicos. Aprende a asegurar tu condominio con tecnología y personal experto en CDMX."
+description: "Vivir en las alturas de la Ciudad de México requiere protocolos específicos. Aprende a proteger tu edificio vertical con tecnología y personal experto de ORIGINS."
 keywords:
   - seguridad condominios verticales cdmx
   - vigilancia edificios altos residencial
   - protocolos seguridad vertical
   - seguridad residencial cdmx
   - sistemas monitoreo edificios
-cluster: seguridad-residenciales
-articleType: guide
+cluster: seguridad-residencial
+articleType: vertical-guide
 author:
   name: "ORIGINS Vertical"
   role: "Consultores en Seguridad de Edificios Altos"
@@ -17,8 +17,8 @@ updatedDate: 2025-04-01
 draft: false
 featured: true
 heroImage:
-  src: "/images/blog/seguridad-condominios-verticales.png"
-  alt: "Vista panorámica de un edificio residencial moderno con sistemas de seguridad avanzados en CDMX"
+  src: "/img/img-condominios/vigilancia-cctv-inteligente-condominios.avif"
+  alt: "Vigilancia inteligente y monitoreo CCTV en edificios verticales de CDMX"
 readingTime: 12
 relatedPillar: seguridad-residenciales
 relatedPosts:
@@ -42,6 +42,11 @@ En un edificio vertical, el lobby es el corazón de la seguridad. Es el único p
 - **Protocolos sin Excepciones**: En ORIGINS, entrenamos a nuestros guardias para que la amabilidad nunca reemplace la verificación. Un saludo cordial debe ir seguido de un registro impecable ([así es como lo hacemos](/blog/control-accesos-lobby-cortesia-seguridad)).
 - **Bitácoras Inteligentes**: El uso de [herramientas digitales de registro](/blog/bitacoras-digitales-seguridad-condominios) permite que la administración sepa quién está en el edificio en tiempo real, vital en caso de una evacuación de emergencia.
 
+<div class="prose-img-full">
+  ![Rondines de seguridad en cerramientos y perímetros de condominios](/img/img-condominios/rondines-seguridad-condominios-cdmx.avif)
+  <p class="prose-img-caption">La vigilancia en edificios verticales requiere una supervisión constante de cada nivel y punto de acceso.</p>
+</div>
+
 ---
 
 ## Elevadores y Escaleras: Las Venas del Edificio
@@ -49,7 +54,7 @@ En un edificio vertical, el lobby es el corazón de la seguridad. Es el único p
 Los elevadores son el medio de transporte principal de tu hogar. ¿Qué pasa cuando la energía falla o hay un sismo? Un guardia de ORIGINS está preparado para gestionar estas crisis, manteniendo la calma y activando los protocolos de rescate vertical ([conoce nuestros protocolos de elevadores aquí](/blog/protocolos-emergencia-elevadores-edificios)).
 
 ### Áreas Comunes y Amenidades
-El Roof Garden, el gimnasio o el área de juegos son zonas de alta vulnerabilidad. El monitoreo CCTV con analítica de video permite que el guardia detecte comportamientos atípicos (como el acceso de personas no autorizadas a deshoras) sin necesidad de abandonar su puesto en la entrada.
+El Roof Garden, el gimnasio o el área de juegos son zonas de alta vulnerabilidad. El monitoreo CCTV con analítica de video permite que el guardia detecte comportamientos atípicos sin necesidad de abandonar su puesto en la entrada.
 
 ---
 
