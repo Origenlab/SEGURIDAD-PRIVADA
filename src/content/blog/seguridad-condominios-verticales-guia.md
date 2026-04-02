@@ -1,14 +1,14 @@
 ---
 title: "La Guía Definitiva de Seguridad en Condominios Verticales: CDMX 2025"
-description: "Vivir en las alturas de la Ciudad de México requiere protocolos específicos. Aprende a proteger tu edificio vertical con tecnología y personal experto de ORIGINS."
+description: "Vivir en las alturas de la Ciudad de México requiere protocolos específicos. Aprende a proteger tu edificio vertical con tecnología y personal experto de O..."
 keywords:
   - seguridad condominios verticales cdmx
   - vigilancia edificios altos residencial
   - protocolos seguridad vertical
   - seguridad residencial cdmx
   - sistemas monitoreo edificios
-cluster: seguridad-residencial
-articleType: vertical-guide
+cluster: seguridad-residenciales
+articleType: guide
 author:
   name: "ORIGINS Vertical"
   role: "Consultores en Seguridad de Edificios Altos"

@@ -1,14 +1,14 @@
 ---
-title: "El Dilema del REPSE: ¿Por qué tu seguridad privada podría ser tu mayor riesgo legal?"
-description: "No dejes que una auditoría te quite el sueño. Descubre el lado humano y legal del REPSE en la seguridad privada. Cómo proteger tu empresa y tu tranquilidad en México."
+title: "El Dilema del REPSE: Tu Seguridad Privada en Regla en México"
+description: "No dejes que una auditoría te quite el sueño. Descubre el lado humano y legal del REPSE en la seguridad privada. Cómo proteger tu empresa y tu tranquilidad..."
 keywords:
   - repse seguridad privada mexico
   - cumplimiento outsourcing seguridad
   - responsabilidad solidaria contratacion seguridad
   - riesgos legales seguridad privada
   - auditoria stps seguridad
-cluster: cumplimiento-legal
-articleType: legal-guide
+cluster: general
+articleType: guide
 author:
   name: "ORIGINS Insight"
   role: "Consultores en Seguridad y Cumplimiento"

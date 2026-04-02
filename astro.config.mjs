@@ -12,37 +12,56 @@ export default defineConfig({
     sitemap({
       changefreq: 'weekly',
       lastmod: new Date(),
-      filter: (page) => !page.includes('/draft'),
+      filter: (page) =>
+        !page.includes('/draft') &&
+        !page.includes('/aviso-de-privacidad') &&
+        !page.includes('/mapa-del-sitio'),
       serialize: (item) => {
-        // Home page - highest priority
-        if (item.url === 'https://seguridad-privada.com.mx' || item.url === 'https://seguridad-privada.com.mx/') {
+        const url = item.url;
+
+        // Homepage — máxima prioridad
+        if (url === 'https://seguridad-privada.com.mx' || url === 'https://seguridad-privada.com.mx/') {
           item.priority = 1.0;
           item.changefreq = 'weekly';
         }
-        // Pillar pages - very high priority
-        else if (item.url.includes('/seguridad-condominios') || item.url.includes('/seguridad-residenciales') || item.url.includes('/guardias-intramuros')) {
+        // Pillar pages — pilares del negocio
+        else if (url.includes('/seguridad-condominios') || url.includes('/seguridad-residenciales') || url.includes('/guardias-intramuros')) {
           item.priority = 0.9;
           item.changefreq = 'weekly';
         }
-        // Service pages
-        else if (item.url.includes('/servicios/')) {
+        // Páginas de servicios
+        else if (url.includes('/servicios/')) {
           item.priority = 0.8;
           item.changefreq = 'monthly';
         }
-        // Zone pages - local SEO
-        else if (item.url.includes('/zonas/')) {
-          item.priority = 0.7;
+        // Páginas de zonas — SEO local
+        else if (url.includes('/zonas/')) {
+          item.priority = 0.75;
+          item.changefreq = 'monthly';
+        }
+        // Índices principales
+        else if (url.endsWith('/servicios') || url.endsWith('/zonas') || url.endsWith('/blog') || url.endsWith('/emergencias')) {
+          item.priority = 0.8;
+          item.changefreq = 'weekly';
+        }
+        // Directorio de emergencias — recurso ciudadano con alto intento de búsqueda
+        else if (url.includes('/emergencias/')) {
+          item.priority = 0.65;
           item.changefreq = 'monthly';
         }
         // Blog posts
-        else if (item.url.includes('/blog/') || item.url.includes('/noticias/')) {
+        else if (url.includes('/blog/')) {
           item.priority = 0.7;
           item.changefreq = 'monthly';
         }
-        // Other pages
-        else {
-          item.priority = 0.5;
+        // Nosotros, contacto, bolsa
+        else if (url.endsWith('/nosotros') || url.endsWith('/contacto')) {
+          item.priority = 0.6;
           item.changefreq = 'monthly';
+        }
+        else {
+          item.priority = 0.4;
+          item.changefreq = 'yearly';
         }
         return item;
       }

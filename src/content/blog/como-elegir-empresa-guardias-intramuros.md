@@ -1,6 +1,6 @@
 ---
 title: "Cómo Elegir una Empresa de Guardias Intramuros en México: Guía 2025"
-description: "No arriesgues tu patrimonio. Aprende a evaluar y seleccionar la mejor empresa de guardias para tu seguridad corporativa o residencial. Puntos clave y señales de alerta."
+description: "No arriesgues tu patrimonio. Aprende a evaluar y seleccionar la mejor empresa de guardias para tu seguridad corporativa o residencial. Puntos clave y señal..."
 keywords:
   - como elegir empresa guardias intramuros
   - contratar seguridad privada mexico
@@ -8,7 +8,7 @@ keywords:
   - evaluar proveedor seguridad
   - servicios de guardias de seguridad
 cluster: guardias-intramuros
-articleType: buyer-guide
+articleType: guide
 author:
   name: "ORIGINS Advisor"
   role: "Consultores en Seguridad Privada"

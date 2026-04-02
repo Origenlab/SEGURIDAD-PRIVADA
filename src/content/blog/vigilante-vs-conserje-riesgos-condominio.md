@@ -1,14 +1,14 @@
 ---
-title: "¿Vigilante o Conserje? El peligro de la multifuncionalidad en tu condominio"
-description: "No sacrifiques tu seguridad por comodidad. Descubre por qué un guardia profesional no debe hacer tareas de conserjería y cómo proteger realmente tu hogar en CDMX."
+title: "Vigilante vs Conserje: El Riesgo de la Multifuncionalidad"
+description: "No sacrifiques tu seguridad por comodidad. Descubre por qué un guardia profesional no debe hacer tareas de conserjería y cómo proteger realmente tu hogar e..."
 keywords:
   - vigilante vs conserje condominios
   - seguridad privada residencial cdmx
   - profesionalización guardias seguridad
   - riesgos seguridad condominios
   - contratar seguridad privada mexico
-cluster: seguridad-residencial
-articleType: professional-insight
+cluster: seguridad-residenciales
+articleType: comparison
 author:
   name: "ORIGINS Experience"
   role: "Especialistas en Gestión de Riesgo"

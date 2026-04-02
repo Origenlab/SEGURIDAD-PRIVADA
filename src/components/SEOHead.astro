@@ -80,6 +80,15 @@ const siteUrl = 'https://seguridad-privada.com.mx';
 <link rel="preconnect" href="https://app.rybbit.io">
 <link rel="dns-prefetch" href="https://app.rybbit.io">
 
+<!-- Preload hero image para LCP óptimo -->
+<link rel="preload" as="image" href="/img/seguridad-privada.avif" type="image/avif">
+
+<!-- Additional SEO signals -->
+<meta name="format-detection" content="telephone=yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
 <!-- Schema.org -->
 {schema && (
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />

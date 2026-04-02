@@ -1,14 +1,14 @@
 ---
 title: "Elevadores y Emergencias: Lo que todo residente de CDMX debe saber"
-description: "¿Te has quedado atrapado en un elevador durante un apagón? Descubre cómo los protocolos de seguridad de ORIGINS transforman el pánico en calma con tecnología y respuesta humana."
+description: "¿Te has quedado atrapado en un elevador durante un apagón? Descubre cómo los protocolos de seguridad de ORIGINS transforman el pánico en calma con tecnolog..."
 keywords:
   - seguridad en elevadores cdmx
   - protocolos de emergencia edificios verticales
   - vigilancia vertical condominios
   - rescate en elevadores cdmx
   - seguridad residencial edificios altos
-cluster: seguridad-residencial
-articleType: safety-guide
+cluster: seguridad-residenciales
+articleType: guide
 author:
   name: "ORIGINS Response"
   role: "Especialistas en Manejo de Crisis"

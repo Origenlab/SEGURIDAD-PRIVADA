@@ -7,8 +7,8 @@ keywords:
   - prevencion robo casa habitacion
   - camaras seguridad condominios
   - protocolos seguridad residencial
-cluster: seguridad-residencial
-articleType: security-guide
+cluster: seguridad-residenciales
+articleType: guide
 author:
   name: "ORIGINS Advisor"
   role: "Especialistas en Protección Residencial"

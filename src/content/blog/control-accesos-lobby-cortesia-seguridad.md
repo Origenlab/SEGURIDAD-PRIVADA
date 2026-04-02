@@ -1,5 +1,5 @@
 ---
-title: "¿Quién entra a tu casa? La sutil línea entre cortesía y control en el lobby"
+title: "¿Quién Entra a Tu Condominio? Control de Accesos vs Cortesía"
 description: "Por qué los protocolos 'incómodos' son la mejor señal de una buena seguridad. Cortesía vs Control en el lobby de tu edificio de la CDMX."
 keywords:
   - control de accesos lobby cdmx
@@ -7,8 +7,8 @@ keywords:
   - registro de visitas condominio
   - transparencia seguridad residencial
   - seguridad en acceso condominios
-cluster: seguridad-residencial
-articleType: community-insight
+cluster: seguridad-residenciales
+articleType: tips
 author:
   name: "ORIGINS Social"
   role: "Consultores en Convivencia y Seguridad"

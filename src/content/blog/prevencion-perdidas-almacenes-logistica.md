@@ -1,5 +1,5 @@
 ---
-title: "¿Hacia dónde se va tu dinero? El arte de detener la fuga de inventario en tu almacén"
+title: "Prevención de Pérdidas en Almacenes y Logística — Guía CDMX"
 description: "Reducir la pérdida desconocida no es solo poner un guardia. Descubre las estrategias de ORIGINS para proteger tu margen de ganancia y tu tranquilidad en México."
 keywords:
   - prevencion de perdidas almacenes mexico
@@ -7,8 +7,8 @@ keywords:
   - auditoria inventarios seguridad
   - reducir merma en almacenes
   - control de inventarios seguridad
-cluster: prevencion-perdidas
-articleType: industry-strategy
+cluster: general
+articleType: guide
 author:
   name: "ORIGINS Logistics Specialist"
   role: "Consultores en Prevención de Pérdidas"

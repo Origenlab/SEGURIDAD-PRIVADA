@@ -1,5 +1,5 @@
 ---
-title: "Comités de Vigilancia en CDMX: Cómo supervisar sin ser experto en seguridad"
+title: "Comités de Vigilancia CDMX: Supervisar sin Ser Experto"
 description: "Formar parte del comité de tu condominio es una gran responsabilidad. Descubre cómo evaluar profesionalmente a tu empresa de seguridad bajo la ley de CDMX."
 keywords:
   - comite de vigilancia condominio cdmx
@@ -7,8 +7,8 @@ keywords:
   - administrar seguridad privada residencial
   - auditoria seguridad condominios
   - transparencia seguridad privada cdmx
-cluster: seguridad-residencial
-articleType: community-guide
+cluster: seguridad-residenciales
+articleType: guide
 author:
   name: "ORIGINS Advisor"
   role: "Consultores en Gestión Condominal"

@@ -7,8 +7,8 @@ keywords:
   - iluminacion seguridad residencial
   - prevencion robo vehiculos cdmx
   - monitoreo estacionamientos residenciales
-cluster: seguridad-residencial
-articleType: technical-insight
+cluster: seguridad-residenciales
+articleType: tips
 author:
   name: "ORIGINS Prevention"
   role: "Consultores en Seguridad de Estacionamientos"

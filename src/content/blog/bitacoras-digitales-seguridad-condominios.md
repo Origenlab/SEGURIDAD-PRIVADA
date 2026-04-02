@@ -1,5 +1,5 @@
 ---
-title: "¿Sigues usando papel? El riesgo oculto de las bitácoras ilegibles en tu condominio"
+title: "Bitácoras Digitales en Condominios: Seguridad sin Papel CDMX"
 description: "La seguridad no debería ser un misterio. Cambia el papel por datos reales. Descubre cómo las bitácoras digitales de ORIGINS dan orden y paz a tu hogar en CDMX."
 keywords:
   - bitacoras digitales seguridad privada
@@ -7,8 +7,8 @@ keywords:
   - reporte incidentes condominio
   - transparencia seguridad residencial
   - seguridad condominios modernos
-cluster: tecnologia-seguridad
-articleType: technology-insight
+cluster: general
+articleType: guide
 author:
   name: "ORIGINS Tech Experience"
   role: "Expertos en Seguridad Residencial"
