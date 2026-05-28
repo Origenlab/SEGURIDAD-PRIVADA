@@ -617,3 +617,461 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+
+/* ============================================================
+   ====================================================
+   ARTICLE PROSE COMPONENTS — sistema editorial pro
+   Estos componentes viven dentro de .blog-post__content.prose
+   y dan estructura visual al contenido markdown.
+   ====================================================
+============================================================ */
+
+/* ---- prose-intro: lead block destacado ---- */
+.blog-post__content.prose .prose-intro {
+  background: linear-gradient(180deg, rgba(10,15,30,0.02) 0%, transparent 100%);
+  border-left: 3px solid #25D366;
+  padding: 1.5rem 1.5rem 1rem;
+  border-radius: 0 12px 12px 0;
+  margin: 0 0 2rem;
+}
+
+.blog-post__content.prose .prose-intro p {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: rgba(10,15,30,0.85);
+  margin-bottom: 1rem;
+}
+
+.blog-post__content.prose .prose-intro p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- prose-key-takeaways: caja "lo que aprenderás" ---- */
+.blog-post__content.prose .prose-key-takeaways {
+  background: #0a0f1e;
+  color: #ffffff;
+  padding: 1.75rem;
+  border-radius: 14px;
+  margin: 2rem 0;
+}
+
+.blog-post__content.prose .prose-key-takeaways p:first-child {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #25D366;
+  margin: 0 0 1rem;
+}
+
+.blog-post__content.prose .prose-key-takeaways ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.blog-post__content.prose .prose-key-takeaways li {
+  position: relative;
+  padding: 0.5rem 0 0.5rem 1.75rem;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.88);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.blog-post__content.prose .prose-key-takeaways li:last-child {
+  border-bottom: none;
+}
+
+.blog-post__content.prose .prose-key-takeaways li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.9rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #25D366;
+}
+
+/* ---- prose-highlight: callout corto destacado ---- */
+.blog-post__content.prose .prose-highlight {
+  background: rgba(37,211,102,0.06);
+  border: 1px solid rgba(37,211,102,0.18);
+  border-left: 3px solid #25D366;
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
+  margin: 1.75rem 0;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: rgba(10,15,30,0.82);
+}
+
+/* ---- prose-callout: bloque info / warning / pro ---- */
+.blog-post__content.prose .prose-callout {
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1.75rem 0;
+  border-left: 4px solid;
+  background: rgba(10,15,30,0.03);
+  position: relative;
+}
+
+.blog-post__content.prose .prose-callout p {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: rgba(10,15,30,0.78);
+}
+
+.blog-post__content.prose .prose-callout p + p {
+  margin-top: 0.75rem;
+}
+
+.blog-post__content.prose .prose-callout p strong:first-child {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: #0a0f1e;
+}
+
+.blog-post__content.prose .prose-callout--info {
+  border-color: #2563eb;
+  background: rgba(37,99,235,0.05);
+}
+.blog-post__content.prose .prose-callout--info p strong:first-child { color: #1e40af; }
+
+.blog-post__content.prose .prose-callout--warning {
+  border-color: #f59e0b;
+  background: rgba(245,158,11,0.06);
+}
+.blog-post__content.prose .prose-callout--warning p strong:first-child { color: #b45309; }
+
+.blog-post__content.prose .prose-callout--pro {
+  border-color: #25D366;
+  background: rgba(37,211,102,0.06);
+}
+.blog-post__content.prose .prose-callout--pro p strong:first-child { color: #1a8848; }
+
+/* ---- prose-stat-grid: tiles con números ---- */
+.blog-post__content.prose .prose-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.875rem;
+  margin: 2rem 0;
+}
+
+.blog-post__content.prose .prose-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.25rem 1rem;
+  background: #f8f9fa;
+  border: 1px solid rgba(10,15,30,0.06);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.blog-post__content.prose .prose-stat__num {
+  font-size: 1.875rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0a0f1e;
+  line-height: 1;
+}
+
+.blog-post__content.prose .prose-stat__label {
+  font-size: 0.75rem;
+  color: rgba(10,15,30,0.55);
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* ---- prose-checklist: lista con checkmarks visuales ---- */
+.blog-post__content.prose .prose-checklist {
+  margin: 1.75rem 0;
+  padding: 1.5rem;
+  background: rgba(10,15,30,0.025);
+  border: 1px solid rgba(10,15,30,0.06);
+  border-radius: 12px;
+}
+
+.blog-post__content.prose .prose-checklist ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.blog-post__content.prose .prose-checklist li {
+  position: relative;
+  padding: 0.625rem 0 0.625rem 2rem;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: rgba(10,15,30,0.8);
+  border-bottom: 1px dashed rgba(10,15,30,0.08);
+  margin: 0;
+}
+
+.blog-post__content.prose .prose-checklist li:last-child {
+  border-bottom: none;
+}
+
+.blog-post__content.prose .prose-checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.85rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1.5px solid rgba(10,15,30,0.18);
+  background: #ffffff;
+}
+
+.blog-post__content.prose .prose-checklist li::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 1.15rem;
+  width: 8px;
+  height: 4px;
+  border-left: 2px solid #25D366;
+  border-bottom: 2px solid #25D366;
+  transform: rotate(-45deg);
+}
+
+/* ---- prose-comparison: tabla comparativa pro ---- */
+.blog-post__content.prose .prose-comparison {
+  margin: 2rem 0;
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(10,15,30,0.08);
+}
+
+.blog-post__content.prose .prose-comparison table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.blog-post__content.prose .prose-comparison thead {
+  background: #0a0f1e;
+}
+
+.blog-post__content.prose .prose-comparison th {
+  padding: 0.9rem 1rem;
+  text-align: left;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.blog-post__content.prose .prose-comparison th:last-child {
+  border-right: none;
+}
+
+.blog-post__content.prose .prose-comparison td {
+  padding: 0.85rem 1rem;
+  border-top: 1px solid rgba(10,15,30,0.06);
+  border-right: 1px solid rgba(10,15,30,0.04);
+  color: rgba(10,15,30,0.78);
+  line-height: 1.5;
+}
+
+.blog-post__content.prose .prose-comparison td:last-child {
+  border-right: none;
+  background: rgba(37,211,102,0.03);
+  font-weight: 500;
+  color: rgba(10,15,30,0.88);
+}
+
+.blog-post__content.prose .prose-comparison td:first-child {
+  font-weight: 600;
+  color: #0a0f1e;
+  background: #f8f9fa;
+}
+
+.blog-post__content.prose .prose-comparison tr:hover td {
+  background: rgba(10,15,30,0.015);
+}
+
+.blog-post__content.prose .prose-comparison tr:hover td:last-child {
+  background: rgba(37,211,102,0.06);
+}
+
+/* ---- prose-img-full + prose-img-caption ---- */
+.blog-post__content.prose .prose-img-full {
+  margin: 2rem 0;
+}
+
+.blog-post__content.prose .prose-img-full img,
+.blog-post__content.prose .prose-img-full p:first-of-type img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 0;
+}
+
+.blog-post__content.prose .prose-img-caption {
+  font-size: 0.8125rem;
+  color: rgba(10,15,30,0.55);
+  text-align: center;
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+/* ---- prose-cta-block: CTA en mitad del artículo ---- */
+.blog-post__content.prose .prose-cta-block {
+  background: linear-gradient(135deg, #0a0f1e 0%, #14213a 100%);
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 14px;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.blog-post__content.prose .prose-cta-block p {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.82);
+}
+
+.blog-post__content.prose .prose-cta-block p:first-child strong {
+  display: block;
+  font-size: 1.125rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+
+.blog-post__content.prose .prose-cta-block__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  background: #25D366;
+  color: #ffffff !important;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  border-radius: 10px;
+  text-decoration: none !important;
+  margin-top: 0.5rem;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.blog-post__content.prose .prose-cta-block__btn:hover {
+  background: #1ebe5d;
+  transform: translateY(-1px);
+}
+
+/* ---- prose-faq-item: acordeón nativo con details/summary ---- */
+.blog-post__content.prose .prose-faq-item {
+  border: 1px solid rgba(10,15,30,0.08);
+  border-radius: 12px;
+  margin: 0.75rem 0;
+  background: #ffffff;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.blog-post__content.prose .prose-faq-item[open] {
+  border-color: rgba(10,15,30,0.18);
+  box-shadow: 0 4px 16px rgba(10,15,30,0.04);
+}
+
+.blog-post__content.prose .prose-faq-item summary {
+  padding: 1.125rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #0a0f1e;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-right: 3rem;
+  line-height: 1.4;
+  transition: background 0.15s ease;
+}
+
+.blog-post__content.prose .prose-faq-item summary:hover {
+  background: rgba(10,15,30,0.02);
+}
+
+.blog-post__content.prose .prose-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.blog-post__content.prose .prose-faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgba(10,15,30,0.5);
+  transition: transform 0.2s ease;
+}
+
+.blog-post__content.prose .prose-faq-item[open] summary::after {
+  content: '−';
+  color: #25D366;
+}
+
+.blog-post__content.prose .prose-faq-item > p,
+.blog-post__content.prose .prose-faq-item > div {
+  padding: 0 1.5rem 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: rgba(10,15,30,0.72);
+  margin: 0;
+}
+
+.blog-post__content.prose .prose-faq-item p:first-of-type {
+  padding-top: 0.25rem;
+}
+
+/* ---- Tablet+ ajustes prose components ---- */
+@media (min-width: 768px) {
+  .blog-post__content.prose .prose-intro {
+    padding: 1.75rem 2rem 1.25rem;
+  }
+  .blog-post__content.prose .prose-intro p {
+    font-size: 1.125rem;
+  }
+  .blog-post__content.prose .prose-key-takeaways {
+    padding: 2rem 2.25rem;
+  }
+  .blog-post__content.prose .prose-callout {
+    padding: 1.75rem 2rem;
+  }
+  .blog-post__content.prose .prose-stat-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .blog-post__content.prose .prose-stat__num {
+    font-size: 2.125rem;
+  }
+  .blog-post__content.prose .prose-checklist {
+    padding: 1.75rem 2rem;
+  }
+  .blog-post__content.prose .prose-cta-block {
+    padding: 2.5rem;
+  }
+  .blog-post__content.prose .prose-faq-item summary {
+    padding: 1.25rem 1.75rem;
+    padding-right: 3.5rem;
+    font-size: 1rem;
+  }
+  .blog-post__content.prose .prose-faq-item > p,
+  .blog-post__content.prose .prose-faq-item > div {
+    padding: 0 1.75rem 1.5rem;
+    font-size: 0.9375rem;
+  }
+}
