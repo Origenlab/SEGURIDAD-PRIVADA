@@ -95,6 +95,10 @@ const schema = {
       { label: 'Blog', href: '/blog' },
       { label: post.data.title.substring(0, 40) + (post.data.title.length > 40 ? '...' : ''), href: `/blog/${post.id}` }
     ]}
+    ctaPrimario={{ texto: 'Solicitar diagnóstico gratuito', href: '/contacto' }}
+    ctaWhatsapp={true}
+    seoParrafo1={`Esta guía forma parte de nuestra biblioteca operativa sobre <a href="${clusterCard.href}">${(clusterLabels[post.data.cluster] || post.data.cluster.replace(/-/g, ' ')).toLowerCase()}</a>. Está escrita por supervisores y consultores de <a href="/nosotros"><strong>ORIGINS Private Security</strong></a> con base en nuestra experiencia real protegiendo <strong>más de 50 desarrollos</strong> en CDMX y Estado de México bajo permiso <strong>SSC 0102-15</strong>.`}
+    seoParrafo2={`Si quieres aplicar estos lineamientos a tu condominio o fraccionamiento, podemos preparar una propuesta operativa sin costo. Cubrimos <a href="/zonas">CDMX y Edomex</a> con guardias intramuros, control de accesos, monitoreo y supervisión documentada. <a href="/contacto">Contáctanos</a> para un diagnóstico personalizado en <strong>menos de 24 horas</strong>.`}
   />
 
   <NavCTA
