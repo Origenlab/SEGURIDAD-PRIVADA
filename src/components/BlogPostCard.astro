@@ -2,7 +2,7 @@
 /**
  * BlogPostCard.astro — ORIGINS Private Security
  * Card para listado de artículos del blog.
- * Sin animaciones, sin transforms. Solo estilo limpio.
+ * Sin fechas. Sin reading time. Contenido atemporal.
  */
 
 interface Props {
@@ -10,18 +10,10 @@ interface Props {
   title: string;
   description: string;
   category: string;
-  publishDate: Date;
-  readingTime?: number;
   heroImage?: { src: string; alt: string };
 }
 
-const { href, title, description, category, publishDate, readingTime, heroImage } = Astro.props;
-
-const fechaFormateada = publishDate.toLocaleDateString('es-MX', {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-});
+const { href, title, description, category, heroImage } = Astro.props;
 
 const categoryLabel = category.replace(/-/g, ' ');
 ---
@@ -46,18 +38,10 @@ const categoryLabel = category.replace(/-/g, ' ');
       <span class="blog-card__category">{categoryLabel}</span>
       <h3 class="blog-card__title">{title}</h3>
       <p class="blog-card__desc">{description}</p>
-      <div class="blog-card__meta">
-        <time datetime={publishDate.toISOString()}>
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          {fechaFormateada}
-        </time>
-        {readingTime && (
-          <span class="blog-card__reading">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            {readingTime} min de lectura
-          </span>
-        )}
-      </div>
+      <span class="blog-card__cta">
+        Leer guía completa
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </span>
     </div>
 
   </a>
@@ -65,17 +49,27 @@ const categoryLabel = category.replace(/-/g, ' ');
 
 <style>
 /* ============================================================
-   BLOG CARD
+   BLOG CARD — atemporal, sin fechas
 ============================================================ */
 .blog-card {
   border-radius: 14px;
   border: 1px solid rgba(10,15,30,0.08);
   background: #ffffff;
   overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card:hover {
+  border-color: rgba(10,15,30,0.18);
+  box-shadow: 0 8px 32px rgba(10,15,30,0.06);
 }
 
 .blog-card__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: inherit;
   height: 100%;
@@ -93,6 +87,11 @@ const categoryLabel = category.replace(/-/g, ' ');
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.4s ease;
+}
+
+.blog-card:hover .blog-card__image img {
+  transform: scale(1.03);
 }
 
 .blog-card__placeholder {
@@ -108,29 +107,34 @@ const categoryLabel = category.replace(/-/g, ' ');
 /* Body */
 .blog-card__body {
   padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 /* Categoría pill */
 .blog-card__category {
   display: inline-block;
-  padding: 0.25rem 0.625rem;
+  padding: 0.3rem 0.7rem;
   background: rgba(10,15,30,0.06);
   border: 1px solid rgba(10,15,30,0.08);
   color: rgba(10,15,30,0.6);
   font-size: 0.6875rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.07em;
   border-radius: 980px;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
+  width: fit-content;
 }
 
 /* Título */
 .blog-card__title {
-  font-size: 1rem;
+  font-size: 1.0625rem;
   font-weight: 700;
   color: #0a0f1e;
   line-height: 1.35;
+  letter-spacing: -0.01em;
   margin: 0 0 0.625rem;
 }
 
@@ -139,27 +143,32 @@ const categoryLabel = category.replace(/-/g, ' ');
   font-size: 0.875rem;
   color: rgba(10,15,30,0.6);
   line-height: 1.6;
-  margin: 0 0 1rem;
+  margin: 0 0 1.25rem;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
-/* Meta */
-.blog-card__meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  font-size: 0.75rem;
-  color: rgba(10,15,30,0.45);
-}
-
-.blog-card__meta time,
-.blog-card__reading {
+/* CTA inline en lugar de fecha */
+.blog-card__cta {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #0a0f1e;
+  border-top: 1px solid rgba(10,15,30,0.06);
+}
+
+.blog-card__cta svg {
+  transition: transform 0.2s ease;
+}
+
+.blog-card:hover .blog-card__cta svg {
+  transform: translateX(3px);
 }
 
 /* ============================================================
@@ -171,7 +180,7 @@ const categoryLabel = category.replace(/-/g, ' ');
   }
 
   .blog-card__title {
-    font-size: 1.0625rem;
+    font-size: 1.125rem;
   }
 }
 </style>

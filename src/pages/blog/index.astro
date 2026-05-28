@@ -8,7 +8,37 @@ import BlogPostCard from '../../components/BlogPostCard.astro';
 import '../../styles/pages/blog.css';
 
 const posts = await getCollection('blog', ({ data }) => !data.draft);
-const sortedPosts = posts.sort((a, b) => b.data.publishDate.getTime() - a.data.publishDate.getTime());
+
+// Orden atemporal: alfabético por título (estable, sin sesgo cronológico)
+const sortedPosts = posts.sort((a, b) =>
+  a.data.title.localeCompare(b.data.title, 'es', { sensitivity: 'base' })
+);
+
+// Agrupar por cluster para sidebar de categorías
+const clusterCount: Record<string, number> = {};
+posts.forEach(p => {
+  const c = p.data.cluster || 'general';
+  clusterCount[c] = (clusterCount[c] || 0) + 1;
+});
+
+const clusterLabels: Record<string, string> = {
+  'guardias-intramuros': 'Guardias Intramuros',
+  'seguridad-residenciales': 'Seguridad Residencial',
+  'seguridad-condominios': 'Seguridad Condominios',
+  'control-de-accesos': 'Control de Accesos',
+  'tecnologia-monitoreo': 'Tecnología y Monitoreo',
+  'vigilancia-cctv': 'Vigilancia CCTV',
+  'proteccion-ejecutiva': 'Protección Ejecutiva',
+  'consultoria-seguridad': 'Consultoría',
+  'general': 'Recursos Generales',
+};
+
+const clusters = Object.entries(clusterCount)
+  .map(([slug, count]) => ({ slug, count, label: clusterLabels[slug] || slug.replace(/-/g, ' ') }))
+  .sort((a, b) => b.count - a.count);
+
+// Pick 5 guías destacadas para sidebar "lecturas recomendadas"
+const recommendedPicks = sortedPosts.slice(0, 5);
 
 const siteUrl = 'https://seguridad-privada.com.mx';
 
@@ -33,11 +63,11 @@ const schema = {
 
   <HeroPagina
     badge="Blog y Recursos"
-    titulo="Blog de Seguridad Privada para Condominios"
-    descripcion="Guías, consejos y artículos especializados para administradores de condominios, comités de vigilancia y comunidades residenciales en CDMX."
+    titulo="Guías de Seguridad Privada para Condominios"
+    descripcion="Manuales operativos, comparativas y mejores prácticas para administradores, comités y desarrolladores residenciales en CDMX."
     breadcrumb={[{ label: 'Blog', href: '/blog' }]}
     seoParrafo1='Nuestro blog es un recurso gratuito para administradores de condominio, comités de vigilancia y desarrolladoras. Aquí encontrarás guías prácticas sobre <a href="/servicios/control-de-accesos">control de accesos</a>, protocolos de <a href="/servicios/guardias-intramuros">guardias intramuros</a>, normativa SSC y mejores prácticas para comunidades residenciales en CDMX.'
-    seoParrafo2='Todo el contenido es producido por el equipo de <strong>ORIGINS Private Security</strong> con base en nuestra experiencia real de más de 15 años en el sector. Si tienes una duda específica sobre seguridad para tu <a href="/servicios/seguridad-condominios">condominio</a>, escríbenos — podemos convertirla en el próximo artículo.'
+    seoParrafo2='Todo el contenido es producido por el equipo de <strong>ORIGINS Private Security</strong> con base en nuestra experiencia operativa en <a href="/zonas">CDMX y Estado de México</a>. Si tienes una duda específica sobre seguridad para tu <a href="/servicios/seguridad-condominios">condominio</a>, escríbenos — podemos convertirla en el próximo artículo.'
   />
 
   <NavCTA
@@ -45,41 +75,159 @@ const schema = {
     cards={[
       { label: 'Servicios de Seguridad', sublabel: 'Guardias, accesos y monitoreo', href: '/servicios', icon: 'shield' },
       { label: 'Zonas de Cobertura', sublabel: 'CDMX y Zona Metropolitana', href: '/zonas', icon: 'map' },
-      { label: 'Quiénes Somos', sublabel: '+15 años protegiendo condominios', href: '/nosotros', icon: 'people' },
+      { label: 'Quiénes Somos', sublabel: 'Permiso SSC 0102-15 vigente', href: '/nosotros', icon: 'people' },
       { label: 'Cotización Gratuita', sublabel: 'Diagnóstico en menos de 24 horas', href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
     ]}
   />
 
   <section class="blog-index" aria-labelledby="blog-index-title">
     <div class="container">
+
       <SectionHeader
-        badge="Artículos"
-        titulo="Guías y Recursos para tu Condominio"
-        subtitulo="Contenido especializado de nuestro equipo para ayudarte a tomar mejores decisiones de seguridad."
+        badge="Biblioteca de Guías"
+        titulo="Recursos Operativos para tu Condominio"
+        subtitulo="Manuales, comparativas y procesos documentados — escritos por el equipo operativo de ORIGINS."
         align="left"
         parrafo1='Los artículos del blog ORIGINS están escritos por supervisores operativos, consultores en seguridad residencial y nuestro equipo de capacitación. No es contenido reciclado de internet: cada guía surge de una situación real que vivimos en alguno de los <strong>más de 50 desarrollos</strong> que operamos. Por eso los administradores los usan como checklist antes de tomar decisiones.'
         parrafo2='Cubrimos temas que rara vez se documentan en español: cómo redactar consignas de seguridad, qué exigir en un contrato de servicio, cómo evaluar la rotación de personal del proveedor y procesos para auditar la operación mes con mes. Conoce nuestros <a href="/servicios">servicios disponibles</a> o <a href="/contacto">contáctanos</a> si quieres una asesoría que vaya más allá del contenido público.'
       />
 
-      {sortedPosts.length > 0 ? (
-        <div class="blog-index__grid">
-          {sortedPosts.map(post => (
-            <BlogPostCard
-              href={`/blog/${post.id}`}
-              title={post.data.title}
-              description={post.data.description}
-              category={post.data.cluster}
-              publishDate={post.data.publishDate}
-              readingTime={post.data.readingTime}
-              heroImage={post.data.heroImage}
-            />
-          ))}
-        </div>
-      ) : (
-        <p style="text-align:center; color: rgba(10,15,30,0.55); padding: 3rem 0;">
-          Próximamente publicaremos guías y artículos sobre seguridad para condominios.
-        </p>
-      )}
+      <div class="blog-layout">
+
+        <!-- Contenido principal: grid de cards -->
+        <main class="blog-layout__main" aria-labelledby="blog-grid-title">
+          <h2 id="blog-grid-title" class="sr-only">Lista de guías y recursos</h2>
+
+          {sortedPosts.length > 0 ? (
+            <div class="blog-index__grid">
+              {sortedPosts.map(post => (
+                <BlogPostCard
+                  href={`/blog/${post.id}`}
+                  title={post.data.title}
+                  description={post.data.description}
+                  category={post.data.cluster}
+                  heroImage={post.data.heroImage}
+                />
+              ))}
+            </div>
+          ) : (
+            <p class="blog-empty">
+              Próximamente publicaremos guías y artículos sobre seguridad para condominios.
+            </p>
+          )}
+        </main>
+
+        <!-- Sidebar de interlinking -->
+        <aside class="blog-layout__sidebar" aria-label="Recursos y enlaces relacionados">
+
+          <!-- 1. CTA principal -->
+          <div class="blog-sidebar-card blog-sidebar-card--cta">
+            <span class="blog-sidebar-card__eyebrow">Diagnóstico gratuito</span>
+            <h3>¿Necesitas seguridad para tu condominio?</h3>
+            <p>Propuesta operativa por escrito en menos de 24 horas — sin costo, sin compromiso.</p>
+            <a
+              href="https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio"
+              target="_blank"
+              rel="noopener"
+              class="blog-sidebar-cta"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Cotizar por WhatsApp
+            </a>
+            <a href="tel:+525530255580" class="blog-sidebar-tel">55 3025 5580</a>
+          </div>
+
+          <!-- 2. Categorías -->
+          {clusters.length > 0 && (
+            <nav class="blog-sidebar-card" aria-labelledby="sb-cat-title">
+              <h4 id="sb-cat-title">Categorías</h4>
+              <ul class="blog-sidebar-list">
+                {clusters.map(c => (
+                  <li>
+                    <a href={`#${c.slug}`} data-cluster-filter={c.slug}>
+                      <span>{c.label}</span>
+                      <span class="blog-sidebar-list__count">{c.count}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )}
+
+          <!-- 3. Servicios destacados -->
+          <nav class="blog-sidebar-card" aria-labelledby="sb-svc-title">
+            <h4 id="sb-svc-title">Servicios destacados</h4>
+            <ul class="blog-sidebar-list blog-sidebar-list--linked">
+              <li><a href="/servicios/guardias-intramuros">Guardias Intramuros</a></li>
+              <li><a href="/servicios/seguridad-condominios">Seguridad para Condominios</a></li>
+              <li><a href="/servicios/control-de-accesos">Control de Accesos</a></li>
+              <li><a href="/servicios/vigilancia-remota-cctv">Vigilancia CCTV 24/7</a></li>
+              <li><a href="/servicios/monitoreo-alarmas">Monitoreo de Alarmas</a></li>
+              <li><a href="/servicios/patrullaje">Patrullaje Vehicular</a></li>
+              <li><a href="/servicios/proteccion-ejecutiva">Protección Ejecutiva</a></li>
+              <li><a href="/servicios/consultoria-seguridad">Consultoría de Seguridad</a></li>
+            </ul>
+            <a href="/servicios" class="blog-sidebar-card__footer">
+              Ver catálogo completo
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </nav>
+
+          <!-- 4. Zonas de cobertura -->
+          <nav class="blog-sidebar-card" aria-labelledby="sb-zon-title">
+            <h4 id="sb-zon-title">Zonas de cobertura</h4>
+            <p class="blog-sidebar-card__hint">CDMX</p>
+            <ul class="blog-sidebar-list blog-sidebar-list--linked">
+              <li><a href="/zonas/miguel-hidalgo">Miguel Hidalgo</a></li>
+              <li><a href="/zonas/cuauhtemoc">Cuauhtémoc</a></li>
+              <li><a href="/zonas/benito-juarez">Benito Juárez</a></li>
+              <li><a href="/zonas/alvaro-obregon">Álvaro Obregón</a></li>
+              <li><a href="/zonas/coyoacan">Coyoacán</a></li>
+            </ul>
+            <p class="blog-sidebar-card__hint">Estado de México</p>
+            <ul class="blog-sidebar-list blog-sidebar-list--linked">
+              <li><a href="/zonas/naucalpan">Naucalpan</a></li>
+              <li><a href="/zonas/tlalnepantla">Tlalnepantla</a></li>
+              <li><a href="/zonas/atizapan">Atizapán</a></li>
+            </ul>
+            <a href="/zonas" class="blog-sidebar-card__footer">
+              Ver todas las zonas
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </nav>
+
+          <!-- 5. Lecturas recomendadas -->
+          {recommendedPicks.length > 0 && (
+            <nav class="blog-sidebar-card" aria-labelledby="sb-rec-title">
+              <h4 id="sb-rec-title">Lecturas recomendadas</h4>
+              <ul class="blog-sidebar-recs">
+                {recommendedPicks.map(p => (
+                  <li>
+                    <a href={`/blog/${p.id}`}>
+                      <span class="blog-sidebar-recs__cluster">{(clusterLabels[p.data.cluster] || p.data.cluster.replace(/-/g, ' '))}</span>
+                      <span class="blog-sidebar-recs__title">{p.data.title}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )}
+
+          <!-- 6. Recursos rápidos -->
+          <nav class="blog-sidebar-card" aria-labelledby="sb-rec-rapid-title">
+            <h4 id="sb-rec-rapid-title">Recursos rápidos</h4>
+            <ul class="blog-sidebar-list blog-sidebar-list--linked">
+              <li><a href="/nosotros">¿Quiénes somos?</a></li>
+              <li><a href="/contacto">Solicitar diagnóstico</a></li>
+              <li><a href="/bolsa-de-trabajo">Bolsa de trabajo</a></li>
+              <li><a href="/emergencias">Directorio de emergencias</a></li>
+              <li><a href="/mapa-del-sitio">Mapa del sitio</a></li>
+            </ul>
+          </nav>
+
+        </aside>
+
+      </div>
     </div>
   </section>
 

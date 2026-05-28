@@ -17,6 +17,31 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 const siteUrl = 'https://seguridad-privada.com.mx';
 
+// Posts relacionados — mismo cluster, excluir actual, máx 4
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
+const relatedPosts = allPosts
+  .filter(p => p.id !== post.id && p.data.cluster === post.data.cluster)
+  .slice(0, 4);
+
+// Si no hay 4 relacionados del mismo cluster, completar con otros
+const fillerPosts = allPosts
+  .filter(p => p.id !== post.id && p.data.cluster !== post.data.cluster)
+  .slice(0, 4 - relatedPosts.length);
+
+const finalRelated = [...relatedPosts, ...fillerPosts].slice(0, 4);
+
+const clusterLabels: Record<string, string> = {
+  'guardias-intramuros': 'Guardias Intramuros',
+  'seguridad-residenciales': 'Seguridad Residencial',
+  'seguridad-condominios': 'Seguridad Condominios',
+  'control-de-accesos': 'Control de Accesos',
+  'tecnologia-monitoreo': 'Tecnología y Monitoreo',
+  'vigilancia-cctv': 'Vigilancia CCTV',
+  'proteccion-ejecutiva': 'Protección Ejecutiva',
+  'consultoria-seguridad': 'Consultoría',
+  'general': 'Recursos Generales',
+};
+
 // Nav-CTA dinámico según el cluster del artículo
 const clusterNavMap: Record<string, { label: string; sublabel: string; href: string; icon: 'shield' | 'monitor' | 'consult' | 'map' | 'blog' | 'people' }> = {
   'guardias-intramuros':    { label: 'Guardias Intramuros',       sublabel: 'Vigilancia 24/7 certificada SSC',       href: '/servicios/guardias-intramuros',      icon: 'shield'  },
@@ -29,7 +54,7 @@ const clusterNavMap: Record<string, { label: string; sublabel: string; href: str
 };
 const clusterCard = clusterNavMap[post.data.cluster] ?? { label: 'Servicios de Seguridad', sublabel: 'Guardias, accesos y monitoreo', href: '/servicios', icon: 'shield' as const };
 
-// Schema BlogPosting
+// Schema BlogPosting — mantenemos datePublished para SEO (JSON-LD invisible al usuario)
 const schema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -63,7 +88,7 @@ const schema = {
 >
 
   <HeroPagina
-    badge={post.data.cluster.replace(/-/g, ' ')}
+    badge={clusterLabels[post.data.cluster] || post.data.cluster.replace(/-/g, ' ')}
     titulo={post.data.title}
     descripcion={post.data.description}
     breadcrumb={[
@@ -77,7 +102,7 @@ const schema = {
     cards={[
       { label: clusterCard.label, sublabel: clusterCard.sublabel, href: clusterCard.href, icon: clusterCard.icon },
       { label: 'Zonas de Cobertura',   sublabel: 'CDMX y Zona Metropolitana',          href: '/zonas',    icon: 'map'    },
-      { label: 'Más Artículos',        sublabel: 'Guías de seguridad para condominios', href: '/blog',     icon: 'blog'   },
+      { label: 'Más Guías',            sublabel: 'Recursos de seguridad para condominios', href: '/blog',     icon: 'blog'   },
       { label: 'Cotización Gratuita',  sublabel: 'Diagnóstico en menos de 24 horas',   href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
     ]}
   />
@@ -100,14 +125,13 @@ const schema = {
             </div>
           )}
 
+          <!-- Meta atemporal: solo categoría, sin fechas ni tiempo de lectura -->
           <div class="blog-post__meta">
-            <span class="blog-post__category">{post.data.cluster.replace(/-/g, ' ')}</span>
-            <time datetime={post.data.publishDate.toISOString()}>
-              {post.data.publishDate.toLocaleDateString('es-MX', { year: 'numeric', month: 'long', day: 'numeric' })}
-            </time>
-            {post.data.readingTime && (
-              <span>{post.data.readingTime} min de lectura</span>
-            )}
+            <span class="blog-post__category">{clusterLabels[post.data.cluster] || post.data.cluster.replace(/-/g, ' ')}</span>
+            <span class="blog-post__author">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              Equipo ORIGINS Private Security
+            </span>
           </div>
 
           <div class="blog-post__content prose">
@@ -115,31 +139,96 @@ const schema = {
           </div>
         </article>
 
-        <!-- Sidebar -->
-        <aside class="blog-post__sidebar">
+        <!-- Sidebar pro — interlinking profundo -->
+        <aside class="blog-post__sidebar" aria-label="Recursos y enlaces relacionados">
+
+          <!-- 1. CTA principal -->
           <div class="blog-sidebar-card blog-sidebar-card--cta">
+            <span class="blog-sidebar-card__eyebrow">Diagnóstico gratuito</span>
             <h3>¿Necesitas seguridad para tu condominio?</h3>
-            <p>Diagnóstico gratuito en 24 horas.</p>
+            <p>Propuesta operativa por escrito en menos de 24 horas — sin costo, sin compromiso.</p>
             <a
               href="https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio"
               target="_blank"
               rel="noopener"
               class="blog-sidebar-cta"
             >
-              WhatsApp Directo
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Cotizar por WhatsApp
             </a>
             <a href="tel:+525530255580" class="blog-sidebar-tel">55 3025 5580</a>
           </div>
 
-          <div class="blog-sidebar-card">
-            <h4>Servicios relacionados</h4>
-            <ul>
-              <li><a href="/servicios/guardias-intramuros">Guardias Intramuros</a></li>
-              <li><a href="/servicios/seguridad-condominios">Seguridad Condominios</a></li>
-              <li><a href="/servicios/control-de-accesos">Control de Accesos</a></li>
-              <li><a href="/servicios/vigilancia-remota-cctv">Vigilancia CCTV</a></li>
-            </ul>
+          <!-- 2. Servicio relacionado al cluster -->
+          <div class="blog-sidebar-card blog-sidebar-card--cluster">
+            <span class="blog-sidebar-card__eyebrow">Servicio relacionado</span>
+            <h4>{clusterCard.label}</h4>
+            <p>{clusterCard.sublabel}</p>
+            <a href={clusterCard.href} class="blog-sidebar-card__cta-link">
+              Ver detalle del servicio
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
           </div>
+
+          <!-- 3. Artículos relacionados -->
+          {finalRelated.length > 0 && (
+            <nav class="blog-sidebar-card" aria-labelledby="sb-rel-title">
+              <h4 id="sb-rel-title">Sigue leyendo</h4>
+              <ul class="blog-sidebar-recs">
+                {finalRelated.map(p => (
+                  <li>
+                    <a href={`/blog/${p.id}`}>
+                      <span class="blog-sidebar-recs__cluster">{clusterLabels[p.data.cluster] || p.data.cluster.replace(/-/g, ' ')}</span>
+                      <span class="blog-sidebar-recs__title">{p.data.title}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <a href="/blog" class="blog-sidebar-card__footer">
+                Ver todas las guías
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </nav>
+          )}
+
+          <!-- 4. Servicios destacados -->
+          <nav class="blog-sidebar-card" aria-labelledby="sb-svc-title">
+            <h4 id="sb-svc-title">Servicios destacados</h4>
+            <ul class="blog-sidebar-list blog-sidebar-list--linked">
+              <li><a href="/servicios/guardias-intramuros">Guardias Intramuros</a></li>
+              <li><a href="/servicios/seguridad-condominios">Seguridad para Condominios</a></li>
+              <li><a href="/servicios/control-de-accesos">Control de Accesos</a></li>
+              <li><a href="/servicios/vigilancia-remota-cctv">Vigilancia CCTV 24/7</a></li>
+              <li><a href="/servicios/patrullaje">Patrullaje Vehicular</a></li>
+              <li><a href="/servicios/proteccion-ejecutiva">Protección Ejecutiva</a></li>
+            </ul>
+            <a href="/servicios" class="blog-sidebar-card__footer">
+              Catálogo completo
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </nav>
+
+          <!-- 5. Zonas -->
+          <nav class="blog-sidebar-card" aria-labelledby="sb-zon-title">
+            <h4 id="sb-zon-title">Cobertura por zona</h4>
+            <p class="blog-sidebar-card__hint">CDMX</p>
+            <ul class="blog-sidebar-list blog-sidebar-list--linked">
+              <li><a href="/zonas/miguel-hidalgo">Miguel Hidalgo</a></li>
+              <li><a href="/zonas/cuauhtemoc">Cuauhtémoc</a></li>
+              <li><a href="/zonas/benito-juarez">Benito Juárez</a></li>
+              <li><a href="/zonas/coyoacan">Coyoacán</a></li>
+            </ul>
+            <p class="blog-sidebar-card__hint">Estado de México</p>
+            <ul class="blog-sidebar-list blog-sidebar-list--linked">
+              <li><a href="/zonas/naucalpan">Naucalpan</a></li>
+              <li><a href="/zonas/atizapan">Atizapán</a></li>
+            </ul>
+            <a href="/zonas" class="blog-sidebar-card__footer">
+              Todas las zonas
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </nav>
+
         </aside>
 
       </div>
@@ -152,7 +241,7 @@ const schema = {
     cards={[
       { label: clusterCard.label,      sublabel: clusterCard.sublabel,                  href: clusterCard.href, icon: clusterCard.icon },
       { label: 'Zonas de Cobertura',   sublabel: 'CDMX y Zona Metropolitana',           href: '/zonas',         icon: 'map'            },
-      { label: 'Más Artículos',        sublabel: 'Guías de seguridad para condominios', href: '/blog',          icon: 'blog'           },
+      { label: 'Más Guías',            sublabel: 'Recursos para condominios',           href: '/blog',          icon: 'blog'           },
       { label: 'Cotización Gratuita',  sublabel: 'Diagnóstico en menos de 24 horas',    href: 'https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20cotizar%20seguridad%20para%20mi%20condominio', whatsapp: true, accent: true, external: true },
     ]}
   />
