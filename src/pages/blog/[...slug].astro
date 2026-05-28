@@ -117,27 +117,46 @@ const schema = {
 
         <!-- Contenido principal -->
         <article class="blog-post__main">
-          {post.data.heroImage && (
-            <div class="blog-post__hero-img">
-              <img
-                src={post.data.heroImage.src}
-                alt={post.data.heroImage.alt}
-                loading="eager"
-                width="1200"
-                height="675"
-              />
+
+          <!-- INTRO 2 columnas: resumen ejecutivo + imagen -->
+          <section class="blog-post__intro" aria-label="Resumen del artículo">
+            <div class="blog-post__intro-grid">
+
+              <!-- Col 1: eyebrow + H2 + lead + meta -->
+              <div class="blog-post__intro-text">
+                <span class="blog-post__intro-eyebrow">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                  Resumen ejecutivo
+                </span>
+                <h2 class="blog-post__intro-title">¿De qué trata esta guía?</h2>
+                <p class="blog-post__intro-lead">{post.data.description}</p>
+
+                <div class="blog-post__intro-meta">
+                  <span class="blog-post__category">{clusterLabels[post.data.cluster] || post.data.cluster.replace(/-/g, ' ')}</span>
+                  <span class="blog-post__author">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    Equipo ORIGINS Private Security
+                  </span>
+                </div>
+              </div>
+
+              <!-- Col 2: imagen del artículo -->
+              {post.data.heroImage && (
+                <figure class="blog-post__intro-image">
+                  <img
+                    src={post.data.heroImage.src}
+                    alt={post.data.heroImage.alt}
+                    loading="eager"
+                    width="900"
+                    height="675"
+                  />
+                </figure>
+              )}
+
             </div>
-          )}
+          </section>
 
-          <!-- Meta atemporal: solo categoría, sin fechas ni tiempo de lectura -->
-          <div class="blog-post__meta">
-            <span class="blog-post__category">{clusterLabels[post.data.cluster] || post.data.cluster.replace(/-/g, ' ')}</span>
-            <span class="blog-post__author">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              Equipo ORIGINS Private Security
-            </span>
-          </div>
-
+          <!-- Contenido principal del artículo -->
           <div class="blog-post__content prose">
             <Content />
           </div>

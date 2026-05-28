@@ -1,6 +1,6 @@
 ---
 title: "Cómo cambiar de empresa de seguridad sin dejar expuesto al condominio"
-description: "Protocolo de transición 2026 para cambiar de proveedor sin quedarse sin servicio: cronograma, traspaso de equipos, comunicación al guardia entrante y residentes."
+description: "Protocolo 2026 para cambiar de proveedor sin perder servicio: cronograma, traspaso de equipos, periodo de sombra y comunicación a residentes."
 keywords:
   - cambiar empresa de seguridad condominio
   - transicion proveedor seguridad privada

@@ -1,6 +1,6 @@
 ---
 title: "Residencial horizontal vs vertical: 7 diferencias en seguridad"
-description: "Análisis comparativo 2026: por qué la seguridad de un fraccionamiento horizontal y un edificio vertical en CDMX requieren protocolos, headcount y tecnología distintos."
+description: "Análisis 2026 de por qué un fraccionamiento horizontal y un edificio vertical en CDMX requieren protocolos, headcount y tecnología distintos."
 keywords:
   - seguridad residencial horizontal vs vertical
   - diferencia seguridad fraccionamiento edificio
