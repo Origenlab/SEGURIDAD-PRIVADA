@@ -440,27 +440,65 @@
   opacity: 0.6;
 }
 
-/* Prose — contenido markdown */
+/* ============================================================
+   PROSE — contenido markdown del artículo
+   Tipografía editorial con counter de sección, drop cap y polish
+============================================================ */
 .blog-post__content.prose {
-  font-size: 1rem;
-  line-height: 1.8;
-  color: rgba(10,15,30,0.8);
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color: rgba(10,15,30,0.82);
+  counter-reset: prose-section;
+  max-width: 75ch;
 }
 
+/* H2: encabezado con numeración decorativa + accent bar */
 .blog-post__content.prose h2 {
-  font-size: 1.5rem;
+  position: relative;
+  font-size: 1.625rem;
   font-weight: 800;
   color: #0a0f1e;
-  margin: 2.5rem 0 1rem;
-  line-height: 1.25;
-  letter-spacing: -0.01em;
+  margin: 3.5rem 0 1.25rem;
+  line-height: 1.2;
+  letter-spacing: -0.022em;
+  counter-increment: prose-section;
+  padding-top: 1.5rem;
 }
 
+.blog-post__content.prose h2::before {
+  content: counter(prose-section, decimal-leading-zero);
+  display: block;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #25D366;
+  margin-bottom: 0.6rem;
+  text-transform: none;
+}
+
+.blog-post__content.prose h2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 3px;
+  background: #0a0f1e;
+  border-radius: 2px;
+}
+
+/* H3: subsección con barra lateral verde */
 .blog-post__content.prose h3 {
+  position: relative;
   font-size: 1.25rem;
   font-weight: 700;
   color: #0a0f1e;
-  margin: 2rem 0 0.75rem;
+  margin: 2.5rem 0 0.875rem;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  padding-left: 0.875rem;
+  border-left: 3px solid #25D366;
 }
 
 .blog-post__content.prose p {
@@ -627,55 +665,196 @@
    ====================================================
 ============================================================ */
 
-/* ---- prose-intro: lead block destacado ---- */
-.blog-post__content.prose .prose-intro {
-  background: linear-gradient(180deg, rgba(10,15,30,0.02) 0%, transparent 100%);
-  border-left: 3px solid #25D366;
-  padding: 1.5rem 1.5rem 1rem;
-  border-radius: 0 12px 12px 0;
+/* ---- prose-tldr: caja de resumen ejecutivo al inicio ---- */
+.blog-post__content.prose .prose-tldr {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem 1.75rem;
+  background: rgba(10,15,30,0.04);
+  border-radius: 12px;
   margin: 0 0 2rem;
+  align-items: flex-start;
+}
+
+.blog-post__content.prose .prose-tldr__label {
+  flex-shrink: 0;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: #25D366;
+  padding: 0.35rem 0.65rem;
+  background: rgba(37,211,102,0.1);
+  border-radius: 6px;
+}
+
+.blog-post__content.prose .prose-tldr p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(10,15,30,0.78);
+  font-weight: 400;
+}
+
+/* ---- prose-byline: autoría con avatar minimalista ---- */
+.blog-post__content.prose .prose-byline {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 1rem 0;
+  margin: 0 0 2rem;
+  border-top: 1px solid rgba(10,15,30,0.08);
+  border-bottom: 1px solid rgba(10,15,30,0.08);
+}
+
+.blog-post__content.prose .prose-byline__avatar {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #0a0f1e;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-post__content.prose .prose-byline__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+  min-width: 0;
+}
+
+.blog-post__content.prose .prose-byline__name {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #0a0f1e;
+  line-height: 1.3;
+}
+
+.blog-post__content.prose .prose-byline__role {
+  font-size: 0.75rem;
+  color: rgba(10,15,30,0.55);
+  line-height: 1.4;
+}
+
+/* ---- prose-intro: lead block con drop cap editorial ---- */
+.blog-post__content.prose .prose-intro {
+  margin: 0 0 2.5rem;
 }
 
 .blog-post__content.prose .prose-intro p {
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
   line-height: 1.75;
   color: rgba(10,15,30,0.85);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
 }
 
 .blog-post__content.prose .prose-intro p:last-child {
   margin-bottom: 0;
 }
 
-/* ---- prose-key-takeaways: caja "lo que aprenderás" ---- */
+/* Drop cap en la primera letra del primer párrafo del intro */
+.blog-post__content.prose .prose-intro > p:first-child::first-letter {
+  float: left;
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 0.9;
+  padding: 0.45rem 0.75rem 0 0;
+  margin-top: 0.2rem;
+  color: #0a0f1e;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* ---- prose-pullquote: cita editorial destacada ---- */
+.blog-post__content.prose .prose-pullquote {
+  margin: 2.5rem 0;
+  padding: 1.75rem 1.5rem 1.25rem 2.75rem;
+  position: relative;
+  border-left: 4px solid #25D366;
+}
+
+.blog-post__content.prose .prose-pullquote::before {
+  content: '\201C';
+  position: absolute;
+  top: -0.5rem;
+  left: 1rem;
+  font-size: 4rem;
+  font-family: Georgia, "Times New Roman", serif;
+  color: rgba(37,211,102,0.35);
+  line-height: 1;
+  font-weight: 700;
+}
+
+.blog-post__content.prose .prose-pullquote p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #0a0f1e;
+  font-style: italic;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.blog-post__content.prose .prose-pullquote footer {
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 500;
+  color: rgba(10,15,30,0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ---- prose-key-takeaways: caja "lo que aprenderás" oscura ---- */
 .blog-post__content.prose .prose-key-takeaways {
   background: #0a0f1e;
   color: #ffffff;
-  padding: 1.75rem;
+  padding: 1.75rem 2rem;
   border-radius: 14px;
-  margin: 2rem 0;
+  margin: 2.5rem 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.blog-post__content.prose .prose-key-takeaways p:first-child {
-  font-size: 0.75rem;
+.blog-post__content.prose .prose-key-takeaways::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(37,211,102,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.blog-post__content.prose .prose-key-takeaways__title {
+  display: block;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.7rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.18em;
   color: #25D366;
   margin: 0 0 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .blog-post__content.prose .prose-key-takeaways ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  position: relative;
+  z-index: 1;
 }
 
 .blog-post__content.prose .prose-key-takeaways li {
   position: relative;
-  padding: 0.5rem 0 0.5rem 1.75rem;
+  padding: 0.625rem 0 0.625rem 1.75rem;
   font-size: 0.9375rem;
-  line-height: 1.6;
+  line-height: 1.55;
   color: rgba(255,255,255,0.88);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
@@ -688,11 +867,12 @@
   content: '';
   position: absolute;
   left: 0;
-  top: 0.9rem;
-  width: 12px;
-  height: 12px;
+  top: 1.05rem;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background: #25D366;
+  box-shadow: 0 0 0 3px rgba(37,211,102,0.18);
 }
 
 /* ---- prose-highlight: callout corto destacado ---- */
@@ -1038,28 +1218,69 @@
   padding-top: 0.25rem;
 }
 
-/* ---- Tablet+ ajustes prose components ---- */
+/* ---- Tablet 768+ ajustes prose ---- */
 @media (min-width: 768px) {
-  .blog-post__content.prose .prose-intro {
-    padding: 1.75rem 2rem 1.25rem;
+  .blog-post__content.prose {
+    font-size: 1.1rem;
+    line-height: 1.85;
+  }
+  .blog-post__content.prose h2 {
+    font-size: 2rem;
+    margin: 4rem 0 1.5rem;
+  }
+  .blog-post__content.prose h2::before {
+    font-size: 0.8125rem;
+    margin-bottom: 0.75rem;
+  }
+  .blog-post__content.prose h3 {
+    font-size: 1.375rem;
+    margin: 3rem 0 1rem;
   }
   .blog-post__content.prose .prose-intro p {
-    font-size: 1.125rem;
+    font-size: 1.1875rem;
+    line-height: 1.7;
+  }
+  .blog-post__content.prose .prose-intro > p:first-child::first-letter {
+    font-size: 4.5rem;
+    padding-right: 0.875rem;
+  }
+  .blog-post__content.prose .prose-tldr {
+    padding: 1.75rem 2rem;
+  }
+  .blog-post__content.prose .prose-tldr p {
+    font-size: 1rem;
   }
   .blog-post__content.prose .prose-key-takeaways {
-    padding: 2rem 2.25rem;
+    padding: 2.25rem 2.5rem;
   }
   .blog-post__content.prose .prose-callout {
     padding: 1.75rem 2rem;
   }
   .blog-post__content.prose .prose-stat-grid {
     grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  .blog-post__content.prose .prose-stat {
+    padding: 1.5rem 1.25rem;
   }
   .blog-post__content.prose .prose-stat__num {
-    font-size: 2.125rem;
+    font-size: 2.375rem;
   }
   .blog-post__content.prose .prose-checklist {
-    padding: 1.75rem 2rem;
+    padding: 2rem 2.25rem;
+  }
+  .blog-post__content.prose .prose-pullquote {
+    margin: 3rem 0;
+    padding: 2rem 2rem 1.5rem 3.5rem;
+  }
+  .blog-post__content.prose .prose-pullquote::before {
+    font-size: 5.5rem;
+    top: -0.75rem;
+    left: 1.25rem;
+  }
+  .blog-post__content.prose .prose-pullquote p {
+    font-size: 1.5rem;
+    line-height: 1.45;
   }
   .blog-post__content.prose .prose-cta-block {
     padding: 2.5rem;
@@ -1072,6 +1293,17 @@
   .blog-post__content.prose .prose-faq-item > p,
   .blog-post__content.prose .prose-faq-item > div {
     padding: 0 1.75rem 1.5rem;
-    font-size: 0.9375rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ---- Desktop 1024+ aún más generoso ---- */
+@media (min-width: 1024px) {
+  .blog-post__content.prose h2 {
+    font-size: 2.25rem;
+    margin: 4.5rem 0 1.75rem;
+  }
+  .blog-post__content.prose .prose-pullquote p {
+    font-size: 1.625rem;
   }
 }

@@ -214,7 +214,7 @@ draft: false
 
 ---
 
-<div class="prose-section-block">
+<div class="prose-section-block prose-section-block--hero">
   <div class="prose-section-block__header">
     <span class="prose-section-block__num">01</span>
     <div>
@@ -222,28 +222,31 @@ draft: false
       <h3 class="prose-section-block__title">Guardias que Conocen tu Condominio — No Solo Ocupan el Puesto</h3>
     </div>
   </div>
-  <div class="prose-two-col">
+  <div class="prose-two-col prose-two-col--hero">
     <div class="prose-two-col__text">
       <p>La diferencia entre un guardia genérico y un guardia ORIGINS en tu condominio empieza antes del primer turno. <strong>Lo capacitamos específicamente en tu edificio</strong>: qué residentes hay, cómo se llama el administrador, cuáles proveedores son frecuentes, cuál es el protocolo para visitas, cómo manejar paquetería y qué hacer en cada tipo de emergencia.</p>
-      <ul>
-        <li>Conoce a los residentes por nombre — evita fricciones y proyecta profesionalismo</li>
-        <li>Control de acceso peatonal y vehicular con registro digital en tiempo real</li>
-        <li>Gestión de paquetería con fotografía y firma de recepción</li>
-        <li>Rondines verificados por todos los niveles, estacionamientos y áreas comunes</li>
-        <li>Protocolo específico para cada tipo de emergencia del edificio</li>
-        <li>Bitácora digital disponible para administración y comité en cualquier momento</li>
+      <ul class="prose-check-list">
+        <li><span>Conoce a los residentes por nombre</span><small>Evita fricciones y proyecta profesionalismo</small></li>
+        <li><span>Control de acceso peatonal y vehicular</span><small>Registro digital en tiempo real</small></li>
+        <li><span>Gestión de paquetería</span><small>Fotografía y firma de recepción</small></li>
+        <li><span>Rondines verificados</span><small>Niveles, estacionamientos y áreas comunes</small></li>
+        <li><span>Protocolo específico por emergencia</span><small>Diseñado para tu edificio</small></li>
+        <li><span>Bitácora digital 24/7</span><small>Acceso para administración y comité en cualquier momento</small></li>
       </ul>
     </div>
-    <div class="prose-two-col__img">
-      <img src="/img/img-condominios/guardia-certificado-ssc-condominio-premium.avif" alt="Guardia certificado SSC en condominio premium CDMX ORIGINS" loading="lazy" width="640" height="480" />
-      <img src="/img/img-condominios/guardias-capacitados-condominios-lujo.avif" alt="Guardias capacitados para condominios de lujo en CDMX" loading="lazy" width="640" height="480" />
-    </div>
+    <figure class="prose-two-col__hero-img">
+      <img src="/img/img-condominios/guardia-certificado-ssc-condominio-premium.avif" alt="Guardia certificado SSC en condominio premium CDMX ORIGINS" loading="lazy" width="800" height="1000" />
+      <figcaption class="prose-two-col__hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        <span><strong>SSC 0102-15</strong>Certificación vigente</span>
+      </figcaption>
+    </figure>
   </div>
 </div>
 
 ---
 
-<div class="prose-section-block">
+<div class="prose-section-block prose-section-block--hero">
   <div class="prose-section-block__header">
     <span class="prose-section-block__num">02</span>
     <div>
@@ -251,28 +254,31 @@ draft: false
       <h3 class="prose-section-block__title">CCTV + Alarmas + Accesos — Una Plataforma, No Sistemas Aislados</h3>
     </div>
   </div>
-  <div class="prose-two-col">
+  <div class="prose-two-col prose-two-col--hero">
     <div class="prose-two-col__text">
       <p>El valor real de la tecnología en un condominio no está en tener más cámaras — está en que todas trabajen juntas y que alguien las esté vigilando. Cuando el guardia recibe una alerta de alarma, <strong>ve automáticamente las cámaras de esa zona</strong>. Cuando hay un evento en la bitácora de accesos, hay respaldo visual. Todo integrado.</p>
-      <ul>
-        <li>Cámaras HD 2MP–8MP con visión nocturna en todos los puntos críticos</li>
-        <li>Monitoreo humano 24/7 desde nuestra central en CDMX — operadores que verifican</li>
-        <li>Sistema de alarmas con respuesta en menos de 90 segundos y batería de 24h</li>
-        <li>Control de accesos integrado con CCTV — cada entrada tiene respaldo visual</li>
-        <li>Acceso remoto para administrador y comité desde su celular</li>
-        <li>30 días de grabación con descarga de clips para evidencia legal</li>
+      <ul class="prose-check-list">
+        <li><span>Cámaras HD 2MP–8MP</span><small>Visión nocturna en todos los puntos críticos</small></li>
+        <li><span>Monitoreo humano 24/7</span><small>Central propia en CDMX — operadores que verifican</small></li>
+        <li><span>Alarmas con respuesta &lt; 90 segundos</span><small>Batería de respaldo de 24h ante cortes de luz</small></li>
+        <li><span>CCTV + accesos integrados</span><small>Cada entrada queda con respaldo visual</small></li>
+        <li><span>Acceso remoto desde celular</span><small>Para administrador y comité en cualquier momento</small></li>
+        <li><span>30 días de grabación</span><small>Descarga de clips para evidencia legal</small></li>
       </ul>
     </div>
-    <div class="prose-two-col__img">
-      <img src="/img/img-condominios/tecnologia-seguridad-integral-condominios.avif" alt="Tecnología de seguridad integral para condominios CDMX ORIGINS" loading="lazy" width="640" height="480" />
-      <img src="/img/img-condominios/vigilancia-cctv-inteligente-condominios.avif" alt="Vigilancia CCTV inteligente para condominios residenciales CDMX" loading="lazy" width="640" height="480" />
-    </div>
+    <figure class="prose-two-col__hero-img">
+      <img src="/img/img-condominios/tecnologia-seguridad-integral-condominios.avif" alt="Tecnología de seguridad integral para condominios CDMX ORIGINS" loading="lazy" width="800" height="1000" />
+      <figcaption class="prose-two-col__hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
+        <span><strong>Central 24/7</strong>Operadores propios en CDMX</span>
+      </figcaption>
+    </figure>
   </div>
 </div>
 
 ---
 
-<div class="prose-section-block">
+<div class="prose-section-block prose-section-block--hero">
   <div class="prose-section-block__header">
     <span class="prose-section-block__num">03</span>
     <div>
@@ -280,22 +286,25 @@ draft: false
       <h3 class="prose-section-block__title">El Comité Siempre Sabe Qué Está Pasando — Sin Tener que Preguntar</h3>
     </div>
   </div>
-  <div class="prose-two-col">
+  <div class="prose-two-col prose-two-col--hero">
     <div class="prose-two-col__text">
       <p>La supervisión es la parte donde la mayoría de empresas de seguridad falla. Ponen el guardia y desaparecen. En ORIGINS la supervisión está <strong>estructurada, documentada y entregada al comité cada semana</strong>. No son promesas — es evidencia.</p>
-      <ul>
-        <li>Supervisor visita tu condominio cada semana con reporte firmado y sellado</li>
-        <li>Reporte diario digital de eventos: quién entró, incidencias, paquetería recibida</li>
-        <li>Evaluación mensual de desempeño del guardia con métricas objetivas</li>
-        <li>Línea directa 24/7 con respuesta en menos de 2 horas ante cualquier situación</li>
-        <li>Reemplazo garantizado en menos de 2 horas ante ausencias — aviso proactivo al administrador</li>
-        <li>Reporte ejecutivo mensual para presentar en asamblea de condóminos</li>
+      <ul class="prose-check-list">
+        <li><span>Supervisión semanal en sitio</span><small>Reporte firmado y sellado en cada visita</small></li>
+        <li><span>Reporte diario digital</span><small>Accesos, incidencias y paquetería del día</small></li>
+        <li><span>Evaluación mensual del guardia</span><small>Métricas objetivas de desempeño</small></li>
+        <li><span>Línea directa 24/7</span><small>Respuesta en &lt; 2 horas ante cualquier situación</small></li>
+        <li><span>Reemplazo en &lt; 2 horas</span><small>Aviso proactivo al administrador antes del vacío</small></li>
+        <li><span>Reporte ejecutivo mensual</span><small>Listo para presentar en asamblea de condóminos</small></li>
       </ul>
     </div>
-    <div class="prose-two-col__img">
-      <img src="/img/img-condominios/rondines-seguridad-condominios-cdmx.avif" alt="Rondines de seguridad verificados en condominios CDMX" loading="lazy" width="640" height="480" />
-      <img src="/img/img-condominios/personal-seguridad-certificado-residencial.avif" alt="Personal de seguridad certificado para condominios residenciales CDMX" loading="lazy" width="640" height="480" />
-    </div>
+    <figure class="prose-two-col__hero-img">
+      <img src="/img/img-condominios/rondines-seguridad-condominios-cdmx.avif" alt="Rondines de seguridad verificados en condominios CDMX" loading="lazy" width="800" height="1000" />
+      <figcaption class="prose-two-col__hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 11 17 15 13"/></svg>
+        <span><strong>Reporte semanal</strong>Firmado y sellado</span>
+      </figcaption>
+    </figure>
   </div>
 </div>
 
@@ -537,30 +546,54 @@ draft: false
   <p class="prose-section-sub">Guardias certificados, tecnología integrada y supervisión documentada — el estándar que los residentes merecen y el comité puede exigir.</p>
 </div>
 
-<div class="prose-gallery">
-  <figure>
-    <img src="/img/img-condominios/guardias-intramuros-elite-condominios.avif" alt="Guardias intramuros élite para condominios premium CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>Personal ORIGINS en condominio vertical — presentación ejecutiva, trato profesional</figcaption>
+<div class="prose-gallery prose-gallery--bento">
+  <figure class="prose-gallery__item prose-gallery__item--hero">
+    <img src="/img/img-condominios/guardias-intramuros-elite-condominios.avif" alt="Guardias intramuros élite para condominios premium CDMX" loading="lazy" width="800" height="800" />
+    <span class="prose-gallery__tag">Personal</span>
+    <figcaption>
+      <strong>Personal ORIGINS en condominio vertical</strong>
+      <em>Presentación ejecutiva, trato profesional con residentes y visitas</em>
+    </figcaption>
   </figure>
-  <figure>
+  <figure class="prose-gallery__item">
     <img src="/img/img-condominios/control-visitantes-digital-condominios.avif" alt="Control digital de visitantes en condominios CDMX ORIGINS" loading="lazy" width="640" height="480" />
-    <figcaption>Control de visitantes digital — foto, identidad verificada y autorización del residente</figcaption>
+    <span class="prose-gallery__tag">Accesos</span>
+    <figcaption>
+      <strong>Control de visitantes digital</strong>
+      <em>Foto, identidad verificada y autorización del residente</em>
+    </figcaption>
   </figure>
-  <figure>
+  <figure class="prose-gallery__item">
     <img src="/img/img-condominios/videovigilancia-profesional-residencial.avif" alt="Videovigilancia profesional para condominios residenciales CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>CCTV con monitoreo 24/7 — el operador ve las cámaras cuando suena la alarma</figcaption>
+    <span class="prose-gallery__tag">CCTV</span>
+    <figcaption>
+      <strong>CCTV con monitoreo 24/7</strong>
+      <em>El operador ve las cámaras cuando suena la alarma</em>
+    </figcaption>
   </figure>
-  <figure>
+  <figure class="prose-gallery__item">
     <img src="/img/img-condominios/control-accesos-biometrico-residencial-lujo.avif" alt="Control de accesos biométrico en residencial de lujo CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>Control de accesos con biométrico — acceso rápido para residentes, verificación total para visitas</figcaption>
+    <span class="prose-gallery__tag">Biométrico</span>
+    <figcaption>
+      <strong>Accesos con biométrico</strong>
+      <em>Rápido para residentes, verificación total para visitas</em>
+    </figcaption>
   </figure>
-  <figure>
+  <figure class="prose-gallery__item">
     <img src="/img/img-condominios/seguridad-perimetral-condominios-premium.avif" alt="Seguridad perimetral para condominios premium CDMX ORIGINS" loading="lazy" width="640" height="480" />
-    <figcaption>Cobertura perimetral completa — lo que la caseta no puede ver, el patrullaje lo cubre</figcaption>
+    <span class="prose-gallery__tag">Perímetro</span>
+    <figcaption>
+      <strong>Cobertura perimetral completa</strong>
+      <em>Lo que la caseta no puede ver, el patrullaje lo cubre</em>
+    </figcaption>
   </figure>
-  <figure>
+  <figure class="prose-gallery__item">
     <img src="/img/img-condominios/patrullaje-seguridad-condominios-alto-valor.avif" alt="Patrullaje de seguridad para condominios de alto valor CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>Patrullaje complementario — unidad con GPS que cubre estacionamientos y perímetro exterior</figcaption>
+    <span class="prose-gallery__tag">Patrullaje</span>
+    <figcaption>
+      <strong>Patrullaje con GPS</strong>
+      <em>Unidad que cubre estacionamientos y perímetro exterior</em>
+    </figcaption>
   </figure>
 </div>
 
