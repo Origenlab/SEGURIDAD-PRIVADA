@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.2.0",
-    "@rollup/rollup-linux-arm64-gnu": "^4.60.1",
     "astro": "^5.1.0"
   }
 }

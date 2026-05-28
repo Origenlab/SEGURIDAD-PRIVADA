@@ -1,0 +1,534 @@
+/* ==========================================================================
+   ORIGINS Private Security — Mobile-First Responsive Overhaul
+   --------------------------------------------------------------------------
+   Una sola hoja al final del cascade. Override quirúrgico con !important
+   donde otras hojas (pages.css, sections/*.css, scoped styles de Astro)
+   ganan la cascada por cargarse después.
+
+   Breakpoints: 1536 / 1280 / 1024 / 768 / 640 / 480 / 380
+   ========================================================================== */
+
+
+/* ==========================================================================
+   1. CONTAINER FLUIDO — 100% ANCHO DEL EXPLORADOR
+   Reemplaza el cap de 1400px por padding tokenizado que escala con el viewport
+   ========================================================================== */
+:root {
+  --container-px: 1rem;
+  --header-height: 78px;
+  --topbar-height: 36px;
+  --stack-height: calc(var(--topbar-height) + var(--header-height));
+  --section-py: 3rem;
+}
+
+.container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding-left: var(--container-px) !important;
+  padding-right: var(--container-px) !important;
+}
+
+/* Header / Footer / Topbar inner — heredan el mismo container fluido */
+.header__inner,
+.footer-grid,
+.footer-bottom,
+.topbar__inner,
+.topbar > .container {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: var(--container-px) !important;
+  padding-right: var(--container-px) !important;
+}
+
+
+/* ==========================================================================
+   2. SECTION PADDING TOKENIZADO
+   ========================================================================== */
+section,
+.section {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+}
+
+
+/* ==========================================================================
+   3. RESPONSIVE TOKENS — escalado por breakpoint
+   ========================================================================== */
+@media (min-width: 480px) {
+  :root { --container-px: 1.25rem; }
+}
+@media (min-width: 640px) {
+  :root { --container-px: 1.5rem; --section-py: 3.5rem; }
+}
+@media (min-width: 768px) {
+  :root { --container-px: 2rem; --section-py: 4rem; }
+}
+@media (min-width: 1024px) {
+  :root { --container-px: 2.5rem; --section-py: 5rem; --header-height: 80px; }
+}
+@media (min-width: 1280px) {
+  :root { --container-px: 3rem; --section-py: 5.5rem; }
+}
+@media (min-width: 1536px) {
+  :root { --container-px: 4rem; --section-py: 6rem; }
+}
+@media (min-width: 1920px) {
+  :root { --container-px: 5rem; }
+}
+
+
+/* ==========================================================================
+   4. HEADER — Stack reducido y burger 44px en mobile
+   ========================================================================== */
+@media (max-width: 1023px) {
+  .header__inner {
+    padding-top: 0.625rem !important;
+    padding-bottom: 0.625rem !important;
+    gap: 0.5rem !important;
+  }
+  .header__logo img {
+    height: 44px !important;
+  }
+  .header__hamburger {
+    width: 44px !important;
+    height: 44px !important;
+    padding: 11px 9px !important;
+    justify-content: center !important;
+    gap: 5px !important;
+  }
+  .header__hamburger span {
+    height: 2px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .header__logo img { height: 40px !important; }
+}
+
+@media (max-width: 380px) {
+  .header__logo img { height: 36px !important; }
+}
+
+
+/* ==========================================================================
+   5. HERO — Padding reducido en mobile, full bleed en desktop
+   ========================================================================== */
+.hero {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+@media (max-width: 1023px) {
+  .hero {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.75rem !important;
+  }
+  .hero__title { font-size: 1.625rem !important; }
+  .hero__subtitle { font-size: 0.9375rem !important; }
+}
+
+@media (max-width: 640px) {
+  .hero { padding-top: 2rem !important; padding-bottom: 2.25rem !important; }
+  .hero__grid { gap: 1.5rem !important; }
+  .hero__title { font-size: 1.5rem !important; line-height: 1.22 !important; }
+  .hero__subtitle { font-size: 0.9rem !important; }
+  .hero__cta { flex-direction: column !important; gap: 0.625rem !important; }
+  .hero__cta .btn { width: 100% !important; }
+  .hero__trust { gap: 0.5rem !important; }
+}
+
+@media (max-width: 380px) {
+  .hero__title { font-size: 1.375rem !important; }
+}
+
+
+/* ==========================================================================
+   6. HOMEPAGE CATEGORIES / SERVICES GRIDS
+   ========================================================================== */
+.servicios-cats__grid,
+.services__grid,
+.about__stats-grid,
+.about__values-grid,
+.testimonials__grid,
+.nav-cta__grid {
+  width: 100% !important;
+}
+
+@media (max-width: 640px) {
+  .servicios-cats__grid,
+  .services__grid,
+  .about__values-grid,
+  .testimonials__grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  .about__stats-grid,
+  .nav-cta__grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .about__stats-grid,
+  .nav-cta__grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* ==========================================================================
+   7. FOOTER — Apilado limpio
+   ========================================================================== */
+.footer-grid {
+  width: 100% !important;
+}
+
+@media (max-width: 1023px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem 1.5rem !important;
+  }
+}
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem !important;
+  }
+  .footer-bottom {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+    text-align: center !important;
+  }
+}
+
+
+/* ==========================================================================
+   8. SECCIÓN FAQ + COTIZACIÓN — 2col → 1col móvil
+   ========================================================================== */
+@media (max-width: 1023px) {
+  .faq-cotizacion__grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+}
+@media (max-width: 640px) {
+  .faq-form__row {
+    grid-template-columns: 1fr !important;
+    gap: 0.875rem !important;
+  }
+}
+
+
+/* ==========================================================================
+   9. FINAL CTA / COTIZACIÓN BIG GRID
+   ========================================================================== */
+@media (max-width: 1023px) {
+  .final-cta__grid,
+  .cotizacion__grid,
+  .cotizacion-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  .final-cta__features {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 480px) {
+  .final-cta__features {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* ==========================================================================
+   10. FORMULARIOS — iOS no-zoom (16px) + touch targets 48px
+   ========================================================================== */
+@media (max-width: 1023px) {
+  .faq-form__field input,
+  .faq-form__field select,
+  .faq-form__field textarea,
+  .cotizacion-field input,
+  .cotizacion-field select,
+  .cotizacion-field textarea,
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="search"],
+  input[type="url"],
+  input[type="number"],
+  input[type="password"],
+  select,
+  textarea {
+    font-size: 16px !important;
+    min-height: 48px !important;
+  }
+  textarea {
+    min-height: 100px !important;
+  }
+  .faq-form__submit,
+  button[type="submit"] {
+    min-height: 48px !important;
+    font-size: 1rem !important;
+  }
+}
+
+
+/* ==========================================================================
+   11. BOTONES GLOBALES — touch target 44–48px
+   ========================================================================== */
+@media (max-width: 1023px) {
+  .btn,
+  .btn-primary,
+  .btn-outline,
+  .btn-whatsapp {
+    min-height: 48px !important;
+    padding: 0.875rem 1.25rem !important;
+    font-size: 0.9375rem !important;
+  }
+  .btn-lg {
+    min-height: 52px !important;
+  }
+}
+
+
+/* ==========================================================================
+   12. SECTION TITLES — escala mobile
+   ========================================================================== */
+@media (max-width: 640px) {
+  .section-title,
+  h2 {
+    font-size: 1.5rem !important;
+    line-height: 1.25 !important;
+  }
+  .section-subtitle {
+    font-size: 0.95rem !important;
+  }
+  h1 {
+    font-size: 1.75rem !important;
+    line-height: 1.22 !important;
+  }
+  h3 { font-size: 1.25rem !important; }
+}
+
+
+/* ==========================================================================
+   13. PAGE HEROES (.hero-pagina, HeroPagina component)
+   ========================================================================== */
+@media (max-width: 1023px) {
+  .hero-pagina,
+  .page-hero,
+  .pg-hero {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+@media (max-width: 640px) {
+  .hero-pagina,
+  .page-hero,
+  .pg-hero {
+    padding-top: 2.25rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+  .hero-pagina__title,
+  .page-hero__title,
+  .pg-hero__title {
+    font-size: 1.625rem !important;
+    line-height: 1.2 !important;
+  }
+  .hero-pagina__subtitle,
+  .page-hero__subtitle,
+  .pg-hero__subtitle {
+    font-size: 0.95rem !important;
+  }
+}
+
+
+/* ==========================================================================
+   14. TABLAS — scroll horizontal en mobile (anti-overflow)
+   ========================================================================== */
+@media (max-width: 1023px) {
+  table {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    white-space: nowrap;
+  }
+  .table-wrap,
+  .table-scroll {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+}
+
+
+/* ==========================================================================
+   15. WHATSAPP FLOAT — circular en mobile, esquina con safe-area
+   ========================================================================== */
+@media (max-width: 1023px) {
+  .whatsapp-bubble--bottom-right {
+    bottom: max(16px, env(safe-area-inset-bottom)) !important;
+    right: max(16px, env(safe-area-inset-right)) !important;
+  }
+  .whatsapp-bubble__button {
+    width: 56px !important;
+    height: 56px !important;
+  }
+  .whatsapp-bubble__tooltip {
+    max-width: calc(100vw - 32px) !important;
+  }
+}
+
+
+/* ==========================================================================
+   16. BLOG — grid 1col en mobile
+   ========================================================================== */
+@media (max-width: 1023px) {
+  .blog-grid,
+  .blog__grid,
+  .posts-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .blog-grid,
+  .blog__grid,
+  .posts-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+
+/* ==========================================================================
+   17. EMERGENCIAS / ZONAS — listings 1col mobile
+   ========================================================================== */
+@media (max-width: 640px) {
+  .emergencias-grid,
+  .zonas-grid,
+  .servicios-grid,
+  .servicios-listing__grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+}
+@media (min-width: 641px) and (max-width: 1023px) {
+  .emergencias-grid,
+  .zonas-grid,
+  .servicios-grid,
+  .servicios-listing__grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+
+/* ==========================================================================
+   18. MAIN CONTENT — offset por header sticky
+   ========================================================================== */
+.main-content {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* ==========================================================================
+   19. OVERFLOW PROTECTION GLOBAL
+   ========================================================================== */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+img, video, iframe {
+  max-width: 100% !important;
+  height: auto;
+}
+
+
+/* ==========================================================================
+   20. SAFE-AREA iOS (notch / dynamic island)
+   ========================================================================== */
+@supports (padding: max(0px)) {
+  .container,
+  .header__inner,
+  .footer-grid,
+  .footer-bottom,
+  .topbar > .container,
+  .topbar__inner {
+    padding-left: max(var(--container-px), env(safe-area-inset-left)) !important;
+    padding-right: max(var(--container-px), env(safe-area-inset-right)) !important;
+  }
+}
+
+
+/* ==========================================================================
+   21. NAV / DROPDOWN — Anchos amplios al usar container 100%
+   El mega y dropdown ya son absolute. Confirmamos máximos sanos.
+   ========================================================================== */
+@media (min-width: 1024px) {
+  .mega {
+    width: min(960px, 92vw) !important;
+  }
+}
+
+
+/* ==========================================================================
+   22. TAP HIGHLIGHT — quitar en mobile
+   ========================================================================== */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* ==========================================================================
+   23. PROSE / LEGAL / BLOG ARTICLE — readable max-width interno
+   El contenido tipográfico no debe estirarse a 100% del viewport.
+   ========================================================================== */
+.prose,
+.legal-content,
+.blog-post__content,
+.article-content {
+  max-width: 75ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 1023px) {
+  .prose,
+  .legal-content,
+  .blog-post__content,
+  .article-content {
+    max-width: 100% !important;
+  }
+}
+
+
+/* ==========================================================================
+   24. HOMEPAGE COTIZACIÓN COLUMNAS
+   ========================================================================== */
+@media (max-width: 1023px) {
+  .cotizacion__inner,
+  .cotizacion-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+}
+
+
+/* ==========================================================================
+   25. NAV-CTA STRIP (bandas de 4 elementos)
+   ========================================================================== */
+@media (max-width: 1023px) {
+  .nav-cta__grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.875rem !important;
+  }
+}
+@media (max-width: 480px) {
+  .nav-cta__grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.625rem !important;
+  }
+}
