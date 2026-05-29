@@ -23,3 +23,8 @@ node_modules
 
 # Obsidian vault — solo local
 vault/
+
+# Dia 1 deliverables
+*.docx
+*.xlsx
+day-1-baseline/
