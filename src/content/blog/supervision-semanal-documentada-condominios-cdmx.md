@@ -79,6 +79,44 @@ faqs:
 <p>La diferencia operativa entre una empresa de seguridad que funciona y otra que falla rara vez es el guardia: es el supervisor que lo sostiene. La supervisión semanal documentada — visita programada, bitácora firmada, auditoría operativa y reporte ejecutivo mensual con KPIs — convierte la seguridad de servicio reactivo en operación medible. Este artículo detalla los seis componentes mínimos de una supervisión profesional, los KPIs que debe entregar cada mes a tu administración, los entregables que un comité de vigilancia debe exigir antes de firmar contrato, y el modelo de supervisión que aplica <strong>ORIGINS Private Security</strong> en los más de cincuenta condominios que atiende en CDMX y Zona Metropolitana.</p>
 </div>
 
+<div class="prose-highlight">
+<p><strong>Respuesta rápida.</strong> La <strong>supervisión semanal documentada</strong> en seguridad residencial es el protocolo profesional por el cual un supervisor designado de la empresa de seguridad visita el condominio una vez por semana en horario fijo, ejecuta una auditoría operativa del personal e instalaciones, firma bitácora con administración o conserjería, documenta hallazgos categorizados por prioridad (crítico/alto/medio/bajo) y entrega reporte ejecutivo mensual con nueve KPIs comparables el primer día hábil del mes siguiente. Es la disciplina invisible que sostiene la operación de seguridad y separa el modelo especialista del modelo generalista.</p>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "¿Una visita semanal de supervisión es suficiente o se necesita más frecuencia?","acceptedAnswer": {"@type": "Answer","text": "Cuatro visitas mensuales documentadas con bitácora firmada más 2-3 auditorías nocturnas no anunciadas es el estándar para condominios estables. En arranque o transición se eleva a quincenal los primeros 3-6 meses."}},
+    {"@type": "Question","name": "¿Qué KPIs mínimos debe entregar el reporte ejecutivo mensual?","acceptedAnswer": {"@type": "Answer","text": "Nueve KPI: cumplimiento de rondas con QR (meta ≥95%), visitantes registrados, tiempo medio de validación, incidentes documentados por severidad, hallazgos de auditoría, permanencia del personal, capacitación acumulada por guardia, quejas/elogios de residentes, y 3 recomendaciones priorizadas para el trimestre."}},
+    {"@type": "Question","name": "¿Qué debe firmar administración en la bitácora del supervisor?","acceptedAnswer": {"@type": "Answer","text": "Fecha y hora de entrada/salida, nombre del supervisor con identificación SSC vigente, hallazgos del recorrido con observaciones del responsable, acciones recomendadas con prioridad y plazo, y validación por firma o sello."}},
+    {"@type": "Question","name": "¿La supervisión semanal aumenta el costo mensual del servicio?","acceptedAnswer": {"@type": "Answer","text": "En empresas especialistas en condominios está incluida en la cotización base, no es paquete adicional. En generalistas se vende como upgrade. La diferencia económica es marginal pero el costo operativo de no tener supervisión documentada se paga en incidentes."}},
+    {"@type": "Question","name": "¿Qué es una auditoría nocturna no anunciada y cada cuánto se ejecuta?","acceptedAnswer": {"@type": "Answer","text": "Auditoría ejecutada por supervisor distinto al designado, en bloque aleatorio entre 23:00 y 05:00 horas, 2-3 veces por mes. Valida la operación nocturna — momento de mayor riesgo. Se documenta en bitácora separada y se consolida en el reporte mensual."}},
+    {"@type": "Question","name": "¿Cómo encaja la supervisión semanal con guardias intramuros?","acceptedAnswer": {"@type": "Answer","text": "El modelo intramuros depende estructuralmente de supervisión semanal documentada. Sin supervisión el guardia se vuelve aislado y la calidad se degrada en meses."}},
+    {"@type": "Question","name": "¿Qué pasa si mi proveedor actual no entrega supervisión documentada?","acceptedAnswer": {"@type": "Answer","text": "Formaliza por escrito petición a dirección comercial con plazo de 30 días para implementar visitas semanales con bitácora firmada y reporte ejecutivo. Si no responde o entrega supervisión declarativa, esa falta es información para decidir reemplazo."}},
+    {"@type": "Question","name": "¿Qué información mínima debe contener el reporte ejecutivo mensual?","acceptedAnswer": {"@type": "Answer","text": "Resumen del mes con 9 KPIs comparados contra mes previo, incidentes con protocolo aplicado, hallazgos de auditoría con prioridad, evaluación de capacitación y rotación, 3 recomendaciones priorizadas, pendientes operativos para junta mensual."}}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo ejecutar una supervisión semanal documentada en un condominio",
+  "totalTime": "PT2H",
+  "step": [
+    {"@type": "HowToStep","position": 1,"name": "Visita programada con supervisor designado","text": "Visita en horario fijo conocido por administración (p.ej. miércoles 9-11 hrs) con el mismo supervisor durante al menos 6 meses para que la curva de aprendizaje del edificio acumule."},
+    {"@type": "HowToStep","position": 2,"name": "Bitácora firmada por administración","text": "Documentar fecha, hora exacta de entrada y salida, hallazgos del recorrido, observaciones, y firma de validación de administración o conserjería."},
+    {"@type": "HowToStep","position": 3,"name": "Auditoría operativa del personal","text": "Revisar uniforme, identificación SSC vigente, presentación personal, conocimiento de reglamento con preguntas no anunciadas, dominio de protocolos, bitácora del guardia y estado de equipamiento."},
+    {"@type": "HowToStep","position": 4,"name": "Recorrido de instalaciones con hallazgos","text": "Recorrer lobby, sótano nivel por nivel, accesos peatonales, escaleras, cuarto de máquinas, basura, azotea y bodegas. Documentar luminarias fundidas, cámaras desviadas, accesos con falla. Categorizar por prioridad (crítico/alto/medio/bajo)."},
+    {"@type": "HowToStep","position": 5,"name": "Revisión de incidentes desde visita anterior","text": "Validar bitácora digital de incidentes, clasificar cada uno según protocolo y determinar si requiere escalamiento por escrito o quedó resuelto en operación."},
+    {"@type": "HowToStep","position": 6,"name": "Reporte de visita en 48 horas","text": "Entregar a administración un reporte escrito con hallazgos categorizados, evaluación del personal, incidentes revisados, acciones recomendadas con responsable y plazo, comparativo contra visita anterior."}
+  ]
+}
+</script>
+
 <div class="prose-byline">
 <div class="prose-byline__avatar">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
@@ -176,6 +214,9 @@ El reporte mensual ejecutivo es el entregable que consolida cuatro visitas seman
 <tr><td>Capacitación acumulada</td><td>Horas de capacitación por guardia en el mes</td><td>Evidencia objetiva de formación continua, no declarativa</td></tr>
 <tr><td>Quejas y elogios de residentes</td><td>Conteo categorizado con resolución</td><td>Mide percepción real, no encuesta única anual</td></tr>
 <tr><td>Recomendaciones para asamblea</td><td>Tres prioridades del trimestre con costo estimado</td><td>Convierte el reporte en herramienta de gestión para comité</td></tr>
+<tr><td>SLA de respuesta a incidente</td><td>Tiempo máximo declarado por severidad</td><td>Vuelve auditable el compromiso de respuesta del proveedor</td></tr>
+<tr><td>Cumplimiento de auditoría nocturna</td><td>Ejecuciones reales vs. programadas en el mes</td><td>Valida que la operación nocturna se sostiene con disciplina</td></tr>
+<tr><td>Inversión recomendada del trimestre</td><td>CapEx propuesto con ROI estimado</td><td>Habilita decisión de inversión informada al comité</td></tr>
 </tbody>
 </table>
 </div>
@@ -279,7 +320,28 @@ En [ORIGINS Private Security](/nosotros) la supervisión semanal documentada no 
 <details class="prose-faq-item">
 <summary>¿Cómo encaja la supervisión semanal con el modelo de guardias intramuros?</summary>
 <div>
-<p>El [modelo de guardias intramuros](/servicios/guardias-intramuros) — guardia con permanencia prolongada en el mismo puesto, conocimiento profundo del edificio, integración cultural con el desarrollo — depende estructuralmente de supervisión semanal documentada para sostenerse. Sin supervisión, el guardia intramuros se vuelve operativamente aislado y la calidad de su trabajo se degrada en meses. La supervisión es lo que mantiene la disciplina operativa, la capacitación continua y la conexión con la empresa que el modelo intramuros requiere para entregar valor a doce y veinticuatro meses.</p>
+<p>El <a href="/servicios/guardias-intramuros">modelo de guardias intramuros</a> — guardia con permanencia prolongada en el mismo puesto, conocimiento profundo del edificio, integración cultural con el desarrollo — depende estructuralmente de supervisión semanal documentada para sostenerse. Sin supervisión, el guardia intramuros se vuelve operativamente aislado y la calidad de su trabajo se degrada en meses. La supervisión es lo que mantiene la disciplina operativa, la capacitación continua y la conexión con la empresa que el modelo intramuros requiere para entregar valor a doce y veinticuatro meses.</p>
+</div>
+</details>
+
+<details class="prose-faq-item">
+<summary>¿Qué es una auditoría nocturna no anunciada y por qué importa para mi condominio?</summary>
+<div>
+<p>Es una auditoría operativa ejecutada por un supervisor distinto al designado al edificio, sin previo aviso al guardia en turno, en bloque aleatorio entre las once de la noche y las cinco de la mañana, dos a tres veces por mes. Su propósito no es atrapar al guardia en falta — es validar que la operación nocturna, donde se concentra el mayor margen de incidente residencial según estadísticas del sector CDMX, se sostiene con la misma disciplina que la operación diurna. La auditoría se documenta en bitácora separada con sello horario, supervisor responsable y hallazgos categorizados. Su ausencia, o su mera declaración sin evidencia documental, es señal operativa de proveedor que opera por inercia.</p>
+</div>
+</details>
+
+<details class="prose-faq-item">
+<summary>¿Quién debe asistir a la junta operativa mensual con el proveedor de seguridad?</summary>
+<div>
+<p>La junta operativa mensual estándar debe incluir: el administrador del condominio, al menos un miembro del comité de vigilancia (idealmente el coordinador), el supervisor designado de la empresa de seguridad, y cuando el desarrollo lo requiera, el coordinador de conserjería o jefe de mantenimiento. La duración recomendada es de 45 a 60 minutos. La junta se documenta con minuta firmada que incluye acuerdos específicos con responsable y fecha límite. Esa minuta forma parte del expediente operativo del contrato y se revisa al inicio de la siguiente junta para validar cumplimiento. Esta disciplina convierte la relación con el proveedor de transaccional en operativa.</p>
+</div>
+</details>
+
+<details class="prose-faq-item">
+<summary>¿La supervisión documentada aplica solo a condominios verticales o también a residenciales horizontales?</summary>
+<div>
+<p>Aplica a ambos modelos y, en muchos casos, los <a href="/blog/residencial-horizontal-vs-vertical-diferencias-seguridad">residenciales horizontales</a> requieren supervisión incluso más densa porque la cobertura física es más extensa y los puntos críticos están distribuidos en perímetro amplio. El supervisor de un residencial horizontal típicamente debe contemplar recorrido del perímetro completo, validación de accesos múltiples (peatonal principal, vehicular, de servicio) y revisión de áreas comunes externas (canchas, parques, vialidades internas). La frecuencia base de cuatro visitas semanales se mantiene, pero el alcance de cada visita es operativamente más demandante.</p>
 </div>
 </details>
 
