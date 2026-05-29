@@ -1,9 +1,9 @@
 ---
-title: "Vigilancia CCTV 24/7 CDMX | Monitoreo Remoto — ORIGINS"
-description: "Vigilancia CCTV con monitoreo humano 24/7 en CDMX. Cámaras HD, acceso remoto desde celular, alertas verificadas con evidencia. Para condominios y empresas. Evaluación técnica gratuita."
+title: "Vigilancia CCTV 24/7 CDMX | Monitoreo Humano · Cero Falsas Alarmas — ORIGINS"
+description: "Vigilancia CCTV con monitoreo humano 24/7 en CDMX y EdoMex. Cámaras HD 2-8MP, central propia, verificación operador <30s, app móvil, evidencia legal. Polanco, Santa Fe, Interlomas. Evaluación técnica gratuita."
 category: service
 publishDate: 2024-01-01
-updatedDate: 2026-04-01
+updatedDate: 2026-05-28
 keywords:
   - vigilancia remota cctv cdmx
   - camaras de seguridad condominios cdmx
@@ -14,12 +14,17 @@ keywords:
   - camaras seguridad monitoreo remoto empresas
   - cctv con operadores 24 horas cdmx
   - sistema videovigilancia fraccionamientos
+  - cuanto cuesta instalar cctv condominio
+  - cctv con monitoreo humano polanco
+  - camaras hd 4k condominio cdmx
+  - central monitoreo cctv cdmx
+  - app cctv celular condominio
+  - cctv evidencia legal marca agua
 relatedServices:
   - monitoreo-alarmas
   - control-de-accesos
-  - tecnologia-monitoreo-seguridad
   - guardias-intramuros
-  - seguridad-gps-satelital
+  - patrullaje
 targetLocations:
   - Ciudad de México
   - Polanco
@@ -66,9 +71,42 @@ draft: false
 ---
 
 <div class="prose-intro">
-  <p><strong>ORIGINS Private Security</strong> instala y opera sistemas de vigilancia CCTV con monitoreo humano 24/7 en CDMX. No solo vendemos cámaras — las operamos. Nuestros operadores certificados vigilan tus instalaciones en tiempo real y solo te contactan cuando hay algo real que necesitas saber, con evidencia fotográfica adjunta. El sistema se integra con nuestro <a href="/servicios/monitoreo-alarmas">monitoreo de alarmas</a> y <a href="/servicios/control-de-accesos">control de accesos</a> para una protección completa.</p>
+  <p><strong>ORIGINS Private Security</strong> instala y opera <strong>sistemas de vigilancia CCTV con monitoreo humano 24/7</strong> en condominios, fraccionamientos y empresas de CDMX y EdoMex — desde <a href="/zonas/miguel-hidalgo">Polanco</a> y Santa Fe hasta <a href="/zonas/naucalpan">Naucalpan</a>, Interlomas y Atizapán. No solo vendemos cámaras — las operamos desde nuestra <strong>central propia en CDMX</strong>. Operadores certificados vigilan tus instalaciones en tiempo real y solo te contactan cuando hay algo real, con evidencia fotográfica adjunta. Sistema integrado con nuestro <a href="/servicios/monitoreo-alarmas">monitoreo de alarmas</a>, <a href="/servicios/control-de-accesos">control de accesos digital</a> y <a href="/servicios/patrullaje">patrullaje vehicular</a> para protección completa.</p>
   <div class="prose-highlight">
-    <strong>Por qué importa la diferencia:</strong> Un sistema CCTV sin monitoreo humano genera 50+ falsas alarmas al día. Con ORIGINS, tus cámaras están activas y vigiladas las 24 horas — y recibes máximo 2 o 3 alertas reales por semana, todas con evidencia. Conoce todas nuestras <a href="/servicios/tecnologia-monitoreo-seguridad">soluciones de tecnología y monitoreo</a>.
+    <strong>Por qué importa la diferencia:</strong> un sistema CCTV sin monitoreo humano genera <strong>50+ falsas alarmas al día</strong> que te despiertan sin razón. Con ORIGINS, las cámaras están activas y vigiladas las 24 horas — y recibes <strong>máximo 2-3 alertas reales por semana</strong>, todas con foto adjunta. La diferencia entre "tengo cámaras" y "tengo seguridad" está en que <strong>alguien las esté viendo en tiempo real</strong>.
+  </div>
+</div>
+
+<div class="hero-stats">
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">&lt; 30<small>s</small></span>
+    <span class="hero-stats__label">Verificación humana</span>
+    <span class="hero-stats__sub">Operador revisa cámara antes de alertar</span>
+  </div>
+  <div class="hero-stats__item hero-stats__item--accent">
+    <span class="hero-stats__num">24<small>/7</small></span>
+    <span class="hero-stats__label">Central propia en CDMX</span>
+    <span class="hero-stats__sub">Operadores certificados sin interrupción</span>
+  </div>
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">0</span>
+    <span class="hero-stats__label">Falsas alarmas a las 3 AM</span>
+    <span class="hero-stats__sub">Solo eventos verificados con evidencia</span>
+  </div>
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">30<small>d</small></span>
+    <span class="hero-stats__label">Grabación continua</span>
+    <span class="hero-stats__sub">Ampliable a 90d · marca de agua legal</span>
+  </div>
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">8<small>MP</small></span>
+    <span class="hero-stats__label">Resolución máxima</span>
+    <span class="hero-stats__sub">Identifica placas y rostros con claridad</span>
+  </div>
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">5<small>d</small></span>
+    <span class="hero-stats__label">De evaluación a operación</span>
+    <span class="hero-stats__sub">Instalación + activación + monitoreo</span>
   </div>
 </div>
 
@@ -183,88 +221,97 @@ draft: false
   <p class="prose-section-sub">Cámaras de alta resolución seleccionadas para cada entorno — interior, exterior, día y noche.</p>
 </div>
 
-<div class="prose-section-block">
+<div class="prose-section-block prose-section-block--hero">
   <div class="prose-section-block__header">
     <span class="prose-section-block__num">01</span>
     <div>
       <span class="prose-section-block__label">Visión Diurna y Nocturna</span>
-      <h3 class="prose-section-block__title">Cámaras HD — Resolución que identifica rostros y placas</h3>
+      <h3 class="prose-section-block__title">Cámaras HD 2-8MP — Identifica Rostros y Placas con Claridad Forense</h3>
     </div>
   </div>
-  <div class="prose-two-col">
+  <div class="prose-two-col prose-two-col--hero">
     <div class="prose-two-col__text">
-      <p>Instalamos cámaras IP de <strong>2MP a 8MP</strong> según las necesidades de cada zona. En accesos y estacionamientos usamos 8MP para capturar placas vehiculares con claridad forense. En interiores y pasillos, 4MP con lente gran angular para cobertura máxima sin puntos ciegos.</p>
-      <ul>
-        <li>Visión nocturna infrarroja hasta <strong>50 metros</strong> en total oscuridad</li>
-        <li>Compresión H.265+ — más calidad de imagen con menos espacio de almacenamiento</li>
-        <li>WDR 120dB para zonas con contraluz (accesos con sol directo)</li>
-        <li>Cámaras IP66/IP67 para instalaciones en exteriores e intemperie</li>
-        <li>PTZ con zoom óptico 30x para seguimiento automático de personas</li>
-        <li>Cámaras domo antivandalismo para espacios públicos y de alto tráfico</li>
+      <p>Instalamos cámaras IP de <strong>2MP a 8MP</strong> según las necesidades de cada zona. En accesos y estacionamientos: 8MP para capturar placas con claridad forense. En interiores y pasillos: 4MP con lente gran angular para cobertura máxima sin puntos ciegos.</p>
+      <ul class="prose-check-list">
+        <li><span>Visión nocturna infrarroja</span><small>Hasta 50 metros en total oscuridad</small></li>
+        <li><span>Compresión H.265+</span><small>Más calidad con menos espacio de almacenamiento</small></li>
+        <li><span>WDR 120dB</span><small>Para zonas con contraluz — accesos con sol directo</small></li>
+        <li><span>IP66/IP67 para intemperie</span><small>Lluvia, polvo y vandalismo</small></li>
+        <li><span>PTZ con zoom óptico 30x</span><small>Seguimiento automático de personas</small></li>
+        <li><span>Domo antivandalismo</span><small>Para espacios públicos y alto tráfico</small></li>
       </ul>
     </div>
-    <div class="prose-two-col__img">
-      <img src="/img/img-vigilancia-remota/camaras-ip-alta-resolucion-vigilancia.avif" alt="Cámaras IP de alta resolución para condominios CDMX" loading="lazy" width="640" height="480" />
-      <img src="/img/img-vigilancia-remota/camaras-vision-nocturna-infrarroja.avif" alt="Visión nocturna infrarroja para vigilancia exterior" loading="lazy" width="640" height="480" />
-    </div>
+    <figure class="prose-two-col__hero-img">
+      <img src="/img/img-vigilancia-remota/camaras-ip-alta-resolucion-vigilancia.avif" alt="Cámaras IP de alta resolución HD 4K para vigilancia en condominios premium CDMX" loading="lazy" width="800" height="1000" />
+      <figcaption class="prose-two-col__hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
+        <span><strong>HD 2-8 MP</strong>Claridad forense</span>
+      </figcaption>
+    </figure>
   </div>
 </div>
 
 ---
 
-<div class="prose-section-block">
+<div class="prose-section-block prose-section-block--hero">
   <div class="prose-section-block__header">
     <span class="prose-section-block__num">02</span>
     <div>
       <span class="prose-section-block__label">Central de Operaciones</span>
-      <h3 class="prose-section-block__title">Monitoreo Humano — Ojos reales detrás de cada cámara</h3>
+      <h3 class="prose-section-block__title">Monitoreo Humano — Ojos Reales Detrás de Cada Cámara</h3>
     </div>
   </div>
-  <div class="prose-two-col">
+  <div class="prose-two-col prose-two-col--hero">
     <div class="prose-two-col__text">
       <p>La diferencia entre ORIGINS y un sistema CCTV ordinario está aquí: <strong>operadores humanos certificados</strong> vigilando tu propiedad en tiempo real desde nuestra central en CDMX. No es automatización sola — es inteligencia humana respaldada por tecnología.</p>
-      <ul>
-        <li>Operadores certificados con capacitación continua en análisis de video</li>
-        <li>Máximo <strong>32 feeds</strong> por operador (estándar de la industria)</li>
-        <li>Verificación humana antes de cualquier alerta — cero falsas alarmas</li>
-        <li>Protocolos documentados para cada tipo de incidente</li>
-        <li>Coordinación directa con policía, bomberos y ambulancias</li>
-        <li>Central con UPS y planta generadora — operación continua ante apagones</li>
+      <ul class="prose-check-list">
+        <li><span>Operadores certificados</span><small>Capacitación continua en análisis de video</small></li>
+        <li><span>Máx 32 feeds por operador</span><small>Estándar de la industria — atención real</small></li>
+        <li><span>Verificación antes de alertar</span><small>Cero falsas alarmas que te despierten</small></li>
+        <li><span>Protocolos documentados</span><small>Acción precisa por cada tipo de incidente</small></li>
+        <li><span>Coordinación con autoridades</span><small>Policía, bomberos, ambulancias — números directos</small></li>
+        <li><span>UPS + planta generadora</span><small>Operación continua ante apagones</small></li>
       </ul>
     </div>
-    <div class="prose-two-col__img">
-      <img src="/img/img-vigilancia-remota/central-monitoreo-cctv-24-7.avif" alt="Central de monitoreo CCTV 24/7 con operadores certificados CDMX" loading="lazy" width="640" height="480" />
-      <img src="/img/img-vigilancia-remota/monitoreo-profesional-operadores-certificados.avif" alt="Operadores certificados de videovigilancia en CDMX" loading="lazy" width="640" height="480" />
-    </div>
+    <figure class="prose-two-col__hero-img">
+      <img src="/img/img-vigilancia-remota/central-monitoreo-cctv-24-7.avif" alt="Central de monitoreo CCTV 24/7 con operadores certificados en CDMX" loading="lazy" width="800" height="1000" />
+      <figcaption class="prose-two-col__hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <span><strong>Central CDMX 24/7</strong>Operadores humanos certificados</span>
+      </figcaption>
+    </figure>
   </div>
 </div>
 
 ---
 
-<div class="prose-section-block">
+<div class="prose-section-block prose-section-block--hero">
   <div class="prose-section-block__header">
     <span class="prose-section-block__num">03</span>
     <div>
       <span class="prose-section-block__label">Analítica e IA</span>
-      <h3 class="prose-section-block__title">Detección Inteligente — Más que movimiento, comportamiento</h3>
+      <h3 class="prose-section-block__title">Detección Inteligente — Comportamiento, No Solo Movimiento</h3>
     </div>
   </div>
-  <div class="prose-two-col">
+  <div class="prose-two-col prose-two-col--hero">
     <div class="prose-two-col__text">
-      <p>Las cámaras modernas no solo graban — <strong>analizan</strong>. La analítica inteligente filtra ruido y detecta lo que realmente importa, reduciendo alertas innecesarias y mejorando los tiempos de respuesta ante incidentes reales.</p>
-      <ul>
-        <li><strong>Detección de intrusos</strong> — diferencia personas de animales y objetos</li>
-        <li><strong>Reconocimiento de placas</strong> (LPR) — acceso automático para residentes</li>
-        <li><strong>Conteo de personas</strong> — control de aforo en áreas comunes</li>
-        <li><strong>Merodeo detectado</strong> — alerta si alguien permanece demasiado tiempo sin propósito</li>
-        <li><strong>Objeto abandonado</strong> — detección de paquetes o bolsas sospechosas</li>
-        <li><strong>Línea virtual</strong> — alerta al cruzar perímetros definidos fuera de horario</li>
+      <p>Las cámaras modernas no solo graban — <strong>analizan</strong>. La analítica IA filtra ruido y detecta lo que realmente importa, reduciendo alertas innecesarias y mejorando los tiempos de respuesta ante incidentes reales.</p>
+      <ul class="prose-check-list">
+        <li><span>Detección de intrusos</span><small>Diferencia personas de animales y objetos</small></li>
+        <li><span>Reconocimiento de placas (LPR)</span><small>Acceso automático para residentes registrados</small></li>
+        <li><span>Conteo de personas</span><small>Control de aforo en amenidades y áreas comunes</small></li>
+        <li><span>Merodeo detectado</span><small>Alerta si alguien permanece sin propósito</small></li>
+        <li><span>Objeto abandonado</span><small>Paquetes o bolsas sospechosas en zonas críticas</small></li>
+        <li><span>Línea virtual</span><small>Alerta al cruzar perímetros fuera de horario</small></li>
       </ul>
     </div>
-    <div class="prose-two-col__img">
-      <img src="/img/img-vigilancia-remota/analisis-video-inteligencia-artificial.avif" alt="Analítica de video con inteligencia artificial para seguridad CDMX" loading="lazy" width="640" height="480" />
-      <img src="/img/img-vigilancia-remota/deteccion-movimiento-inteligente.avif" alt="Detección inteligente de movimiento en cámaras CCTV" loading="lazy" width="640" height="480" />
-    </div>
+    <figure class="prose-two-col__hero-img">
+      <img src="/img/img-vigilancia-remota/analisis-video-inteligencia-artificial.avif" alt="Analítica de video con inteligencia artificial y LPR para seguridad CDMX" loading="lazy" width="800" height="1000" />
+      <figcaption class="prose-two-col__hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+        <span><strong>IA analítica</strong>Solo eventos relevantes</span>
+      </figcaption>
+    </figure>
   </div>
 </div>
 
@@ -531,30 +578,54 @@ draft: false
   <p class="prose-section-sub">Instalaciones reales en condominios y empresas de CDMX — discreta, profesional y funcional desde el primer día.</p>
 </div>
 
-<div class="prose-gallery">
-  <figure>
-    <img src="/img/img-vigilancia-remota/central-monitoreo-cctv-24-7.avif" alt="Central de monitoreo CCTV 24/7 con operadores en CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>Central propia en CDMX — operadores certificados en turno continuo</figcaption>
+<div class="prose-gallery prose-gallery--bento">
+  <figure class="prose-gallery__item prose-gallery__item--hero">
+    <img src="/img/img-vigilancia-remota/central-monitoreo-cctv-24-7.avif" alt="Central propia de monitoreo CCTV 24/7 con operadores certificados ORIGINS en CDMX" loading="lazy" width="800" height="800" />
+    <span class="prose-gallery__tag">Central</span>
+    <figcaption>
+      <strong>Central propia en CDMX</strong>
+      <em>Operadores certificados en turno continuo 24/7 — ojos humanos detrás de cada cámara</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/img-vigilancia-remota/camaras-exterior-intemperie-cdmx.avif" alt="Cámaras CCTV para exteriores e intemperie en CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>Cámaras IP66 para exteriores — resistentes a lluvia, polvo y vandalismo</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/img-vigilancia-remota/camaras-exterior-intemperie-cdmx.avif" alt="Cámaras CCTV IP66 para exteriores e intemperie en fraccionamientos CDMX" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">Exterior</span>
+    <figcaption>
+      <strong>Cámaras IP66 para intemperie</strong>
+      <em>Resistentes a lluvia, polvo y vandalismo</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/img-vigilancia-remota/acceso-remoto-celular-tablet.avif" alt="Acceso remoto a cámaras CCTV desde celular" loading="lazy" width="640" height="480" />
-    <figcaption>App móvil — ve tus cámaras en vivo desde cualquier lugar del mundo</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/img-vigilancia-remota/acceso-remoto-celular-tablet.avif" alt="App móvil de acceso remoto a cámaras CCTV desde celular para condominios" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">App móvil</span>
+    <figcaption>
+      <strong>App iOS y Android</strong>
+      <em>Cámaras en vivo desde cualquier lugar del mundo</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/img-vigilancia-remota/dashboard-monitoreo-multiusuario.avif" alt="Dashboard de monitoreo multiusuario para condominios" loading="lazy" width="640" height="480" />
-    <figcaption>Dashboard multi-usuario — administrador, comité y seguridad con accesos diferenciados</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/img-vigilancia-remota/dashboard-monitoreo-multiusuario.avif" alt="Dashboard multiusuario CCTV para administrador y comité de condominio CDMX" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">Dashboard</span>
+    <figcaption>
+      <strong>Multi-usuario por rol</strong>
+      <em>Administrador, comité y seguridad con accesos diferenciados</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/img-vigilancia-remota/verificacion-identidad-reconocimiento-facial.avif" alt="Reconocimiento de placas y verificación de identidad CCTV" loading="lazy" width="640" height="480" />
-    <figcaption>Reconocimiento de placas (LPR) — acceso automático para residentes registrados</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/img-vigilancia-remota/verificacion-identidad-reconocimiento-facial.avif" alt="Reconocimiento de placas LPR y verificación de identidad con CCTV inteligente" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">LPR · IA</span>
+    <figcaption>
+      <strong>Reconocimiento de placas</strong>
+      <em>Acceso automático para residentes registrados</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/img-vigilancia-remota/grabacion-evidencia-respaldo.avif" alt="Grabación continua 30 días con respaldo seguro" loading="lazy" width="640" height="480" />
-    <figcaption>30 días de grabación continua — descarga con marca de agua para evidencia legal</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/img-vigilancia-remota/grabacion-evidencia-respaldo.avif" alt="Grabación continua 30 días con marca de agua para evidencia legal en CDMX" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">Evidencia</span>
+    <figcaption>
+      <strong>30 días con marca de agua</strong>
+      <em>Descarga lista para evidencia legal en juicios</em>
+    </figcaption>
   </figure>
 </div>
 
@@ -601,43 +672,126 @@ draft: false
   <p class="prose-section-sub">La mayoría de condominios tiene cámaras. La pregunta es: ¿alguien las está viendo?</p>
 </div>
 
-<div class="comparison-table-wrapper">
-  <table class="comparison-table">
-    <thead>
-      <tr>
-        <th>Criterio</th>
-        <th>Cámaras sin monitoreo</th>
-        <th>ORIGINS CCTV 24/7</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Detección de intrusos</strong></td>
-        <td>Se ve después del incidente</td>
-        <td>Operador verifica en tiempo real</td>
-      </tr>
-      <tr>
-        <td><strong>Alertas</strong></td>
-        <td>Notificación por cada movimiento</td>
-        <td>Solo alertas reales verificadas</td>
-      </tr>
-      <tr>
-        <td><strong>Respuesta</strong></td>
-        <td>Reactiva — después del hecho</td>
-        <td>Preventiva — antes de que escale</td>
-      </tr>
-      <tr>
-        <td><strong>Evidencia legal</strong></td>
-        <td>Grabación sin contexto</td>
-        <td>Video + reporte del operador + timestamp</td>
-      </tr>
-      <tr>
-        <td><strong>Mantenimiento</strong></td>
-        <td>Solo si reportas falla</td>
-        <td>Monitoreo de salud del sistema 24/7</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="vs-comparison">
+  <div class="vs-comparison__head">
+    <div class="vs-comparison__head-criterion">Criterio</div>
+    <div class="vs-comparison__head-bad">
+      <span class="vs-comparison__head-pill">Cámaras sin monitoreo</span>
+    </div>
+    <div class="vs-comparison__head-good">
+      <span class="vs-comparison__head-brand">ORIGINS CCTV 24/7</span>
+    </div>
+  </div>
+
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Detección de intrusos</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Se ve después del incidente</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Operador verifica en tiempo real &lt; 30s</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Alertas</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">50+ por día — te despiertan sin razón</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Solo eventos verificados con evidencia</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Respuesta</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Reactiva — después del hecho</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Preventiva — antes de que escale</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Evidencia legal</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Grabación sin contexto ni validez</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Video + reporte operador + timestamp + marca de agua</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Mantenimiento</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Solo si tú reportas la falla</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Salud del sistema monitoreada 24/7</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Fallo de energía</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Sistema apagado — sin registro</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">UPS + 4G respaldo — operación continua</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Permiso legal</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Sin certificación SSC</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">SSC 0102-15 vigente y verificable</div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Preguntas Frecuentes</span>
+  <h2>Lo que Más Preguntan Comités y Empresas Sobre CCTV</h2>
+  <p class="prose-section-sub">Dudas reales que recibimos de administradores y dueños evaluando un sistema de videovigilancia con monitoreo en CDMX.</p>
+</div>
+
+<div class="faq-accordion">
+  <details class="faq-item" open>
+    <summary class="faq-item__q">
+      <span>¿Puedo ver mis cámaras desde el celular si estoy fuera del país?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Sí. La plataforma permite acceso remoto desde cualquier dispositivo con internet — iPhone, Android, tablet o PC. Ve cámaras en vivo, revisa grabaciones por fecha y hora, y <strong>recibe alertas push con imagen en tiempo real</strong>, sin importar desde dónde estés. App nativa profesional, no un visor genérico.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Cuánto tiempo se guardan las grabaciones?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p><strong>30 días de grabación continua por defecto</strong>, ampliable a 90 días según necesidad. Almacenamiento con tecnología RAID y respaldo redundante. Los clips se descargan con <em>marca de agua oficial</em> para usarlos como evidencia legal en juicios o denuncias.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Cómo funcionan las alertas? ¿Me van a llamar por cada movimiento?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>No. Esa es <strong>exactamente la diferencia</strong> con sistemas ordinarios. Cuando las cámaras detectan movimiento, nuestros operadores lo verifican primero. Si es tu personal, una mascota o falsa alarma — lo resuelven sin molestarte. Solo recibes alerta cuando hay algo real que requiere atención, siempre con <em>evidencia fotográfica o video</em> adjunto.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿El sistema funciona si se va la luz o se cae el internet?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Sí. Las cámaras tienen <strong>batería de respaldo</strong> para seguir grabando en apagones. La comunicación usa internet principal + <strong>canal celular 4G como respaldo automático</strong>, así que aunque corten el cable o la fibra, el sistema sigue conectado y monitoreado desde la central.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Cuántas cámaras necesito para mi condominio o empresa?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Depende del tamaño y puntos críticos. Condominios medianos típicamente: <strong>8 a 24 cámaras</strong> cubriendo acceso principal, estacionamiento, lobby, elevadores y áreas comunes. Hacemos una <strong>evaluación técnica gratuita en sitio</strong> para diseñar el sistema exacto que necesitas — sin venderte cámaras de más.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Puedo integrar las cámaras con alarmas y control de accesos?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Sí. La plataforma se integra con los principales sistemas de <a href="/servicios/monitoreo-alarmas">alarmas</a> y <a href="/servicios/control-de-accesos">control de accesos</a>. Cuando una alarma se activa, el operador <strong>visualiza automáticamente las cámaras del área</strong> para verificar el evento antes de contactarte. También conecta con intercomunicadores y videoporteros.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Tienen cobertura en mi zona de CDMX o EdoMex?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Sí. Operamos en toda CDMX (<a href="/zonas/miguel-hidalgo">Polanco</a>, Condesa, Roma, <a href="/zonas/benito-juarez">Del Valle</a>, Santa Fe, <a href="/zonas/coyoacan">Coyoacán</a> y más) y en los principales municipios de EdoMex (<a href="/zonas/naucalpan">Naucalpan</a>, <a href="/zonas/tlalnepantla">Tlalnepantla</a>, <a href="/zonas/atizapan">Atizapán</a>, Huixquilucan). Llama al 55 3025 5580 para confirmar cobertura en tu ubicación exacta.</p>
+    </div>
+  </details>
 </div>
 
 ---
@@ -648,19 +802,40 @@ draft: false
 </div>
 
 <div class="resources-grid">
-  <a href="/servicios/seguridad-condominios" class="resource-card">
-    <span class="resource-card__type">Servicio</span>
-    <strong>Seguridad Integral para Condominios CDMX</strong>
-    <p>CCTV + guardias + accesos + monitoreo: la solución completa para tu condominio.</p>
+  <a href="/servicios/seguridad-condominios" class="resource-card resource-card--guia">
+    <div class="resource-card__top">
+      <span class="resource-card__type">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Servicio Pillar
+      </span>
+      <span class="resource-card__read">Integral</span>
+    </div>
+    <strong class="resource-card__title">Seguridad Integral para Condominios CDMX</strong>
+    <span class="resource-card__desc">CCTV + guardias + accesos + monitoreo: la solución completa para tu condominio en un solo contrato.</span>
+    <span class="resource-card__cta">Ver pillar <em>→</em></span>
   </a>
-  <a href="/servicios/monitoreo-alarmas" class="resource-card">
-    <span class="resource-card__type">Servicio</span>
-    <strong>Monitoreo de Alarmas 24/7</strong>
-    <p>Central certificada UL con respuesta en menos de 90 segundos. Complemento ideal para CCTV.</p>
+  <a href="/servicios/monitoreo-alarmas" class="resource-card resource-card--checklist">
+    <div class="resource-card__top">
+      <span class="resource-card__type">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/></svg>
+        Complemento
+      </span>
+      <span class="resource-card__read">&lt; 90s</span>
+    </div>
+    <strong class="resource-card__title">Monitoreo de Alarmas 24/7</strong>
+    <span class="resource-card__desc">Central certificada con respuesta &lt;90 segundos. Cuando suena la alarma, el operador ve las cámaras automáticamente.</span>
+    <span class="resource-card__cta">Ver alarmas <em>→</em></span>
   </a>
-  <a href="/servicios/control-de-accesos" class="resource-card">
-    <span class="resource-card__type">Servicio</span>
-    <strong>Control de Accesos Digital</strong>
-    <p>Integra el registro de visitantes con el respaldo visual de las cámaras.</p>
+  <a href="/servicios/control-de-accesos" class="resource-card resource-card--comparativa">
+    <div class="resource-card__top">
+      <span class="resource-card__type">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        Integración
+      </span>
+      <span class="resource-card__read">Digital</span>
+    </div>
+    <strong class="resource-card__title">Control de Accesos Digital</strong>
+    <span class="resource-card__desc">El registro de visitantes con el respaldo visual de las cámaras — cada acceso queda con foto e ID inmutable.</span>
+    <span class="resource-card__cta">Ver accesos <em>→</em></span>
   </a>
 </div>

@@ -1,9 +1,9 @@
 ---
-title: "Guardias Intramuros CDMX | Vigilancia 24/7 SSC — ORIGINS"
-description: "Guardias intramuros certificados SSC en CDMX y Estado de México. Vigilancia 24/7 con supervisión semanal, alta IMSS día 1 y reemplazo en menos de 2 horas. +50 condominios protegidos. Cotiza hoy."
+title: "Guardias Intramuros CDMX | SSC 24/7 · Activo en 72h — ORIGINS"
+description: "Guardias intramuros certificados SSC en CDMX y EdoMex. Vigilancia 24/7, supervisión semanal documentada, alta IMSS día 1, reemplazo en <2h. Polanco, Santa Fe, Interlomas. +50 condominios. Activo en 72 horas."
 category: pillar
 publishDate: 2024-01-01
-updatedDate: 2026-04-01
+updatedDate: 2026-05-28
 keywords:
   - guardias intramuros cdmx
   - guardias de seguridad para condominios cdmx
@@ -15,12 +15,15 @@ keywords:
   - empresa guardias vigilancia naucalpan
   - servicio guardias 24 horas condominios
   - vigilancia intramuros fraccionamientos cdmx
+  - guardias privados con alta imss cdmx
+  - empresa vigilancia certificada ssc
+  - guardias intramuros santa fe
+  - guardias intramuros interlomas
 relatedServices:
   - control-de-accesos
   - vigilancia-remota-cctv
   - patrullaje
   - monitoreo-alarmas
-  - tecnologia-monitoreo-seguridad
 targetLocations:
   - Ciudad de México
   - Polanco
@@ -67,9 +70,9 @@ draft: false
 ---
 
 <div class="prose-intro">
-  <p><strong>ORIGINS Private Security</strong> asigna guardias intramuros certificados SSC a <a href="/servicios/seguridad-condominios">condominios</a> y empresas de CDMX con un principio claro: <strong>presencia permanente, supervisión real y cero improvisación</strong>. No subcontratamos, no mandamos elementos sin certificación y no desaparecemos después de firmar el contrato.</p>
+  <p><strong>ORIGINS Private Security</strong> es una <strong>empresa de guardias intramuros con permiso SSC 0102-15</strong> que protege más de 50 propiedades en CDMX y Estado de México — desde <a href="/zonas/miguel-hidalgo">Polanco</a>, Santa Fe e Interlomas hasta corporativos en <a href="/zonas/naucalpan">Naucalpan</a> y bodegas en Tlalnepantla. Asignamos <strong>vigilancia presencial 24/7 con supervisión real y cero improvisación</strong>: no subcontratamos, no mandamos elementos sin certificación y no desaparecemos después de firmar el contrato.</p>
   <div class="prose-highlight">
-    <strong>Lo que distingue a un buen servicio de guardias:</strong> No es el uniforme ni el precio — es la supervisión. Cualquier empresa puede poner un guardia en tu edificio. Pocas tienen supervisores que visitan semanalmente, entregan reportes firmados y responden en 2 horas cuando hay un problema. Nuestros guardias operan con <a href="/servicios/control-de-accesos">control de accesos digital</a> y cobertura complementaria de <a href="/servicios/patrullaje">patrullaje</a>.
+    <strong>El factor que distingue al guardia ORIGINS:</strong> no es el uniforme ni el precio — es la <strong>supervisión semanal documentada</strong>. Cualquier empresa puede poner un guardia en tu edificio. Pocas tienen supervisores que visitan cada semana con reporte firmado, responden en menos de 2 horas y garantizan reemplazo proactivo ante ausencias. Nuestros elementos operan con <a href="/servicios/control-de-accesos">control de accesos digital</a>, respaldo de <a href="/servicios/vigilancia-remota-cctv">CCTV monitoreado 24/7</a> y cobertura complementaria de <a href="/servicios/patrullaje">patrullaje perimetral</a> — un sistema integrado, no un guardia aislado.
   </div>
 </div>
 
@@ -222,89 +225,98 @@ draft: false
 
 ---
 
-<div class="prose-section-block">
+<div class="prose-section-block prose-section-block--hero">
   <div class="prose-section-block__header">
     <span class="prose-section-block__num">01</span>
     <div>
       <span class="prose-section-block__label">Selección de Personal</span>
-      <h3 class="prose-section-block__title">Quiénes Son los Guardias que Ponemos en tu Edificio</h3>
+      <h3 class="prose-section-block__title">6 Filtros Antes de que un Guardia Pise tu Propiedad</h3>
     </div>
   </div>
-  <div class="prose-two-col">
+  <div class="prose-two-col prose-two-col--hero">
     <div class="prose-two-col__text">
-      <p>Antes de asignar un guardia a tu propiedad pasa por un proceso de selección de <strong>4 filtros</strong>. No tomamos elementos de bolsas de trabajo externas — nuestro proceso de reclutamiento es interno y documentado.</p>
-      <ul>
-        <li><strong>Antecedentes penales</strong> verificados en RNSP (Registro Nacional de Seguridad Pública)</li>
-        <li><strong>Examen psicométrico</strong> — estabilidad emocional y toma de decisiones bajo presión</li>
-        <li><strong>Examen toxicológico</strong> — panel completo de 12 sustancias</li>
-        <li><strong>Certificación SSC vigente</strong> — verificamos en el sistema de la Secretaría de Seguridad Ciudadana</li>
-        <li><strong>Perfil adecuado al condominio</strong> — residencial requiere trato distinto que industrial</li>
-        <li>Referencias laborales de los últimos 2 empleos verificadas por teléfono</li>
+      <p>El 90% de los problemas de seguridad privada empiezan con una mala selección de personal. Por eso un guardia ORIGINS pasa por <strong>6 filtros documentados</strong> antes de su primer turno. No reclutamos en bolsas de trabajo externas — el proceso es interno y trazable.</p>
+      <ul class="prose-check-list">
+        <li><span>Antecedentes penales en RNSP</span><small>Registro Nacional de Seguridad Pública — verificación oficial</small></li>
+        <li><span>Examen psicométrico</span><small>Estabilidad emocional y toma de decisiones bajo presión</small></li>
+        <li><span>Examen toxicológico</span><small>Panel completo de 12 sustancias</small></li>
+        <li><span>Certificación SSC vigente</span><small>Verificada en el sistema oficial de la SSC CDMX</small></li>
+        <li><span>Perfil adecuado al inmueble</span><small>Residencial premium requiere distinto trato que industrial</small></li>
+        <li><span>Referencias laborales verificadas</span><small>Últimos 2 empleos contactados por teléfono</small></li>
       </ul>
     </div>
-    <div class="prose-two-col__img">
-      <img src="/img/img-guardias-intramuros/contratacion-de-guardias-intramuros.avif" alt="Proceso de selección y contratación de guardias intramuros CDMX" loading="lazy" width="640" height="480" />
-      <img src="/img/img-guardias-intramuros/guardias-de-seguridad-privada.avif" alt="Guardias de seguridad privada certificados SSC CDMX" loading="lazy" width="640" height="480" />
-    </div>
+    <figure class="prose-two-col__hero-img">
+      <img src="/img/img-guardias-intramuros/contratacion-de-guardias-intramuros.avif" alt="Proceso de selección y contratación de guardias intramuros certificados SSC en CDMX" loading="lazy" width="800" height="1000" />
+      <figcaption class="prose-two-col__hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+        <span><strong>SSC 0102-15</strong>Personal 100% certificado</span>
+      </figcaption>
+    </figure>
   </div>
 </div>
 
 ---
 
-<div class="prose-section-block">
+<div class="prose-section-block prose-section-block--hero">
   <div class="prose-section-block__header">
     <span class="prose-section-block__num">02</span>
     <div>
-      <span class="prose-section-block__label">Supervisión</span>
-      <h3 class="prose-section-block__title">Cómo Supervisamos — Transparencia Total para el Comité</h3>
+      <span class="prose-section-block__label">Supervisión Documentada</span>
+      <h3 class="prose-section-block__title">El Comité Recibe Evidencia Cada Semana — No Promesas</h3>
     </div>
   </div>
-  <div class="prose-two-col">
+  <div class="prose-two-col prose-two-col--hero">
     <div class="prose-two-col__text">
-      <p>La supervisión es donde la mayoría de empresas de seguridad falla. Ponen al guardia y desaparecen. En ORIGINS la supervisión está <strong>estructurada, documentada y entregada al cliente</strong>. El comité recibe evidencia, no promesas.</p>
-      <ul>
-        <li><strong>Rondines verificados</strong> — puntos de control electrónicos que registran hora y ubicación exacta</li>
-        <li><strong>Reporte diario digital</strong> — entregado al administrador cada mañana con eventos del turno anterior</li>
-        <li><strong>Visita semanal del supervisor</strong> — en persona, con reporte firmado y sellado para el comité</li>
-        <li><strong>Evaluación mensual de desempeño</strong> — con métricas objetivas (puntualidad, incidentes, seguimiento de protocolos)</li>
-        <li><strong>Monitoreo de presentación</strong> — central verifica check-in al inicio de cada turno</li>
-        <li>Si el guardia no hace check-in en los primeros 15 minutos, central activa protocolo de reemplazo automático</li>
+      <p>El 80% de las empresas de guardias intramuros falla en supervisión: ponen al elemento y desaparecen. En ORIGINS la supervisión está <strong>estructurada, documentada y entregada</strong> al administrador y al comité — con firma, sello y métricas objetivas.</p>
+      <ul class="prose-check-list">
+        <li><span>Rondines con puntos de control</span><small>NFC/QR que registran hora y ubicación exacta</small></li>
+        <li><span>Reporte diario digital</span><small>Eventos del turno anterior entregados cada mañana</small></li>
+        <li><span>Visita semanal del supervisor</span><small>En persona, con reporte firmado y sellado</small></li>
+        <li><span>Evaluación mensual del guardia</span><small>Puntualidad, incidentes y cumplimiento de protocolos</small></li>
+        <li><span>Check-in al inicio de cada turno</span><small>Central verifica presencia en tiempo real</small></li>
+        <li><span>Protocolo automático de reemplazo</span><small>Si no hay check-in en 15 min, activa sustituto</small></li>
       </ul>
     </div>
-    <div class="prose-two-col__img">
-      <img src="/img/img-guardias-intramuros/personal-de-seguridad-intramuros.avif" alt="Supervisión de personal de seguridad intramuros CDMX" loading="lazy" width="640" height="480" />
-      <img src="/img/img-guardias-intramuros/servicio-de-guardias-intramuros.avif" alt="Servicio profesional de guardias intramuros con supervisión documentada" loading="lazy" width="640" height="480" />
-    </div>
+    <figure class="prose-two-col__hero-img">
+      <img src="/img/img-guardias-intramuros/personal-de-seguridad-intramuros.avif" alt="Supervisión semanal documentada de guardias intramuros en condominios CDMX" loading="lazy" width="800" height="1000" />
+      <figcaption class="prose-two-col__hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 11 17 15 13"/></svg>
+        <span><strong>Reporte semanal</strong>Firmado y sellado</span>
+      </figcaption>
+    </figure>
   </div>
 </div>
 
 ---
 
-<div class="prose-section-block">
+<div class="prose-section-block prose-section-block--hero">
   <div class="prose-section-block__header">
     <span class="prose-section-block__num">03</span>
     <div>
-      <span class="prose-section-block__label">Funciones en tu Propiedad</span>
-      <h3 class="prose-section-block__title">Qué Hace el Guardia ORIGINS en tu Edificio Día a Día</h3>
+      <span class="prose-section-block__label">Operación Diaria</span>
+      <h3 class="prose-section-block__title">Qué Hace el Guardia ORIGINS Cada Turno — Protocolizado por Escrito</h3>
     </div>
   </div>
-  <div class="prose-two-col">
+  <div class="prose-two-col prose-two-col--hero">
     <div class="prose-two-col__text">
-      <p>Un guardia intramuros hace mucho más que "estar en la caseta". Es el primer punto de contacto con tu comunidad y el filtro que determina qué entra y qué no. Cada acción está <strong>protocolizada por escrito</strong> para tu propiedad específica.</p>
-      <ul>
-        <li>Control de acceso peatonal y vehicular con registro digital en tiempo real</li>
-        <li>Verificación de identidad de visitantes y proveedores con fotografía</li>
-        <li>Rondines programados por todas las áreas comunes, estacionamientos y perímetros</li>
-        <li>Atención a emergencias médicas con protocolo de primeros auxilios certificado</li>
-        <li>Coordinación con policía, bomberos y protección civil ante incidentes</li>
-        <li>Gestión de paquetería y correspondencia según protocolo del condominio</li>
-        <li>Detección y reporte inmediato de daños en infraestructura o áreas comunes</li>
+      <p>Un guardia intramuros profesional hace mucho más que "estar en la caseta". Es el <strong>primer filtro de seguridad</strong>, el rostro de tu comunidad y el responsable de que nada quede sin registrar. Cada función está protocolizada por escrito para tu propiedad específica — no improvisación, no "como salga".</p>
+      <ul class="prose-check-list">
+        <li><span>Control de acceso peatonal y vehicular</span><small>Registro digital en tiempo real, sin papel</small></li>
+        <li><span>Verificación de identidad</span><small>Visitantes y proveedores con fotografía e ID</small></li>
+        <li><span>Rondines programados</span><small>Áreas comunes, estacionamientos y perímetros</small></li>
+        <li><span>Primeros auxilios certificados</span><small>Atención inmediata a emergencias médicas</small></li>
+        <li><span>Coordinación con autoridades</span><small>Policía, bomberos y protección civil</small></li>
+        <li><span>Gestión de paquetería</span><small>Recepción con foto y firma según protocolo</small></li>
+        <li><span>Reporte de daños en infraestructura</span><small>Detección y notificación inmediata</small></li>
       </ul>
     </div>
-    <div class="prose-two-col__img">
-      <img src="/img/img-guardias-intramuros/seguridad-intramuros-para-condominios.avif" alt="Guardia intramuros en condominio residencial CDMX" loading="lazy" width="640" height="480" />
-      <img src="/img/img-guardias-intramuros/guardias-fijos.avif" alt="Guardias fijos en edificio residencial CDMX ORIGINS" loading="lazy" width="640" height="480" />
-    </div>
+    <figure class="prose-two-col__hero-img">
+      <img src="/img/img-guardias-intramuros/seguridad-intramuros-para-condominios.avif" alt="Guardia intramuros en operación en condominio residencial premium CDMX" loading="lazy" width="800" height="1000" />
+      <figcaption class="prose-two-col__hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        <span><strong>Protocolo escrito</strong>Específico para tu inmueble</span>
+      </figcaption>
+    </figure>
   </div>
 </div>
 
@@ -495,30 +507,54 @@ draft: false
   <p class="prose-section-sub">Personal uniformado, capacitado y supervisado — en condominios, corporativos y complejos industriales de CDMX.</p>
 </div>
 
-<div class="prose-gallery">
-  <figure>
-    <img src="/img/img-guardias-intramuros/elementos-de-seguridad-intramuros.avif" alt="Elementos de seguridad intramuros uniformados CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>Uniformes institucionales con identificación ORIGINS — imagen profesional en tu edificio</figcaption>
+<div class="prose-gallery prose-gallery--bento">
+  <figure class="prose-gallery__item prose-gallery__item--hero">
+    <img src="/img/img-guardias-intramuros/elementos-de-seguridad-intramuros.avif" alt="Elementos de seguridad intramuros uniformados con identificación ORIGINS en CDMX" loading="lazy" width="800" height="800" />
+    <span class="prose-gallery__tag">Personal</span>
+    <figcaption>
+      <strong>Guardias ORIGINS uniformados</strong>
+      <em>Identificación corporativa, presentación impecable, imagen consistente en cada turno</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/img-guardias-intramuros/guardias-intramuros-para-corporativos.avif" alt="Guardias intramuros para edificios corporativos CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>Guardias ejecutivos para corporativos — perfil de trato y presentación diferenciados</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/img-guardias-intramuros/guardias-intramuros-para-corporativos.avif" alt="Guardias intramuros ejecutivos para edificios corporativos CDMX" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">Corporativo</span>
+    <figcaption>
+      <strong>Perfil ejecutivo</strong>
+      <em>Trato diferenciado para corporativos y edificios premium</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/img-guardias-intramuros/seguridad-intramuros-para-condominios.avif" alt="Seguridad intramuros para condominios residenciales CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>Control de acceso residencial — registro digital de visitantes en tiempo real</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/img-guardias-intramuros/seguridad-intramuros-para-condominios.avif" alt="Seguridad intramuros con control de accesos digital para condominios residenciales CDMX" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">Residencial</span>
+    <figcaption>
+      <strong>Control de acceso residencial</strong>
+      <em>Registro digital de visitantes en tiempo real</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/img-guardias-intramuros/guardias-para-almacenes.avif" alt="Guardias de seguridad para almacenes y bodegas CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>Cobertura para almacenes y bodegas — turnos industriales nocturnos y de fin de semana</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/img-guardias-intramuros/guardias-para-almacenes.avif" alt="Guardias de seguridad intramuros para almacenes y bodegas industriales en EdoMex" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">Industrial</span>
+    <figcaption>
+      <strong>Almacenes y bodegas</strong>
+      <em>Turnos nocturnos, fines de semana y control de transportes</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/img-guardias-intramuros/vigilancia-intramuros.avif" alt="Vigilancia intramuros 24/7 en CDMX con reportes digitales" loading="lazy" width="640" height="480" />
-    <figcaption>Rondines verificados con puntos de control electrónicos — evidencia de cada recorrido</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/img-guardias-intramuros/vigilancia-intramuros.avif" alt="Vigilancia intramuros con rondines verificados por NFC en condominios CDMX" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">Rondines</span>
+    <figcaption>
+      <strong>Rondines verificados</strong>
+      <em>Puntos de control electrónicos — evidencia de cada recorrido</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/img-guardias-intramuros/empresa-de-guardias-intramuros.avif" alt="Empresa de guardias intramuros con supervisión documentada CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>Supervisión semanal con reporte firmado — el comité siempre sabe qué está pasando</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/img-guardias-intramuros/empresa-de-guardias-intramuros.avif" alt="Empresa de guardias intramuros con supervisión semanal documentada en CDMX" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">Supervisión</span>
+    <figcaption>
+      <strong>Supervisión semanal</strong>
+      <em>Reporte firmado y sellado entregado al comité</em>
+    </figcaption>
   </figure>
 </div>
 
@@ -573,48 +609,57 @@ draft: false
   <p class="prose-section-sub">Estos son los criterios que un administrador informado revisa — y donde se nota la diferencia entre un proveedor promedio y ORIGINS.</p>
 </div>
 
-<div class="comparison-table-wrapper">
-  <table class="comparison-table">
-    <thead>
-      <tr>
-        <th>Criterio</th>
-        <th>Proveedor promedio</th>
-        <th>ORIGINS</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Certificación SSC</strong></td>
-        <td>Variable o no verificable</td>
-        <td>SSC 0102-15 vigente · 100% del personal</td>
-      </tr>
-      <tr>
-        <td><strong>Alta IMSS</strong></td>
-        <td>Prometen pero no siempre cumplen</td>
-        <td>Desde el día 1 · comprobante disponible</td>
-      </tr>
-      <tr>
-        <td><strong>Supervisión</strong></td>
-        <td>Mensual o inexistente</td>
-        <td>Semanal documentada con reporte firmado</td>
-      </tr>
-      <tr>
-        <td><strong>Reemplazo</strong></td>
-        <td>Mismo día o al siguiente turno</td>
-        <td>Menos de 2 horas · aviso proactivo</td>
-      </tr>
-      <tr>
-        <td><strong>Reportes</strong></td>
-        <td>Solo si los solicitas</td>
-        <td>Diarios (digital) + mensual ejecutivo</td>
-      </tr>
-      <tr>
-        <td><strong>Capacitación</strong></td>
-        <td>Genérica</td>
-        <td>Personalizada para tu propiedad y protocolos</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="vs-comparison">
+  <div class="vs-comparison__head">
+    <div class="vs-comparison__head-criterion">Criterio</div>
+    <div class="vs-comparison__head-bad">
+      <span class="vs-comparison__head-pill">Proveedor promedio</span>
+    </div>
+    <div class="vs-comparison__head-good">
+      <span class="vs-comparison__head-brand">ORIGINS</span>
+    </div>
+  </div>
+
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Certificación SSC</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Variable o no verificable</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">SSC 0102-15 vigente · 100% del personal</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Alta IMSS</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Prometen pero no siempre cumplen</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Desde el día 1 · comprobante disponible</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Supervisión</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Mensual o inexistente</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Semanal documentada con reporte firmado</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Reemplazo ante ausencia</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Mismo día o al siguiente turno</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Menos de 2 horas · aviso proactivo</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Reportes al comité</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Solo si los solicitas</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Diarios (digital) + mensual ejecutivo</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Capacitación</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Genérica para cualquier inmueble</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Personalizada para tu propiedad y protocolos</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Reemplazo ante incidente grave</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Sin protocolo claro</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Cambio de elemento en 24h documentado</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Póliza RC</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Opcional o con límites bajos</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Vigente · copia entregada al firmar</div>
+  </div>
 </div>
 
 ---
@@ -626,19 +671,40 @@ draft: false
 </div>
 
 <div class="resources-grid">
-  <a href="/blog" class="resource-card">
-    <span class="resource-card__type">Guía</span>
-    <strong>Cómo Elegir la Mejor Empresa de Guardias Intramuros</strong>
-    <p>Los criterios clave que un administrador debe evaluar antes de firmar con cualquier proveedor de seguridad.</p>
+  <a href="/blog" class="resource-card resource-card--guia">
+    <div class="resource-card__top">
+      <span class="resource-card__type">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Guía
+      </span>
+      <span class="resource-card__read">6 min</span>
+    </div>
+    <strong class="resource-card__title">Cómo Elegir la Mejor Empresa de Guardias Intramuros</strong>
+    <span class="resource-card__desc">8 criterios para evaluar a un proveedor de guardias antes de firmar — desde permiso SSC hasta supervisión documentada.</span>
+    <span class="resource-card__cta">Leer guía <em>→</em></span>
   </a>
-  <a href="/servicios/seguridad-condominios" class="resource-card">
-    <span class="resource-card__type">Servicio</span>
-    <strong>Seguridad Integral para Condominios</strong>
-    <p>Guardias + CCTV + control de accesos + monitoreo: el sistema completo para condominios en CDMX.</p>
+  <a href="/blog" class="resource-card resource-card--checklist">
+    <div class="resource-card__top">
+      <span class="resource-card__type">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Checklist
+      </span>
+      <span class="resource-card__read">4 min</span>
+    </div>
+    <strong class="resource-card__title">Cuántos Guardias Necesita tu Condominio — Fórmula + Checklist</strong>
+    <span class="resource-card__desc">Cálculo por número de accesos, departamentos y horarios. Evita pagar por personal de más o quedarte corto.</span>
+    <span class="resource-card__cta">Ver checklist <em>→</em></span>
   </a>
-  <a href="/servicios/seguridad-residenciales" class="resource-card">
-    <span class="resource-card__type">Servicio</span>
-    <strong>Seguridad para Fraccionamientos Residenciales</strong>
-    <p>Casetas, patrullaje perimetral y vigilancia adaptada a fraccionamientos horizontales.</p>
+  <a href="/blog" class="resource-card resource-card--comparativa">
+    <div class="resource-card__top">
+      <span class="resource-card__type">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+        Comparativa
+      </span>
+      <span class="resource-card__read">7 min</span>
+    </div>
+    <strong class="resource-card__title">Empresa de Seguridad vs. Vigilante Independiente</strong>
+    <span class="resource-card__desc">Costos reales, riesgos legales y diferencia operativa entre contratar empresa formal o un guardia por tu cuenta.</span>
+    <span class="resource-card__cta">Ver comparativa <em>→</em></span>
   </a>
 </div>

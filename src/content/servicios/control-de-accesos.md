@@ -1,9 +1,9 @@
 ---
-title: "Control de Accesos CDMX | Registro Digital 24/7 — ORIGINS"
-description: "Control de accesos con registro digital para condominios y empresas en CDMX. Guardias SSC, verificación de identidad, integración CCTV y reportes al comité. +15 años de experiencia."
+title: "Control de Accesos CDMX | Registro Digital 24/7 con Foto · SSC — ORIGINS"
+description: "Control de accesos digital con foto, ID verificada y guardias SSC para condominios y empresas en CDMX. Integración CCTV, registro inmutable, app para el comité. Polanco, Santa Fe, Interlomas. Activo en 72h."
 category: service
 publishDate: 2024-01-01
-updatedDate: 2026-04-01
+updatedDate: 2026-05-28
 keywords:
   - control de accesos cdmx
   - control de accesos para condominios cdmx
@@ -15,10 +15,14 @@ keywords:
   - registro visitantes condominio digital cdmx
   - sistema control accesos biometrico empresas
   - control ingreso vehicular residencial cdmx
+  - control accesos lpr placas cdmx
+  - app control accesos condominio
+  - bitacora digital visitantes cdmx
+  - control accesos santa fe corporativos
+  - registro fotografico visitantes condominio
 relatedServices:
   - guardias-intramuros
   - vigilancia-remota-cctv
-  - tecnologia-monitoreo-seguridad
   - monitoreo-alarmas
   - patrullaje
 targetLocations:
@@ -67,9 +71,42 @@ draft: false
 ---
 
 <div class="prose-intro">
-  <p><strong>ORIGINS Private Security</strong> implementa control de accesos con registro digital en <a href="/servicios/seguridad-condominios">condominios</a> y empresas de CDMX. No es solo poner un guardia en la entrada — es saber con certeza <strong>quién entró, a qué hora, con qué propósito y quién lo autorizó</strong>. Todo documentado, todo disponible desde tu celular.</p>
+  <p><strong>ORIGINS Private Security</strong> implementa <strong>control de accesos digital con foto e identidad verificada</strong> en condominios, corporativos y parques industriales de CDMX y Estado de México — desde torres en <a href="/zonas/miguel-hidalgo">Polanco</a> y Santa Fe hasta fraccionamientos en <a href="/zonas/naucalpan">Naucalpan</a> e Interlomas. No es solo poner un guardia en la entrada — es saber con certeza <strong>quién entró, a qué hora, con qué propósito y quién lo autorizó</strong>. Todo documentado, todo disponible desde tu celular, todo respaldado por guardia SSC certificado.</p>
   <div class="prose-highlight">
-    <strong>La pregunta que cambia todo:</strong> Después del último incidente en tu edificio, ¿pudiste responder con certeza quién entró, cuándo y quién lo dejó pasar? Si la respuesta es no — o si depende de la memoria del <a href="/servicios/guardias-intramuros">guardia intramuros</a> — tienes un problema de rastreabilidad que el control de accesos ORIGINS resuelve desde el primer día, respaldado por <a href="/servicios/vigilancia-remota-cctv">vigilancia remota CCTV</a>.
+    <strong>La pregunta que cambia todo:</strong> después del último incidente en tu edificio, ¿pudiste responder con certeza quién entró, cuándo y quién lo dejó pasar? Si la respuesta depende de la memoria del <a href="/servicios/guardias-intramuros">guardia intramuros</a> o de una bitácora en papel ilegible — tienes un problema de <strong>rastreabilidad</strong> que el control de accesos ORIGINS resuelve desde el primer día, respaldado por <a href="/servicios/vigilancia-remota-cctv">CCTV monitoreado 24/7</a> y reportes diarios automáticos al comité.
+  </div>
+</div>
+
+<div class="hero-stats">
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">100<small>%</small></span>
+    <span class="hero-stats__label">Accesos con foto</span>
+    <span class="hero-stats__sub">Sin excepciones, sin "el de siempre"</span>
+  </div>
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">&lt; 60<small>s</small></span>
+    <span class="hero-stats__label">Registro completo</span>
+    <span class="hero-stats__sub">Sin cuellos de botella en horas pico</span>
+  </div>
+  <div class="hero-stats__item hero-stats__item--accent">
+    <span class="hero-stats__num">24<small>/7</small></span>
+    <span class="hero-stats__label">App para el comité</span>
+    <span class="hero-stats__sub">Quién entró, en tiempo real, desde tu celular</span>
+  </div>
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">+50</span>
+    <span class="hero-stats__label">Condominios operando</span>
+    <span class="hero-stats__sub">CDMX + Estado de México</span>
+  </div>
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">0</span>
+    <span class="hero-stats__label">Visitantes sin registro</span>
+    <span class="hero-stats__sub">Garantía contractual</span>
+  </div>
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">72<small>h</small></span>
+    <span class="hero-stats__label">De firma a operación</span>
+    <span class="hero-stats__sub">Protocolo personalizado incluido</span>
   </div>
 </div>
 
@@ -216,88 +253,97 @@ draft: false
 
 ---
 
-<div class="prose-section-block">
+<div class="prose-section-block prose-section-block--hero">
   <div class="prose-section-block__header">
     <span class="prose-section-block__num">01</span>
     <div>
       <span class="prose-section-block__label">Control de Visitantes</span>
-      <h3 class="prose-section-block__title">Quién Entra y Cuándo — Registro con Foto e Identidad Verificada</h3>
+      <h3 class="prose-section-block__title">Cero Ambigüedad sobre Quién Entra a tu Edificio</h3>
     </div>
   </div>
-  <div class="prose-two-col">
+  <div class="prose-two-col prose-two-col--hero">
     <div class="prose-two-col__text">
-      <p>El problema real no es que entren desconocidos — es que cuando algo pasa, <strong>nadie sabe quién fue</strong>. El sistema de control de accesos ORIGINS elimina esa ambigüedad: cada persona que entra queda documentada con foto, identidad verificada y un responsable que autorizó el acceso.</p>
-      <ul>
-        <li>Verificación de identificación oficial (INE, pasaporte) con fotografía</li>
-        <li>Confirmación con el residente o departamento antes de autorizar</li>
-        <li>Registro automático con hora exacta, nombre completo y propósito</li>
-        <li>Credencial temporal impresa para visitantes frecuentes (proveedores, empleados de mantenimiento)</li>
-        <li>Lista negra configurable — personas que no pueden acceder bajo ninguna circunstancia</li>
-        <li>Alertas push al administrador cuando entra alguien fuera del horario autorizado</li>
+      <p>El problema real no es que entren desconocidos — es que cuando algo pasa, <strong>nadie puede responder quién fue</strong>. El control de accesos ORIGINS elimina esa ambigüedad: cada persona que entra queda documentada con foto, ID verificada y un residente que autorizó el acceso.</p>
+      <ul class="prose-check-list">
+        <li><span>ID oficial verificada</span><small>INE, pasaporte o cédula con fotografía contrastada</small></li>
+        <li><span>Confirmación con el residente</span><small>Llamada o app antes de autorizar entrada</small></li>
+        <li><span>Registro automático con timestamp</span><small>Hora exacta, nombre completo y propósito</small></li>
+        <li><span>Credencial temporal impresa</span><small>Para proveedores y personal de mantenimiento</small></li>
+        <li><span>Lista negra configurable</span><small>Personas que nunca entran — sin excepción</small></li>
+        <li><span>Alertas push al administrador</span><small>Ante accesos fuera de horario autorizado</small></li>
       </ul>
     </div>
-    <div class="prose-two-col__img">
-      <img src="/img/control-de-accesos/gestion-de-visitas.avif" alt="Sistema de gestión de visitas y control de accesos en condominios CDMX" loading="lazy" width="640" height="480" />
-      <img src="/img/control-de-accesos/sistema-de-identificacion-de-visitas.avif" alt="Sistema digital de identificación de visitantes CDMX ORIGINS" loading="lazy" width="640" height="480" />
-    </div>
+    <figure class="prose-two-col__hero-img">
+      <img src="/img/control-de-accesos/gestion-de-visitas.avif" alt="Sistema digital de gestión de visitas con foto e ID en condominios CDMX" loading="lazy" width="800" height="1000" />
+      <figcaption class="prose-two-col__hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M7 21v-2a4 4 0 0 1 4-4h2a4 4 0 0 1 4 4v2"/></svg>
+        <span><strong>Registro fotográfico</strong>Cada visitante, sin excepción</span>
+      </figcaption>
+    </figure>
   </div>
 </div>
 
 ---
 
-<div class="prose-section-block">
+<div class="prose-section-block prose-section-block--hero">
   <div class="prose-section-block__header">
     <span class="prose-section-block__num">02</span>
     <div>
       <span class="prose-section-block__label">Control Vehicular</span>
-      <h3 class="prose-section-block__title">Estacionamiento y Acceso Vehicular — Sin Cuellos de Botella</h3>
+      <h3 class="prose-section-block__title">Acceso Vehicular con LPR — Fluidez Sin Sacrificar Control</h3>
     </div>
   </div>
-  <div class="prose-two-col">
+  <div class="prose-two-col prose-two-col--hero">
     <div class="prose-two-col__text">
-      <p>Los accesos vehiculares son el punto más vulnerable de cualquier condominio. Un sistema mal administrado genera filas en horas pico, permite entradas no autorizadas y no tiene registro de qué vehículos están adentro en este momento. ORIGINS lo resuelve con <strong>control preciso sin sacrificar fluidez</strong>.</p>
-      <ul>
-        <li>Registro de placas de residentes y vehículos autorizados en base de datos</li>
-        <li>Control de acceso rápido para residentes registrados — sin detener el flujo</li>
-        <li>Verificación de proveedores y repartidores con registro de ingreso</li>
-        <li>Integración con sistemas LPR (reconocimiento automático de placas)</li>
-        <li>Registro de horario y tiempo de permanencia de vehículos de servicio</li>
-        <li>Control de cajones de visitas — registro de ocupación y tiempo</li>
+      <p>Los accesos vehiculares son el punto más vulnerable de cualquier condominio. Un sistema mal administrado genera <strong>filas en horas pico</strong>, permite entradas no autorizadas y no tiene registro de qué vehículos están adentro ahora mismo. ORIGINS lo resuelve con control preciso sin sacrificar fluidez.</p>
+      <ul class="prose-check-list">
+        <li><span>Base de placas de residentes</span><small>Vehículos autorizados pre-registrados</small></li>
+        <li><span>Acceso rápido para residentes</span><small>Sin detener el flujo en horas pico</small></li>
+        <li><span>Verificación de proveedores</span><small>Registro con propósito y autorización</small></li>
+        <li><span>Sistema LPR (placas automáticas)</span><small>Reconocimiento óptico para flotillas y residentes</small></li>
+        <li><span>Tiempo de permanencia</span><small>Control de cuánto estuvo cada vehículo de servicio</small></li>
+        <li><span>Cajones de visitas</span><small>Registro de ocupación en tiempo real</small></li>
       </ul>
     </div>
-    <div class="prose-two-col__img">
-      <img src="/img/control-de-accesos/control-vehicular-para-condominios.avif" alt="Control vehicular para condominios residenciales CDMX" loading="lazy" width="640" height="480" />
-      <img src="/img/control-de-accesos/vigilancia-de-caseta.avif" alt="Vigilancia en caseta de acceso con registro vehicular digital" loading="lazy" width="640" height="480" />
-    </div>
+    <figure class="prose-two-col__hero-img">
+      <img src="/img/control-de-accesos/control-vehicular-para-condominios.avif" alt="Control vehicular con LPR y registro de placas en condominios residenciales CDMX" loading="lazy" width="800" height="1000" />
+      <figcaption class="prose-two-col__hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <span><strong>LPR integrado</strong>Lectura automática de placas</span>
+      </figcaption>
+    </figure>
   </div>
 </div>
 
 ---
 
-<div class="prose-section-block">
+<div class="prose-section-block prose-section-block--hero">
   <div class="prose-section-block__header">
     <span class="prose-section-block__num">03</span>
     <div>
       <span class="prose-section-block__label">Integración Tecnológica</span>
-      <h3 class="prose-section-block__title">Tu Sistema Existente + Nuestros Guardias — Sin Reemplazar Nada</h3>
+      <h3 class="prose-section-block__title">Tu Tecnología Existente + Nuestros Guardias Capacitados</h3>
     </div>
   </div>
-  <div class="prose-two-col">
+  <div class="prose-two-col prose-two-col--hero">
     <div class="prose-two-col__text">
-      <p>Muchos condominios ya tienen cámaras, intercomunicadores o lectores instalados. No es necesario reemplazarlos. Nuestros guardias se capacitan en los sistemas específicos de tu propiedad y los operan desde el primer turno — <strong>sin curva de aprendizaje que afecte la seguridad</strong>.</p>
-      <ul>
-        <li>Operación de lectores biométricos (huella, facial) y tarjetas RFID</li>
-        <li>Manejo de torniquetes electrónicos y barreras vehiculares</li>
-        <li>Integración con CCTV — el registro visual respalda cada entrada en el sistema digital</li>
-        <li>Intercomunicadores y videoporteros — verificación visual antes de apertura</li>
-        <li>Si no tienes sistema digital instalado, te recomendamos las opciones más adecuadas según tu presupuesto</li>
-        <li>Capacitación previa al inicio del servicio en todos los equipos de tu propiedad</li>
+      <p>Muchos condominios ya tienen cámaras, biométricos, torniquetes o intercomunicadores. <strong>No necesitas reemplazar nada</strong>. Nuestros guardias se capacitan en los sistemas específicos de tu propiedad antes del primer turno — sin curva de aprendizaje que afecte la seguridad ni gastos extra de hardware.</p>
+      <ul class="prose-check-list">
+        <li><span>Lectores biométricos y RFID</span><small>Huella, facial y tarjetas — operación experta</small></li>
+        <li><span>Torniquetes y barreras</span><small>Manejo y mantenimiento básico incluidos</small></li>
+        <li><span>Integración con CCTV</span><small>Cada acceso queda con respaldo visual</small></li>
+        <li><span>Intercomunicadores y videoporteros</span><small>Verificación visual antes de apertura</small></li>
+        <li><span>Recomendación tecnológica sin venta</span><small>Si no tienes sistema, te decimos qué conviene</small></li>
+        <li><span>Capacitación previa al arranque</span><small>El guardia llega operando tus equipos</small></li>
       </ul>
     </div>
-    <div class="prose-two-col__img">
-      <img src="/img/control-de-accesos/control-acceso-biometrico.avif" alt="Control de acceso biométrico para condominios y empresas CDMX" loading="lazy" width="640" height="480" />
-      <img src="/img/control-de-accesos/control-de-acceso-con-camaras.avif" alt="Integración de control de accesos con sistema CCTV CDMX" loading="lazy" width="640" height="480" />
-    </div>
+    <figure class="prose-two-col__hero-img">
+      <img src="/img/control-de-accesos/control-acceso-biometrico.avif" alt="Integración de control de accesos biométrico con CCTV en condominios premium CDMX" loading="lazy" width="800" height="1000" />
+      <figcaption class="prose-two-col__hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
+        <span><strong>Sin cambiar hardware</strong>Capacitación en tus equipos</span>
+      </figcaption>
+    </figure>
   </div>
 </div>
 
@@ -488,30 +534,54 @@ draft: false
   <p class="prose-section-sub">Instalaciones reales en condominios, corporativos y parques industriales de CDMX — discreta, profesional y verificable desde el primer día.</p>
 </div>
 
-<div class="prose-gallery">
-  <figure>
-    <img src="/img/control-de-accesos/control-de-accesos-en-corporativos.avif" alt="Control de accesos en edificios corporativos CDMX ORIGINS" loading="lazy" width="640" height="480" />
-    <figcaption>Control de accesos en torre corporativa — lobby clase A con guardias ejecutivos</figcaption>
+<div class="prose-gallery prose-gallery--bento">
+  <figure class="prose-gallery__item prose-gallery__item--hero">
+    <img src="/img/control-de-accesos/control-de-accesos-en-corporativos.avif" alt="Control de accesos digital en torre corporativa clase A en Santa Fe CDMX" loading="lazy" width="800" height="800" />
+    <span class="prose-gallery__tag">Corporativo</span>
+    <figcaption>
+      <strong>Control de accesos en torre corporativa</strong>
+      <em>Lobby clase A con guardias ejecutivos, credenciales temporales y registro fotográfico</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/control-de-accesos/control-vehicular-para-condominios.avif" alt="Control vehicular digital para condominios residenciales CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>Control vehicular con registro de placas — acceso rápido para residentes registrados</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/control-de-accesos/control-vehicular-para-condominios.avif" alt="Control vehicular con LPR para condominios residenciales en Polanco CDMX" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">Vehicular</span>
+    <figcaption>
+      <strong>Control vehicular con LPR</strong>
+      <em>Acceso rápido para residentes registrados</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/control-de-accesos/control-acceso-biometrico.avif" alt="Sistema de control de acceso biométrico en empresas CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>Integración biométrica — huella y reconocimiento facial para accesos de alta seguridad</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/control-de-accesos/control-acceso-biometrico.avif" alt="Sistema biométrico de huella y reconocimiento facial en empresas CDMX" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">Biométrico</span>
+    <figcaption>
+      <strong>Integración biométrica</strong>
+      <em>Huella y reconocimiento facial para accesos de alta seguridad</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/control-de-accesos/registro-de-personal.avif" alt="Registro digital de personal y visitantes con foto y timestamp" loading="lazy" width="640" height="480" />
-    <figcaption>Registro fotográfico digital — cada entrada documentada con foto e identidad verificada</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/control-de-accesos/registro-de-personal.avif" alt="Registro digital de visitantes con foto, ID y timestamp en condominios CDMX" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">Registro</span>
+    <figcaption>
+      <strong>Registro fotográfico digital</strong>
+      <em>Cada entrada con foto, ID y timestamp inmutable</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/control-de-accesos/prevencion-de-ingreso-no-autorizado.avif" alt="Prevención de accesos no autorizados en condominios CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>Protocolo de denegación — sin discrecionalidad, solo el sistema autoriza</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/control-de-accesos/prevencion-de-ingreso-no-autorizado.avif" alt="Protocolo de prevención de accesos no autorizados en condominios CDMX ORIGINS" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">Protocolo</span>
+    <figcaption>
+      <strong>Protocolo de denegación</strong>
+      <em>Sin discrecionalidad — solo el sistema autoriza</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/control-de-accesos/servicio-de-control-de-acceso-24h.avif" alt="Servicio de control de acceso 24 horas en CDMX ORIGINS" loading="lazy" width="640" height="480" />
-    <figcaption>Cobertura 24/7 — ningún turno sin guardia certificado, ningún acceso sin registro</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/control-de-accesos/servicio-de-control-de-acceso-24h.avif" alt="Servicio de control de acceso 24 horas con guardias SSC en CDMX" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">24/7</span>
+    <figcaption>
+      <strong>Cobertura permanente</strong>
+      <em>Ningún turno sin guardia certificado, ningún acceso sin registro</em>
+    </figcaption>
   </figure>
 </div>
 
@@ -566,48 +636,131 @@ draft: false
   <p class="prose-section-sub">La diferencia entre saber quién entró y creer que sabes quién entró.</p>
 </div>
 
-<div class="comparison-table-wrapper">
-  <table class="comparison-table">
-    <thead>
-      <tr>
-        <th>Criterio</th>
-        <th>Bitácora en papel</th>
-        <th>ORIGINS Digital</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Registro de identidad</strong></td>
-        <td>Nombre a mano, ilegible a veces</td>
-        <td>Foto + ID verificada + hora exacta</td>
-      </tr>
-      <tr>
-        <td><strong>Consulta remota</strong></td>
-        <td>Solo presencial en caseta</td>
-        <td>Desde celular en tiempo real</td>
-      </tr>
-      <tr>
-        <td><strong>Manipulación</strong></td>
-        <td>Se puede borrar o alterar</td>
-        <td>Registro inmutable con respaldo</td>
-      </tr>
-      <tr>
-        <td><strong>Evidencia legal</strong></td>
-        <td>Cuestionable en un juicio</td>
-        <td>Foto + video + timestamp verificable</td>
-      </tr>
-      <tr>
-        <td><strong>Reportes al comité</strong></td>
-        <td>Hay que pedir y transcribir</td>
-        <td>Automáticos cada día</td>
-      </tr>
-      <tr>
-        <td><strong>Búsqueda histórica</strong></td>
-        <td>Buscar hoja por hoja</td>
-        <td>Filtro por nombre, fecha o departamento</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="vs-comparison">
+  <div class="vs-comparison__head">
+    <div class="vs-comparison__head-criterion">Criterio</div>
+    <div class="vs-comparison__head-bad">
+      <span class="vs-comparison__head-pill">Bitácora en papel</span>
+    </div>
+    <div class="vs-comparison__head-good">
+      <span class="vs-comparison__head-brand">ORIGINS Digital</span>
+    </div>
+  </div>
+
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Registro de identidad</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Nombre a mano, ilegible a veces</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Foto + ID verificada + hora exacta</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Consulta remota</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Solo presencial en caseta</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Desde celular en tiempo real</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Manipulación</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Se puede borrar o alterar</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Registro inmutable con respaldo</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Evidencia legal</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Cuestionable en un juicio</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Foto + video + timestamp verificable</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Reportes al comité</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Hay que pedir y transcribir</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Automáticos cada día</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Búsqueda histórica</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Buscar hoja por hoja</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Filtro por nombre, fecha o departamento</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Acceso del administrador</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Solo el guardia tiene la bitácora</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">App con perfiles y permisos por rol</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Alertas en tiempo real</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Te enteras al revisar la libreta</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Push ante accesos fuera de horario</div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Preguntas Frecuentes</span>
+  <h2>Lo que Más Preguntan Administradores y Comités</h2>
+  <p class="prose-section-sub">Dudas reales que recibimos de comités evaluando un cambio de sistema de control de accesos en CDMX.</p>
+</div>
+
+<div class="faq-accordion">
+  <details class="faq-item" open>
+    <summary class="faq-item__q">
+      <span>¿Qué diferencia tiene esto vs. solo poner un guardia en la entrada?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Un guardia sin sistema digital solo puede decir <em>"estaba ahí"</em>. Con el control de accesos ORIGINS tienes <strong>registro fotográfico</strong> de cada visitante, hora de entrada y salida, propósito y quién autorizó. Si hay un incidente, no preguntas "¿quién dejó entrar a esa persona?" — ya tienes la respuesta documentada con evidencia. Es la diferencia entre <strong>presencia</strong> y <strong>rastreabilidad total</strong>.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Cómo veo quién entró si estoy fuera de la ciudad?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Desde el portal o la app en tu celular puedes <strong>ver en tiempo real</strong> quién está dentro del edificio, revisar historial por fecha y hora, buscar visitantes específicos y recibir alertas push ante accesos fuera del horario autorizado. Perfiles configurables: administrador, presidente del comité, vocales — cada uno con permisos según rol.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Qué pasa si el guardia no quiere dejar entrar a alguien y hay conflicto?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Nuestros guardias reciben capacitación específica en <strong>manejo de situaciones conflictivas con tacto profesional</strong>. El protocolo es claro: si hay duda, no pasan — y si alguien insiste, escalan al administrador sin confrontación. Llevamos +15 años manejando estas situaciones en Polanco, Santa Fe y Del Valle. El guardia sabe exactamente qué hacer sin generar problemas innecesarios.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Pueden operar el sistema o cámaras que ya tenemos instalados?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>En la gran mayoría de casos <strong>sí</strong>. Capacitamos a los guardias en los sistemas específicos de tu propiedad antes de que inicien. Si tienes lectores biométricos, torniquetes electrónicos, intercomunicadores o CCTV instalado, integramos al personal con esa tecnología sin que tengas que cambiar nada. <strong>Sin costos ocultos de hardware</strong>.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Cómo sé que el guardia registra todo y no deja pasar sin anotar?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>El sistema digital elimina ese riesgo porque el registro es <strong>obligatorio para abrir el acceso</strong> — no depende de que el guardia quiera o recuerde anotar. Además, los supervisores revisan los reportes diarios y hacen visitas semanales. Si hay patrones inconsistentes (muchos accesos sin foto, horarios vacíos), lo detectamos antes de que se convierta en un problema.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿En qué zonas de CDMX y Edomex tienen cobertura?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>CDMX: <a href="/zonas/miguel-hidalgo">Polanco</a>, Lomas de Chapultepec, Santa Fe, Bosques, Condesa, Roma, <a href="/zonas/benito-juarez">Del Valle</a>, Narvarte, <a href="/zonas/coyoacan">Coyoacán</a>, Pedregal, Cuauhtémoc, Benito Juárez. EdoMex: <a href="/zonas/naucalpan">Naucalpan</a>, Interlomas, Huixquilucan, Tlalnepantla y <a href="/zonas/atizapan">Atizapán</a>. Llámanos al 55 3025 5580 para confirmar tu colonia exacta.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Cuánto tarda en estar activo el servicio?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p><strong>72 horas.</strong> Día 1: diagnóstico de flujos y firma del contrato. Día 2: selección del guardia con perfil correcto + capacitación en tu protocolo y tus sistemas. Día 3: primer turno con supervisión intensiva. Las primeras dos semanas el supervisor visita diariamente para afinar el arranque. Ajustes sin costo durante los primeros 30 días.</p>
+    </div>
+  </details>
 </div>
 
 ---
@@ -619,19 +772,40 @@ draft: false
 </div>
 
 <div class="resources-grid">
-  <a href="/blog" class="resource-card">
-    <span class="resource-card__type">Checklist</span>
-    <strong>Control de Accesos Digital: Qué Debe Exigir tu Condominio</strong>
-    <p>Los estándares mínimos de registro y verificación que un condominio moderno necesita.</p>
+  <a href="/blog" class="resource-card resource-card--checklist">
+    <div class="resource-card__top">
+      <span class="resource-card__type">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Checklist
+      </span>
+      <span class="resource-card__read">5 min</span>
+    </div>
+    <strong class="resource-card__title">Control de Accesos Digital: Qué Debe Exigir tu Condominio</strong>
+    <span class="resource-card__desc">Los estándares mínimos de registro, verificación y tecnología que un condominio moderno necesita en su control de accesos.</span>
+    <span class="resource-card__cta">Ver checklist <em>→</em></span>
   </a>
-  <a href="/servicios/seguridad-condominios" class="resource-card">
-    <span class="resource-card__type">Servicio</span>
-    <strong>Seguridad Integral para Condominios CDMX</strong>
-    <p>Control de accesos + guardias + CCTV + monitoreo: la solución completa para tu condominio.</p>
+  <a href="/servicios/seguridad-condominios" class="resource-card resource-card--guia">
+    <div class="resource-card__top">
+      <span class="resource-card__type">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Servicio integral
+      </span>
+      <span class="resource-card__read">Pillar</span>
+    </div>
+    <strong class="resource-card__title">Seguridad Integral para Condominios CDMX</strong>
+    <span class="resource-card__desc">Control de accesos + guardias + CCTV + monitoreo de alarmas: el sistema completo operado bajo un solo contrato.</span>
+    <span class="resource-card__cta">Ver servicio pillar <em>→</em></span>
   </a>
-  <a href="/servicios/guardias-intramuros" class="resource-card">
-    <span class="resource-card__type">Servicio</span>
-    <strong>Guardias Intramuros Certificados SSC</strong>
-    <p>El personal que opera tu control de accesos: certificado, supervisado y con reemplazo garantizado.</p>
+  <a href="/servicios/guardias-intramuros" class="resource-card resource-card--comparativa">
+    <div class="resource-card__top">
+      <span class="resource-card__type">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Servicio relacionado
+      </span>
+      <span class="resource-card__read">SSC</span>
+    </div>
+    <strong class="resource-card__title">Guardias Intramuros Certificados SSC</strong>
+    <span class="resource-card__desc">El personal que opera tu control de accesos: certificado, supervisado semanalmente y con reemplazo garantizado en menos de 2 horas.</span>
+    <span class="resource-card__cta">Ver guardias intramuros <em>→</em></span>
   </a>
 </div>
