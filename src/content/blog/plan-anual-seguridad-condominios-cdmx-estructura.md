@@ -1,6 +1,6 @@
 ---
-title: "Plan Anual de Seguridad para Condominios CDMX: Estructura"
-description: "Cómo se estructura un plan anual de seguridad residencial profesional. Fases, entregables, presupuesto y modelo ORIGINS."
+title: "Plan Anual de Seguridad para Condominios CDMX 2026: Guía Pro"
+description: "Plan anual de seguridad para condominios CDMX 2026: 6 fases, presupuesto trimestral, KPIs, calendario operativo y modelo ORIGINS SSC."
 keywords:
   - plan anual seguridad condominios
   - presupuesto seguridad residencial cdmx
@@ -8,30 +8,114 @@ keywords:
   - analisis riesgos condominios
   - estrategia seguridad residencial
   - asamblea condominio seguridad
+  - presupuesto condominio cdmx 2026
+  - kpi seguridad anual
+  - diagnostico seguridad residencial
+  - inversion seguridad condominio
 cluster: seguridad-condominios
 articleType: guide
 author:
   name: "Equipo ORIGINS Private Security"
-  role: "Consultores en Seguridad Residencial"
+  role: "Consultores en Seguridad Residencial · SSC 0102-15"
 publishDate: 2026-05-29
 updatedDate: 2026-05-29
 draft: false
-featured: false
+featured: true
 heroImage:
   src: "/img/img-condominios/analisis-riesgos-seguridad-condominios.avif"
-  alt: "Mesa de trabajo con planos, indicadores y plan anual de seguridad residencial"
-readingTime: 16
+  alt: "Mesa de trabajo con planos, indicadores y plan anual de seguridad residencial en condominio CDMX"
+readingTime: 18
+schemaType: "HowTo"
+canonical: "https://seguridad-privada.com.mx/blog/plan-anual-seguridad-condominios-cdmx-estructura"
 relatedPillar: seguridad-condominios
 relatedPosts:
   - guia-comite-vigilancia-condominios-cdmx
   - cuanto-cuesta-seguridad-privada-condominios-cdmx-2026
   - presentar-aprobar-contrato-seguridad-asamblea
+relatedServices:
+  - consultoria-seguridad
+  - seguridad-condominios
+  - guardias-intramuros
+tags:
+  - plan anual
+  - presupuesto seguridad
+  - diagnostico operativo
+  - matriz de riesgos
+  - kpi anual
+  - asamblea condominio
+  - calendario operativo
+  - ssc 0102-15
+targetLocations:
+  - Ciudad de México
+  - Miguel Hidalgo
+  - Cuauhtémoc
+  - Benito Juárez
+  - Álvaro Obregón
+  - Coyoacán
+  - Naucalpan
+  - Tlalnepantla
+  - Atizapán
+faqs:
+  - question: "¿Cuándo es el mejor momento del año para iniciar el plan anual de seguridad?"
+    answer: "Idealmente entre septiembre y noviembre para que el plan esté aprobado por asamblea antes de enero. Si la asamblea cae en diciembre, el diagnóstico debe estar listo en octubre y la propuesta presupuestal en noviembre. Para condominios sin calendario fiscal, el óptimo es 30-60 días antes de la asamblea ordinaria que aprueba presupuesto operativo."
+  - question: "¿La empresa de seguridad debe redactar el plan o el comité de vigilancia?"
+    answer: "Se redacta conjuntamente. El comité aporta contexto interno (reglamento, decisiones históricas, restricciones presupuestales). La empresa aporta diagnóstico operativo, propuesta técnica, presupuesto de personal y tecnología, y experiencia comparativa. La aprobación final corresponde a la asamblea de condóminos."
+  - question: "¿Qué hago si la asamblea no aprueba el presupuesto propuesto?"
+    answer: "Presenta tres escenarios — base, optimista y conservador — para que la asamblea elija nivel de inversión sobre evidencia. Si aprueba el conservador, ajusta el plan priorizando objetivos críticos del diagnóstico y posponiendo lo demás. Lo importante es no quedar sin plan: ajustado al presupuesto disponible siempre supera a no tener plan."
+  - question: "¿Cuánto cuesta hacer el diagnóstico inicial del plan anual?"
+    answer: "Para clientes activos en cartera, el diagnóstico anual y la propuesta están incluidos sin costo adicional. Para condominios sin contrato vigente, ORIGINS ofrece el primer diagnóstico operativo y de riesgos sin costo y sin compromiso, con entregable de 15-25 páginas y reunión de presentación al comité."
+  - question: "¿Cuál es la distribución óptima del presupuesto anual entre personal, tecnología e iluminación?"
+    answer: "Personal 55-65%, tecnología 15-20%, iluminación 5-10%, mantenimiento operativo 5-8%, capacitación 2-4%, contingencia 5-10%. La proporción de personal sobre el total se mantiene como regla operativa. Propuestas con >30% en tecnología y <50% en personal deben revisarse: la tecnología sin operación humana competente es registro pasivo, no protección activa."
+  - question: "¿Qué indicadores debe medir el plan anual de seguridad trimestralmente?"
+    answer: "Siete KPI: incidentes documentados por tipo y severidad, cumplimiento de rondas con QR (≥95%), tiempo medio de respuesta a alarma (≤3 min interior), rotación de personal por puesto (≤3/año), cumplimiento de capacitación (100% programa), quejas/elogios de residentes, cumplimiento presupuestal trimestral con justificación de desviaciones >10%."
+  - question: "¿En qué fases se ejecuta el plan anual y cuánto tarda cada una?"
+    answer: "Seis fases. (1) Diagnóstico operativo y de riesgos — 2-3 semanas. (2) Definición de objetivos y métricas — taller de 2 horas. (3) Presupuesto trimestral — 1 semana. (4) Aprobación en asamblea — calendario del condominio. (5) Ejecución con seguimiento mensual — todo el año. (6) Cierre anual con diagnóstico para el plan siguiente — noviembre."
+  - question: "¿Qué documentos legales asociados debe verificar el comité en el plan anual?"
+    answer: "Permiso SSC vigente, registro REPSE (Reforma Laboral 2021 que modificó arts. 12-15 LFT), póliza de responsabilidad civil con aseguradora CNSF, opinión positiva IMSS al corriente, constancia SAT al corriente, y RFC vigente. Estos documentos deben validarse al inicio del plan y trimestralmente durante su ejecución."
 ---
 
 <div class="prose-tldr">
 <span class="prose-tldr__label">TL;DR</span>
 <p>La mayoría de los condominios en CDMX opera la seguridad sin plan anual escrito: contratan empresa, pagan mensualidad, reaccionan a incidentes. El plan anual de seguridad — diagnóstico inicial, objetivos medibles, presupuesto desglosado por trimestre, calendario de mantenimiento e inversión, capacitación del personal, indicadores de éxito y revisión cuatrimestral — convierte la seguridad de gasto recurrente en inversión gestionada con resultado medible. Este artículo detalla las seis fases del plan anual profesional, los entregables que el comité de vigilancia debe presentar en asamblea para aprobación, y el modelo que aplica <strong>ORIGINS Private Security</strong> en condominios bajo permiso SSC 0102-15 con noventa y ocho por ciento de renovación anual.</p>
 </div>
+
+<div class="prose-highlight">
+<p><strong>Respuesta rápida.</strong> El <strong>plan anual de seguridad para un condominio CDMX</strong> es el documento operativo que define en seis fases — diagnóstico de riesgos, objetivos medibles, presupuesto trimestral desglosado, aprobación en asamblea, ejecución con seguimiento mensual y cierre con diagnóstico del siguiente — cómo se invertirá la mayor partida del presupuesto del condominio. La distribución recomendada es: personal 55-65%, tecnología 15-20%, iluminación 5-10%, mantenimiento operativo 5-8%, capacitación 2-4%, contingencia 5-10%. Se mide trimestralmente sobre siete KPI objetivos y se cierra en noviembre — no en diciembre — para que la asamblea tenga el reporte completo antes de votar el plan del año siguiente.</p>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "¿Cuándo es el mejor momento para iniciar el plan anual de seguridad?","acceptedAnswer": {"@type": "Answer","text": "Entre septiembre y noviembre para que esté aprobado antes de enero. Si la asamblea cae en diciembre, el diagnóstico debe estar listo en octubre y la propuesta presupuestal en noviembre."}},
+    {"@type": "Question","name": "¿La empresa de seguridad debe redactar el plan o el comité de vigilancia?","acceptedAnswer": {"@type": "Answer","text": "Se redacta conjuntamente. El comité aporta contexto interno y la empresa aporta diagnóstico técnico, presupuesto y experiencia comparativa. La aprobación final corresponde a la asamblea."}},
+    {"@type": "Question","name": "¿Cuál es la distribución óptima del presupuesto anual de seguridad?","acceptedAnswer": {"@type": "Answer","text": "Personal 55-65%, tecnología 15-20%, iluminación 5-10%, mantenimiento 5-8%, capacitación 2-4%, contingencia 5-10%. Propuestas con >30% en tecnología y <50% en personal deben revisarse."}},
+    {"@type": "Question","name": "¿Qué KPI debe medir el plan anual trimestralmente?","acceptedAnswer": {"@type": "Answer","text": "Siete: incidentes por tipo y severidad, cumplimiento de rondas con QR ≥95%, tiempo de respuesta ≤3 min interior, rotación ≤3/año por puesto, capacitación 100% del programa, quejas/elogios con resolución, cumplimiento presupuestal."}},
+    {"@type": "Question","name": "¿En qué fases se ejecuta el plan anual?","acceptedAnswer": {"@type": "Answer","text": "Seis fases: diagnóstico (2-3 sem), objetivos (taller 2 hrs), presupuesto (1 sem), aprobación en asamblea, ejecución con seguimiento mensual todo el año, y cierre anual en noviembre."}},
+    {"@type": "Question","name": "¿Qué hago si la asamblea no aprueba el presupuesto?","acceptedAnswer": {"@type": "Answer","text": "Presenta tres escenarios — base, optimista y conservador. Si aprueba el conservador, ajusta el plan priorizando objetivos críticos. No quedar sin plan: el ajustado siempre supera a ningún plan."}},
+    {"@type": "Question","name": "¿Cuánto cuesta el diagnóstico inicial del plan anual?","acceptedAnswer": {"@type": "Answer","text": "Para clientes activos en cartera, incluido en el contrato. Para condominios sin contrato vigente, ORIGINS ofrece el primer diagnóstico sin costo y sin compromiso, con entregable de 15-25 páginas."}},
+    {"@type": "Question","name": "¿Qué documentos legales debe verificar el comité en el plan anual?","acceptedAnswer": {"@type": "Answer","text": "Permiso SSC vigente, registro REPSE (Reforma Laboral 2021 arts. 12-15 LFT), póliza RC con aseguradora CNSF, opinión positiva IMSS, constancia SAT al corriente y RFC vigente."}}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo construir un plan anual de seguridad para un condominio en CDMX",
+  "totalTime": "P3M",
+  "step": [
+    {"@type": "HowToStep","position": 1,"name": "Diagnóstico operativo y de riesgos","text": "Ejecutar diagnóstico en 2-3 semanas con recorrido nocturno y diurno, entrevistas, encuesta a residentes, revisión de bitácoras del año anterior, análisis de incidentes y evaluación de equipamiento. Entregar documento ejecutivo de 15-25 páginas con matriz de riesgos."},
+    {"@type": "HowToStep","position": 2,"name": "Definir objetivos y métricas","text": "Definir 3-5 objetivos anuales SMART con métrica, baseline, meta del año, frecuencia de medición y responsable de reporte."},
+    {"@type": "HowToStep","position": 3,"name": "Presupuesto trimestral desglosado","text": "Distribuir el presupuesto en cinco categorías: personal 55-65%, tecnología 15-20%, iluminación 5-10%, mantenimiento 5-8%, capacitación 2-4% y contingencia 5-10%. Desglosar por trimestre."},
+    {"@type": "HowToStep","position": 4,"name": "Aprobación en asamblea","text": "Presentar plan completo con documento ejecutivo entregado a residentes con 10 días de anticipación, presentación de 15-20 minutos y votación formal. Acta firmada por presidente del comité y administrador."},
+    {"@type": "HowToStep","position": 5,"name": "Ejecución con seguimiento mensual","text": "Tres niveles: operativo continuo con reporte mensual del supervisor, revisión por administración y comité en junta operativa mensual, y revisión cuatrimestral con asamblea informativa."},
+    {"@type": "HowToStep","position": 6,"name": "Cierre anual y diagnóstico del siguiente","text": "En noviembre — no diciembre — ejecutar comparación de resultado contra objetivos, análisis de desviaciones, lecciones aprendidas, e iniciar diagnóstico para el plan del año entrante."}
+  ]
+}
+</script>
 
 <div class="prose-byline">
 <div class="prose-byline__avatar">
@@ -125,6 +209,8 @@ La distribución del presupuesto anual entre categorías es uno de los temas don
 <tr><td>Mantenimiento operativo</td><td>5-8%</td><td>Pumas, cerraduras, equipos de comunicación, bitácora digital</td></tr>
 <tr><td>Capacitación comité y administración</td><td>2-4%</td><td>Talleres anuales en gestión de seguridad y manejo de residentes</td></tr>
 <tr><td>Contingencia operativa</td><td>5-10%</td><td>Imprevistos, refuerzos por contingencia externa, ajustes no planeados</td></tr>
+<tr><td>Pólizas y obligaciones legales</td><td>3-5%</td><td>Renovación de póliza RC ante CNSF, gastos asociados a REPSE y SSC</td></tr>
+<tr><td>Auditoría independiente</td><td>1-3%</td><td>Tercero externo que valida cumplimiento del plan trimestralmente</td></tr>
 </tbody>
 </table>
 </div>
@@ -245,6 +331,20 @@ En [ORIGINS Private Security](/nosotros) entregamos plan anual a cada uno de los
 <summary>¿En qué alcaldías y municipios opera ORIGINS para diagnóstico de plan anual?</summary>
 <div>
 <p>Tenemos cobertura operativa activa para diagnóstico y plan anual en <a href="/zonas/miguel-hidalgo">Miguel Hidalgo</a>, <a href="/zonas/cuauhtemoc">Cuauhtémoc</a>, <a href="/zonas/benito-juarez">Benito Juárez</a>, <a href="/zonas/alvaro-obregon">Álvaro Obregón</a>, <a href="/zonas/coyoacan">Coyoacán</a>, <a href="/zonas/naucalpan">Naucalpan</a>, <a href="/zonas/tlalnepantla">Tlalnepantla</a> y <a href="/zonas/atizapan">Atizapán</a>. Para condominios en zonas limítrofes evaluamos integración por proximidad operativa. El diagnóstico se ejecuta entre dos y tres semanas con entrega formal al comité y a la administración por escrito.</p>
+</div>
+</details>
+
+<details class="prose-faq-item">
+<summary>¿Qué documentos legales del proveedor de seguridad debe verificar el plan anual?</summary>
+<div>
+<p>El plan anual debe incluir como condición operativa la verificación trimestral de seis documentos del proveedor: permiso SSC vigente conforme a la <strong>Ley de Seguridad Privada del Distrito Federal</strong>, registro REPSE vigente conforme a la <strong>Reforma Laboral 2021</strong> que modificó los artículos 12 a 15 de la <strong>Ley Federal del Trabajo</strong> para el régimen de subcontratación, póliza de responsabilidad civil con aseguradora registrada en CNSF, opinión positiva IMSS al corriente, constancia de situación fiscal del SAT al corriente y acta constitutiva vigente con representante legal documentado. Estos documentos protegen al condominio del riesgo de responsabilidad solidaria laboral del cliente final. La <a href="/blog/verificar-empresa-seguridad-legal-ssc-repse-cdmx">guía completa de verificación legal</a> detalla cada paso.</p>
+</div>
+</details>
+
+<details class="prose-faq-item">
+<summary>¿Cómo se mide el ROI del plan anual de seguridad de un condominio?</summary>
+<div>
+<p>El ROI del plan se mide en tres dimensiones operativas: reducción documentable de incidentes contra baseline del año anterior (objetivo típico: 30-50% en 12 meses), ahorro en costos colaterales no monetarios (tiempo del comité, desgaste político en asamblea, residentes que dejan de quejarse) y mejora cuantificable en KPIs operativos (cumplimiento de rondas, permanencia del personal, tiempo de respuesta a incidente). En proyectos donde implementamos plan anual desde diagnóstico inicial, el indicador agregado de satisfacción de residentes — medido mediante encuesta breve al inicio y al cierre del año — mejora típicamente entre 20 y 35 puntos porcentuales contra baseline, con el componente personal de seguridad explicando la mayor parte de esa mejora.</p>
 </div>
 </details>
 
