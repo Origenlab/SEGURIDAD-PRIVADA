@@ -1,0 +1,69 @@
+# ===========================================================
+# ORIGINS Private Security · _headers
+# Última edición: 2026-05-30 (Día 2 — restructure)
+#
+# Estrategia de caché:
+#   - HTML estático: max-age=300 (5min browser) + s-maxage=86400 (24h edge) + SWR 7 días
+#   - Assets _astro/* y /img/*: max-age=31536000 immutable (asset hash en nombre)
+#   - Sitemap XML: max-age=3600 (1h) + content-type correcto
+# ===========================================================
+
+# Security headers en TODAS las páginas
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(self), interest-cohort=()
+  X-Frame-Options: SAMEORIGIN
+  X-XSS-Protection: 1; mode=block
+
+# HTML: caché corto en browser, largo en edge, SWR para reválida en background
+/
+  Cache-Control: public, max-age=300, s-maxage=86400, stale-while-revalidate=604800
+
+/*.html
+  Cache-Control: public, max-age=300, s-maxage=86400, stale-while-revalidate=604800
+
+# Astro build assets (asset hash garantiza inmutabilidad)
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Imágenes optimizadas
+/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Favicon e iconos
+/favicon.ico
+  Cache-Control: public, max-age=86400
+
+/icon.png
+  Cache-Control: public, max-age=86400
+
+/icon.svg
+  Cache-Control: public, max-age=86400
+
+# Manifest
+/site.webmanifest
+  Cache-Control: public, max-age=86400
+  Content-Type: application/manifest+json
+
+# Sitemap XML — refresca cada hora
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+  Content-Type: application/xml
+
+/sitemap-index.xml
+  Cache-Control: public, max-age=3600
+  Content-Type: application/xml
+
+/sitemap-0.xml
+  Cache-Control: public, max-age=3600
+  Content-Type: application/xml
+
+# robots.txt
+/robots.txt
+  Cache-Control: public, max-age=3600
+  Content-Type: text/plain

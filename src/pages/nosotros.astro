@@ -9,55 +9,131 @@ import '../styles/pages/nosotros.css';
 
 const siteUrl = 'https://seguridad-privada.com.mx';
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "@id": `${siteUrl}/nosotros`,
-  "name": "Nosotros — ORIGINS Private Security | Empresa de Seguridad Privada en CDMX",
-  "description": "Más de 15 años protegiendo condominios, residenciales y empresas en CDMX. Guardias intramuros certificados SSC, monitoreo 24/7 y tecnología de vanguardia.",
-  "url": `${siteUrl}/nosotros`,
-  "mainEntity": {
-    "@type": ["Organization", "LocalBusiness"],
-    "@id": `${siteUrl}/#organization`,
-    "name": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
-    "legalName": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
-    "alternateName": ["ORIGINS Private Security", "Origins Security CDMX"],
-    "url": siteUrl,
-    "logo": {
-      "@type": "ImageObject",
-      "url": `${siteUrl}/img/logo.avif`,
-      "width": 372,
-      "height": 100
-    },
-    "image": `${siteUrl}/img/logo.avif`,
-    "foundingDate": "2008",
-    "description": "Empresa especializada en seguridad privada para condominios y residenciales en CDMX. Guardias intramuros certificados SSC, control de accesos 24/7, monitoreo CCTV y protocolos específicos para comunidades residenciales. Permiso SSC 0102-15.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Basiliso Romo Anguiano No 22 int 3",
-      "addressLocality": "Ciudad de México",
-      "addressRegion": "CDMX",
-      "postalCode": "07800",
-      "addressCountry": "MX"
-    },
-    "telephone": "+52-55-3025-5580",
-    "email": "contacto@seguridad-privada.com.mx",
-    "hasCredential": {
-      "@type": "EducationalOccupationalCredential",
-      "name": "Permiso SSC 0102-15",
-      "credentialCategory": "Permiso de Seguridad Privada",
-      "recognizedBy": {
-        "@type": "Organization",
-        "name": "Secretaría de Seguridad Ciudadana de la Ciudad de México"
-      }
-    },
-    "areaServed": [
-      { "@type": "City", "name": "Ciudad de México" },
-      { "@type": "City", "name": "Naucalpan" },
-      { "@type": "City", "name": "Tlalnepantla" },
-      { "@type": "City", "name": "Atizapán" }
+// ============================================================
+// EQUIPO DIRECTIVO
+// ============================================================
+// TODO Día 2: reemplazar placeholders con datos reales una vez aprobados:
+//   - name (nombre completo del directivo)
+//   - sameAs (URL pública de LinkedIn del perfil real)
+//   - image (foto profesional en /public/img/team/{slug}.webp, 400x400, fondo neutro)
+// Si una persona NO autoriza foto/LinkedIn público, dejar solo name + jobTitle.
+// Removerla del array si no autoriza ni nombre.
+const equipoDirectivo = [
+  {
+    slug: 'director-general',
+    name: 'Director General de ORIGINS',           // TODO reemplazar: ej. "Lic. Juan Pérez García"
+    jobTitle: 'Director General',
+    image: `${siteUrl}/img/team/director-general.webp`,  // TODO subir imagen real
+    sameAs: 'https://www.linkedin.com/company/origins-private-security/', // TODO reemplazar con LinkedIn personal
+    bio: 'Lidera la estrategia operativa y comercial de ORIGINS Private Security. Más de 15 años de experiencia en gobernanza de proveedores de seguridad privada para condominios residenciales en CDMX. Responsable de mantener la relación contractual con presidentes de comité y administradores.',
+    knowsAbout: [
+      'Gobernanza de proveedores de seguridad privada',
+      'Presentación de propuestas a asambleas de condominio',
+      'Cumplimiento contractual SSC y REPSE',
+      'KPIs de seguridad para comités administrativos'
+    ]
+  },
+  {
+    slug: 'director-operaciones',
+    name: 'Director de Operaciones',                // TODO reemplazar con nombre real
+    jobTitle: 'Director de Operaciones',
+    image: `${siteUrl}/img/team/director-operaciones.webp`, // TODO subir imagen
+    sameAs: 'https://www.linkedin.com/company/origins-private-security/', // TODO reemplazar
+    bio: 'Responsable del diseño operativo de cada desarrollo residencial protegido por ORIGINS. Define plantillas de guardias, esquemas de turnos, protocolos de supervisión semanal y procesos de reemplazo. Antecedente formativo en ciencias forenses y seguridad pública.',
+    knowsAbout: [
+      'Cálculo de plantilla de guardias para condominios',
+      'Diseño de turnos y rondines',
+      'Supervisión rotativa documentada',
+      'Protocolos de emergencia residencial'
+    ]
+  },
+  {
+    slug: 'director-tecnologia',
+    name: 'Director de Tecnología y Monitoreo',     // TODO reemplazar con nombre real
+    jobTitle: 'Director de Tecnología y Monitoreo',
+    image: `${siteUrl}/img/team/director-tecnologia.webp`, // TODO subir imagen
+    sameAs: 'https://www.linkedin.com/company/origins-private-security/', // TODO reemplazar
+    bio: 'Encargado de la integración tecnológica de CCTV, biometría, control de accesos digital, alarmas y GPS satelital en los condominios atendidos. Define la arquitectura de la central de monitoreo 24/7 y las plataformas de bitácora digital usadas por los comités.',
+    knowsAbout: [
+      'CCTV IP y video analítica para condominios',
+      'Control de accesos biométrico',
+      'Centrales de monitoreo certificadas UL',
+      'GPS satelital y bitácora digital en tiempo real'
     ]
   }
+];
+
+// ============================================================
+// SCHEMA AboutPage + Person[] (EEAT)
+// ============================================================
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": `${siteUrl}/nosotros`,
+      "name": "Nosotros — ORIGINS Private Security | Empresa de Seguridad Privada en CDMX",
+      "description": "Más de 15 años protegiendo condominios, residenciales y empresas en CDMX. Guardias intramuros certificados SSC, monitoreo 24/7 y tecnología de vanguardia.",
+      "url": `${siteUrl}/nosotros`,
+      "inLanguage": "es-MX",
+      "mainEntity": { "@id": `${siteUrl}/#organization` },
+      "about": equipoDirectivo.map(p => ({ "@id": `${siteUrl}/nosotros#${p.slug}` }))
+    },
+    {
+      "@type": ["Organization", "LocalBusiness"],
+      "@id": `${siteUrl}/#organization`,
+      "name": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
+      "legalName": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
+      "alternateName": ["ORIGINS Private Security", "Origins Security CDMX"],
+      "url": siteUrl,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/img/logo.avif`,
+        "width": 372,
+        "height": 100
+      },
+      "image": `${siteUrl}/img/logo.avif`,
+      "foundingDate": "2008",
+      "description": "Empresa especializada en seguridad privada para condominios y residenciales en CDMX. Guardias intramuros certificados SSC, control de accesos 24/7, monitoreo CCTV y protocolos específicos para comunidades residenciales. Permiso SSC 0102-15.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Basiliso Romo Anguiano No 22 int 3",
+        "addressLocality": "Ciudad de México",
+        "addressRegion": "CDMX",
+        "postalCode": "07800",
+        "addressCountry": "MX"
+      },
+      "telephone": "+52-55-3025-5580",
+      "email": "contacto@seguridad-privada.com.mx",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Permiso SSC 0102-15",
+        "credentialCategory": "Permiso de Seguridad Privada",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Secretaría de Seguridad Ciudadana de la Ciudad de México"
+        }
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Ciudad de México" },
+        { "@type": "City", "name": "Naucalpan" },
+        { "@type": "City", "name": "Tlalnepantla" },
+        { "@type": "City", "name": "Atizapán" }
+      ],
+      "employee": equipoDirectivo.map(p => ({ "@id": `${siteUrl}/nosotros#${p.slug}` }))
+    },
+    ...equipoDirectivo.map(persona => ({
+      "@type": "Person",
+      "@id": `${siteUrl}/nosotros#${persona.slug}`,
+      "name": persona.name,
+      "jobTitle": persona.jobTitle,
+      "worksFor": { "@id": `${siteUrl}/#organization` },
+      "image": persona.image,
+      "description": persona.bio,
+      "knowsAbout": persona.knowsAbout,
+      "sameAs": [persona.sameAs]
+    }))
+  ]
 };
 
 const timelineEvents = [
@@ -296,11 +372,54 @@ const diferenciadores = [
     </div>
   </section>
 
-  <!-- Equipo -->
+  <!-- Equipo Directivo (EEAT — Person schema) -->
+  <section class="nos-directivos" aria-labelledby="nos-directivos-title">
+    <div class="container">
+      <SectionHeader
+        badge="Equipo Directivo"
+        titulo="Quiénes están detrás de ORIGINS"
+        subtitulo="Tres áreas operativas, un solo objetivo: seguridad documentada para condominios."
+        align="left"
+        parrafo1='La operación de ORIGINS está dirigida por <strong>tres responsables de área</strong> con roles claramente delimitados: Dirección General (gobernanza y contratos con comités administrativos), Dirección de Operaciones (plantillas, turnos y supervisión semanal) y Dirección de Tecnología (CCTV, biometría, central 24/7 y bitácora digital). Cada decisión operativa en tu condominio pasa por uno de estos tres frentes.'
+        parrafo2='No es una empresa anónima: el comité administrativo siempre sabe con quién está hablando. Cualquier asamblea, ajuste de servicio o auditoría es respondida por el responsable de área correspondiente — no por un número de soporte 800.'
+      />
+      <div class="nos-directivos__grid" role="list">
+        {equipoDirectivo.map(persona => (
+          <article class="nos-directivo-card" role="listitem" aria-labelledby={`directivo-${persona.slug}`}>
+            <div class="nos-directivo-card__header">
+              <div class="nos-directivo-card__avatar" aria-hidden="true">
+                <!-- TODO Día 2: reemplazar con <img src={persona.image} alt={persona.name} width="120" height="120" loading="lazy" /> cuando exista la imagen real -->
+                <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/>
+                  <circle cx="10" cy="7" r="4"/>
+                </svg>
+              </div>
+              <div class="nos-directivo-card__heading">
+                <h3 id={`directivo-${persona.slug}`} class="nos-directivo-card__nombre">{persona.name}</h3>
+                <p class="nos-directivo-card__cargo">{persona.jobTitle}</p>
+              </div>
+            </div>
+            <p class="nos-directivo-card__bio">{persona.bio}</p>
+            <div class="nos-directivo-card__expertise">
+              <span class="nos-directivo-card__expertise-label">Áreas de expertise</span>
+              <ul>
+                {persona.knowsAbout.map(area => <li>{area}</li>)}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </div>
+      <p class="nos-directivos__nota">
+        Cada perfil cuenta con expediente verificable bajo Ley Federal de Seguridad Privada y antecedentes ante SSC. La identificación pública de los responsables operativos es parte del compromiso de transparencia con cada comité administrativo.
+      </p>
+    </div>
+  </section>
+
+  <!-- Equipo Operativo -->
   <section class="nos-equipo" aria-labelledby="nos-equipo-title">
     <div class="container">
       <SectionHeader
-        badge="Nuestro Equipo"
+        badge="Personal Operativo"
         titulo="Personal Certificado SSC"
         subtitulo="Cada guardia de ORIGINS pasa por un proceso de selección riguroso antes de ser asignado a cualquier desarrollo residencial."
         parrafo1="Verificación de antecedentes penales y policiales, exámenes psicométricos, pruebas de confiabilidad y análisis toxicológico. Nuestros guardias conocen las normas de operación de la Ley Federal de Seguridad Privada y reciben capacitación específica para entornos residenciales."
