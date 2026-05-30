@@ -1,6 +1,6 @@
 ---
-title: "Primeros 30 Días: Onboarding de Empresa de Seguridad en tu Condominio"
-description: "Cómo opera un arranque profesional de empresa de seguridad en condominio CDMX. Cronograma, entregables y protocolo ORIGINS día por día."
+title: "Onboarding de Empresa de Seguridad en Condominio: 30 Días"
+description: "Onboarding profesional de empresa de seguridad en condominio CDMX: cronograma de 30 días, 14 entregables, transición sin exposición y modelo ORIGINS."
 keywords:
   - onboarding empresa seguridad
   - arranque seguridad condominio cdmx
@@ -8,30 +8,113 @@ keywords:
   - transicion proveedor seguridad
   - primeros dias guardias intramuros
   - protocolo arranque condominio
+  - implementacion seguridad privada
+  - reemplazo empresa seguridad
+  - cronograma 30 dias seguridad
+  - coexistencia operativa seguridad
 cluster: seguridad-condominios
 articleType: guide
 author:
   name: "Equipo ORIGINS Private Security"
-  role: "Consultores en Seguridad Residencial"
+  role: "Consultores en Seguridad Residencial · SSC 0102-15"
 publishDate: 2026-05-29
 updatedDate: 2026-05-29
 draft: false
-featured: false
+featured: true
 heroImage:
   src: "/img/img-condominios/guardias-capacitados-condominios-lujo.avif"
-  alt: "Equipo de guardias intramuros recibiendo capacitación de arranque en condominio residencial"
-readingTime: 15
+  alt: "Equipo de guardias intramuros recibiendo capacitación de arranque en condominio residencial CDMX"
+readingTime: 17
+schemaType: "HowTo"
+canonical: "https://seguridad-privada.com.mx/blog/primeros-30-dias-onboarding-empresa-seguridad-condominio"
 relatedPillar: seguridad-condominios
 relatedPosts:
   - cambiar-empresa-seguridad-sin-exponer-condominio
   - como-elegir-empresa-guardias-intramuros
   - presentar-aprobar-contrato-seguridad-asamblea
+relatedServices:
+  - guardias-intramuros
+  - seguridad-condominios
+  - patrullaje
+tags:
+  - onboarding seguridad
+  - arranque operativo
+  - cronograma 30 dias
+  - coexistencia
+  - capacitacion personal
+  - bitacora digital
+  - reporte ejecutivo
+  - ssc 0102-15
+targetLocations:
+  - Ciudad de México
+  - Miguel Hidalgo
+  - Cuauhtémoc
+  - Benito Juárez
+  - Álvaro Obregón
+  - Coyoacán
+  - Naucalpan
+  - Tlalnepantla
+  - Atizapán
+faqs:
+  - question: "¿Es normal que haya incidentes menores durante el primer mes de una empresa nueva?"
+    answer: "Es estructuralmente esperable que haya curva de aprendizaje las primeras 2-3 semanas con detalles menores. Un protocolo de onboarding profesional los reduce a mínimos invisibles. Persistencia después del día 21 o frecuencia alta de incidentes severos en cualquier momento del primer mes sí es señal de problema operativo."
+  - question: "¿Cuánto cuesta el periodo de onboarding y se cobra adicional al servicio mensual?"
+    answer: "En cualquier propuesta profesional el onboarding está incluido en el primer mes de servicio, sin cargo adicional. Si un proveedor cotiza onboarding como paquete separado o cargo único, su modelo no contempla el arranque profesional como parte integral del servicio."
+  - question: "¿Qué pasa si al final del primer mes no estoy convencido del proveedor?"
+    answer: "Cualquier contrato profesional incluye cláusula de evaluación al cierre del primer mes con posibilidad de ajuste operativo o rescisión sin penalización si el proveedor no cumple entregables documentales mínimos. Si tu contrato actual no la incluye, considérala en la próxima renovación."
+  - question: "¿El supervisor debe estar todo el día en el edificio durante el arranque?"
+    answer: "Presencia decreciente pero continua los primeros 15 días: continua días 1-2, 6-8 horas días 3-7, 3-4 horas días 8-14, 1-2 horas días 15-21 con horario variable, y esquema regular semanal desde el día 22."
+  - question: "¿Qué es la coexistencia operativa con la empresa saliente y por qué importa?"
+    answer: "Fase de 3-7 días en la que el personal de la empresa saliente permanece en horario reducido para transferir información operativa al entrante: residentes con situaciones particulares, proveedores autorizados, áreas con riesgo histórico, equipo con falla menor. Reduce la curva de aprendizaje de 30 a 20 días aproximadamente."
+  - question: "¿Cuáles son los 14 entregables verificables del onboarding profesional?"
+    answer: "Cronograma escrito, identificaciones SSC vigentes, póliza RC, comunicado a residentes, directorio fotográfico, mapa del sótano con puntos críticos, bitácora digital activada, primera ronda nocturna con QR, reporte de visita semanal del supervisor, primera auditoría nocturna documentada, evaluación del personal asignado, reporte ejecutivo de cierre del primer mes, minuta de junta operativa de cierre firmada, y plan operativo para los siguientes 11 meses."
+  - question: "¿En qué zonas de CDMX y Estado de México opera ORIGINS para arranques de servicio nuevo?"
+    answer: "Cobertura activa en Miguel Hidalgo, Cuauhtémoc, Benito Juárez, Álvaro Obregón, Coyoacán dentro de CDMX y Naucalpan, Tlalnepantla, Atizapán en Estado de México. El cronograma de 30 días se ajusta al calendario del comité de vigilancia y al cierre del contrato anterior cuando aplica reemplazo."
+  - question: "¿Qué documentos legales debe entregar la empresa entrante antes del día 1?"
+    answer: "Permiso SSC vigente, registro REPSE conforme a la Reforma Laboral 2021, identificaciones SSC vigentes del personal asignado, póliza de responsabilidad civil con CNSF, opinión positiva IMSS al corriente y comunicado de arranque para residentes firmado por administración con texto preparado por el proveedor."
 ---
 
 <div class="prose-tldr">
 <span class="prose-tldr__label">TL;DR</span>
 <p>Los primeros treinta días de operación de una empresa de seguridad nueva en un condominio definen, en gran medida, el éxito o fracaso del contrato a doce meses. Sin protocolo de onboarding estructurado el arranque es caótico, el guardia llega sin conocer el edificio, los residentes desconfían y el comité de vigilancia gasta tiempo apagando incendios operativos. Este artículo detalla el cronograma de los primeros treinta días, los entregables semana por semana y el protocolo de arranque que aplica <strong>ORIGINS Private Security</strong> en los más de cincuenta desarrollos donde ha operado entrada de servicio bajo permiso SSC 0102-15.</p>
 </div>
+
+<div class="prose-highlight">
+<p><strong>Respuesta rápida.</strong> El <strong>onboarding profesional de una empresa de seguridad en un condominio CDMX</strong> es el protocolo de 30 días que estructura el arranque operativo en cinco semanas — preparación (semana 0), arranque con soporte intensivo del supervisor (semana 1), estabilización operativa (semana 2), capacitación intensiva específica del edificio (semana 3) y consolidación con reporte ejecutivo de cierre (semana 4) — con catorce entregables verificables a entregar a administración. Cuando el cambio es por reemplazo, incluye fase adicional de coexistencia operativa de 3-7 días entre empresa saliente y entrante, lo que reduce la curva de aprendizaje del personal de 30 a 20 días aproximadamente.</p>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "¿Es normal que haya incidentes menores durante el primer mes con empresa nueva?","acceptedAnswer": {"@type": "Answer","text": "Es esperable curva de aprendizaje las primeras 2-3 semanas con detalles menores. Un protocolo profesional los reduce a mínimos invisibles. Persistencia después del día 21 sí es señal de problema operativo."}},
+    {"@type": "Question","name": "¿Cuánto cuesta el onboarding y se cobra adicional?","acceptedAnswer": {"@type": "Answer","text": "En cualquier propuesta profesional está incluido en el primer mes sin cargo adicional. Si se cotiza como paquete separado, el proveedor no contempla el arranque como parte integral del servicio."}},
+    {"@type": "Question","name": "¿Qué pasa si al final del primer mes no estoy convencido del proveedor?","acceptedAnswer": {"@type": "Answer","text": "Contrato profesional incluye cláusula de evaluación al cierre del primer mes con posibilidad de rescisión sin penalización si no cumple entregables documentales mínimos."}},
+    {"@type": "Question","name": "¿El supervisor debe estar todo el día durante el arranque?","acceptedAnswer": {"@type": "Answer","text": "Presencia decreciente: continua días 1-2, 6-8 hrs días 3-7, 3-4 hrs días 8-14, 1-2 hrs días 15-21, y semanal regular desde el día 22."}},
+    {"@type": "Question","name": "¿Qué es la coexistencia operativa con la empresa saliente?","acceptedAnswer": {"@type": "Answer","text": "Fase de 3-7 días donde personal saliente permanece en horario reducido para transferir información operativa al entrante. Reduce la curva de aprendizaje de 30 a 20 días aproximadamente."}},
+    {"@type": "Question","name": "¿Cuáles son los 14 entregables verificables del onboarding?","acceptedAnswer": {"@type": "Answer","text": "Cronograma, identificaciones SSC, póliza RC, comunicado a residentes, directorio fotográfico, mapa del sótano, bitácora digital, ronda nocturna con QR, reporte semanal del supervisor, auditoría nocturna, evaluación del personal, reporte ejecutivo de cierre, minuta firmada y plan operativo para los 11 meses siguientes."}},
+    {"@type": "Question","name": "¿Qué documentos legales debe entregar la empresa entrante antes del día 1?","acceptedAnswer": {"@type": "Answer","text": "Permiso SSC vigente, REPSE conforme a Reforma Laboral 2021, identificaciones SSC del personal, póliza RC con CNSF, opinión positiva IMSS, y comunicado de arranque firmado por administración."}},
+    {"@type": "Question","name": "¿En qué zonas opera ORIGINS para arranques de servicio nuevo?","acceptedAnswer": {"@type": "Answer","text": "Miguel Hidalgo, Cuauhtémoc, Benito Juárez, Álvaro Obregón, Coyoacán en CDMX; Naucalpan, Tlalnepantla, Atizapán en Estado de México."}}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo ejecutar un onboarding profesional de empresa de seguridad en condominio CDMX",
+  "totalTime": "P30D",
+  "step": [
+    {"@type": "HowToStep","position": 1,"name": "Semana 0 — Preparación pre-arranque","text": "7-10 días antes del día 1: reunión con administración y comité, recorrido técnico, construcción del directorio fotográfico, asignación nominal del personal, preparación documental (permiso SSC, REPSE, identificaciones, póliza RC, comunicado a residentes)."},
+    {"@type": "HowToStep","position": 2,"name": "Semana 1 — Arranque con soporte intensivo","text": "Día 1 supervisor presente 8-12 horas. Días 2-7 presencia diaria de al menos 4 horas en horarios pico. Activación de bitácora digital, primera ronda con QR. Junta operativa al cierre con primer reporte de visita."},
+    {"@type": "HowToStep","position": 3,"name": "Semana 2 — Estabilización operativa","text": "Supervisor reduce presencia a 2-3 horas diarias con horario variable. Se activan rondas con QR, validación de cierre de pluma vehicular, control de visitas. Primera auditoría nocturna no anunciada entre 23:00 y 05:00. Junta operativa al cierre."},
+    {"@type": "HowToStep","position": 4,"name": "Semana 3 — Capacitación intensiva del personal","text": "Lectura del reglamento con evaluación, identificación de residentes por directorio fotográfico, simulación de 3 escenarios típicos, protocolos de emergencia, capacitación en comunicación con central. Evaluación documentada del personal al cierre."},
+    {"@type": "HowToStep","position": 5,"name": "Semana 4 — Consolidación y reporte ejecutivo","text": "Supervisor en esquema regular semanal documentada. Entrega del reporte ejecutivo de cierre (12-20 páginas) con línea base de KPI, hallazgos, evaluación del personal, ajustes operativos y plan para los siguientes 11 meses. Junta operativa de cierre con minuta firmada."}
+  ]
+}
+</script>
 
 <div class="prose-byline">
 <div class="prose-byline__avatar">
@@ -127,6 +210,9 @@ Un onboarding profesional deja huella documental verificable. La administración
 <tr><td>Reporte ejecutivo de cierre del primer mes</td><td>Semana 4</td><td>Supervisor designado + dirección operativa</td></tr>
 <tr><td>Minuta de junta operativa de cierre firmada</td><td>Semana 4</td><td>Administración + supervisor</td></tr>
 <tr><td>Plan operativo propuesto para los siguientes 11 meses</td><td>Semana 4</td><td>Dirección operativa de la empresa</td></tr>
+<tr><td>Registro REPSE vigente del proveedor</td><td>Pre-arranque</td><td>Dirección administrativa</td></tr>
+<tr><td>Opinión positiva IMSS al corriente</td><td>Pre-arranque</td><td>Dirección administrativa</td></tr>
+<tr><td>SLA documentado con tiempos por severidad</td><td>Semana 1</td><td>Coordinador de proyecto</td></tr>
 </tbody>
 </table>
 </div>
@@ -243,6 +329,20 @@ En ORIGINS, el día uno de cualquier arranque tiene un protocolo específico que
 <summary>¿En qué zonas opera ORIGINS para arranques de servicio nuevo?</summary>
 <div>
 <p>Tenemos cobertura activa para arranque profesional de servicio en <a href="/zonas/miguel-hidalgo">Miguel Hidalgo</a>, <a href="/zonas/cuauhtemoc">Cuauhtémoc</a>, <a href="/zonas/benito-juarez">Benito Juárez</a>, <a href="/zonas/alvaro-obregon">Álvaro Obregón</a>, <a href="/zonas/coyoacan">Coyoacán</a>, <a href="/zonas/naucalpan">Naucalpan</a>, <a href="/zonas/tlalnepantla">Tlalnepantla</a> y <a href="/zonas/atizapan">Atizapán</a>. Para condominios en zonas limítrofes evaluamos integración operativa con supervisión coordinada. El cronograma de treinta días se ajusta al calendario del comité de vigilancia y a la fecha de cierre del contrato anterior cuando aplica reemplazo.</p>
+</div>
+</details>
+
+<details class="prose-faq-item">
+<summary>¿Qué documentos legales debe entregar la empresa entrante antes del día uno?</summary>
+<div>
+<p>El paquete documental obligatorio incluye permiso SSC vigente — emitido por la Secretaría de Seguridad Ciudadana de CDMX conforme a la <strong>Ley de Seguridad Privada del Distrito Federal</strong> y su Reglamento —, registro REPSE vigente ante la Secretaría del Trabajo conforme a la <strong>Reforma Laboral 2021</strong> que modificó los artículos 12 a 15 de la Ley Federal del Trabajo para regular la subcontratación de servicios especializados, identificaciones SSC vigentes del personal asignado al desarrollo, póliza de responsabilidad civil con aseguradora registrada ante la Comisión Nacional de Seguros y Fianzas, opinión positiva del IMSS al corriente que valide cumplimiento de obligaciones laborales del personal, y comunicado oficial de arranque para residentes firmado por administración con redacción preparada por el proveedor. La <a href="/blog/verificar-empresa-seguridad-legal-ssc-repse-cdmx">guía de verificación legal</a> detalla cada documento.</p>
+</div>
+</details>
+
+<details class="prose-faq-item">
+<summary>¿Cómo se evalúa el éxito del onboarding al final de los 30 días?</summary>
+<div>
+<p>Sobre cinco criterios objetivos documentables. Primero, entrega completa de los catorce entregables verificables — si falta alguno o se entrega con retraso significativo sin justificación, el onboarding fue parcial. Segundo, baseline de KPIs operativos comparado contra los declarados en propuesta de cotización — si hay desviaciones >15% en cualquier KPI sin explicación operativa, el arranque no se alineó al compromiso. Tercero, calidad del reporte ejecutivo de cierre — estructura, profundidad de hallazgos y propuestas priorizadas. Cuarto, asistencia y calidad de la junta operativa de cierre con minuta firmada y acuerdos con responsable y fecha. Quinto, percepción de residentes mediante encuesta breve al día 30 — si la satisfacción declarada es menor a 70 puntos sobre 100, el arranque dejó pendientes operativos que deben atacarse en el siguiente mes.</p>
 </div>
 </details>
 

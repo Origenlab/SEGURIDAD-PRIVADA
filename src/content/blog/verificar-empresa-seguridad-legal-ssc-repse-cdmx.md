@@ -1,6 +1,6 @@
 ---
-title: "Verificar que una Empresa de Seguridad es Legal: SSC y REPSE"
-description: "Cómo verificar permiso SSC y registro REPSE de una empresa de seguridad privada en CDMX. Riesgos del proveedor irregular y credenciales ORIGINS."
+title: "Verificar Empresa de Seguridad Legal en CDMX: SSC y REPSE"
+description: "Verifica permiso SSC y registro REPSE de una empresa de seguridad privada en CDMX. Documentos, riesgos legales y credenciales ORIGINS 0102-15."
 keywords:
   - permiso ssc empresa seguridad
   - repse seguridad privada
@@ -8,30 +8,114 @@ keywords:
   - ssc 0102-15 verificar
   - empresa seguridad irregular
   - credenciales empresa seguridad
+  - reforma laboral 2021 seguridad
+  - responsabilidad solidaria laboral
+  - poliza responsabilidad civil seguridad
+  - ley seguridad privada cdmx
 cluster: seguridad-condominios
 articleType: guide
 author:
   name: "Equipo ORIGINS Private Security"
-  role: "Consultores en Seguridad Residencial"
+  role: "Consultores en Seguridad Residencial · SSC 0102-15"
 publishDate: 2026-05-29
 updatedDate: 2026-05-29
 draft: false
 featured: true
 heroImage:
   src: "/img/img-condominios/guardia-certificado-ssc-condominio-premium.avif"
-  alt: "Guardia uniformado mostrando identificación SSC vigente en lobby de condominio"
-readingTime: 14
+  alt: "Guardia uniformado mostrando identificación SSC vigente en lobby de condominio CDMX"
+readingTime: 16
+schemaType: "HowTo"
+canonical: "https://seguridad-privada.com.mx/blog/verificar-empresa-seguridad-legal-ssc-repse-cdmx"
 relatedPillar: seguridad-condominios
 relatedPosts:
   - guia-repse-seguridad-privada-mexico
   - empresa-seguridad-vs-vigilante-independiente-comparativa
   - como-elegir-empresa-guardias-intramuros
+relatedServices:
+  - seguridad-condominios
+  - guardias-intramuros
+  - consultoria-seguridad
+tags:
+  - permiso ssc
+  - repse
+  - reforma laboral 2021
+  - responsabilidad solidaria
+  - poliza rc cnsf
+  - imss al corriente
+  - verificacion legal
+  - ssc 0102-15
+targetLocations:
+  - Ciudad de México
+  - Miguel Hidalgo
+  - Cuauhtémoc
+  - Benito Juárez
+  - Álvaro Obregón
+  - Coyoacán
+  - Naucalpan
+  - Tlalnepantla
+  - Atizapán
+faqs:
+  - question: "¿Puedo contratar una empresa de seguridad sin permiso SSC pero con REPSE?"
+    answer: "No. El permiso SSC es requisito legal de la Ley de Seguridad Privada del Distrito Federal y su Reglamento para prestar servicios en CDMX, independientemente del régimen laboral del personal. Una empresa con REPSE pero sin SSC opera irregularmente en CDMX. Ambos documentos son indispensables."
+  - question: "¿Qué pasa si el permiso SSC vence durante mi contrato?"
+    answer: "El proveedor debe entregar al comité el calendario de renovación al inicio del contrato y copia del permiso renovado dentro de los 30 días siguientes. Si vence y no se renueva, el contrato pierde sostén legal y la administración tiene derecho a rescindir sin penalización."
+  - question: "¿La responsabilidad solidaria laboral aplica si solo somos comité de vigilancia, no patrón directo?"
+    answer: "Sí. La Reforma Laboral 2021 que modificó los artículos 12 a 15 de la LFT vincula al beneficiario final del servicio con las obligaciones laborales del proveedor de servicios especializados si éste no está en REPSE. La administración del condominio puede ser citada como responsable solidario."
+  - question: "¿Por qué el precio bajo es señal de proveedor irregular?"
+    answer: "El costo laboral de un guardia en CDMX tiene piso económico estructural definido por salario mínimo profesional, IMSS, INFONAVIT, vacaciones, aguinaldo, uniforme, capacitación y supervisión. Cuando una cotización está 20-30% debajo del promedio, algún componente legal no se está pagando."
+  - question: "¿Cuáles son los 6 documentos legales mínimos que debe entregar una empresa de seguridad?"
+    answer: "Permiso SSC vigente, registro REPSE vigente, acta constitutiva vigente, RFC y constancia de situación fiscal del SAT al corriente, póliza de responsabilidad civil con aseguradora registrada en CNSF, y opinión positiva del IMSS al corriente."
+  - question: "¿Cómo verifico el REPSE de una empresa de seguridad?"
+    answer: "Solicita copia digital del registro REPSE con folio asignado por STPS. Ingresa al sitio público de la Secretaría del Trabajo y Previsión Social y consulta el folio. El sistema retorna nombre exacto de la razón social, vigencia, actividades autorizadas y estatus actual. La actividad debe incluir 'servicios de seguridad privada'."
+  - question: "¿Qué es el número de permiso SSC 0102-15 y cómo se interpreta?"
+    answer: "El formato NNNN-AA es informativo: 0102 es el número consecutivo y 15 indica el año de primera expedición. No es indicador de antigüedad operativa absoluta, pero sí confirma trazabilidad de la razón social. Lo determinante es vigencia actual, coincidencia con razón social del contrato y cobertura del servicio específico."
+  - question: "¿En qué zonas opera ORIGINS bajo el permiso SSC 0102-15?"
+    answer: "El permiso autoriza operación en todo territorio CDMX. Operación activa en Miguel Hidalgo, Cuauhtémoc, Benito Juárez, Álvaro Obregón, Coyoacán en CDMX y Naucalpan, Tlalnepantla, Atizapán en Estado de México con permisos estatales correspondientes."
 ---
 
 <div class="prose-tldr">
 <span class="prose-tldr__label">TL;DR</span>
 <p>Contratar una empresa de seguridad sin permiso vigente o sin registro REPSE expone al condominio a responsabilidad solidaria laboral, a la imposibilidad de reclamar al seguro patrimonial ante incidente, y a sanciones por subcontratación irregular bajo la reforma laboral mexicana. Verificar legalidad operativa es un trámite gratuito, toma menos de una semana y debe ejecutarse antes de firmar contrato — no después. Este artículo explica cómo verificar el permiso de la Secretaría de Seguridad Ciudadana de CDMX, cómo validar el registro REPSE ante la Secretaría del Trabajo, qué documentos exigir al proveedor, cuáles son los riesgos concretos de contratar empresa irregular, y cómo se documentan las credenciales de <strong>ORIGINS Private Security</strong> bajo permiso SSC 0102-15.</p>
 </div>
+
+<div class="prose-highlight">
+<p><strong>Respuesta rápida.</strong> Para verificar que una <strong>empresa de seguridad es legal en CDMX</strong> exige antes de firmar contrato seis documentos vigentes: (1) <strong>permiso SSC</strong> emitido por la Secretaría de Seguridad Ciudadana CDMX conforme a la Ley de Seguridad Privada del Distrito Federal y su Reglamento, (2) <strong>registro REPSE</strong> ante STPS conforme a la Reforma Laboral 2021 que modificó los artículos 12 a 15 de la Ley Federal del Trabajo, (3) acta constitutiva vigente, (4) RFC y constancia SAT al corriente, (5) póliza de responsabilidad civil con aseguradora registrada en CNSF y (6) opinión positiva IMSS al corriente. La verificación REPSE en línea toma 5 minutos. Sin estos documentos, el condominio asume responsabilidad solidaria laboral del proveedor y puede perder cobertura aseguradora.</p>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question","name": "¿Puedo contratar empresa de seguridad sin permiso SSC pero con REPSE?","acceptedAnswer": {"@type": "Answer","text": "No. El permiso SSC es requisito legal de la Ley de Seguridad Privada del Distrito Federal para prestar servicios en CDMX. Una empresa con REPSE pero sin SSC opera irregularmente. Ambos son indispensables."}},
+    {"@type": "Question","name": "¿Qué pasa si el permiso SSC vence durante mi contrato?","acceptedAnswer": {"@type": "Answer","text": "El proveedor debe entregar calendario de renovación y copia del permiso renovado en 30 días. Si vence y no se renueva, el contrato pierde sostén legal y la administración puede rescindir sin penalización."}},
+    {"@type": "Question","name": "¿La responsabilidad solidaria laboral aplica al comité de vigilancia?","acceptedAnswer": {"@type": "Answer","text": "Sí. La Reforma Laboral 2021 modificó arts. 12-15 LFT y vincula al beneficiario final del servicio con las obligaciones laborales del proveedor si no está en REPSE. La administración del condominio puede ser citada como responsable solidario."}},
+    {"@type": "Question","name": "¿Por qué el precio 20-30% bajo el mercado es señal de irregularidad?","acceptedAnswer": {"@type": "Answer","text": "El costo laboral del guardia en CDMX tiene piso económico estructural definido por salario mínimo profesional, IMSS, INFONAVIT, prestaciones, uniforme, capacitación y supervisión. Cuando se está 20-30% debajo del promedio, algún componente legal no se está pagando."}},
+    {"@type": "Question","name": "¿Cuáles son los 6 documentos legales mínimos del proveedor de seguridad?","acceptedAnswer": {"@type": "Answer","text": "Permiso SSC vigente, registro REPSE vigente, acta constitutiva, RFC y constancia SAT al corriente, póliza de responsabilidad civil con aseguradora CNSF, y opinión positiva IMSS al corriente."}},
+    {"@type": "Question","name": "¿Cómo verifico el REPSE de una empresa en línea?","acceptedAnswer": {"@type": "Answer","text": "Solicita copia digital con folio STPS. Ingresa al sitio público de la Secretaría del Trabajo y Previsión Social, consulta el folio. El sistema retorna razón social exacta, vigencia, actividades autorizadas y estatus. La actividad debe incluir servicios de seguridad privada."}},
+    {"@type": "Question","name": "¿Qué significa el número de permiso SSC 0102-15?","acceptedAnswer": {"@type": "Answer","text": "El formato NNNN-AA es informativo: 0102 es número consecutivo, 15 es el año de primera expedición. No indica antigüedad operativa absoluta, pero confirma trazabilidad de la razón social. Lo determinante es vigencia actual y coincidencia con razón social del contrato."}},
+    {"@type": "Question","name": "¿En qué zonas opera ORIGINS bajo permiso SSC 0102-15?","acceptedAnswer": {"@type": "Answer","text": "El permiso autoriza operación en todo CDMX. Activa en Miguel Hidalgo, Cuauhtémoc, Benito Juárez, Álvaro Obregón, Coyoacán y en Naucalpan, Tlalnepantla y Atizapán en Estado de México con permisos estatales correspondientes."}}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo verificar que una empresa de seguridad es legal en CDMX",
+  "totalTime": "P7D",
+  "step": [
+    {"@type": "HowToStep","position": 1,"name": "Solicitar el paquete documental al proveedor","text": "Solicita por escrito al proveedor copia digital de los 6 documentos legales mínimos: permiso SSC vigente, REPSE vigente, acta constitutiva, RFC y constancia SAT, póliza de responsabilidad civil, opinión positiva IMSS. Plazo razonable: 5-7 días."},
+    {"@type": "HowToStep","position": 2,"name": "Validar el permiso SSC con la autoridad","text": "Contrasta número y razón social del permiso con el padrón público de la SSC mediante solicitud formal a la dependencia o consulta en módulos de atención ciudadana. Valida vigencia actual y cobertura del servicio específico que vas a contratar."},
+    {"@type": "HowToStep","position": 3,"name": "Verificar el REPSE en línea","text": "Ingresa al sitio público de la Secretaría del Trabajo y Previsión Social. Consulta el folio REPSE entregado por el proveedor. Confirma que la razón social coincida exactamente con la que firmará el contrato y que la actividad autorizada incluya 'servicios de seguridad privada'."},
+    {"@type": "HowToStep","position": 4,"name": "Validar la póliza de responsabilidad civil","text": "Solicita constancia de la póliza emitida por aseguradora registrada en la Comisión Nacional de Seguros y Fianzas (CNSF). Revisa vigencia, monto de cobertura y que cubra explícitamente la operación de seguridad privada en sector residencial."},
+    {"@type": "HowToStep","position": 5,"name": "Confirmar cumplimiento IMSS y SAT","text": "La opinión positiva IMSS y la constancia SAT deben mostrar estatus al corriente. Cualquier omisión o adeudo registrado debe ser explicado por escrito antes de firmar contrato. Estos documentos validan que el personal está dado de alta y que la empresa cumple obligaciones fiscales."},
+    {"@type": "HowToStep","position": 6,"name": "Aplicar la prueba operativa del fin de semana","text": "Llama al número telefónico institucional un sábado por la tarde. Una empresa profesional opera 24/7 con central de monitoreo atendida por personal capacitado. Si responde una grabación genérica o un celular sin identificación, la disponibilidad operativa real es limitada."}
+  ]
+}
+</script>
 
 <div class="prose-byline">
 <div class="prose-byline__avatar">
@@ -111,6 +195,9 @@ Antes de firmar contrato con cualquier empresa de seguridad privada, la administ
 <tr><td>RFC y constancia de situación fiscal vigente</td><td>Servicio de Administración Tributaria</td><td>Estatus fiscal y obligaciones al corriente</td></tr>
 <tr><td>Póliza de responsabilidad civil vigente</td><td>Aseguradora con registro CNSF</td><td>Cobertura ante incidente con daño a terceros</td></tr>
 <tr><td>Opinión positiva de cumplimiento IMSS</td><td>Instituto Mexicano del Seguro Social</td><td>Cumplimiento de obligaciones laborales del personal</td></tr>
+<tr><td>Constancia INFONAVIT al corriente</td><td>Instituto del Fondo Nacional de la Vivienda</td><td>Aportaciones de vivienda del personal al día</td></tr>
+<tr><td>Cédula de identificación de la SSC</td><td>Secretaría de Seguridad Ciudadana CDMX</td><td>Personal individual registrado en padrón SSC</td></tr>
+<tr><td>Registro SEDENA (solo si aplica armamento)</td><td>Secretaría de la Defensa Nacional</td><td>Portación y manejo de armas conforme a la LFAFE</td></tr>
 </tbody>
 </table>
 </div>
@@ -229,6 +316,27 @@ Todos estos documentos están disponibles en formato digital para cualquier pros
 <summary>¿En qué zonas opera ORIGINS bajo el permiso SSC 0102-15?</summary>
 <div>
 <p>Nuestro permiso SSC autoriza operación en todo el territorio de la Ciudad de México. Operamos activamente en <a href="/zonas/miguel-hidalgo">Miguel Hidalgo</a>, <a href="/zonas/cuauhtemoc">Cuauhtémoc</a>, <a href="/zonas/benito-juarez">Benito Juárez</a>, <a href="/zonas/alvaro-obregon">Álvaro Obregón</a> y <a href="/zonas/coyoacan">Coyoacán</a> dentro de CDMX, y en <a href="/zonas/naucalpan">Naucalpan</a>, <a href="/zonas/tlalnepantla">Tlalnepantla</a> y <a href="/zonas/atizapan">Atizapán</a> en Estado de México con los permisos estatales correspondientes a operación interestatal. Para condominios en zonas limítrofes evaluamos la cobertura caso por caso con validación documental previa al contrato.</p>
+</div>
+</details>
+
+<details class="prose-faq-item">
+<summary>¿Qué normativa regula la actividad de seguridad privada en CDMX?</summary>
+<div>
+<p>El marco regulatorio mexicano aplicable incluye la <strong>Ley de Seguridad Privada del Distrito Federal</strong> (hoy CDMX) y su Reglamento, que regulan la prestación del servicio en territorio capitalino y exigen permiso SSC vigente. A nivel federal aplica la <strong>Ley Federal de Seguridad Privada</strong> para operaciones interestatales, la <strong>Ley Federal del Trabajo</strong> modificada por la Reforma Laboral de 2021 (artículos 12 a 15) para el régimen de subcontratación de servicios especializados, la <strong>Ley Federal de Armas de Fuego y Explosivos</strong> (LFAFE) cuando aplica personal armado con registro SEDENA, y la <strong>Ley General de Protección de Datos Personales en Posesión de Sujetos Obligados</strong> para el manejo de grabaciones de CCTV, controles de acceso biométricos y bitácoras digitales que contengan información de residentes.</p>
+</div>
+</details>
+
+<details class="prose-faq-item">
+<summary>¿Qué monto mínimo de cobertura debe tener la póliza de responsabilidad civil del proveedor?</summary>
+<div>
+<p>No existe monto mínimo legal único — la cobertura adecuada depende del perfil de riesgo del desarrollo, número de unidades habitacionales, valor patrimonial promedio resguardado y tipo de cobertura contratada (intramuros, perimetral, monitoreo). Como referencia operativa, en condominios de alto valor en CDMX con 30-60 unidades, las pólizas que recomendamos contratar con el proveedor van de cinco a quince millones de pesos en cobertura agregada por evento, con cobertura específica por daños a terceros, lesiones a residentes y propiedades, y errores u omisiones del personal de seguridad. La aseguradora debe estar registrada ante la Comisión Nacional de Seguros y Fianzas (CNSF) y la póliza debe entregarse al condominio en original o copia certificada, con vigencia actualizada trimestralmente.</p>
+</div>
+</details>
+
+<details class="prose-faq-item">
+<summary>¿Cómo afecta la Reforma Laboral 2021 al contrato de seguridad de mi condominio?</summary>
+<div>
+<p>La Reforma Laboral de abril 2021 modificó los artículos 12 a 15 de la Ley Federal del Trabajo y prohibió la subcontratación generalizada, permitiendo únicamente la subcontratación de <em>servicios especializados</em> previo registro en el padrón REPSE administrado por la STPS. La seguridad privada califica como servicio especializado y, por lo tanto, cualquier empresa que provea personal de seguridad a tu condominio debe estar registrada en REPSE y la factura debe especificar este régimen. Si contratas a proveedor sin REPSE: (a) la factura no es deducible fiscalmente para el condominio si tributa por arrendamiento u otros regímenes con deducibilidad parcial, (b) el condominio asume <strong>responsabilidad solidaria laboral</strong> por las obligaciones del proveedor con su personal, y (c) puede haber sanciones administrativas para ambas partes. La verificación REPSE es operativa, no opcional.</p>
 </div>
 </details>
 
