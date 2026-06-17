@@ -45,7 +45,7 @@ faqs:
 
 <div class="prose-tldr">
 <span class="prose-tldr__label">TL;DR</span>
-<p>En un evento corporativo, la seguridad se juega en el control de accesos: el punto donde se decide quién entra, a dónde llega y con qué nivel de acceso. Esta guía explica cómo funciona un sistema profesional de acreditación, cuándo y cómo inspeccionar accesos sin entorpecer la experiencia, cómo gestionar proveedores y staff, y por qué la confidencialidad del personal es parte del dispositivo. Explica también cómo colaboran <strong>SeguridadEventos</strong> —especialista en eventos corporativos a nivel nacional— y <strong>ORIGINS Private Security</strong> cuando el evento se realiza en CDMX. El objetivo es que tu evento empresarial sea ordenado, protegido y discreto desde el primer minuto.</p>
+<p>En un evento corporativo la seguridad se juega en la puerta, no en el salón: el control de accesos decide quién entra, a dónde llega y con qué credencial. Aquí te explicamos cómo funciona un sistema de acreditación por niveles, cuándo y cómo inspeccionar sin entorpecer la experiencia, cómo no descuidar el acceso de proveedores y montaje, y por qué la confidencialidad del personal de seguridad es parte del dispositivo. También cómo trabajamos <strong>SeguridadEventos</strong> —especialista en eventos corporativos a nivel nacional— y <strong>ORIGINS Private Security</strong> cuando el evento es en CDMX. El objetivo: que tu evento empresarial transmita orden y seriedad desde el primer minuto.</p>
 </div>
 
 <div class="prose-byline">
@@ -59,9 +59,9 @@ faqs:
 </div>
 
 <div class="prose-intro">
-<p>En un evento corporativo, los primeros diez minutos definen todo. Es cuando llegan en bloque los asistentes, la prensa busca su lugar, los proveedores terminan el montaje y los directivos esperan que nada se note. Si el acceso es ordenado, el evento arranca con autoridad; si es un cuello de botella o, peor, si entra quien no debía, la percepción se daña antes de que empiece la primera ponencia. La seguridad de un evento empresarial no se mide por los guardias que se ven en el salón, sino por el control que existe en la puerta y por la acreditación que define, en silencio, quién puede estar dónde.</p>
+<p>Hay un momento en todo evento corporativo que decide el resto: los primeros diez minutos. Llegan los asistentes en bloque, la prensa busca su lugar, los proveedores terminan de montar y los directivos esperan que nada desentone. Si la entrada fluye, el evento arranca con autoridad. Si se hace un cuello de botella —o peor, si entra quien no debía—, la impresión se daña antes de la primera palabra del programa. La seguridad de un evento empresarial no se juega en el salón, donde todos miran; se juega en la puerta, donde casi nadie mira.</p>
 
-<p>Lo decimos desde la operación: el acceso es el punto donde la seguridad se gana o se pierde. En <a href="/">ORIGINS Private Security</a> trabajamos el control de accesos con el mismo rigor con que operamos los ingresos de los condominios que cuidamos en CDMX, donde un filtro mal hecho se paga todos los días. Especialistas en eventos como <a href="https://seguridadeventos.com/" target="_blank" rel="noopener">SeguridadEventos</a> diseñan estos sistemas de acreditación y control para eventos corporativos en toda la República. Esta guía explica cómo se construye un acceso profesional —acreditación, filtros, inspección, gestión de proveedores y confidencialidad— para que tu evento empresarial proyecte exactamente lo que quieres: orden, seriedad y discreción.</p>
+<p>Lo vemos así porque es justo nuestro oficio: en <a href="/">ORIGINS Private Security</a> controlamos los accesos de condominios en CDMX todos los días, y sabemos que un filtro mal hecho se paga a diario. Especialistas en eventos como <a href="https://seguridadeventos.com/" target="_blank" rel="noopener">SeguridadEventos</a> diseñan estos sistemas de acreditación y control para eventos corporativos en toda la República. En esta guía te contamos cómo se arma un acceso profesional —acreditación, filtros, inspección, proveedores, confidencialidad— para que tu evento proyecte exactamente lo que quieres: orden, seriedad y discreción, sin que el invitado note el trabajo que hay detrás.</p>
 </div>
 
 <div class="prose-key-takeaways">
@@ -69,10 +69,10 @@ faqs:
 <ul>
 <li>Por qué el control de accesos es el corazón de la seguridad corporativa</li>
 <li>Cómo funciona un sistema de acreditación por niveles de acceso</li>
-<li>Cuándo y cómo inspeccionar accesos sin entorpecer la experiencia</li>
+<li>Cuándo y cómo inspeccionar sin entorpecer la experiencia</li>
 <li>Cómo gestionar proveedores, staff y prensa sin huecos de seguridad</li>
 <li>Por qué la confidencialidad del personal es parte del dispositivo</li>
-<li>Cómo colaboran SeguridadEventos y ORIGINS en eventos corporativos en CDMX</li>
+<li>Cómo nos repartimos el trabajo SeguridadEventos y ORIGINS en CDMX</li>
 </ul>
 </div>
 
@@ -80,47 +80,68 @@ faqs:
 
 ## El control de accesos es donde se gana la seguridad
 
-En un evento corporativo conviven perfiles muy distintos: asistentes acreditados, prensa, staff, proveedores, personal de montaje y, con frecuencia, directivos o figuras públicas. Cada grupo tiene un propósito y un nivel de acceso diferente, y el dispositivo de seguridad debe distinguirlos sin fricción. El acceso no es una formalidad de entrada: es el sistema nervioso del evento, el punto donde se concentra el riesgo y donde una decisión equivocada —dejar pasar a quien no debía, o trabar a quien sí— compromete todo lo demás.
+En un evento corporativo conviven perfiles muy distintos: asistentes acreditados, prensa, staff, proveedores, personal de montaje y, con frecuencia, directivos o figuras públicas. Cada grupo tiene un propósito y un nivel de acceso diferente, y el dispositivo de seguridad debe distinguirlos sin fricción. El acceso no es la antesala del evento: es su sistema nervioso, el punto donde se concentra el riesgo y donde una decisión equivocada —dejar pasar a quien no debía, o trabar a quien sí— compromete todo lo demás.
 
 ### Por qué el acceso concentra el riesgo
 
-El acceso reúne, en un espacio y un tiempo reducidos, a personas que no se conocen entre sí, con prisa por entrar y con la atención puesta en el evento, no en la seguridad. Ese es el momento ideal para que alguien sin autorización intente colarse aprovechando el flujo. Un control profesional convierte ese punto vulnerable en el más protegido del evento: identifica, filtra y ordena sin convertir la entrada en una fila eterna. La diferencia entre un acceso seguro y uno caótico no es el número de guardias, sino el diseño del filtro.
+El acceso junta, en un espacio y un tiempo reducidos, a personas que no se conocen entre sí, con prisa por entrar y con la cabeza puesta en el evento, no en la seguridad. Es el momento ideal para que alguien sin autorización intente colarse aprovechando el flujo. Un control profesional convierte ese punto vulnerable en el más protegido del evento: identifica, filtra y ordena sin que la entrada se vuelva una fila eterna. La diferencia entre un acceso seguro y uno caótico no está en cuántos guardias hay, sino en cómo se diseñó el filtro.
 
 ### Acreditación: cada quien donde le corresponde
 
-La acreditación es el sistema que asigna a cada persona una credencial con un nivel de acceso definido: general, prensa, staff, proveedor, VIP o backstage. Permite que cada quien llegue solo a donde le corresponde y que la seguridad detecte de inmediato a quien está fuera de su zona. En eventos con información sensible, lanzamientos o directivos presentes, la acreditación es lo que separa una zona protegida de un espacio abierto. Bien diseñada, el invitado apenas la percibe; mal diseñada, se vuelve el cuello de botella que todos recuerdan.
+La acreditación es el sistema que le asigna a cada persona una credencial con un nivel de acceso definido: general, prensa, staff, proveedor, VIP o backstage. Permite que cada quien llegue solo a donde le toca y que la seguridad detecte de inmediato a quien está fuera de su zona. En eventos con información sensible, lanzamientos o directivos presentes, la acreditación es lo que separa una zona protegida de un espacio abierto. Bien diseñada, el invitado apenas la nota; mal diseñada, se vuelve el cuello de botella que todos recuerdan.
+
+<div class="prose-img-full">
+
+![Acreditación por niveles y control de credenciales en un evento corporativo](/img/img-eventos/control-credenciales-eventos-corporativos.avif)
+
+<p class="prose-img-caption">Una credencial no es un adorno: define a dónde puede llegar cada persona. Bien hecha, el invitado pasa sin pensarlo y la zona sensible queda protegida.</p>
+</div>
 
 ### El costo de un acceso mal diseñado
 
-Un acceso deficiente cobra su factura de dos formas. La primera es de seguridad: ingresos no autorizados, zonas sensibles expuestas, pérdida de control sobre quién está dentro. La segunda es de experiencia: filas, desorden y una primera impresión que contradice la seriedad del evento. Para una empresa, ambas son caras —una compromete la protección, la otra la imagen—, y las dos nacen del mismo origen: haber tratado el acceso como un detalle logístico en lugar de como el núcleo del dispositivo de seguridad.
+Un acceso deficiente cobra factura por dos lados. Por el de la seguridad: ingresos no autorizados, zonas sensibles expuestas, pérdida de control sobre quién está dentro. Y por el de la experiencia: filas, desorden y una primera impresión que contradice la seriedad del evento. Para una empresa las dos son caras —una compromete la protección, la otra la imagen—, y ambas nacen del mismo error: haber tratado el acceso como un detalle logístico en vez de como el núcleo del dispositivo.
 
 <div class="prose-callout prose-callout--warning">
 <p><strong>El error que más se repite: acreditar el día del evento.</strong></p>
-<p>Cuando la acreditación se improvisa en la puerta, el filtro se colapsa y la seguridad cede ante la prisa. La acreditación se diseña antes: niveles de acceso, base de invitados, credenciales y protocolo de validación. El día del evento solo se ejecuta lo ya definido. Improvisar el acceso es improvisar la seguridad entera.</p>
+<p>Cuando la acreditación se improvisa en la puerta, el filtro se colapsa y la seguridad cede ante la prisa. La acreditación se diseña antes: niveles de acceso, base de invitados, credenciales y protocolo de validación. El día del evento solo se ejecuta lo que ya estaba definido. Improvisar el acceso es, en la práctica, improvisar la seguridad entera.</p>
 </div>
 
 ---
 
 ## Los tres pilares de la seguridad corporativa en accesos
 
-Un dispositivo de accesos profesional para un evento corporativo se sostiene en tres pilares que operan juntos. Cada uno cubre una dimensión que los otros no alcanzan.
+Un dispositivo de accesos profesional para un evento corporativo se apoya en tres pilares que trabajan juntos. Cada uno cubre algo que los otros dos no alcanzan.
 
 ### Pilar 1: Acreditación y niveles de acceso
 
-El primer pilar es el sistema de acreditación: definir antes del evento cuántos niveles de acceso existen, qué zonas cubre cada uno y cómo se valida la credencial en cada punto. Esto se diseña sobre el plano del recinto, identificando zonas generales, restringidas y sensibles, y asignando filtros entre ellas. La acreditación bien construida hace que la seguridad sea fluida para el autorizado e imposible para el que no lo está. Es el plano maestro del control de accesos.
+El primer pilar es el sistema de acreditación: definir antes del evento cuántos niveles de acceso existen, qué zonas cubre cada uno y cómo se valida la credencial en cada punto. Esto se dibuja sobre el plano del recinto, marcando zonas generales, restringidas y sensibles, y poniendo filtros entre ellas. Una acreditación bien construida hace que la seguridad sea fluida para el autorizado e imposible para el que no lo está. Es, literalmente, el plano maestro del control de accesos.
 
 <aside class="prose-pullquote">
-<p>En un evento corporativo, la seguridad más eficaz es la que ordena sin estorbar: protege en silencio y deja que el evento brille.</p>
+<p>En un evento corporativo, la mejor seguridad es la que ordena sin estorbar: protege en silencio y deja que el evento se luzca.</p>
 <footer>— Equipo operativo, ORIGINS Private Security</footer>
 </aside>
 
 ### Pilar 2: Filtros, inspección y gestión de proveedores
 
-El segundo pilar es la ejecución del filtro: cómo se revisa el acceso, qué nivel de inspección aplica según el riesgo, y cómo se gestionan los flujos paralelos de proveedores, staff y montaje. Los proveedores son un punto ciego frecuente: entran antes que los invitados, por accesos distintos y con equipo, lo que exige su propio protocolo de acreditación e inspección. Un dispositivo profesional controla la puerta principal y también la de servicio, porque el riesgo no siempre entra por el frente. La inspección, cuando el análisis la justifica, se ejecuta con protocolos claros para ser efectiva sin volverse intrusiva.
+El segundo pilar es la ejecución del filtro: cómo se revisa el acceso, qué nivel de inspección aplica según el riesgo y cómo se manejan los flujos paralelos de proveedores, staff y montaje. Los proveedores son un punto ciego frecuente: entran antes que los invitados, por accesos distintos y con equipo, así que necesitan su propio protocolo de acreditación e inspección. Un dispositivo profesional cuida la puerta principal y también la de servicio, porque el riesgo no siempre entra por el frente. La inspección, cuando el análisis la justifica, se ejecuta con protocolos claros para ser efectiva sin volverse molesta.
+
+<div class="prose-img-full">
+
+![Inspección de accesos con protocolo en un evento corporativo](/img/img-eventos/inspeccion-equipaje-eventos-corporativos.avif)
+
+<p class="prose-img-caption">Inspeccionar bien no es revisar todo ni revisar nada: es ajustar el filtro al riesgo real, con un protocolo que proteja sin generar filas.</p>
+</div>
 
 ### Pilar 3: Confidencialidad y personal de confianza
 
-El tercer pilar es la confidencialidad, que empieza por el personal. Los elementos que operan un evento corporativo acceden a información sensible —agenda, lista de asistentes, presencia de directivos, contenidos del evento— y deben manejarla con discreción absoluta. Eso exige personal seleccionado con verificación de antecedentes y un proveedor que no presuma a sus clientes. En eventos corporativos en CDMX, <a href="/">ORIGINS aporta guardias certificados SSC</a> seleccionados con investigación de confiabilidad, porque en un entorno empresarial la discreción del personal es tan importante como su capacidad operativa.
+El tercer pilar es la confidencialidad, que empieza por el personal. Los elementos que operan un evento corporativo acceden a información sensible —agenda, lista de asistentes, presencia de directivos, contenidos del evento— y tienen que manejarla con discreción absoluta. Eso pide personal seleccionado con verificación de antecedentes y un proveedor que no ande presumiendo a sus clientes. En eventos corporativos en CDMX, <a href="/">aportamos guardias certificados</a> seleccionados con investigación de confiabilidad, porque en un entorno empresarial la discreción del personal pesa tanto como su capacidad operativa.
+
+<div class="prose-img-full">
+
+![Vigilancia profesional y discreta en una convención o feria corporativa](/img/img-eventos/vigilancia-profesional-convenciones-ferias.avif)
+
+<p class="prose-img-caption">En convenciones y ferias, el personal accede a información que no es suya. La confidencialidad no se promete en un contrato: se elige al seleccionar a la gente.</p>
+</div>
 
 <div class="prose-stat-grid">
 <div class="prose-stat">
@@ -133,7 +154,7 @@ El tercer pilar es la confidencialidad, que empieza por el personal. Los element
 </div>
 <div class="prose-stat">
 <span class="prose-stat__num">Discreción</span>
-<span class="prose-stat__label">capa activa de protección</span>
+<span class="prose-stat__label">parte del dispositivo</span>
 </div>
 <div class="prose-stat">
 <span class="prose-stat__num">SSC 0102-15</span>
@@ -162,11 +183,11 @@ Antes de que llegue el primer asistente, revisa que el dispositivo de accesos es
 </ul>
 </div>
 
-Cada punto no resuelto es un hueco por donde puede entrar un problema o salir la buena impresión del evento. Un dispositivo profesional cierra los diez antes de abrir puertas.
+Cada punto sin resolver es un hueco por donde puede entrar un problema o salirse la buena impresión del evento. Un dispositivo profesional cierra los diez antes de abrir puertas.
 
 <div class="prose-callout prose-callout--pro">
 <p><strong>Diseña dos filas, no una.</strong></p>
-<p>En eventos corporativos con entrada masiva, separar el flujo de acreditados con credencial del flujo de registro en sitio evita el cuello de botella que arruina los primeros minutos. Quien ya está acreditado pasa rápido; quien necesita registrarse lo hace sin frenar al resto. Es un ajuste simple que protege a la vez la seguridad y la experiencia.</p>
+<p>En eventos corporativos con entrada masiva, separar el flujo de acreditados con credencial del flujo de registro en sitio evita el cuello de botella que arruina los primeros minutos. Quien ya está acreditado pasa rápido; quien necesita registrarse lo hace sin frenar al resto. Es un ajuste sencillo que protege a la vez la seguridad y la experiencia.</p>
 </div>
 
 ---
@@ -193,7 +214,7 @@ La tabla contrasta cómo se vive un acceso sin diseño frente a uno construido p
 </table>
 </div>
 
-La columna profesional describe el estándar con el que <a href="https://seguridadeventos.com/" target="_blank" rel="noopener">SeguridadEventos</a> opera eventos corporativos a nivel nacional, y con el que ORIGINS respalda los que se realizan en la Ciudad de México.
+La columna profesional describe el estándar con el que <a href="https://seguridadeventos.com/" target="_blank" rel="noopener">SeguridadEventos</a> opera eventos corporativos a nivel nacional, y con el que respaldamos los que se realizan en la Ciudad de México.
 
 ---
 
@@ -203,34 +224,34 @@ Estos patrones se repiten cuando la seguridad de un evento empresarial se trata 
 
 **1. Tratar el acceso como un trámite.** Cuando la entrada se ve como un punto de registro y no como el núcleo de la seguridad, se descuida justo donde se concentra el riesgo. El acceso es el dispositivo, no su antesala.
 
-**2. Olvidar a los proveedores.** Montaje, catering y técnicos entran antes y por otra puerta. Sin protocolo propio, el acceso de servicio se convierte en el eslabón débil del evento.
+**2. Olvidar a los proveedores.** Montaje, catering y técnicos entran antes y por otra puerta. Sin protocolo propio, el acceso de servicio se vuelve el eslabón débil del evento.
 
-**3. Acreditar sin niveles.** Una sola credencial para todos vuelve inútil la acreditación: si todos pueden entrar a todo, no hay zonas protegidas. Los niveles son lo que da sentido al sistema.
+**3. Acreditar sin niveles.** Una sola credencial para todos vuelve inútil la acreditación: si todos pueden entrar a todo, no hay zonas protegidas. Los niveles son lo que le da sentido al sistema.
 
-**4. Inspeccionar por exceso o por defecto.** Ni revisar todo a ciegas ni no revisar nada. El nivel de inspección se define por el análisis de riesgo, con protocolos que lo hagan efectivo sin entorpecer la experiencia.
+**4. Inspeccionar por exceso o por defecto.** Ni revisar todo a ciegas ni no revisar nada. El nivel de inspección lo define el análisis de riesgo, con protocolos que lo hagan efectivo sin entorpecer la experiencia.
 
-**5. Ignorar la confidencialidad del personal.** Guardias sin verificación de antecedentes acceden a información sensible del evento y de la empresa. La discreción del personal es parte de la seguridad, no un extra.
+**5. Ignorar la confidencialidad del personal.** Guardias sin verificación de antecedentes acceden a información sensible del evento y de la empresa. La discreción del personal es parte de la seguridad, no un extra opcional.
 
 ---
 
-## Protocolos ORIGINS para accesos en eventos corporativos en CDMX
+## Cómo trabajamos los accesos de un evento corporativo en CDMX
 
-Cuando apoyamos un evento corporativo en la Ciudad de México, aplicamos protocolos de control de accesos que provienen de nuestra operación diaria en entornos residenciales y corporativos.
+Cuando apoyamos un evento corporativo en la capital, aplicamos protocolos de control de accesos que vienen de nuestra operación diaria en entornos residenciales y corporativos.
 
-**Protocolo 1: Diseño de accesos sobre plano.** Antes del evento mapeamos el recinto, definimos zonas y niveles de acceso, y ubicamos cada filtro, para que el control esté diseñado y no improvisado.
+**Diseñamos los accesos sobre el plano.** Antes del evento mapeamos el recinto, definimos zonas y niveles de acceso y ubicamos cada filtro, para que el control esté pensado y no improvisado.
 
-**Protocolo 2: Acreditación por niveles.** Establecemos credenciales diferenciadas por perfil —asistente, prensa, staff, proveedor, VIP— y el protocolo de validación en cada punto.
+**Acreditamos por niveles.** Establecemos credenciales diferenciadas por perfil —asistente, prensa, staff, proveedor, VIP— y el protocolo de validación en cada punto.
 
-**Protocolo 3: Filtro de proveedores y montaje.** Controlamos el acceso de servicio con su propio protocolo de acreditación e inspección, porque el montaje es un punto ciego frecuente.
+**Filtramos proveedores y montaje aparte.** Controlamos el acceso de servicio con su propio protocolo de acreditación e inspección, porque el montaje es un punto ciego frecuente.
 
-**Protocolo 4: Personal con investigación de confiabilidad.** Asignamos guardias certificados SSC seleccionados con verificación de antecedentes, capaces de manejar información sensible con discreción.
+**Ponemos personal con investigación de confiabilidad.** Asignamos guardias certificados seleccionados con verificación de antecedentes, capaces de manejar información sensible con discreción.
 
-**Protocolo 5: Mando único y comunicación.** Coordinamos todos los accesos desde un punto de mando con radio, de modo que ningún filtro quede aislado ante un imprevisto.
+**Coordinamos todo desde un solo mando.** Operamos los accesos desde un punto de mando con radio, para que ningún filtro quede aislado ante un imprevisto.
 
 <div class="prose-cta-block">
 <p><strong>¿Tu evento corporativo en CDMX necesita control de accesos profesional?</strong></p>
-<p>Evaluamos tu evento sin costo y diseñamos un dispositivo de acreditación y accesos a la medida del recinto y del riesgo, con personal certificado SSC. Respondemos en menos de 24 horas hábiles.</p>
-<a href="/" class="prose-cta-block__btn">Solicitar evaluación con ORIGINS</a>
+<p>Llega a tu junta de planeación con un plan de accesos, no con una incógnita. Revisamos el recinto y el riesgo, y diseñamos contigo el dispositivo de acreditación —con personal certificado y discreto.</p>
+<a href="/" class="prose-cta-block__btn">Diseñemos tu control de accesos</a>
 </div>
 
 ---
@@ -268,7 +289,7 @@ Cuando apoyamos un evento corporativo en la Ciudad de México, aplicamos protoco
 <details class="prose-faq-item">
 <summary>¿Quién opera la seguridad corporativa cuando el evento es en CDMX?</summary>
 <div>
-<p>Especialistas en eventos como <a href="https://seguridadeventos.com/" target="_blank" rel="noopener">SeguridadEventos</a> coordinan operativos corporativos en toda la República, y cuando el evento se realiza en la Ciudad de México y requiere guardias intramuros con conocimiento local, se apoyan en <a href="/">ORIGINS Private Security</a>. ORIGINS opera con permiso SSC 0102-15 y aporta personal certificado con experiencia en entornos corporativos y residenciales de la capital, dentro del marco legal. La combinación de especialización en eventos y conocimiento local del terreno es lo que da solidez al dispositivo.</p>
+<p>Especialistas en eventos como <a href="https://seguridadeventos.com/" target="_blank" rel="noopener">SeguridadEventos</a> coordinan operativos corporativos en toda la República, y cuando el evento es en la Ciudad de México y requiere guardias intramuros con conocimiento local, se apoyan en <a href="/">ORIGINS Private Security</a>. Operamos con permiso SSC 0102-15 y aportamos personal certificado con experiencia en entornos corporativos y residenciales de la capital, dentro del marco legal. La combinación de especialización en eventos y conocimiento local del terreno es lo que le da solidez al dispositivo.</p>
 </div>
 </details>
 
@@ -276,8 +297,8 @@ Cuando apoyamos un evento corporativo en la Ciudad de México, aplicamos protoco
 
 ## Conclusión: el orden empieza en la puerta
 
-La seguridad de un evento corporativo no se decide en el salón, sino en el acceso. Un control bien diseñado —con acreditación por niveles, filtros para proveedores, inspección ajustada al riesgo y personal de confianza— protege la información, las zonas sensibles y la imagen de la empresa sin que el invitado lo perciba. El acceso improvisado, en cambio, expone el evento y arruina los primeros minutos, que son los que más se recuerdan. La diferencia no está en cuántos guardias hay, sino en cuánto se planeó la puerta.
+La seguridad de un evento corporativo no se decide en el salón, sino en el acceso. Un control bien diseñado —con acreditación por niveles, filtros para proveedores, inspección ajustada al riesgo y personal de confianza— protege la información, las zonas sensibles y la imagen de la empresa sin que el invitado lo perciba. El acceso improvisado, en cambio, expone el evento y arruina esos primeros minutos que son los que más se recuerdan. La diferencia no está en cuántos guardias hay; está en cuánto se planeó la puerta.
 
-Ese estándar de control y discreción es el que <a href="https://seguridadeventos.com/" target="_blank" rel="noopener">SeguridadEventos</a> aplica en eventos corporativos por todo el país, y el mismo con el que ORIGINS respalda los que se realizan en la Ciudad de México, con la ventaja de conocer a fondo el terreno local. Cuando la especialización en eventos se combina con el conocimiento del entorno, el dispositivo deja de ser un grupo de guardias y se vuelve un sistema.
+Ese estándar de control y discreción es el que <a href="https://seguridadeventos.com/" target="_blank" rel="noopener">SeguridadEventos</a> aplica en eventos corporativos por todo el país, y el mismo con el que respaldamos los que se realizan en la Ciudad de México, con la ventaja de conocer a fondo el terreno local. Cuando la especialización en eventos se junta con el conocimiento del entorno, el dispositivo deja de ser un grupo de guardias y se vuelve un sistema.
 
-Si tu próximo evento empresarial es en CDMX y quieres que la seguridad proyecte orden y seriedad desde la entrada, el primer paso es una evaluación. <a href="/">Solicita una evaluación con ORIGINS Private Security</a> y diseñemos juntos el control de accesos a la medida de tu evento, sin compromiso.
+Si tu próximo evento empresarial es en CDMX y quieres que la seguridad proyecte orden y seriedad desde la entrada, empecemos por una conversación. <a href="/">Escríbenos en ORIGINS Private Security</a> y diseñamos juntos el control de accesos a la medida de tu evento, sin compromiso.
