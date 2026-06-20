@@ -1,6 +1,6 @@
 ---
-title: "Iluminación y Vigilancia en Estacionamientos de Condominios CDMX — Guía Operativa"
-description: "Por qué la iluminación profesional reduce más robos que las cámaras solas. Auditoría, errores comunes y protocolos que aplican los condominios mejor protegidos en CDMX."
+title: "Iluminación y Vigilancia en Estacionamientos de Condominios CDMX"
+description: "Por qué la iluminación profesional reduce más robos que las cámaras solas. Auditoría, errores comunes y protocolos que aplican los condominios mejor"
 keywords:
   - seguridad estacionamientos cdmx
   - iluminacion estacionamientos residencial
