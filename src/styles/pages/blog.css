@@ -449,7 +449,7 @@
   line-height: 1.85;
   color: rgba(10,15,30,0.82);
   counter-reset: prose-section;
-  max-width: 75ch;
+  max-width: 100%;
 }
 
 /* H2: encabezado con numeración decorativa + accent bar */

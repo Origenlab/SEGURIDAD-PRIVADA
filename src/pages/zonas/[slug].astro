@@ -8,6 +8,8 @@ import FAQItem from '../../components/FAQItem.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 import '../../styles/sections/faq-cotizacion.css';
 import '../../styles/pages/zona-detalle.css';
+// Patrón Servicio Premium — homologación design system (vault/Design System/Patterns/Servicio Premium.md)
+import '../../styles/patterns/servicio-premium.css';
 
 export async function getStaticPaths() {
   const zonas = await getCollection('zonas', ({ data }) => !data.draft);

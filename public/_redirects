@@ -1,9 +1,25 @@
+# ===========================================================
+# ORIGINS Private Security · _redirects
+# Última edición: 2026-05-29 (Día 1 — restructure)
+# ===========================================================
+
+# --- Sitemaps (sitemap-index.xml es el válido; aliasear las URLs convencionales) ---
+/sitemap.xml /sitemap-index.xml 301
+/sitemap_index.xml /sitemap-index.xml 301
+
+# --- Limpieza legacy .html en raíz ---
 /index.html / 301
 /contacto.html /contacto 301
 /aviso-de-privacidad.html /aviso-de-privacidad 301
 /mapa-del-sitio.html /mapa-del-sitio 301
-/nosotros /servicios 301
-/nosotros.html /servicios 301
+
+# --- /nosotros RESTAURADA (Día 1: src/pages/nosotros.astro tiene contenido + AboutPage schema) ---
+# Líneas removidas:
+#   /nosotros /servicios 301      ← removida 2026-05-29
+#   /nosotros.html /servicios 301 ← removida 2026-05-29
+/nosotros.html /nosotros 301
+
+# --- Bolsa de trabajo (mantener — placeholder rumbo a /sectores/) ---
 /bolsa-de-trabajo /contacto 301
 /bolsa-de-trabajo.html /contacto 301
 /guardias-de-seguridad-y-vigilancia.html /servicios/guardias-intramuros 301

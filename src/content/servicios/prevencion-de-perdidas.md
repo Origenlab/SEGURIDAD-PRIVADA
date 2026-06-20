@@ -64,9 +64,42 @@ draft: false
 ---
 
 <div class="prose-intro">
-  <p><strong>ORIGINS Private Security</strong> opera prevención de pérdidas para retail y empresas en CDMX. Personal certificado SSC que detecta robo interno, fraudes en caja e irregularidades de inventario — de forma encubierta, con evidencia documentada y sin interrumpir la operación. Complementamos con <a href="/servicios/investigaciones-confiabilidad">investigaciones de confiabilidad</a> para validar al personal antes de contratarlo. <strong>Proteger tus márgenes es tan importante como proteger tu local</strong>.</p>
+  <p>La prevención de pérdidas es uno de los servicios de seguridad privada con mejor retorno medible y peor comprensión operativa entre dueños y directores de retail en México. La razón es estadística: la merma en retail latinoamericano fluctúa entre <strong>1.5% y 4% de ventas brutas</strong> según el sector — para una operación de margen neto del 5-8% (rango típico del retail mexicano), eso es <strong>entre 20% y 80% de la utilidad neta perdida sin causa documentada</strong>. La intuición operativa de la mayoría de los dueños imputa esa pérdida al robo externo, cuando los datos del sector documentan consistentemente lo contrario: aproximadamente <strong>70% de la merma identificada</strong> proviene del personal interno — robo hormiga, fraude en caja, colusión con proveedores, manipulación de inventario o merma justificada inexistente. <strong>ORIGINS Private Security</strong> opera prevención de pérdidas para retail, distribuidores y centros de operación en CDMX con personal certificado <strong>SSC 0102-15</strong>, metodología <strong>ASIS International Loss Prevention</strong> y entrega de evidencia documental admisible para proceso disciplinario o, cuando aplica, denuncia ante autoridad.</p>
   <div class="prose-highlight">
-    <strong>Lo que la mayoría no quiere ver:</strong> El robo externo —el que todos imaginan— representa el 30% de las pérdidas en retail. El otro 70% son empleados. Personal de confianza que lleva semanas o meses tomando mercancía, haciendo descuentos no autorizados o coludido con proveedores. El problema no es la falta de cámaras — es que nadie está mirando lo que pasa desde adentro. Por eso integramos <a href="/servicios/vigilancia-remota-cctv">vigilancia remota CCTV</a> con <a href="/servicios/control-de-accesos">control de accesos</a> para cubrir los puntos ciegos que el personal encubierto no alcanza.
+    <strong>El dato operativo que define el modelo:</strong> el robo externo — el que todos imaginan al pensar en prevención de pérdidas — representa aproximadamente el 30% del problema. El otro 70% es interno y se concentra en personal de confianza con permanencia mediana en la operación, que conoce los puntos ciegos del CCTV instalado, los patrones de supervisión y los procesos de inventario. El problema operativo no es la falta de cámaras — es que <strong>nadie está mirando lo que pasa desde adentro</strong>. El servicio de ORIGINS combina operación encubierta con análisis de datos de POS y reposicionamiento estratégico de CCTV existente; integra con <a href="/servicios/investigaciones-confiabilidad">investigaciones de confiabilidad</a> para validar al personal antes de contratar, con <a href="/servicios/vigilancia-remota-cctv">vigilancia remota CCTV</a> para cubrir puntos ciegos en tiempo real y con <a href="/servicios/control-de-accesos">control de accesos</a> para trazabilidad de personal en bodega y zonas críticas.
+  </div>
+</div>
+
+<div class="hero-stats">
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">70<small>%</small></span>
+    <span class="hero-stats__label">Merma de origen interno</span>
+    <span class="hero-stats__sub">Personal vs. robo externo documentado</span>
+  </div>
+  <div class="hero-stats__item hero-stats__item--accent">
+    <span class="hero-stats__num">40-70<small>%</small></span>
+    <span class="hero-stats__label">Reducción típica</span>
+    <span class="hero-stats__sub">En el primer trimestre de servicio</span>
+  </div>
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">1-2<small>sem</small></span>
+    <span class="hero-stats__label">Primeros hallazgos</span>
+    <span class="hero-stats__sub">Si hay problema activo en operación</span>
+  </div>
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">ASIS</span>
+    <span class="hero-stats__label">Metodología LP</span>
+    <span class="hero-stats__sub">Loss Prevention estándar internacional</span>
+  </div>
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">ROI</span>
+    <span class="hero-stats__label">Mes 1</span>
+    <span class="hero-stats__sub">Ahorro mensual supera el costo del servicio</span>
+  </div>
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">SSC</span>
+    <span class="hero-stats__label">0102-15 vigente</span>
+    <span class="hero-stats__sub">Personal encubierto certificado</span>
   </div>
 </div>
 
@@ -107,6 +140,94 @@ draft: false
       <strong>ROI desde el primer mes</strong>
       <span>El ahorro en merma suele superar el costo del servicio</span>
     </div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Por qué importa</span>
+  <h2>Los Cinco Problemas que un Programa de Prevención de Pérdidas Resuelve</h2>
+  <p class="prose-section-sub">No vendemos vigilancia genérica: identificamos el origen exacto de la merma — interno, externo o de proceso — con evidencia documentada y plan de mitigación medible.</p>
+</div>
+
+<div class="problems-grid">
+  <div class="problem-card">
+    <span class="problem-card__num">01</span>
+    <strong>Merma sostenida sin causa identificada</strong>
+    <p>El inventario no cuadra mes con mes, la merma flota por encima del benchmark sectorial, pero la dirección no puede identificar con precisión dónde ni quién. Sin análisis estructurado, la decisión se toma por intuición — frecuentemente con personal equivocado como blanco y el problema real intacto.</p>
+    <span class="problem-card__fix">Solución: análisis de datos de POS + auditoría física + observación encubierta</span>
+  </div>
+  <div class="problem-card">
+    <span class="problem-card__num">02</span>
+    <strong>Personal de confianza con conducta irregular</strong>
+    <p>Empleado con permanencia de meses o años que conoce los puntos ciegos del CCTV y los patrones de supervisión. Robo hormiga sostenido, descuentos no autorizados, cancelaciones que se quedan con efectivo. La cámara graba; nadie revisa. El daño acumulado es significativo.</p>
+    <span class="problem-card__fix">Solución: agente encubierto + correlación POS-video + reporte con evidencia</span>
+  </div>
+  <div class="problem-card">
+    <span class="problem-card__num">03</span>
+    <strong>Colusión con proveedor o transportista</strong>
+    <p>Recepción con cantidad inferior a remisión firmada, "olvido" sistemático de unidades en camión, registro de mercancía dañada inexistente. La merma se concentra en categorías y proveedores específicos sin que el patrón se documente formalmente. La pérdida pasa por la cadena de suministro.</p>
+    <span class="problem-card__fix">Solución: auditoría cruzada de remisiones + observación recepciones + denuncia</span>
+  </div>
+  <div class="problem-card">
+    <span class="problem-card__num">04</span>
+    <strong>CCTV existente sin operador ni cobertura efectiva</strong>
+    <p>Cámaras instaladas en los puntos obvios — entrada, caja, piso de ventas — que el personal interno conoce y rodea. Las zonas críticas operativas (bodega, recepción de mercancía, salida de servicio, ángulo de manos del cajero) quedan sin cobertura. El sistema graba lo que no importa y omite lo que sí.</p>
+    <span class="problem-card__fix">Solución: auditoría de cobertura + reposicionamiento estratégico + monitoreo activo</span>
+  </div>
+  <div class="problem-card">
+    <span class="problem-card__num">05</span>
+    <strong>Sin expediente para proceso disciplinario o denuncia</strong>
+    <p>El responsable de operaciones sospecha de un empleado pero no tiene evidencia documental defendible. La conversación queda en sospecha; la acción legal o disciplinaria queda expuesta a reclamo laboral por despido injustificado con consecuencias económicas significativas que terminan favoreciendo al involucrado.</p>
+    <span class="problem-card__fix">Solución: documentación trazable con video + correlación POS + cronología</span>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Pilares de Valor</span>
+  <h2>Las Cuatro Decisiones Operativas que Definen el Servicio</h2>
+  <p class="prose-section-sub">No son cuatro features de marketing: son cuatro decisiones operativas que separan a un programa de prevención de pérdidas profesional de un "vigilante en tienda".</p>
+</div>
+
+<div class="pillars-grid">
+  <div class="pillar-card pillar-card--1">
+    <div class="pillar-card__num">01</div>
+    <div class="pillar-card__icon">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/><line x1="3" y1="3" x2="21" y2="21"/></svg>
+    </div>
+    <strong>Operación 100% encubierta</strong>
+    <p>El personal no sabe que está siendo evaluado — porque las conductas irregulares solo ocurren cuando se asume ausencia de supervisión. Modalidad mystery shopper o empleado encubierto integrado al equipo del cliente. Documentación discreta admisible legalmente.</p>
+    <a href="#encubierta" class="pillar-card__link">Ver operación →</a>
+  </div>
+  <div class="pillar-card pillar-card--2">
+    <div class="pillar-card__num">02</div>
+    <div class="pillar-card__icon">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 3v18h18"/><polyline points="7 16 12 11 16 15 21 10"/></svg>
+    </div>
+    <strong>Análisis de POS + correlación de video</strong>
+    <p>El sistema de punto de venta registra todo — el problema es que nadie analiza los datos. Identificamos cajeros con índice de cancelaciones anómalo, descuentos atípicos por turno, transacciones con patrones de fraude. Correlación automática con video del CCTV instalado.</p>
+    <a href="#pos" class="pillar-card__link">Ver análisis POS →</a>
+  </div>
+  <div class="pillar-card pillar-card--3">
+    <div class="pillar-card__num">03</div>
+    <div class="pillar-card__icon">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="12" cy="10" r="3"/></svg>
+    </div>
+    <strong>Reposicionamiento CCTV estratégico</strong>
+    <p>Auditoría de cobertura real vs. declarada. Reposicionamiento en bodega, recepción de mercancía, salida de servicio y ángulo de manos del cajero — zonas críticas que el sistema instalado típicamente omite. Sin necesidad de comprar equipo nuevo en la mayoría de casos.</p>
+    <a href="#cctv" class="pillar-card__link">Ver reposicionamiento →</a>
+  </div>
+  <div class="pillar-card pillar-card--4">
+    <div class="pillar-card__num">04</div>
+    <div class="pillar-card__icon">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 11 17 15 13"/></svg>
+    </div>
+    <strong>Evidencia documental defendible</strong>
+    <p>Reporte con video, transcripciones, análisis de transacciones y cronología — formato admisible para proceso disciplinario interno o denuncia ante autoridad. Cumplimiento LFPDPPP en captura y manejo de datos. No reporte verbal de sospecha, sino expediente documental trazable.</p>
+    <a href="#reporte" class="pillar-card__link">Ver expediente →</a>
   </div>
 </div>
 
@@ -232,29 +353,18 @@ draft: false
 
 ---
 
-<function_calls>
-<invoke name="exec">
-<parameter name="command">cat >> /Users/carsolio/Desktop/PAGINAS-HTML/SEGURIDAD-PRIVADA/src/content/servicios/prevencion-de-perdidas.md << 'EOF'
-
 <div class="prose-section-block">
   <div class="prose-section-block__header">
     <span class="prose-section-block__num">01</span>
     <div>
-      <span class="prose-section-block__label">Operación Encubierta</span>
-      <h3 class="prose-section-block__title">Personal que Detecta desde Adentro — Sin que Nadie lo Sepa</h3>
+      <span class="prose-section-block__label">Operación encubierta documentada</span>
+      <h3 class="prose-section-block__title">Mystery Shopper y Personal Encubierto — Detección desde Adentro con Evidencia Legal</h3>
     </div>
   </div>
   <div class="prose-two-col">
     <div class="prose-two-col__text">
-      <p>La modalidad encubierta funciona porque los comportamientos irregulares solo ocurren cuando el empleado cree que nadie lo está viendo. Un guardia uniformado en la tienda cambia el comportamiento — pero no elimina el problema. <strong>Un agente encubierto lo documenta tal como ocurre en la realidad</strong>.</p>
-      <ul>
-        <li>Agente opera como cliente habitual — compras, devoluciones, preguntas al personal</li>
-        <li>O como empleado temporal — integrado al equipo sin revelar su función</li>
-        <li>Documenta en tiempo real: video discreto, notas y registro de transacciones observadas</li>
-        <li>Identifica patrones repetitivos — no solo eventos aislados</li>
-        <li>Coordina con supervisión de cámaras para correlacionar eventos</li>
-        <li>Entrega reporte con evidencia completa cuando hay hallazgo confirmado</li>
-      </ul>
+      <p>La modalidad encubierta es el componente operativo más eficaz para documentar conductas irregulares de personal interno, porque los comportamientos que generan merma solo ocurren cuando el empleado asume que no está siendo observado. Un guardia uniformado en piso de ventas o un supervisor visible modifican el comportamiento de quien opera de forma irregular — pero solo lo desplazan en tiempo o lo concentran en zonas no cubiertas. La operación encubierta, ejecutada conforme a metodología <strong>ASIS International Loss Prevention</strong>, documenta la conducta tal como ocurre en la operación real, con evidencia trazable que sostiene proceso disciplinario interno o, cuando corresponde, denuncia ante autoridad competente.</p>
+      <p>El agente opera bajo dos perfiles según necesidad operativa del cliente. <strong>Cliente misterioso (mystery shopper)</strong> — visita el establecimiento en horarios estratégicamente seleccionados realizando compras, devoluciones y consultas al personal, documentando interacciones con dispositivo discreto y, cuando se justifica, audio bajo marco LFPDPPP aplicable a registros con consentimiento previo del responsable del establecimiento. <strong>Empleado encubierto</strong> — investigador integrado al equipo del cliente como empleado temporal, sin revelar su función al personal, observando flujos de mercancía, manejo de caja, ingresos por puerta de servicio y patrones interpersonales que indiquen colusión. Ambos perfiles coordinan en tiempo real con análisis de POS para correlacionar transacciones observadas con registros del sistema — la correlación es lo que convierte observación en evidencia.</p>
     </div>
     <div class="prose-two-col__img">
       <img src="/img/prevencion-de-perdidas/investigacion-de-perdidas.avif" alt="Investigación de pérdidas y robo interno en retail CDMX" loading="lazy" width="640" height="480" />
@@ -375,9 +485,9 @@ draft: false
 ---
 
 <div class="prose-section-header">
-  <span class="prose-section-badge">Para Quién es</span>
-  <h2>Cualquier Negocio que Vende Producto Físico</h2>
-  <p class="prose-section-sub">La prevención de pérdidas no es solo para grandes cadenas. Un negocio de $300K mensuales con 3% de merma está perdiendo $108,000 al año — más de lo que cuesta el servicio completo.</p>
+  <span class="prose-section-badge">Aplicación por sector</span>
+  <h2>Configuración del Servicio según Tipo de Operación</h2>
+  <p class="prose-section-sub">El programa de prevención de pérdidas no es solo para grandes cadenas. Una operación de $300K mensuales con 3% de merma pierde $108,000 al año — significativamente más que el costo anual del servicio profesional.</p>
 </div>
 
 <div class="profile-grid">
@@ -457,9 +567,108 @@ draft: false
 ---
 
 <div class="prose-section-header">
-  <span class="prose-section-badge">Proceso</span>
-  <h2>Del Diagnóstico a la Merma Controlada — Paso a Paso</h2>
-  <p class="prose-section-sub">Un proceso metódico que empieza con datos, continúa con observación y termina con evidencia accionable — no con suposiciones.</p>
+  <span class="prose-section-badge">Inversión</span>
+  <h2>Transparencia de Costos — Qué Define la Mensualidad del Programa</h2>
+  <p class="prose-section-sub">La cotización profesional se construye sobre variables operativas verificables por tamaño de operación y nivel de profundidad. Cualquier proveedor que entregue precio fijo sin conocer la operación está cotizando algo que no entiende.</p>
+</div>
+
+<div class="pricing-transparency">
+  <div class="pricing-transparency__intro">
+    <p>El programa de prevención de pérdidas profesional se cotiza sobre cuatro variables operativas que definen el alcance del trabajo y el ROI esperado. La transparencia inicial evita las trampas comunes del mercado: paquetes "todo incluido" que excluyen análisis de POS, "vigilancia encubierta" sin metodología ASIS ni evidencia documental defendible, contratos largos sin cláusula de salida ni medición de impacto, o reportes verbales sin expediente trazable para proceso disciplinario.</p>
+  </div>
+  <div class="pricing-factors">
+    <div class="pricing-factor">
+      <span class="pricing-factor__num">01</span>
+      <strong>Tamaño y complejidad de la operación</strong>
+      <p>Operación de una sola unidad (tienda, restaurante, farmacia) vs. multi-sucursal (3-10 unidades) vs. cadena con 10+ sucursales. Empresa de distribución con almacén central vs. operación logística con múltiples centros de distribución. El alcance del trabajo de campo y el análisis de datos escalan directamente.</p>
+    </div>
+    <div class="pricing-factor">
+      <span class="pricing-factor__num">02</span>
+      <strong>Profundidad del programa</strong>
+      <p>Diagnóstico puntual con duración acotada (3-4 semanas) para identificar y resolver problema específico vs. programa recurrente mensual con operación encubierta rotativa y análisis continuo de POS vs. programa integral con auditoría trimestral, análisis comparativo entre sucursales y seguimiento de KPIs de merma.</p>
+    </div>
+    <div class="pricing-factor">
+      <span class="pricing-factor__num">03</span>
+      <strong>Componentes incluidos</strong>
+      <p>Operación encubierta solamente vs. operación + análisis POS vs. operación + análisis POS + auditoría CCTV con reposicionamiento vs. programa integral con investigación de confiabilidad recurrente del personal en posiciones sensibles.</p>
+    </div>
+    <div class="pricing-factor">
+      <span class="pricing-factor__num">04</span>
+      <strong>Acompañamiento en implementación</strong>
+      <p>Entrega del reporte y cierre del proyecto vs. acompañamiento en implementación de mejoras (cambios de proceso, capacitación al personal, supervisión documentada) vs. seguimiento de merma a 60 y 90 días con medición de impacto del programa sobre indicador operativo.</p>
+    </div>
+  </div>
+</div>
+
+<div class="pricing-tiers">
+  <div class="pricing-tier pricing-tier--bad">
+    <div class="pricing-tier__head">
+      <span class="pricing-tier__label">"Vigilante en tienda"</span>
+      <strong class="pricing-tier__range">$8,000–15,000 MXN/mes</strong>
+    </div>
+    <ul>
+      <li>Guardia uniformado visible — desplaza el problema, no lo resuelve</li>
+      <li>Sin metodología de detección encubierta</li>
+      <li>Sin análisis de POS ni correlación con video</li>
+      <li>Sin evidencia documental admisible</li>
+      <li>Sin medición de impacto sobre merma real</li>
+    </ul>
+    <span class="pricing-tier__verdict">Da sensación de control — el problema sigue, solo cambia de zona</span>
+  </div>
+  <div class="pricing-tier pricing-tier--mid">
+    <div class="pricing-tier__head">
+      <span class="pricing-tier__label">Programa promedio</span>
+      <strong class="pricing-tier__range">$18,000–32,000 MXN/mes</strong>
+    </div>
+    <ul>
+      <li>Operación encubierta parcial sin metodología ASIS</li>
+      <li>Análisis de POS básico sin correlación con video</li>
+      <li>Sin auditoría de cobertura CCTV existente</li>
+      <li>Reporte de hallazgos sin expediente documental</li>
+      <li>Sin acompañamiento en implementación de mejoras</li>
+    </ul>
+    <span class="pricing-tier__verdict">Sirve hasta que se intenta el proceso disciplinario y falta evidencia</span>
+  </div>
+  <div class="pricing-tier pricing-tier--good">
+    <span class="pricing-tier__badge">ORIGINS</span>
+    <div class="pricing-tier__head">
+      <span class="pricing-tier__label">Programa profesional integrado</span>
+      <strong class="pricing-tier__range">$38,000–90,000 MXN/mes</strong>
+    </div>
+    <ul>
+      <li>Operación encubierta con metodología ASIS LP</li>
+      <li>Análisis POS + correlación automática con video</li>
+      <li>Auditoría + reposicionamiento CCTV estratégico</li>
+      <li>Reporte con expediente documental defendible</li>
+      <li>Cumplimiento LFPDPPP + SSC 0102-15 vigente</li>
+      <li>Seguimiento KPIs de merma a 60 y 90 días</li>
+      <li>Personal certificado con investigación previa</li>
+    </ul>
+    <span class="pricing-tier__verdict">El estándar al que un retailer profesional debe operar — ROI medible</span>
+  </div>
+</div>
+
+<div class="mid-cta">
+  <div class="mid-cta__body">
+    <span class="mid-cta__tag">Diagnóstico gratuito con análisis de datos</span>
+    <strong class="mid-cta__title">Comparte tu operación — análisis preliminar de merma y propuesta en 48 horas</strong>
+    <p>Comparte el tipo de operación, número de sucursales, ventas mensuales y merma actual. En 48 horas entregamos análisis preliminar de patrones, programa recomendado, ROI esperado y propuesta por escrito. Sin compromiso, bajo NDA legal desde el primer contacto.</p>
+  </div>
+  <div class="mid-cta__actions">
+    <a href="https://wa.me/5215530255580?text=Hola%2C%20me%20interesa%20un%20programa%20de%20prevenci%C3%B3n%20de%20p%C3%A9rdidas" class="mid-cta__btn mid-cta__btn--primary" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Diagnóstico por WhatsApp
+    </a>
+    <a href="/contacto" class="mid-cta__btn mid-cta__btn--secondary">Solicitar análisis →</a>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Metodología</span>
+  <h2>Del Diagnóstico a la Merma Controlada — Proceso Estructurado</h2>
+  <p class="prose-section-sub">Proceso metódico que empieza con análisis de datos, continúa con observación encubierta documentada y termina con evidencia accionable y plan de mitigación medible — no con suposiciones.</p>
 </div>
 
 <div class="prose-steps">
@@ -503,9 +712,9 @@ draft: false
 ---
 
 <div class="prose-section-header">
-  <span class="prose-section-badge">Galería</span>
-  <h2>Servicios de Prevención de Pérdidas ORIGINS en Operación</h2>
-  <p class="prose-section-sub">Operaciones discretas, auditorías de datos y CCTV estratégico — herramientas que protegen los márgenes de negocios en CDMX.</p>
+  <span class="prose-section-badge">Trabajo de campo</span>
+  <h2>Componentes del Programa en Operación</h2>
+  <p class="prose-section-sub">Operación encubierta documentada, análisis de POS con correlación de video, auditoría CCTV y entrega de expediente con evidencia — herramientas que protegen márgenes operativos de retail, distribución y logística en CDMX.</p>
 </div>
 
 <div class="prose-gallery">
@@ -534,4 +743,215 @@ draft: false
     <figcaption>Reporte con evidencia — documentación válida para proceso disciplinario o legal</figcaption>
   </figure>
 </div>
-EOF
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Compromisos contractuales</span>
+  <h2>Garantías Verificables del Programa</h2>
+  <p class="prose-section-sub">Compromisos operativos por escrito con métricas medibles sobre indicador real del cliente: la merma. El programa profesional se mide en impacto operativo, no en horas-hombre facturadas.</p>
+</div>
+
+<div class="guarantees-grid">
+  <div class="guarantee-card">
+    <div class="guarantee-card__icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 3v18h18"/><polyline points="7 16 12 11 16 15 21 10"/></svg>
+    </div>
+    <strong>Medición de impacto sobre merma a 60 y 90 días</strong>
+    <p>Línea base medida al inicio del programa contra indicadores reales de las primeras 12 semanas. Reporte ejecutivo con reducción documentada — la mayoría de operaciones registra reducción del 40-70% en el primer trimestre. Si no hay impacto medible, el programa se ajusta o se cancela.</p>
+    <span class="guarantee-card__clause">KPI contractual · Auditable</span>
+  </div>
+  <div class="guarantee-card">
+    <div class="guarantee-card__icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+    </div>
+    <strong>Expediente documental defendible</strong>
+    <p>Cada hallazgo confirmado se entrega con video, transcripciones de interacciones, análisis de transacciones y cronología documentada. Formato admisible para proceso disciplinario interno o, cuando corresponde, denuncia ante autoridad. Cumplimiento LFPDPPP en captura y manejo.</p>
+    <span class="guarantee-card__clause">Evidencia trazable · Admisible legalmente</span>
+  </div>
+  <div class="guarantee-card">
+    <div class="guarantee-card__icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 15 11 17 15 13"/></svg>
+    </div>
+    <strong>Personal con investigación de confiabilidad propia</strong>
+    <p>Cada agente encubierto asignado al cliente ha pasado por nuestro propio proceso de investigación de confiabilidad — antecedentes RNSP, socioeconómico, psicometría y toxicológico. NDA legal vigente desde primer contacto con responsabilidad civil contratada.</p>
+    <span class="guarantee-card__clause">Personal verificado · NDA legal</span>
+  </div>
+</div>
+
+---
+
+<div class="legal-alert">
+  <div class="legal-alert__icon">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+  </div>
+  <div class="legal-alert__body">
+    <span class="legal-alert__tag">Marco normativo aplicable a prevención de pérdidas</span>
+    <strong class="legal-alert__title">Riesgo silencioso: cuando la operación encubierta no cumple LFPDPPP ni LFT</strong>
+    <p>Operar prevención de pérdidas con un proveedor que <strong>no cumple Ley Federal de Protección de Datos Personales en Posesión de Particulares (LFPDPPP)</strong> en captura de video y audio, o que omite consentimiento escrito del responsable del establecimiento para grabaciones, expone al contratante en dos frentes: <em>reclamo del empleado afectado</em> ante INAI por tratamiento indebido de datos personales con sanciones económicas significativas, y <em>despido injustificado</em> ante Junta de Conciliación bajo <strong>Ley Federal del Trabajo</strong> cuando la decisión disciplinaria se sostiene en evidencia obtenida sin marco legal. Para proveedores de seguridad operando en establecimientos: cumplimiento de <strong>permiso SSC vigente</strong> y <strong>REPSE</strong> ante STPS. ORIGINS opera bajo permiso SSC 0102-15 vigente, cumplimiento LFPDPPP integral con NDA legal, consentimiento documentado del cliente y personal con investigación de confiabilidad previa — la documentación protege tanto al cliente contratante como al programa frente a reclamos posteriores.</p>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Preguntas Frecuentes</span>
+  <h2>Lo que Más Preguntan Dueños y Directores sobre Prevención de Pérdidas</h2>
+  <p class="prose-section-sub">Dudas reales que recibimos de propietarios de retail, directores de operaciones, gerentes de pérdidas y administradores evaluando un programa profesional de prevención de pérdidas en CDMX y rutas nacionales.</p>
+</div>
+
+<div class="faq-accordion">
+  <details class="faq-item" open>
+    <summary class="faq-item__q">
+      <span>¿Realmente el 70% de las pérdidas son por empleados internos?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Sí, en la mayoría de las operaciones de retail mexicano documentadas. La proporción varía por sector — en tiendas de conveniencia y abarrotes puede subir al 75-80% por la facilidad de acceso del personal a producto y caja; en farmacia con medicamentos controlados puede bajar al 60% por la cobertura regulatoria adicional. La intuición operativa de los dueños tiende a sobreestimar el robo externo porque es el más visible — el interno opera durante meses sin generar incidentes evidentes hasta que el inventario muestra la merma acumulada. El primer paso es <strong>análisis de POS</strong> para identificar dónde está concentrada estadísticamente la pérdida.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿La operación encubierta es legal en México?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Sí, ejecutada conforme al marco legal aplicable. La operación se realiza con <strong>consentimiento documentado del responsable del establecimiento</strong> (titular o representante legal de la empresa), aviso de privacidad explícito al personal sobre la posibilidad de evaluación periódica conforme a contrato laboral, y captura de video/audio bajo cumplimiento de <strong>Ley Federal de Protección de Datos Personales en Posesión de Particulares (LFPDPPP)</strong>. La evidencia generada es admisible para proceso disciplinario interno y, cuando corresponde, denuncia ante autoridad. La diferencia entre operación legal y operación expuesta a reclamo se mide en la calidad de la documentación.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Cómo se garantiza que el personal no descubra al agente encubierto?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Cuatro componentes operativos. Selección del agente según perfil del establecimiento (edad, género, presentación) para que su presencia sea estadísticamente normal. Rotación periódica entre agentes en programas largos para evitar familiarización del personal. Modalidad mystery shopper para visitas puntuales sin necesidad de integración al equipo. Modalidad empleado encubierto cuando la operación lo justifica, con currículo y referencias verificables que sostengan la cobertura. El cliente y la dirección operativa son los únicos que conocen la asignación.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Cuánto tiempo toma ver resultados?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Los <strong>primeros hallazgos suelen aparecer en la primera o segunda semana</strong> si hay problema activo en operación — la combinación de análisis de POS (detecta patrones estadísticos inmediatamente) con observación encubierta (confirma con evidencia) acelera la detección. La <strong>reducción medible de merma</strong> se observa típicamente a partir del segundo mes, con impacto consolidado del 40-70% en el primer trimestre del programa. La medición se respalda con línea base previa al programa y reporte a 60 y 90 días.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Qué pasa si descubren a un empleado robando? ¿Pueden hacer la denuncia?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>La decisión sobre proceso disciplinario, despido o denuncia ante autoridad <strong>es del cliente contratante</strong>, no de ORIGINS. Nuestra función es entregar evidencia documental defendible — video, transcripciones, análisis de transacciones, cronología — en formato que sostiene cualquiera de las tres rutas. Cuando el cliente decide denuncia ante Ministerio Público, acompañamos con el expediente probatorio y, si corresponde, declaración del investigador. Para procesos disciplinarios internos (despido por causa justificada bajo LFT), el expediente respalda la decisión ante eventual reclamo laboral.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Solo identifican el problema o también ayudan a resolverlo?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Ambas. Después de identificar los puntos de pérdida entregamos <strong>recomendaciones específicas</strong>: reposicionamiento de cámaras, cambios en proceso de inventario, protocolos de caja con controles cruzados, control de accesos en bodega y zona de recepción de mercancía. Si el cliente lo solicita, supervisamos la implementación de las mejoras y medimos impacto sobre merma a 60 y 90 días. El objetivo operativo no es solo detectar el problema actual — es que la merma no vuelva a subir cuando el agente encubierto salga del establecimiento.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Cuánto cuesta el servicio comparado con mis pérdidas actuales?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>El costo mensual del programa profesional integrado se ubica típicamente entre $38,000 y $90,000 MXN según tamaño de operación. Para perspectiva operativa: una tienda con ventas mensuales de $500,000 y merma del 3% pierde $15,000 al mes — el programa cuesta menos que la pérdida mensual y, si reduce la merma al 1%, los $10,000 de ahorro mensual pagan el servicio con excedente. Para cadenas con 3+ sucursales, el costo unitario por establecimiento baja con economía de escala. <strong>El cálculo de ROI se hace por escrito antes de proponer</strong> — y se valida con medición real a 60 y 90 días.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Qué diferencia tiene ORIGINS de otros proveedores de prevención de pérdidas?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Cuatro diferencias operativas verificables: <strong>metodología ASIS International Loss Prevention</strong> documentada — no improvisación; <strong>análisis de POS con correlación automática a video</strong> — no observación aislada; <strong>expediente documental defendible</strong> con cumplimiento LFPDPPP — no reporte verbal de sospecha; y <strong>medición de impacto sobre merma real</strong> a 60 y 90 días con KPI contractual — no horas-hombre facturadas. Sumado a permiso SSC 0102-15 vigente, personal con investigación de confiabilidad propia y NDA legal desde primer contacto.</p>
+    </div>
+  </details>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Cobertura</span>
+  <h2>Zonas Operativas en CDMX, Estado de México y Rutas Nacionales</h2>
+  <p class="prose-section-sub">Base operativa en CDMX con cobertura activa en toda la Zona Metropolitana. Para cadenas con sucursales en Bajío, Norte o Sureste, coordinación con agentes certificados localmente bajo los mismos estándares metodológicos.</p>
+</div>
+
+<div class="zones-grid">
+  <div class="zones-card">
+    <h4>CDMX comercial</h4>
+    <ul>
+      <li><a href="/zonas/miguel-hidalgo">Polanco · Chapultepec</a></li>
+      <li><a href="/zonas/alvaro-obregon">Santa Fe</a></li>
+      <li><a href="/zonas/cuauhtemoc">Centro · Roma</a></li>
+      <li><a href="/zonas/benito-juarez">Del Valle · Nápoles</a></li>
+      <li>Perisur · Coyoacán</li>
+    </ul>
+  </div>
+  <div class="zones-card">
+    <h4>Estado de México</h4>
+    <ul>
+      <li><a href="/zonas/naucalpan">Naucalpan industrial</a></li>
+      <li><a href="/zonas/tlalnepantla">Tlalnepantla</a></li>
+      <li><a href="/zonas/atizapan">Atizapán</a></li>
+      <li>Cuautitlán · Tepotzotlán</li>
+      <li>Toluca · Lerma</li>
+    </ul>
+  </div>
+  <div class="zones-card">
+    <h4>Rutas nacionales</h4>
+    <ul>
+      <li>Querétaro · El Marqués</li>
+      <li>León · Guadalajara</li>
+      <li>Monterrey · Saltillo</li>
+      <li>Puebla · Cuernavaca</li>
+      <li>Cancún · Mérida</li>
+    </ul>
+  </div>
+  <div class="zones-card">
+    <h4>Sectores atendidos</h4>
+    <ul>
+      <li>Retail (conveniencia, ropa, electrónicos)</li>
+      <li>Farmacia y especializados</li>
+      <li>Restaurantes y cadenas de servicio</li>
+      <li>Bodegas y centros de distribución</li>
+      <li>Cadenas multi-sucursal</li>
+    </ul>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Recursos</span>
+  <h2>Servicios Complementarios al Programa de Prevención de Pérdidas</h2>
+</div>
+
+<div class="resources-grid">
+  <a href="/servicios/investigaciones-confiabilidad" class="resource-card">
+    <span class="resource-card__type">Validación previa</span>
+    <strong>Investigaciones de Confiabilidad</strong>
+    <p>Verificación de antecedentes y trayectoria de personal en posiciones sensibles antes de contratar. Reduce el problema en origen — el filtro de selección es la primera línea de prevención.</p>
+  </a>
+  <a href="/servicios/vigilancia-remota-cctv" class="resource-card">
+    <span class="resource-card__type">Monitoreo activo</span>
+    <strong>Vigilancia Remota CCTV con Operador</strong>
+    <p>Operador 24/7 revisando cámaras del establecimiento en tiempo real. Para zonas críticas identificadas en el programa de prevención, el monitoreo activo cierra el ciclo.</p>
+  </a>
+  <a href="/servicios/control-de-accesos" class="resource-card">
+    <span class="resource-card__type">Trazabilidad</span>
+    <strong>Control de Accesos en Bodega y Zonas Críticas</strong>
+    <p>Registro biométrico o por credencial de personal con acceso a bodega, recepción de mercancía y áreas de alto valor. Trazabilidad para investigación posterior.</p>
+  </a>
+  <a href="/servicios/custodia-de-mercancias" class="resource-card">
+    <span class="resource-card__type">Cadena de suministro</span>
+    <strong>Custodia de Mercancías en Traslados</strong>
+    <p>Cuando el análisis identifica colusión con transportistas, la custodia profesional con GPS integrado y cadena de custodia documentada elimina el vector.</p>
+  </a>
+</div>

@@ -35,7 +35,7 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "LocalBusiness",
+      "@type": ["LocalBusiness", "SecurityService", "ProfessionalService"],
       "@id": `${siteUrl}/#business`,
       "name": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
       "legalName": "ORIGINS PRIVATE SECURITY S.A. DE C.V.",
@@ -76,6 +76,8 @@ const schema = {
       "sameAs": [
         "https://www.facebook.com/originsprivatesecurity",
         "https://www.instagram.com/originsprivatesecurity"
+        // TODO Día 2: agregar LinkedIn empresa cuando exista
+        //   "https://www.linkedin.com/company/origins-private-security/"
       ],
       "areaServed": [
         { "@type": "City", "name": "Ciudad de México" },
@@ -84,7 +86,8 @@ const schema = {
         { "@type": "City", "name": "Atizapán" },
         { "@type": "City", "name": "Huixquilucan" },
         { "@type": "City", "name": "Cuautitlán Izcalli" }
-      ]
+      ],
+      "brand": { "@id": `${siteUrl}/#brand` }
     },
     {
       "@type": "Organization",
@@ -97,13 +100,32 @@ const schema = {
         "width": 372,
         "height": 100
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+52-55-3025-5580",
-        "contactType": "customer service",
-        "areaServed": "MX",
-        "availableLanguage": "Spanish"
-      }
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+52-55-3025-5580",
+          "contactType": "customer service",
+          "areaServed": "MX",
+          "availableLanguage": "Spanish",
+          "hoursAvailable": "Mo-Su 00:00-23:59"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+52-55-7204-4370",
+          "contactType": "sales",
+          "areaServed": "MX",
+          "availableLanguage": "Spanish"
+        }
+      ]
+    },
+    {
+      "@type": "Brand",
+      "@id": `${siteUrl}/#brand`,
+      "name": "ORIGINS",
+      "alternateName": "ORIGINS Private Security",
+      "url": siteUrl,
+      "logo": `${siteUrl}/img/logo.avif`,
+      "slogan": "Seguridad privada especializada en condominios"
     },
     {
       "@type": "WebSite",
@@ -111,7 +133,16 @@ const schema = {
       "url": siteUrl,
       "name": "ORIGINS Private Security — Seguridad Privada para Condominios",
       "alternateName": "Seguridad Privada para Condominios CDMX",
-      "publisher": { "@id": `${siteUrl}/#organization` }
+      "inLanguage": "es-MX",
+      "publisher": { "@id": `${siteUrl}/#organization` },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": `${siteUrl}/?s={search_term_string}`
+        },
+        "query-input": "required name=search_term_string"
+      }
     },
     {
       "@type": "FAQPage",

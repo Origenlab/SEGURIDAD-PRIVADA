@@ -1,9 +1,9 @@
 ---
-title: "Seguridad para Residenciales y Fraccionamientos CDMX — ORIGINS"
-description: "Empresa de seguridad para fraccionamientos y residenciales privados en CDMX. Casetas con guardias SSC, patrullaje GPS, CCTV 24/7. Naucalpan, Interlomas, Satélite. Evaluación gratuita."
+title: "Seguridad para Fraccionamientos CDMX | Caseta + Patrullaje GPS · SSC — ORIGINS"
+description: "Empresa #1 de seguridad para fraccionamientos y residenciales en CDMX y EdoMex. Caseta SSC + patrullaje GPS verificable + CCTV 24/7. Naucalpan, Interlomas, Satélite, Atizapán. +50 desarrollos. Activo en 5 días."
 category: pillar
 publishDate: 2024-01-01
-updatedDate: 2026-04-01
+updatedDate: 2026-05-28
 keywords:
   - seguridad fraccionamientos cdmx
   - empresa seguridad residenciales privados cdmx
@@ -15,12 +15,16 @@ keywords:
   - empresa vigilancia fraccionamientos naucalpan
   - guardias caseta residencial interlomas
   - patrullaje perimetral residencial satelite
+  - cuanto cuesta seguridad fraccionamiento
+  - mejor empresa vigilancia fraccionamiento
+  - seguridad fraccionamiento horizontal cdmx
+  - patrullaje gps residencial verificable
+  - empresa caseta residencial atizapan
 relatedServices:
   - guardias-intramuros
   - patrullaje
   - control-de-accesos
   - vigilancia-remota-cctv
-  - monitoreo-alarmas
 targetLocations:
   - Ciudad de México
   - Naucalpan
@@ -67,9 +71,42 @@ draft: false
 ---
 
 <div class="prose-intro">
-  <p><strong>ORIGINS Private Security</strong> opera seguridad integral para fraccionamientos y residenciales privados en CDMX y <a href="/zonas">Zona Metropolitana</a>. Casetas con guardias certificados, <a href="/servicios/patrullaje">patrullaje perimetral</a> con GPS y CCTV con monitoreo 24/7 — <strong>diseñado para la realidad de un fraccionamiento horizontal: perímetro extenso, múltiples accesos y más de 100 familias que dependen del mismo servicio</strong>.</p>
+  <p><strong>ORIGINS Private Security</strong> es la <strong>empresa de seguridad para fraccionamientos y residenciales privados</strong> con permiso SSC 0102-15 que opera en CDMX, <a href="/zonas/naucalpan">Naucalpan</a>, Interlomas, Huixquilucan, <a href="/zonas/atizapan">Atizapán</a>, Satélite, <a href="/zonas/tlalnepantla">Tlalnepantla</a> y toda la <a href="/zonas">Zona Metropolitana</a>. Casetas con guardias certificados, <a href="/servicios/patrullaje">patrullaje perimetral con GPS verificable</a>, control de accesos digital y CCTV con monitoreo 24/7 — <strong>diseñado para la realidad de un fraccionamiento horizontal: perímetro extenso, múltiples accesos y más de 100 familias que dependen del mismo servicio</strong>.</p>
   <div class="prose-highlight">
-    <strong>El problema real de los fraccionamientos:</strong> Pagaste por vivir en un lugar seguro. Con caseta, barda y vigilancia. Pero el guardia en la caseta cubre 20 metros de los 800 metros de perímetro. El resto — bardas traseras, calles sin luz, accesos secundarios — nadie lo supervisa activamente. El delincuente lo sabe. Por eso elige fraccionamientos con solo caseta, no con <a href="/servicios/control-de-accesos">control de accesos</a> y patrullaje activo visible.
+    <strong>El problema real de los fraccionamientos:</strong> pagaste por vivir en un lugar seguro — caseta, barda, vigilancia. Pero el guardia en la caseta cubre 20 metros de los 800 metros de perímetro. El resto — <strong>bardas traseras, calles sin luz, accesos secundarios</strong> — nadie lo supervisa activamente. El delincuente lo sabe: elige fraccionamientos con solo caseta, no con <a href="/servicios/control-de-accesos">control de accesos digital</a>, <a href="/servicios/patrullaje">patrullaje GPS</a> y <a href="/servicios/vigilancia-remota-cctv">CCTV monitoreado</a> activo visible.
+  </div>
+</div>
+
+<div class="hero-stats">
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">+50</span>
+    <span class="hero-stats__label">Residenciales protegidos</span>
+    <span class="hero-stats__sub">CDMX + Zona Metropolitana</span>
+  </div>
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">800<small>m</small></span>
+    <span class="hero-stats__label">Perímetro promedio cubierto</span>
+    <span class="hero-stats__sub">Caseta + patrullaje + CCTV</span>
+  </div>
+  <div class="hero-stats__item hero-stats__item--accent">
+    <span class="hero-stats__num">100<small>%</small></span>
+    <span class="hero-stats__label">Rondines con GPS</span>
+    <span class="hero-stats__sub">Verificable por el comité en tiempo real</span>
+  </div>
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">&lt; 5<small>min</small></span>
+    <span class="hero-stats__label">Respuesta perimetral</span>
+    <span class="hero-stats__sub">Al punto más lejano del fraccionamiento</span>
+  </div>
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">98<small>%</small></span>
+    <span class="hero-stats__label">Renovación de contrato</span>
+    <span class="hero-stats__sub">Datos 2024 — comités satisfechos</span>
+  </div>
+  <div class="hero-stats__item">
+    <span class="hero-stats__num">5<small>d</small></span>
+    <span class="hero-stats__label">De firma a operación</span>
+    <span class="hero-stats__sub">Diagnóstico, equipo y arranque</span>
   </div>
 </div>
 
@@ -198,88 +235,97 @@ draft: false
 
 ---
 
-<div class="prose-section-block">
+<div class="prose-section-block prose-section-block--hero">
   <div class="prose-section-block__header">
     <span class="prose-section-block__num">01</span>
     <div>
       <span class="prose-section-block__label">Caseta y Accesos</span>
-      <h3 class="prose-section-block__title">La Caseta no es Solo una Barda con Ventana — es el Primer Filtro</h3>
+      <h3 class="prose-section-block__title">Agilidad para Residentes, Rigor para Visitantes — Sin Fila a las 7 AM</h3>
     </div>
   </div>
-  <div class="prose-two-col">
+  <div class="prose-two-col prose-two-col--hero">
     <div class="prose-two-col__text">
-      <p>Una caseta eficiente controla quién entra sin crear la fila de autos de las 7 AM que hace que todos busquen cómo saltársela. El guardia ORIGINS equilibra <strong>agilidad para los residentes y rigor para los visitantes</strong> — porque los residentes son los clientes del fraccionamiento y merecen los dos.</p>
-      <ul>
-        <li>Acceso ágil para residentes registrados — sistema de reconocimiento o tag vehicular</li>
-        <li>Verificación con foto e identidad para cada visitante — sin excepción</li>
-        <li>Registro digital de proveedores: empresa, casa visitada, hora de entrada y salida</li>
-        <li>Lista de acceso revocado actualizable — ex empleadas domésticas, personas conflictivas</li>
-        <li>Control de servicios de reparto: verificación en caseta, acceso solo hasta la entrada del fraccionamiento</li>
-        <li>Coordinación con intercomunicador o app del residente para autorización remota</li>
+      <p>Una caseta eficiente controla quién entra sin generar la fila de las 7 AM que hace que todos busquen cómo saltársela. El guardia ORIGINS equilibra <strong>velocidad para residentes y rigor para visitantes</strong> — porque los residentes son los clientes del fraccionamiento.</p>
+      <ul class="prose-check-list">
+        <li><span>Acceso ágil para residentes</span><small>Tag vehicular o reconocimiento de placa</small></li>
+        <li><span>Verificación con foto e ID</span><small>Cada visitante, sin excepción</small></li>
+        <li><span>Registro digital de proveedores</span><small>Empresa, casa visitada, hora de entrada y salida</small></li>
+        <li><span>Lista de acceso revocado</span><small>Ex empleadas, personas conflictivas — actualizable 24/7</small></li>
+        <li><span>Control de servicios de reparto</span><small>Verificación en caseta, sin acceso a calles internas</small></li>
+        <li><span>Autorización remota</span><small>Intercomunicador o app desde el celular del residente</small></li>
       </ul>
     </div>
-    <div class="prose-two-col__img">
-      <img src="/img/patrullaje/patrullaje-para-fraccionamientos.avif" alt="Seguridad en caseta para fraccionamientos residenciales CDMX" loading="lazy" width="640" height="480" />
-      <img src="/img/img-guardias-intramuros/seguridad-intramuros-para-condominios.avif" alt="Control de acceso en caseta de fraccionamiento CDMX ORIGINS" loading="lazy" width="640" height="480" />
-    </div>
+    <figure class="prose-two-col__hero-img">
+      <img src="/img/patrullaje/patrullaje-para-fraccionamientos.avif" alt="Caseta de seguridad con guardia SSC en fraccionamiento residencial CDMX" loading="lazy" width="800" height="1000" />
+      <figcaption class="prose-two-col__hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span><strong>Caseta SSC 24/7</strong>Agilidad + rigor balanceados</span>
+      </figcaption>
+    </figure>
   </div>
 </div>
 
 ---
 
-<div class="prose-section-block">
+<div class="prose-section-block prose-section-block--hero">
   <div class="prose-section-block__header">
     <span class="prose-section-block__num">02</span>
     <div>
       <span class="prose-section-block__label">Patrullaje Perimetral</span>
-      <h3 class="prose-section-block__title">El 90% del Perímetro que la Caseta No Puede Ver</h3>
+      <h3 class="prose-section-block__title">El 90% del Perímetro que la Caseta No Puede Ver — Cubierto con GPS</h3>
     </div>
   </div>
-  <div class="prose-two-col">
+  <div class="prose-two-col prose-two-col--hero">
     <div class="prose-two-col__text">
-      <p>La barda trasera. La zona oscura junto al parque. El acceso secundario que se abre "solo para proveedores". Son los puntos que el guardia de caseta nunca ve — y que el patrullaje cubre activamente con presencia visible y documentada. <strong>Ver la unidad rotulada recorriendo el fraccionamiento es la disuasión más efectiva que existe</strong>.</p>
-      <ul>
-        <li>Ruta de patrullaje diseñada para cubrir todos los puntos vulnerables del fraccionamiento</li>
-        <li>GPS en tiempo real — el comité verifica cada rondín desde su celular</li>
-        <li>Reportes fotográficos de accesos, bardas y puntos críticos en cada recorrido</li>
-        <li>Horarios variables — sin rutinas predecibles que el delincuente pueda memorizar</li>
-        <li>Coordinación inmediata con la caseta ante cualquier anomalía detectada</li>
-        <li>Respuesta en menos de 5 minutos al punto más lejano del fraccionamiento</li>
+      <p>La barda trasera. La zona oscura junto al parque. El acceso secundario "solo para proveedores". Son los puntos que el guardia de caseta nunca ve — y que el patrullaje cubre activamente con presencia visible y rondines GPS documentados. <strong>Ver la unidad rotulada recorriendo el fraccionamiento es la disuasión más efectiva que existe</strong>.</p>
+      <ul class="prose-check-list">
+        <li><span>Ruta diseñada para tu perímetro</span><small>Puntos vulnerables identificados en diagnóstico</small></li>
+        <li><span>GPS en tiempo real</span><small>El comité verifica cada rondín desde su celular</small></li>
+        <li><span>Reportes fotográficos por recorrido</span><small>Bardas, accesos y puntos críticos</small></li>
+        <li><span>Horarios variables ±20 min</span><small>Sin rutinas predecibles para el delincuente</small></li>
+        <li><span>Coordinación con la caseta</span><small>Respuesta inmediata ante anomalía detectada</small></li>
+        <li><span>Respuesta perimetral &lt; 5 min</span><small>Al punto más lejano del fraccionamiento</small></li>
       </ul>
     </div>
-    <div class="prose-two-col__img">
-      <img src="/img/patrullaje/patrullaje-residencial-privado.avif" alt="Patrullaje residencial privado en fraccionamientos CDMX" loading="lazy" width="640" height="480" />
-      <img src="/img/patrullaje/rondines-de-seguridad.avif" alt="Rondines de seguridad con GPS para fraccionamientos CDMX" loading="lazy" width="640" height="480" />
-    </div>
+    <figure class="prose-two-col__hero-img">
+      <img src="/img/patrullaje/patrullaje-residencial-privado.avif" alt="Patrullaje vehicular con GPS para fraccionamientos residenciales en Naucalpan e Interlomas" loading="lazy" width="800" height="1000" />
+      <figcaption class="prose-two-col__hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span><strong>GPS verificable</strong>Cada rondín en tu celular</span>
+      </figcaption>
+    </figure>
   </div>
 </div>
 
 ---
 
-<div class="prose-section-block">
+<div class="prose-section-block prose-section-block--hero">
   <div class="prose-section-block__header">
     <span class="prose-section-block__num">03</span>
     <div>
       <span class="prose-section-block__label">Tecnología y Monitoreo</span>
-      <h3 class="prose-section-block__title">CCTV + Alarmas — Los Ojos que No Duermen Cuando el Guardia Patrulla</h3>
+      <h3 class="prose-section-block__title">CCTV + Alarmas — Los Ojos que Cubren al Guardia Mientras Patrulla</h3>
     </div>
   </div>
-  <div class="prose-two-col">
+  <div class="prose-two-col prose-two-col--hero">
     <div class="prose-two-col__text">
       <p>Cuando la unidad de patrullaje está en la zona norte del fraccionamiento, la zona sur está cubierta por las cámaras y la central de monitoreo. <strong>El humano y la tecnología se cubren mutuamente</strong> — sin puntos ciegos en ningún momento del día.</p>
-      <ul>
-        <li>Cámaras HD en accesos, perímetro exterior y áreas comunes principales</li>
-        <li>Central de monitoreo propia en CDMX — operadores que reaccionan, no solo graban</li>
-        <li>Integración caseta-cámaras: el guardia ve el video del punto de acceso antes de abrir</li>
-        <li>Monitoreo de alarmas de áreas comunes: cuarto de máquinas, cisterna, generadores</li>
-        <li>Alertas push para el administrador o presidente del comité ante eventos relevantes</li>
-        <li>30 días de grabación con descarga de clips para evidencia ante incidentes</li>
+      <ul class="prose-check-list">
+        <li><span>Cámaras HD en puntos críticos</span><small>Accesos, perímetro exterior y áreas comunes</small></li>
+        <li><span>Central propia en CDMX</span><small>Operadores que reaccionan — no solo graban</small></li>
+        <li><span>Integración caseta + cámaras</span><small>El guardia ve el acceso antes de abrir</small></li>
+        <li><span>Alarmas en áreas comunes</span><small>Cuarto de máquinas, cisterna, generadores</small></li>
+        <li><span>Alertas push al comité</span><small>Eventos relevantes al administrador o presidente</small></li>
+        <li><span>30 días de grabación</span><small>Descarga de clips para evidencia ante incidentes</small></li>
       </ul>
     </div>
-    <div class="prose-two-col__img">
-      <img src="/img/img-condominios/tecnologia-seguridad-integral-condominios.avif" alt="Tecnología de seguridad integral para fraccionamientos CDMX" loading="lazy" width="640" height="480" />
-      <img src="/img/img-condominios/monitoreo-alarmas-residencial-premium-cdmx.avif" alt="Monitoreo de alarmas para residencial premium en CDMX" loading="lazy" width="640" height="480" />
-    </div>
+    <figure class="prose-two-col__hero-img">
+      <img src="/img/img-condominios/tecnologia-seguridad-integral-condominios.avif" alt="Tecnología CCTV + alarmas integrada para fraccionamientos residenciales en CDMX y EdoMex" loading="lazy" width="800" height="1000" />
+      <figcaption class="prose-two-col__hero-badge">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg>
+        <span><strong>Central propia CDMX</strong>Monitoreo humano 24/7</span>
+      </figcaption>
+    </figure>
   </div>
 </div>
 
@@ -521,30 +567,54 @@ draft: false
   <p class="prose-section-sub">Casetas profesionales, patrullaje activo y tecnología integrada — el estándar que los residentes merecen y el comité puede mostrar en cualquier asamblea.</p>
 </div>
 
-<div class="prose-gallery">
-  <figure>
-    <img src="/img/patrullaje/patrullaje-para-fraccionamientos.avif" alt="Patrullaje de seguridad para fraccionamientos residenciales CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>Patrullaje perimetral con GPS — presencia visible que cubre lo que la caseta no puede ver</figcaption>
+<div class="prose-gallery prose-gallery--bento">
+  <figure class="prose-gallery__item prose-gallery__item--hero">
+    <img src="/img/patrullaje/patrullaje-para-fraccionamientos.avif" alt="Patrullaje perimetral con GPS verificable para fraccionamientos en Naucalpan e Interlomas" loading="lazy" width="800" height="800" />
+    <span class="prose-gallery__tag">Patrullaje</span>
+    <figcaption>
+      <strong>Patrullaje perimetral con GPS</strong>
+      <em>Presencia visible que cubre el 90% del perímetro que la caseta no puede ver</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/img-guardias-intramuros/guardias-fijos.avif" alt="Guardias fijos certificados SSC en caseta de fraccionamiento CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>Guardia certificado SSC en caseta — control de acceso con registro digital en tiempo real</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/img-guardias-intramuros/guardias-fijos.avif" alt="Guardia SSC en caseta de fraccionamiento residencial CDMX" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">Caseta</span>
+    <figcaption>
+      <strong>Guardia SSC en caseta</strong>
+      <em>Control de acceso con registro digital en tiempo real</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/patrullaje/rondines-de-seguridad.avif" alt="Rondines de seguridad verificados con GPS en fraccionamientos" loading="lazy" width="640" height="480" />
-    <figcaption>Rondines con documentación fotográfica — el comité verifica cada recorrido desde su celular</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/patrullaje/rondines-de-seguridad.avif" alt="Rondines verificables con GPS y reporte fotográfico en fraccionamientos" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">Rondines</span>
+    <figcaption>
+      <strong>Rondines documentados</strong>
+      <em>El comité verifica cada recorrido desde su celular</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/img-condominios/control-visitantes-digital-condominios.avif" alt="Control digital de visitantes en fraccionamiento residencial CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>Control de visitantes con foto y verificación — sin papel, sin "ya lo conozco de vista"</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/img-condominios/control-visitantes-digital-condominios.avif" alt="Control digital de visitantes con foto en fraccionamiento residencial CDMX" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">Accesos</span>
+    <figcaption>
+      <strong>Control de visitantes digital</strong>
+      <em>Sin papel, sin "ya lo conozco de vista"</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/patrullaje/patrullaje-nocturno-de-seguridad.avif" alt="Patrullaje nocturno de seguridad en fraccionamientos CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>Patrullaje nocturno intensivo — madrugada con máxima frecuencia de rondines</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/patrullaje/patrullaje-nocturno-de-seguridad.avif" alt="Patrullaje nocturno intensivo en fraccionamientos residenciales CDMX y EdoMex" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">Nocturno</span>
+    <figcaption>
+      <strong>Patrullaje nocturno intensivo</strong>
+      <em>Madrugada con frecuencia máxima — rondines cada 30 min</em>
+    </figcaption>
   </figure>
-  <figure>
-    <img src="/img/img-condominios/seguridad-perimetral-condominios-premium.avif" alt="Seguridad perimetral para fraccionamientos y residenciales CDMX" loading="lazy" width="640" height="480" />
-    <figcaption>Cobertura perimetral completa — bardas, accesos secundarios y zonas oscuras verificadas</figcaption>
+  <figure class="prose-gallery__item">
+    <img src="/img/img-condominios/seguridad-perimetral-condominios-premium.avif" alt="Cobertura perimetral completa con CCTV y patrullaje en residencial premium" loading="lazy" width="640" height="480" />
+    <span class="prose-gallery__tag">Perímetro</span>
+    <figcaption>
+      <strong>Cobertura perimetral completa</strong>
+      <em>Bardas, accesos secundarios y zonas oscuras verificadas</em>
+    </figcaption>
   </figure>
 </div>
 
@@ -599,48 +669,131 @@ draft: false
   <p class="prose-section-sub">La caseta cubre 20 metros de los 800 de perímetro. El resto necesita más.</p>
 </div>
 
-<div class="comparison-table-wrapper">
-  <table class="comparison-table">
-    <thead>
-      <tr>
-        <th>Criterio</th>
-        <th>Solo caseta</th>
-        <th>ORIGINS Integral</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Cobertura perímetro</strong></td>
-        <td>Solo acceso principal</td>
-        <td>Caseta + patrullaje + CCTV perimetral</td>
-      </tr>
-      <tr>
-        <td><strong>Verificación rondines</strong></td>
-        <td>Confianza en el guardia</td>
-        <td>GPS con historial verificable</td>
-      </tr>
-      <tr>
-        <td><strong>Respuesta a alarma</strong></td>
-        <td>Guardia abandona caseta</td>
-        <td>Central verifica por cámara, guardia mantiene posición</td>
-      </tr>
-      <tr>
-        <td><strong>Control vehicular</strong></td>
-        <td>Visual, sin registro</td>
-        <td>Placas registradas + residentes autorizados</td>
-      </tr>
-      <tr>
-        <td><strong>Supervisión</strong></td>
-        <td>Mensual o ninguna</td>
-        <td>Semanal documentada</td>
-      </tr>
-      <tr>
-        <td><strong>Evidencia para asamblea</strong></td>
-        <td>La palabra del guardia</td>
-        <td>Reporte ejecutivo mensual con métricas</td>
-      </tr>
-    </tbody>
-  </table>
+<div class="vs-comparison">
+  <div class="vs-comparison__head">
+    <div class="vs-comparison__head-criterion">Criterio</div>
+    <div class="vs-comparison__head-bad">
+      <span class="vs-comparison__head-pill">Solo caseta</span>
+    </div>
+    <div class="vs-comparison__head-good">
+      <span class="vs-comparison__head-brand">ORIGINS Integral</span>
+    </div>
+  </div>
+
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Cobertura perímetro</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Solo el acceso principal</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Caseta + patrullaje + CCTV perimetral</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Verificación de rondines</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Confianza en la palabra del guardia</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">GPS con historial verificable desde el celular</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Respuesta a alarma</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">El guardia abandona la caseta</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Central verifica por cámara, guardia mantiene posición</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Control vehicular</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Visual, sin registro</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Placas registradas + LPR opcional</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Supervisión</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Mensual o ninguna</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Semanal documentada con reporte firmado</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Evidencia para asamblea</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">La palabra del guardia</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Reporte ejecutivo mensual con métricas</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Cobertura madrugada</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Mismo guardia somnoliento</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Rondines cada 30 min + central activa</div>
+  </div>
+  <div class="vs-comparison__row">
+    <div class="vs-comparison__criterion">Riesgo legal (IMSS)</div>
+    <div class="vs-comparison__cell vs-comparison__cell--bad">Comité expuesto a patrón sustituto</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Personal 100% IMSS desde día 1</div>
+  </div>
+</div>
+
+---
+
+<div class="prose-section-header">
+  <span class="prose-section-badge">Preguntas Frecuentes</span>
+  <h2>Lo que Más Preguntan Comités de Vigilancia en CDMX y EdoMex</h2>
+  <p class="prose-section-sub">Dudas reales que recibimos de presidentes y administradores evaluando un cambio de empresa de seguridad para su fraccionamiento.</p>
+</div>
+
+<div class="faq-accordion">
+  <details class="faq-item" open>
+    <summary class="faq-item__q">
+      <span>¿Cuántos guardias necesita un fraccionamiento de 150 casas?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Para 150 casas con 1 acceso vehicular y 1 peatonal: <strong>mínimo 3 guardias en turnos de 8 horas</strong> para cobertura 24/7. Si hay más de 2 accesos simultáneos o el perímetro es extenso, recomendamos <strong>patrullaje vehicular complementario</strong>. Hacemos la evaluación en sitio y te decimos exactamente qué corresponde sin venderte más de lo necesario.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Cómo controlan a los proveedores que entran al fraccionamiento?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Cada proveedor o servicio se registra con <strong>fotografía e identidad verificada</strong>. El guardia confirma con el residente antes de autorizar. Queda en la bitácora digital: qué empresa, a qué casa, a qué hora entró y a qué hora salió. Si algo falta después, hay evidencia documentada para la denuncia.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿El patrullaje es realmente efectivo o solo una vuelta ocasional?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Efectivo cuando está <strong>bien diseñado</strong>. Hacemos análisis del fraccionamiento para identificar puntos de mayor vulnerabilidad — la barda trasera, el acceso secundario, la zona oscura del parque. El patrullaje los cubre con <em>frecuencia variable</em> para no ser predecible. Cada rondín queda registrado con GPS y hora exacta — verificable desde tu celular.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Pueden coordinar con el sistema de alarmas vecinal que ya existe?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Sí. Integramos con <strong>sistemas de alarmas existentes</strong>, botones de pánico instalados y redes de comunicación vecinal. Nuestra central recibe las señales y coordina la respuesta. No tienes que reemplazar lo que ya funciona — lo potenciamos.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Qué riesgo legal corre el comité si el proveedor no cumple con IMSS?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Riesgo grave. La <strong>LFT Art. 12-15</strong> establece la figura de <em>patrón sustituto</em>: si la empresa de seguridad no tiene a los guardias dados de alta en IMSS y hay un accidente o demanda, la responsabilidad puede recaer sobre el comité y la administración del fraccionamiento. Indemnizaciones y cuotas pueden trasladarse al fondo común. ORIGINS entrega <strong>comprobante mensual de IMSS</strong> al comité — eliminamos el riesgo.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Qué sucede si un guardia no llega a su turno en la madrugada?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>La central detecta la ausencia <strong>antes del inicio del turno</strong> (check-in obligatorio 15 min antes) y activa el protocolo de reemplazo. Un sustituto llega en menos de 2 horas. El presidente del comité recibe llamada informándole del cambio — no se entera por los residentes al amanecer. La madrugada es el turno más crítico y es exactamente cuando más controlamos la cobertura.</p>
+    </div>
+  </details>
+  <details class="faq-item">
+    <summary class="faq-item__q">
+      <span>¿Tienen cobertura en Naucalpan, Atizapán o Satélite?</span>
+      <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="faq-item__a">
+      <p>Sí, cubrimos toda la Zona Metropolitana: <a href="/zonas/naucalpan">Naucalpan</a>, Interlomas, Huixquilucan, Tecamachalco, <a href="/zonas/tlalnepantla">Tlalnepantla</a>, <a href="/zonas/atizapan">Atizapán</a>, Satélite y Ecatepec. <strong>Bases operativas estratégicas</strong> para tiempos de respuesta cortos en toda el área. Llámanos al 55 3025 5580 para confirmar tu fraccionamiento específico.</p>
+    </div>
+  </details>
 </div>
 
 ---
@@ -652,19 +805,40 @@ draft: false
 </div>
 
 <div class="resources-grid">
-  <a href="/blog" class="resource-card">
-    <span class="resource-card__type">Comparativa</span>
-    <strong>Seguridad para Fraccionamientos vs. Condominios Verticales</strong>
-    <p>Las diferencias operativas y de presupuesto entre proteger un fraccionamiento horizontal y una torre.</p>
+  <a href="/blog" class="resource-card resource-card--comparativa">
+    <div class="resource-card__top">
+      <span class="resource-card__type">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+        Comparativa
+      </span>
+      <span class="resource-card__read">6 min</span>
+    </div>
+    <strong class="resource-card__title">Fraccionamiento Horizontal vs. Condominio Vertical</strong>
+    <span class="resource-card__desc">Diferencias operativas y presupuestales entre proteger un fraccionamiento horizontal y una torre vertical.</span>
+    <span class="resource-card__cta">Ver comparativa <em>→</em></span>
   </a>
-  <a href="/servicios/seguridad-condominios" class="resource-card">
-    <span class="resource-card__type">Servicio</span>
-    <strong>Seguridad para Condominios Verticales CDMX</strong>
-    <p>Si tu propiedad es un condominio vertical, esta es la página con la solución específica.</p>
+  <a href="/servicios/seguridad-condominios" class="resource-card resource-card--guia">
+    <div class="resource-card__top">
+      <span class="resource-card__type">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Servicio Pillar
+      </span>
+      <span class="resource-card__read">Vertical</span>
+    </div>
+    <strong class="resource-card__title">Seguridad para Condominios Verticales CDMX</strong>
+    <span class="resource-card__desc">Si tu propiedad es una torre vertical en lugar de un fraccionamiento horizontal, la solución específica está aquí.</span>
+    <span class="resource-card__cta">Ver condominios <em>→</em></span>
   </a>
-  <a href="/servicios/patrullaje" class="resource-card">
-    <span class="resource-card__type">Servicio</span>
-    <strong>Patrullaje Vehicular con GPS</strong>
-    <p>El complemento esencial para fraccionamientos con perímetro extenso.</p>
+  <a href="/servicios/patrullaje" class="resource-card resource-card--checklist">
+    <div class="resource-card__top">
+      <span class="resource-card__type">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Servicio Clave
+      </span>
+      <span class="resource-card__read">GPS</span>
+    </div>
+    <strong class="resource-card__title">Patrullaje Vehicular con GPS Verificable</strong>
+    <span class="resource-card__desc">El complemento esencial para fraccionamientos con perímetro extenso — rondines documentados que el comité ve desde su celular.</span>
+    <span class="resource-card__cta">Ver patrullaje <em>→</em></span>
   </a>
 </div>

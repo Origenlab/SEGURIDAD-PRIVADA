@@ -1,0 +1,69 @@
+---
+// src/pages/404.astro — Día 1 restructure
+// Genera una página 404 real para evitar soft 404 cuando Cloudflare Pages
+// recibe rutas no existentes (ej. /zonas/huixquilucan antes de crearse).
+//
+// Sin este archivo, Cloudflare Pages serviría el index.html como fallback
+// (comportamiento heredado de modo SPA), provocando que URLs inexistentes
+// se indexen como duplicados del home y diluyan autoridad SEO.
+
+import Base from '../layouts/Base.astro';
+
+const siteUrl = 'https://seguridad-privada.com.mx';
+const title = 'Página no encontrada · ORIGINS Private Security';
+const description = 'La página que buscas no existe. Te invitamos a explorar nuestros servicios de seguridad privada para condominios en CDMX y Edomex.';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${siteUrl}/404`,
+  name: title,
+  description,
+  url: `${siteUrl}/404`,
+  inLanguage: 'es-MX',
+  isPartOf: {
+    '@type': 'WebSite',
+    '@id': `${siteUrl}/#website`,
+  },
+};
+---
+
+<Base
+  title={title}
+  description={description}
+  canonical="/404"
+  noindex={true}
+  schema={schema}
+>
+  <main class="not-found" style="min-height: 60vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 4rem 2rem; text-align: center;">
+    <p style="font-size: 5rem; font-weight: 900; color: #c89b3c; line-height: 1; margin: 0;">404</p>
+
+    <h1 style="margin-top: 1rem; font-size: 2rem;">No encontramos esta página</h1>
+
+    <p style="margin-top: 1rem; max-width: 600px;">
+      Es probable que la URL haya cambiado o que esta zona aún no esté disponible. Te dejamos
+      enlaces útiles para que sigas explorando.
+    </p>
+
+    <nav aria-label="Enlaces útiles" style="margin-top: 2.5rem; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+      <a href="/" style="padding: 0.75rem 1.5rem; background: #0b1f3a; color: white; border-radius: 6px; text-decoration: none;">Inicio</a>
+      <a href="/servicios" style="padding: 0.75rem 1.5rem; background: #0b1f3a; color: white; border-radius: 6px; text-decoration: none;">Servicios</a>
+      <a href="/zonas" style="padding: 0.75rem 1.5rem; background: #0b1f3a; color: white; border-radius: 6px; text-decoration: none;">Zonas de cobertura</a>
+      <a href="/blog" style="padding: 0.75rem 1.5rem; background: #0b1f3a; color: white; border-radius: 6px; text-decoration: none;">Blog</a>
+      <a href="/emergencias" style="padding: 0.75rem 1.5rem; background: #0b1f3a; color: white; border-radius: 6px; text-decoration: none;">Directorio de emergencias</a>
+      <a href="/contacto" style="padding: 0.75rem 1.5rem; background: #c89b3c; color: white; border-radius: 6px; text-decoration: none;">Contacto y cotización</a>
+    </nav>
+
+    <p style="margin-top: 2.5rem; font-size: 0.95rem;">
+      ¿Buscabas seguridad para una alcaldía específica?
+      <a href="/zonas" style="color: #0b1f3a; font-weight: bold;">Ver lista de zonas atendidas</a>
+    </p>
+
+    <p style="margin-top: 1rem; font-size: 0.95rem;">
+      ¿Urgencia?
+      <a href="tel:+525530255580" style="color: #0b1f3a; font-weight: bold;">Llama al 55 3025 5580</a>
+      ·
+      <a href="https://wa.me/525530255580" style="color: #0b1f3a; font-weight: bold;">WhatsApp</a>
+    </p>
+  </main>
+</Base>
