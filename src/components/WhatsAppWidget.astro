@@ -674,18 +674,20 @@ const whatsappUrl = `https://wa.me/${phoneNumber}`;
     const panel = document.getElementById('whatsapp-panel');
     const panelClose = document.getElementById('whatsapp-panel-close');
     const form = document.getElementById('whatsapp-form');
-    const input = document.getElementById('whatsapp-input');
+    const input = document.getElementById('whatsapp-input') as HTMLInputElement | null;
     const badge = document.getElementById('whatsapp-badge');
     const statusText = document.querySelector('.whatsapp-bubble__status-text');
     const statusDot = document.querySelector('.whatsapp-bubble__status-dot');
     const messageTime = document.getElementById('whatsapp-message-time');
 
     if (!bubble || !button) return;
+    const bubbleEl: HTMLElement = bubble;
+    const buttonEl: HTMLElement = button;
 
     const phoneNumber = bubble.dataset.phone || '525530255580';
     const defaultMessage = bubble.dataset.message || '';
-    const businessStart = parseInt(bubble.dataset.businessStart) || 8;
-    const businessEnd = parseInt(bubble.dataset.businessEnd) || 20;
+    const businessStart = parseInt(bubble.dataset.businessStart ?? '') || 8;
+    const businessEnd = parseInt(bubble.dataset.businessEnd ?? '') || 20;
 
     let isPanelOpen = false;
     let tooltipDismissed = false;
@@ -734,8 +736,8 @@ const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
     function openPanel() {
       isPanelOpen = true;
-      bubble.classList.add('whatsapp-bubble--open');
-      button.setAttribute('aria-expanded', 'true');
+      bubbleEl.classList.add('whatsapp-bubble--open');
+      buttonEl.setAttribute('aria-expanded', 'true');
       if (panel) {
         panel.classList.add('whatsapp-bubble__panel--visible');
         panel.setAttribute('aria-hidden', 'false');
@@ -747,20 +749,20 @@ const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
     function closePanel() {
       isPanelOpen = false;
-      bubble.classList.remove('whatsapp-bubble--open');
-      button.setAttribute('aria-expanded', 'false');
+      bubbleEl.classList.remove('whatsapp-bubble--open');
+      buttonEl.setAttribute('aria-expanded', 'false');
       if (panel) {
         panel.classList.remove('whatsapp-bubble__panel--visible');
         panel.setAttribute('aria-hidden', 'true');
       }
-      button.focus();
+      buttonEl.focus();
     }
 
     function hideBadge() {
       if (badge) badge.classList.add('whatsapp-bubble__badge--hidden');
     }
 
-    function openWhatsApp(message) {
+    function openWhatsApp(message: string) {
       const text = message || defaultMessage;
       const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
       window.open(url, '_blank', 'noopener,noreferrer');
@@ -798,7 +800,7 @@ const whatsappUrl = `https://wa.me/${phoneNumber}`;
     });
 
     document.addEventListener('click', function(e) {
-      if (isPanelOpen && !bubble.contains(e.target)) closePanel();
+      if (isPanelOpen && !bubble.contains(e.target as Node)) closePanel();
     });
 
     updateStatus();

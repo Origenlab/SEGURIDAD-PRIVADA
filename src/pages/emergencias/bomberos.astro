@@ -13,6 +13,7 @@ import '../../styles/pages/emergencias-detalle.css';
 const siteUrl = 'https://seguridad-privada.com.mx';
 
 // ── Datos Bomberos ─────────────────────────────────────────────────────────
+interface Estacion { nombre: string; comandante: string | null; direccion: string; colonia: string; cp: string; tels: string[]; maps: string; }
 const alcaldias = [
   {
     nombre: 'Miguel Hidalgo',
@@ -130,7 +131,7 @@ const zonasLinks = [
   { label:'Tlalnepantla', href:'/zonas/tlalnepantla' },
 ];
 
-const allEstaciones = alcaldias.flatMap(a => a.estaciones);
+const allEstaciones: Estacion[] = alcaldias.flatMap((a) => a.estaciones as Estacion[]);
 
 const schema = {
   "@context": "https://schema.org",

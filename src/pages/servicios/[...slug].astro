@@ -105,7 +105,7 @@ const { Content } = await render(servicio);
 const todosLosServicios = await getCollection('servicios', ({ data }) => !data.draft);
 const serviciosRelacionados = servicio.data.relatedServices
   ? todosLosServicios
-      .filter(s => servicio.data.relatedServices.includes(s.id))
+      .filter(s => servicio.data.relatedServices?.includes(s.id))
       .map(s => ({
         id: s.id,
         titulo: s.data.title.split('|')[0].trim(),
@@ -158,7 +158,7 @@ const schema = {
         }
       ]
     }
-  ]
+  ] as Record<string, unknown>[]
 };
 
 // Add FAQPage schema if FAQs exist
