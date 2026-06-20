@@ -52,7 +52,7 @@ export const homepageTestimonials: Testimonial[] = [
     initials: 'GP',
     role: 'Seguridad Privada para Condominios',
     company: 'guardias-privados.com',
-    companyUrl: 'https://guardias-privados.com/',
+    companyUrl: '',
     verified: true
   },
   {
@@ -62,7 +62,7 @@ export const homepageTestimonials: Testimonial[] = [
     initials: 'SI',
     role: 'Equipos de Seguridad Industrial',
     company: 'equipo-de-seguridad-industrial.com',
-    companyUrl: 'https://equipo-de-seguridad-industrial.com/',
+    companyUrl: '',
     verified: true
   },
   {
