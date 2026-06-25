@@ -16,6 +16,9 @@ import StarRating from '../components/icons/StarRating.astro';
 import { featuredServices } from '../data/featured-services';
 import { homepageTestimonials, trustMetrics } from '../data/homepage-testimonials';
 import { homepageFaqs } from '../data/homepage-faqs';
+import { geoFaqs } from '../data/geo-faqs';
+
+const allFaqs = [...homepageFaqs, ...geoFaqs.map(f => ({ question: f.question, answer: f.answerHtml ?? f.answer }))];
 import { homepageCredentials, companyStats } from '../data/homepage-credentials';
 
 // Blog posts para preview
@@ -43,6 +46,13 @@ const schema = {
       "image": `${siteUrl}/img/logo.avif`,
       "description": "Empresa especializada en seguridad privada para condominios y residenciales en CDMX y Estado de México. Guardias intramuros certificados SSC, control de accesos 24/7, monitoreo CCTV y supervisión semanal documentada. +15 años protegiendo comunidades residenciales. Permiso SSC 0102-15.",
       "foundingDate": "2008",
+      "taxID": "OPS1308309M5",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Permiso SSC 0102-15",
+        "credentialCategory": "Registro de Empresa de Seguridad Privada",
+        "recognizedBy": { "@type": "Organization", "name": "Secretaría de Seguridad Ciudadana CDMX" }
+      },
       "priceRange": "$$",
       "url": siteUrl,
       "telephone": "+52-55-3025-5580",
@@ -146,7 +156,7 @@ const schema = {
     },
     {
       "@type": "FAQPage",
-      "mainEntity": homepageFaqs.map(faq => ({
+      "mainEntity": allFaqs.map(faq => ({
         "@type": "Question",
         "name": faq.question,
         "acceptedAnswer": {
@@ -831,7 +841,7 @@ const schema = {
           </div>
 
           <div class="faq-cotizacion__items">
-            {homepageFaqs.map((faq) => (
+            {allFaqs.map((faq) => (
               <FAQItem question={faq.question} answer={faq.answer} />
             ))}
           </div>

@@ -1,6 +1,6 @@
 ---
 title: "Guardias Intramuros CDMX | SSC 24/7 · Activo en 72h — ORIGINS"
-description: "Guardias intramuros certificados SSC en CDMX y EdoMex. Vigilancia 24/7, supervisión semanal documentada, alta IMSS día 1, reemplazo en <2h. Polanco, Santa Fe, Interlomas. +50 condominios. Activo en 72 horas."
+description: "Guardias intramuros certificados SSC en CDMX y EdoMex. Vigilancia 24/7, supervisión semanal documentada, alta IMSS día 1, reemplazo en <4h. Polanco, Santa Fe, Interlomas. +50 condominios. Activo en 72 horas."
 category: pillar
 publishDate: 2024-01-01
 updatedDate: 2026-05-28
@@ -49,13 +49,13 @@ serviceFeatures:
     description: "Tus guardias tienen prestaciones completas desde el primer día. Sin grises legales que te expongan como administrador o comité."
     icon: "users"
   - title: "Reemplazo Garantizado"
-    description: "Si un guardia no se presenta, tenemos su reemplazo en menos de 2 horas. Nunca tu edificio queda sin cobertura."
+    description: "Si un guardia no se presenta, tenemos su reemplazo en menos de 4 horas. Nunca tu edificio queda sin cobertura."
     icon: "refresh"
 faqs:
   - question: "¿Cuántos guardias necesita mi condominio?"
     answer: "Depende del número de accesos, torres y horario de operación. Para un condominio con 1 acceso y hasta 80 departamentos, generalmente se cubre con 2 guardias en turnos de 12 horas. Para propiedades con 2 o más accesos simultáneos, recomendamos mínimo 3 elementos. Hacemos una evaluación gratuita en sitio para darte el número exacto sin venderte más de lo que necesitas."
   - question: "¿Qué pasa si el guardia no se presenta a su turno?"
-    answer: "Tenemos un plan de reemplazo garantizado. Si un elemento no se presenta, nuestra central lo detecta antes de que empiece su turno y enviamos un sustituto en menos de 2 horas. Como administrador recibes una llamada antes de que haya un vacío de cobertura — nunca te enteras después."
+    answer: "Tenemos un plan de reemplazo garantizado. Si un elemento no se presenta, nuestra central lo detecta antes de que empiece su turno y enviamos un sustituto en menos de 4 horas. Como administrador recibes una llamada antes de que haya un vacío de cobertura — nunca te enteras después."
   - question: "¿Cómo sé que el guardia está haciendo bien su trabajo?"
     answer: "Tres mecanismos: reportes digitales diarios (quién entró, a qué hora, cualquier incidente), visitas de supervisor semanales con reporte firmado que recibes tú como administrador, y sistema de rondines con puntos de control verificables. Todo documentado y disponible para el comité en cualquier momento."
   - question: "¿Los guardias de ORIGINS están dados de alta en el IMSS?"
@@ -72,7 +72,7 @@ draft: false
 <div class="prose-intro">
   <p><strong>ORIGINS Private Security</strong> es una <strong>empresa de guardias intramuros con permiso SSC 0102-15</strong> que protege más de 50 propiedades en CDMX y Estado de México — desde <a href="/zonas/miguel-hidalgo">Polanco</a>, Santa Fe e Interlomas hasta corporativos en <a href="/zonas/naucalpan">Naucalpan</a> y bodegas en Tlalnepantla. Asignamos <strong>vigilancia presencial 24/7 con supervisión real y cero improvisación</strong>: no subcontratamos, no mandamos elementos sin certificación y no desaparecemos después de firmar el contrato.</p>
   <div class="prose-highlight">
-    <strong>El factor que distingue al guardia ORIGINS:</strong> no es el uniforme ni el precio — es la <strong>supervisión semanal documentada</strong>. Cualquier empresa puede poner un guardia en tu edificio. Pocas tienen supervisores que visitan cada semana con reporte firmado, responden en menos de 2 horas y garantizan reemplazo proactivo ante ausencias. Nuestros elementos operan con <a href="/servicios/control-de-accesos">control de accesos digital</a>, respaldo de <a href="/servicios/vigilancia-remota-cctv">CCTV monitoreado 24/7</a> y cobertura complementaria de <a href="/servicios/patrullaje">patrullaje perimetral</a> — un sistema integrado, no un guardia aislado.
+    <strong>El factor que distingue al guardia ORIGINS:</strong> no es el uniforme ni el precio — es la <strong>supervisión semanal documentada</strong>. Cualquier empresa puede poner un guardia en tu edificio. Pocas tienen supervisores que visitan cada semana con reporte firmado, responden en menos de 4 horas y garantizan reemplazo proactivo ante ausencias. Nuestros elementos operan con <a href="/servicios/control-de-accesos">control de accesos digital</a>, respaldo de <a href="/servicios/vigilancia-remota-cctv">CCTV monitoreado 24/7</a> y cobertura complementaria de <a href="/servicios/patrullaje">patrullaje perimetral</a> — un sistema integrado, no un guardia aislado.
   </div>
 </div>
 
@@ -149,7 +149,7 @@ draft: false
   <div class="compare-table__row">
     <div class="compare-table__feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Ausencias</div>
     <div class="compare-table__cell compare-table__cell--bad">Te enteras cuando el guardia ya no llegó</div>
-    <div class="compare-table__cell compare-table__cell--good">Reemplazo garantizado en &lt; 2 horas, te avisamos antes</div>
+    <div class="compare-table__cell compare-table__cell--good">Reemplazo garantizado en &lt; 4 horas, te avisamos antes</div>
   </div>
   <div class="compare-table__row">
     <div class="compare-table__feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Supervisión</div>
@@ -164,7 +164,7 @@ draft: false
   <div class="compare-table__row">
     <div class="compare-table__feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 19"/></svg>Soporte post-firma</div>
     <div class="compare-table__cell compare-table__cell--bad">Desaparecen — difícil contactarlos después</div>
-    <div class="compare-table__cell compare-table__cell--good">Línea directa 24/7, respuesta en menos de 2 horas</div>
+    <div class="compare-table__cell compare-table__cell--good">Línea directa 24/7, respuesta en menos de 4 horas</div>
   </div>
   <div class="compare-table__row">
     <div class="compare-table__feature"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>Póliza RC</div>
@@ -215,7 +215,7 @@ draft: false
     </h4>
     <ul>
       <li>Línea de emergencias 24/7 (no un buzón — una persona real)</li>
-      <li>Reemplazo garantizado en &lt; 2 horas ante ausencias</li>
+      <li>Reemplazo garantizado en &lt; 4 horas ante ausencias</li>
       <li>Supervisor de zona con visita semanal verificable</li>
       <li>Coordinación directa con policía, bomberos y protección civil</li>
       <li>Ajustes de protocolo sin costo adicional en los primeros 30 días</li>
@@ -571,7 +571,7 @@ draft: false
     <div class="guarantee-card__icon">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
     </div>
-    <strong>Reemplazo en menos de 2 horas</strong>
+    <strong>Reemplazo en menos de 4 horas</strong>
     <p>Si un guardia no se presenta, enviamos un sustituto antes de que haya vacío de cobertura. El administrador recibe llamada proactiva.</p>
     <span class="guarantee-card__clause">Cláusula contractual · Penalización por incumplimiento</span>
   </div>
@@ -638,7 +638,7 @@ draft: false
   <div class="vs-comparison__row">
     <div class="vs-comparison__criterion">Reemplazo ante ausencia</div>
     <div class="vs-comparison__cell vs-comparison__cell--bad">Mismo día o al siguiente turno</div>
-    <div class="vs-comparison__cell vs-comparison__cell--good">Menos de 2 horas · aviso proactivo</div>
+    <div class="vs-comparison__cell vs-comparison__cell--good">Menos de 4 horas · aviso proactivo</div>
   </div>
   <div class="vs-comparison__row">
     <div class="vs-comparison__criterion">Reportes al comité</div>
