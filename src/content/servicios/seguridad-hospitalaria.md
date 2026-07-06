@@ -60,7 +60,7 @@ faqs:
   - question: "¿Pueden coordinarse con el protocolo interno de seguridad del hospital?"
     answer: "Absolutamente. Nos integramos con el comité de seguridad hospitalaria, protección civil interna y el área de calidad del hospital. Nuestros guardias participan en los simulacros del hospital y siguen los protocolos de evacuación específicos para pacientes en camas, sillas de ruedas y equipo médico portátil."
   - question: "¿Operan en hospitales de toda la CDMX y Estado de México?"
-    answer: "Sí. Cubrimos hospitales y clínicas en toda la CDMX — Polanco, Santa Fe, Del Valle, Coyoacán, Tlalpan y más. En Estado de México: Naucalpan, Huixquilucan, Tlalnepantla y Atizapán. Llama al 55 3025 5580 para confirmar cobertura en tu zona."
+    answer: "Sí. Cubrimos hospitales y clínicas en toda la CDMX — Polanco, Santa Fe, Del Valle, Coyoacán, Tlalpan y más. En Estado de México: Naucalpan, Huixquilucan, Tlalnepantla y Atizapán. Llama al 56 3628 2480 para confirmar cobertura en tu zona."
 draft: false
 ---
 

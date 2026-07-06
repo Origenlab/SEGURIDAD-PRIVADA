@@ -64,7 +64,7 @@ faqs:
   - question: "¿Cómo sé que el guardia está registrando correctamente y no dejando pasar sin anotar?"
     answer: "El sistema digital elimina ese riesgo porque el registro es automático — no depende de que el guardia quiera o recuerde anotar. Además, los supervisores revisan los reportes diarios y hacen visitas semanales. Si hay patrones inconsistentes (muchos accesos sin registrar, horarios vacíos), lo detectamos antes de que se convierta en un problema."
   - question: "¿En qué zonas de CDMX tienen cobertura?"
-    answer: "Cubrimos toda la CDMX: Polanco, Lomas de Chapultepec, Santa Fe, Bosques, Condesa, Roma, Del Valle, Narvarte, Coyoacán, Pedregal, Cuauhtémoc, Benito Juárez y más. En Estado de México: Naucalpan, Interlomas, Huixquilucan, Tlalnepantla y Atizapán. Llámanos al 55 3025 5580 para confirmar cobertura en tu ubicación exacta."
+    answer: "Cubrimos toda la CDMX: Polanco, Lomas de Chapultepec, Santa Fe, Bosques, Condesa, Roma, Del Valle, Narvarte, Coyoacán, Pedregal, Cuauhtémoc, Benito Juárez y más. En Estado de México: Naucalpan, Interlomas, Huixquilucan, Tlalnepantla y Atizapán. Llámanos al 56 3628 2480 para confirmar cobertura en tu ubicación exacta."
   - question: "¿Cuánto tarda en estar activo el servicio?"
     answer: "En 72 horas está operando. Día 1: evaluación de tu propiedad y firma del contrato. Día 2: selección y capacitación del personal en tus protocolos específicos. Día 3: primer turno con supervisión intensiva. Las primeras dos semanas el supervisor visita diariamente para afinar el arranque."
 draft: false
@@ -749,7 +749,7 @@ draft: false
       <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
     </summary>
     <div class="faq-item__a">
-      <p>CDMX: <a href="/zonas/miguel-hidalgo">Polanco</a>, Lomas de Chapultepec, Santa Fe, Bosques, Condesa, Roma, <a href="/zonas/benito-juarez">Del Valle</a>, Narvarte, <a href="/zonas/coyoacan">Coyoacán</a>, Pedregal, Cuauhtémoc, Benito Juárez. EdoMex: <a href="/zonas/naucalpan">Naucalpan</a>, Interlomas, Huixquilucan, Tlalnepantla y <a href="/zonas/atizapan">Atizapán</a>. Llámanos al 55 3025 5580 para confirmar tu colonia exacta.</p>
+      <p>CDMX: <a href="/zonas/miguel-hidalgo">Polanco</a>, Lomas de Chapultepec, Santa Fe, Bosques, Condesa, Roma, <a href="/zonas/benito-juarez">Del Valle</a>, Narvarte, <a href="/zonas/coyoacan">Coyoacán</a>, Pedregal, Cuauhtémoc, Benito Juárez. EdoMex: <a href="/zonas/naucalpan">Naucalpan</a>, Interlomas, Huixquilucan, Tlalnepantla y <a href="/zonas/atizapan">Atizapán</a>. Llámanos al 56 3628 2480 para confirmar tu colonia exacta.</p>
     </div>
   </details>
   <details class="faq-item">

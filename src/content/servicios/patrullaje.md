@@ -66,7 +66,7 @@ faqs:
   - question: "¿Funcionan los rondines nocturnos en zonas donde no hay luz o hay poca visibilidad?"
     answer: "Nuestras unidades tienen faros y luz de trabajo para operar en condiciones de baja visibilidad. Los guardias usan linternas tácticas y equipos de comunicación. Para zonas con problemas de iluminación, podemos coordinar con la administración para identificar los puntos críticos y hacer recorridos pedestres adicionales en esas áreas específicas."
   - question: "¿Operan en mi zona? Tengo un fraccionamiento en Naucalpan / Tlalnepantla / Atizapán"
-    answer: "Sí, cubrimos toda la Zona Metropolitana: CDMX completa más Naucalpan, Tlalnepantla, Atizapán, Huixquilucan, Ecatepec, Nezahualcóyotl, Cuautitlán y Toluca. Tenemos bases operativas en puntos estratégicos para tiempos de respuesta cortos. Llámanos al 55 3025 5580 para confirmar cobertura en tu dirección exacta."
+    answer: "Sí, cubrimos toda la Zona Metropolitana: CDMX completa más Naucalpan, Tlalnepantla, Atizapán, Huixquilucan, Ecatepec, Nezahualcóyotl, Cuautitlán y Toluca. Tenemos bases operativas en puntos estratégicos para tiempos de respuesta cortos. Llámanos al 56 3628 2480 para confirmar cobertura en tu dirección exacta."
 draft: false
 ---
 
@@ -788,7 +788,7 @@ draft: false
       <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
     </summary>
     <div class="faq-item__a">
-      <p>Sí, cubrimos toda la Zona Metropolitana: CDMX completa + <a href="/zonas/naucalpan">Naucalpan</a>, <a href="/zonas/tlalnepantla">Tlalnepantla</a>, <a href="/zonas/atizapan">Atizapán</a>, Huixquilucan, Ecatepec, Nezahualcóyotl, Cuautitlán y Toluca. <strong>Bases operativas estratégicas</strong> para tiempos de respuesta cortos. Llámanos al 55 3025 5580 para confirmar tu dirección exacta.</p>
+      <p>Sí, cubrimos toda la Zona Metropolitana: CDMX completa + <a href="/zonas/naucalpan">Naucalpan</a>, <a href="/zonas/tlalnepantla">Tlalnepantla</a>, <a href="/zonas/atizapan">Atizapán</a>, Huixquilucan, Ecatepec, Nezahualcóyotl, Cuautitlán y Toluca. <strong>Bases operativas estratégicas</strong> para tiempos de respuesta cortos. Llámanos al 56 3628 2480 para confirmar tu dirección exacta.</p>
     </div>
   </details>
 </div>

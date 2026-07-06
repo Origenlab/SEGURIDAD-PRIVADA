@@ -63,7 +63,7 @@ faqs:
   - question: "¿Qué pasa si el guardia no cumple con los protocolos del lugar?"
     answer: "Primero hacemos retroalimentación documentada. Si el problema persiste, hacemos sustitución del elemento sin costo ni penalización para el cliente. La evaluación mensual de desempeño está diseñada precisamente para detectar esto antes de que sea un problema mayor."
   - question: "¿Operan en toda la CDMX o solo en ciertas colonias?"
-    answer: "Cubrimos toda la CDMX — Polanco, Lomas, Santa Fe, Condesa, Roma, Narvarte, Del Valle, Coyoacán, Tlalpan, Iztapalapa, Gustavo A. Madero y más. También Estado de México: Naucalpan, Tlalnepantla, Atizapán e Interlomas. Llámanos al 55 3025 5580 para confirmar disponibilidad en tu colonia."
+    answer: "Cubrimos toda la CDMX — Polanco, Lomas, Santa Fe, Condesa, Roma, Narvarte, Del Valle, Coyoacán, Tlalpan, Iztapalapa, Gustavo A. Madero y más. También Estado de México: Naucalpan, Tlalnepantla, Atizapán e Interlomas. Llámanos al 56 3628 2480 para confirmar disponibilidad en tu colonia."
 ---
 
 <div class="prose-intro">

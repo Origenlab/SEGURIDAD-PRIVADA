@@ -55,7 +55,7 @@ faqs:
   - question: "¿Cuánto tiempo necesitan para arrancar?"
     answer: "Para servicios estándar: 5 días desde el primer contacto hasta el primer turno. Para eventos programados: mínimo 1 semana de anticipación para advance security y briefing del equipo. Para emergencias o eventos de último minuto: podemos movilizar personal en 24–48 horas con esquema temporal."
   - question: "¿Operan en toda la CDMX y Estado de México?"
-    answer: "Sí. Hospitales, venues de eventos y obras en cualquier punto de CDMX y la Zona Metropolitana: Naucalpan, Tlalnepantla, Huixquilucan, Atizapán y más. Llama al 55 3025 5580."
+    answer: "Sí. Hospitales, venues de eventos y obras en cualquier punto de CDMX y la Zona Metropolitana: Naucalpan, Tlalnepantla, Huixquilucan, Atizapán y más. Llama al 56 3628 2480."
   - question: "¿Incluyen póliza de responsabilidad civil?"
     answer: "Sí en todos los sectores. Póliza de RC vigente, seguro vehicular cuando aplica, y cumplimiento total de obligaciones laborales — Alta IMSS e INFONAVIT desde el primer día."
   - question: "¿Cómo garantizan que el guardia entiende mi sector?"

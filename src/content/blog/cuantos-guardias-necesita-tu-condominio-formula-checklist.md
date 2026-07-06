@@ -254,7 +254,7 @@ Conocer este marco le permite al comité validar que el headcount propuesto no s
 <div class="prose-section-header">
   <h2>¿Quieres una memoria técnica con tu headcount real?</h2>
   <p>Hacemos diagnóstico en sitio y entregamos al comité un documento con el cálculo exacto: accesos, turnos, relevo y carga tecnológica recomendada. Sin costo, listo para asamblea.</p>
-  <a href="https://wa.me/525530255580?text=Hola%2C%20quiero%20una%20memoria%20t%C3%A9cnica%20de%20headcount" class="btn btn--primary">Pedir memoria técnica</a>
+  <a href="https://wa.me/525636282480?text=Hola%2C%20quiero%20una%20memoria%20t%C3%A9cnica%20de%20headcount" class="btn btn--primary">Pedir memoria técnica</a>
 </div>
 
 ---

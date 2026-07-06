@@ -13,7 +13,7 @@ export interface FAQ {
 export const homepageFaqs: FAQ[] = [
   {
     question: '¿Cuánto cuesta la seguridad privada para un condominio en CDMX?',
-    answer: 'El <strong>servicio de seguridad privada para condominios</strong> en CDMX se cotiza de manera personalizada según el número de elementos, tipo de condominio (vertical u horizontal), cantidad de accesos, turnos y servicios complementarios como CCTV o control de accesos biométrico. Cada propuesta se adapta a las necesidades específicas de tu condominio. WhatsApp <strong>55 3025 5580</strong> para cotización sin compromiso.'
+    answer: 'El <strong>servicio de seguridad privada para condominios</strong> en CDMX se cotiza de manera personalizada según el número de elementos, tipo de condominio (vertical u horizontal), cantidad de accesos, turnos y servicios complementarios como CCTV o control de accesos biométrico. Cada propuesta se adapta a las necesidades específicas de tu condominio. WhatsApp <strong>56 3628 2480</strong> para cotización sin compromiso.'
   },
   {
     question: '¿Qué incluye el servicio de guardias intramuros para condominios?',
@@ -41,7 +41,7 @@ export const homepageFaqs: FAQ[] = [
   },
   {
     question: '¿Qué zonas de CDMX cubren para seguridad de condominios?',
-    answer: 'Protegemos condominios y residenciales en las 16 alcaldías de CDMX, con presencia especial en zonas de alta densidad condominial: Polanco, Santa Fe, Lomas de Chapultepec, Del Valle, Nápoles, Roma-Condesa y Perisur. También cubrimos Naucalpan, Tlalnepantla, Atizapán, Huixquilucan (Interlomas) y Cuautitlán Izcalli. Contacta al <strong>55 3025 5580</strong> para verificar cobertura en tu zona.'
+    answer: 'Protegemos condominios y residenciales en las 16 alcaldías de CDMX, con presencia especial en zonas de alta densidad condominial: Polanco, Santa Fe, Lomas de Chapultepec, Del Valle, Nápoles, Roma-Condesa y Perisur. También cubrimos Naucalpan, Tlalnepantla, Atizapán, Huixquilucan (Interlomas) y Cuautitlán Izcalli. Contacta al <strong>56 3628 2480</strong> para verificar cobertura en tu zona.'
   },
   {
     question: '¿Qué tecnología complementa la seguridad física en condominios?',

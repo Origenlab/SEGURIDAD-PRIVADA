@@ -296,7 +296,7 @@ Una propuesta de ORIGINS llega lista para asamblea: tres niveles de servicio en 
 <div class="prose-section-header">
   <h2>¿Quieres una propuesta lista para asamblea en 24 horas?</h2>
   <p>Hacemos diagnóstico gratuito en sitio y entregamos tres niveles de propuesta para que tu comité elija con datos. Sin compromiso, sin costo, lista para imprimir.</p>
-  <a href="https://wa.me/525530255580?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n%20para%20mi%20condominio" class="btn btn--primary">Pedir diagnóstico gratuito</a>
+  <a href="https://wa.me/525636282480?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n%20para%20mi%20condominio" class="btn btn--primary">Pedir diagnóstico gratuito</a>
 </div>
 
 ---

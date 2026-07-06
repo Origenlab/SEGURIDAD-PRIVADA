@@ -64,7 +64,7 @@ faqs:
   - question: "¿Cómo manejan las quejas de residentes con el guardia?"
     answer: "Cualquier inconformidad se atiende en menos de 24 horas. El supervisor evalúa la situación, habla con el guardia y, si es necesario, hace el cambio de personal. Los residentes son los clientes del fraccionamiento — su experiencia en el acceso diario define si el servicio funciona o no."
   - question: "¿Tienen cobertura en Naucalpan, Tlalnepantla o Atizapán?"
-    answer: "Sí, cubrimos toda la Zona Metropolitana: Naucalpan, Interlomas, Huixquilucan, Tlalnepantla, Atizapán, Satélite, Ecatepec y más. Tenemos bases operativas estratégicas para tiempos de respuesta cortos en toda el área. Llámanos al 55 3025 5580 para confirmar cobertura en tu fraccionamiento específico."
+    answer: "Sí, cubrimos toda la Zona Metropolitana: Naucalpan, Interlomas, Huixquilucan, Tlalnepantla, Atizapán, Satélite, Ecatepec y más. Tenemos bases operativas estratégicas para tiempos de respuesta cortos en toda el área. Llámanos al 56 3628 2480 para confirmar cobertura en tu fraccionamiento específico."
   - question: "¿Qué sucede si un guardia no llega a su turno en la madrugada?"
     answer: "La central detecta la ausencia antes del inicio del turno y activa el protocolo de reemplazo. Un sustituto llega en menos de 2 horas. El presidente del comité recibe una llamada informándole del cambio — no se entera por los residentes al amanecer. La madrugada es el turno más crítico y es exactamente cuando más controlamos la cobertura."
 draft: false
@@ -426,7 +426,7 @@ draft: false
       <li>Lerma · Ocoyoacac</li>
       <li>Zinacantepec</li>
       <li>Consultar cobertura</li>
-      <li>☎ 55 3025 5580</li>
+      <li>☎ 56 3628 2480</li>
     </ul>
   </div>
 </div>
@@ -791,7 +791,7 @@ draft: false
       <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
     </summary>
     <div class="faq-item__a">
-      <p>Sí, cubrimos toda la Zona Metropolitana: <a href="/zonas/naucalpan">Naucalpan</a>, Interlomas, Huixquilucan, Tecamachalco, <a href="/zonas/tlalnepantla">Tlalnepantla</a>, <a href="/zonas/atizapan">Atizapán</a>, Satélite y Ecatepec. <strong>Bases operativas estratégicas</strong> para tiempos de respuesta cortos en toda el área. Llámanos al 55 3025 5580 para confirmar tu fraccionamiento específico.</p>
+      <p>Sí, cubrimos toda la Zona Metropolitana: <a href="/zonas/naucalpan">Naucalpan</a>, Interlomas, Huixquilucan, Tecamachalco, <a href="/zonas/tlalnepantla">Tlalnepantla</a>, <a href="/zonas/atizapan">Atizapán</a>, Satélite y Ecatepec. <strong>Bases operativas estratégicas</strong> para tiempos de respuesta cortos en toda el área. Llámanos al 56 3628 2480 para confirmar tu fraccionamiento específico.</p>
     </div>
   </details>
 </div>

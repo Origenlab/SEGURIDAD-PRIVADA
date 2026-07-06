@@ -48,7 +48,7 @@ serviceFeatures:
     icon: "check-circle"
 faqs:
   - question: "¿Cuántos guardias necesita mi evento?"
-    answer: "La regla general del sector es 1 guardia por cada 100 asistentes para eventos de bajo riesgo, y 1 por cada 50 para eventos con alcohol o aforos comprimidos. Pero lo más preciso es una evaluación del venue, el tipo de evento y el perfil de los asistentes. Hacemos esta evaluación gratuita y sin compromiso — llámanos al 55 3025 5580."
+    answer: "La regla general del sector es 1 guardia por cada 100 asistentes para eventos de bajo riesgo, y 1 por cada 50 para eventos con alcohol o aforos comprimidos. Pero lo más preciso es una evaluación del venue, el tipo de evento y el perfil de los asistentes. Hacemos esta evaluación gratuita y sin compromiso — llámanos al 56 3628 2480."
   - question: "¿Trabajan en cualquier venue de CDMX?"
     answer: "Sí. Tenemos experiencia en los principales venues de CDMX: Auditorio Nacional, Palacio de los Deportes, WTC, Expo Santa Fe, Centro Citibanamex, hoteles cinco estrellas en Polanco y Santa Fe, haciendas y espacios privados en Coyoacán, San Ángel y Lomas. Si el venue tiene requerimientos de seguridad propios, los coordinamos."
   - question: "¿Qué pasa si hay un incidente durante el evento?"

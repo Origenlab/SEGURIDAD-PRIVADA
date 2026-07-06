@@ -66,7 +66,7 @@ faqs:
   - question: "¿Puedo integrar las cámaras con mi sistema de alarmas y control de accesos?"
     answer: "Sí. La plataforma se integra con los principales sistemas de alarmas y control de accesos. Cuando una alarma se activa, el operador visualiza automáticamente las cámaras del área para verificar el evento antes de contactarte. También se conecta con intercomunicadores y videoporteros."
   - question: "¿Tienen cobertura en mi zona de CDMX o Estado de México?"
-    answer: "Sí. Operamos en toda la CDMX (Polanco, Condesa, Roma, Del Valle, Santa Fe, Coyoacán y más) y en los principales municipios del Estado de México (Naucalpan, Tlalnepantla, Atizapán, Huixquilucan). Consulta las zonas de cobertura completas o llámanos al 55 3025 5580."
+    answer: "Sí. Operamos en toda la CDMX (Polanco, Condesa, Roma, Del Valle, Santa Fe, Coyoacán y más) y en los principales municipios del Estado de México (Naucalpan, Tlalnepantla, Atizapán, Huixquilucan). Consulta las zonas de cobertura completas o llámanos al 56 3628 2480."
 draft: false
 ---
 
@@ -789,7 +789,7 @@ draft: false
       <span class="faq-item__icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
     </summary>
     <div class="faq-item__a">
-      <p>Sí. Operamos en toda CDMX (<a href="/zonas/miguel-hidalgo">Polanco</a>, Condesa, Roma, <a href="/zonas/benito-juarez">Del Valle</a>, Santa Fe, <a href="/zonas/coyoacan">Coyoacán</a> y más) y en los principales municipios de EdoMex (<a href="/zonas/naucalpan">Naucalpan</a>, <a href="/zonas/tlalnepantla">Tlalnepantla</a>, <a href="/zonas/atizapan">Atizapán</a>, Huixquilucan). Llama al 55 3025 5580 para confirmar cobertura en tu ubicación exacta.</p>
+      <p>Sí. Operamos en toda CDMX (<a href="/zonas/miguel-hidalgo">Polanco</a>, Condesa, Roma, <a href="/zonas/benito-juarez">Del Valle</a>, Santa Fe, <a href="/zonas/coyoacan">Coyoacán</a> y más) y en los principales municipios de EdoMex (<a href="/zonas/naucalpan">Naucalpan</a>, <a href="/zonas/tlalnepantla">Tlalnepantla</a>, <a href="/zonas/atizapan">Atizapán</a>, Huixquilucan). Llama al 56 3628 2480 para confirmar cobertura en tu ubicación exacta.</p>
     </div>
   </details>
 </div>

@@ -294,7 +294,7 @@ Para un mismo número de unidades (60 departamentos vs 60 casas), la inversión 
 <div class="prose-section-header">
   <h2>¿Necesitas diagnóstico específico para tu tipología?</h2>
   <p>Hacemos visita técnica y entregamos al comité un plan operativo y tecnológico diseñado para residencial horizontal o vertical — no genérico, no copiado de otro inmueble. Sin costo, listo para asamblea.</p>
-  <a href="https://wa.me/525530255580?text=Hola%2C%20quiero%20diagn%C3%B3stico%20por%20tipolog%C3%ADa" class="btn btn--primary">Pedir diagnóstico por tipología</a>
+  <a href="https://wa.me/525636282480?text=Hola%2C%20quiero%20diagn%C3%B3stico%20por%20tipolog%C3%ADa" class="btn btn--primary">Pedir diagnóstico por tipología</a>
 </div>
 
 ---

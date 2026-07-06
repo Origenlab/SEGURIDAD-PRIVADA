@@ -16,7 +16,7 @@ export const serviciosFaqs: FAQ[] = [
   },
   {
     question: '¿Cómo contrato guardias intramuros para mi condominio en CDMX?',
-    answer: 'El proceso es simple: contacta a ORIGINS al <strong>WhatsApp 55 3025 5580</strong> o por el formulario de esta página. En menos de 24 horas un coordinador visita tu condominio para hacer el diagnóstico de seguridad gratuito — evaluamos accesos, puntos ciegos, perfil de residentes y necesidades específicas. Con esa información entregamos una propuesta personalizada con el número de <strong>guardias intramuros</strong> necesarios, turnos y presupuesto detallado. Si apruebas la propuesta, el servicio inicia en menos de 72 horas con personal ya verificado y certificado SSC.'
+    answer: 'El proceso es simple: contacta a ORIGINS al <strong>WhatsApp 56 3628 2480</strong> o por el formulario de esta página. En menos de 24 horas un coordinador visita tu condominio para hacer el diagnóstico de seguridad gratuito — evaluamos accesos, puntos ciegos, perfil de residentes y necesidades específicas. Con esa información entregamos una propuesta personalizada con el número de <strong>guardias intramuros</strong> necesarios, turnos y presupuesto detallado. Si apruebas la propuesta, el servicio inicia en menos de 72 horas con personal ya verificado y certificado SSC.'
   },
   {
     question: '¿Cuánto tiempo tardan en iniciar el servicio de seguridad?',

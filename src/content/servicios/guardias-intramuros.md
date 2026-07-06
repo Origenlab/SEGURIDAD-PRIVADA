@@ -65,7 +65,7 @@ faqs:
   - question: "¿Cuánto tiempo lleva implementar el servicio?"
     answer: "En 72 horas tienes el servicio activo. Día 1: evaluación y firma de contrato. Día 2: asignación y capacitación del personal en tus protocolos específicos. Día 3: inicio de operaciones con supervisión intensiva las primeras dos semanas."
   - question: "¿Operan en mi zona de CDMX o Estado de México?"
-    answer: "Sí. Cubrimos toda la CDMX — Polanco, Lomas de Chapultepec, Santa Fe, Bosques, Condesa, Roma, Del Valle, Narvarte, Coyoacán, Pedregal, Tlalpan, y más. En Estado de México: Naucalpan, Interlomas, Huixquilucan, Tlalnepantla, Atizapán y Satélite. Llámanos al 55 3025 5580 para confirmar cobertura en tu colonia exacta."
+    answer: "Sí. Cubrimos toda la CDMX — Polanco, Lomas de Chapultepec, Santa Fe, Bosques, Condesa, Roma, Del Valle, Narvarte, Coyoacán, Pedregal, Tlalpan, y más. En Estado de México: Naucalpan, Interlomas, Huixquilucan, Tlalnepantla, Atizapán y Satélite. Llámanos al 56 3628 2480 para confirmar cobertura en tu colonia exacta."
 draft: false
 ---
 

@@ -310,7 +310,7 @@ Una empresa profesional acepta todas estas cláusulas porque sabe que va a cumpl
 <div class="prose-section-header">
   <h2>¿Vas a cambiar de proveedor? Te acompañamos en la transición.</h2>
   <p>Diseñamos el cronograma de 30-45 días, ejecutamos el periodo de sombra, recibimos los equipos con acta firmada y entregamos al comité el primer reporte de KPIs al cierre del mes 1. Sin saltos en el servicio, con protocolo documentado.</p>
-  <a href="https://wa.me/525530255580?text=Hola%2C%20quiero%20cambiar%20de%20empresa%20de%20seguridad" class="btn btn--primary">Hablar con un asesor de transición</a>
+  <a href="https://wa.me/525636282480?text=Hola%2C%20quiero%20cambiar%20de%20empresa%20de%20seguridad" class="btn btn--primary">Hablar con un asesor de transición</a>
 </div>
 
 ---
