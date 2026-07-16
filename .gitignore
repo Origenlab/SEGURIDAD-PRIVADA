@@ -28,3 +28,5 @@ vault/
 *.docx
 *.xlsx
 day-1-baseline/
+*.log
+.wrangler
